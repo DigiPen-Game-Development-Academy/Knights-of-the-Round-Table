@@ -1,0 +1,23 @@
+class DynamicLight2D : ZilchComponent
+{
+    
+    var Mesh : Mesh;
+    
+    function Initialize(init : CogInitializer) {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        
+        var objs = this.Space.FindAllObjectsByName("Sprite");
+        
+        while(objs.IsNotEmpty){
+            var current = objs.Current;
+            //for(var i = 0; i < current.MeshCollider.PhysicsMesh.
+            objs.MoveNext;
+        }
+        
+    }
+}
