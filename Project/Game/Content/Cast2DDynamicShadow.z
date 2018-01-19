@@ -1,0 +1,55 @@
+struct Segment {
+    var P1 : Real3;
+    var P2 : Real3;
+}
+
+enum ShadowCastType {
+    Box
+}
+
+class Cast2DDynamicShadow : ZilchComponent
+{
+    
+    [Property]
+    var CastType : ShadowCastType = ShadowCastType.Box;
+    
+    var Segments : Array[Segment];
+    
+    function Initialize(init : CogInitializer)
+    {
+        
+        var p = this.Owner.Transform.WorldTranslation;
+        
+        this.Segments = Array[Segment]();
+        
+        if(this.CastType == ShadowCastType.Box){
+            var seg1 = Segment();
+            var seg2 = Segment();
+            var seg3 = Segment();
+            var seg4 = Segment();
+            seg1.P1 = p + Real3( 0.5,    0.5,    0);
+            seg1.P1 = p + Real3(-0.5,    0.5,    0);
+            
+            seg2.P1 = p + Real3(-0.5,    0.5,    0);
+            seg2.P1 = p + Real3(-0.5,   -0.5,    0);
+            
+            seg3.P1 = p + Real3(-0.5,   -0.5,    0);
+            seg3.P1 = p + Real3( 0.5,   -0.5,    0);
+            
+            seg4.P1 = p + Real3( 0.5,   -0.5,    0);
+            seg4.P1 = p + Real3( 0.5,    0.5,    0);
+            
+            this.Segments.Add(seg1);
+            this.Segments.Add(seg2);
+            this.Segments.Add(seg3);
+            this.Segments.Add(seg4);
+            
+        }
+        
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

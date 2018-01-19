@@ -82,23 +82,14 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
-		DeferredRenderer = 
+		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0.139999986, 0.139999986, 0.139999986, 1],
+			Vec4 ClearColor = [0.485000014, 0.485000014, 0.485000014, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
 			bool EditorIconDepth = true,
-			bool Hdr = false,
-			bool Shadows = false,
-			bool AntiAliasing = false,
-			bool Refraction = false,
-			bool Reflections = false,
-			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
-			bool GodRays = false,
-			bool RenderMasks = false,
-			bool Glow = false,
-			float GlowThreshold = 1,
+			bool Wireframe = false,
 		},
 	},
 	Cog = 
@@ -113,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.490694493, 0.233328626, 50],
+			Vec3 Translation = [2.1516304, 0.952241182, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -125,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10.9762392,
+			float Size = 18.0967636,
 		},
 		EditorCameraController = 
 		{
@@ -133,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.490694493, 0.233328626, 2.1448944e-08],
+			Vec3 LookTarget = [2.1516304, 0.952241182, 9.40507547e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -232,6 +223,21 @@ Level =
 				DynamicLight2D = 
 				{
 				},
+				DynamicMesh = 
+				{
+					bool GenerateNormals = true,
+					bool GenerateUVs = false,
+					bool GenerateAdjacencyInfo = false,
+				},
+				DynamicModel = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = true,
+					string Material = "4de020863e85bb61:DefaultMaterial",
+					Vec4 Color = [1, 1, 1, 1],
+				},
 			},
 		},
 	},
@@ -247,7 +253,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.73170924, 0.233328626, 2.1448944e-08],
+			Vec3 Translation = [3.73170924, 0.233328626, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -281,6 +287,10 @@ Level =
 			bool DrawEdges = true,
 			bool DrawFaces = false,
 			bool DrawFaceNormals = false,
+		},
+		Cast2DDynamicShadow = 
+		{
+			Enum CastType = Box,
 		},
 	},
 	Cog = 
@@ -295,7 +305,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.22532368, 2.78292727, 2.1448944e-08],
+			Vec3 Translation = [1.22532368, 2.78292727, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -329,6 +339,10 @@ Level =
 			bool DrawEdges = true,
 			bool DrawFaces = false,
 			bool DrawFaceNormals = false,
+		},
+		Cast2DDynamicShadow = 
+		{
+			Enum CastType = Box,
 		},
 	},
 	Cog = 
@@ -343,7 +357,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.46943426, -0.760582864, 2.1448944e-08],
+			Vec3 Translation = [3.73170924, -4.23927212, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -377,6 +391,10 @@ Level =
 			bool DrawEdges = true,
 			bool DrawFaces = false,
 			bool DrawFaceNormals = false,
+		},
+		Cast2DDynamicShadow = 
+		{
+			Enum CastType = Box,
 		},
 	},
 	Cog = 
@@ -391,7 +409,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.73170924, -4.23927212, 2.1448944e-08],
+			Vec3 Translation = [-4.71653652, 3.27988315, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -425,6 +443,10 @@ Level =
 			bool DrawEdges = true,
 			bool DrawFaces = false,
 			bool DrawFaceNormals = false,
+		},
+		Cast2DDynamicShadow = 
+		{
+			Enum CastType = Box,
 		},
 	},
 	Cog = 
@@ -439,7 +461,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.71653652, 3.27988315, 2.1448944e-08],
+			Vec3 Translation = [-3.13924336, -3.50464296, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -474,53 +496,9 @@ Level =
 			bool DrawFaces = false,
 			bool DrawFaceNormals = false,
 		},
-	},
-	Cog = 
-	{
-		LinkId = 
+		Cast2DDynamicShadow = 
 		{
-			uint Id = 11,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3.13924336, -3.50464296, 2.1448944e-08],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		MeshCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			string PhysicsMeshName = "5198bea43a477360:Box",
-			bool DrawEdges = true,
-			bool DrawFaces = false,
-			bool DrawFaceNormals = false,
+			Enum CastType = Box,
 		},
 	},
 },

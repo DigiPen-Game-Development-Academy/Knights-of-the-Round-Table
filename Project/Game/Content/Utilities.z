@@ -1,20 +1,54 @@
+
+struct PointReturn {
+    var Pos : Real3 = Real3(9999);
+    var Target : Real3 = Real3(9999);
+}
+
 class Utilities
 {
     [Static]
-    function Raycast (start : Real3, direction : Real3, physSpace : PhysicsSpace, range : Real) : Cog {
+    function Raycast (start : Real3, direction : Real3, physSpace : PhysicsSpace, range : Real) : CastResult {
         
         var ray = Ray();
         ray.Start = start;
         ray.Direction = direction;
         var result = physSpace.CastRayFirst(ray);
         if(result.Distance > range){
-            Utilities.DrawLine(start, start + (range * direction), Real4(0, 0, 1, 1));
+            Utilities.DrawLine(start, start + (range * Math.Normalize(direction)), Real4(0, 0, 1, 1));
             return null;
         }
         
-        Utilities.DrawLine(start, start + (result.Distance * direction), Real4(0, 0, 1, 1));
+        Utilities.DrawLine(start, start + (result.Distance * Math.Normalize(direction)), Real4(0, 0, 1, 1));
         
-        return result.ObjectHit;
+        return result;
+        
+    }
+    
+    [Static]
+    function RaycastPoint (start : Real3, target : Real3, physSpace : PhysicsSpace, range : Real) : PointReturn {
+        
+        var direction = target - start;
+        
+        var preturn = PointReturn();
+        
+        var ray = Ray();
+        ray.Start = start;
+        ray.Direction = direction;
+        var result = physSpace.CastRayFirst(ray);
+        if(result.Distance > range){
+            Utilities.DrawLine(start, start + (range * Math.Normalize(direction)), Real4(0, 0, 1, 1));
+            preturn.Pos = ((Math.Normalize(direction) * range)+start);
+            preturn.Target = target;
+            return  preturn;
+        }
+        if(Math.Distance(result.WorldPosition, target) < 0.1){
+            Utilities.DrawLine(start, result.WorldPosition, Real4(0, 0, 1, 1));
+            preturn.Target = target;
+            return preturn;
+        }
+        //Utilities.DrawLine(start, start + (result.Distance * Math.Normalize(direction)), Real4(0, 0, 1, 1));
+        
+        return preturn;
         
     }
     
@@ -26,6 +60,19 @@ class Utilities
         line.End(end);
         line.Float4Color(color);
         line.Draw();
+        
+    }
+    
+    [Static]
+    function DrawCircle (pos : Real3, radius : Real, filled : Boolean, color : Real4) {
+        
+        var circle = DebugCircle();
+        circle.Position(pos);
+        circle.Radius(radius);
+        circle.Float4Color(color);
+        circle.Filled(filled);
+        circle.ViewAligned(true);
+        circle.Draw();
         
     }
 }

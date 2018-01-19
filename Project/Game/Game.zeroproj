@@ -25,4 +25,14 @@ Cog =
 		string LongDescription = "",
 		string Tags = "",
 	},
+	LauncherProjectInfo = 
+	{
+		string Tags = "",
+		string ExperimentalBranchName = "",
+		string MajorVersion = "0",
+		string MinorVersion = "0",
+		string PatchVersion = "0",
+		string RevisionId = "16386",
+		string ShortChangeSet = "",
+	},
 },

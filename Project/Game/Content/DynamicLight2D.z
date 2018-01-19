@@ -3,21 +3,111 @@ class DynamicLight2D : ZilchComponent
     
     var Mesh : Mesh;
     
+    var Points : Array[PointReturn];
+    
     function Initialize(init : CogInitializer) {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.Points = Array[PointReturn]();
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
         
+        this.Owner.Parent.Transform.WorldTranslation = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
         
         var objs = this.Space.FindAllObjectsByName("Sprite");
         
+        var pos = this.Owner.Transform.WorldTranslation;
+        
+        var dm = this.Owner.DynamicMesh;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*this.Points.Clear();
+        
+        this.Points.Add(Utilities.RaycastPoint(pos, (pos + Real3( 0.51,    0.51, 0)), this.Space.PhysicsSpace, 10));
+        this.Points.Add(Utilities.RaycastPoint(pos, (pos + Real3(-0.51,    0.51, 0)), this.Space.PhysicsSpace, 10));
+        this.Points.Add(Utilities.RaycastPoint(pos, (pos + Real3( 0.51,   -0.51, 0)), this.Space.PhysicsSpace, 10));
+        this.Points.Add(Utilities.RaycastPoint(pos, (pos + Real3(-0.51,   -0.51, 0)), this.Space.PhysicsSpace, 10));
+        this.Points[0].Target = Real3(9999);
+        this.Points[1].Target = Real3(9999);
+        this.Points[2].Target = Real3(9999);
+        this.Points[3].Target = Real3(9999);
+        
         while(objs.IsNotEmpty){
             var current = objs.Current;
-            //for(var i = 0; i < current.MeshCollider.PhysicsMesh.
-            objs.MoveNext;
+            //for(var i = 0; i < 4; ++i){
+                
+            //}
+            this.Points.Add(Utilities.RaycastPoint(pos, (current.Transform.WorldTranslation + Real3( 0.51,    0.51, 0)), this.Space.PhysicsSpace, 10));
+            this.Points.Add(Utilities.RaycastPoint(pos, (current.Transform.WorldTranslation + Real3(-0.51,    0.51, 0)), this.Space.PhysicsSpace, 10));
+            this.Points.Add(Utilities.RaycastPoint(pos, (current.Transform.WorldTranslation + Real3( 0.51,   -0.51, 0)), this.Space.PhysicsSpace, 10));
+            this.Points.Add(Utilities.RaycastPoint(pos, (current.Transform.WorldTranslation + Real3(-0.51,   -0.51, 0)), this.Space.PhysicsSpace, 10));
+            
+            objs.MoveNext();
         }
         
+        for (var i = 0; i < this.Points.Count; ++i) {
+            if(this.Points[i].Pos == Real3(9999)) {
+                this.Points.RemoveAt(i);
+                --i;
+            } else if (this.Points[i].Target == this.Points[i].Pos) {
+                this.Points[i].Pos = Real3(9999);
+            }
+        }
+        
+        var lastAngle : Real = -999;
+        
+        
+        dm.Clear();
+        
+        dm.AddVertex(Real3(0,0,0));
+        for (var i = 0; i < this.Points.Count; ++i){
+            
+            var a : Real = 999;
+            var aIndex = 0;
+            
+            for (var l = 0; l < this.Points.Count; ++l){
+                var angle = Math.ATan2(((this.Points[l].Pos + Real3(0.51, 0.51, 0)) - pos).Y, ((this.Points[l].Pos + Real3(0.51, 0.51, 0)) - pos).X);
+                if(angle > lastAngle && angle < a){
+                    a = angle;
+                    aIndex = l;
+                }
+            }
+            
+            
+            Utilities.DrawCircle(this.Points[aIndex].Pos, 0.05 * (i+1), true, Real4(1, 0, 0, 1));
+            
+            dm.AddVertex(this.Points[aIndex].Pos - pos);
+            
+            lastAngle = a;
+        }
+        
+        //Console.WriteLine("--------------------------------------------");
+        
+        for (var i = 1; i < dm.VertexCount; ++i){
+            
+            //Console.WriteLine("hi");
+            
+            dm.AddTriangleIndices(i, i+1, 0);
+            
+        }
+        
+        dm.AddTriangleIndices(dm.VertexCount-1, 1, 0);*/
+
+        dm.AddUV(Real2(1,1));
+        
+        dm.Modified();
+        
     }
+    
+    /*function SortCompare (left : PointReturn, right : PointReturn) : Boolean{
+        var pos = this.Owner.Transform.WorldTranslation;
+        return Math.ATan2(((left.Pos + Real3(0.51, 0.51, 0)) - pos).Y, ((left.Pos + Real3(0.51, 0.51, 0)) - pos).X) > Math.ATan2(((right.Pos + Real3(0.51, 0.51, 0)) - pos).Y, ((right.Pos + Real3(0.51, 0.51, 0)) - pos).X);
+    }*/
 }
