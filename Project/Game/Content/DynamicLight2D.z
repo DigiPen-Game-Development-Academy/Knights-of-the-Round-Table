@@ -1,3 +1,20 @@
+struct POI {
+    var Null : Boolean = false;
+    var X : Real;
+    var Y : Real;
+    var Param: Real;
+    
+    constructor (isNull : Boolean) {
+        this.Null = isNull;
+    }
+    constructor (x : Real, y : Real, param : Real) {
+        this.X = x;
+        this.Y = y;
+        this.Param = param;
+        this.Null = false;
+    }
+}
+
 class DynamicLight2D : ZilchComponent
 {
     
@@ -12,21 +29,57 @@ class DynamicLight2D : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent) {
         
-        this.Owner.Parent.Transform.WorldTranslation = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
+        //this.Owner.Parent.Transform.WorldTranslation = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
+        
+        var segments = Array[Segment]();
+        var pos = this.Owner.Transform.WorldTranslation;
+        
+        var camViewPort = this.LevelSettings.CameraViewport;
+        
+        //edge of screen bounds
+        var top     = Segment(pos + Real3(20, 20, 0), Real3(-20, 20, 0));
+        var bottom  = Segment(pos + Real3(20, -20, 0), Real3(-20, -20, 0));
+        var left    = Segment(pos + Real3(20, 20, 0), Real3(20, -20, 0));
+        var right   = Segment(pos + Real3(-20, 20, 0), Real3(-20, -20, 0));
+        
+        segments.Add(top);
+        segments.Add(bottom);
+        segments.Add(left);
+        segments.Add(right);
         
         var objs = this.Space.FindAllObjectsByName("Sprite");
         
-        var pos = this.Owner.Transform.WorldTranslation;
+        
         
         var dm = this.Owner.DynamicMesh;
         
+        foreach (var obj in objs){
+            foreach (var seg in obj.Cast2DDynamicShadow.Segments){
+                segments.Add(seg);
+            }
+        }
+        
+        foreach (var seg in segments){
+            Utilities.DrawLine(seg.P1, seg.P2, Real4(0, 1, 0, 1));
+        }
+        
+        var ray = Segment(Real3(0,0,0), this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0));
         
         
+        var closestIntersect = POI(true);
+        for(var i = 0; i < segments.Count; ++i){
+            var intersect = this.GetIntersection(ray, segments[i]);
+            if(intersect.Null)
+                continue;
+            
+            if(closestIntersect.Null || intersect.Param<closestIntersect.Param) {
+                closestIntersect=intersect;
+            }
+        }
+        var intersect = closestIntersect;
         
-        
-        
-        
-        
+        Utilities.DrawLine(Real3(0,0,0), Real3(intersect.X, intersect.Y, 0), Real4(0,0,1,1));
+        Utilities.DrawCircle(Real3(intersect.X, intersect.Y, 0), 0.1, true, Real4(1,0,0,1));
         
         /*this.Points.Clear();
         
@@ -110,4 +163,37 @@ class DynamicLight2D : ZilchComponent
         var pos = this.Owner.Transform.WorldTranslation;
         return Math.ATan2(((left.Pos + Real3(0.51, 0.51, 0)) - pos).Y, ((left.Pos + Real3(0.51, 0.51, 0)) - pos).X) > Math.ATan2(((right.Pos + Real3(0.51, 0.51, 0)) - pos).Y, ((right.Pos + Real3(0.51, 0.51, 0)) - pos).X);
     }*/
+    
+    function GetIntersection (ray : Segment, segment : Segment) : POI {
+        
+        var r_px = ray.P1.X;
+        var r_py = ray.P1.Y;
+        var r_dx = ray.P2.X - ray.P1.X;
+        var r_dy = ray.P2.Y - ray.P1.Y;
+        
+        var s_px = segment.P1.X;
+        var s_py = segment.P1.Y;
+        var s_dx = segment.P2.X - segment.P1.X;
+        var s_dy = segment.P2.Y - segment.P1.Y;
+        
+        var r_mag = Math.Sqrt(r_dx*r_dx+r_dy*r_dy);
+        var s_mag = Math.Sqrt(s_dx*s_dx+s_dy*s_dy);
+        if(r_dx/r_mag == s_dx/s_mag && r_dy/r_mag == s_dy/s_mag)
+            return POI(true);
+        
+        if((s_dx*r_dy - s_dy*r_dx) == 0)
+            return POI(true);
+        
+        var t2 = (r_dx*(s_py-r_py) + r_dy*(r_px-s_px))/(s_dx*r_dy - s_dy*r_dx);
+        var t1 = (s_px+s_dx*t2-r_px)/r_dx;
+        
+        if(t1<0)
+            return POI(true);
+        if(t2<0 || t2>1)
+            return POI(true);
+        
+        return POI(r_px+r_dx*t1, r_py+r_dy*t1, t1);
+        
+    }
+    
 }

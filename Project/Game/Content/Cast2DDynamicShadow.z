@@ -1,6 +1,14 @@
 struct Segment {
     var P1 : Real3;
     var P2 : Real3;
+    constructor (p1 : Real3, p2 : Real3){
+        this.P1 = p1;
+        this.P2 = p2;
+    }
+    constructor () {
+        this.P1 = Real3(0);
+        this.P2 = Real3(0);
+    }
 }
 
 enum ShadowCastType {
@@ -12,6 +20,9 @@ class Cast2DDynamicShadow : ZilchComponent
     
     [Property]
     var CastType : ShadowCastType = ShadowCastType.Box;
+    
+    [Property]
+    var CastSize : Real = 1;
     
     var Segments : Array[Segment];
     
@@ -27,17 +38,14 @@ class Cast2DDynamicShadow : ZilchComponent
             var seg2 = Segment();
             var seg3 = Segment();
             var seg4 = Segment();
-            seg1.P1 = p + Real3( 0.5,    0.5,    0);
-            seg1.P1 = p + Real3(-0.5,    0.5,    0);
-            
-            seg2.P1 = p + Real3(-0.5,    0.5,    0);
-            seg2.P1 = p + Real3(-0.5,   -0.5,    0);
-            
-            seg3.P1 = p + Real3(-0.5,   -0.5,    0);
-            seg3.P1 = p + Real3( 0.5,   -0.5,    0);
-            
-            seg4.P1 = p + Real3( 0.5,   -0.5,    0);
-            seg4.P1 = p + Real3( 0.5,    0.5,    0);
+            seg1.P1 = p + (Real3( 0.5,    0.5,    0) * this.CastSize);
+            seg1.P2 = p + (Real3(-0.5,    0.5,    0) * this.CastSize);
+            seg2.P1 = p + (Real3(-0.5,    0.5,    0) * this.CastSize);
+            seg2.P2 = p + (Real3(-0.5,   -0.5,    0) * this.CastSize);
+            seg3.P1 = p + (Real3(-0.5,   -0.5,    0) * this.CastSize);
+            seg3.P2 = p + (Real3( 0.5,   -0.5,    0) * this.CastSize);
+            seg4.P1 = p + (Real3( 0.5,   -0.5,    0) * this.CastSize);
+            seg4.P2 = p + (Real3( 0.5,    0.5,    0) * this.CastSize);
             
             this.Segments.Add(seg1);
             this.Segments.Add(seg2);
