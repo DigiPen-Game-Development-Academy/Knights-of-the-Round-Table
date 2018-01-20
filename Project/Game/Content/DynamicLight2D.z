@@ -78,9 +78,9 @@ class DynamicLight2D : ZilchComponent
             }
         }
         //draw segments
-        //foreach (var seg in segments){
-        //    Utilities.DrawLine(seg.P1, seg.P2, Real4(0, 1, 0, 1));
-        //}
+        /*foreach (var seg in segments){
+            Utilities.DrawLine(seg.P1, seg.P2, Real4(0, 1, 0, 1));
+        }*/
         
         
         //get all unique points
@@ -167,10 +167,10 @@ class DynamicLight2D : ZilchComponent
         
         
         //draw rays
-        //foreach (var i in intersects) {
-        //    Utilities.DrawLine(pos, Real3(i.X, i.Y, 0), Real4(0,0,1,1));
-        //    Utilities.DrawCircle(Real3(i.X, i.Y,0), 0.1, true, Real4(1,0,0,1));
-        //}
+        /*foreach (var i in intersects) {
+            Utilities.DrawLine(pos, Real3(i.X, i.Y, 0), Real4(0,0,1,1));
+            Utilities.DrawCircle(Real3(i.X, i.Y,0), 0.1, true, Real4(1,0,0,1));
+        }*/
         
         /*foreach (var seg in edges) {
             

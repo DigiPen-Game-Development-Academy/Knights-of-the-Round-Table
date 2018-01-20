@@ -113,7 +113,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.46590328, 0.405505478, 107.550415],
+			Vec3 Translation = [-5.19572163, -0.992804348, 107.550415],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -125,7 +125,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 54.8811989,
+			float Size = 7.42736626,
 		},
 		EditorCameraController = 
 		{
@@ -133,7 +133,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [6.46590328, 0.405505478, -4.0147748],
+			Vec3 LookTarget = [-5.19572163, -0.992804348, -4.0147748],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -265,7 +265,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.87513161, 0.950441122, 0],
+			Vec3 Translation = [3.90259981, 1.04657984, 0],
 			Vec3 Scale = [1.28684461, 10.1790447, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -604,6 +604,46 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.4799428, -1.19206536, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5274db4c2e7c11f9:Circle",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Cast2DDynamicShadow = 
+		{
+			Enum CastType = Circle,
+			float CastSize = 1,
 		},
 	},
 },

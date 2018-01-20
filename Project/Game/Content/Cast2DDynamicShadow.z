@@ -12,7 +12,8 @@ struct Segment {
 }
 
 enum ShadowCastType {
-    Box
+    Box,
+    Circle
 }
 
 class Cast2DDynamicShadow : ZilchComponent
@@ -33,11 +34,12 @@ class Cast2DDynamicShadow : ZilchComponent
         
         this.Segments = Array[Segment]();
         
-        if(this.CastType == ShadowCastType.Box){
+        if (this.CastType == ShadowCastType.Box) {
             var seg1 = Segment();
             var seg2 = Segment();
             var seg3 = Segment();
             var seg4 = Segment();
+            
             seg1.P1 = p + ((Real3( 0.5,    0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
             seg1.P2 = p + ((Real3(-0.5,    0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
             seg2.P1 = p + ((Real3(-0.5,    0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
@@ -51,6 +53,23 @@ class Cast2DDynamicShadow : ZilchComponent
             this.Segments.Add(seg2);
             this.Segments.Add(seg3);
             this.Segments.Add(seg4);
+            
+        } else if (this.CastType == ShadowCastType.Circle) {
+            
+            var vertCount = 16;
+            
+            var angle = 0.0;
+            for (var i = 0; i < vertCount/2; ++i){
+                
+                var dir1 = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                
+                angle += Math.ToRadians(720/vertCount);
+                
+                var dir2 = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+                
+                this.Segments.Add(Segment(p+(dir1*(this.CastSize/2)), p+(dir2*(this.CastSize/2))));
+                
+            }
             
         }
         
