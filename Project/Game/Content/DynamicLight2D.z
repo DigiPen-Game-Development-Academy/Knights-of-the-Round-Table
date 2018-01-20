@@ -34,6 +34,9 @@ struct PointStruct {
 class DynamicLight2D : ZilchComponent
 {
     
+    [Property]
+    var Range : Real = 30;
+    
     var Mesh : Mesh;
     
     var Points : Array[PointReturn];
@@ -54,26 +57,32 @@ class DynamicLight2D : ZilchComponent
         var cPos = camViewPort.Camera.Transform.WorldTranslation;
         
         //edge of screen bounds
-        var top     = Segment(cPos + Real3(20, 20, 0),  Real3(-20, 20, 0));
-        var bottom  = Segment(cPos + Real3(20, -20, 0), Real3(-20, -20, 0));
-        var left    = Segment(cPos + Real3(20, 20, 0),  Real3(20, -20, 0));
-        var right   = Segment(cPos + Real3(-20, 20, 0), Real3(-20, -20, 0));
+        var top     = Segment(cPos + Real3( this.Range,  this.Range, 0),  Real3(-this.Range,  this.Range, 0));
+        var bottom  = Segment(cPos + Real3( this.Range, -this.Range, 0), Real3( -this.Range, -this.Range, 0));
+        var left    = Segment(cPos + Real3( this.Range,  this.Range, 0),  Real3( this.Range, -this.Range, 0));
+        var right   = Segment(cPos + Real3(-this.Range,  this.Range, 0), Real3( -this.Range, -this.Range, 0));
         
         segments.Add(top);
         segments.Add(bottom);
         segments.Add(left);
         segments.Add(right);
         
-        var objs = this.Space.FindAllObjectsByName("Sprite");
+        var objs = Array[Cog]();
         
-        
+        foreach (var obj in GlobalVariables.ShadowObjects) {
+            
+            if(Math.Distance(Real3(obj.Transform.WorldTranslation.X, obj.Transform.WorldTranslation.Y, 0), Real3(pos.X, pos.Y, 0)) <= this.Range) {
+                objs.Add(obj);
+            }
+            
+        }
         
         var dm = this.Owner.DynamicMesh;
         dm.Clear();
         
         //get segments
-        foreach (var obj in objs){
-            foreach (var seg in obj.Cast2DDynamicShadow.Segments){
+        foreach (var obj in objs) {
+            foreach (var seg in obj.Cast2DDynamicShadow.Segments) {
                 segments.Add(seg);
             }
         }

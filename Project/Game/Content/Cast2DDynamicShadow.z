@@ -30,6 +30,10 @@ class Cast2DDynamicShadow : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         
+        if(GlobalVariables.ShadowObjects == null)
+            GlobalVariables.ShadowObjects = Array[Cog]();
+        GlobalVariables.ShadowObjects.Add(this.Owner);
+        
         var p = this.Owner.Transform.WorldTranslation;
         
         this.Segments = Array[Segment]();
