@@ -82,14 +82,23 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
-		ForwardRenderer = 
+		DeferredRenderer = 
 		{
-			Vec4 ClearColor = [0.485000014, 0.485000014, 0.485000014, 1],
+			Vec4 ClearColor = [0, 0, 0, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
 			bool EditorIconDepth = true,
-			bool Wireframe = false,
+			bool Hdr = false,
+			bool Shadows = false,
+			bool AntiAliasing = false,
+			bool Refraction = false,
+			bool Reflections = true,
+			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
+			bool GodRays = false,
+			bool RenderMasks = false,
+			bool Glow = false,
+			float GlowThreshold = 1,
 		},
 	},
 	Cog = 
@@ -104,7 +113,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.1516304, 0.952241182, 50],
+			Vec3 Translation = [6.46590328, 0.405505478, 107.550415],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,15 +125,15 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 66.4023285,
+			float Size = 54.8811989,
 		},
 		EditorCameraController = 
 		{
 			ControlMode ControlMode = ZPlane,
-			float LookDistance = 50,
+			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.1516304, 0.952241182, 9.40507547e-08],
+			Vec3 LookTarget = [6.46590328, 0.405505478, -4.0147748],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -156,16 +165,19 @@ Level =
 		{
 			ProjectionMode ProjectionMode = Orthographic,
 			Facing Facing = NegativeZ,
-			CameraTransparentSort TransparentSort = InheritFromSpace,
+			CameraTransparentSort TransparentSort = ViewDepth,
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
-			float FarPlane = 200,
+			float FarPlane = 50,
 			float Size = 20,
 		},
 		SoundListener = 
 		{
 			bool Active = true,
 			float Volume = 1,
+		},
+		Hierarchy = 
+		{
 		},
 	},
 	Cog = 
@@ -216,12 +228,9 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0, 0],
+					Vec3 Translation = [0, 0, 32],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
-				},
-				DynamicLight2D = 
-				{
 				},
 				DynamicMesh = 
 				{
@@ -235,8 +244,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = true,
-					string Material = "4de020863e85bb61:DefaultMaterial",
-					Vec4 Color = [1, 1, 1, 1],
+					string Material = "5a91b9e7acd2d49b:Dynamic2DLight",
+					Vec4 Color = [1, 1, 1, 0.999899983],
+				},
+				DynamicLight2D = 
+				{
 				},
 			},
 		},
@@ -253,8 +265,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.73170924, 0.233328626, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [3.87513161, 0.950441122, 0],
+			Vec3 Scale = [1.28684461, 10.1790447, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -306,8 +318,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.878262281, 2.78292727, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [0.287693739, 2.92026854, 0],
+			Vec3 Scale = [2.18113708, 1.27468276, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -359,8 +371,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.96902621, 4.07201147, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [2.03083038, 3.75612593, 0],
+			Vec3 Scale = [0.876391888, 1.63177109, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -412,8 +424,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.73170924, -4.23927212, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [1.81599283, -4.84369564, 0],
+			Vec3 Scale = [5.48707533, 1.59417975, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -465,8 +477,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.71653652, 3.27988315, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-6.35616684, 3.47216105, 0],
+			Vec3 Scale = [5.15824604, 1.38455582, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -557,6 +569,41 @@ Level =
 		{
 			Enum CastType = Box,
 			float CastSize = 1,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "back",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.300000012, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },

@@ -38,14 +38,14 @@ class Cast2DDynamicShadow : ZilchComponent
             var seg2 = Segment();
             var seg3 = Segment();
             var seg4 = Segment();
-            seg1.P1 = p + (Real3( 0.5,    0.5,    0) * this.CastSize);
-            seg1.P2 = p + (Real3(-0.5,    0.5,    0) * this.CastSize);
-            seg2.P1 = p + (Real3(-0.5,    0.5,    0) * this.CastSize);
-            seg2.P2 = p + (Real3(-0.5,   -0.5,    0) * this.CastSize);
-            seg3.P1 = p + (Real3(-0.5,   -0.5,    0) * this.CastSize);
-            seg3.P2 = p + (Real3( 0.5,   -0.5,    0) * this.CastSize);
-            seg4.P1 = p + (Real3( 0.5,   -0.5,    0) * this.CastSize);
-            seg4.P2 = p + (Real3( 0.5,    0.5,    0) * this.CastSize);
+            seg1.P1 = p + ((Real3( 0.5,    0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
+            seg1.P2 = p + ((Real3(-0.5,    0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
+            seg2.P1 = p + ((Real3(-0.5,    0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
+            seg2.P2 = p + ((Real3(-0.5,   -0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
+            seg3.P1 = p + ((Real3(-0.5,   -0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
+            seg3.P2 = p + ((Real3( 0.5,   -0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
+            seg4.P1 = p + ((Real3( 0.5,   -0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
+            seg4.P2 = p + ((Real3( 0.5,    0.5,    0) * this.CastSize)*this.Owner.Transform.Scale);
             
             this.Segments.Add(seg1);
             this.Segments.Add(seg2);
