@@ -3,11 +3,12 @@ Material =
 	Lambert = 
 	{
 	},
-	LightFrag = 
+	Transparency = 
 	{
-		string TestTexture = "4fab71e8bcb7a8ce:DefaultTexture",
-		float EdgeFalloffPower = 0,
-		float EdgeFalloffScale = 0,
-		Vec4 EdgeGlowColor = [1, 1, 1, 1],
+		MaterialBlendMode BlendMode = Alpha,
+	},
+	ColorDiffuse = 
+	{
+		Vec4 DiffuseColor = [1, 1, 1, 0.0600000024],
 	},
 },

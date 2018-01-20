@@ -41,14 +41,19 @@ class DynamicLight2D : ZilchComponent
     
     var Points : Array[PointReturn];
     
+    var Dm : Cog;
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.Points = Array[PointReturn]();
+        
+        this.Dm = this.Space.CreateAtPosition(Archetype.Mask, Real3(0,0,0));
+        
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
         
-        this.Owner.Parent.Transform.WorldTranslation = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
+        //this.Owner.Parent.Transform.WorldTranslation = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
         
         var segments = Array[Segment]();
         var pos = this.Owner.Transform.WorldTranslation;
@@ -57,10 +62,10 @@ class DynamicLight2D : ZilchComponent
         var cPos = camViewPort.Camera.Transform.WorldTranslation;
         
         //edge of screen bounds
-        var top     = Segment(cPos + Real3( this.Range,  this.Range, 0),  Real3(-this.Range,  this.Range, 0));
-        var bottom  = Segment(cPos + Real3( this.Range, -this.Range, 0), Real3( -this.Range, -this.Range, 0));
-        var left    = Segment(cPos + Real3( this.Range,  this.Range, 0),  Real3( this.Range, -this.Range, 0));
-        var right   = Segment(cPos + Real3(-this.Range,  this.Range, 0), Real3( -this.Range, -this.Range, 0));
+        var top     = Segment(cPos + Real3( this.Range,  this.Range, 0), cPos + Real3(-this.Range,  this.Range, 0));
+        var bottom  = Segment(cPos + Real3( this.Range, -this.Range, 0), cPos + Real3( -this.Range, -this.Range, 0));
+        var left    = Segment(cPos + Real3( this.Range,  this.Range, 0), cPos + Real3( this.Range, -this.Range, 0));
+        var right   = Segment(cPos + Real3(-this.Range,  this.Range, 0), cPos + Real3( -this.Range, -this.Range, 0));
         
         segments.Add(top);
         segments.Add(bottom);
@@ -77,7 +82,7 @@ class DynamicLight2D : ZilchComponent
             
         }
         
-        var dm = this.Owner.DynamicMesh;
+        var dm = this.Dm.DynamicMesh;
         dm.Clear();
         
         //get segments
@@ -189,7 +194,7 @@ class DynamicLight2D : ZilchComponent
             
         }*/
         
-        dm.AddVertex(Real3(0,0,0));
+        dm.AddVertex(pos);
         
         
         
@@ -198,8 +203,8 @@ class DynamicLight2D : ZilchComponent
             
             var seg = edges[i];
             
-            dm.AddVertex(Real3(seg.P1.X, seg.P1.Y, pos.Z)-pos);
-            dm.AddVertex(Real3(seg.P2.X, seg.P2.Y, pos.Z)-pos);
+            dm.AddVertex(Real3(seg.P1.X, seg.P1.Y, pos.Z));
+            dm.AddVertex(Real3(seg.P2.X, seg.P2.Y, pos.Z));
             //dm.AddTriangleIndices(dm.VertexCount-3, dm.VertexCount-2, 0);
             
         }

@@ -1,0 +1,10 @@
+class InputManager : ZilchComponent
+{
+    
+    [Property] var North       : Keys = Keys.W;
+    [Property] var South       : Keys = Keys.S;
+    [Property] var West        : Keys = Keys.A;
+    [Property] var East        : Keys = Keys.D;
+    [Property] var Sprint      : Keys = Keys.Shift;
+    
+}

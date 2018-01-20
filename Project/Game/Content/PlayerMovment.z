@@ -1,0 +1,30 @@
+class PlayerMovment : ZilchComponent
+{
+    
+    [Property]
+    var MoveSpeed : Real = 10;
+    
+    [Property]
+    var SprintMultiplier : Real = 2;
+    
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        var vel = Real3(0);
+        
+        var inMngr = this.LevelSettings.InputManager;
+        
+        if(Zero.Keyboard.KeyIsDown(inMngr.North)) vel +=  ((Real3( 0,  1, 0) * event.Dt) * this.MoveSpeed);
+        if(Zero.Keyboard.KeyIsDown(inMngr.South)) vel +=  ((Real3( 0, -1, 0) * event.Dt) * this.MoveSpeed);
+        if(Zero.Keyboard.KeyIsDown(inMngr.West)) vel +=  ((Real3(-1,  0, 0) * event.Dt) * this.MoveSpeed);
+        if(Zero.Keyboard.KeyIsDown(inMngr.East)) vel +=  ((Real3( 1,  0, 0) * event.Dt) * this.MoveSpeed);
+        
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift)) vel *= this.SprintMultiplier;
+        
+        this.Owner.RigidBody.Velocity = vel;
+        
+    }
+}
