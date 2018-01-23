@@ -74,6 +74,27 @@ class Utilities
         circle.Filled(filled);
         circle.ViewAligned(true);
         circle.Draw();
+    }
+    [Static]
+    function DrawdebugLine(start : Real3, end :Real3){
+        Utilities.DrawdebugLine(start, end, Real4(0,0,1,1));
+    }
+     [Static]
+    function DrawdebugLine(start : Real2, end : Real2){
+        Utilities.DrawdebugLine(Real3(start.X, start.Y, 0), Real3(end.X, end.Y, 0), Real4(0,0,1,1));
+    }
+     [Static]
+    function DrawdebugLine(start : Real3, end : Real3, color :Real4){
+        var debugLine = DebugLine();
+        debugLine.Start(start);
+        debugLine.End(end);
+        debugLine.Float4Color(color);
+        debugLine.Draw();
+    }
+     [Static]
+    function DrawdebugLine(start : Real2, end : Real2, color :Real4){
+        Utilities.DrawdebugLine(Real3(start.X, start.Y, 0), Real3(end.X, end.Y, 0), color);
         
     }
+  
 }
