@@ -1,0 +1,15 @@
+//author
+//perpose (optional)
+//last edited
+
+class StyleExample : ZilchComponent {
+	
+	[Property]
+	var ThisIsAVariable : Boolean = false;	
+
+	function (blah : Real) : Boolean {
+		var thisIsAlsoAVariable = 0.0;
+		return true;
+	}
+	
+}
