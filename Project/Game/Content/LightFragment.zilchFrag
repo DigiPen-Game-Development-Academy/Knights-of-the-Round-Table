@@ -1,13 +1,9 @@
-//Author Brandon Wolenetz
-
 [Pixel][AutoBlock]
-class DarknessFragment
+class LightFragment
 {
     // Custom Inputs
     [Input]
     var TestTexture : Sampler2d = null;
-    
-    
     
     //Built In
     // View Space Normal
@@ -43,11 +39,6 @@ class DarknessFragment
         scalar = Math.Pow(scalar, this.EdgeFalloffPower) * this.EdgeFalloffScale;
         this.Additive = scalar * this.EdgeGlowColor * texColor;*/
         
-        var texColor = this.TestTexture.Sample(this.Uv);
-        
-        texColor += Real4(this.PixelPosition.X, 0, 0, 0);
-        
-        this.Additive = texColor;
-        
+        this.Additive = Real4(0,0,0,0.5);
     }
 }
