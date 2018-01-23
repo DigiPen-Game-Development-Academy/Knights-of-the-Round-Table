@@ -26,17 +26,4 @@ GeometryContent =
 		Generation Tangents = Import,
 		float SmoothingAngle = 60,
 	},
-	PhysicsMeshBuilder = 
-	{
-		Array Meshes = 
-		[
-			{
-				string Name = "plane",
-				uint64 ResourceId = 5a91c85debc96f00,
-			},
-		],
-		bool MakeConvex = false,
-		bool OnlyUseMarkedCollision = false,
-		PhysicsMeshType MeshBuilt = GenericMesh,
-	},
 },

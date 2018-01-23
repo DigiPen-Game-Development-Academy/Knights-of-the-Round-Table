@@ -1,3 +1,5 @@
+//Author Brandon Wolenetz
+
 class AddDarkness : ZilchComponent
 {
     function Initialize(init : CogInitializer)

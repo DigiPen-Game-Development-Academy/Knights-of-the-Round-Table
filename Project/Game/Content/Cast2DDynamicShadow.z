@@ -1,3 +1,5 @@
+//Author Brandon Wolenetz
+
 struct Segment {
     var P1 : Real3;
     var P2 : Real3;

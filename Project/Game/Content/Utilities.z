@@ -1,3 +1,4 @@
+//Author Brandon Wolenetz
 
 struct PointReturn {
     var Pos : Real3 = Real3(9999);

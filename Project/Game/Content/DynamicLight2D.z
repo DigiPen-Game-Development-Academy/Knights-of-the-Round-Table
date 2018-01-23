@@ -1,3 +1,5 @@
+//Author Brandon Wolenetz
+
 struct POI {
     var Null : Boolean = false;
     var X : Real;

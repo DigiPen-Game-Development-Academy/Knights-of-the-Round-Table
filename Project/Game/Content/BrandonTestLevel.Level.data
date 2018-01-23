@@ -121,7 +121,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.64661884, 1.62194204, 107.550415],
+			Vec3 Translation = [-0.604235172, 0.480438471, 107.550415],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -141,7 +141,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.64661884, 1.62194204, -4.0147748],
+			Vec3 LookTarget = [-0.604235172, 0.480438471, -4.0147748],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -233,6 +233,9 @@ Level =
 		DynamicLight2D = 
 		{
 			float Range = 30,
+		},
+		AddDarkness = 
+		{
 		},
 		Hierarchy = 
 		{

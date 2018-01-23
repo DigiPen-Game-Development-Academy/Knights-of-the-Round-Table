@@ -4,8 +4,8 @@ Material =
 	{
 		MaterialBlendMode BlendMode = Multiply,
 	},
-	ColorDiffuse = 
+	DarknessFragment = 
 	{
-		Vec4 DiffuseColor = [0.0199999809, 0.0199999809, 0.0199999809, 0.999899983],
+		string TestTexture = "4fab71e8bcb7a8ce:DefaultTexture",
 	},
 },
