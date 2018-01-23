@@ -1,0 +1,7 @@
+//Author Brandon Wolenetz
+
+class GlobalVariables
+{
+    [Static]
+    var ShadowObjects : Array[Cog];
+}

@@ -1,0 +1,11 @@
+Material = 
+{
+	Transparency = 
+	{
+		MaterialBlendMode BlendMode = Multiply,
+	},
+	DarknessFragment = 
+	{
+		string TestTexture = "4fab71e8bcb7a8ce:DefaultTexture",
+	},
+},
