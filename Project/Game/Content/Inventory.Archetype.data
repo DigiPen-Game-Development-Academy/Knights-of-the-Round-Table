@@ -1,0 +1,350 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "InventoryBackground",
+	},
+	Archetyped = 
+	{
+		string Name = "5a1c25e09edc2512:Inventory",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-6, 1.75, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [0.710000038, 0.710000038, 0.710000038, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "5586f579ca73ecc2:SquareBordered",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+	},
+	Area = 
+	{
+		Vec2 Size = [5, 2.5],
+		Location Origin = Center,
+	},
+	Hierarchy = 
+	{
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c2bb827bb3302:InventorySlot",
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-1.875, 0.625, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "InventorySlot",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c2bb827bb3302:InventorySlot",
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.625, 0.625, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "InventorySlot",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c2bb827bb3302:InventorySlot",
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0.625, 0.625, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "InventorySlot",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c2bb827bb3302:InventorySlot",
+			LinkId = 
+			{
+				uint Id = 5,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [1.875, 0.625, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "InventorySlot",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c2bb827bb3302:InventorySlot",
+			LinkId = 
+			{
+				uint Id = 6,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-1.875, -0.625, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "InventorySlot",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c2bb827bb3302:InventorySlot",
+			LinkId = 
+			{
+				uint Id = 7,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.625, -0.625, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "InventorySlot",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c2bb827bb3302:InventorySlot",
+			LinkId = 
+			{
+				uint Id = 8,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0.625, -0.625, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "InventorySlot",
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 9,
+			},
+			Named = 
+			{
+				string Name = "InventorySlot",
+			},
+			Archetyped = 
+			{
+				string Name = "5a1c2bb827bb3302:InventorySlot",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [1.875, -0.625, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5586f579ca73ecc2:SquareBordered",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			Hierarchy = 
+			{
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 10,
+					},
+					Named = 
+					{
+						string Name = "Item",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0, 0, 0],
+						Vec3 Scale = [0.75, 0.75, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = false,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5275aa4d802dd6dc:Square",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+				},
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c2a6feac57209:PrimarySlot",
+			LinkId = 
+			{
+				uint Id = 11,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-1.25, -2, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "PrimarySlot",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c2a5fed2216e6:SecondarySlot",
+			LinkId = 
+			{
+				uint Id = 12,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, -2, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "SecondarySlot",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c25eb9d7a86c3:HotbarBackground",
+			LinkId = 
+			{
+				uint Id = 13,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, -2, -0.00999999978],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Area = 
+			{
+				Vec2 Size = [3.75, 1.25],
+				Location Origin = Center,
+			},
+			Named = 
+			{
+				string Name = "HotbarBackground",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c254587bee729:QuestItemBar",
+			LinkId = 
+			{
+				uint Id = 14,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 1.625, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Area = 
+			{
+				Vec2 Size = [2.5, 0.5],
+				Location Origin = Center,
+			},
+			Named = 
+			{
+				string Name = "QuestItemBar",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a1c2a48ef2e7879:UntlitySlot",
+			LinkId = 
+			{
+				uint Id = 15,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [1.25, -2, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "UntlitySlot",
+			},
+		},
+	},
+},

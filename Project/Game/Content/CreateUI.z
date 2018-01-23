@@ -1,0 +1,30 @@
+class CreateUI : ZilchComponent
+{
+    
+    [Property]
+    var UILevel : Level = null;
+    
+    var UISpace : Space = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStarted);
+    }
+
+    function OnLevelStarted(event : GameEvent)
+    {
+        
+        if(event.LevelName != this.UILevel.Name) {
+            
+            if(this.GameSession.FindSpaceByName("UI") != null){
+                this.GameSession.FindSpaceByName("UI").Destroy();
+            }
+            
+            this.UISpace = this.GameSession.CreateNamedSpace("UI", Archetype.UISpace);
+            
+            this.UISpace.LoadLevel(this.UILevel);
+            
+        }
+        
+    }
+}
