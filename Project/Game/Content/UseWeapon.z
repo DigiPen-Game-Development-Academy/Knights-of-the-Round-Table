@@ -1,0 +1,45 @@
+class UseWeapon : ZilchComponent
+{
+    
+    var Primary : Item;
+    var Secondary : Item;
+    var Utility : Item;
+    
+    var PrimarySelected : Boolean = true;
+    
+    function Initialize(init : CogInitializer) {
+        GlobalVariables.UseWeapon = this;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey) || Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse)) {
+            if(this.PrimarySelected) {
+                if(this.Primary != null)
+                    this.Primary.Use();
+                else
+                    this.FistAttack();
+            } else {
+                if(this.Secondary != null)
+                    this.Secondary.Use();
+                else
+                    this.FistAttack();
+            }
+            
+        }
+        
+        if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseUtility)){
+            if(this.Utility != null)
+                this.Utility.Use();
+        }
+        
+        if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.ToggleSecondary))
+            this.PrimarySelected = !this.PrimarySelected;
+        
+    }
+    
+    function FistAttack () {
+        Console.WriteLine("FISTS!");
+    }
+}

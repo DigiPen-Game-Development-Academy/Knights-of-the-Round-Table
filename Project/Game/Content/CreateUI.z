@@ -8,6 +8,9 @@ class CreateUI : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        
+        GlobalVariables.GameSpace = this.Space;
+        
         Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStarted);
     }
 

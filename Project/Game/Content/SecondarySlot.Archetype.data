@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -2, 0],
+		Vec3 Translation = [0, -2, 0.100000001],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -36,6 +36,14 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
+	InventorySlot = 
+	{
+	},
+	Reactive = 
+	{
+		bool Active = true,
+		bool CaptureMouse = false,
+	},
 	Hierarchy = 
 	{
 		Cog = 
@@ -50,7 +58,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [1.25, 0, 0],
+				Vec3 Translation = [0, 0, 0.100000001],
 				Vec3 Scale = [0.75, 0.75, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},

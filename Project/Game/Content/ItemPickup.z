@@ -1,0 +1,30 @@
+//author Brandon Wolenetz
+
+class ItemPickup : ZilchComponent
+{
+    
+    var Item : Item;
+    
+    [Property]
+    var ID : Integer = 0;
+    
+    function Initialize(init : CogInitializer) {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        if(this.ID == 0)
+            this.Item = TestItem1();
+        else if(this.ID == 1)
+            this.Item = TestItem2();
+        this.Item.Init();
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        this.Owner.Sprite.SpriteSource = this.Item.GroundSprite;
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject == GlobalVariables.Player){
+            if(GlobalVariables.AddInventoryItem(this.Item))
+                this.Owner.Destroy();
+        }
+    }
+    
+}

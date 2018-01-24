@@ -1,0 +1,17 @@
+//author Brandon Wolenetz
+
+class TestItem2 : Item
+{
+    function Init () {
+        this.Icon = SpriteSource.SquareBordered;
+        this.HoldingSprite = SpriteSource.SquareBordered;
+        this.GroundSprite = SpriteSource.CircleBordered;
+        this.Name = "TestItem2";
+        this.Type = ItemType.Weapon;
+        
+    }
+    
+    function Use () {
+        Console.WriteLine("BANG");
+    }
+}

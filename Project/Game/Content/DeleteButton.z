@@ -1,0 +1,30 @@
+class DeleteButton : ZilchComponent
+{
+    
+    var InitialColor : Real4;
+    
+    function Initialize(init : CogInitializer)
+    {
+        
+        this.InitialColor = this.Owner.Sprite.Color;
+        
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+    
+    function OnMouseExit(event : ViewportMouseEvent)
+    {
+        this.Owner.Sprite.Color = this.InitialColor;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent)
+    {
+        this.Owner.Sprite.Color = this.InitialColor + Real4(-0.3,0,0,0);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        GlobalVariables.Items[this.Owner.Parent.InventorySlot.Index] = null;
+    }
+}

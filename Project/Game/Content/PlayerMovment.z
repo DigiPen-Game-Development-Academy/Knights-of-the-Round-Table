@@ -11,6 +11,7 @@ class PlayerMovment : ZilchComponent
     
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        GlobalVariables.Player = this.Owner;
     }
 
     function OnLogicUpdate(event : UpdateEvent) {

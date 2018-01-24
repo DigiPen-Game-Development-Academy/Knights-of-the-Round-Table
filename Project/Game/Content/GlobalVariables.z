@@ -4,4 +4,50 @@ class GlobalVariables
 {
     [Static]
     var ShadowObjects : Array[Cog];
+    
+    [Serialized][Static]
+    var Items : Array[Item];
+    
+    [Static]
+    var Player : Cog;
+    
+    [Static]
+    var InputManager : InputManager;
+    
+    [Static]
+    var GameSpace : Space;
+    
+    [Static]
+    var UseWeapon : UseWeapon;
+    
+    [Static]
+    function AddInventoryItem (item : Item) : Boolean {
+        
+        for(var i = 0; i < GlobalVariables.Items.Count; ++i){
+            
+            if(GlobalVariables.Items[i] == null) {
+                GlobalVariables.Items.Set(i, item);
+                if(item.Stackable && GlobalVariables.Items[i].Ammount > 100) {
+                    item.Ammount -= 100;
+                    GlobalVariables.Items[i].Ammount = 100;
+                } else {
+                    return true;
+                }
+            } else if ((item.Stackable && GlobalVariables.Items[i].Name == item.Name)) {
+                if(GlobalVariables.Items[i].Ammount + item.Ammount > 100){
+                    item.Ammount -= 100 - GlobalVariables.Items[i].Ammount;
+                    GlobalVariables.Items[i].Ammount = 100;
+                }else{
+                    GlobalVariables.Items[i].Ammount += item.Ammount;
+                    delete item;
+                    return true;
+                }
+            }
+            
+        }
+        
+        return false;
+        
+    }
+    
 }

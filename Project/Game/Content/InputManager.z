@@ -3,10 +3,21 @@
 class InputManager : ZilchComponent
 {
     
-    [Property] var North       : Keys = Keys.W;
-    [Property] var South       : Keys = Keys.S;
-    [Property] var West        : Keys = Keys.A;
-    [Property] var East        : Keys = Keys.D;
-    [Property] var Sprint      : Keys = Keys.Shift;
+    [Property] var North           : Keys           = Keys.W;
+    [Property] var South           : Keys           = Keys.S;
+    [Property] var West            : Keys           = Keys.A;
+    [Property] var East            : Keys           = Keys.D;
+    [Property] var Sprint          : Keys           = Keys.Shift;
+    [Property] var UseWeaponMouse  : MouseButtons   = MouseButtons.Left;
+    [Property] var UseWeaponKey    : Keys           = Keys.Space;
+    [Property] var ToggleSecondary : Keys           = Keys.E;
+    [Property] var PauseOrInventory: Keys           = Keys.I;
+    [Property] var UseUtility      : Keys           = Keys.F;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        GlobalVariables.InputManager = this;
+    }
     
 }

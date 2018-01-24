@@ -1,0 +1,41 @@
+//author Brandon Wolenetz
+
+enum ItemType {
+    Weapon,
+    Utility,
+    Ammo,
+    Consumable
+}
+
+class Item
+{
+    var Type : ItemType;
+    
+    var Icon : SpriteSource;
+    
+    var HoldingSprite : SpriteSource;
+    
+    var GroundSprite : SpriteSource;
+    
+    var Stackable : Boolean = false;
+    
+    var Ammount : Integer = 1;
+    
+    var Name : String = "null";
+    
+    [Virtual]
+    function Init () {
+        Console.WriteLine("This Item Will Not Initialize Properly!");
+    }
+    
+    [Virtual]
+    function ReturnLore () : String {
+        return "NULL";
+    }
+    
+    [Virtual]
+    function Use () {
+        Console.WriteLine("This Item Does Not Do Anything!");
+    }
+    
+}
