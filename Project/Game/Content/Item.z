@@ -9,7 +9,7 @@ enum ItemType {
 
 class Item
 {
-    var Type : ItemType;
+    var Type : ItemType = ItemType.Weapon;
     
     var Icon : SpriteSource;
     
@@ -17,11 +17,27 @@ class Item
     
     var GroundSprite : SpriteSource;
     
+    var WakeSprite : Archetype;
+    
     var Stackable : Boolean = false;
     
     var Ammount : Integer = 1;
     
     var Name : String = "null";
+    
+    var FireRate : Real = 5;
+    
+    var MagSize : Integer = 20;
+    var CurrentMag : Integer = 20;
+    var Reloading : Boolean = false;
+    
+    var MaxRange : Real = 10;
+    
+    var RelodTime : Real = 3;
+    
+    var DamagePer : Real = 1;
+    
+    var Timer : Real = 0;
     
     [Virtual]
     function Init () {
@@ -34,7 +50,7 @@ class Item
     }
     
     [Virtual]
-    function Use () {
+    function Use (radAngle : Real) {
         Console.WriteLine("This Item Does Not Do Anything!");
     }
     

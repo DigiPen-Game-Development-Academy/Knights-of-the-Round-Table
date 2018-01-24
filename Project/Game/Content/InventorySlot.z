@@ -45,7 +45,7 @@ class InventorySlot : ZilchComponent
         var temp = Item();
         
         if(item.Type == ItemType.Consumable) {  //Consumable items
-            item.Use();
+            item.Use(0);
             if(item.Ammount == 1){
                 delete item;
                 GlobalVariables.Items[this.Index] = null;

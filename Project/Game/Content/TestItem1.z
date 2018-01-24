@@ -9,12 +9,30 @@ class TestItem1 : Item
         this.HoldingSprite = SpriteSource.SquareBordered;
         this.GroundSprite = SpriteSource.Circle;
         this.Name = "TestItem1";
+        this.FireRate = 0.15;
+        this.WakeSprite = Archetype.Wake;
         //this.Stackable = true;
         //this.Ammount = 78;
         
     }
     
-    function Use () {
+    function Use (radAngle : Real) {
+        
+        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+        
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        
+        if(res != null){
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+        }else{
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+        }
+        
         Console.WriteLine("qwertyuiopasdfghjklzxcvbnm,");
     }
     

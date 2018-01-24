@@ -1,0 +1,11 @@
+
+
+
+
+class Damage : ZilchEvent {
+    
+    var Damage : Real = 0;
+    
+    sends Damage : Damage;
+    
+}

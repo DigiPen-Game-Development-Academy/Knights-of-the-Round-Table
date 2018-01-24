@@ -1,0 +1,16 @@
+class Ammo : Item
+{
+    function Init(){
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        this.Type = ItemType.Ammo;
+        this.GroundSprite = SpriteSource.SquareBordered;
+        this.Icon = SpriteSource.DefaultSprite;
+        this.Stackable = true;
+        var rand = Random();
+        this.Ammount = Math.Round(rand.Range(20, 30)) as Integer;
+        
+    }
+
+    function Use(redAngle : Real){}
+}

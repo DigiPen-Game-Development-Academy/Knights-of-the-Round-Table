@@ -21,6 +21,9 @@ class GlobalVariables
     var UseWeapon : UseWeapon;
     
     [Static]
+    var DebugLinesActive : Boolean = false;
+    
+    [Static]
     function AddInventoryItem (item : Item) : Boolean {
         
         for(var i = 0; i < GlobalVariables.Items.Count; ++i){

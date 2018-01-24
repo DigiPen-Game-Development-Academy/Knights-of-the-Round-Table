@@ -1,0 +1,6 @@
+class Fists : Item
+{
+    function Use (radAngle : Real) {
+        Console.WriteLine("FISTS!");
+    }
+}

@@ -1,3 +1,5 @@
+//Author Brandon Wolenetz
+
 class UseWeapon : ZilchComponent
 {
     
@@ -5,33 +7,100 @@ class UseWeapon : ZilchComponent
     var Secondary : Item;
     var Utility : Item;
     
+    var AmmoCount : Integer = 0;
+    
     var PrimarySelected : Boolean = true;
     
     function Initialize(init : CogInitializer) {
+        this.Primary = Fists();
+        this.Secondary = Fists();
         GlobalVariables.UseWeapon = this;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
         
+        var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
+        
+        var vec = mousePos - this.Owner.Transform.WorldTranslation;
+        
+        var angle = Math.ATan2(vec.Y, vec.X);
+        
+        this.Primary.Timer -= event.Dt;
+        this.Secondary.Timer -= event.Dt;
+        if(this.Utility != null) this.Utility.Timer -= event.Dt;
+        
+        this.AmmoCount = this.GetAmmoCount();
+        
+        if(this.Primary.CurrentMag == 0 && !this.Primary.Reloading && this.AmmoCount != 0){
+            this.Primary.Reloading = true;
+            this.Primary.Timer = this.Primary.RelodTime;
+        }else if(this.Primary.CurrentMag == 0 && this.Primary.Timer <= 0){
+            this.Primary.Reloading = false;
+            if(this.AmmoCount - this.Primary.MagSize < 0){
+                this.Primary.CurrentMag = this.AmmoCount;
+                this.RemoveAmmo(this.AmmoCount);
+            }
+            else{
+                this.Primary.CurrentMag = this.Primary.MagSize;
+                this.RemoveAmmo(this.Primary.MagSize);
+            }
+        }
+        
+        if(this.Secondary.CurrentMag == 0 && !this.Secondary.Reloading && this.AmmoCount != 0){
+            this.Secondary.Reloading = true;
+            this.Secondary.Timer = this.Secondary.RelodTime;
+        }else if(this.Secondary.CurrentMag == 0 && this.Primary.Timer <= 0){
+            this.Secondary.Reloading = false;
+            if(this.AmmoCount - this.Secondary.MagSize < 0){
+                this.Secondary.CurrentMag = this.AmmoCount;
+                this.RemoveAmmo(this.AmmoCount);
+            }
+            else{
+                this.Secondary.CurrentMag = this.Secondary.MagSize;
+                this.RemoveAmmo(this.Secondary.MagSize);
+            }
+        }
+        
+        /*This Code Will Probably Never Run*/
+        if(this.Utility != null && this.Utility.CurrentMag == 0 && !this.Utility.Reloading && this.AmmoCount != 0){
+            this.Utility.Reloading = true;
+            this.Utility.Timer = this.Utility.RelodTime;
+        }else if(this.Utility != null && this.Utility.CurrentMag == 0 && this.Primary.Timer <= 0){
+            this.Utility.Reloading = false;
+            if(this.AmmoCount - this.Utility.MagSize < 0){
+                this.Utility.CurrentMag = this.AmmoCount;
+                this.RemoveAmmo(this.AmmoCount);
+            }
+            else{
+                this.Utility.CurrentMag = this.Utility.MagSize;
+                this.RemoveAmmo(this.Utility.MagSize);
+            }
+        }
+        
+        /*This will tho*/
         if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey) || Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse)) {
-            if(this.PrimarySelected) {
-                if(this.Primary != null)
-                    this.Primary.Use();
-                else
-                    this.FistAttack();
-            } else {
-                if(this.Secondary != null)
-                    this.Secondary.Use();
-                else
-                    this.FistAttack();
+            if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0) {
+                this.Primary.Timer = this.Primary.FireRate;
+                if(this.Primary.MagSize != -1)
+                    this.Primary.CurrentMag -= 1;
+                this.Primary.Use(angle);
+            } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && this.Secondary.CurrentMag > 0) {
+                this.Secondary.Timer = this.Secondary.FireRate;
+                if(this.Secondary.MagSize != -1)
+                    this.Secondary.CurrentMag -= 1;
+                this.Secondary.Use(angle);
             }
             
         }
         
         if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseUtility)){
-            if(this.Utility != null)
-                this.Utility.Use();
+            if(this.Utility != null && this.Utility.Timer <= 0 && this.Utility.CurrentMag > 0) {
+                this.Utility.Timer = this.Utility.FireRate;
+                if(this.Utility.MagSize != -1)
+                    this.Utility.CurrentMag -= 1;
+                this.Utility.Use(angle);
+            }
         }
         
         if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.ToggleSecondary))
@@ -39,7 +108,41 @@ class UseWeapon : ZilchComponent
         
     }
     
-    function FistAttack () {
-        Console.WriteLine("FISTS!");
+    function GetAmmoCount () : Integer {
+        var items = GlobalVariables.Items;
+        
+        var count = 0;
+        
+        foreach(var item in items) {
+            if(item == null)
+                continue;
+            if(item.Type == ItemType.Ammo){
+                count += item.Ammount;
+            }
+        }
+        
+        return count;
+    }
+    
+    function RemoveAmmo (count : Integer) {
+        
+        var items = GlobalVariables.Items;
+        
+        foreach(var item in items) {
+            if(item == null)
+                continue;
+            if(item.Type == ItemType.Ammo){
+                if(item.Ammount <= count){
+                    count -= item.Ammount;
+                    item.Ammount = 0;
+                    delete item;
+                } else {
+                    item.Ammount -= count;
+                    this.AmmoCount = this.GetAmmoCount();
+                    return;
+                }
+            }
+        }
+        this.AmmoCount = this.GetAmmoCount();
     }
 }
