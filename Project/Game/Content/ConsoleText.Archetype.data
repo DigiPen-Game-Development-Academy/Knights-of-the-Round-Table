@@ -1,0 +1,38 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "ConsoleText",
+	},
+	Archetyped = 
+	{
+		string Name = "5a11c0484727b1f4:ConsoleText",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [-1.375, 1.875, 0.100000001],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteText = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string FontName = "4e7bac697bec55c5:Verdana",
+		uint FontSize = 115,
+		string Text = "Sprite Text...",
+		TextAlign Align = Left,
+		float PixelsPerUnit = 512,
+		bool Smoothing = true,
+	},
+},

@@ -1,0 +1,40 @@
+class ConsoleController : ZilchComponent {
+    
+    var Text : Array[Cog];
+    
+    var MaxMsg : Integer = 10;
+    
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.Text = Array[Cog]();
+        
+        for(var i = 0; i < 20; ++i){
+            this.AddMSG("`i`", Real4(1, 0, 0, 1));
+        }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        
+        
+    }
+    
+    function AddMSG(txt : String, color : Real4) {
+        var txtobj = this.Space.CreateAtPosition(Archetype.ConsoleText, Real3((this.Owner.Transform.WorldTranslation.X/2)+0.125, (this.Owner.Transform.WorldTranslation.Y/2)+0.125, 0.1));
+        if(txtobj != null) {
+            txtobj.SpriteText.Text = txt;
+            txtobj.SpriteText.Color = color;
+            txtobj.AttachTo(this.Owner);
+            this.Text.Add(txtobj);
+            if(this.Text.Count == 1)
+                return;
+            for (var i = 1; i < this.Text.Count; ++i) {
+                this.Text[i].Transform.Translation = Real3(this.Text[i].Transform.Translation.X, this.Text[i-1].Transform.Translation.Y + this.Text[i-1].SpriteText.MeasureText().Y, 0.1);
+            }
+            
+            
+            
+        }
+    }
+}

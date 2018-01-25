@@ -67,7 +67,6 @@ class SetChest : ZilchComponent
         
         GlobalVariables.ChestItems = this.Items;
         
-        Console.WriteLine(GlobalVariables.ChestItems);
         GlobalVariables.Inv.Transform.WorldTranslation = Real3(GlobalVariables.Inv.Transform.WorldTranslation.X, GlobalVariables.Inv.Transform.WorldTranslation.Y, GlobalVariables.Inv.InventoryManager.InitalZ);
         GlobalVariables.CInv.ChestInventory.Vis = true;
         GlobalVariables.PauseMenu.MenuVisibilityController.Vis = true;

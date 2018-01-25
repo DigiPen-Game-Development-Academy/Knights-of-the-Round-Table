@@ -13,6 +13,7 @@ class InputManager : ZilchComponent
     [Property] var ToggleSecondary : Keys           = Keys.E;
     [Property] var PauseOrInventory: Keys           = Keys.I;
     [Property] var UseUtility      : Keys           = Keys.F;
+    [Property] var OpenConsole     : Keys           = Keys.Tilde;
     
     
     function Initialize(init : CogInitializer)
