@@ -21,7 +21,10 @@ class GlobalVariables
     var UseWeapon : UseWeapon;
     
     [Static]
-    var DebugLinesActive : Boolean = false;
+    var DebugLinesActive : Boolean = true;
+    
+    [Static]
+    var DebugNavNodes :Boolean = false;
     
     [Static]
     function AddInventoryItem (item : Item) : Boolean {

@@ -1,25 +1,37 @@
+//Author Brandon Wolenetz
+
 class EnemyPathFind : ZilchComponent
 {
+    
+    var Path : Array[NavNode];
+    
+    var Once : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
+        
+        this.Path = null;
+        
+        Zero.Connect(this.Owner, Events.PathFound, this.OnPathFound);
+        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
-        Zero.Connect(this.Owner, Events.PathRequestFinished, this.OnPathRequestFinished);
-        
-        Console.WriteLine(this.Owner.NavGrid.RequestPath(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation, this.Owner));
-        
     }
 
-    function OnPathRequestFinished(event : PathRequestEvent)
+    function OnPathFound(event : PathFound)
     {
-        
-        event.Path.DrawPoints(Real3(0), 1);
-        Console.WriteLine(event.Destination);
-        
+        this.Path = event.Path;
     }
-
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
+        if(!this.Once){
+            this.LevelSettings.FindPath.FindPath(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation, this.Owner);
+            this.Once = true;
+        }
+    }
+    
+    function Recalculate() {
+        this.LevelSettings.FindPath.FindPath(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation, this.Owner);
     }
 }

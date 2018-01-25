@@ -9,3 +9,11 @@ class Damage : ZilchEvent {
     sends Damage : Damage;
     
 }
+
+class PathFound : ZilchEvent {
+    
+    var Path : Array[NavNode];
+    
+    sends PathFound : PathFound;
+    
+}

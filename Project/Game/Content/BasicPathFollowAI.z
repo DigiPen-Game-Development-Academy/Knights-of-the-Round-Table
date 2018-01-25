@@ -1,0 +1,26 @@
+//Author Brandon Wolenetz
+
+class BasicPathFollowAI : ZilchComponent {
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.Owner.EnemyPathFind.Path != null && this.Owner.EnemyPathFind.Path.Count <= 0){
+            this.Owner.EnemyPathFind.Recalculate();
+            if(this.Owner.EnemyPathFind.Path.Count <= 0){
+                this.Owner.EnemyPathFind.Path = null;
+            }
+        }
+        
+        if(this.Owner.EnemyPathFind.Path == null){
+            this.Owner.RigidBody.Velocity = Real3(0);
+        } else {
+            this.Owner.RigidBody.Velocity = Math.Normalize(this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation);
+            if(Math.Distance(this.Owner.EnemyPathFind.Path[0].WorldPos, this.Owner.Transform.WorldTranslation) < 0.1)
+                this.Owner.EnemyPathFind.Recalculate();
+        }
+        
+    }
+}
