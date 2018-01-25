@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "InventorySlot",
+		string Name = "ChestInventorySlot",
 	},
 	Archetyped = 
 	{
-		string Name = "5a1c2bb827bb3302:InventorySlot",
+		string Name = "5a11ad2c1bfca761:ChestInventorySlot",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.625, 0.625, 0.100000001],
+		Vec3 Translation = [-1.8125, 0.625, 0.125],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -36,13 +36,13 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	InventorySlot = 
-	{
-	},
 	Reactive = 
 	{
 		bool Active = true,
 		bool CaptureMouse = false,
+	},
+	ChestInventorySlot = 
+	{
 	},
 	Hierarchy = 
 	{
@@ -113,49 +113,6 @@ Cog =
 				TextAlign Align = Left,
 				float PixelsPerUnit = 64,
 				bool Smoothing = true,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 4,
-			},
-			Named = 
-			{
-				string Name = "DeleteButton",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0.449999988, 0.449999988, 0.300000012],
-				Vec3 Scale = [0.25, 0.25, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 0, 0, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5274db4c2e7c11f9:Circle",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Reactive = 
-			{
-				bool Active = true,
-				bool CaptureMouse = false,
-			},
-			DeleteButton = 
-			{
 			},
 		},
 	},

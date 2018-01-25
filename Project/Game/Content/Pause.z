@@ -3,6 +3,7 @@ class Pause : ZilchComponent {
     
     
     function Initialize(init : CogInitializer) {
+        GlobalVariables.PauseMenu = this.Owner;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
@@ -11,6 +12,8 @@ class Pause : ZilchComponent {
         if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.PauseOrInventory)) {
             GlobalVariables.GameSpace.TimeSpace.Paused = !GlobalVariables.GameSpace.TimeSpace.Paused;
             this.Owner.MenuVisibilityController.Vis = GlobalVariables.GameSpace.TimeSpace.Paused;
+            if(!GlobalVariables.GameSpace.TimeSpace.Paused)
+                this.Space.FindObjectByName("ChestInventoryBackground").ChestInventory.Vis = false;
         }
         
     }
