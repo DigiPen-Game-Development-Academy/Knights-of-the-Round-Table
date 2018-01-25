@@ -13,6 +13,7 @@ class BasicPathFollowAI : ZilchComponent {
         this.Timer -= event.Dt;
         
         if(this.Owner.EnemyPathFind.Path != null && (this.Owner.EnemyPathFind.Path.Count <= 0 || this.Timer <= 0)){
+            this.Timer = 1;
             this.Owner.EnemyPathFind.Recalculate();
             if(this.Owner.EnemyPathFind.Path.Count <= 0){
                 this.Owner.EnemyPathFind.Path = null;
@@ -26,9 +27,6 @@ class BasicPathFollowAI : ZilchComponent {
             if(Math.Distance(this.Owner.EnemyPathFind.Path[0].WorldPos, this.Owner.Transform.WorldTranslation) < 0.1)
                 this.Owner.EnemyPathFind.Recalculate();
         }
-        
-        if(this.Timer <= 0)
-            this.Timer = 1;
         
     }
 }

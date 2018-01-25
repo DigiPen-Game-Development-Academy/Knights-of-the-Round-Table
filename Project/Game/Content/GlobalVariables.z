@@ -21,7 +21,7 @@ class GlobalVariables
     var UseWeapon : UseWeapon;
     
     [Static]
-    var DebugLinesActive : Boolean = true;
+    var DebugLinesActive : Boolean = false;
     
     [Static]
     var DebugNavNodes :Boolean = false;
