@@ -11,6 +11,7 @@ class TestItem1 : Item
         this.Name = "TestItem1";
         this.FireRate = 2;
         this.WakeSprite = Archetype.Wake;
+        this.AmmoPerShot = 2;
         //this.Stackable = true;
         //this.Ammount = 78;
         
@@ -34,6 +35,10 @@ class TestItem1 : Item
         }
         
         Console.WriteLine("qwertyuiopasdfghjklzxcvbnm,");
+    }
+    
+    function ReturnLore () : String {
+        return "for TESTING!";
     }
     
 }

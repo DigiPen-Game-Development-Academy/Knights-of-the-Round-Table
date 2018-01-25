@@ -42,7 +42,7 @@ class WeaponDisplay : ZilchComponent
                 if(item.Reloading)
                     this.AmmoText.Text = "Reloading... `Math.Round(item.Timer)`";
                 else
-                    this.AmmoText.Text = "`item.CurrentMag`/`GlobalVariables.UseWeapon.AmmoCount`";
+                    this.AmmoText.Text = "`item.CurrentMag`/`GlobalVariables.UseWeapon.AmmoCount/item.AmmoPerShot`";
             }
             
         }

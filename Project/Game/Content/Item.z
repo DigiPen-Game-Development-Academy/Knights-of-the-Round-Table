@@ -39,6 +39,8 @@ class Item
     
     var Timer : Real = 0;
     
+    var AmmoPerShot : Integer = 1;
+    
     [Virtual]
     function Init () {
         Console.WriteLine("This Item Will Not Initialize Properly!");

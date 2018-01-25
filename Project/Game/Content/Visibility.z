@@ -1,0 +1,16 @@
+class Visibility : ZilchComponent {
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(GlobalVariables.Player == null)
+            return;
+        
+        /*if(Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation, this.Space.PhysicsSpace, 20).ObjectHit == GlobalVariables.Player)
+            this.Owner.Sprite.Visible = true;
+        else
+            this.Owner.Sprite.Visible = false;*/
+    }
+}
