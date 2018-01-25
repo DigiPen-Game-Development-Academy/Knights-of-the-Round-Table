@@ -25,7 +25,7 @@ class Item
     
     var Name : String = "null";
     
-    var FireRate : Real = 5;
+    var FireRate : Real = 4;
     
     var MagSize : Integer = 20;
     var CurrentMag : Integer = 20;

@@ -9,7 +9,7 @@ class TestItem1 : Item
         this.HoldingSprite = SpriteSource.SquareBordered;
         this.GroundSprite = SpriteSource.Circle;
         this.Name = "TestItem1";
-        this.FireRate = 0.15;
+        this.FireRate = 2;
         this.WakeSprite = Archetype.Wake;
         //this.Stackable = true;
         //this.Ammount = 78;

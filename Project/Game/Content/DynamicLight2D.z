@@ -45,15 +45,22 @@ class DynamicLight2D : ZilchComponent
     
     var Dm : Cog;
     
+    var Once : Boolean = false;
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.Points = Array[PointReturn]();
         
-        this.Dm = this.Space.CreateAtPosition(Archetype.Mask, Real3(0,0,0));
+        this.Dm = this.Space.CreateAtPosition(Archetype.Mask, Real3(0,0,32));
         
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(!this.Once){
+            this.Once = true;
+            return;
+        }
         
         //this.Owner.Parent.Transform.WorldTranslation = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
         

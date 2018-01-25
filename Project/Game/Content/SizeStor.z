@@ -1,0 +1,16 @@
+class SizeStor : ZilchComponent
+{
+    
+    
+    var Size : Real2 = Real2(3);
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

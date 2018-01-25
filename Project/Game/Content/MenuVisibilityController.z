@@ -1,0 +1,4 @@
+class MenuVisibilityController : ZilchComponent
+{
+    var Vis : Boolean = false;
+}

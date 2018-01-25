@@ -13,7 +13,9 @@ class UseWeapon : ZilchComponent
     
     function Initialize(init : CogInitializer) {
         this.Primary = Fists();
+        this.Primary.Init();
         this.Secondary = Fists();
+        this.Secondary.Init();
         GlobalVariables.UseWeapon = this;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
@@ -26,8 +28,8 @@ class UseWeapon : ZilchComponent
         
         var angle = Math.ATan2(vec.Y, vec.X);
         
-        this.Primary.Timer -= event.Dt;
-        this.Secondary.Timer -= event.Dt;
+        if(this.PrimarySelected) this.Primary.Timer -= event.Dt;
+        if(!this.PrimarySelected) this.Secondary.Timer -= event.Dt;
         if(this.Utility != null) this.Utility.Timer -= event.Dt;
         
         this.AmmoCount = this.GetAmmoCount();
@@ -50,7 +52,7 @@ class UseWeapon : ZilchComponent
         if(this.Secondary.CurrentMag == 0 && !this.Secondary.Reloading && this.AmmoCount != 0){
             this.Secondary.Reloading = true;
             this.Secondary.Timer = this.Secondary.RelodTime;
-        }else if(this.Secondary.CurrentMag == 0 && this.Primary.Timer <= 0){
+        }else if(this.Secondary.CurrentMag == 0 && this.Secondary.Timer <= 0){
             this.Secondary.Reloading = false;
             if(this.AmmoCount - this.Secondary.MagSize < 0){
                 this.Secondary.CurrentMag = this.AmmoCount;
@@ -66,7 +68,7 @@ class UseWeapon : ZilchComponent
         if(this.Utility != null && this.Utility.CurrentMag == 0 && !this.Utility.Reloading && this.AmmoCount != 0){
             this.Utility.Reloading = true;
             this.Utility.Timer = this.Utility.RelodTime;
-        }else if(this.Utility != null && this.Utility.CurrentMag == 0 && this.Primary.Timer <= 0){
+        }else if(this.Utility != null && this.Utility.CurrentMag == 0 && this.Utility.Timer <= 0){
             this.Utility.Reloading = false;
             if(this.AmmoCount - this.Utility.MagSize < 0){
                 this.Utility.CurrentMag = this.AmmoCount;
@@ -81,12 +83,12 @@ class UseWeapon : ZilchComponent
         /*This will tho*/
         if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey) || Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse)) {
             if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0) {
-                this.Primary.Timer = this.Primary.FireRate;
+                this.Primary.Timer = 1 / this.Primary.FireRate;
                 if(this.Primary.MagSize != -1)
                     this.Primary.CurrentMag -= 1;
                 this.Primary.Use(angle);
             } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && this.Secondary.CurrentMag > 0) {
-                this.Secondary.Timer = this.Secondary.FireRate;
+                this.Secondary.Timer = 1 / this.Secondary.FireRate;
                 if(this.Secondary.MagSize != -1)
                     this.Secondary.CurrentMag -= 1;
                 this.Secondary.Use(angle);
@@ -96,7 +98,7 @@ class UseWeapon : ZilchComponent
         
         if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseUtility)){
             if(this.Utility != null && this.Utility.Timer <= 0 && this.Utility.CurrentMag > 0) {
-                this.Utility.Timer = this.Utility.FireRate;
+                this.Utility.Timer = 1 / this.Utility.FireRate;
                 if(this.Utility.MagSize != -1)
                     this.Utility.CurrentMag -= 1;
                 this.Utility.Use(angle);

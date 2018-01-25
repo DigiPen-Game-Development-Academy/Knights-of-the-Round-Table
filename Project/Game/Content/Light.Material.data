@@ -9,6 +9,6 @@ Material =
 	},
 	ColorDiffuse = 
 	{
-		Vec4 DiffuseColor = [1, 1, 1, 0.0500000119],
+		Vec4 DiffuseColor = [1, 1, 1, 0.160000026],
 	},
 },

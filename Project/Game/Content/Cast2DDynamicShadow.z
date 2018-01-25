@@ -29,10 +29,25 @@ class Cast2DDynamicShadow : ZilchComponent
     
     var Segments : Array[Segment];
     
+    var Once : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         
-        if(GlobalVariables.ShadowObjects == null)
+        
+        
+        
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        if(!this.Once){
+            this.Once = true;
+            
+            if(GlobalVariables.ShadowObjects == null)
             GlobalVariables.ShadowObjects = Array[Cog]();
         GlobalVariables.ShadowObjects.Add(this.Owner);
         
@@ -78,11 +93,8 @@ class Cast2DDynamicShadow : ZilchComponent
             }
             
         }
+            
+        }
         
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-
-    function OnLogicUpdate(event : UpdateEvent)
-    {
     }
 }

@@ -1,0 +1,60 @@
+class WeaponDisplay : ZilchComponent
+{
+    
+    var NameText : SpriteText;
+    var AmmoText : SpriteText;
+    
+    function Initialize(init : CogInitializer){
+        
+        this.NameText = this.Owner.FindChildByName("Name").SpriteText;
+        this.AmmoText = this.Owner.FindChildByName("Ammo").SpriteText;
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent){
+        
+        var item = Item();
+        
+        if(this.Owner.Name == "Primary") {
+            item = GlobalVariables.UseWeapon.Primary;
+        } else if (this.Owner.Name == "Secondary") {
+            item = GlobalVariables.UseWeapon.Secondary;
+        } else {
+            item = GlobalVariables.UseWeapon.Utility;
+        }
+        
+        if(item == null) {
+            this.Owner.Sprite.Visible = false;
+            this.NameText.Visible = false;
+            this.AmmoText.Visible = false;
+        } else {
+            this.Owner.Sprite.Visible = true;
+            this.NameText.Visible = true;
+            this.AmmoText.Visible = true;
+            
+            this.Owner.Sprite.SpriteSource = item.Icon;
+            this.NameText.Text = item.Name;
+            
+            if(item.MagSize == -1)
+                this.AmmoText.Text = "INF";
+            else {
+                if(item.Reloading)
+                    this.AmmoText.Text = "Reloading... `Math.Round(item.Timer)`";
+                else
+                    this.AmmoText.Text = "`item.CurrentMag`/`GlobalVariables.UseWeapon.AmmoCount`";
+            }
+            
+        }
+        
+        
+        if(this.NameText.MeasureText().X > this.Owner.Parent.SizeStor.Size.X) {
+            this.Owner.Parent.SizeStor.Size = this.NameText.MeasureText();
+        }
+        if(this.AmmoText.MeasureText().X > this.Owner.Parent.SizeStor.Size.X) {
+            this.Owner.Parent.SizeStor.Size = this.AmmoText.MeasureText();
+        }
+        
+        
+    }
+}

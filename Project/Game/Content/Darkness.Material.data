@@ -1,11 +1,14 @@
 Material = 
 {
+	Lambert = 
+	{
+	},
 	Transparency = 
 	{
-		MaterialBlendMode BlendMode = Multiply,
+		MaterialBlendMode BlendMode = Alpha,
 	},
-	DarknessFragment = 
+	ColorDiffuse = 
 	{
-		string TestTexture = "4fab71e8bcb7a8ce:DefaultTexture",
+		Vec4 DiffuseColor = [0, 0, 0, 0.204999983],
 	},
 },

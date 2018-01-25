@@ -112,11 +112,17 @@ class InventorySlot : ZilchComponent
             
             var text = "";
             
-            if(item.Type == ItemType.Weapon)
-                text = "`item.ReturnLore()`\nLeft click to equip to primary slot\nRight click to equip to secondary slot";
-            else if(item.Type == ItemType.Utility)
-                text = "`item.ReturnLore()`\nClick to equip";
-            else if(item.Type == ItemType.Consumable)
+            if(item.Type == ItemType.Weapon){
+                if(item.MagSize != -1)
+                    text = "`item.ReturnLore()`\nLeft click to equip to primary slot\nRight click to equip to secondary slot\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
+                else
+                    text = "`item.ReturnLore()`\nLeft click to equip to primary slot\nRight click to equip to secondary slot\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
+            } else if(item.Type == ItemType.Utility){
+                if(item.MagSize != -1)
+                    text = "`item.ReturnLore()`\nClick to equip\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second";
+                else
+                    text = "`item.ReturnLore()`\nClick to equip\nFire Rate: `item.FireRate` per second";
+            } else if(item.Type == ItemType.Consumable)
                 text = "`item.ReturnLore()`\nClick to use";
             else
                 text = "`item.ReturnLore()`";
@@ -126,7 +132,21 @@ class InventorySlot : ZilchComponent
             
         }else if(this.Item != null){
             
-            var text = "`this.Item.ReturnLore()`\nThis item is equipped";
+            var item = this.Item;
+            
+            var text = "";
+            
+            if(item.Type == ItemType.Weapon){
+                if(item.MagSize != -1)
+                    text = "`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
+                else
+                    text = "`item.ReturnLore()`\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
+            } else if(item.Type == ItemType.Utility){
+                if(item.MagSize != -1)
+                    text = "`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second";
+                else
+                    text = "`item.ReturnLore()`\nFire Rate: `item.FireRate` per second";
+            }
             
             this.LorePanel.LorePanel.Text = text;
             this.LorePanel.Sprite.Visible = true;
