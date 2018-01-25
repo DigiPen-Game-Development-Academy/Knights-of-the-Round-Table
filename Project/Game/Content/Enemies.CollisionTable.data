@@ -1,0 +1,13 @@
+CollisionTable = 
+{
+	Array RegisteredGroups = 
+	[
+		"4e740859314e5515:DefaultGroup",
+		"5a11bc4854a4df8c:NotEnemies",
+		"5a11bfba4f162cf2:Enemies",
+	],
+	Array CollisionFilters = 
+	[
+	],
+	bool AutoRegister = true,
+},

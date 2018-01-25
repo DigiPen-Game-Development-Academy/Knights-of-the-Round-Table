@@ -26,6 +26,24 @@ class Utilities
     }
     
     [Static]
+    function Raycast (start : Real3, direction : Real3, physSpace : PhysicsSpace, range : Real, filter : CastFilter) : CastResult {
+        
+        var ray = Ray();
+        ray.Start = start;
+        ray.Direction = direction;
+        var result = physSpace.CastRayFirstFiltered(ray, filter);
+        if(result.Distance > range){
+            if(GlobalVariables.DebugLinesActive) Utilities.DrawdebugLine(start, start + (range * Math.Normalize(direction)), Real4(0, 0, 1, 1));
+            return null;
+        }
+        
+        if(GlobalVariables.DebugLinesActive) Utilities.DrawdebugLine(start, start + (result.Distance * Math.Normalize(direction)), Real4(0, 0, 1, 1));
+        
+        return result;
+        
+    }
+    
+    [Static]
     function DrawCircle (pos : Real3, radius : Real, filled : Boolean, color : Real4) {
         
         var circle = DebugCircle();

@@ -8,9 +8,20 @@ class Visibility : ZilchComponent {
         if(GlobalVariables.Player == null)
             return;
         
-        /*if(Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation, this.Space.PhysicsSpace, 20).ObjectHit == GlobalVariables.Player)
+        var filter = CastFilter();
+        var vel = GlobalVariables.Player.RigidBody.Velocity;
+        GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Static;
+        filter.IgnoreDynamic = true;
+        filter.IgnoreGhost = true;
+        
+        var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 20, filter);
+        
+        if(res != null && res.ObjectHit == GlobalVariables.Player)
             this.Owner.Sprite.Visible = true;
         else
-            this.Owner.Sprite.Visible = false;*/
+            this.Owner.Sprite.Visible = false;
+        
+        GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
+        GlobalVariables.Player.RigidBody.Velocity = vel;
     }
 }
