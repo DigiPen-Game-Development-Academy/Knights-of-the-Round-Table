@@ -16,6 +16,8 @@ class InventoryManager : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         
+        GlobalVariables.Inv = this.Owner;
+        
         this.InitalZ = this.Owner.Transform.WorldTranslation.Z;
         this.Owner.Transform.WorldTranslation += Real3(0,0,100);
         

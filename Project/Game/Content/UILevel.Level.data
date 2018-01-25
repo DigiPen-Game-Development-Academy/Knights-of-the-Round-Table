@@ -92,11 +92,34 @@ Level =
 			bool FollowEditorCamera = false,
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a11ad401fcdea7b:ChestInventory",
+		LinkId = 
+		{
+			uint Id = 3,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.875, 2.75, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [5, 2.5],
+			Location Origin = Center,
+		},
+		Named = 
+		{
+			string Name = "ChestInventoryBackground",
+		},
+	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -104,7 +127,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.907912731, 0.871698022, 49.9990005],
+			Vec3 Translation = [-1.10760832, 2.71908689, 49.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +139,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.11040306,
+			float Size = 3.64424062,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +147,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.907912731, 0.871698022, -0.000999858137],
+			Vec3 LookTarget = [-1.10760832, 2.71908689, -0.000999866403],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -173,7 +196,7 @@ Level =
 		string Name = "5a1c25e09edc2512:Inventory",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Transform = 
 		{
@@ -196,7 +219,7 @@ Level =
 		string Name = "5a9a981f72700c20:WeaponDisplay",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -214,7 +237,7 @@ Level =
 		string Name = "5a9a8e7aeebdbccb:PauseMenu",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Transform = 
 		{

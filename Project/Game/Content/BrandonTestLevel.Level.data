@@ -141,7 +141,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.32203197, 1.7727412, 111.565193],
+			Vec3 Translation = [12.1302662, -0.263224006, 111.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -153,7 +153,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.3960686,
+			float Size = 14.7781687,
 		},
 		EditorCameraController = 
 		{
@@ -161,7 +161,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.32203197, 1.7727412, -5.77877302e-08],
+			Vec3 LookTarget = [12.1302662, -0.263224006, 5.30230977e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1229,6 +1229,401 @@ Level =
 			float Radius = 0.5,
 		},
 		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.605000019, 0.417450041, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		AutoChest = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 24,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11.25, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.605000019, 0.417450041, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		AutoChest = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 25,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10, 2, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.605000019, 0.417450041, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		SetChest = 
+		{
+			string Slot1ID = "Health Pack (T1)",
+			string Slot2ID = "",
+			string Slot3ID = "",
+			string Slot4ID = "Health Pack (T2)",
+			string Slot5ID = "",
+			string Slot6ID = "Health Pack (T2)",
+			string Slot7ID = "Health Pack (T2)",
+			string Slot8ID = "",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 26,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11.25, -1.25, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.605000019, 0.417450041, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		AutoChest = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 27,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10, -1.25, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.605000019, 0.417450041, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		AutoChest = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 28,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11.25, -2.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.605000019, 0.417450041, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		AutoChest = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 29,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10, -2.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.605000019, 0.417450041, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		AutoChest = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 30,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11.25, -3.625, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.605000019, 0.417450041, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		AutoChest = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10, -3.625, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.605000019, 0.417450041, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		AutoChest = 
 		{
 		},
 	},

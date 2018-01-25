@@ -34,7 +34,7 @@ class InventorySlot : ZilchComponent
     function OnMouseDown(event : ViewportMouseEvent)
     {
         
-        //dont do thi if you are a hotbar slot or you are empty
+        //dont do this if you are a hotbar slot or you are empty
         if(this.HotbarSlot || GlobalVariables.Items[this.Index] == null)
             return;
         

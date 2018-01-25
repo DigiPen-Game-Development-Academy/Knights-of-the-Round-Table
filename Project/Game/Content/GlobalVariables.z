@@ -9,6 +9,9 @@ class GlobalVariables
     var Items : Array[Item];
     
     [Static]
+    var ChestItems : Array[Item];
+    
+    [Static]
     var Player : Cog;
     
     [Static]
@@ -25,6 +28,18 @@ class GlobalVariables
     
     [Static]
     var DebugNavNodes :Boolean = false;
+    
+    [Static]
+    var LorePanel : Cog = null;
+    
+    [Static]
+    var Inv : Cog = null;
+    
+    [Static]
+    var CInv : Cog = null;
+    
+    [Static]
+    var PauseMenu : Cog = null;
     
     [Static]
     function AddInventoryItem (item : Item) : Boolean {

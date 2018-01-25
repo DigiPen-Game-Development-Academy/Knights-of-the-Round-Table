@@ -88,5 +88,21 @@ class Utilities
         
     }
     
+    
+    [Static]
+    function ItemFromID(id : String) : Item {
+        
+        
+        if(id == "Health Pack (T1)")
+            return HealthPackT1();
+        else if(id == "Health Pack (T2)")
+            return HealthPackT2();
+        else if(id == "Health Pack (T3)")
+            return HealthPackT3();
+        else
+            return null;
+        
+    }
+    
   
 }

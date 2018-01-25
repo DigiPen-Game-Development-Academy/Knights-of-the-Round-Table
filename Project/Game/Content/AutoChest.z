@@ -1,0 +1,57 @@
+class AutoChest : ZilchComponent {
+    
+    [Dependency]
+    var Reactive : Reactive;
+    
+    [Serialized]
+    var Items : Array[Item];
+    
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        /*Generate Loot*/
+        if(this.Items == null) {
+            this.Items = Array[Item]();
+            this.Items.Resize(GlobalVariables.ChestItems.Count);
+            var table = ResourceTable.Loot;
+            var rand = Random();
+            for(var i = 0; i < this.Items.Count; ++i) {
+                var name = table.SampleValue(rand.Range(0, 1), rand.Range(0, 1));
+                var n = Utilities.ItemFromID(name);
+                if(n != null)
+                    n.Init();
+                this.Items[i] = n;
+            }
+        }
+        GlobalVariables.ChestItems = this.Items;
+        GlobalVariables.Inv.Transform.WorldTranslation = Real3(GlobalVariables.Inv.Transform.WorldTranslation.X, GlobalVariables.Inv.Transform.WorldTranslation.Y, GlobalVariables.Inv.InventoryManager.InitalZ);
+        GlobalVariables.CInv.ChestInventory.Vis = true;
+        GlobalVariables.PauseMenu.MenuVisibilityController.Vis = true;
+        this.Space.TimeSpace.Paused = true;
+    }
+
+    function OnMouseExit(event : ViewportMouseEvent)
+    {
+        GlobalVariables.LorePanel.Sprite.Visible = false;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent)
+    {
+        GlobalVariables.LorePanel.Sprite.Visible = true;
+        GlobalVariables.LorePanel.LorePanel.Text = "This is a chest\nClick to open";
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        
+        
+    }
+}
