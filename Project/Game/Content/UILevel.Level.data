@@ -127,7 +127,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.52572536, -1.80436277, 49.9990005],
+			Vec3 Translation = [0.269296765, -2.41522932, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -139,7 +139,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.6402359,
+			float Size = 10.9478979,
 		},
 		EditorCameraController = 
 		{
@@ -147,7 +147,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-8.52572536, -1.80436277, -0.00100019237],
+			Vec3 LookTarget = [0.269296765, -2.41522932, 1.17713466e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -232,12 +232,19 @@ Level =
 			string Name = "WeaponDisplay",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a9a8e7aeebdbccb:PauseMenu",
 		LinkId = 
 		{
 			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "PauseMenu",
+		},
+		Archetyped = 
+		{
+			string Name = "5a9a8e7aeebdbccb:PauseMenu",
 		},
 		Transform = 
 		{
@@ -245,16 +252,58 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Pause = 
 		{
-			string Name = "PauseMenu",
+		},
+		MenuVisibilityController = 
+		{
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 8,
+				},
+				Named = 
+				{
+					string Name = "PAUSED",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 0, 0, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 99,
+					string Text = "Paused",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = true,
+				},
+				MenuVisibilitySpriteText = 
+				{
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -293,6 +342,128 @@ Level =
 		{
 		},
 		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 10,
+				},
+				Named = 
+				{
+					string Name = "ConsoleTypeBox",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 2.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.501960814, 0.501960814, 0.501960814, 0.460000008],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5586f579ca73ecc2:SquareBordered",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [3, 0.5],
+					Location Origin = Center,
+				},
+				ConsoleTypeBox = 
+				{
+				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 11,
+						},
+						Named = 
+						{
+							string Name = "Text",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-1.4375, 0.1875, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "4e7bac697bec55c5:Verdana",
+							uint FontSize = 150,
+							string Text = "",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 512,
+							bool Smoothing = true,
+						},
+					},
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "DebugTXT",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8.5625, -4.0625, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 99,
+			string Text = "Debug",
+			TextAlign Align = Right,
+			float PixelsPerUnit = 128,
+			bool Smoothing = true,
+		},
+		DebugTextUI = 
 		{
 		},
 	},

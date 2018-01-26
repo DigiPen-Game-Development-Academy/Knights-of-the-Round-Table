@@ -9,7 +9,7 @@ class Pause : ZilchComponent {
 
     function OnLogicUpdate(event : UpdateEvent) {
         
-        if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.PauseOrInventory)) {
+        if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.PauseOrInventory) || Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.AltPOrInventory)) {
             GlobalVariables.GameSpace.TimeSpace.Paused = !GlobalVariables.GameSpace.TimeSpace.Paused;
             this.Owner.MenuVisibilityController.Vis = GlobalVariables.GameSpace.TimeSpace.Paused;
             if(!GlobalVariables.GameSpace.TimeSpace.Paused)

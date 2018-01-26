@@ -1,0 +1,80 @@
+class ConsoleTypeBox : ZilchComponent {
+    
+    var CurrentIn : String = "";
+    
+    var Selected : Boolean = false;
+    
+    var Active : Boolean = false;
+    
+    var Text : Cog = null;
+    
+    [Dependency]
+    var Reactive : Reactive;
+    
+    function Initialize(init : CogInitializer) {
+        this.Text = this.Owner.FindChildByName("Text");
+        this.Text.SpriteText.Color = Real4(1,0,0,1);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(Zero.Keyboard, Events.TextTyped, this.OnTextTyped);
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent) {
+        this.Selected = true;
+    }
+
+    function OnKeyDown(event : KeyboardEvent) {
+        if(!this.Selected && event.Key == Keys.Slash)
+            this.Selected = true;
+        if(!this.Selected || !this.Active)
+            return;
+        if(event.Key == Keys.Back) {
+            if(this.CurrentIn.Count > 0)
+                this.CurrentIn = this.CurrentIn.SubStringFromRuneIndices(0, this.CurrentIn.Count-1);
+        } else if(event.Key == Keys.Enter) {
+            if(this.CurrentIn.Count != 0 && String.FromChar(this.CurrentIn.Get(0)) == "/")
+                Commands.CheckForCommands(this.CurrentIn);
+            else
+                Utilities.ConsoleSend(this.CurrentIn, Real4(1,0,0,1));
+            this.CurrentIn = "";
+            this.Selected = false;
+        }
+    }
+
+    function OnTextTyped(event : KeyboardTextEvent) {
+        
+        if(this.Selected && this.Active){
+            var key = String.FromChar(event.Character);
+            if(this.IsRenderable(event.Character) && this.Text.SpriteText.MeasureGivenText("`this.CurrentIn``key`").X <= 2.875)
+                this.CurrentIn = "`this.CurrentIn``key`";
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.OpenConsole) && !this.Selected)
+            this.Active = !this.Active;
+        this.Owner.Sprite.Visible = this.Active;
+        
+        this.Text.SpriteText.Visible = this.Active;
+        this.Text.SpriteText.Text = this.CurrentIn;
+        
+        if(this.Selected && this.Active) {
+            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 1);
+            GlobalVariables.PauseMenu.MenuVisibilityController.Vis = true;
+            GlobalVariables.GameSpace.TimeSpace.Paused = true;
+        } else {
+            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 0.46);
+        }
+        
+        if(!this.Active && this.Selected)
+            this.Selected = false;
+        
+    }
+    
+    function IsRenderable(code : Integer) : Boolean {
+      return code >= " "[0] && code <= "~"[0];
+    }
+    
+}

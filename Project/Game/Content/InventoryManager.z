@@ -79,12 +79,10 @@ class InventoryManager : ZilchComponent
         
         this.Refresh();
         
-        if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.PauseOrInventory)){
-            if(this.Owner.Transform.WorldTranslation.Z != this.InitalZ)
-                this.Owner.Transform.WorldTranslation = Real3(this.Owner.Transform.WorldTranslation.X, this.Owner.Transform.WorldTranslation.Y, this.InitalZ);
-            else
-                this.Owner.Transform.WorldTranslation += Real3(0,0,100);
-        }
+        if(GlobalVariables.GameSpace.TimeSpace.Paused)
+            this.Owner.Transform.WorldTranslation = Real3(this.Owner.Transform.WorldTranslation.X, this.Owner.Transform.WorldTranslation.Y, this.InitalZ);
+        else
+            this.Owner.Transform.WorldTranslation += Real3(0,0,100);
         
         
     }

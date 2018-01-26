@@ -42,6 +42,9 @@ class GlobalVariables
     var PauseMenu : Cog = null;
     
     [Static]
+    var Console : Cog = null;
+    
+    [Static]
     function AddInventoryItem (item : Item) : Boolean {
         
         for(var i = 0; i < GlobalVariables.Items.Count; ++i){

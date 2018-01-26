@@ -2,18 +2,14 @@ class ConsoleController : ZilchComponent {
     
     var Text : Array[Cog];
     
-    var MaxMsg : Integer = 10;
+    var MaxMsg : Integer = 20;
     
     function Initialize(init : CogInitializer) {
+        GlobalVariables.Console = this.Owner;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.Text = Array[Cog]();
         
-        for(var i = 0; i < 20; ++i){
-            this.AddMSG("`i`", Real4(1, 0, 0, 1));
-        }
-        
     }
-
     function OnLogicUpdate(event : UpdateEvent) {
         
         
@@ -21,19 +17,33 @@ class ConsoleController : ZilchComponent {
     }
     
     function AddMSG(txt : String, color : Real4) {
-        var txtobj = this.Space.CreateAtPosition(Archetype.ConsoleText, Real3((this.Owner.Transform.WorldTranslation.X/2)+0.125, (this.Owner.Transform.WorldTranslation.Y/2)+0.125, 0.1));
+        var txtobj = this.Space.Create(Archetype.ConsoleText);
         if(txtobj != null) {
+            txt = "MSG:`txt`";
+            if(txtobj.SpriteText.MeasureGivenText(txt).X > 2.875) {
+                var txt2 = "";
+                for (var i = 0; i < txt.Count; ++i){
+                    if(txtobj.SpriteText.MeasureGivenText("`txt2``String.FromChar(txt.Get(i))`").X > 2.875)
+                        txt2 = "`txt2`\n";
+                    txt2 = "`txt2``String.FromChar(txt.Get(i))`";
+                }
+                txt = txt2;
+            }
             txtobj.SpriteText.Text = txt;
             txtobj.SpriteText.Color = color;
             txtobj.AttachTo(this.Owner);
+            txtobj.Transform.Translation = Real3((-this.Owner.Area.Size.X/2)+0.0625, (this.Owner.Area.Size.Y/2)-0.0625, 0);
             this.Text.Add(txtobj);
-            if(this.Text.Count == 1)
+            if(this.Text.Count < 2)
                 return;
-            for (var i = 1; i < this.Text.Count; ++i) {
-                this.Text[i].Transform.Translation = Real3(this.Text[i].Transform.Translation.X, this.Text[i-1].Transform.Translation.Y + this.Text[i-1].SpriteText.MeasureText().Y, 0.1);
+            for (var i = this.Text.Count-2; i >= 0; --i) {
+                this.Text[i].Transform.Translation = Real3(this.Text[i].Transform.Translation.X, this.Text[i+1].Transform.Translation.Y - this.Text[i+1].SpriteText.MeasureText().Y, 0.1);
             }
             
-            
+            if(this.Text.Count > this.MaxMsg) {
+                this.Text[0].Destroy();
+                this.Text.RemoveAt(0);
+            }
             
         }
     }

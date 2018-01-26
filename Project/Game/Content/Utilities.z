@@ -104,5 +104,10 @@ class Utilities
         
     }
     
+    [Static]
+    function ConsoleSend(msg : String, color : Real4) {
+        GlobalVariables.Console.ConsoleController.AddMSG(msg, color);
+    }
+    
   
 }
