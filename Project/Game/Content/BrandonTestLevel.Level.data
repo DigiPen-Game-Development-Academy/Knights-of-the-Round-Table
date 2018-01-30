@@ -143,7 +143,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.1758523, 9.98629475, 111.565193],
+			Vec3 Translation = [0.591070831, 0.667187154, 111.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -155,7 +155,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 32.8893089,
+			float Size = 6.72056961,
 		},
 		EditorCameraController = 
 		{
@@ -163,7 +163,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-7.1758523, 9.98629475, -3.13666675e-07],
+			Vec3 LookTarget = [0.591070831, 0.667187154, 2.58353925e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -287,6 +287,9 @@ Level =
 				{
 					bool Active = true,
 					float Volume = 1,
+				},
+				CamFollow = 
+				{
 				},
 				Hierarchy = 
 				{
@@ -1076,7 +1079,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.5, 26, 0],
+			Vec3 Translation = [-8.5, 23.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1147,6 +1150,12 @@ Level =
 		},
 		EnemyAI = 
 		{
+			float InstantSpotRadius = 3,
+			float MaxDistFromGuard = 20,
+			float WaitTime = 1,
+			float Range = 3,
+			float ViewAngle = 45,
+			float ViewRange = 10,
 		},
 		Hierarchy = 
 		{
@@ -1164,7 +1173,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-12.5, 26, 0],
+			Vec3 Translation = [-11.5, 23.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1235,6 +1244,12 @@ Level =
 		},
 		EnemyAI = 
 		{
+			float InstantSpotRadius = 3,
+			float MaxDistFromGuard = 20,
+			float WaitTime = 1,
+			float Range = 3,
+			float ViewAngle = 45,
+			float ViewRange = 10,
 		},
 		Hierarchy = 
 		{
@@ -1696,7 +1711,56 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-14.5, 21, 0],
+			Vec3 Translation = [-7.5, 20.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0.0100002289, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Twig = 
+		{
+			float Radius = 5,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 34,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-14.5, 26.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

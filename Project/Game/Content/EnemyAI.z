@@ -3,26 +3,100 @@ class EnemyAI : ZilchComponent {
     var PathFind : BasicPathFollowAI;
     [Property]
     var InstantSpotRadius : Real = 2;
+    [Property]
+    var MaxDistFromGuard : Real = 20;
+    var GuardPos : Real3;
     var PlayerSpotted : Boolean = false;
+    var Suspitious : Boolean = false;
+    var Timer : Real = 1;
+    [Property]
+    var WaitTime : Real = 1;
+    [Property]
+    var Range : Real = 3;
+    [Property]
+    var ViewAngle : Real = 45;
+    [Property]
+    var ViewRange : Real = 6;
     function Initialize(init : CogInitializer) {
+        this.GuardPos = this.Owner.Transform.WorldTranslation;
+        this.Timer = this.WaitTime;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.InSound, this.OnInSound);
     }
 
     function OnInSound(event : InSound) {
         if(!this.PlayerSpotted) {
+            if(GlobalVariables.DebugLinesActive)
+                    Utilities.DrawCircle(this.Owner.Transform.WorldTranslation, this.InstantSpotRadius, false, Real4(0,1,0,1));
             //if next to player instantly spot them
-            if(this.Owner.Visibility.InSight && Math.Distance(this.Owner.Transform.WorldTranslation, event.Source) <= this.InstantSpotRadius && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, event.Source) <= 0.1) {
-                
+            if(this.Owner.Visibility.InSight && Math.Distance(this.Owner.Transform.WorldTranslation, event.Source) <= this.InstantSpotRadius && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, event.Source) <= 1) {
+                this.PlayerSpotted = true;
+                this.Suspitious = false;
+                return;
             }
-            this.PathFind.SetTarget(event.Source);
-            
+            this.PathFind.SetTarget(this.FindClosePos(event.Source));
+            this.Suspitious = true;
+            this.Timer = this.WaitTime;
         }
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
-        if(this.PlayerSpotted)
-            this.PathFind.SetTarget(GlobalVariables.Player.Transform.WorldTranslation);
+        //State Handeling
+        if(this.PlayerSpotted) {
+            this.Timer -= event.Dt;
+            if(this.Timer <= 0) {
+                this.PathFind.SetTarget(GlobalVariables.Player.Transform.WorldTranslation);
+            } else {
+                this.Owner.EnemyPathFind.Path = null;
+                if(Math.Distance(this.Owner.Transform.WorldTranslation, this.GuardPos) > this.MaxDistFromGuard)
+                    this.PlayerSpotted = false;
+            }
+        } else if (this.Suspitious) {
+            if(this.Owner.EnemyPathFind.Path == null) {
+                this.Timer -= event.Dt;
+                if(this.Timer <= 0) {
+                    this.Timer = this.WaitTime;
+                    this.Suspitious = false;
+                    this.PathFind.SetTarget(this.FindClosePos(this.GuardPos));
+                }
+            } else {
+                this.Timer = this.WaitTime;
+            }
+        } else {
+            if(this.Owner.EnemyPathFind.Path == null) {
+                this.Timer -= event.Dt;
+                if(this.Timer <= 0) {
+                    this.Timer = this.WaitTime;
+                    this.PathFind.SetTarget(this.FindClosePos(this.GuardPos));
+                }
+            }
+        }
+        
+        //Player Spotting
+        var vec = GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation;
+        var vec2 = this.Owner.RigidBody.Velocity;
+        
+        var dot = Math.Dot(Math.Normalize(vec), Math.Normalize(vec2));
+        
+        var angle = Math.ACos(dot);
+        
+        if(!this.PlayerSpotted && angle <= Math.ToRadians(this.ViewAngle) && this.Owner.Visibility.InSight && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) <= this.ViewRange) {
+            
+            this.Suspitious = false;
+            this.PlayerSpotted = true;
+            this.Timer = this.WaitTime;
+            
+        }
         
     }
+    
+    function FindClosePos (pos : Real3) : Real3 {
+        var rand = Random();
+        var newPos = pos + Real3(rand.Range(-this.Range, this.Range), rand.Range(-this.Range, this.Range), 0);
+        while(!this.LevelSettings.CreateNavGrid.GetNodeFromPos(newPos).Walkable) {
+            newPos = pos + Real3(rand.Range(-this.Range, this.Range), rand.Range(-this.Range, this.Range), 0);
+        }
+        return newPos;
+    }
+    
 }
