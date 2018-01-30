@@ -127,7 +127,7 @@ class SlugShotgun : Item {
         var lore = Array[String]();
         lore.Add("texan bb gun");
         lore.Add("a rather big laser");
-        lore.Add("just try and aim");
+        lore.Add("this is my boom stick");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -191,9 +191,31 @@ class SawLaser  : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("you foes will be vanquished as well as your ammo");
-        lore.Add("");
-        lore.Add("only three percent of people are smart enough to shoot this if you can see this call a doctor");
+        lore.Add("you foes will be vanquished as fast as your ammo");
+        lore.Add("use your ammo wisely");
+        lore.Add("a weaponized saw");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {
+        
+    }
+    
+}
+//LASER SNIPER
+//
+class Lasersniper  : Item {
+    
+    function Init () {
+        
+    }
+    
+    function ReturnLore () : String {
+        var lore = Array[String]();
+        lore.Add("yote");
+        lore.Add("use your ammo wisely");
+        lore.Add("a weaponized saw");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
