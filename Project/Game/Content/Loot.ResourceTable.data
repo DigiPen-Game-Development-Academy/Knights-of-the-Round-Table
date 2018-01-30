@@ -23,6 +23,11 @@ ResourceTable =
 			string Value = "NULL",
 			float Weight = 1,
 		},
+		{
+			string Name = "Plasma",
+			string Value = "Ammo",
+			float Weight = 1,
+		},
 	],
 	float MaxWeight = 1,
 },
