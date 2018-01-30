@@ -16,6 +16,8 @@ class ItemPickup : ZilchComponent
             this.Item = TestItem2();
         else if(this.ID == 2)
             this.Item = Ammo();
+        else if(this.ID == 3)
+            this.Item = Potato();
         this.Item.Init();
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         this.Owner.Sprite.SpriteSource = this.Item.GroundSprite;
