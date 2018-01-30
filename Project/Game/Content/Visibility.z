@@ -1,4 +1,7 @@
 class Visibility : ZilchComponent {
+    
+    var InSight : Boolean = false;
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
@@ -16,10 +19,13 @@ class Visibility : ZilchComponent {
         
         var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 20, filter);
         
-        if(res != null && res.ObjectHit == GlobalVariables.Player)
+        if(res != null && res.ObjectHit == GlobalVariables.Player) {
             this.Owner.Sprite.Visible = true;
-        else
+            this.InSight = true;
+        } else {
             this.Owner.Sprite.Visible = false;
+            this.InSight = false;
+        }
         
         GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
         GlobalVariables.Player.RigidBody.Velocity = vel;

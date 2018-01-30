@@ -1,0 +1,28 @@
+class EnemyAI : ZilchComponent {
+    [Dependency]
+    var PathFind : BasicPathFollowAI;
+    [Property]
+    var InstantSpotRadius : Real = 2;
+    var PlayerSpotted : Boolean = false;
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.InSound, this.OnInSound);
+    }
+
+    function OnInSound(event : InSound) {
+        if(!this.PlayerSpotted) {
+            //if next to player instantly spot them
+            if(this.Owner.Visibility.InSight && Math.Distance(this.Owner.Transform.WorldTranslation, event.Source) <= this.InstantSpotRadius && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, event.Source) <= 0.1) {
+                
+            }
+            this.PathFind.SetTarget(event.Source);
+            
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        if(this.PlayerSpotted)
+            this.PathFind.SetTarget(GlobalVariables.Player.Transform.WorldTranslation);
+        
+    }
+}

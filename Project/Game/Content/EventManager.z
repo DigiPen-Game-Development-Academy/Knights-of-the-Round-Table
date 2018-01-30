@@ -17,3 +17,10 @@ class PathFound : ZilchEvent {
     sends PathFound : PathFound;
     
 }
+
+class InSound : ZilchEvent {
+    
+    var Source : Real3 = Real3(0);
+    
+    sends InSound : InSound;
+}
