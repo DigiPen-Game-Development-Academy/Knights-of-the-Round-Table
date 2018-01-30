@@ -137,3 +137,69 @@ class SlugShotgun : Item {
     }
     
 }
+//LASER  BEAM 
+//
+class Laserbeam : Item {
+    
+    function Init () {
+        
+    }
+    
+    function ReturnLore () : String {
+        var lore = Array[String]();
+        lore.Add("the 11 year old extra terrestreal's best friend");
+        lore.Add("im a firin ma lasar baaaaaaaa");
+        lore.Add("wow it  really shoots");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {
+        
+    }
+    
+}
+//STUN M 
+//
+class StunMissile : Item {
+    
+    function Init () {
+        
+    }
+    
+    function ReturnLore () : String {
+        var lore = Array[String]();
+        lore.Add("its shocking how effective this is");
+        lore.Add("where are you going to find ammo for this?");
+        lore.Add("only three percent of people are smart enough to shoot this if you can see this call a doctor");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {
+        
+    }
+    
+}
+//SAW LASER
+//
+class SawLaser  : Item {
+    
+    function Init () {
+        
+    }
+    
+    function ReturnLore () : String {
+        var lore = Array[String]();
+        lore.Add("you foes will be vanquished as well as your ammo");
+        lore.Add("");
+        lore.Add("only three percent of people are smart enough to shoot this if you can see this call a doctor");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {
+        
+    }
+    
+}
