@@ -24,3 +24,7 @@ class InSound : ZilchEvent {
     
     sends InSound : InSound;
 }
+
+class NoHealth : ZilchEvent {
+    sends NoHealth : NoHealth;
+}

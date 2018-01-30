@@ -99,7 +99,10 @@ class Utilities
             return HealthPackT2();
         else if(id == "Health Pack (T3)")
             return HealthPackT3();
+        else if(id  == "Ammo" )
+            return Ammo();
         else
+        
             return null;
         
     }
