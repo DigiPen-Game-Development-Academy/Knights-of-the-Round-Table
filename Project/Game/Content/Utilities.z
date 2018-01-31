@@ -93,11 +93,11 @@ class Utilities
     function ItemFromID(id : String) : Item {
         
         
-        if(id == "Health Pack (T1)")
+        if(id == "Health_Pack_(T1)")
             return HealthPackT1();
-        else if(id == "Health Pack (T2)")
+        else if(id == "Health_Pack_(T2)")
             return HealthPackT2();
-        else if(id == "Health Pack (T3)")
+        else if(id == "Health_Pack_(T3)")
             return HealthPackT3();
         else if(id  == "Ammo" )
             return Ammo();

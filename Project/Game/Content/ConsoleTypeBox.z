@@ -2,6 +2,8 @@ class ConsoleTypeBox : ZilchComponent {
     
     var CurrentIn : String = "";
     
+    var Last : String = "";
+    
     var Selected : Boolean = false;
     
     var Active : Boolean = false;
@@ -37,8 +39,11 @@ class ConsoleTypeBox : ZilchComponent {
                 Commands.CheckForCommands(this.CurrentIn);
             else
                 Utilities.ConsoleSend(this.CurrentIn, Real4(1,0,0,1));
+            this.Last = this.CurrentIn;
             this.CurrentIn = "";
             this.Selected = false;
+        } else if(event.Key == Keys.Up) {
+            this.CurrentIn = this.Last;
         }
     }
 
@@ -46,7 +51,7 @@ class ConsoleTypeBox : ZilchComponent {
         
         if(this.Selected && this.Active){
             var key = String.FromChar(event.Character);
-            if(this.IsRenderable(event.Character) && this.Text.SpriteText.MeasureGivenText("`this.CurrentIn``key`").X <= 2.875)
+            if(this.IsRenderable(event.Character) && this.Text.SpriteText.MeasureGivenText("`this.CurrentIn``key`").X <= (this.Owner.Area.Size.X - 0.125))
                 this.CurrentIn = "`this.CurrentIn``key`";
         }
     }
