@@ -3,10 +3,11 @@ class Fists : Item
     
     function Init () {
         this.Name = "Fists";
-        this.Icon = SpriteSource.Circle;
+        this.Icon = SpriteSource.Icon_Weapon_Fists;
         this.Type = ItemType.Weapon;
         this.MagSize = -1;
         this.FireRate = 3;
+        this.DamagePer = 1;
     }
     
     function Use (radAngle : Real) {

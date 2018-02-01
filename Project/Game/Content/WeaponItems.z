@@ -1,7 +1,14 @@
 class Potato : Item {
     
     function Init () {
-        
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = -1;
+        this.Name = "Potato";
+        this.DamagePer = 3;
+        this.FireRate = 2.5;
     }
     
     function ReturnLore () : String {
@@ -18,7 +25,7 @@ class Potato : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("Potato");
     }
     
 }

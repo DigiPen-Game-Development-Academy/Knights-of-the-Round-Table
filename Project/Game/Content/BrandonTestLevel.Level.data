@@ -143,7 +143,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-23.029335, 20.4350872, 111.565193],
+			Vec3 Translation = [-2.62376642, -0.146358401, 111.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -155,7 +155,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10.0259266,
+			float Size = 8.2085371,
 		},
 		EditorCameraController = 
 		{
@@ -163,7 +163,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-23.029335, 20.4350872, -6.42243663e-07],
+			Vec3 LookTarget = [-2.62376642, -0.146358401, 2.49712002e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -760,7 +760,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 2,
+			int ID = 3,
 		},
 		BoxCollider = 
 		{
