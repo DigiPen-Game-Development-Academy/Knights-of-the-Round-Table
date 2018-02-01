@@ -20,6 +20,7 @@ class EnemyAI : ZilchComponent {
     var MoveSpeed : Real = 2;
     [Property]
     var ChaseSpeedMultiplier : Real = 2;
+    var ViewDirection : Real3 = Real3(0);
     function Initialize(init : CogInitializer) {
         this.GuardPos = this.Owner.Transform.WorldTranslation;
         this.Timer = this.WaitTime;
@@ -44,6 +45,10 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.Owner.EnemyPathFind.Path != null && this.Owner.EnemyPathFind.Path.Count != 0)
+            this.ViewDirection = Math.Normalize(this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation);
+        
         this.Owner.RigidBody.Velocity *= this.MoveSpeed;
         //State Handeling
         if(this.PlayerSpotted) {
@@ -82,7 +87,7 @@ class EnemyAI : ZilchComponent {
         
         //Player Spotting
         var vec = GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation;
-        var vec2 = this.Owner.RigidBody.Velocity;
+        var vec2 = this.ViewDirection;
         
         var dot = Math.Dot(Math.Normalize(vec), Math.Normalize(vec2));
         

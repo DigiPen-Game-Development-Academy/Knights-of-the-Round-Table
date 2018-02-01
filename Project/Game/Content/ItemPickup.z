@@ -6,29 +6,68 @@ class ItemPickup : ZilchComponent
     var Item : Item;
     
     [Property]
-    var ID : Integer = 0;
+    var ID : String = "";
     
     function Initialize(init : CogInitializer) {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        if(this.ID == 0)
-            this.Item = TestItem1();
-        else if(this.ID == 1)
-            this.Item = TestItem2();
-        else if(this.ID == 2)
-            this.Item = Ammo();
-        else if(this.ID == 3)
-            this.Item = Potato();
-        this.Item.Init();
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
-        this.Owner.Sprite.SpriteSource = this.Item.GroundSprite;
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        this.SetItemType(Utilities.ItemFromID(this.ID));
     }
 
-    function OnCollisionStarted(event : CollisionEvent)
-    {
-        if(event.OtherObject == GlobalVariables.Player){
-            if(GlobalVariables.AddInventoryItem(this.Item))
+    function OnMouseDown(event : ViewportMouseEvent) {
+        if(this.Item != null && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) <= 3){
+            if(GlobalVariables.AddInventoryItem(this.Item)) {
                 this.Owner.Destroy();
+                GlobalVariables.LorePanel.Sprite.Visible = false;
+            }
         }
+    }
+    
+    function OnMouseExit(event : ViewportMouseEvent) {
+        GlobalVariables.LorePanel.Sprite.Visible = false;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        if(this.Item == null || Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) > 3)
+            return;
+        GlobalVariables.LorePanel.Sprite.Visible = true;
+        var item = this.Item;
+            
+            var text = "";
+            
+            if(item.Type == ItemType.Weapon){
+                if(item.MagSize != -1)
+                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
+                else
+                    text = "`item.Name`\n`item.ReturnLore()`\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
+            } else if(item.Type == ItemType.Utility){
+                if(item.MagSize != -1)
+                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nAmmo Per Shot: `item.AmmoPerShot`";
+                else
+                    text = "`item.Name`\n`item.ReturnLore()`\nFire Rate: `item.FireRate` per second";
+            } else if(item.Type == ItemType.Consumable)
+                text = "`item.Name`\n`item.ReturnLore()`";
+            else
+                text = "`item.Name`\n`item.ReturnLore()`";
+            
+            GlobalVariables.LorePanel.LorePanel.Text = text;
+    }
+    
+    function SetItemType (item : Item) {
+        this.Item = item;
+        if(this.Item == null)
+            return;
+        this.Item.Init();
+        this.Owner.Sprite.SpriteSource = this.Item.GroundSprite;
+    }
+    
+    function SetItem (item : Item) {
+        this.Item = item;
+        if(this.Item == null)
+            return;
+        this.Owner.Sprite.SpriteSource = this.Item.GroundSprite;
     }
     
 }

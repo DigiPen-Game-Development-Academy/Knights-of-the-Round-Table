@@ -25,8 +25,7 @@ class SetChest : ZilchComponent
         
     }
 
-    function OnMouseDown(event : ViewportMouseEvent)
-    {
+    function OnMouseDown(event : ViewportMouseEvent) {
         /*Generate Loot*/
         var table = ResourceTable.Loot;
         var rand = Random();

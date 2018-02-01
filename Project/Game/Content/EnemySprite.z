@@ -1,0 +1,39 @@
+class EnemySprite : ZilchComponent {
+    
+    var LDir : Real3 = Real3(0);
+    
+    [Dependency]
+    var AI : EnemyAI;
+    
+    [Property] var NorthSprite : SpriteSource;
+    [Property] var SouthSprite : SpriteSource;
+    [Property] var EastSprite  : SpriteSource;
+    [Property] var WestSprite  : SpriteSource;
+    
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.AI.ViewDirection != this.LDir) {
+            
+            var angle = Math.ToDegrees(Math.ATan2(this.AI.ViewDirection.Y, this.AI.ViewDirection.X));
+            
+            Utilities.DrawdebugLine(this.Owner.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation + Real3(Math.Cos(Math.ToRadians(-135)), Math.Sin(Math.ToRadians(-135)), 0));
+            Utilities.DrawdebugLine(this.Owner.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation + Real3(Math.Cos(Math.ToRadians(-225)), Math.Sin(Math.ToRadians(-225)), 0));
+            
+            if(angle < 45 && angle > -45) {
+                this.Owner.Sprite.SpriteSource = this.EastSprite;
+            } else if(angle < -45 && angle > -135) {
+                this.Owner.Sprite.SpriteSource = this.SouthSprite;
+            } else if((angle < 225 && angle > 135) || (angle < -135 && angle > -225)) {
+                this.Owner.Sprite.SpriteSource = this.WestSprite;
+            } else if(angle < 135 && angle > 45) {
+                this.Owner.Sprite.SpriteSource = this.NorthSprite;
+            }
+            
+        }
+        this.LDir = this.AI.ViewDirection;
+    }
+}

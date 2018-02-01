@@ -143,7 +143,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.62376642, -0.146358401, 111.565193],
+			Vec3 Translation = [-10.3227205, 22.9075165, 111.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -155,7 +155,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.2085371,
+			float Size = 22.3131294,
 		},
 		EditorCameraController = 
 		{
@@ -163,7 +163,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.62376642, -0.146358401, 2.49712002e-07],
+			Vec3 LookTarget = [-10.3227205, 22.9075165, -8.68207479e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -332,15 +332,12 @@ Level =
 			float MeshThickness = 1.20000005,
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a08fe54ce309955:GroundItem",
 		LinkId = 
 		{
 			uint Id = 6,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
 		},
 		Transform = 
 		{
@@ -348,37 +345,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "4e07948c35993095:DefaultSprite",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		ItemPickup = 
-		{
-			int ID = 1,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			string Name = "Item",
 		},
 	},
 	Cog = 
@@ -417,7 +386,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 0,
+			string ID = "0",
 		},
 		BoxCollider = 
 		{
@@ -466,7 +435,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 2,
+			string ID = "2",
 		},
 		BoxCollider = 
 		{
@@ -515,7 +484,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 0,
+			string ID = "0",
 		},
 		BoxCollider = 
 		{
@@ -564,7 +533,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 1,
+			string ID = "1",
 		},
 		BoxCollider = 
 		{
@@ -613,7 +582,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 2,
+			string ID = "2",
 		},
 		BoxCollider = 
 		{
@@ -638,7 +607,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6, -1, 0],
+			Vec3 Translation = [-6, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -662,7 +631,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 0,
+			string ID = "Health_Pack_(T1)",
 		},
 		BoxCollider = 
 		{
@@ -673,6 +642,11 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
@@ -711,7 +685,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 1,
+			string ID = "Potato",
 		},
 		BoxCollider = 
 		{
@@ -722,6 +696,11 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
 		},
 	},
 	Cog = 
@@ -760,7 +739,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 3,
+			string ID = "",
 		},
 		BoxCollider = 
 		{
@@ -809,7 +788,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 0,
+			string ID = "0",
 		},
 		BoxCollider = 
 		{
@@ -858,7 +837,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 1,
+			string ID = "1",
 		},
 		BoxCollider = 
 		{
@@ -907,7 +886,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 2,
+			string ID = "2",
 		},
 		BoxCollider = 
 		{
@@ -956,7 +935,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 0,
+			string ID = "0",
 		},
 		BoxCollider = 
 		{
@@ -1005,7 +984,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 1,
+			string ID = "1",
 		},
 		BoxCollider = 
 		{
@@ -1054,7 +1033,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			int ID = 2,
+			string ID = "2",
 		},
 		BoxCollider = 
 		{
@@ -1253,6 +1232,13 @@ Level =
 			float ViewRange = 10,
 			float ChaseSpeedMultiplier = 2,
 		},
+		EnemySprite = 
+		{
+			string NorthSprite = "5a0b6a2f64f50013:arrow4",
+			string SouthSprite = "5a0b6a2f64f4df58:arrow2",
+			string EastSprite = "5a0b6a2f64f4cabc:arrow1",
+			string WestSprite = "5a0b6a2f64f4ec5b:arrow3",
+		},
 		Hierarchy = 
 		{
 		},
@@ -1385,7 +1371,7 @@ Level =
 		SetChest = 
 		{
 			string Slot1ID = "Health_Pack_(T1)",
-			string Slot2ID = "",
+			string Slot2ID = "Potato",
 			string Slot3ID = "",
 			string Slot4ID = "Health_Pack_(T2)",
 			string Slot5ID = "",

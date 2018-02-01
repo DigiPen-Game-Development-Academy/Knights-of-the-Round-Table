@@ -1,10 +1,8 @@
-class DeleteButton : ZilchComponent
-{
+class DeleteButton : ZilchComponent {
     
     var InitialColor : Real4;
     
-    function Initialize(init : CogInitializer)
-    {
+    function Initialize(init : CogInitializer) {
         
         this.InitialColor = this.Owner.Sprite.Color;
         
@@ -13,18 +11,21 @@ class DeleteButton : ZilchComponent
         Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
     }
     
-    function OnMouseExit(event : ViewportMouseEvent)
-    {
+    function OnMouseExit(event : ViewportMouseEvent) {
         this.Owner.Sprite.Color = this.InitialColor;
     }
 
-    function OnMouseEnter(event : ViewportMouseEvent)
-    {
+    function OnMouseEnter(event : ViewportMouseEvent) {
         this.Owner.Sprite.Color = this.InitialColor + Real4(-0.3,0,0,0);
     }
 
-    function OnMouseDown(event : ViewportMouseEvent)
-    {
+    function OnMouseDown(event : ViewportMouseEvent) {
+        
+        var gItem = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GroundItem, GlobalVariables.Player.Transform.WorldTranslation);
+        if(gItem != null) {
+            gItem.ItemPickup.SetItem(GlobalVariables.Items[this.Owner.Parent.InventorySlot.Index]);
+            gItem.ItemPickup.Item.Ammount = GlobalVariables.Items[this.Owner.Parent.InventorySlot.Index].Ammount;
+        }
         GlobalVariables.Items[this.Owner.Parent.InventorySlot.Index] = null;
     }
 }
