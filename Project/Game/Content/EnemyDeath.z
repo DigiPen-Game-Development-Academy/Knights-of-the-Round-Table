@@ -1,0 +1,13 @@
+class EnemyDeath : ZilchComponent {
+    function Initialize(init : CogInitializer) {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.NoHealth, this.OnNoHealth);
+    }
+
+    function OnNoHealth(event : NoHealth) {
+        this.Owner.Destroy();
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+    }
+}
