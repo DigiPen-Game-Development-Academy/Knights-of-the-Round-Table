@@ -9,6 +9,7 @@ class Potato : Item {
         this.Name = "Potato";
         this.DamagePer = 3;
         this.FireRate = 2.5;
+        
     }
     
     function ReturnLore () : String {
@@ -34,7 +35,15 @@ class Potato : Item {
 class Boomerang : Item {
     
     function Init () {
-        
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = -1;
+        this.Name = "Boomerang";
+        this.DamagePer = 2;
+        this.FireRate = 2;
+         
     }
     
     function ReturnLore () : String {
@@ -51,7 +60,7 @@ class Boomerang : Item {
     }
     
     function Use (radAngle : Real) {
-        
+         Console.WriteLine("Boomerang");
     }
     
 }
@@ -60,7 +69,16 @@ class Boomerang : Item {
 class Plasma_Pistol : Item {
     
     function Init () {
-        
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 1;
+        this.Name = "Plasma_pistol";
+        this.DamagePer = 3;
+        this.FireRate = 0.2; 
+        this.AmmoPerShot = 2;
+        this.RelodTime = 5;
     }
     
     function ReturnLore () : String {
@@ -72,7 +90,7 @@ class Plasma_Pistol : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("Plasma Pistol");
     }
     
 }
@@ -83,7 +101,16 @@ class Plasma_Pistol : Item {
 class PlasmaSword : Item {
     
     function Init () {
-        
+         this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 1;
+        this.Name = "Plasma_Sword";
+        this.DamagePer = 25;
+        this.FireRate = 0.1; 
+        this.AmmoPerShot = 2;
+        this.RelodTime = 2; 
     }
     
     function ReturnLore () : String {
@@ -96,7 +123,7 @@ class PlasmaSword : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("Laser Sword");
     }
     
 }
@@ -105,7 +132,16 @@ class PlasmaSword : Item {
 class TerribleAssaultRifle : Item {
     
     function Init () {
-        
+         this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 30;
+        this.Name = "Weathered alien rifle";
+        this.DamagePer = 2;
+        this.FireRate = 0.25; 
+        this.AmmoPerShot = 1;
+        this.RelodTime = 3;
     }
     
     function ReturnLore () : String {
@@ -118,7 +154,7 @@ class TerribleAssaultRifle : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("weathered laser rifle");
     }
     
 }
@@ -127,7 +163,16 @@ class TerribleAssaultRifle : Item {
 class SlugShotgun : Item {
     
     function Init () {
-        
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 2;
+        this.Name = "Shotgun";
+        this.DamagePer = 27;
+        this.FireRate = 2; 
+        this.AmmoPerShot = 15;
+        this.RelodTime = 8;
     }
     
     function ReturnLore () : String {
@@ -140,7 +185,7 @@ class SlugShotgun : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("Shotgun");
     }
     
 }
@@ -149,7 +194,16 @@ class SlugShotgun : Item {
 class Laserbeam : Item {
     
     function Init () {
-        
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 10;
+        this.Name = "Laser_Beam";
+        this.DamagePer = 10;
+        this.FireRate = 0.50; 
+        this.AmmoPerShot = 4;
+        this.RelodTime = 3;
     }
     
     function ReturnLore () : String {
@@ -162,7 +216,7 @@ class Laserbeam : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("Laserbeam");
     }
     
 }
@@ -171,7 +225,16 @@ class Laserbeam : Item {
 class StunMissile : Item {
     
     function Init () {
-        
+     this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 6;
+        this.Name = "Stun_m";
+        this.DamagePer = 15;
+        this.FireRate = 0.6; 
+        this.AmmoPerShot = 8;
+        this.RelodTime = 10;   
     }
     
     function ReturnLore () : String {
@@ -184,7 +247,7 @@ class StunMissile : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("Stun Missile");
     }
     
 }
@@ -193,7 +256,16 @@ class StunMissile : Item {
 class SawLaser  : Item {
     
     function Init () {
-        
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 50;
+        this.Name = "Saw_laser";
+        this.DamagePer = 5;
+        this.FireRate = 0.09; 
+        this.AmmoPerShot = 1;
+        this.RelodTime = 10;
     }
     
     function ReturnLore () : String {
@@ -206,7 +278,8 @@ class SawLaser  : Item {
     }
     
     function Use (radAngle : Real) {
-        
+             Console.WriteLine("Saw laser");   
+
     }
     
 }
@@ -215,7 +288,16 @@ class SawLaser  : Item {
 class Lasersniper  : Item {
     
     function Init () {
-        
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 30;
+        this.Name = "Laser_Sniper";
+        this.DamagePer = 30;
+        this.FireRate = 0.2; 
+        this.AmmoPerShot =25;
+        this.RelodTime = 15;
     }
     
     function ReturnLore () : String {
@@ -228,7 +310,7 @@ class Lasersniper  : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("Laser Sniper");  
     }
     
 }
@@ -237,7 +319,16 @@ class Lasersniper  : Item {
 class Missile  : Item {
     
     function Init () {
-        
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 1;
+        this.Name = "Missile";
+        this.DamagePer = 40;
+        this.FireRate = 1; 
+        this.AmmoPerShot = 20;
+        this.RelodTime = 3;
     }
     
     function ReturnLore () : String {
@@ -251,7 +342,7 @@ class Missile  : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("Missile launcher");  
     }
     
 }
@@ -260,7 +351,16 @@ class Missile  : Item {
 class Potatocannon  : Item {
     
     function Init () {
-        
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 100;
+        this.Name = "Potato_cannon";
+        this.DamagePer = 50;
+        this.FireRate = 0.125; 
+        this.AmmoPerShot = 5;
+        this.RelodTime = 20;
     }
     
     function ReturnLore () : String {
@@ -275,7 +375,7 @@ class Potatocannon  : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("Potato cannon");  
     }
     
 }
@@ -284,7 +384,16 @@ class Potatocannon  : Item {
 class MMS_Sniper  : Item {
     
     function Init () {
-        
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Stackable = false;
+        this.MagSize = 10;
+        this.Name = "Sniper";
+        this.DamagePer = 70;
+        this.FireRate = 0.1; 
+        this.AmmoPerShot = 20 ;
+        this.RelodTime = 20;
     }
     
     function ReturnLore () : String {
@@ -299,7 +408,7 @@ class MMS_Sniper  : Item {
     }
     
     function Use (radAngle : Real) {
-        
+        Console.WriteLine("Radar sniper");  
     }
     
 }
