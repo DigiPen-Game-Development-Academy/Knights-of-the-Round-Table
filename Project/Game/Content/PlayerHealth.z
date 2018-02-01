@@ -1,0 +1,11 @@
+class PlayerHealth : ZilchComponent {
+    [Dependency]
+    var Health : Health;
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Owner, Events.NoHealth, this.OnNoHealth);
+    }
+
+    function OnNoHealth(event : NoHealth) {
+        this.Space.ReloadLevel();
+    }
+}

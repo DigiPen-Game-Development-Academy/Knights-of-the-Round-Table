@@ -143,7 +143,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10.3227205, 22.9075165, 111.565193],
+			Vec3 Translation = [0.229435936, 0.12843892, 111.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -155,7 +155,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.3131294,
+			float Size = 6.08104324,
 		},
 		EditorCameraController = 
 		{
@@ -163,7 +163,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-10.3227205, 22.9075165, -8.68207479e-08],
+			Vec3 LookTarget = [0.229435936, 0.12843892, 3.74428453e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -253,6 +253,13 @@ Level =
 			float SprintMultiplier = 2,
 		},
 		UseWeapon = 
+		{
+		},
+		Health = 
+		{
+			float InitialHealth = 100,
+		},
+		PlayerHealth = 
 		{
 		},
 		Hierarchy = 

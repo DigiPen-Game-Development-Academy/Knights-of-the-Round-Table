@@ -103,6 +103,10 @@ class Utilities
             return Ammo();
         else if(id == "Potato")
             return Potato();
+        else if(id == "Test")
+            return TestItem1();
+        else if(id == "Test2")
+            return TestItem2();
         else
             return null;
         
