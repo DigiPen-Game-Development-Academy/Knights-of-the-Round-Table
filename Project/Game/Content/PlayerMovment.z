@@ -9,6 +9,8 @@ class PlayerMovment : ZilchComponent
     [Property]
     var SprintMultiplier : Real = 2;
     
+    var Dir : Real3 = Real3(0);
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         GlobalVariables.Player = this.Owner;
@@ -24,6 +26,9 @@ class PlayerMovment : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(inMngr.South)) vel +=  ((Real3( 0, -1, 0) * event.Dt) * this.MoveSpeed);
         if(Zero.Keyboard.KeyIsDown(inMngr.West)) vel +=  ((Real3(-1,  0, 0) * event.Dt) * this.MoveSpeed);
         if(Zero.Keyboard.KeyIsDown(inMngr.East)) vel +=  ((Real3( 1,  0, 0) * event.Dt) * this.MoveSpeed);
+        
+        if(vel != Real3(0))
+            this.Dir = Math.Normalize(vel);
         
         if(Zero.Keyboard.KeyIsDown(Keys.Shift)) vel *= this.SprintMultiplier;
         

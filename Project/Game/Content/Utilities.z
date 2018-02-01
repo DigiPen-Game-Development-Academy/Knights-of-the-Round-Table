@@ -107,6 +107,8 @@ class Utilities
             return TestItem1();
         else if(id == "Test2")
             return TestItem2();
+        else if(id == "Pistol")
+            return Plasma_Pistol();
         else
             return null;
         

@@ -7,10 +7,22 @@ class Fists : Item
         this.Type = ItemType.Weapon;
         this.MagSize = -1;
         this.FireRate = 3;
-        this.DamagePer = 1;
+        this.DamagePer = 100;
     }
     
     function Use (radAngle : Real) {
         Console.WriteLine("FISTS!");
+        var contacts = GlobalVariables.Player.BoxCollider.Contacts;
+        GlobalVariables.Player.PlayerMovment.Dir = Math.Normalize(GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - GlobalVariables.Player.Transform.WorldTranslation);
+        foreach (var contact in contacts) {
+            var dot = Math.Dot(Math.Normalize(contact.OtherObject.Transform.WorldTranslation - GlobalVariables.Player.Transform.WorldTranslation), Math.Normalize(GlobalVariables.Player.PlayerMovment.Dir));
+            var angle = Math.ACos(dot);
+            if(angle <= Math.ToRadians(45)) {
+                var toSend = Damage();
+                toSend.Damage = this.DamagePer;
+                contact.OtherObject.DispatchEvent(Events.Damage, toSend);
+            }
+            
+        }
     }
 }

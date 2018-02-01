@@ -72,11 +72,12 @@ class Plasma_Pistol : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.WakeSprite = Archetype.Wake;
         this.Stackable = false;
-        this.MagSize = 1;
-        this.Name = "Plasma_pistol";
-        this.DamagePer = 3;
-        this.FireRate = 0.2; 
+        this.MagSize = 15;
+        this.Name = "Plasma pistol";
+        this.DamagePer = 15;
+        this.FireRate = 2; 
         this.AmmoPerShot = 2;
         this.RelodTime = 5;
     }
@@ -91,6 +92,22 @@ class Plasma_Pistol : Item {
     
     function Use (radAngle : Real) {
         Console.WriteLine("Plasma Pistol");
+        
+        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+        
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        
+        if(res != null){
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+        }else{
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+        }
+        
     }
     
 }
