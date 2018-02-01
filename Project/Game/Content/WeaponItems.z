@@ -220,9 +220,80 @@ class Lasersniper  : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("yote");
+        lore.Add("long range retaliator ");
+        lore.Add("scoped savior");
+        lore.Add("shoot far stick");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {
+        
+    }
+    
+}
+//JAV-MISSILE
+//
+class Missile  : Item {
+    
+    function Init () {
+        
+    }
+    
+    function ReturnLore () : String {
+        var lore = Array[String]();
+        lore.Add("be careful with this thing");
         lore.Add("use your ammo wisely");
-        lore.Add("a weaponized saw");
+        lore.Add("biggest boom of them all");
+        lore.Add("arnold schwarzenegger's only possesion");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {
+        
+    }
+    
+}
+//POTATO-CANNON
+//
+class Potatocannon  : Item {
+    
+    function Init () {
+        
+    }
+    
+    function ReturnLore () : String {
+        var lore = Array[String]();
+        lore.Add("Irish food processor");
+        lore.Add("you have read the weapon lore");
+        lore.Add("helping hashbrown");
+        lore.Add("alien weapons all around and you chose this... good choice");
+        lore.Add("potatus prime");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {
+        
+    }
+    
+}
+//Scan_Snipe
+//
+class MMS_Sniper  : Item {
+    
+    function Init () {
+        
+    }
+    
+    function ReturnLore () : String {
+        var lore = Array[String]();
+        lore.Add("a upgraded variant of the laser sniper");
+        lore.Add("have the sight of an eagle, and the power of one too");
+        lore.Add("that moment when you eat too many carrots");
+        lore.Add("omniscience achived");
+        lore.Add("no where to hide");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
