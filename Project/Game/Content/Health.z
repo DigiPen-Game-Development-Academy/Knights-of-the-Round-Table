@@ -1,24 +1,23 @@
-class Health : ZilchComponent
-{
+class Health : ZilchComponent {
     [Property]
     var InitialHealth : Real = 100;
     var CurrentHealth : Real = 0;
-    function Initialize(init : CogInitializer)
-    {
+    function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.Damage, this.OnDamage);
         this.CurrentHealth = this.InitialHealth;
     }
 
-    function OnDamage(event : Damage)
-    {
-        this.CurrentHealth  - event.Damage;
-        if(this.CurrentHealth < 0)
+    function OnDamage(event : Damage) {
+        this.CurrentHealth  -= event.Damage;
+        if(this.CurrentHealth <= 0)
             this.Owner.DispatchEvent(Events.NoHealth, NoHealth());
+        if(this.CurrentHealth < 0)
+            this.CurrentHealth = 0;
     }
 
-    function OnLogicUpdate(event : UpdateEvent)
-    {
+    function OnLogicUpdate(event : UpdateEvent) {
+        
     }
     
 }

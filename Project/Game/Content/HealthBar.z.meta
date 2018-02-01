@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "HealthBar",
+		uint64 ResourceId = 5a08e69178a941c5,
+	},
+},

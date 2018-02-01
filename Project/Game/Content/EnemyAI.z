@@ -26,6 +26,15 @@ class EnemyAI : ZilchComponent {
         this.Timer = this.WaitTime;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.InSound, this.OnInSound);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent) {
+        if(event.OtherObject == GlobalVariables.Player) {
+            this.PlayerSpotted = true;
+            this.Suspitious = false;
+            this.Timer = this.WaitTime;
+        }
     }
 
     function OnInSound(event : InSound) {
@@ -55,6 +64,8 @@ class EnemyAI : ZilchComponent {
             if(Math.Distance(this.Owner.Transform.WorldTranslation, this.GuardPos) > this.MaxDistFromGuard) {
                 this.PlayerSpotted = false;
                 this.Owner.EnemyPathFind.Path = null;
+                this.ViewDirection = -this.ViewDirection;
+                this.Timer = this.WaitTime;
             } else {
                 this.Timer -= event.Dt;
                 if(this.Timer <= 0) {

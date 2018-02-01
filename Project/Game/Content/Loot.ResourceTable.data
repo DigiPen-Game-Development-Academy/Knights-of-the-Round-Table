@@ -6,27 +6,27 @@ ResourceTable =
 		{
 			string Name = "Health Pack T1",
 			string Value = "Health_Pack_(T1)",
-			float Weight = 0.100000001,
+			float Weight = 1,
 		},
 		{
 			string Name = "Health Pack T2",
 			string Value = "Health_Pack_(T2)",
-			float Weight = 0.100000001,
+			float Weight = 1,
 		},
 		{
 			string Name = "Health Pack T3",
 			string Value = "Health_Pack_(T3)",
-			float Weight = 0.100000001,
+			float Weight = 1,
 		},
 		{
 			string Name = "Nothing",
 			string Value = "NULL",
-			float Weight = 0.100000001,
+			float Weight = 1,
 		},
 		{
 			string Name = "Plasma",
 			string Value = "Ammo",
-			float Weight = 0.100000001,
+			float Weight = 1,
 		},
 		{
 			string Name = "Potato",

@@ -1,0 +1,31 @@
+class HealthBar : ZilchComponent {
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        var health = GlobalVariables.Player.Health.CurrentHealth;
+        var mHealth = GlobalVariables.Player.Health.InitialHealth;
+        var back = this.Owner.FindChildByName("Back");
+        
+        this.Owner.Transform.Scale = Real3(health / mHealth, 1, 1);
+        
+        if(!GlobalVariables.PauseMenu.MenuVisibilityController.Vis) {
+            this.Owner.Area.Size = Real2(10, this.Owner.Area.Size.Y);
+            this.Owner.Transform.WorldTranslation = Real3(-8.5, 4.375, 0);
+            back.Area.Size = Real2(10, back.Area.Size.Y);
+        } else {
+            this.Owner.Area.Size = Real2(3.75, this.Owner.Area.Size.Y);
+            this.Owner.Transform.WorldTranslation = Real3(-8, -0.25, 0);
+            back.Area.Size = Real2(3.75, back.Area.Size.Y);
+        }
+        
+        back.Transform.WorldScale = Real3(1);
+        back.Transform.Translation = Real3(0,0,-0.1);
+        
+        this.Owner.FindChildByName("TXT").SpriteText.Text = "`Math.Round(health)`/`Math.Round(mHealth)`";
+        this.Owner.FindChildByName("TXT").Transform.WorldScale = Real3(1);
+        
+    }
+}
