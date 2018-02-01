@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [8.65536404, -8.92001629, 49],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 67.0320358,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [8.65536404, -8.92001629, -0.999999702],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -176,11 +176,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "TileMap",
+			string Name = "FloorTiles",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 0, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -197,8 +197,43 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "",
-			string PaletteName = "",
+			string SourceName = "5a080a776b84bf19:JustinTestLevel_TileMap02",
+			string PaletteName = "5a11b7b61863cdae:Floor",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Named = 
+		{
+			string Name = "ClutterTiles",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a0817a16dc6d520:JustinTestLevel_TileMap00",
+			string PaletteName = "5a0815c6bc36dbbd:GroundClutter",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
 		},
