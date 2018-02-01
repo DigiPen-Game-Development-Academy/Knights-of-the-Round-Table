@@ -17,6 +17,9 @@ class EnemyAI : ZilchComponent {
     var ViewAngle : Real = 45;
     [Property]
     var ViewRange : Real = 6;
+    var MoveSpeed : Real = 2;
+    [Property]
+    var ChaseSpeedMultiplier : Real = 2;
     function Initialize(init : CogInitializer) {
         this.GuardPos = this.Owner.Transform.WorldTranslation;
         this.Timer = this.WaitTime;
@@ -25,7 +28,7 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnInSound(event : InSound) {
-        if(!this.PlayerSpotted) {
+        if(!this.PlayerSpotted && Math.Distance(event.Source, this.GuardPos) <= this.MaxDistFromGuard) {
             if(GlobalVariables.DebugLinesActive)
                     Utilities.DrawCircle(this.Owner.Transform.WorldTranslation, this.InstantSpotRadius, false, Real4(0,1,0,1));
             //if next to player instantly spot them
@@ -41,15 +44,20 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        this.Owner.RigidBody.Velocity *= this.MoveSpeed;
         //State Handeling
         if(this.PlayerSpotted) {
-            this.Timer -= event.Dt;
-            if(this.Timer <= 0) {
-                this.PathFind.SetTarget(GlobalVariables.Player.Transform.WorldTranslation);
-            } else {
+            if(Math.Distance(this.Owner.Transform.WorldTranslation, this.GuardPos) > this.MaxDistFromGuard) {
+                this.PlayerSpotted = false;
                 this.Owner.EnemyPathFind.Path = null;
-                if(Math.Distance(this.Owner.Transform.WorldTranslation, this.GuardPos) > this.MaxDistFromGuard)
-                    this.PlayerSpotted = false;
+            } else {
+                this.Timer -= event.Dt;
+                if(this.Timer <= 0) {
+                    this.Owner.RigidBody.Velocity *= this.ChaseSpeedMultiplier;
+                    this.PathFind.SetTarget(GlobalVariables.Player.Transform.WorldTranslation);
+                } else {
+                    this.Owner.EnemyPathFind.Path = null;
+                }
             }
         } else if (this.Suspitious) {
             if(this.Owner.EnemyPathFind.Path == null) {

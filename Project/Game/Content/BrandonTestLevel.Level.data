@@ -143,7 +143,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.38856316, 0.351885945, 111.565193],
+			Vec3 Translation = [-23.029335, 20.4350872, 111.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -155,7 +155,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10.0259113,
+			float Size = 10.0259266,
 		},
 		EditorCameraController = 
 		{
@@ -163,7 +163,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.38856316, 0.351885945, 6.06948873e-08],
+			Vec3 LookTarget = [-23.029335, 20.4350872, -6.42243663e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1143,7 +1143,7 @@ Level =
 			bool Ghost = false,
 			bool SendsMessages = true,
 			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string MaterialName = "5a08c96d04f0597c:Enemy",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			float Radius = 0.5,
@@ -1156,6 +1156,7 @@ Level =
 			float Range = 3,
 			float ViewAngle = 45,
 			float ViewRange = 10,
+			float ChaseSpeedMultiplier = 2,
 		},
 		Hierarchy = 
 		{
@@ -1237,7 +1238,7 @@ Level =
 			bool Ghost = false,
 			bool SendsMessages = true,
 			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string MaterialName = "5a08c96d04f0597c:Enemy",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			float Radius = 0.5,
@@ -1250,6 +1251,7 @@ Level =
 			float Range = 3,
 			float ViewAngle = 45,
 			float ViewRange = 10,
+			float ChaseSpeedMultiplier = 2,
 		},
 		Hierarchy = 
 		{
@@ -1662,7 +1664,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.5, 2.5, 0],
+			Vec3 Translation = [-24.5, 21.5, -0.100000001],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1696,7 +1698,7 @@ Level =
 		},
 		Twig = 
 		{
-			float Radius = 5,
+			float Radius = 15,
 		},
 	},
 	Cog = 
