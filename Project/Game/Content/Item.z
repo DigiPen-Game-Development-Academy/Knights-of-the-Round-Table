@@ -22,6 +22,7 @@ class Item
     var Stackable : Boolean = false;
     
     var Ammount : Integer = 1;
+    var StackSize : Integer = 100;
     
     var Name : String = "null";
     

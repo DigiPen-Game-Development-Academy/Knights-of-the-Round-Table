@@ -34,9 +34,23 @@ class InventorySlot : ZilchComponent
     function OnMouseDown(event : ViewportMouseEvent)
     {
         
-        //dont do this if you are a hotbar slot or you are empty
-        if(this.HotbarSlot || GlobalVariables.Items[this.Index] == null)
+        //dont do this if you are empty
+        if((!this.HotbarSlot && GlobalVariables.Items[this.Index] == null) || (this.HotbarSlot && this.Item == null))
             return;
+        /*Hotbar slots need to handel things differently*/
+        if(this.HotbarSlot) {
+            if(GlobalVariables.AddInventoryItem(this.Item)) {
+                if(this.Owner.Name == "PrimarySlot") {
+                    GlobalVariables.UseWeapon.Primary = Fists();
+                    GlobalVariables.UseWeapon.Primary.Init();
+                } else if(this.Owner.Name == "SecondarySlot"){
+                    GlobalVariables.UseWeapon.Secondary = Fists();
+                    GlobalVariables.UseWeapon.Primary.Init();
+                }
+                this.Item = null;
+            }
+            return;
+        }
         
         //---equip/use item---
         

@@ -51,16 +51,16 @@ class GlobalVariables
             
             if(GlobalVariables.Items[i] == null) {
                 GlobalVariables.Items.Set(i, item);
-                if(item.Stackable && GlobalVariables.Items[i].Ammount > 100) {
-                    item.Ammount -= 100;
-                    GlobalVariables.Items[i].Ammount = 100;
+                if(item.Stackable && GlobalVariables.Items[i].Ammount > item.StackSize) {
+                    item.Ammount -= item.StackSize;
+                    GlobalVariables.Items[i].Ammount = item.StackSize;
                 } else {
                     return true;
                 }
             } else if ((item.Stackable && GlobalVariables.Items[i].Name == item.Name)) {
-                if(GlobalVariables.Items[i].Ammount + item.Ammount > 100){
-                    item.Ammount -= 100 - GlobalVariables.Items[i].Ammount;
-                    GlobalVariables.Items[i].Ammount = 100;
+                if(GlobalVariables.Items[i].Ammount + item.Ammount > item.StackSize){
+                    item.Ammount -= item.StackSize - GlobalVariables.Items[i].Ammount;
+                    GlobalVariables.Items[i].Ammount = item.StackSize;
                 }else{
                     GlobalVariables.Items[i].Ammount += item.Ammount;
                     delete item;
