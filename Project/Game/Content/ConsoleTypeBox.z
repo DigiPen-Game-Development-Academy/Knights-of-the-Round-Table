@@ -2,6 +2,8 @@ class ConsoleTypeBox : ZilchComponent {
     
     var CurrentIn : String = "";
     
+    var LastIn : String = "";
+    
     var History : Array[String];
     
     var Selected : Boolean = false;
@@ -17,7 +19,10 @@ class ConsoleTypeBox : ZilchComponent {
     
     var InitialPos : Real3;
     
+    var ACIndex : Integer = -1;
+    
     function Initialize(init : CogInitializer) {
+        Commands.Init();
         this.InitialPos = this.Owner.Parent.Transform.Translation;
         this.History = Array[String]();
         this.History.Add("");
@@ -39,8 +44,11 @@ class ConsoleTypeBox : ZilchComponent {
         if(!this.Selected || !this.Active)
             return;
         if(event.Key == Keys.Back) {
-            if(this.CurrentIn.Count > 0)
+            if(this.CurrentIn.Count > 0) {
                 this.CurrentIn = this.CurrentIn.SubStringFromRuneIndices(0, this.CurrentIn.Count-1);
+                this.LastIn = this.CurrentIn;
+                this.ACIndex = -1;
+            }
         } else if(event.Key == Keys.Enter) {
             if(this.CurrentIn.Count != 0 && String.FromChar(this.CurrentIn.Get(0)) == "/") {
                 Commands.CheckForCommands(this.CurrentIn);
@@ -49,8 +57,10 @@ class ConsoleTypeBox : ZilchComponent {
             }else
                 Utilities.ConsoleSend(this.CurrentIn, Real4(1,1,1,1));
             this.CurrentIn = "";
+            this.LastIn = "";
             this.Selected = false;
             this.HistoryIndex = -1;
+            this.ACIndex = -1;
         } else if(event.Key == Keys.Up) {
             ++this.HistoryIndex;
             
@@ -67,6 +77,26 @@ class ConsoleTypeBox : ZilchComponent {
                 this.HistoryIndex = 0;
             
             this.CurrentIn = this.History[this.HistoryIndex];
+        } else if(Zero.Keyboard.KeyIsDown(Keys.Shift) && event.Key == Keys.Tab) {
+            
+            var ac = this.GetAC(this.LastIn);
+            if(ac.Count == 0)
+                return;
+            --this.ACIndex;
+            if(this.ACIndex < 0)
+                this.ACIndex = ac.Count-1;
+            this.CurrentIn = ac[this.ACIndex];
+            
+        } else if(event.Key == Keys.Tab) {
+            
+            var ac = this.GetAC(this.LastIn);
+            if(ac.Count == 0)
+                return;
+            ++this.ACIndex;
+            if(this.ACIndex > ac.Count-1)
+                this.ACIndex = 0;
+            this.CurrentIn = ac[this.ACIndex];
+            
         }
     }
 
@@ -74,8 +104,11 @@ class ConsoleTypeBox : ZilchComponent {
         
         if(this.Selected && this.Active){
             var key = String.FromChar(event.Character);
-            if(this.IsRenderable(event.Character) && this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn``key`").X <= (this.Owner.Area.Size.X - 0.125))
+            if(this.IsRenderable(event.Character) && this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn``key`").X <= (this.Owner.Area.Size.X - 0.125)) {
                 this.CurrentIn = "`this.CurrentIn``key`";
+                this.LastIn = this.CurrentIn;
+                this.ACIndex = -1;
+            }
         }
     }
 
@@ -108,7 +141,18 @@ class ConsoleTypeBox : ZilchComponent {
     }
     
     function IsRenderable(code : Integer) : Boolean {
-      return code >= " "[0] && code <= "~"[0];
+        return code >= " "[0] && code <= "~"[0];
     }
     
+    function GetAC(str : String) : Array[String] {
+        
+        var strs = Array[String]();
+        
+        foreach(var cmd in Commands.Commands) {
+            if(cmd.Cmd.StartsWith(str)) {
+                strs.Add(cmd.Cmd);
+            }
+        }
+        return strs;
+    }
 }

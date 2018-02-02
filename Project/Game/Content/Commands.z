@@ -1,6 +1,40 @@
 //Author Brandon Wolenetz
 
+class CMD {
+    constructor (cmd : String, func : delegate(vals : Array[String])) {
+        this.Cmd = cmd;
+        this.Func = func;
+    }
+    var Cmd : String;
+    var Func : delegate(vals : Array[String]);
+}
+
 class Commands {
+    
+    [Static]
+    var Commands : Array[CMD];
+    
+    [Static]
+    function Init () {
+        /*initilize array of commands*/
+        if(Commands.Commands == null) {
+            
+            Commands.Commands = Array[CMD]();
+            Commands.Commands.Add(CMD("/help",              Commands.Help));
+            Commands.Commands.Add(CMD("/?",                 Commands.Help));
+            Commands.Commands.Add(CMD("/debug",             Commands.Debug));
+            Commands.Commands.Add(CMD("/pathdebug",         Commands.PathDebug));
+            Commands.Commands.Add(CMD("/give",              Commands.GiveItem));
+            Commands.Commands.Add(CMD("/clear",             Commands.Clear));
+            Commands.Commands.Add(CMD("/cls",               Commands.Clear));
+            Commands.Commands.Add(CMD("/heal",              Commands.Heal));
+            Commands.Commands.Add(CMD("/h",                 Commands.Heal));
+            Commands.Commands.Add(CMD("/potato",            Commands.Potato));
+            Commands.Commands.Add(CMD("/suspicious",        Commands.Potato));
+            Commands.Commands.Add(CMD("/suspicion",         Commands.Potato));
+            
+        }
+    }
     
     /*Check For Commands*/
     [Static]
@@ -9,23 +43,15 @@ class Commands {
         var cmd = Commands.ParseCommand(str);
         var vals = Commands.ParseValue(str);
         
-        if(cmd == "/help" || cmd == "/?")
-            Commands.Help(vals);
-        else if(cmd == "/debug")
-            Commands.Debug(vals);
-        else if(cmd == "/pathdebug")
-            Commands.PathDebug(vals);
-        else if(cmd == "/give")
-            Commands.GiveItem(vals);
-        else if(cmd == "/clear" || cmd == "/cls")
-            Commands.Clear(vals);
-        else if(cmd == "/heal" || cmd == "/h")
-            Commands.Heal(vals);
-        else if(cmd == "/potato" || cmd == "/suspicious" || cmd == "/suspicion")
-            Commands.Potato(vals);
-        else
-            Commands.Invalad(vals, cmd);
-        
+        if(Commands.Commands != null) {
+            foreach(var command in Commands.Commands) {
+                if(cmd == command.Cmd) {
+                    command.Func(vals);
+                    return;
+                }
+            }
+        }
+        Commands.Invalad(vals, cmd);
     }
     
     /*Commands*/
@@ -33,19 +59,19 @@ class Commands {
     [Static]
     function Help (vals : Array[String]) {
         Commands.Clear(null);
-        Utilities.ConsoleSend("/potato or /suspicious or /suspicion", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-what is this?-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/debug", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-toggles debug lines-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/pathdebug", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-toggles pathfinding debug-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/give <item> <ammount>", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-gives item-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/clear or /cls", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-clear console-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/heal or /h", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-heal to 100%-", Real4(0, 1, 0, 1));
         Utilities.ConsoleSend("---Commands---", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-toggles debug lines-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/debug", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-toggles pathfinding debug-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/pathdebug", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-gives item-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/give <item> <ammount>", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-clear console-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/clear or /cls", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-heal to 100%-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/heal or /h", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-what is this?-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/potato or /suspicious or /suspicion", Real4(0, 1, 0, 1));
     }
     
     [Static]
