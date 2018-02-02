@@ -26,6 +26,7 @@ class HealthBar : ZilchComponent {
         
         this.Owner.FindChildByName("TXT").SpriteText.Text = "`Math.Round(health)`/`Math.Round(mHealth)`";
         this.Owner.FindChildByName("TXT").Transform.WorldScale = Real3(1);
+        this.Owner.FindChildByName("TXT").Transform.WorldTranslation = this.Owner.Transform.WorldTranslation + Real3(0.0625, 0.1875, 0.1);
         
     }
 }

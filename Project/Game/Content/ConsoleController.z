@@ -23,7 +23,7 @@ class ConsoleController : ZilchComponent {
             if(txtobj.SpriteText.MeasureGivenText(txt).X > 2.875) {
                 var txt2 = "";
                 for (var i = 0; i < txt.Count; ++i){
-                    if(txtobj.SpriteText.MeasureGivenText("`txt2``String.FromChar(txt.Get(i))`").X > 2.875)
+                    if(txtobj.SpriteText.MeasureGivenText("`txt2``String.FromChar(txt.Get(i))`").X > this.Owner.Area.Size.X - 0.125)
                         txt2 = "`txt2`\n";
                     txt2 = "`txt2``String.FromChar(txt.Get(i))`";
                 }
@@ -32,7 +32,7 @@ class ConsoleController : ZilchComponent {
             txtobj.SpriteText.Text = txt;
             txtobj.SpriteText.Color = color;
             txtobj.AttachTo(this.Owner);
-            txtobj.Transform.Translation = Real3((-this.Owner.Area.Size.X/2)+0.0625, (this.Owner.Area.Size.Y/2)-0.0625, 0);
+            txtobj.Transform.Translation = Real3(0.0625, (this.Owner.Area.Size.Y)-0.0625, 0);
             this.Text.Add(txtobj);
             if(this.Text.Count < 2)
                 return;
@@ -46,5 +46,12 @@ class ConsoleController : ZilchComponent {
             }
             
         }
+    }
+    
+    function Clear() {
+        foreach(var txt in this.Text) {
+            txt.Destroy();
+        }
+        this.Text.Resize(0);
     }
 }

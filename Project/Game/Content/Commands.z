@@ -9,18 +9,44 @@ class Commands {
         var cmd = Commands.ParseCommand(str);
         var vals = Commands.ParseValue(str);
         
-        if(cmd == "/debug")
+        if(cmd == "/help" || cmd == "/?")
+            Commands.Help(vals);
+        else if(cmd == "/debug")
             Commands.Debug(vals);
         else if(cmd == "/pathdebug")
             Commands.PathDebug(vals);
         else if(cmd == "/give")
             Commands.GiveItem(vals);
+        else if(cmd == "/clear" || cmd == "/cls")
+            Commands.Clear(vals);
+        else if(cmd == "/heal" || cmd == "/h")
+            Commands.Heal(vals);
+        else if(cmd == "/potato" || cmd == "/suspicious" || cmd == "/suspicion")
+            Commands.Potato(vals);
         else
             Commands.Invalad(vals, cmd);
         
     }
     
     /*Commands*/
+    
+    [Static]
+    function Help (vals : Array[String]) {
+        Commands.Clear(null);
+        Utilities.ConsoleSend("/potato or /suspicious or /suspicion", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-what is this?-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/debug", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-toggles debug lines-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/pathdebug", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-toggles pathfinding debug-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/give <item> <ammount>", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-gives item-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/clear or /cls", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-clear console-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/heal or /h", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-heal to 100%-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("---Commands---", Real4(0, 1, 0, 1));
+    }
     
     [Static]
     function Debug (vals : Array[String]) {
@@ -38,8 +64,8 @@ class Commands {
     
     [Static]
     function GiveItem (vals : Array[String]) {
-        if(vals.Count == 0) {
-            Utilities.ConsoleSend("INVALID PARAMETERS, correct perameters are:\n/give [ITEM ID] [AMMOUNT](Optional)", Real4(1, 1, 0, 1));
+        if(vals == null || vals.Count == 0) {
+            Utilities.ConsoleSend("INVALID PARAMETERS, correct\nperameters are:\n/give [ITEM ID] [AMMOUNT](Optional)", Real4(1, 1, 0, 1));
             return;
         }
         var item = Utilities.ItemFromID(vals[0]);
@@ -64,6 +90,25 @@ class Commands {
         
         GlobalVariables.AddInventoryItem(item);
         
+    }
+    
+    [Static]
+    function Clear (vals : Array[String]) {
+        GlobalVariables.Console.ConsoleController.Clear();
+    }
+    
+    [Static]
+    function Heal (vals : Array[String]) {
+        GlobalVariables.Player.Health.CurrentHealth = GlobalVariables.Player.Health.InitialHealth;
+        Utilities.ConsoleSend("Healed", Real4(1, 0, 0, 1));
+    }
+    
+    [Static]
+    function Potato (vals : Array[String]) {
+        var potato = SPotato();
+        potato.Init();
+        GlobalVariables.AddInventoryItem(potato);
+        Utilities.ConsoleSend("What is this potato doing here?", Real4(1, 0, 0, 1));
     }
     
     [Static]

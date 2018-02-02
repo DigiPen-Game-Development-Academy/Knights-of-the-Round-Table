@@ -127,7 +127,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.19734001, -4.80960941, 50],
+			Vec3 Translation = [-6.73938036, 4.14649677, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -139,7 +139,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 2.21034193,
+			float Size = 2.98365188,
 		},
 		EditorCameraController = 
 		{
@@ -147,7 +147,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.19734001, -4.80960941, -2.27182809e-07],
+			Vec3 LookTarget = [-6.73938036, 4.14649677, -2.94587153e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -311,7 +311,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.375, -3, 0],
+			Vec3 Translation = [-8.90625, -5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -321,7 +321,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.339999974, 0.33829996, 0.33829996, 0.774999976],
+			Vec4 Color = [0.235000014, 0.235000014, 0.235000014, 0.829999983],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -335,8 +335,8 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [3, 4],
-			Location Origin = Center,
+			Vec2 Size = [4, 4],
+			Location Origin = BottomLeft,
 		},
 		ConsoleController = 
 		{
@@ -355,7 +355,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.5, -2, 0],
+					Vec3 Translation = [4, 0, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -365,7 +365,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.34117648, 0.337254912, 0.337254912, 0.769999981],
+					Vec4 Color = [0.235294133, 0.235294133, 0.235294133, 0.860000014],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -442,7 +442,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [8.5625, -4.0625, 0],
+			Vec3 Translation = [5.28125, 4.59375, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

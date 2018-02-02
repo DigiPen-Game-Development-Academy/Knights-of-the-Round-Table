@@ -90,7 +90,7 @@ class ConsoleTypeBox : ZilchComponent {
             GlobalVariables.PauseMenu.MenuVisibilityController.Vis = true;
             GlobalVariables.GameSpace.TimeSpace.Paused = true;
         } else {
-            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 0.77);
+            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 0.83);
         }
         
         if(!this.Active && this.Selected)
