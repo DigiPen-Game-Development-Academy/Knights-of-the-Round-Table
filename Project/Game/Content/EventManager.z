@@ -28,3 +28,8 @@ class InSound : ZilchEvent {
 class NoHealth : ZilchEvent {
     sends NoHealth : NoHealth;
 }
+
+class UseRadar : ZilchEvent {
+    var Timer : Real;
+    sends UseRadar : UseRadar;
+}

@@ -2,12 +2,18 @@ class Visibility : ZilchComponent {
     
     var InSight : Boolean = false;
     
+    var Timer : Real = 0;
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.UseRadar, this.OnUseRadar);
+    }
+
+    function OnUseRadar(event : UseRadar) {
+        this.Timer = event.Timer;
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
-        
         if(GlobalVariables.Player == null)
             return;
         
@@ -25,6 +31,11 @@ class Visibility : ZilchComponent {
         } else {
             this.Owner.Sprite.Visible = false;
             this.InSight = false;
+        }
+        
+        if(this.Timer > 0) {
+            this.Timer -= event.Dt;
+            this.Owner.Sprite.Visible = true;
         }
         
         GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;

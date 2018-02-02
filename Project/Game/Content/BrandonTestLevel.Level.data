@@ -143,7 +143,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.45998859, 24.7341785, 111.565193],
+			Vec3 Translation = [-5.6335063, -0.541553199, 111.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -155,7 +155,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10.0259523,
+			float Size = 4.97871733,
 		},
 		EditorCameraController = 
 		{
@@ -163,7 +163,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-9.45998859, 24.7341785, -4.91096053e-08],
+			Vec3 LookTarget = [-5.6335063, -0.541553199, 1.18151405e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -339,12 +339,19 @@ Level =
 			float MeshThickness = 1.20000005,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a08fe54ce309955:GroundItem",
 		LinkId = 
 		{
 			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "Item",
+		},
+		Archetyped = 
+		{
+			string Name = "5a08fe54ce309955:GroundItem",
 		},
 		Transform = 
 		{
@@ -352,9 +359,45 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Item",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "4e07948c35993095:DefaultSprite",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		ItemPickup = 
+		{
+			string ID = "NULL",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Visibility = 
+		{
 		},
 	},
 	Cog = 
@@ -405,6 +448,9 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
+		Visibility = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -453,6 +499,9 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Visibility = 
+		{
 		},
 	},
 	Cog = 
@@ -503,6 +552,9 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
+		Visibility = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -552,6 +604,9 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
+		Visibility = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -600,6 +655,9 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Visibility = 
+		{
 		},
 	},
 	Cog = 
@@ -655,6 +713,9 @@ Level =
 			bool Active = true,
 			bool CaptureMouse = false,
 		},
+		Visibility = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -709,6 +770,9 @@ Level =
 			bool Active = true,
 			bool CaptureMouse = false,
 		},
+		Visibility = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -757,6 +821,9 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Visibility = 
+		{
 		},
 	},
 	Cog = 
@@ -807,6 +874,9 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
+		Visibility = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -855,6 +925,9 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Visibility = 
+		{
 		},
 	},
 	Cog = 
@@ -905,6 +978,9 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
+		Visibility = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -953,6 +1029,9 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Visibility = 
+		{
 		},
 	},
 	Cog = 
@@ -1003,6 +1082,9 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
+		Visibility = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -1051,6 +1133,9 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Visibility = 
+		{
 		},
 	},
 	Cog = 

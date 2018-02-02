@@ -1,0 +1,40 @@
+//Author Brandon Wolenetz
+
+
+
+class Radar : Item {
+    
+    function Init() {
+        this.Name = "Radar";
+        this.Type = ItemType.Utility;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.MagSize = -1;
+        this.FireRate = 0.125;
+        this.Stackable = false;
+    }
+    
+    function ReturnLore() : String {
+        var lore = Array[String]();
+        lore.Add("I SEE ALLL");
+        lore.Add("lets you see through walls");
+        lore.Add("PING!");
+        lore.Add("lets you see through walls");
+        lore.Add("lets you see through walls");
+        lore.Add("lets you see through walls");
+        lore.Add("lets you see through walls");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {
+        
+        var toSend = UseRadar();
+        toSend.Timer = 3;
+        GlobalVariables.GameSpace.DispatchEvent(Events.UseRadar, toSend);
+        
+    }
+    
+}
+
+

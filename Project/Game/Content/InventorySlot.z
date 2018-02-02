@@ -45,7 +45,9 @@ class InventorySlot : ZilchComponent
                     GlobalVariables.UseWeapon.Primary.Init();
                 } else if(this.Owner.Name == "SecondarySlot"){
                     GlobalVariables.UseWeapon.Secondary = Fists();
-                    GlobalVariables.UseWeapon.Primary.Init();
+                    GlobalVariables.UseWeapon.Secondary.Init();
+                } else {
+                    GlobalVariables.UseWeapon.Utility = null;
                 }
                 this.Item = null;
             }
