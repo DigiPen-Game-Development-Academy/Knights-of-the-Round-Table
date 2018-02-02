@@ -22,6 +22,7 @@ class ConsoleTypeBox : ZilchComponent {
     var ACIndex : Integer = -1;
     
     function Initialize(init : CogInitializer) {
+        Utilities.IDInit();
         Commands.Init();
         this.InitialPos = this.Owner.Parent.Transform.Translation;
         this.History = Array[String]();
@@ -78,20 +79,32 @@ class ConsoleTypeBox : ZilchComponent {
             
             this.CurrentIn = this.History[this.HistoryIndex];
         } else if(Zero.Keyboard.KeyIsDown(Keys.Shift) && event.Key == Keys.Tab) {
-            
             var ac = this.GetAC(this.LastIn);
             if(ac.Count == 0)
                 return;
+            if(this.ACIndex == -1) {
+                var str = "";
+                foreach(var cmd in ac) {
+                    str = "`str`, `cmd`";
+                }
+                Utilities.ConsoleSend("Auto-Complete: `str`", Real4(0,1,0,1));
+            }
             --this.ACIndex;
             if(this.ACIndex < 0)
                 this.ACIndex = ac.Count-1;
             this.CurrentIn = ac[this.ACIndex];
             
         } else if(event.Key == Keys.Tab) {
-            
             var ac = this.GetAC(this.LastIn);
             if(ac.Count == 0)
                 return;
+            if(this.ACIndex == -1) {
+                var str = "`ac[0]`";
+                for(var i = 1; i < ac.Count-1; ++i) {
+                    str = "`str`, `ac[i]`";
+                }
+                Utilities.ConsoleSend("Auto-Complete: `str`", Real4(0,1,0,1));
+            }
             ++this.ACIndex;
             if(this.ACIndex > ac.Count-1)
                 this.ACIndex = 0;
@@ -148,9 +161,20 @@ class ConsoleTypeBox : ZilchComponent {
         
         var strs = Array[String]();
         
-        foreach(var cmd in Commands.Commands) {
-            if(cmd.Cmd.StartsWith(str)) {
-                strs.Add(cmd.Cmd);
+        if(str.StartsWith ("/give")) {
+            
+            foreach(var cmd in Utilities.Ids) {
+                var nCmd = "/give `cmd.ID`";
+                if(nCmd.StartsWith(str)) {
+                    strs.Add(nCmd);
+                }
+            }
+            
+        } else {
+            foreach(var cmd in Commands.Commands) {
+                if(cmd.Cmd.StartsWith(str)) {
+                    strs.Add(cmd.Cmd);
+                }
             }
         }
         return strs;

@@ -5,8 +5,19 @@ struct PointReturn {
     var Target : Real3 = Real3(9999);
 }
 
+class ItemID {
+    constructor (id : String) {
+        this.ID = id;
+    }
+    var ID : String;
+}
+
 class Utilities
 {
+    
+    [Static]
+    var Ids : Array[ItemID];
+    
     [Static]
     function Raycast (start : Real3, direction : Real3, physSpace : PhysicsSpace, range : Real) : CastResult {
         
@@ -91,7 +102,9 @@ class Utilities
     
     [Static]
     function ItemFromID(id : String) : Item {
+        Utilities.IDInit();
         
+        /*to add an item to the game, add another if statment for that item checking if di == <the_items_id_no_spaces>, return The_Items_Class();*/
         
         if(id == "Health_Pack_(T1)")
             return HealthPackT1();
@@ -114,6 +127,23 @@ class Utilities
         else
             return null;
         
+    }
+    
+    [Static]
+    function IDInit() {
+        /*Also don't forget to add the item's id to the auto-complete array*/
+        if(Utilities.Ids == null) {
+            Utilities.Ids = Array[ItemID]();
+            Utilities.Ids.Add(ItemID("Health_Pack_(T1)"));
+            Utilities.Ids.Add(ItemID("Health_Pack_(T2)"));
+            Utilities.Ids.Add(ItemID("Health_Pack_(T3)"));
+            Utilities.Ids.Add(ItemID("Ammo"));
+            Utilities.Ids.Add(ItemID("Potato"));
+            Utilities.Ids.Add(ItemID("Test"));
+            Utilities.Ids.Add(ItemID("Test2"));
+            Utilities.Ids.Add(ItemID("Pistol"));
+            Utilities.Ids.Add(ItemID("Radar"));
+        }
     }
     
     [Static]
