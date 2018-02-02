@@ -130,13 +130,53 @@ Cog =
 						bool Smoothing = true,
 					},
 				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 5,
+					},
+					Named = 
+					{
+						string Name = "Progress",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0.5, 0, 1],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 0, 0, 0.420000017],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5275aa4d802dd6dc:Square",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+					Area = 
+					{
+						Vec2 Size = [1, 1],
+						Location Origin = CenterRight,
+					},
+				},
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 5,
+				uint Id = 6,
 			},
 			Named = 
 			{
@@ -175,7 +215,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 6,
+						uint Id = 7,
 					},
 					Named = 
 					{
@@ -209,7 +249,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 7,
+						uint Id = 8,
 					},
 					Named = 
 					{
@@ -239,13 +279,53 @@ Cog =
 						bool Smoothing = true,
 					},
 				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 9,
+					},
+					Named = 
+					{
+						string Name = "Progress",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0.5, 0, 1],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 0, 0, 0.420000017],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5275aa4d802dd6dc:Square",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+					Area = 
+					{
+						Vec2 Size = [1, 1],
+						Location Origin = CenterRight,
+					},
+				},
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 8,
+				uint Id = 10,
 			},
 			Named = 
 			{
@@ -284,7 +364,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 9,
+						uint Id = 11,
 					},
 					Named = 
 					{
@@ -318,7 +398,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 10,
+						uint Id = 12,
 					},
 					Named = 
 					{
@@ -348,13 +428,53 @@ Cog =
 						bool Smoothing = true,
 					},
 				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 13,
+					},
+					Named = 
+					{
+						string Name = "Progress",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0.5, 0, 1],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 0, 0, 0.420000017],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5275aa4d802dd6dc:Square",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+					Area = 
+					{
+						Vec2 Size = [1, 1],
+						Location Origin = CenterRight,
+					},
+				},
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 11,
+				uint Id = 14,
 			},
 			Named = 
 			{
@@ -376,7 +496,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
+				string SpriteSource = "5a0b6a2f64f4cabc:arrow1",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -392,7 +512,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 12,
+				uint Id = 15,
 			},
 			Named = 
 			{

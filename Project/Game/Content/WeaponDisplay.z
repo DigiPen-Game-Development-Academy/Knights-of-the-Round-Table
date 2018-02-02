@@ -3,11 +3,13 @@ class WeaponDisplay : ZilchComponent
     
     var NameText : SpriteText;
     var AmmoText : SpriteText;
+    var Progress : Cog;
     
     function Initialize(init : CogInitializer){
         
         this.NameText = this.Owner.FindChildByName("Name").SpriteText;
         this.AmmoText = this.Owner.FindChildByName("Ammo").SpriteText;
+        this.Progress = this.Owner.FindChildByName("Progress");
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
@@ -28,21 +30,27 @@ class WeaponDisplay : ZilchComponent
             this.Owner.Sprite.Visible = false;
             this.NameText.Visible = false;
             this.AmmoText.Visible = false;
+            this.Progress.Sprite.Visible = false;
         } else {
             this.Owner.Sprite.Visible = true;
             this.NameText.Visible = true;
             this.AmmoText.Visible = true;
+            this.Progress.Sprite.Visible = true;
             
             this.Owner.Sprite.SpriteSource = item.Icon;
             this.NameText.Text = item.Name;
             
-            if(item.MagSize == -1)
+            if(item.MagSize == -1) {
                 this.AmmoText.Text = "INF";
-            else {
-                if(item.Reloading)
+                this.Progress.Area.Size = Real2(item.Timer / (1/item.FireRate), 1);
+            } else {
+                if(item.Reloading) {
                     this.AmmoText.Text = "Reloading... `Math.Round(item.Timer)`";
-                else
+                    this.Progress.Area.Size = Real2(item.Timer / item.RelodTime, 1);
+                } else {
                     this.AmmoText.Text = "`item.CurrentMag`/`GlobalVariables.UseWeapon.AmmoCount/item.AmmoPerShot`";
+                    this.Progress.Area.Size = Real2(item.Timer / (1/item.FireRate), 1);
+                }
             }
             
         }
