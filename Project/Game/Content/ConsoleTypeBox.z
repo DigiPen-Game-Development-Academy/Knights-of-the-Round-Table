@@ -2,7 +2,7 @@ class ConsoleTypeBox : ZilchComponent {
     
     var CurrentIn : String = "";
     
-    var Last : String = "";
+    var History : Array[String];
     
     var Selected : Boolean = false;
     
@@ -13,9 +13,13 @@ class ConsoleTypeBox : ZilchComponent {
     [Dependency]
     var Reactive : Reactive;
     
+    var HistoryIndex : Integer = -1;
+    
     function Initialize(init : CogInitializer) {
+        this.History = Array[String]();
+        this.History.Add("");
         this.Text = this.Owner.FindChildByName("Text");
-        this.Text.SpriteText.Color = Real4(1,0,0,1);
+        this.Text.SpriteText.Color = Real4(1,1,1,1);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(Zero.Keyboard, Events.TextTyped, this.OnTextTyped);
         Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
@@ -35,15 +39,31 @@ class ConsoleTypeBox : ZilchComponent {
             if(this.CurrentIn.Count > 0)
                 this.CurrentIn = this.CurrentIn.SubStringFromRuneIndices(0, this.CurrentIn.Count-1);
         } else if(event.Key == Keys.Enter) {
-            if(this.CurrentIn.Count != 0 && String.FromChar(this.CurrentIn.Get(0)) == "/")
+            if(this.CurrentIn.Count != 0 && String.FromChar(this.CurrentIn.Get(0)) == "/") {
                 Commands.CheckForCommands(this.CurrentIn);
-            else
-                Utilities.ConsoleSend(this.CurrentIn, Real4(1,0,0,1));
-            this.Last = this.CurrentIn;
+                if(this.History[0] != this.CurrentIn)
+                    this.History.Insert(0, this.CurrentIn);
+            }else
+                Utilities.ConsoleSend(this.CurrentIn, Real4(1,1,1,1));
             this.CurrentIn = "";
             this.Selected = false;
+            this.HistoryIndex = -1;
         } else if(event.Key == Keys.Up) {
-            this.CurrentIn = this.Last;
+            ++this.HistoryIndex;
+            
+            if(this.HistoryIndex > this.History.Count-1)
+                this.HistoryIndex = this.History.Count-1;
+            
+            this.CurrentIn = this.History[this.HistoryIndex];
+            
+        } else if(event.Key == Keys.Down) {
+            
+            --this.HistoryIndex;
+            
+            if(this.HistoryIndex < 0)
+                this.HistoryIndex = 0;
+            
+            this.CurrentIn = this.History[this.HistoryIndex];
         }
     }
 
@@ -51,7 +71,7 @@ class ConsoleTypeBox : ZilchComponent {
         
         if(this.Selected && this.Active){
             var key = String.FromChar(event.Character);
-            if(this.IsRenderable(event.Character) && this.Text.SpriteText.MeasureGivenText("`this.CurrentIn``key`").X <= (this.Owner.Area.Size.X - 0.125))
+            if(this.IsRenderable(event.Character) && this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn``key`").X <= (this.Owner.Area.Size.X - 0.125))
                 this.CurrentIn = "`this.CurrentIn``key`";
         }
     }
@@ -63,14 +83,14 @@ class ConsoleTypeBox : ZilchComponent {
         this.Owner.Sprite.Visible = this.Active;
         
         this.Text.SpriteText.Visible = this.Active;
-        this.Text.SpriteText.Text = this.CurrentIn;
+        this.Text.SpriteText.Text = ":>`this.CurrentIn`";
         
         if(this.Selected && this.Active) {
             this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 1);
             GlobalVariables.PauseMenu.MenuVisibilityController.Vis = true;
             GlobalVariables.GameSpace.TimeSpace.Paused = true;
         } else {
-            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 0.46);
+            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 0.77);
         }
         
         if(!this.Active && this.Selected)

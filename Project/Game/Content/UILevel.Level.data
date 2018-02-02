@@ -127,7 +127,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.50435877, 3.89333916, 50],
+			Vec3 Translation = [-5.19734001, -4.80960941, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -139,7 +139,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 7.33859539,
+			float Size = 2.21034193,
 		},
 		EditorCameraController = 
 		{
@@ -147,7 +147,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.50435877, 3.89333916, -2.4060293e-07],
+			Vec3 LookTarget = [-5.19734001, -4.80960941, -2.27182809e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -321,11 +321,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.5, 0.5, 0.5, 0.459999979],
+			Vec4 Color = [0.339999974, 0.33829996, 0.33829996, 0.774999976],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5586f579ca73ecc2:SquareBordered",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -355,7 +355,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [7.42427444, -1.75, 0],
+					Vec3 Translation = [1.5, -2, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -365,11 +365,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.501960814, 0.501960814, 0.501960814, 0.460000008],
+					Vec4 Color = [0.34117648, 0.337254912, 0.337254912, 0.769999981],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5586f579ca73ecc2:SquareBordered",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -379,8 +379,8 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [11.8578405, 0.5],
-					Location Origin = Center,
+					Vec2 Size = [11.8578405, 0.25],
+					Location Origin = BottomLeft,
 				},
 				ConsoleTypeBox = 
 				{
@@ -404,7 +404,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-5.875, 0.1875, 0],
+							Vec3 Translation = [0.0625, 0.21875, 0],
 							Vec3 Scale = [1, 1, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -419,10 +419,10 @@ Level =
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 150,
+							uint FontSize = 10,
 							string Text = "",
 							TextAlign Align = Left,
-							float PixelsPerUnit = 512,
+							float PixelsPerUnit = 64,
 							bool Smoothing = true,
 						},
 					},

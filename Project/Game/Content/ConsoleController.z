@@ -2,7 +2,7 @@ class ConsoleController : ZilchComponent {
     
     var Text : Array[Cog];
     
-    var MaxMsg : Integer = 20;
+    var MaxMsg : Integer = 21;
     
     function Initialize(init : CogInitializer) {
         GlobalVariables.Console = this.Owner;

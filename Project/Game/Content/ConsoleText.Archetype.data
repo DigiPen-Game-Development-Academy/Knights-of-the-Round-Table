@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-1.375, 1.875, 0.100000001],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -29,10 +29,10 @@ Cog =
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 		string FontName = "4e7bac697bec55c5:Verdana",
-		uint FontSize = 115,
+		uint FontSize = 10,
 		string Text = "Sprite Text...",
 		TextAlign Align = Left,
-		float PixelsPerUnit = 512,
+		float PixelsPerUnit = 64,
 		bool Smoothing = true,
 	},
 },

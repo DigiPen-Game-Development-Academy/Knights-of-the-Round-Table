@@ -68,7 +68,7 @@ class Commands {
     
     [Static]
     function Invalad (vals : Array[String], cmd : String) {
-        Utilities.ConsoleSend("ERROR: No Sutch  Command: `cmd`", Real4(1, 1, 0, 1));
+        Utilities.ConsoleSend("ERROR: No Sutch Command: `cmd`", Real4(1, 1, 0, 1));
     }
     
     
