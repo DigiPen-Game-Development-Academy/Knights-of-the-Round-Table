@@ -15,7 +15,10 @@ class ConsoleTypeBox : ZilchComponent {
     
     var HistoryIndex : Integer = -1;
     
+    var InitialPos : Real3;
+    
     function Initialize(init : CogInitializer) {
+        this.InitialPos = this.Owner.Parent.Transform.Translation;
         this.History = Array[String]();
         this.History.Add("");
         this.Text = this.Owner.FindChildByName("Text");
@@ -82,15 +85,21 @@ class ConsoleTypeBox : ZilchComponent {
             this.Active = !this.Active;
         this.Owner.Sprite.Visible = this.Active;
         
+        if(this.Active) {
+            this.Owner.Parent.Transform.Translation = this.InitialPos;
+        } else {
+            this.Owner.Parent.Transform.Translation = this.InitialPos - Real3(0,this.Owner.Area.Size.Y,0);
+        }
+        
         this.Text.SpriteText.Visible = this.Active;
         this.Text.SpriteText.Text = ":>`this.CurrentIn`";
         
         if(this.Selected && this.Active) {
-            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 1);
+            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 0.95);
             GlobalVariables.PauseMenu.MenuVisibilityController.Vis = true;
             GlobalVariables.GameSpace.TimeSpace.Paused = true;
         } else {
-            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 0.83);
+            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 0.75);
         }
         
         if(!this.Active && this.Selected)
