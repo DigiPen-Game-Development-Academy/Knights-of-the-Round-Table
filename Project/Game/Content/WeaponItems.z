@@ -17,16 +17,27 @@ class Potato : Item {
         lore.Add("a generic frozen potato");
         lore.Add("ye olde potat");
         lore.Add("the irish dream");
-        lore.Add("the United states population consumes 1.5 billion pounds of potatoes per year");
+        lore.Add("the United states population consumes 1.5 billion\npounds of potatoes per year");
         lore.Add("the potatoe's allegiance is with you");
-        lore.Add("legend says that four large lifeforms killed by this potato will award the user with a legendary weapon");
-        lore.Add("every year potatoes are gruesomely fried into fries, this cruelty needs to stop support the no potato left behind initiative");
+        lore.Add("legend says that four large lifeforms killed by\nthis potato will award the user with a legendary weapon");
+        lore.Add("every year potatoes are gruesomely fried into fries,\nthis cruelty needs to stop.\nsupport the no potato left behind initiative");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Potato");
+        var contacts = GlobalVariables.Player.BoxCollider.Contacts;
+        GlobalVariables.Player.PlayerMovment.Dir = Math.Normalize(GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - GlobalVariables.Player.Transform.WorldTranslation);
+        foreach (var contact in contacts) {
+            var dot = Math.Dot(Math.Normalize(contact.OtherObject.Transform.WorldTranslation - GlobalVariables.Player.Transform.WorldTranslation), Math.Normalize(GlobalVariables.Player.PlayerMovment.Dir));
+            var angle = Math.ACos(dot);
+            if(angle <= Math.ToRadians(45)) {
+                var toSend = Damage();
+                toSend.Damage = this.DamagePer;
+                contact.OtherObject.DispatchEvent(Events.Damage, toSend);
+            }
+            
+        }
     }
     
 }
@@ -50,7 +61,7 @@ class Boomerang : Item {
         var lore = Array[String]();
         lore.Add("kangaroo's worst fear");
         lore.Add("the weapon from down under");
-        lore.Add("i don't remember what this if for but it will come back to me"); 
+        lore.Add("i don't remember what this if\nfor but it will come back to me"); 
         lore.Add("these things are dangerous");
         lore.Add("if you can dodge a boomerang you can dodge a bullet");
         lore.Add("an only childs game of catch");
@@ -80,6 +91,7 @@ class Plasma_Pistol : Item {
         this.FireRate = 2; 
         this.AmmoPerShot = 2;
         this.RelodTime = 5;
+        this.Sound = SoundCue.Shot;
     }
     
     function ReturnLore () : String {
@@ -108,6 +120,8 @@ class Plasma_Pistol : Item {
             wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
         }
         
+        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        
     }
     
 }
@@ -132,9 +146,9 @@ class PlasmaSword : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("hi guys billy maiz here this laser sword cuts potatoes easillly");
+        lore.Add("hi guys billy maiz here this laser\nsword cuts potatoes easillly");
         lore.Add("slice and dice");
-        lore.Add("legend has it, this very blade was wielded by the legendary darth potater");
+        lore.Add("legend has it, this very blade was\nwielded by the legendary darth potater");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -163,7 +177,7 @@ class TerribleAssaultRifle : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("not very good assault rifle but it will get the job done");
+        lore.Add("not very good assault rifle but\nit will get the job done");
         lore.Add("terrible all around");
         lore.Add("why would you use this?");
         var rand = Random();
@@ -225,7 +239,7 @@ class Laserbeam : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("the 11 year old extra terrestreal's best friend");
+        lore.Add("the 11 year old extra terrestreal's\nbest friend");
         lore.Add("im a firin ma lasar baaaaaaaa");
         lore.Add("wow it  really shoots");
         var rand = Random();
@@ -258,7 +272,7 @@ class StunMissile : Item {
         var lore = Array[String]();
         lore.Add("its shocking how effective this is");
         lore.Add("where are you going to find ammo for this?");
-        lore.Add("only three percent of people are smart enough to shoot this if you can see this call a doctor");
+        lore.Add("only three percent of people are smart enough\nto shoot this if you can see this call a doctor");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -287,7 +301,7 @@ class SawLaser  : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("you foes will be vanquished as fast as your ammo");
+        lore.Add("you foes will be vanquished as\nfast as your ammo");
         lore.Add("use your ammo wisely");
         lore.Add("a weaponized saw");
         var rand = Random();
@@ -385,7 +399,7 @@ class Potatocannon  : Item {
         lore.Add("Irish food processor");
         lore.Add("you have read the weapon lore");
         lore.Add("helping hashbrown");
-        lore.Add("alien weapons all around and you chose this... good choice");
+        lore.Add("alien weapons all around and you chose this...\ngood choice");
         lore.Add("potatus prime");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];

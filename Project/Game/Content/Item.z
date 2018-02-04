@@ -42,6 +42,8 @@ class Item
     
     var AmmoPerShot : Integer = 1;
     
+    var Sound : SoundCue;
+    
     [Virtual]
     function Init () {
         Console.WriteLine("This Item Will Not Initialize Properly!");

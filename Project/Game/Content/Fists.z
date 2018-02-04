@@ -7,7 +7,7 @@ class Fists : Item
         this.Type = ItemType.Weapon;
         this.MagSize = -1;
         this.FireRate = 3;
-        this.DamagePer = 10;
+        this.DamagePer = 1;
     }
     
     function Use (radAngle : Real) {
@@ -20,6 +20,7 @@ class Fists : Item
                 var toSend = Damage();
                 toSend.Damage = this.DamagePer;
                 contact.OtherObject.DispatchEvent(Events.Damage, toSend);
+                return;
             }
             
         }
