@@ -1,0 +1,42 @@
+class MouseSlot : ZilchComponent {
+    
+    var Item : Item;
+    
+    var Ammount : SpriteText;
+    
+    function Initialize(init : CogInitializer) {
+        this.Ammount = this.Owner.FindChildByName("Ammount").SpriteText;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        this.Owner.Transform.WorldTranslation = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 10);
+        
+        if(!GlobalVariables.PauseMenu.MenuVisibilityController.Vis && this.Item != null) {
+            var gItem = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GroundItem, GlobalVariables.Player.Transform.WorldTranslation);
+            if(gItem != null) {
+                gItem.ItemPickup.SetItem(this.Item);
+                gItem.ItemPickup.Item.Ammount = this.Item.Ammount;
+            }
+            this.Item = null;
+        }
+        
+        if(this.Item == null) {
+            this.Owner.Sprite.Visible = false;
+            this.Ammount.Visible = false;
+        } else {
+            this.Owner.Sprite.SpriteSource = this.Item.Icon;
+            this.Owner.Sprite.Visible = true;
+            
+            if(this.Item.Stackable && this.Item.Ammount > 1) {
+                this.Ammount.Visible = true;
+                this.Ammount.Text = "`this.Item.Ammount`";
+            } else {
+                this.Ammount.Visible = false;
+            }
+            
+        }
+        
+    }
+}

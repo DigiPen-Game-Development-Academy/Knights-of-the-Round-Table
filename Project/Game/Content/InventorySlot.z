@@ -17,10 +17,13 @@ class InventorySlot : ZilchComponent
     
     var LorePanel : Cog;
     
+    var MSlot : Cog;
+    
     function Initialize(init : CogInitializer)
     {
         
         this.LorePanel = this.Owner.Parent.FindChildByName("LorePanel");
+        this.MSlot = this.Space.FindObjectByName("MouseSlot");
         
         this.InitialColor = this.Owner.Sprite.Color;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -34,9 +37,86 @@ class InventorySlot : ZilchComponent
     function OnMouseDown(event : ViewportMouseEvent)
     {
         
+        /*Dragging Around Inventory*/
+        if(!Zero.Keyboard.KeyIsDown(Keys.Shift)){
+            
+            if(!this.HotbarSlot) {
+                if(GlobalVariables.Items[this.Index] != null && this.MSlot.MouseSlot.Item != null && this.MSlot.MouseSlot.Item.Name == GlobalVariables.Items[this.Index].Name && this.MSlot.MouseSlot.Item.Stackable) {
+                    
+                    if(this.MSlot.MouseSlot.Item.Ammount + GlobalVariables.Items[this.Index].Ammount > this.MSlot.MouseSlot.Item.StackSize) {
+                        this.MSlot.MouseSlot.Item.Ammount -= this.MSlot.MouseSlot.Item.StackSize - GlobalVariables.Items[this.Index].Ammount;
+                        GlobalVariables.Items[this.Index].Ammount = GlobalVariables.Items[this.Index].StackSize;
+                    } else {
+                        GlobalVariables.Items[this.Index].Ammount += this.MSlot.MouseSlot.Item.Ammount;
+                        delete this.MSlot.MouseSlot.Item;
+                        this.MSlot.MouseSlot.Item = null;
+                    }
+                    
+                } else {
+                    var temp = GlobalVariables.Items[this.Index];
+                    GlobalVariables.Items[this.Index] = this.MSlot.MouseSlot.Item;
+                    this.MSlot.MouseSlot.Item = temp;
+                }
+            } else {
+                if(this.Owner.Name == "PrimarySlot" || this.Owner.Name == "SecondarySlot") {
+                    if(this.MSlot.MouseSlot.Item == null || this.MSlot.MouseSlot.Item.Type == ItemType.Weapon) {
+                        var temp = this.Item;
+                        this.Item = this.MSlot.MouseSlot.Item;
+                        this.MSlot.MouseSlot.Item = temp;
+                    }
+                } else {
+                    if(this.MSlot.MouseSlot.Item == null || this.MSlot.MouseSlot.Item.Type == ItemType.Utility) {
+                        var temp = this.Item;
+                        this.Item = this.MSlot.MouseSlot.Item;
+                        this.MSlot.MouseSlot.Item = temp;
+                    }
+                }
+                
+                if(this.Owner.Name == "PrimarySlot") {
+                    if(this.Item != null) {
+                        GlobalVariables.UseWeapon.Primary = this.Item;
+                    } else {
+                        GlobalVariables.UseWeapon.Primary = Fists();
+                        GlobalVariables.UseWeapon.Primary.Init();
+                    }
+                } else if (this.Owner.Name == "SecondarySlot") {
+                    if(this.Item != null) {
+                        GlobalVariables.UseWeapon.Secondary = this.Item;
+                    } else {
+                        GlobalVariables.UseWeapon.Secondary = Fists();
+                        GlobalVariables.UseWeapon.Secondary.Init();
+                    }
+                } else {
+                    if(this.Item != null) {
+                        GlobalVariables.UseWeapon.Utility = this.Item;
+                    } else {
+                        GlobalVariables.UseWeapon.Utility = null;
+                    }
+                }
+                
+            }
+            
+            return;
+        }
+        
         //dont do this if you are empty
         if((!this.HotbarSlot && GlobalVariables.Items[this.Index] == null) || (this.HotbarSlot && this.Item == null))
             return;
+        
+        
+        if(GlobalVariables.CInv.ChestInventory.Vis) {
+            if(this.HotbarSlot) {
+                if(GlobalVariables.AddCInventoryItem(this.Item)) {
+                    this.Item = null;
+                }
+            } else {
+                if(GlobalVariables.AddCInventoryItem(GlobalVariables.Items[this.Index])) {
+                    GlobalVariables.Items[this.Index] = null;
+                }
+            }
+            return;
+        }
+        
         /*Hotbar slots need to handel things differently*/
         if(this.HotbarSlot) {
             if(GlobalVariables.AddInventoryItem(this.Item)) {
@@ -130,17 +210,20 @@ class InventorySlot : ZilchComponent
             
             if(item.Type == ItemType.Weapon){
                 if(item.MagSize != -1)
-                    text = "`item.Name`\n`item.ReturnLore()`\nLeft click to equip to primary slot\nRight click to equip to secondary slot\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
+                    text = "`item.Name`\n`item.ReturnLore()`Mag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
                 else
-                    text = "`item.Name`\n`item.ReturnLore()`\nLeft click to equip to primary slot\nRight click to equip to secondary slot\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
+                    text = "`item.Name`\n`item.ReturnLore()`\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
             } else if(item.Type == ItemType.Utility){
                 if(item.MagSize != -1)
-                    text = "`item.Name`\n`item.ReturnLore()`\nClick to equip\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nAmmo Per Shot: `item.AmmoPerShot`";
+                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nAmmo Per Shot: `item.AmmoPerShot`";
                 else
-                    text = "`item.Name`\n`item.ReturnLore()`\nClick to equip\nFire Rate: `item.FireRate` per second";
-            } else if(item.Type == ItemType.Consumable)
-                text = "`item.Name`\n`item.ReturnLore()`\nClick to use";
-            else
+                    text = "`item.Name`\n`item.ReturnLore()`\nFire Rate: `item.FireRate` per second";
+            } else if(item.Type == ItemType.Consumable) {
+                if(GlobalVariables.CInv.ChestInventory.Vis)
+                    text = "`item.Name`\n`item.ReturnLore()`";
+                else
+                    text = "`item.Name`\n`item.ReturnLore()`\nShift click to use";
+            } else
                 text = "`item.Name`\n`item.ReturnLore()`";
             
             this.LorePanel.LorePanel.Text = text;

@@ -74,4 +74,34 @@ class GlobalVariables
         
     }
     
+    [Static]
+    function AddCInventoryItem (item : Item) : Boolean {
+        
+        for(var i = 0; i < GlobalVariables.ChestItems.Count; ++i){
+            
+            if(GlobalVariables.ChestItems[i] == null) {
+                GlobalVariables.ChestItems.Set(i, item);
+                if(item.Stackable && GlobalVariables.ChestItems[i].Ammount > item.StackSize) {
+                    item.Ammount -= item.StackSize;
+                    GlobalVariables.ChestItems[i].Ammount = item.StackSize;
+                } else {
+                    return true;
+                }
+            } else if ((item.Stackable && GlobalVariables.ChestItems[i].Name == item.Name)) {
+                if(GlobalVariables.ChestItems[i].Ammount + item.Ammount > item.StackSize){
+                    item.Ammount -= item.StackSize - GlobalVariables.ChestItems[i].Ammount;
+                    GlobalVariables.ChestItems[i].Ammount = item.StackSize;
+                }else{
+                    GlobalVariables.ChestItems[i].Ammount += item.Ammount;
+                    delete item;
+                    return true;
+                }
+            }
+            
+        }
+        
+        return false;
+        
+    }
+    
 }
