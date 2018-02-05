@@ -32,6 +32,7 @@ class Commands {
             Commands.Commands.Add(CMD("/potato",            Commands.Potato));
             Commands.Commands.Add(CMD("/suspicious",        Commands.Potato));
             Commands.Commands.Add(CMD("/suspicion",         Commands.Potato));
+            Commands.Commands.Add(CMD("/kit",               Commands.Kit));
             
         }
     }
@@ -72,6 +73,8 @@ class Commands {
         Utilities.ConsoleSend("/heal or /h", Real4(0, 1, 0, 1));
         Utilities.ConsoleSend("-what is this?-", Real4(0, 1, 0, 1));
         Utilities.ConsoleSend("/potato or /suspicious or /suspicion", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-Gives you stuff-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/kit", Real4(0, 1, 0, 1));
     }
     
     [Static]
@@ -135,6 +138,23 @@ class Commands {
         potato.Init();
         GlobalVariables.AddInventoryItem(potato);
         Utilities.ConsoleSend("What is this potato doing here?", Real4(1, 0, 0, 1));
+    }
+    
+    [Static]
+    function Kit (vals : Array[String]) {
+        GlobalVariables.AddInventoryItem(Utilities.ItemFromIDInit("Pistol"));
+        GlobalVariables.AddInventoryItem(Utilities.ItemFromIDInit("Potato"));
+        GlobalVariables.AddInventoryItem(Utilities.ItemFromIDInit("Radar"));
+        var ammo = Utilities.ItemFromIDInit("Ammo");
+        ammo.Ammount = ammo.StackSize;
+        GlobalVariables.AddInventoryItem(ammo);
+        ammo = Utilities.ItemFromIDInit("Ammo");
+        ammo.Ammount = ammo.StackSize;
+        GlobalVariables.AddInventoryItem(ammo);
+        ammo = Utilities.ItemFromIDInit("Ammo");
+        ammo.Ammount = ammo.StackSize;
+        GlobalVariables.AddInventoryItem(ammo);
+        Utilities.ConsoleSend("Here, Take this!", Real4(1, 0, 0, 1));
     }
     
     [Static]

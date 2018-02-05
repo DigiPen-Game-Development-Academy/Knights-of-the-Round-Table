@@ -151,5 +151,12 @@ class Utilities
         GlobalVariables.Console.ConsoleController.AddMSG(msg, color);
     }
     
+    [Static]
+    function ItemFromIDInit(id : String) : Item {
+        var item = Utilities.ItemFromID(id);
+        item.Init();
+        return item;
+    }
+    
   
 }

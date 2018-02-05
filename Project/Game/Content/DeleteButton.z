@@ -38,8 +38,9 @@ class DeleteButton : ZilchComponent {
         if(GlobalVariables.Items[this.Owner.Parent.InventorySlot.Index] == null)
             return;
         
-        var gItem = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GroundItem, GlobalVariables.Player.Transform.WorldTranslation);
+        var gItem = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GroundItem, GlobalVariables.Player.Transform.WorldTranslation + Random().Real3(0, 0.5));
         if(gItem != null) {
+            gItem.Transform.WorldTranslation = Real3(gItem.Transform.WorldTranslation.X, gItem.Transform.WorldTranslation.Y, 0);
             gItem.ItemPickup.SetItem(GlobalVariables.Items[this.Owner.Parent.InventorySlot.Index]);
             gItem.ItemPickup.Item.Ammount = GlobalVariables.Items[this.Owner.Parent.InventorySlot.Index].Ammount;
         }
