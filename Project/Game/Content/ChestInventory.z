@@ -7,6 +7,7 @@ class ChestInventory : ZilchComponent {
     var UtilitySlot : Cog;
     
     var InitalZ : Real;
+    var MSlot : Cog;
     
     var Vis : Boolean = false;
     
@@ -15,6 +16,10 @@ class ChestInventory : ZilchComponent {
         GlobalVariables.CInv = this.Owner;
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+        
+        this.MSlot = this.Space.FindObjectByName("MouseSlot");
         
         this.InitalZ = this.Owner.Transform.WorldTranslation.Z;
         this.Owner.Transform.WorldTranslation += Real3(0,0,100);
@@ -56,6 +61,14 @@ class ChestInventory : ZilchComponent {
         
         
         
+    }
+    
+    function OnMouseExit(event : ViewportMouseEvent) {
+        this.MSlot.MouseSlot.OverInventory = false;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        this.MSlot.MouseSlot.OverInventory = true;
     }
 
     function OnLogicUpdate(event : UpdateEvent) {

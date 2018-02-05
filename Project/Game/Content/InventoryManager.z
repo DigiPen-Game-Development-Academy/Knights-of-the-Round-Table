@@ -12,6 +12,7 @@ class InventoryManager : ZilchComponent
     var UtilitySlot : Cog;
     
     var InitalZ : Real;
+    var MSlot : Cog;
     
     function Initialize(init : CogInitializer)
     {
@@ -22,10 +23,13 @@ class InventoryManager : ZilchComponent
         this.Owner.Transform.WorldTranslation += Real3(0,0,100);
         
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
         
         this.PrimarySlot = this.Owner.FindChildByName("PrimarySlot");
         this.SecodarySlot = this.Owner.FindChildByName("SecondarySlot");
         this.UtilitySlot = this.Owner.FindChildByName("UntlitySlot");
+        this.MSlot = this.Space.FindObjectByName("MouseSlot");
         
         this.PrimarySlot.InventorySlot.HotbarSlot = true;
         this.SecodarySlot.InventorySlot.HotbarSlot = true;
@@ -72,6 +76,14 @@ class InventoryManager : ZilchComponent
         
         
         
+    }
+
+    function OnMouseExit(event : ViewportMouseEvent) {
+        this.MSlot.MouseSlot.OverInventory = false;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        this.MSlot.MouseSlot.OverInventory = true;
     }
 
     function OnLogicUpdate(event : UpdateEvent)

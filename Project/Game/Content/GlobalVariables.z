@@ -1,7 +1,7 @@
 //Author Brandon Wolenetz
 
-class GlobalVariables
-{
+class GlobalVariables {
+    
     [Static]
     var ShadowObjects : Array[Cog];
     
@@ -61,7 +61,7 @@ class GlobalVariables
                 if(GlobalVariables.Items[i].Ammount + item.Ammount > item.StackSize){
                     item.Ammount -= item.StackSize - GlobalVariables.Items[i].Ammount;
                     GlobalVariables.Items[i].Ammount = item.StackSize;
-                }else{
+                } else {
                     GlobalVariables.Items[i].Ammount += item.Ammount;
                     delete item;
                     return true;
@@ -91,7 +91,7 @@ class GlobalVariables
                 if(GlobalVariables.ChestItems[i].Ammount + item.Ammount > item.StackSize){
                     item.Ammount -= item.StackSize - GlobalVariables.ChestItems[i].Ammount;
                     GlobalVariables.ChestItems[i].Ammount = item.StackSize;
-                }else{
+                } else {
                     GlobalVariables.ChestItems[i].Ammount += item.Ammount;
                     delete item;
                     return true;

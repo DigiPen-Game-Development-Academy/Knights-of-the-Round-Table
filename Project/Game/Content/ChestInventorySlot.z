@@ -68,14 +68,16 @@ class ChestInventorySlot : ZilchComponent
         
     }
 
-    function OnMouseExit(event : ViewportMouseEvent)
-    {
+    function OnMouseExit(event : ViewportMouseEvent) {
         this.Owner.Sprite.Color = this.InitialColor;
         this.LorePanel.Sprite.Visible = false;
+        this.MSlot.MouseSlot.OverInventory = false;
     }
 
-    function OnMouseEnter(event : ViewportMouseEvent)
-    {
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        
+        this.MSlot.MouseSlot.OverInventory = true;
+        
         this.Owner.Sprite.Color = this.InitialColor + Real4(-0.3,-0.3,-0.3,0);
         
         if(GlobalVariables.ChestItems[this.Index] != null){

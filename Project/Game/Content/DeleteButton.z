@@ -2,9 +2,12 @@ class DeleteButton : ZilchComponent {
     
     var InitialColor : Real4;
     
+    var LorePanel : Cog;
+    
     function Initialize(init : CogInitializer) {
         
         this.InitialColor = this.Owner.Sprite.Color;
+        this.LorePanel = this.Owner.Parent.Parent.FindChildByName("LorePanel");
         
         Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
         Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
@@ -22,10 +25,13 @@ class DeleteButton : ZilchComponent {
     
     function OnMouseExit(event : ViewportMouseEvent) {
         this.Owner.Sprite.Color = this.InitialColor;
+        this.LorePanel.Sprite.Visible = false;
     }
 
     function OnMouseEnter(event : ViewportMouseEvent) {
         this.Owner.Sprite.Color = this.InitialColor + Real4(-0.3,0,0,0);
+        this.LorePanel.LorePanel.Text = "Drop `GlobalVariables.Items[this.Owner.Parent.InventorySlot.Index].Name`";
+        this.LorePanel.Sprite.Visible = true;
     }
 
     function OnMouseDown(event : ViewportMouseEvent) {

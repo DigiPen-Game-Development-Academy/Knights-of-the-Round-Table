@@ -4,9 +4,23 @@ class MouseSlot : ZilchComponent {
     
     var Ammount : SpriteText;
     
+    var OverInventory : Boolean = false;
+    
     function Initialize(init : CogInitializer) {
         this.Ammount = this.Owner.FindChildByName("Ammount").SpriteText;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftMouseDown);
+    }
+
+    function OnLeftMouseDown(event : ViewportMouseEvent) {
+        if(!this.OverInventory && this.Item != null) {
+            var gItem = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GroundItem, GlobalVariables.Player.Transform.WorldTranslation);
+            if(gItem != null) {
+                gItem.ItemPickup.SetItem(this.Item);
+                gItem.ItemPickup.Item.Ammount = this.Item.Ammount;
+            }
+            this.Item = null;
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
