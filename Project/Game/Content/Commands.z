@@ -40,6 +40,11 @@ class Commands {
             Commands.Commands.Add(CMD("/noclip",            Commands.NoClip));
             Commands.Commands.Add(CMD("/xray",              Commands.XRay));
             Commands.Commands.Add(CMD("/spawn",             Commands.Spawn));
+            Commands.Commands.Add(CMD("/invis",             Commands.Invisible));
+            Commands.Commands.Add(CMD("/invisible",         Commands.Invisible));
+            Commands.Commands.Add(CMD("/speed",             Commands.Speed));
+            Commands.Commands.Add(CMD("/zoom",              Commands.Zoom));
+            Commands.Commands.Add(CMD("/killall",           Commands.KillEnemies));
             
         }
     }
@@ -66,7 +71,7 @@ class Commands {
     
     [Static]
     function Help (vals : Array[String]) {
-        if(vals == null || vals.Count == 0) {
+        if(vals == null || vals.Count == 0 || Integer.Parse(vals[0]) == 0) {
             Commands.Clear(null);
             Utilities.ConsoleSend("---Help---", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("-lists commands in pages-", Real4(0, 1, 0, 1));
@@ -79,7 +84,7 @@ class Commands {
             Utilities.ConsoleSend("-toggles pathfinding debug-", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("/pathdebug", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("-gives item-", Real4(0, 1, 0, 1));
-            Utilities.ConsoleSend("/give <item> <ammount>", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/give <item> <ammount>(Optional)", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("-clear console-", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("/clear or /cls", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("-heal to 100%-", Real4(0, 1, 0, 1));
@@ -98,7 +103,15 @@ class Commands {
             Commands.Clear(null);
             Utilities.ConsoleSend("---Commands---", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("-spawn enemy-", Real4(0, 1, 0, 1));
-            Utilities.ConsoleSend("/spawn <EnemyID>", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/spawn <EnemyID> <Ammount>(Optional)", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-makes enemies unable to see you-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/invis or /invisible", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-sets your movement speed-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/speed <speed>", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-sets your camera zoom-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/zoom <zoom>", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-kills all enemies-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/killall", Real4(0, 1, 0, 1));
         }
     }
     
@@ -224,16 +237,61 @@ class Commands {
     
     [Static]
     function Spawn (vals : Array[String]) {
+        var count = 1;
+        if(vals != null && vals.Count >= 2 && Integer.Parse(vals[1]) > 0) {
+            count = Integer.Parse(vals[1]);
+        }
         if(vals == null || vals.Count == 0) {
-            Utilities.ConsoleSend("INVALID PARAMETERS", Real4(1, 0, 0, 1));
+            Utilities.ConsoleSend("INVALID PARAMETERS, use /spawn <EnemyID>", Real4(1, 1, 0, 1));
             return;
         } else if(vals[0] == "Rusher") {
-            GlobalVariables.GameSpace.CreateAtPosition(Archetype.Enemy_Rusher, GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0));
-            Utilities.ConsoleSend("Created Rusher", Real4(1, 0, 0, 1));
+            for(var i = 0; i < count; ++i) {
+                GlobalVariables.GameSpace.CreateAtPosition(Archetype.Enemy_Rusher, GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition + Random().Real2(1,1), 0));
+                Utilities.ConsoleSend("Created Rusher", Real4(1, 0, 0, 1));
+            }
         } else {
             Utilities.ConsoleSend("INVALID ID: `vals[0]`", Real4(1, 0, 0, 1));
             return;
         }
+    }
+    
+    [Static]
+    function Invisible (vals : Array[String]) {
+        
+        GlobalVariables.Invis = !GlobalVariables.Invis;
+        
+        if(GlobalVariables.Invis) {
+            Utilities.ConsoleSend("Enemies cannot see you!", Real4(1, 0, 0, 1));
+        } else {
+            Utilities.ConsoleSend("Enemies can see you, Watch Out!", Real4(1, 0, 0, 1));
+        }
+        
+    }
+    
+    [Static]
+    function Speed (vals : Array[String]) {
+        if(vals == null || vals.Count == 0) {
+            Utilities.ConsoleSend("INVALID PARAMETERS, use /speed <speed>", Real4(1, 1, 0, 1));
+            return;
+        }
+        GlobalVariables.Player.PlayerMovment.MoveSpeed = Integer.Parse(vals[0]);
+        Utilities.ConsoleSend("Movement speed set to: `Integer.Parse(vals[0])`", Real4(1, 0, 0, 1));
+    }
+    
+    [Static]
+    function Zoom (vals : Array[String]) {
+        if(vals == null || vals.Count == 0) {
+            Utilities.ConsoleSend("INVALID PARAMETERS, use /zoom <zoom>", Real4(1, 1, 0, 1));
+            return;
+        }
+        GlobalVariables.GameSpace.LevelSettings.CameraViewport.Camera.Camera.Size = Integer.Parse(vals[0]);
+        Utilities.ConsoleSend("Camera zoom set to: `Integer.Parse(vals[0])`", Real4(1, 0, 0, 1));
+    }
+    
+    [Static]
+    function KillEnemies (vals : Array[String]) {
+        GlobalVariables.GameSpace.GameSession.DispatchEvent(Events.NoHealth, NoHealth());
+        Utilities.ConsoleSend("Killed all enemies", Real4(1, 0, 0, 1));
     }
     
     [Static]

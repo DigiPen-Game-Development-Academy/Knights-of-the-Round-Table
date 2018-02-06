@@ -31,14 +31,14 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnNotice(event : Notice) {
-        if(Math.Distance(event.Pos, this.Owner.Transform.WorldTranslation) <= 10) {
+        if(Math.Distance(event.Pos, this.Owner.Transform.WorldTranslation) <= 10 && !GlobalVariables.Invis) {
             this.PlayerSpotted = true;
             this.Suspitious = false;
         }
     }
 
     function OnCollisionStarted(event : CollisionEvent) {
-        if(event.OtherObject == GlobalVariables.Player) {
+        if(event.OtherObject == GlobalVariables.Player && !GlobalVariables.Invis) {
             this.PlayerSpotted = true;
             this.Suspitious = false;
             this.Timer = this.WaitTime;
@@ -115,7 +115,7 @@ class EnemyAI : ZilchComponent {
         
         var angle = Math.ACos(dot);
         
-        if(!this.PlayerSpotted && angle <= Math.ToRadians(this.ViewAngle) && this.Owner.Visibility.InSight && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) <= this.ViewRange) {
+        if(!GlobalVariables.Invis && !this.PlayerSpotted && angle <= Math.ToRadians(this.ViewAngle) && this.Owner.Visibility.InSight && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) <= this.ViewRange) {
             
             this.Suspitious = false;
             this.PlayerSpotted = true;

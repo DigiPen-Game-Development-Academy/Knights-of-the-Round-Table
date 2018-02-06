@@ -5,6 +5,9 @@ class GlobalVariables {
     [Static]
     var ShadowObjects : Array[Cog];
     
+    [Static]
+    var Invis : Boolean = false;
+    
     [Serialized][Static]
     var Items : Array[Item];
     
