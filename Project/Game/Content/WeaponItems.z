@@ -87,9 +87,9 @@ class Plasma_Pistol : Item {
         this.Stackable = false;
         this.MagSize = 15;
         this.Name = "Plasma pistol";
-        this.DamagePer = 15;
-        this.FireRate = 2; 
-        this.AmmoPerShot = 2;
+        this.DamagePer = 25;
+        this.FireRate = 10; 
+        this.AmmoPerShot = 3;
         this.RelodTime = 5;
         this.Sound = SoundCue.Shot;
     }
