@@ -16,7 +16,6 @@ class CreateUI : ZilchComponent
 
     function OnLevelStarted(event : GameEvent)
     {
-        
         if(event.LevelName != this.UILevel.Name) {
             
             if(this.GameSession.FindSpaceByName("UI") != null){

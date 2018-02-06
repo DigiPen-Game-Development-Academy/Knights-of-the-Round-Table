@@ -1,0 +1,10 @@
+class CursorController : ZilchComponent {
+    function Initialize(init : CogInitializer){
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        Zero.Mouse.Cursor = Cursor.Invisible;
+        this.Owner.Transform.WorldTranslation = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 10);
+    }
+}
