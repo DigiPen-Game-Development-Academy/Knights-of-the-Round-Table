@@ -14,9 +14,25 @@ class ItemID {
 
 class Utilities
 {
-    
+    /*Enemy Auto-Complete Array*/
     [Static]
-    var Ids : Array[ItemID];
+    var EnemiesIDS : Array[String] = Array[String](){
+        "Rusher"
+    };
+    
+    /*Item Auto-Compete Array*/
+    [Static]
+    var Ids : Array[ItemID] = Array[ItemID](){
+        ItemID("Health_Pack_(T1)"),
+        ItemID("Health_Pack_(T2)"),
+        ItemID("Health_Pack_(T3)"),
+        ItemID("Ammo"),
+        ItemID("Potato"),
+        ItemID("Test"),
+        ItemID("Test2"),
+        ItemID("Pistol"),
+        ItemID("Radar")
+    };
     
     [Static]
     function Raycast (start : Real3, direction : Real3, physSpace : PhysicsSpace, range : Real) : CastResult {
@@ -102,10 +118,8 @@ class Utilities
     
     [Static]
     function ItemFromID(id : String) : Item {
-        Utilities.IDInit();
-        
         /*to add an item to the game, add another if statment for that item checking if di == <the_items_id_no_spaces>, return The_Items_Class();*/
-        
+        /*Also don't forget to add the item's id to the auto-complete array at the top of the script*/
         if(id == "Health_Pack_(T1)")
             return HealthPackT1();
         else if(id == "Health_Pack_(T2)")
@@ -128,24 +142,6 @@ class Utilities
             return null;
         
     }
-    
-    [Static]
-    function IDInit() {
-        /*Also don't forget to add the item's id to the auto-complete array*/
-        if(Utilities.Ids == null) {
-            Utilities.Ids = Array[ItemID]();
-            Utilities.Ids.Add(ItemID("Health_Pack_(T1)"));
-            Utilities.Ids.Add(ItemID("Health_Pack_(T2)"));
-            Utilities.Ids.Add(ItemID("Health_Pack_(T3)"));
-            Utilities.Ids.Add(ItemID("Ammo"));
-            Utilities.Ids.Add(ItemID("Potato"));
-            Utilities.Ids.Add(ItemID("Test"));
-            Utilities.Ids.Add(ItemID("Test2"));
-            Utilities.Ids.Add(ItemID("Pistol"));
-            Utilities.Ids.Add(ItemID("Radar"));
-        }
-    }
-    
     [Static]
     function ConsoleSend(msg : String, color : Real4) {
         GlobalVariables.Console.ConsoleController.AddMSG(msg, color);

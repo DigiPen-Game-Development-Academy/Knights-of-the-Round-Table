@@ -22,7 +22,6 @@ class ConsoleTypeBox : ZilchComponent {
     var ACIndex : Integer = -1;
     
     function Initialize(init : CogInitializer) {
-        Utilities.IDInit();
         Commands.Init();
         this.InitialPos = this.Owner.Parent.Transform.Translation;
         this.History = Array[String]();
@@ -170,6 +169,13 @@ class ConsoleTypeBox : ZilchComponent {
                 }
             }
             
+        } else if(str.StartsWith("/spawn")) {
+            foreach(var id in Utilities.EnemiesIDS) {
+                var nCmd = "/spawn `id`";
+                if(nCmd.StartsWith(str)) {
+                    strs.Add(nCmd);
+                }
+            }
         } else {
             foreach(var cmd in Commands.Commands) {
                 if(cmd.Cmd.StartsWith(str)) {

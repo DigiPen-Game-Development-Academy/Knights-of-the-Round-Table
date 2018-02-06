@@ -39,6 +39,7 @@ class Commands {
             Commands.Commands.Add(CMD("/ammo",              Commands.Ammo));
             Commands.Commands.Add(CMD("/noclip",            Commands.NoClip));
             Commands.Commands.Add(CMD("/xray",              Commands.XRay));
+            Commands.Commands.Add(CMD("/spawn",             Commands.Spawn));
             
         }
     }
@@ -65,28 +66,40 @@ class Commands {
     
     [Static]
     function Help (vals : Array[String]) {
-        Commands.Clear(null);
-        Utilities.ConsoleSend("---Commands---", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-toggles debug lines-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/debug", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-toggles pathfinding debug-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/pathdebug", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-gives item-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/give <item> <ammount>", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-clear console-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/clear or /cls", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-heal to 100%-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/heal or /h", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-what is this?-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/potato or /suspicious or /suspicion", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-Gives you stuff-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/kit", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-Gives you ammo-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/ammo", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-Toggles player collision-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/noclip", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("-Lets you see through walls-", Real4(0, 1, 0, 1));
-        Utilities.ConsoleSend("/xray", Real4(0, 1, 0, 1));
+        if(vals == null || vals.Count == 0) {
+            Commands.Clear(null);
+            Utilities.ConsoleSend("---Help---", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-lists commands in pages-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/help <Page> or /? <Page>", Real4(0, 1, 0, 1));
+        } else if (Integer.Parse(vals[0]) == 1) {
+            Commands.Clear(null);
+            Utilities.ConsoleSend("---Commands---", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-toggles debug lines-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/debug", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-toggles pathfinding debug-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/pathdebug", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-gives item-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/give <item> <ammount>", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-clear console-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/clear or /cls", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-heal to 100%-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/heal or /h", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-what is this?-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/potato or /suspicious or /suspicion", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-Gives you stuff-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/kit", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-Gives you ammo-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/ammo", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-Toggles player collision-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/noclip", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-Lets you see through walls-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/xray", Real4(0, 1, 0, 1));
+        } else if (Integer.Parse(vals[0]) == 2) {
+            Commands.Clear(null);
+            Utilities.ConsoleSend("---Commands---", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-spawn enemy-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/spawn <EnemyID>", Real4(0, 1, 0, 1));
+        }
     }
     
     [Static]
@@ -206,6 +219,20 @@ class Commands {
             toSend.Timer = 0;
             GlobalVariables.GameSpace.DispatchEvent(Events.UseRadar, toSend);
             Utilities.ConsoleSend("XRAY OFF", Real4(1, 0, 0, 1));
+        }
+    }
+    
+    [Static]
+    function Spawn (vals : Array[String]) {
+        if(vals == null || vals.Count == 0) {
+            Utilities.ConsoleSend("INVALID PARAMETERS", Real4(1, 0, 0, 1));
+            return;
+        } else if(vals[0] == "Rusher") {
+            GlobalVariables.GameSpace.CreateAtPosition(Archetype.Enemy_Rusher, GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0));
+            Utilities.ConsoleSend("Created Rusher", Real4(1, 0, 0, 1));
+        } else {
+            Utilities.ConsoleSend("INVALID ID: `vals[0]`", Real4(1, 0, 0, 1));
+            return;
         }
     }
     
