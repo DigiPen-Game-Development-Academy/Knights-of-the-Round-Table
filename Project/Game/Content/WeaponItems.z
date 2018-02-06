@@ -92,6 +92,7 @@ class Plasma_Pistol : Item {
         this.AmmoPerShot = 3;
         this.RelodTime = 5;
         this.Sound = SoundCue.Shot;
+        this.SoundDistance = 10;
     }
     
     function ReturnLore () : String {
@@ -119,6 +120,8 @@ class Plasma_Pistol : Item {
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
         }
+        
+        Utilities.SendSound(this.SoundDistance);
         
         GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
         

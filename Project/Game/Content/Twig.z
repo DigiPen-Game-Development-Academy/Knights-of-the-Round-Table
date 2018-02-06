@@ -13,22 +13,7 @@ class Twig : ZilchComponent {
     function OnCollisionStarted(event : CollisionEvent) {
         if(event.OtherObject == GlobalVariables.Player && !this.Stepped) {
             this.Stepped = true;
-            var toSend = InSound();
-            toSend.Source = this.Owner.Transform.WorldTranslation;
-            var filter = CastFilter();
-            filter.IgnoreStatic = true;
-            filter.IgnoreGhost = true;
-            var result = this.Space.PhysicsSpace.CastSphereResults(this.Owner.Transform.WorldTranslation, this.Radius, 20, filter);
-            foreach(var item in result) {
-                
-                item.ObjectHit.DispatchEvent(Events.InSound, toSend);
-                
-            }
-            
-            if(GlobalVariables.DebugLinesActive) {
-                Utilities.DrawCircle(this.Owner.Transform.WorldTranslation, this.Radius, false, Real4(1,0,0,1));
-            }
-            
+            Utilities.SendSound(this.Radius, this.Owner.Transform.WorldTranslation);
         }
     }
 

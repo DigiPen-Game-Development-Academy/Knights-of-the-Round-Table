@@ -33,3 +33,8 @@ class UseRadar : ZilchEvent {
     var Timer : Real;
     sends UseRadar : UseRadar;
 }
+
+class Notice : ZilchEvent {
+    var Pos : Real3;
+    sends Notice : Notice;
+}

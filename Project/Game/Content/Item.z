@@ -44,6 +44,8 @@ class Item {
     
     var Sound : SoundCue;
     
+    var SoundDistance : Real = 10;
+    
     [Virtual]
     function Init () {
         Console.WriteLine("This Item Will Not Initialize Properly!");

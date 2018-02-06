@@ -35,6 +35,27 @@ class Utilities
     };
     
     [Static]
+    function SendSound (dist : Real, pos : Real3) {
+        var toSend = InSound();
+        toSend.Source = pos;
+        var filter = CastFilter();
+        filter.IgnoreStatic = true;
+        filter.IgnoreGhost = true;
+        var result = GlobalVariables.GameSpace.PhysicsSpace.CastSphereResults(pos, dist, 20, filter);
+        foreach(var item in result) {
+            item.ObjectHit.DispatchEvent(Events.InSound, toSend);
+        }
+        if(GlobalVariables.DebugLinesActive) {
+            Utilities.DrawCircle(pos, dist, false, Real4(1,0,0,1));
+        }
+    }
+    
+     [Static]
+    function SendSound (dist : Real) {
+        Utilities.SendSound(dist, GlobalVariables.Player.Transform.WorldTranslation);
+    }
+    
+    [Static]
     function Raycast (start : Real3, direction : Real3, physSpace : PhysicsSpace, range : Real) : CastResult {
         
         var ray = Ray();

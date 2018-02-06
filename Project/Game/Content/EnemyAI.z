@@ -27,6 +27,14 @@ class EnemyAI : ZilchComponent {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.InSound, this.OnInSound);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Space, Events.Notice, this.OnNotice);
+    }
+
+    function OnNotice(event : Notice) {
+        if(Math.Distance(event.Pos, this.Owner.Transform.WorldTranslation) <= 10) {
+            this.PlayerSpotted = true;
+            this.Suspitious = false;
+        }
     }
 
     function OnCollisionStarted(event : CollisionEvent) {
@@ -69,6 +77,9 @@ class EnemyAI : ZilchComponent {
             } else {
                 this.Timer -= event.Dt;
                 if(this.Timer <= 0) {
+                    var toSend = Notice();
+                    toSend.Pos = this.Owner.Transform.WorldTranslation;
+                    this.Space.DispatchEvent(Events.Notice, toSend);
                     this.Owner.RigidBody.Velocity *= this.ChaseSpeedMultiplier;
                     this.PathFind.SetTarget(GlobalVariables.Player.Transform.WorldTranslation);
                 } else {
