@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "Player",
-		uint64 ResourceId = 5a019e04c7cf6461,
+		string Name = "Manual_Chest",
+		uint64 ResourceId = 5a0198d5f1c252dc,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,
@@ -12,7 +12,7 @@ DataContent =
 	{
 		Array Tags = 
 		[
-			"Player",
+			"Chest",
 		],
 	},
 },
