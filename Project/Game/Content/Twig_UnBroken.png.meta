@@ -5,11 +5,12 @@ ImageContent =
 		Array Tags = 
 		[
 			"TileMap",
+			"Twig",
 		],
 	},
 	SpriteSourceBuilder = 
 	{
-		string Name = "TileMapPrime010",
+		string Name = "Twig_UnBroken",
 		uint64 ResourceId = 5a081a5e953626fc,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 32,
