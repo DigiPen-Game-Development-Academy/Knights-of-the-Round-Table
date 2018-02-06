@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Player",
 	},
+	Archetyped = 
+	{
+		string Name = "5a019e04c7cf6461:Player",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-37.2107773, 36.5524254, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -72,7 +76,7 @@ Cog =
 	},
 	PlayerMovment = 
 	{
-		float MoveSpeed = 200,
+		float MoveSpeed = 4,
 		float SprintMultiplier = 2,
 	},
 	UseWeapon = 
