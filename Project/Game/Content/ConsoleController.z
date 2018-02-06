@@ -40,7 +40,7 @@ class ConsoleController : ZilchComponent {
                 this.Text[i].Transform.Translation = Real3(this.Text[i].Transform.Translation.X, (this.Text[i+1].Transform.Translation.Y + this.Text[i].SpriteText.MeasureText().Y), 0.1);
             }
             
-            if(this.Text.Count > this.MaxMsg ||  this.Text[0].Transform.Translation.Y - this.Text[0].SpriteText.MeasureText().Y > this.Owner.Area.Size.Y + 0.125) {
+            while(this.Text.Count > this.MaxMsg || this.Text[0].Transform.Translation.Y > this.Owner.Area.Size.Y + 0.125) {
                 this.Text[0].Destroy();
                 this.Text.RemoveAt(0);
             }

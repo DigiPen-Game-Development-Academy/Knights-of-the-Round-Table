@@ -81,8 +81,8 @@ class Plasma_Pistol : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Icon_Weapon_Pistol;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Pistol;
         this.WakeSprite = Archetype.Wake;
         this.Stackable = false;
         this.MagSize = 15;

@@ -19,6 +19,8 @@ class Visibility : ZilchComponent {
         
         var filter = CastFilter();
         var vel = GlobalVariables.Player.RigidBody.Velocity;
+        var ghost = GlobalVariables.Player.BoxCollider.Ghost;
+        GlobalVariables.Player.BoxCollider.Ghost = false;
         GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Static;
         filter.IgnoreDynamic = true;
         filter.IgnoreGhost = true;
@@ -33,12 +35,14 @@ class Visibility : ZilchComponent {
             this.InSight = false;
         }
         
-        if(this.Timer > 0) {
-            this.Timer -= event.Dt;
+        if(this.Timer > 0 || this.Timer == Real.PositiveMax) {
+            if(this.Timer != Real.PositiveMax)
+                this.Timer -= event.Dt;
             this.Owner.Sprite.Visible = true;
         }
         
         GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
         GlobalVariables.Player.RigidBody.Velocity = vel;
+        GlobalVariables.Player.BoxCollider.Ghost = ghost;
     }
 }

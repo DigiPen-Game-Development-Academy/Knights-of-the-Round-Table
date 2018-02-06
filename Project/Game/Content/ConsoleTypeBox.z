@@ -100,7 +100,7 @@ class ConsoleTypeBox : ZilchComponent {
                 return;
             if(this.ACIndex == -1) {
                 var str = "`ac[0]`";
-                for(var i = 1; i < ac.Count-1; ++i) {
+                for(var i = 1; i < ac.Count; ++i) {
                     str = "`str`, `ac[i]`";
                 }
                 Utilities.ConsoleSend("Auto-Complete: `str`", Real4(0,1,0,1));

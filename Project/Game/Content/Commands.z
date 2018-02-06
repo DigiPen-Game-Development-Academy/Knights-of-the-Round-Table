@@ -15,6 +15,9 @@ class Commands {
     var Commands : Array[CMD];
     
     [Static]
+    var Xray : Boolean = false;
+    
+    [Static]
     function Init () {
         /*initilize array of commands*/
         if(Commands.Commands == null) {
@@ -33,6 +36,9 @@ class Commands {
             Commands.Commands.Add(CMD("/suspicious",        Commands.Potato));
             Commands.Commands.Add(CMD("/suspicion",         Commands.Potato));
             Commands.Commands.Add(CMD("/kit",               Commands.Kit));
+            Commands.Commands.Add(CMD("/ammo",              Commands.Ammo));
+            Commands.Commands.Add(CMD("/noclip",            Commands.NoClip));
+            Commands.Commands.Add(CMD("/xray",              Commands.XRay));
             
         }
     }
@@ -75,6 +81,12 @@ class Commands {
         Utilities.ConsoleSend("/potato or /suspicious or /suspicion", Real4(0, 1, 0, 1));
         Utilities.ConsoleSend("-Gives you stuff-", Real4(0, 1, 0, 1));
         Utilities.ConsoleSend("/kit", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-Gives you ammo-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/ammo", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-Toggles player collision-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/noclip", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("-Lets you see through walls-", Real4(0, 1, 0, 1));
+        Utilities.ConsoleSend("/xray", Real4(0, 1, 0, 1));
     }
     
     [Static]
@@ -155,6 +167,46 @@ class Commands {
         ammo.Ammount = ammo.StackSize;
         GlobalVariables.AddInventoryItem(ammo);
         Utilities.ConsoleSend("Here, Take this!", Real4(1, 0, 0, 1));
+    }
+    
+    [Static]
+    function Ammo (vals : Array[String]) {
+        var ammo = Utilities.ItemFromIDInit("Ammo");
+        ammo.Ammount = ammo.StackSize;
+        GlobalVariables.AddInventoryItem(ammo);
+        ammo = Utilities.ItemFromIDInit("Ammo");
+        ammo.Ammount = ammo.StackSize;
+        GlobalVariables.AddInventoryItem(ammo);
+        ammo = Utilities.ItemFromIDInit("Ammo");
+        ammo.Ammount = ammo.StackSize;
+        GlobalVariables.AddInventoryItem(ammo);
+        Utilities.ConsoleSend("Ammo Everywhere!", Real4(1, 0, 0, 1));
+    }
+    
+    [Static]
+    function NoClip (vals : Array[String]) {
+        GlobalVariables.Player.BoxCollider.Ghost = ! GlobalVariables.Player.BoxCollider.Ghost;
+        if(GlobalVariables.Player.BoxCollider.Ghost) {
+            Utilities.ConsoleSend("You are now a ghost, WOOooOOooO", Real4(1, 0, 0, 1));
+        } else {
+            Utilities.ConsoleSend("You are no longer a ghost", Real4(1, 0, 0, 1));
+        }
+    }
+    
+    [Static]
+    function XRay (vals : Array[String]) {
+        Commands.Xray = !Commands.Xray;
+        if(Commands.Xray) {
+            var toSend = UseRadar();
+            toSend.Timer = Real.PositiveMax;
+            GlobalVariables.GameSpace.DispatchEvent(Events.UseRadar, toSend);
+            Utilities.ConsoleSend("XRAY ON", Real4(1, 0, 0, 1));
+        } else {
+            var toSend = UseRadar();
+            toSend.Timer = 0;
+            GlobalVariables.GameSpace.DispatchEvent(Events.UseRadar, toSend);
+            Utilities.ConsoleSend("XRAY OFF", Real4(1, 0, 0, 1));
+        }
     }
     
     [Static]
