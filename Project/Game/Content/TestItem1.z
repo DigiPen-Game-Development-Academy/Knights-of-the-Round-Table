@@ -9,6 +9,7 @@ class TestItem1 : Item
         this.HoldingSprite = SpriteSource.SquareBordered;
         this.GroundSprite = SpriteSource.Circle;
         this.Name = "TestItem1";
+        this.ID = "Test";
         this.FireRate = 2;
         this.WakeSprite = Archetype.Wake;
         this.AmmoPerShot = 2;

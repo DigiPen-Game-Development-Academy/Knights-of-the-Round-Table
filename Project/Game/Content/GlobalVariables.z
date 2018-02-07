@@ -3,12 +3,24 @@
 class GlobalVariables {
     
     [Static]
+    var Save : Cog;
+    
+    [Static]
+    var Enemies : Array[Cog];
+    
+    [Static]
+    var Chests : Array[Cog];
+    
+    [Static]
+    var GroundItems : Array[Cog];
+    
+    [Static]
     var ShadowObjects : Array[Cog];
     
     [Static]
     var Invis : Boolean = false;
     
-    [Serialized][Static]
+    [Static]
     var Items : Array[Item];
     
     [Static]

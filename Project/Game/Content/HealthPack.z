@@ -6,6 +6,7 @@ class HealthPackT1 : Item {
         var rand = Random();
         this.Ammount = Math.Round(rand.Range(5, 10)) as Integer;
         this.Name = "Health Pack (T1)";
+        this.ID = "Health_Pack_(T1)";
         this.GroundSprite = SpriteSource.Healthpack;
         this.Icon = SpriteSource.Healthpack;
     }
@@ -30,6 +31,7 @@ class HealthPackT2 : Item {
         var rand = Random();
         this.Ammount = Math.Round(rand.Range(3, 5)) as Integer;
         this.Name = "Health Pack (T2)";
+        this.ID = "Health_Pack_(T2)";
         this.GroundSprite = SpriteSource.Healthpack;
         this.Icon = SpriteSource.Healthpack;
     }
@@ -55,6 +57,7 @@ class HealthPackT3 : Item {
         var rand = Random();
         this.Ammount = Math.Round(rand.Range(1, 2)) as Integer;
         this.Name = "Health Pack (T3)";
+        this.ID = "Health_Pack_(T3)";
         this.GroundSprite = SpriteSource.Healthpack;
         this.Icon = SpriteSource.Healthpack;
     }

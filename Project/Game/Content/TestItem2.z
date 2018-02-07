@@ -7,6 +7,7 @@ class TestItem2 : Item
         this.HoldingSprite = SpriteSource.SquareBordered;
         this.GroundSprite = SpriteSource.CircleBordered;
         this.Name = "TestItem2";
+        this.ID = "Test2";
         this.Type = ItemType.Weapon;
         
     }

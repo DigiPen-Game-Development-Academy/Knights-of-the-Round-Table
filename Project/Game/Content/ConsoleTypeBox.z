@@ -171,7 +171,7 @@ class ConsoleTypeBox : ZilchComponent {
             
         } else if(str.StartsWith("/spawn")) {
             foreach(var id in Utilities.EnemiesIDS) {
-                var nCmd = "/spawn `id`";
+                var nCmd = "/spawn `id.ID`";
                 if(nCmd.StartsWith(str)) {
                     strs.Add(nCmd);
                 }

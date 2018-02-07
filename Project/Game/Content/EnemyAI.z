@@ -22,6 +22,9 @@ class EnemyAI : ZilchComponent {
     var ChaseSpeedMultiplier : Real = 2;
     var ViewDirection : Real3 = Real3(0);
     function Initialize(init : CogInitializer) {
+        if(GlobalVariables.Enemies == null)
+            GlobalVariables.Enemies = Array[Cog]();
+        GlobalVariables.Enemies.Add(this.Owner);
         this.GuardPos = this.Owner.Transform.WorldTranslation;
         this.Timer = this.WaitTime;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);

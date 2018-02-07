@@ -46,6 +46,8 @@ class Item {
     
     var SoundDistance : Real = 10;
     
+    var ID : String = "NULLITEM";
+    
     [Virtual]
     function Init () {
         Console.WriteLine("This Item Will Not Initialize Properly!");

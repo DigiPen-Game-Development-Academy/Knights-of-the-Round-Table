@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Chest",
 	},
+	Archetyped = 
+	{
+		string Name = "5a0198d5f1c252dc:Manual_Chest",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [10, 2, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -47,5 +51,8 @@ Cog =
 		string Slot6ID = "Health_Pack_(T2)",
 		string Slot7ID = "Health_Pack_(T2)",
 		string Slot8ID = "",
+	},
+	AutoChest = 
+	{
 	},
 },

@@ -7,6 +7,7 @@ class Potato : Item {
         this.Stackable = false;
         this.MagSize = -1;
         this.Name = "Potato";
+        this.ID = "Potato";
         this.DamagePer = 3;
         this.FireRate = 2.5;
         
@@ -87,6 +88,7 @@ class Plasma_Pistol : Item {
         this.Stackable = false;
         this.MagSize = 100;
         this.Name = "Plasma pistol";
+        this.ID = "Pistol";
         this.DamagePer = 50;
         this.FireRate = 2.5 ;
         this.AmmoPerShot = 1;

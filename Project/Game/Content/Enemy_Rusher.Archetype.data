@@ -6,11 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Enemy",
+		string Name = "Enemy_Rusher",
+	},
+	Archetyped = 
+	{
+		string Name = "5a026fe412609373:Enemy_Rusher",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.5, 23.5, 0],
+		Vec3 Translation = [-11.5, 25.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},

@@ -244,10 +244,10 @@ class Commands {
         if(vals == null || vals.Count == 0) {
             Utilities.ConsoleSend("INVALID PARAMETERS, use /spawn <EnemyID>", Real4(1, 1, 0, 1));
             return;
-        } else if(vals[0] == "Rusher") {
+        } else if(Utilities.EnemyFromID(vals[0]) != null) {
             for(var i = 0; i < count; ++i) {
-                GlobalVariables.GameSpace.CreateAtPosition(Archetype.Enemy_Rusher, GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition + Random().Real2(1,1), 0));
-                Utilities.ConsoleSend("Created Rusher", Real4(1, 0, 0, 1));
+                GlobalVariables.GameSpace.CreateAtPosition(Utilities.EnemyFromID(vals[0]), GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition + Random().Real2(1,1), 0));
+                Utilities.ConsoleSend("Created `Utilities.EnemyFromID(vals[0]).Name`", Real4(1, 0, 0, 1));
             }
         } else {
             Utilities.ConsoleSend("INVALID ID: `vals[0]`", Real4(1, 0, 0, 1));

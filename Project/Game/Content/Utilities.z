@@ -12,12 +12,21 @@ class ItemID {
     var ID : String;
 }
 
+class EnemyID {
+    constructor (arch : Archetype) {
+        this.ID = arch.Name;
+        this.Arch = arch;
+    }
+    var ID : String;
+    var Arch : Archetype;
+}
+
 class Utilities
 {
     /*Enemy Auto-Complete Array*/
     [Static]
-    var EnemiesIDS : Array[String] = Array[String](){
-        "Rusher"
+    var EnemiesIDS : Array[EnemyID] = Array[EnemyID](){
+        EnemyID(Archetype.Enemy_Rusher)
     };
     
     /*Item Auto-Compete Array*/
@@ -161,6 +170,19 @@ class Utilities
             return Radar();
         else
             return null;
+        
+    }
+    
+    [Static]
+    function EnemyFromID(id : String) : Archetype {
+        
+        foreach(var e in Utilities.EnemiesIDS) {
+            if(e.ID == id) {
+                return e.Arch;
+            }
+        }
+        
+        return null;
         
     }
     [Static]

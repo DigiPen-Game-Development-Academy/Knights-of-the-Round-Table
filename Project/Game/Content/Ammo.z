@@ -2,6 +2,7 @@ class Ammo : Item
 {
     function Init(){
         this.Name = "Ammo";
+        this.ID = "Ammo";
         this.Type = ItemType.Ammo;
         this.GroundSprite = SpriteSource.Plasma;
         this.Icon = SpriteSource.Plasma;

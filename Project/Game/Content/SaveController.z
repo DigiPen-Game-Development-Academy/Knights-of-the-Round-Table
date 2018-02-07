@@ -1,0 +1,42 @@
+class SaveController : ZilchComponent {
+    
+    [Serialized]
+    var PlayerPos : Real3 = Real3(0);
+    
+    [Serialized]
+    var PlayerHealth : Real = 100;
+    
+    [Serialized]
+    var Enemies : String = "";
+    
+    [Serialized]
+    var Chests : String = "";
+    
+    [Serialized]
+    var Inventory : String = "";
+    
+    [Serialized]
+    var Primary : String = "";
+    
+    [Serialized]
+    var Secondary : String = "";
+    
+    [Serialized]
+    var Utility : String = "";
+    
+    [Serialized]
+    var Mouse : String = "";
+    
+    [Serialized]
+    var GItems : String = "";
+    
+    function Initialize(init : CogInitializer) {
+        GlobalVariables.Save = this.Owner;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        this.PlayerPos = GlobalVariables.Player.Transform.WorldTranslation;
+        this.PlayerHealth = GlobalVariables.Player.Health.CurrentHealth;
+    }
+}

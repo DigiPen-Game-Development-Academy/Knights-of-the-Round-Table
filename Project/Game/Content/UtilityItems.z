@@ -6,6 +6,7 @@ class Radar : Item {
     
     function Init() {
         this.Name = "Radar";
+        this.ID = "Radar";
         this.Type = ItemType.Utility;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
