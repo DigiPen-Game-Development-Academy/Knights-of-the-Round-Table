@@ -10,13 +10,28 @@ class EnemySprite : ZilchComponent {
     [Property] var EastSprite  : SpriteSource;
     [Property] var WestSprite  : SpriteSource;
     
+    [Property]
+    var Cooldown : Real = 1;
+    
+    var Timer : Real = 1;
+    
     function Initialize(init : CogInitializer) {
+        this.Timer = this.Cooldown;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
         
-        if(this.AI.ViewDirection != this.LDir) {
+        this.Timer -= event.Dt;
+        
+        if(this.Timer > 0) {
+            this.AI.ViewDirection = this.LDir;
+            return;
+        }
+        
+        this.Timer = this.Cooldown;
+        
+        if(this.AI.ViewDirection != this.LDir && Math.Distance(this.AI.ViewDirection, Real3(0)) > 0.1) {
             
             var angle = Math.ToDegrees(Math.ATan2(this.AI.ViewDirection.Y, this.AI.ViewDirection.X));
             if(angle < 45 && angle > -45) {

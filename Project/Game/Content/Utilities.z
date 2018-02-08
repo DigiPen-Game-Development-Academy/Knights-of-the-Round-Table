@@ -26,7 +26,8 @@ class Utilities
     /*Enemy Auto-Complete Array*/
     [Static]
     var EnemiesIDS : Array[EnemyID] = Array[EnemyID](){
-        EnemyID(Archetype.Enemy_Rusher)
+        EnemyID(Archetype.Enemy_Rusher),
+        EnemyID(Archetype.Enemy_GI_Pistol)
     };
     
     /*Item Auto-Compete Array*/

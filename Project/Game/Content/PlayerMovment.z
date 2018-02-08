@@ -9,6 +9,9 @@ class PlayerMovment : ZilchComponent
     [Property]
     var SprintMultiplier : Real = 2;
     
+    [Property]
+    var SprintSoundDist : Real = 5;
+    
     var Dir : Real3 = Real3(0);
     
     function Initialize(init : CogInitializer) {
@@ -30,7 +33,10 @@ class PlayerMovment : ZilchComponent
         if(vel != Real3(0))
             this.Dir = Math.Normalize(vel);
         
-        if(Zero.Keyboard.KeyIsDown(Keys.Shift)) vel *= this.SprintMultiplier;
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift)){
+            vel *= this.SprintMultiplier;
+            Utilities.SendSound(this.SprintSoundDist);
+        }
         
         this.Owner.RigidBody.Velocity = vel;
         

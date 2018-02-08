@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Enemy_Rusher",
+		string Name = "Enemy_GI_Pistol",
 	},
 	Archetyped = 
 	{
-		string Name = "5a026fe412609373:Enemy_Rusher",
+		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.5, 23.5, 0],
+		Vec3 Translation = [-9.5, 23.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 0, 0.000599861145, 1],
+		Vec4 Color = [1, 0.990000129, 0, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -115,6 +115,19 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
+	},
+	EnemyRayShooting = 
+	{
+		float MaxRange = 10,
+		float DamagePer = 10,
+		string WakeSprite = "5a9bdadb3cdcabb7:Wake",
+		float SoundDistance = 10,
+		string Sound = "5a84cbaca2f7cdf9:Shot",
+		float RandAngle = 10,
+		int MagSize = 3,
+		float ReloadTime = 2,
+		float FireRate = 4,
+		float MinDist = 4,
 	},
 	Hierarchy = 
 	{

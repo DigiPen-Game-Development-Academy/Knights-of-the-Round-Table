@@ -65,9 +65,8 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
-        
-        if(this.Owner.EnemyPathFind.Path != null && this.Owner.EnemyPathFind.Path.Count != 0)
-            this.ViewDirection = Math.Normalize(this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation);
+        if (GlobalVariables.Invis)
+            this.PlayerSpotted = false;
         
         this.Owner.RigidBody.Velocity *= this.MoveSpeed;
         //State Handeling
@@ -125,7 +124,8 @@ class EnemyAI : ZilchComponent {
             this.Timer = this.WaitTime;
             
         }
-        
+        if(this.Owner.EnemyPathFind.Path != null && this.Owner.EnemyPathFind.Path.Count != 0)
+            this.ViewDirection = Math.Normalize(this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation);
     }
     
     function FindClosePos (pos : Real3) : Real3 {
