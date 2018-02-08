@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-73.0886078, -26.0368881, 63.9999962],
+			Vec3 Translation = [-22.7203026, 69.8260727, 63.9999924],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 20.1896648,
+			float Size = 33.2871552,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-73.0886078, -26.0368881, -3.59153228e-06],
+			Vec3 LookTarget = [-22.7203026, 69.8260727, -6.08620803e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -209,6 +209,41 @@ Level =
 		},
 		Named = 
 		{
+			string Name = "TranitionTiles",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -0.899999976],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a0705a718c8e58a:JustinTestLevel_TileMap04",
+			string PaletteName = "5a0815c6bc36dbbd:GroundClutter",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Named = 
+		{
 			string Name = "WallTiles",
 		},
 		Transform = 
@@ -240,7 +275,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -275,7 +310,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Named = 
 		{

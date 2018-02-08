@@ -86,7 +86,7 @@ class Plasma_Pistol : Item {
         this.GroundSprite = SpriteSource.Icon_Weapon_Pistol;
         this.WakeSprite = Archetype.Wake;
         this.Stackable = false;
-        this.MagSize = 100;
+        this.MagSize = 15;
         this.Name = "Plasma pistol";
         this.ID = "Pistol";
         this.DamagePer = 50;
