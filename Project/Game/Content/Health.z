@@ -1,6 +1,12 @@
 class Health : ZilchComponent {
     [Property]
     var InitialHealth : Real = 100;
+    [Property]
+    var Cooldown : Real = 3;
+    [Property]
+    var RegenRate : Real = 0.3333333333333;
+    var Timer : Real = 0;
+    var CooldownTimer : Real = 0;
     var CurrentHealth : Real = 0;
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -14,10 +20,19 @@ class Health : ZilchComponent {
             this.Owner.DispatchEvent(Events.NoHealth, NoHealth());
         if(this.CurrentHealth < 0)
             this.CurrentHealth = 0;
+        this.CooldownTimer = this.Cooldown;
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
-        
+        if(this.Timer >= 0 && this.CooldownTimer <= 0)
+            this.Timer -= event.Dt;
+        if(this.CooldownTimer >= 0)
+            this.CooldownTimer -= event.Dt;
+        if(this.Timer <= 0) {
+            this.Timer = (1/this.RegenRate)/2;
+            if(this.CurrentHealth + 1 <= this.InitialHealth)
+                this.CurrentHealth += 0.5;
+        }
     }
     
 }

@@ -119,7 +119,7 @@ Cog =
 	EnemyRayShooting = 
 	{
 		float MaxRange = 10,
-		float DamagePer = 10,
+		float DamagePer = 20,
 		string WakeSprite = "5a9bdadb3cdcabb7:Wake",
 		float SoundDistance = 10,
 		string Sound = "5a84cbaca2f7cdf9:Shot",
