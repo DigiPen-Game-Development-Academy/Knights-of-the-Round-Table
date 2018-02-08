@@ -1111,7 +1111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.718436062, 0.762292802, 50],
+			Vec3 Translation = [0.290409535, 1.68668664, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1123,7 +1123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 2.21034026,
+			float Size = 12.0992947,
 		},
 		EditorCameraController = 
 		{
@@ -1131,7 +1131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.718436062, 0.762292802, 5.67371103e-07],
+			Vec3 LookTarget = [0.290409535, 1.68668664, 5.4866149e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -3155,7 +3155,7 @@ Level =
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 150,
+							uint FontSize = 125,
 							string Text = "Sprite Text...",
 							TextAlign Align = Right,
 							float PixelsPerUnit = 512,
@@ -3189,7 +3189,7 @@ Level =
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 150,
+							uint FontSize = 125,
 							string Text = "Sprite Text...",
 							TextAlign Align = Right,
 							float PixelsPerUnit = 512,
@@ -3304,7 +3304,7 @@ Level =
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 150,
+							uint FontSize = 125,
 							string Text = "Sprite Text...",
 							TextAlign Align = Right,
 							float PixelsPerUnit = 512,
@@ -3338,7 +3338,7 @@ Level =
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 150,
+							uint FontSize = 125,
 							string Text = "Sprite Text...",
 							TextAlign Align = Right,
 							float PixelsPerUnit = 512,

@@ -1,19 +1,11 @@
-class Wake : ZilchComponent
-{
-    
-    [Property]
-    var LifeLength : Real = 0.1;
-    
-    function Initialize(init : CogInitializer)
-    {
+class Wake : ZilchComponent {
+    function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        
-        this.LifeLength -= event.Dt;
-        if(this.LifeLength <= 0){
+    function OnLogicUpdate(event : UpdateEvent) {
+        this.Owner.Sprite.Color -= Real4(0,0,0,event.Dt);
+        if(this.Owner.Sprite.Color.W <= 0) {
             this.Owner.Destroy();
         }
         

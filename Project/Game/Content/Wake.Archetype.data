@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.425000012, 0.913750052, 1, 1],
+		Vec4 Color = [0.425000012, 0.913750052, 1, 0.999899983],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a9111eeaee421a5:CamOut",
+		string SpriteSource = "5a074cc6ca5cf6ea:WakeSpriteSource",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -38,6 +38,5 @@ Cog =
 	},
 	Wake = 
 	{
-		float LifeLength = 0.100000001,
 	},
 },

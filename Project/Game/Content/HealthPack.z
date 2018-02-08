@@ -7,8 +7,8 @@ class HealthPackT1 : Item {
         this.Ammount = Math.Round(rand.Range(5, 10)) as Integer;
         this.Name = "Health Pack (T1)";
         this.ID = "Health_Pack_(T1)";
-        this.GroundSprite = SpriteSource.Healthpack;
-        this.Icon = SpriteSource.Healthpack;
+        this.GroundSprite = SpriteSource.HealthPack1;
+        this.Icon = SpriteSource.HealthPack1;
     }
     
     function Use (radAngle : Real) {
@@ -32,8 +32,8 @@ class HealthPackT2 : Item {
         this.Ammount = Math.Round(rand.Range(3, 5)) as Integer;
         this.Name = "Health Pack (T2)";
         this.ID = "Health_Pack_(T2)";
-        this.GroundSprite = SpriteSource.Healthpack;
-        this.Icon = SpriteSource.Healthpack;
+        this.GroundSprite = SpriteSource.HealthPack2;
+        this.Icon = SpriteSource.HealthPack2;
     }
     
     function Use (radAngle : Real) {
@@ -58,8 +58,8 @@ class HealthPackT3 : Item {
         this.Ammount = Math.Round(rand.Range(1, 2)) as Integer;
         this.Name = "Health Pack (T3)";
         this.ID = "Health_Pack_(T3)";
-        this.GroundSprite = SpriteSource.Healthpack;
-        this.Icon = SpriteSource.Healthpack;
+        this.GroundSprite = SpriteSource.HealthPack3;
+        this.Icon = SpriteSource.HealthPack3;
     }
     
     function Use (radAngle : Real) {

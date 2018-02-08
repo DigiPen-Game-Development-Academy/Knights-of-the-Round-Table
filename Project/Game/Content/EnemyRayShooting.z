@@ -61,13 +61,13 @@ class EnemyRayShooting : ZilchComponent {
                     this.Timer = 1/this.FireRate;
                     --this.CurrentMag;
                 }
+            }else {
+                this.Owner.BasicPathFollowAI.SetTarget(GlobalVariables.Player.Transform.WorldTranslation);
             }
-        } else {
-            this.Owner.BasicPathFollowAI.SetTarget(GlobalVariables.Player.Transform.WorldTranslation);
-        }
-        if(Math.Distance(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation) <= this.MinDist) {
-            Console.WriteLine(Math.Normalize(this.Owner.Transform.WorldTranslation - GlobalVariables.Player.Transform.WorldTranslation)*this.MinDist);
-            this.Owner.BasicPathFollowAI.SetTarget(GlobalVariables.Player.Transform.WorldTranslation + (Math.Normalize(this.Owner.Transform.WorldTranslation - GlobalVariables.Player.Transform.WorldTranslation)*this.MinDist));
+            if(Math.Distance(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation) <= this.MinDist) {
+                Console.WriteLine(Math.Normalize(this.Owner.Transform.WorldTranslation - GlobalVariables.Player.Transform.WorldTranslation)*this.MinDist);
+                this.Owner.BasicPathFollowAI.SetTarget(GlobalVariables.Player.Transform.WorldTranslation + (Math.Normalize(this.Owner.Transform.WorldTranslation - GlobalVariables.Player.Transform.WorldTranslation)*this.MinDist));
+            }
         }
     }
     

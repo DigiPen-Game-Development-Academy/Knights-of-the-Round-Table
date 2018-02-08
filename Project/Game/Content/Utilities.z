@@ -41,7 +41,11 @@ class Utilities
         ItemID("Test"),
         ItemID("Test2"),
         ItemID("Pistol"),
-        ItemID("Radar")
+        ItemID("Radar"),
+        ItemID("Rifle"),
+        ItemID("Shotgun"),
+        ItemID("Saw_Laser"),
+        ItemID("MMS_Sniper")
     };
     
     [Static]
@@ -169,6 +173,16 @@ class Utilities
             return Plasma_Pistol();
         else if(id == "Radar")
             return Radar();
+        else if(id == "Rifle")
+            return TerribleAssaultRifle();
+        else if(id == "Shotgun")
+            return SlugShotgun();
+        else if(id == "Saw_Laser")
+            return SawLaser();
+        else if(id == "Sniper")
+            return Lasersniper();
+        else if(id == "MMS_Sniper")
+            return MMS_Sniper();
         else
             return null;
         
