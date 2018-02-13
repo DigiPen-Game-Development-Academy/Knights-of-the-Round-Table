@@ -1,7 +1,5 @@
 //Author Brandon Wolenetz
 
-
-
 class Radar : Item {
     
     function Init() {
@@ -38,4 +36,32 @@ class Radar : Item {
     
 }
 
-
+class Watch : Item {
+    
+    function Init() {
+        this.Name = "Mysterious Watch";
+        this.ID = "Watch";
+        this.Type = ItemType.Utility;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.MagSize = -1;
+        this.FireRate = 0.01666666666667;
+        this.Stackable = false;
+    }
+    
+    function ReturnLore() : String {
+        var lore = Array[String]();
+        lore.Add("What is this?");
+        lore.Add("lets you tell time");
+        lore.Add("ye old watch");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {
+        
+        Utilities.TimeTimerSet(0.15, 5, 5);
+        
+    }
+    
+}
