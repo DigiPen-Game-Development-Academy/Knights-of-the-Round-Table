@@ -173,13 +173,14 @@ class TerribleAssaultRifle : Item {
         this.Icon = SpriteSource.Icon_Weapon_TRifle;
         this.GroundSprite = SpriteSource.Icon_Weapon_TRifle;
         this.Stackable = false;
-        this.MagSize = 30;
-        this.Name = "Worn alien rifle";
+        this.MagSize = 20;
+        this.Name = "ramshackle rifle";
         this.ID = "Rifle";
-        this.DamagePer = 2;
-        this.FireRate = 0.25; 
-        this.AmmoPerShot = 1;
-        this.RelodTime = 3;
+        this.DamagePer = 25;
+        this.FireRate = 4; 
+        this.AmmoPerShot = 4;
+        this.RelodTime = 5;
+        this.MaxRange = 25;
     }
     
     function ReturnLore () : String {
@@ -193,6 +194,8 @@ class TerribleAssaultRifle : Item {
     
     function Use (radAngle : Real) {
         Console.WriteLine("weathered laser rifle");
+        
+        
         
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
         
