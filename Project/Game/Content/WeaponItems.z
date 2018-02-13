@@ -340,13 +340,14 @@ class SawLaser  : Item {
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
-        this.MagSize = 50;
+        this.MagSize = 100;
         this.Name = "Saw laser";
-        this.ID = "Saw_Laser";
-        this.DamagePer = 5;
-        this.FireRate = 10; 
-        this.AmmoPerShot = 1;
-        this.RelodTime = 10;
+        this.ID = "Saw Laser";
+        this.DamagePer = 30;
+        this.FireRate = 15; 
+        this.AmmoPerShot = 2;
+        this.RelodTime = 15;
+        this.MaxRange = 10;
     }
     
     function ReturnLore () : String {
