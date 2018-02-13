@@ -45,6 +45,7 @@ class Commands {
             Commands.Commands.Add(CMD("/speed",             Commands.Speed));
             Commands.Commands.Add(CMD("/zoom",              Commands.Zoom));
             Commands.Commands.Add(CMD("/killall",           Commands.KillEnemies));
+            Commands.Commands.Add(CMD("/time",              Commands.Time));
             
         }
     }
@@ -112,6 +113,8 @@ class Commands {
             Utilities.ConsoleSend("/zoom <zoom>", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("-kills all enemies-", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("/killall", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-sets time scale-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/time <time scale>", Real4(0, 1, 0, 1));
         }
     }
     
@@ -292,6 +295,24 @@ class Commands {
     function KillEnemies (vals : Array[String]) {
         GlobalVariables.GameSpace.GameSession.DispatchEvent(Events.NoHealth, NoHealth());
         Utilities.ConsoleSend("Killed all enemies", Real4(1, 0, 0, 1));
+    }
+    
+    [Static]
+    function Time (vals : Array[String]) {
+        if(vals == null || vals.Count == 0) {
+            Utilities.ConsoleSend("INVALID PARAMETERS, use /zoom <zoom>", Real4(1, 1, 0, 1));
+            return;
+        }
+        
+        GlobalVariables.GameSpace.TimeSpace.TimeScale = Real.Parse(vals[0]);
+        Utilities.ConsoleSend("Time scale set to `Real.Parse(vals[0])`", Real4(1, 0, 0, 1));
+        
+        if(Real.Parse(vals[0]) < 1) {
+            GlobalVariables.SloMo = true;
+        } else {
+            GlobalVariables.SloMo = false;
+        }
+        
     }
     
     [Static]

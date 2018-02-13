@@ -6,7 +6,7 @@ class CamFollow : ZilchComponent {
     function OnLogicUpdate(event : UpdateEvent) {
         
         var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
-        this.Owner.Transform.WorldTranslation = GlobalVariables.Player.Transform.WorldTranslation + (mousePos - GlobalVariables.Player.Transform.WorldTranslation)/6;
+        this.Owner.Transform.WorldTranslation = GlobalVariables.Player.Transform.WorldTranslation + (mousePos - GlobalVariables.Player.Transform.WorldTranslation)/GlobalVariables.CamSense;
         this.Owner.Transform.WorldTranslation = Real3(this.Owner.Transform.WorldTranslation.X, this.Owner.Transform.WorldTranslation.Y, 40);
         
     }

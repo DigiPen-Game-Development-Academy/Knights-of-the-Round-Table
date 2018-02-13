@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.425000012, 0.913750052, 1, 0.999899983],
+		Vec4 Color = [0.675000012, 0.675000012, 0.675000012, 0.675000012],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -38,5 +38,10 @@ Cog =
 	},
 	Wake = 
 	{
+	},
+	Area = 
+	{
+		Vec2 Size = [1, 0],
+		Location Origin = BottomCenter,
 	},
 },

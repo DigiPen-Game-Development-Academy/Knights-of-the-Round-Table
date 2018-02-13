@@ -18,6 +18,28 @@ class UseWeapon : ZilchComponent
         this.Secondary.Init();
         GlobalVariables.UseWeapon = this;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.MouseUp, this.OnMouseUp);
+        Zero.Connect(Zero.Keyboard, Events.KeyUp, this.OnKeyUp);
+    }
+
+    function OnKeyUp(event : KeyboardEvent) {
+        if(event.Key == GlobalVariables.InputManager.UseWeaponKey) {
+            if(this.PrimarySelected) {
+                this.Primary.UseReleased();
+            } else {
+                this.Secondary.UseReleased();
+            }
+        }
+    }
+
+    function OnMouseUp(event : ViewportMouseEvent) {
+        if(event.Button == GlobalVariables.InputManager.UseWeaponMouse) {
+            if(this.PrimarySelected) {
+                this.Primary.UseReleased();
+            } else {
+                this.Secondary.UseReleased();
+            }
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
@@ -105,7 +127,7 @@ class UseWeapon : ZilchComponent
             }
         }
         
-        if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.ToggleSecondary))
+        if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.ToggleSecondary) && (!Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse) || !Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey)))
             this.PrimarySelected = !this.PrimarySelected;
         
     }

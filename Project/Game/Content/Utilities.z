@@ -45,7 +45,9 @@ class Utilities
         ItemID("Rifle"),
         ItemID("Shotgun"),
         ItemID("Saw_Laser"),
-        ItemID("MMS_Sniper")
+        ItemID("MMS_Sniper"),
+        ItemID("Sniper"),
+        ItemID("Watch")
     };
     
     [Static]
@@ -150,6 +152,12 @@ class Utilities
         
     }
     
+    [Static]
+    function TimeTimerSet (timeScale : Real, time : Real, movSpd : Real) {
+        
+        GlobalVariables.GameSpace.LevelSettings.TimeTimer.SetTimer(timeScale, time, movSpd);
+        
+    }
     
     [Static]
     function ItemFromID(id : String) : Item {
@@ -183,6 +191,8 @@ class Utilities
             return Lasersniper();
         else if(id == "MMS_Sniper")
             return MMS_Sniper();
+        else if(id == "Watch")
+            return Watch();
         else
             return null;
         

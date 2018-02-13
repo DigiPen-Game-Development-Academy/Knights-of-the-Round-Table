@@ -113,15 +113,17 @@ class Plasma_Pistol : Item {
         
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
-        if(res != null){
+        if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer);
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }else{
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }
         
         Utilities.SendSound(this.SoundDistance);
@@ -201,15 +203,17 @@ class TerribleAssaultRifle : Item {
         
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
-        if(res != null){
+        if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer);
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }else{
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }
         
         Utilities.SendSound(this.SoundDistance);
@@ -252,15 +256,17 @@ class SlugShotgun : Item {
         
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
-        if(res != null){
+        if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer);
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }else{
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }
         
         Utilities.SendSound(this.SoundDistance);
@@ -366,15 +372,17 @@ class SawLaser  : Item {
         
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
-        if(res != null){
+        if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer);
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }else{
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }
         
         Utilities.SendSound(this.SoundDistance);
@@ -387,6 +395,10 @@ class SawLaser  : Item {
 //LASER SNIPER
 //
 class Lasersniper  : Item {
+    
+    var Aim : Boolean = false;
+    
+    var RadAngle : Real = 0;
     
     function Init () {
         this.Type = ItemType.Weapon;
@@ -401,6 +413,41 @@ class Lasersniper  : Item {
         this.AmmoPerShot =25;
         this.RelodTime = 15;
     }
+
+    function UseReleased() {
+        
+        if(this.Aim && !(Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse) || Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey))) {
+            
+            this.Aim = false;
+            
+            GlobalVariables.CamSense = 6;
+            
+            Console.WriteLine("Laser Sniper");
+        
+            var dir = Real3(Math.Cos(this.RadAngle), Math.Sin(this.RadAngle), 0);
+            
+            var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+            
+            if(res != null && !GlobalVariables.SloMo){
+                Utilities.Damage(res.ObjectHit, this.DamagePer);
+                var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+                wake.Transform.EulerAngles = Real3(0,0,this.RadAngle+ Math.ToRadians(-90));
+                wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+                wake.Wake.DamagePer = this.DamagePer;
+            }else{
+                var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+                wake.Transform.EulerAngles = Real3(0,0,this.RadAngle+ Math.ToRadians(-90));
+                wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+                wake.Wake.DamagePer = this.DamagePer;
+            }
+            
+            Utilities.SendSound(this.SoundDistance);
+            
+            GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+                
+            }
+        
+    }
     
     function ReturnLore () : String {
         var lore = Array[String]();
@@ -412,26 +459,9 @@ class Lasersniper  : Item {
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Laser Sniper");
-        
-        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
-        
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
-        
-        if(res != null){
-            Utilities.Damage(res.ObjectHit, this.DamagePer);
-            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
-            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
-            wake.Transform.Scale = Real3(0.05, res.Distance, 0);
-        }else{
-            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
-            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
-            wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
-        }
-        
-        Utilities.SendSound(this.SoundDistance);
-        
-        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        this.Aim = true;
+        this.RadAngle = radAngle;
+        GlobalVariables.CamSense = 1.4;
     }
     
 }
@@ -536,15 +566,17 @@ class MMS_Sniper  : Item {
         
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
-        if(res != null){
+        if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer);
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }else{
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }
         
         Utilities.SendSound(this.SoundDistance);

@@ -39,6 +39,7 @@ class SaveLoad : ZilchComponent {
     }
     
     function Load() {
+        
         if(GlobalVariables.Save != null)
             GlobalVariables.Save.Destroy();
         var save = Zero.ObjectStore.Restore("Save", GlobalVariables.GameSpace);
