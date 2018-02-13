@@ -15,13 +15,13 @@ class Potato : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("a generic frozen potato");
-        lore.Add("ye olde potat");
-        lore.Add("the irish dream");
-        lore.Add("the United states population consumes 1.5 billion\npounds of potatoes per year");
-        lore.Add("the potatoe's allegiance is with you");
-        lore.Add("legend says that four large lifeforms killed by\nthis potato will award the user with a legendary weapon");
-        lore.Add("every year potatoes are gruesomely fried into fries,\nthis cruelty needs to stop.\nsupport the no potato left behind initiative");
+        lore.Add("A generic frozen potato");
+        lore.Add("Ye olde potat");
+        lore.Add("The Irish dream");
+        lore.Add("The United States population consumes 1.5 billion pounds of potatoes per year");
+        lore.Add("The potatoe's allegiance is with you");
+        lore.Add("Legend says that four large lifeforms killed by this potato will reward the user with a legendary weapon");
+        lore.Add("Every year potatoes are gruesomely turned into fries,this cruelty needs to stop. Support the no potato left behind initiative");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
