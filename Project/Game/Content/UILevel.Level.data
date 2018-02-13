@@ -1111,7 +1111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.290409535, 1.68668664, 50],
+			Vec3 Translation = [1.67171979, 1.34826374, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1123,7 +1123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.0992947,
+			float Size = 10.9478979,
 		},
 		EditorCameraController = 
 		{
@@ -1131,7 +1131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.290409535, 1.68668664, 5.4866149e-07],
+			Vec3 LookTarget = [1.67171979, 1.34826374, 6.09040228e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -3635,7 +3635,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [3.5, 2.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3683,6 +3683,106 @@ Level =
 				MenuVisibilitySpriteText = 
 				{
 				},
+				Area = 
+				{
+					Vec2 Size = [3, 1],
+					Location Origin = Center,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 95,
+				},
+				Named = 
+				{
+					string Name = "Quit",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 99,
+					string Text = "Quit",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = true,
+				},
+				MenuVisibilitySpriteText = 
+				{
+				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				Button = 
+				{
+					float ScaleM = 1.20000005,
+					Vec4 HoverColor = [0, 0, 0, 0.999899983],
+					Vec4 ClickColor = [0, 0, 0, 0.350000024],
+					float ScaleSpeed = 5,
+				},
+				Area = 
+				{
+					Vec2 Size = [3, 1],
+					Location Origin = Center,
+				},
+				QuitButton = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 96,
+				},
+				Named = 
+				{
+					string Name = "Back",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -1],
+					Vec3 Scale = [3.02577353, 2, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MenuVisibilitySprite = 
+				{
+				},
 			},
 		},
 	},
@@ -3690,7 +3790,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 95,
+			uint Id = 97,
 		},
 		Named = 
 		{
@@ -3734,7 +3834,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 96,
+					uint Id = 98,
 				},
 				Named = 
 				{
@@ -3783,7 +3883,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 97,
+							uint Id = 99,
 						},
 						Named = 
 						{
@@ -3821,7 +3921,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 98,
+			uint Id = 100,
 		},
 		Named = 
 		{
@@ -3858,7 +3958,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 99,
+			uint Id = 101,
 		},
 		Named = 
 		{
@@ -3902,7 +4002,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 100,
+					uint Id = 102,
 				},
 				Named = 
 				{
@@ -3936,7 +4036,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 101,
+					uint Id = 103,
 				},
 				Named = 
 				{
@@ -3978,7 +4078,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 102,
+			uint Id = 104,
 		},
 		Named = 
 		{
@@ -4017,7 +4117,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 103,
+					uint Id = 105,
 				},
 				Named = 
 				{
@@ -4053,7 +4153,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 104,
+			uint Id = 106,
 		},
 		Named = 
 		{

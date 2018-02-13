@@ -103,6 +103,11 @@ class UseWeapon : ZilchComponent
         }
         
         /*This will tho*/
+        
+        if(this.Owner.PlayerMovment.FreezeTimer > 0) {
+            return;
+        }
+        
         if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey) || Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse)) {
             if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0) {
                 this.Primary.Timer = 1 / this.Primary.FireRate;

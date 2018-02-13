@@ -1,0 +1,54 @@
+class Button : ZilchComponent {
+    [Property]
+    var ScaleM : Real = 1.2;
+    
+    [Property]
+    var HoverColor : Real4;
+    
+    [Property]
+    var ClickColor : Real4;
+    
+    [Property]
+    var ScaleSpeed : Real = 5;
+    
+    var Color : Real4;
+    
+    [Dependency]
+    var Reactive : Reactive;
+    
+    var TargetSize : Real3;
+    
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.Color = this.Owner.SpriteText.Color;
+        this.TargetSize = this.Owner.Transform.Scale;
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        Zero.Connect(this.Owner, Events.MouseUp, this.OnMouseUp);
+    }
+
+    function OnMouseUp(event : ViewportMouseEvent) {
+        this.Owner.SpriteText.Color = this.HoverColor;
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent) {
+        this.Owner.SpriteText.Color = this.ClickColor;
+    }
+
+    function OnMouseExit(event : ViewportMouseEvent) {
+        this.TargetSize = this.Owner.Transform.Scale / this.ScaleM;
+        this.Owner.SpriteText.Color = this.Color;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        this.TargetSize = this.Owner.Transform.Scale * this.ScaleM;
+        this.Owner.SpriteText.Color = this.HoverColor;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, this.TargetSize, event.Dt*this.ScaleSpeed);
+        
+    }
+}

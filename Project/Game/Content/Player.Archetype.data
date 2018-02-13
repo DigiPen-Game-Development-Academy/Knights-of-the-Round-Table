@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-37.2107773, 36.5524254, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -78,6 +78,7 @@ Cog =
 	{
 		float MoveSpeed = 4,
 		float SprintMultiplier = 2,
+		float SprintSoundDist = 15,
 	},
 	UseWeapon = 
 	{
@@ -85,6 +86,8 @@ Cog =
 	Health = 
 	{
 		float InitialHealth = 100,
+		float Cooldown = 3,
+		float RegenRate = 0.333333343,
 	},
 	PlayerHealth = 
 	{

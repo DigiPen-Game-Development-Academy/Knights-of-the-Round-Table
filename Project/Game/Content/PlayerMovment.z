@@ -14,12 +14,20 @@ class PlayerMovment : ZilchComponent
     
     var Dir : Real3 = Real3(0);
     
+    var FreezeTimer : Real = 0;
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         GlobalVariables.Player = this.Owner;
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.FreezeTimer > 0) {
+            this.FreezeTimer -= event.Dt;
+            this.Owner.RigidBody.Velocity = Real3(0);
+            return;
+        }
         
         var vel = Real3(0);
         
@@ -41,4 +49,9 @@ class PlayerMovment : ZilchComponent
         this.Owner.RigidBody.Velocity = vel;
         
     }
+    
+    function Freeze (time : Real) {
+        this.FreezeTimer = time;
+    }
+    
 }

@@ -39,7 +39,7 @@ class SaveLoad : ZilchComponent {
     }
     
     function Load() {
-        
+        GlobalVariables.GameSpace.LevelSettings.TimeTimer.Timer = 0;
         if(GlobalVariables.Save != null)
             GlobalVariables.Save.Destroy();
         var save = Zero.ObjectStore.Restore("Save", GlobalVariables.GameSpace);
@@ -50,6 +50,7 @@ class SaveLoad : ZilchComponent {
         }
         //load values into game
         GlobalVariables.Player.Transform.WorldTranslation = save.SaveController.PlayerPos;
+        GlobalVariables.Player.Health.CurrentHealth = save.SaveController.PlayerHealth;
         foreach(var e in GlobalVariables.Enemies)
             if(e != null)
                 e.Destroy();

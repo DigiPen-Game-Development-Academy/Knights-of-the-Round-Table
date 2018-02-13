@@ -48,6 +48,9 @@ class Item {
     
     var ID : String = "NULLITEM";
     
+    //defines how random (inaccurate) the shots are
+    var RandAngle : Real = 5;
+    
     [Virtual]
     function Init () {
         Console.WriteLine("This Item Will Not Initialize Properly!");
