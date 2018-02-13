@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-22.7203026, 69.8260727, 63.9999924],
+			Vec3 Translation = [6.75474358, -25.6804314, 63.9999924],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 33.2871552,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-22.7203026, 69.8260727, -6.08620803e-06],
+			Vec3 LookTarget = [6.75474358, -25.6804314, -8.31520447e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -386,6 +386,7 @@ Level =
 		{
 			float MoveSpeed = 4,
 			float SprintMultiplier = 2,
+			float SprintSoundDist = 5,
 		},
 		UseWeapon = 
 		{
@@ -393,6 +394,8 @@ Level =
 		Health = 
 		{
 			float InitialHealth = 100,
+			float Cooldown = 3,
+			float RegenRate = 0.333333343,
 		},
 		PlayerHealth = 
 		{
@@ -437,6 +440,41 @@ Level =
 				{
 				},
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Named = 
+		{
+			string Name = "TileMap",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "",
+			string PaletteName = "",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
 		},
 	},
 },
