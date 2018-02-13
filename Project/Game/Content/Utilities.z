@@ -45,7 +45,8 @@ class Utilities
         ItemID("Rifle"),
         ItemID("Shotgun"),
         ItemID("Saw_Laser"),
-        ItemID("MMS_Sniper")
+        ItemID("MMS_Sniper"),
+        ItemID("Sniper")
     };
     
     [Static]

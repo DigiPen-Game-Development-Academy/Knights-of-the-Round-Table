@@ -83,15 +83,17 @@ class EnemyRayShooting : ZilchComponent {
         filter.IgnoreDynamic = true;
         filter.IgnoreGhost = true;
         var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange, filter);
-        if(res != null){
+        if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer);
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, this.Owner.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }else{
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, this.Owner.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }
         Utilities.SendSound(this.SoundDistance, this.Owner.Transform.WorldTranslation);
         GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);

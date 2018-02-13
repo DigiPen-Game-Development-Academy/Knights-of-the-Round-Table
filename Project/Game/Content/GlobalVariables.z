@@ -60,6 +60,12 @@ class GlobalVariables {
     var Console : Cog = null;
     
     [Static]
+    var SloMo : Boolean = false;
+    
+    [Static]
+    var CamSense : Real = 6;
+    
+    [Static]
     function AddInventoryItem (item : Item) : Boolean {
         
         for(var i = 0; i < GlobalVariables.Items.Count; ++i){

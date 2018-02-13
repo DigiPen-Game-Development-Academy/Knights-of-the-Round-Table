@@ -39,4 +39,9 @@ Cog =
 	Wake = 
 	{
 	},
+	Area = 
+	{
+		Vec2 Size = [1, 0],
+		Location Origin = BottomCenter,
+	},
 },
