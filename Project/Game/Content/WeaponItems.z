@@ -15,13 +15,13 @@ class Potato : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("a generic frozen potato");
-        lore.Add("ye olde potat");
-        lore.Add("the irish dream");
-        lore.Add("the United states population consumes 1.5 billion\npounds of potatoes per year");
-        lore.Add("the potatoe's allegiance is with you");
-        lore.Add("legend says that four large lifeforms killed by\nthis potato will award the user with a legendary weapon");
-        lore.Add("every year potatoes are gruesomely fried into fries,\nthis cruelty needs to stop.\nsupport the no potato left behind initiative");
+        lore.Add("A generic frozen potato");
+        lore.Add("Ye olde potat");
+        lore.Add("The Irish dream");
+        lore.Add("The United States population consumes 1.5 billion pounds of potatoes per year");
+        lore.Add("The potatoe's allegiance is with you");
+        lore.Add("Legend says that four large lifeforms killed by this potato will reward the user with a legendary weapon");
+        lore.Add("Every year potatoes are gruesomely turned into fries,this cruelty needs to stop. Support the no potato left behind initiative");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -175,13 +175,14 @@ class TerribleAssaultRifle : Item {
         this.Icon = SpriteSource.Icon_Weapon_TRifle;
         this.GroundSprite = SpriteSource.Icon_Weapon_TRifle;
         this.Stackable = false;
-        this.MagSize = 30;
-        this.Name = "Worn alien rifle";
+        this.MagSize = 20;
+        this.Name = "ramshackle rifle";
         this.ID = "Rifle";
-        this.DamagePer = 2;
-        this.FireRate = 0.25; 
-        this.AmmoPerShot = 1;
-        this.RelodTime = 3;
+        this.DamagePer = 25;
+        this.FireRate = 4; 
+        this.AmmoPerShot = 4;
+        this.RelodTime = 5;
+        this.MaxRange = 25;
     }
     
     function ReturnLore () : String {
@@ -195,6 +196,8 @@ class TerribleAssaultRifle : Item {
     
     function Use (radAngle : Real) {
         Console.WriteLine("weathered laser rifle");
+        
+        
         
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
         
@@ -343,13 +346,14 @@ class SawLaser  : Item {
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
-        this.MagSize = 50;
+        this.MagSize = 100;
         this.Name = "Saw laser";
-        this.ID = "Saw_Laser";
-        this.DamagePer = 5;
-        this.FireRate = 10; 
-        this.AmmoPerShot = 1;
-        this.RelodTime = 10;
+        this.ID = "Saw Laser";
+        this.DamagePer = 30;
+        this.FireRate = 15; 
+        this.AmmoPerShot = 2;
+        this.RelodTime = 15;
+        this.MaxRange = 10;
     }
     
     function ReturnLore () : String {
