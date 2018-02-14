@@ -23,6 +23,12 @@ class AutoChest : ZilchComponent {
         
         Console.WriteLine(this.Items == null);
         
+        var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation-this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 3);
+        
+        if(res == null || res.ObjectHit != GlobalVariables.Player) {
+            return;
+        }
+        
         /*Generate Loot*/
         if((this.Items == null || this.Items.Count == 0) && this.Owner.SetChest == null && !this.Set) {
             this.Items = Array[Item]();
@@ -76,13 +82,27 @@ class AutoChest : ZilchComponent {
         this.Space.TimeSpace.Paused = true;
     }
 
-    function OnMouseExit(event : ViewportMouseEvent)
-    {
+    function OnMouseExit(event : ViewportMouseEvent) {
+        
+        this.Owner.Sprite.CurrentFrame = 0;
+        this.Owner.Sprite.StartFrame = 0;
+        this.Owner.Sprite.SpriteSource = SpriteSource.ChestSpriteRev;
+        
         GlobalVariables.LorePanel.Sprite.Visible = false;
     }
 
-    function OnMouseEnter(event : ViewportMouseEvent)
-    {
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        
+        var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation-this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 3);
+        
+        if(res == null || res.ObjectHit != GlobalVariables.Player) {
+            return;
+        }
+        
+        this.Owner.Sprite.CurrentFrame = 0;
+        this.Owner.Sprite.StartFrame = 0;
+        this.Owner.Sprite.SpriteSource = SpriteSource.ChestSprite;
+        
         GlobalVariables.LorePanel.Sprite.Visible = true;
         GlobalVariables.LorePanel.LorePanel.Text = "This is a chest\nClick to open";
     }

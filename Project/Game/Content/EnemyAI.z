@@ -21,6 +21,9 @@ class EnemyAI : ZilchComponent {
     [Property]
     var ChaseSpeedMultiplier : Real = 2;
     var ViewDirection : Real3 = Real3(0);
+    
+    var Ex : Cog;
+    
     function Initialize(init : CogInitializer) {
         if(GlobalVariables.Enemies == null)
             GlobalVariables.Enemies = Array[Cog]();
@@ -77,6 +80,11 @@ class EnemyAI : ZilchComponent {
                 this.ViewDirection = -this.ViewDirection;
                 this.Timer = this.WaitTime;
             } else {
+                if(this.Ex == null && this.Timer > 0) {
+                    this.Ex = this.Space.CreateAtPosition(Archetype.Exclaim, Real3(0, 1, 0));
+                    this.Ex.AttachTo(this.Owner);
+                    this.Ex.Despawn.Timer = this.WaitTime+0.5;
+                }
                 this.Timer -= event.Dt;
                 if(this.Timer <= 0) {
                     var toSend = Notice();

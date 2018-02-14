@@ -48,6 +48,8 @@ class Item {
     
     var ID : String = "NULLITEM";
     
+    var Auto : Boolean = true;
+    
     //defines how random (inaccurate) the shots are
     var RandAngle : Real = 5;
     

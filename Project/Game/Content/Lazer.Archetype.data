@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Chest",
+		string Name = "Lazer",
 	},
 	Archetyped = 
 	{
-		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		string Name = "5a70035b4f3ed410:Lazer",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [10, 0, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,24 +24,24 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [1, 0, 0, 0.845000029],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a7033740294d239:ChestSpriteRev",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
-		uint StartFrame = 4,
+		uint StartFrame = 0,
 	},
-	Reactive = 
+	Area = 
 	{
-		bool Active = true,
-		bool CaptureMouse = false,
+		Vec2 Size = [0.0199999996, 1],
+		Location Origin = BottomCenter,
 	},
-	AutoChest = 
+	Lazer = 
 	{
 	},
 },

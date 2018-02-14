@@ -433,56 +433,61 @@ class Lasersniper  : Item {
     
     var Aim : Boolean = false;
     
-    var RadAngle : Real = 0;
+    var Lazer : Cog;
     
     function Init () {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
+        this.Auto = false;
         this.MagSize = 30;
         this.Name = "Laser Sniper";
         this.ID = "Sniper";
-        this.DamagePer = 30;
+        this.DamagePer = 50;
         this.FireRate = 0.2; 
         this.AmmoPerShot =25;
         this.RelodTime = 15;
+        this.MaxRange = 30;
+        this.RandAngle = 0;
     }
 
     function UseReleased() {
         
-        if(this.Aim && !(Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse) || Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey))) {
-            
-            this.Aim = false;
-            
-            GlobalVariables.CamSense = 6;
-            
-            Console.WriteLine("Laser Sniper");
-            
-            this.RadAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
+        this.Aim = false;
         
-            var dir = Real3(Math.Cos(this.RadAngle), Math.Sin(this.RadAngle), 0);
-            
-            var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
-            
-            if(res != null && !GlobalVariables.SloMo){
-                Utilities.Damage(res.ObjectHit, this.DamagePer);
-                var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
-                wake.Transform.EulerAngles = Real3(0,0,this.RadAngle+ Math.ToRadians(-90));
-                wake.Transform.Scale = Real3(0.05, res.Distance, 0);
-                wake.Wake.DamagePer = this.DamagePer;
-            }else{
-                var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
-                wake.Transform.EulerAngles = Real3(0,0,this.RadAngle+ Math.ToRadians(-90));
-                wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
-                wake.Wake.DamagePer = this.DamagePer;
-            }
-            
-            Utilities.SendSound(this.SoundDistance);
-            
-            GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
-                
-            }
+        if(this.Lazer != null)
+            this.Lazer.Destroy();
+        
+        GlobalVariables.CamSense = 6;
+        
+        var dir = Math.Normalize(GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - GlobalVariables.Player.Transform.WorldTranslation);
+        
+        var radAngle = Math.ATan2(dir.Y, dir.X);
+        
+        Console.WriteLine("Laser Sniper");
+        
+        radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
+        
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        
+        if(res != null && !GlobalVariables.SloMo){
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }else{
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }
+        
+        Utilities.SendSound(this.SoundDistance);
+        
+        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        
         
     }
     
@@ -497,8 +502,8 @@ class Lasersniper  : Item {
     
     function Use (radAngle : Real) {
         this.Aim = true;
-        this.RadAngle = radAngle;
         GlobalVariables.CamSense = 1.4;
+        this.Lazer = GlobalVariables.GameSpace.CreateAtPosition(Archetype.Lazer, GlobalVariables.Player.Transform.WorldTranslation);
     }
     
 }
@@ -571,6 +576,10 @@ class Potatocannon  : Item {
 //
 class MMS_Sniper  : Item {
     
+    var Aim : Boolean = false;
+    
+    var Lazer : Cog;
+    
     function Init () {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
@@ -583,25 +592,32 @@ class MMS_Sniper  : Item {
         this.FireRate = 0.1; 
         this.AmmoPerShot = 20 ;
         this.RelodTime = 20;
+        this.RandAngle = 0;
+        this.Auto = false;
     }
     
-    function ReturnLore () : String {
-        var lore = Array[String]();
-        lore.Add("a upgraded variant of the laser sniper");
-        lore.Add("have the sight of an eagle, and the power of one too");
-        lore.Add("that moment when you eat too many carrots");
-        lore.Add("omniscience achived");
-        lore.Add("no where to hide");
-        var rand = Random();
-        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
-    }
-    
-    function Use (radAngle : Real) {
-        Console.WriteLine("Radar sniper");
+    function UseReleased() {
+        
+        var toSend = UseRadar();
+        toSend.Timer = 0;
+        GlobalVariables.GameSpace.DispatchEvent(Events.UseRadar, toSend);
+        
+        Utilities.TimeTimerSet(0.05, 0, 1);
+        
+        this.Aim = false;
+        
+        if(this.Lazer != null)
+            this.Lazer.Destroy();
+        
+        GlobalVariables.CamSense = 6;
+        
+        var dir = Math.Normalize(GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - GlobalVariables.Player.Transform.WorldTranslation);
+        
+        var radAngle = Math.ATan2(dir.Y, dir.X);
+        
+        Console.WriteLine("Laser Sniper");
         
         radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
-        
-        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
         
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
@@ -621,6 +637,30 @@ class MMS_Sniper  : Item {
         Utilities.SendSound(this.SoundDistance);
         
         GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        
+        
+    }
+    
+    function ReturnLore () : String {
+        var lore = Array[String]();
+        lore.Add("long range retaliator ");
+        lore.Add("scoped savior");
+        lore.Add("shoot far stick");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {
+        
+        var toSend = UseRadar();
+        toSend.Timer = Real.PositiveMax;
+        GlobalVariables.GameSpace.DispatchEvent(Events.UseRadar, toSend);
+        
+        Utilities.TimeTimerSet(0.05, Real.PositiveMax, 1);
+        
+        this.Aim = true;
+        GlobalVariables.CamSense = 1.4;
+        this.Lazer = GlobalVariables.GameSpace.CreateAtPosition(Archetype.Lazer, GlobalVariables.Player.Transform.WorldTranslation);
     }
     
 }
