@@ -43,6 +43,8 @@ class WeaponDisplay : ZilchComponent
             if(item.MagSize == -1) {
                 this.AmmoText.Text = "INF";
                 this.Progress.Area.Size = Real2(item.Timer / (1/item.FireRate), 1);
+                if(item.Timer < 0)
+                        this.Progress.Area.Size = Real2(0, 1);
             } else {
                 if(item.Reloading) {
                     this.AmmoText.Text = "Reloading... `Math.Round(item.Timer)`";
@@ -50,6 +52,8 @@ class WeaponDisplay : ZilchComponent
                 } else {
                     this.AmmoText.Text = "`item.CurrentMag`/`GlobalVariables.UseWeapon.AmmoCount/item.AmmoPerShot`";
                     this.Progress.Area.Size = Real2(item.Timer / (1/item.FireRate), 1);
+                    if(item.Timer < 0)
+                        this.Progress.Area.Size = Real2(0, 1);
                 }
             }
             

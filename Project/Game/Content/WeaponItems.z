@@ -49,16 +49,19 @@ class Potato : Item {
 //
 class Boomerang : Item {
     
+    var Boomerang : Cog;
+    
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Boomerang;
+        this.GroundSprite = SpriteSource.Boomerang;
         this.Stackable = false;
         this.MagSize = -1;
         this.Name = "Boomerang";
-        this.DamagePer = 2;
-        this.FireRate = 2;
-         
+        this.ID = "Boomerang";
+        this.DamagePer = 10;
+        this.FireRate = -1;
+        this.SoundDistance = 4;
     }
     
     function ReturnLore () : String {
@@ -75,7 +78,15 @@ class Boomerang : Item {
     }
     
     function Use (radAngle : Real) {
-         Console.WriteLine("Boomerang");
+        if(this.Boomerang == null || this.Boomerang.BoomerangScript == null) {
+            this.Boomerang = GlobalVariables.GameSpace.CreateAtPosition(Archetype.Boomerang, GlobalVariables.Player.Transform.WorldTranslation);
+            this.Boomerang.BoomerangScript.StartDir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+            this.Boomerang.BoomerangScript.AngleDir = radAngle;
+            this.Boomerang.BoomerangScript.Damage = this.DamagePer;
+            this.Boomerang.RigidBody.Velocity = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0) * this.Boomerang.BoomerangScript.MovSpeed;
+            this.Boomerang.BoomerangScript.SoundDist = this.SoundDistance;
+            Utilities.SendSound(this.SoundDistance);
+        }
     }
     
 }
@@ -146,15 +157,17 @@ class PlasmaSword : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Sword;
+        this.GroundSprite = SpriteSource.Sword;
         this.Stackable = false;
-        this.MagSize = 1;
+        this.MagSize = 10;
         this.Name = "Plasma Sword";
+        this.ID = "Sword";
         this.DamagePer = 25;
-        this.FireRate = 0.1; 
+        this.FireRate = 2.5;
         this.AmmoPerShot = 2;
-        this.RelodTime = 2; 
+        this.RelodTime = 1;
+        this.SoundDistance = 7;
     }
     
     function ReturnLore () : String {
@@ -167,9 +180,22 @@ class PlasmaSword : Item {
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Laser Sword");
+        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3.5);
+        
+        if(res != null) {
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            if(res.ObjectHit.Health != null) {
+                GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
+                if(res.ObjectHit.EnemyAI != null && !res.ObjectHit.EnemyAI.Suspitious && !res.ObjectHit.EnemyAI.PlayerSpotted) {
+                    Utilities.SendSound(5, res.ObjectHit.Transform.WorldTranslation);
+                    res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
+                    GlobalVariables.Player.PlayerMovment.Freeze(1);
+                }
+            }
+        }
+        Utilities.SendSound(this.SoundDistance);
     }
-    
 }
 //TERRIBLE ASSAULT RIFLE 
 //

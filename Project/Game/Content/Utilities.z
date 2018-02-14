@@ -47,7 +47,9 @@ class Utilities
         ItemID("Saw_Laser"),
         ItemID("MMS_Sniper"),
         ItemID("Sniper"),
-        ItemID("Watch")
+        ItemID("Watch"),
+        ItemID("Sword"),
+        ItemID("Boomerang")
     };
     
     [Static]
@@ -193,6 +195,10 @@ class Utilities
             return MMS_Sniper();
         else if(id == "Watch")
             return Watch();
+        else if(id == "Sword")
+            return PlasmaSword();
+        else if(id == "Boomerang")
+            return Boomerang();
         else
             return null;
         
