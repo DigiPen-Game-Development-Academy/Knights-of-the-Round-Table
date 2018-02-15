@@ -46,6 +46,7 @@ class Commands {
             Commands.Commands.Add(CMD("/zoom",              Commands.Zoom));
             Commands.Commands.Add(CMD("/killall",           Commands.KillEnemies));
             Commands.Commands.Add(CMD("/time",              Commands.Time));
+            Commands.Commands.Add(CMD("/devsaw",            Commands.DevSaw));
             
         }
     }
@@ -115,6 +116,8 @@ class Commands {
             Utilities.ConsoleSend("/killall", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("-sets time scale-", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("/time <time scale>", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-gives Saw Laser with infanate ammo-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/devsaw", Real4(0, 1, 0, 1));
         }
     }
     
@@ -313,6 +316,14 @@ class Commands {
             GlobalVariables.SloMo = false;
         }
         
+    }
+    
+    [Static]
+    function DevSaw (vals : Array[String]) {
+        var saw = SawLaser();
+        saw.Init();
+        saw.MagSize = -1;
+        GlobalVariables.AddInventoryItem(saw);
     }
     
     [Static]

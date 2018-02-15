@@ -378,6 +378,7 @@ class SawLaser  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Sound = SoundCue.Shot;
         this.Stackable = false;
         this.MagSize = 100;
         this.Name = "Saw laser";
@@ -399,8 +400,6 @@ class SawLaser  : Item {
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Saw laser");
-        
         radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
              
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
@@ -439,6 +438,7 @@ class Lasersniper  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Sound = SoundCue.Shot;
         this.Stackable = false;
         this.Auto = false;
         this.MagSize = 30;
@@ -464,8 +464,6 @@ class Lasersniper  : Item {
         var dir = Math.Normalize(GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - GlobalVariables.Player.Transform.WorldTranslation);
         
         var radAngle = Math.ATan2(dir.Y, dir.X);
-        
-        Console.WriteLine("Laser Sniper");
         
         radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
         
