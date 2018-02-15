@@ -66,13 +66,13 @@ class Boomerang : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("kangaroo's worst fear");
-        lore.Add("the weapon from down under");
-        lore.Add("i don't remember what this if\nfor but it will come back to me"); 
-        lore.Add("these things are dangerous");
-        lore.Add("if you can dodge a boomerang you can dodge a bullet");
-        lore.Add("an only childs game of catch");
-        lore.Add("great for removing whale parasites");
+        lore.Add("Kangaroo's worst fear");
+        lore.Add("The weapon from down under");
+        lore.Add("I don't remember what this is for but it will come back to me"); 
+        lore.Add("These things are dangerous!");
+        lore.Add("If you can dodge a boomerang, you can dodge a bullet");
+        lore.Add("An only childs game of catch");
+        lore.Add("Great for removing whale parasites");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -103,7 +103,7 @@ class Plasma_Pistol : Item {
         this.MagSize = 15;
         this.Name = "Plasma pistol";
         this.ID = "Pistol";
-        this.DamagePer = 50;
+        this.DamagePer = 35;
         this.FireRate = 2.5 ;
         this.AmmoPerShot = 1;
         this.RelodTime = 1;
@@ -115,7 +115,7 @@ class Plasma_Pistol : Item {
     function ReturnLore () : String {
         var lore = Array[String]();
         lore.Add("pew pew");
-        lore.Add("a peashooter of unknown origin");
+        lore.Add("A peashooter of unknown origin");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -164,17 +164,17 @@ class PlasmaSword : Item {
         this.Name = "Plasma Sword";
         this.ID = "Sword";
         this.DamagePer = 25;
-        this.FireRate = 2.5;
-        this.AmmoPerShot = 2;
+        this.FireRate = 4;
+        this.AmmoPerShot = 1;
         this.RelodTime = 1;
         this.SoundDistance = 7;
     }
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("hi guys billy maiz here this laser\nsword cuts potatoes easillly");
-        lore.Add("slice and dice");
-        lore.Add("legend has it, this very blade was\nwielded by the legendary darth potater");
+        lore.Add("Hi guys, Billy Mays here, this laser sword cuts potatoes easillly");
+        lore.Add("Slice and dice");
+        lore.Add("Legend has it, this very blade was wielded by the legendary Darth Potater");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -207,10 +207,10 @@ class TerribleAssaultRifle : Item {
         this.GroundSprite = SpriteSource.Icon_Weapon_TRifle;
         this.Stackable = false;
         this.MagSize = 20;
-        this.Name = "ramshackle rifle";
+        this.Name = "Ramshackle Rifle";
         this.ID = "Rifle";
-        this.DamagePer = 25;
-        this.FireRate = 4; 
+        this.DamagePer = 20;
+        this.FireRate = 3.5; 
         this.AmmoPerShot = 4;
         this.RelodTime = 5;
         this.MaxRange = 25;
@@ -218,9 +218,7 @@ class TerribleAssaultRifle : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("not very good assault rifle but\nit will get the job done");
-        lore.Add("terrible all around");
-        lore.Add("why would you use this?");
+        lore.Add("Not very good assault rifle, but it will get the job done");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -265,17 +263,18 @@ class SlugShotgun : Item {
         this.MagSize = 2;
         this.Name = "Shotgun";
         this.ID = "Shotgun";
-        this.DamagePer = 27;
+        this.DamagePer = 50;
         this.FireRate = 2; 
         this.AmmoPerShot = 15;
         this.RelodTime = 8;
+        this.MaxRange = 2.5;
     }
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("texan bb gun");
-        lore.Add("a rather big laser");
-        lore.Add("this is my boom stick");
+        lore.Add("Texan bb gun");
+        lore.Add("A rather big laser");
+        lore.Add("This is my boom stick");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -327,9 +326,9 @@ class Laserbeam : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("the 11 year old extra terrestreal's\nbest friend");
-        lore.Add("im a firin ma lasar baaaaaaaa");
-        lore.Add("wow it  really shoots");
+        lore.Add("The 11 year old extraterrestrial's best friend");
+        lore.Add("Im firin mah laser baaaaaaaa");
+        lore.Add("Wow it  really shoots");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -358,9 +357,9 @@ class StunMissile : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("its shocking how effective this is");
-        lore.Add("where are you going to find ammo for this?");
-        lore.Add("only three percent of people are smart enough\nto shoot this if you can see this call a doctor");
+        lore.Add("Its shocking how effective this is");
+        lore.Add("Where are you going to find ammo for this?");
+        lore.Add("Only three percent of people are smart enough to shoot this, if you can see this call a doctor");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -392,9 +391,9 @@ class SawLaser  : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("you foes will be vanquished as\nfast as your ammo");
-        lore.Add("use your ammo wisely");
-        lore.Add("a weaponized saw");
+        lore.Add("Your foes will be vanquished as fast as your ammo");
+        lore.Add("Use your ammo wisely");
+        lore.Add("A weaponized saw");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -491,9 +490,8 @@ class Lasersniper  : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("long range retaliator ");
-        lore.Add("scoped savior");
-        lore.Add("shoot far stick");
+        lore.Add("Scoped savior");
+        lore.Add("Shoot far stick");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -524,10 +522,10 @@ class Missile  : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("be careful with this thing");
-        lore.Add("use your ammo wisely");
-        lore.Add("biggest boom of them all");
-        lore.Add("arnold schwarzenegger's only possesion");
+        lore.Add("Be careful with this thing");
+        lore.Add("Use your ammo wisely");
+        lore.Add("Biggest boom of them all");
+        lore.Add("Arnold Schwarzenegger's only possesion");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -557,10 +555,10 @@ class Potatocannon  : Item {
     function ReturnLore () : String {
         var lore = Array[String]();
         lore.Add("Irish food processor");
-        lore.Add("you have read the weapon lore");
-        lore.Add("helping hashbrown");
-        lore.Add("alien weapons all around and you chose this...\ngood choice");
-        lore.Add("potatus prime");
+        lore.Add("You have read the weapon lore");
+        lore.Add("Helping hashbrown");
+        lore.Add("Alien weapons all around and you chose this...Naisu.");
+        lore.Add("Potatus Prime");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -641,9 +639,8 @@ class MMS_Sniper  : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("long range retaliator ");
-        lore.Add("scoped savior");
-        lore.Add("shoot far stick");
+        lore.Add("Scoped savior");
+        lore.Add("Shoot far stick");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
