@@ -26,9 +26,17 @@ class UseWeapon : ZilchComponent
 
     function OnKeyUp(event : KeyboardEvent) {
         if(event.Key == GlobalVariables.InputManager.UseWeaponKey) {
-            if(this.PrimarySelected) {
+            if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0) {
+                if(!this.Primary.Auto)
+                    this.Primary.Timer = 1 / this.Primary.FireRate;
+                if(this.Primary.MagSize != -1 && !this.Primary.Auto)
+                    this.Primary.CurrentMag -= 1;
                 this.Primary.UseReleased();
-            } else {
+            } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && this.Secondary.CurrentMag > 0) {
+                if(!this.Secondary.Auto)
+                    this.Secondary.Timer = 1 / this.Secondary.FireRate;
+                if(this.Secondary.MagSize != -1 && !this.Secondary.Auto)
+                    this.Secondary.CurrentMag -= 1;
                 this.Secondary.UseReleased();
             }
             this.Up = true;
@@ -37,9 +45,17 @@ class UseWeapon : ZilchComponent
 
     function OnMouseUp(event : ViewportMouseEvent) {
         if(event.Button == GlobalVariables.InputManager.UseWeaponMouse) {
-            if(this.PrimarySelected) {
+            if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0) {
+                if(!this.Primary.Auto)
+                    this.Primary.Timer = 1 / this.Primary.FireRate;
+                if(this.Primary.MagSize != -1 && !this.Primary.Auto)
+                    this.Primary.CurrentMag -= 1;
                 this.Primary.UseReleased();
-            } else {
+            } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && this.Secondary.CurrentMag > 0) {
+                if(!this.Secondary.Auto)
+                    this.Secondary.Timer = 1 / this.Secondary.FireRate;
+                if(this.Secondary.MagSize != -1 && !this.Secondary.Auto)
+                    this.Secondary.CurrentMag -= 1;
                 this.Secondary.UseReleased();
             }
             this.Up = true;
@@ -124,14 +140,16 @@ class UseWeapon : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey) || Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse)) {
             if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0) {
                 this.Up = false;
-                this.Primary.Timer = 1 / this.Primary.FireRate;
-                if(this.Primary.MagSize != -1)
+                if(this.Primary.Auto)
+                    this.Primary.Timer = 1 / this.Primary.FireRate;
+                if(this.Primary.MagSize != -1 && this.Primary.Auto)
                     this.Primary.CurrentMag -= 1;
                 this.Primary.Use(angle);
             } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && this.Secondary.CurrentMag > 0) {
                 this.Up = false;
-                this.Secondary.Timer = 1 / this.Secondary.FireRate;
-                if(this.Secondary.MagSize != -1)
+                if(this.Secondary.Auto)
+                    this.Secondary.Timer = 1 / this.Secondary.FireRate;
+                if(this.Secondary.MagSize != -1 && this.Secondary.Auto)
                     this.Secondary.CurrentMag -= 1;
                 this.Secondary.Use(angle);
             }

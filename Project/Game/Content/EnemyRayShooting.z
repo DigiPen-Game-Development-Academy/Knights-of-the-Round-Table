@@ -57,7 +57,6 @@ class EnemyRayShooting : ZilchComponent {
                 if(!this.Reloading && this.Timer <= 0) {
                     this.Shoot(angle);
                     this.EnemyAI.ViewDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
-                    this.Owner.EnemySprite.LDir = Real3(Math.Cos(angle), Math.Sin(angle), 0);
                     this.Timer = 1/this.FireRate;
                     --this.CurrentMag;
                 }

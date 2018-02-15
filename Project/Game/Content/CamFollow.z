@@ -1,9 +1,16 @@
 class CamFollow : ZilchComponent {
+    var Spin : Boolean = false;
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.Spin) {
+            this.Owner.Transform.SetEulerAnglesXYZ(0, 0, this.Owner.Transform.EulerAngles.Z + event.Dt*3);
+        } else {
+            this.Owner.Transform.SetEulerAnglesXYZ(0, 0, 0);
+        }
         
         var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
         this.Owner.Transform.WorldTranslation = GlobalVariables.Player.Transform.WorldTranslation + (mousePos - GlobalVariables.Player.Transform.WorldTranslation)/GlobalVariables.CamSense;
