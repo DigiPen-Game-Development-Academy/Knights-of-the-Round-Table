@@ -8,7 +8,7 @@ class Potato : Item {
         this.MagSize = -1;
         this.Name = "Potato";
         this.ID = "Potato";
-        this.DamagePer = 3;
+        this.DamagePer = 5;
         this.FireRate = 2.5;
         
     }
@@ -62,7 +62,7 @@ class Boomerang : Item {
         this.MagSize = -1;
         this.Name = "Boomerang";
         this.ID = "Boomerang";
-        this.DamagePer = 10;
+        this.DamagePer = 20;
         this.FireRate = -1;
         this.SoundDistance = 4;
     }
@@ -112,7 +112,7 @@ class Plasma_Pistol : Item {
         this.RelodTime = 1;
         this.Sound = SoundCue.Shot;
         this.SoundDistance = 10;
-        this.MaxRange = 20;
+        this.MaxRange = 6;
     }
     
     function ReturnLore () : String {
@@ -216,7 +216,7 @@ class TerribleAssaultRifle : Item {
         this.FireRate = 3.5; 
         this.AmmoPerShot = 4;
         this.RelodTime = 5;
-        this.MaxRange = 25;
+        this.MaxRange = 8;
     }
     
     function ReturnLore () : String {
@@ -386,8 +386,8 @@ class SawLaser  : Item {
         this.Name = "Saw laser";
         this.ID = "Saw Laser";
         this.DamagePer = 30;
-        this.FireRate = 15; 
-        this.AmmoPerShot = 2;
+        this.FireRate = 10; 
+        this.AmmoPerShot = 3;
         this.RelodTime = 15;
         this.MaxRange = 10;
     }
@@ -446,10 +446,10 @@ class Lasersniper  : Item {
         this.MagSize = 30;
         this.Name = "Laser Sniper";
         this.ID = "Sniper";
-        this.DamagePer = 50;
-        this.FireRate = 0.2; 
-        this.AmmoPerShot =25;
-        this.RelodTime = 15;
+        this.DamagePer = 100;
+        this.FireRate = 0.1; 
+        this.AmmoPerShot = 25;
+        this.RelodTime = 10;
         this.MaxRange = 30;
         this.RandAngle = 0;
     }
@@ -587,10 +587,10 @@ class MMS_Sniper  : Item {
         this.MagSize = 10;
         this.Name = "Sniper";
         this.ID = "MMS_Sniper";
-        this.DamagePer = 70;
+        this.DamagePer = 150;
         this.FireRate = 0.1; 
-        this.AmmoPerShot = 20 ;
-        this.RelodTime = 20;
+        this.AmmoPerShot = 20;
+        this.RelodTime = 5;
         this.RandAngle = 0;
         this.Auto = false;
     }
