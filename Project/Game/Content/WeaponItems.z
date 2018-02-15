@@ -213,7 +213,7 @@ class TerribleAssaultRifle : Item {
         this.FireRate = 3.5; 
         this.AmmoPerShot = 4;
         this.RelodTime = 5;
-        this.MaxRange = 7;
+        this.MaxRange = 8;
     }
     
     function ReturnLore () : String {
