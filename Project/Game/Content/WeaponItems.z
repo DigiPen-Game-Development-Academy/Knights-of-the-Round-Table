@@ -59,7 +59,7 @@ class Boomerang : Item {
         this.MagSize = -1;
         this.Name = "Boomerang";
         this.ID = "Boomerang";
-        this.DamagePer = 10;
+        this.DamagePer = 20;
         this.FireRate = -1;
         this.SoundDistance = 4;
     }
@@ -109,7 +109,7 @@ class Plasma_Pistol : Item {
         this.RelodTime = 1;
         this.Sound = SoundCue.Shot;
         this.SoundDistance = 10;
-        this.MaxRange = 20;
+        this.MaxRange = 6;
     }
     
     function ReturnLore () : String {
