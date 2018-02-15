@@ -12,7 +12,7 @@ class CamFollow : ZilchComponent {
             this.Owner.Transform.SetEulerAnglesXYZ(0, 0, this.Owner.Transform.EulerAngles.Z + event.Dt*3);
             if(this.Timer <= 0) {
                 this.Space.SoundSpace.PlayCue(SoundCue.Do_it);
-                this.Timer = 1;
+                this.Timer = 0.5;
             }
         } else {
             this.Owner.Transform.SetEulerAnglesXYZ(0, 0, 0);
