@@ -103,7 +103,7 @@ class Plasma_Pistol : Item {
         this.MagSize = 15;
         this.Name = "Plasma pistol";
         this.ID = "Pistol";
-        this.DamagePer = 50;
+        this.DamagePer = 35;
         this.FireRate = 2.5 ;
         this.AmmoPerShot = 1;
         this.RelodTime = 1;
@@ -115,7 +115,7 @@ class Plasma_Pistol : Item {
     function ReturnLore () : String {
         var lore = Array[String]();
         lore.Add("pew pew");
-        lore.Add("a peashooter of unknown origin");
+        lore.Add("A peashooter of unknown origin");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -172,9 +172,9 @@ class PlasmaSword : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("hi guys billy maiz here this laser\nsword cuts potatoes easillly");
-        lore.Add("slice and dice");
-        lore.Add("legend has it, this very blade was\nwielded by the legendary darth potater");
+        lore.Add("Hi guys, Billy Mays here, this laser sword cuts potatoes easillly");
+        lore.Add("Slice and dice");
+        lore.Add("Legend has it, this very blade was wielded by the legendary Darth Potater");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -207,10 +207,10 @@ class TerribleAssaultRifle : Item {
         this.GroundSprite = SpriteSource.Icon_Weapon_TRifle;
         this.Stackable = false;
         this.MagSize = 20;
-        this.Name = "ramshackle rifle";
+        this.Name = "Ramshackle Rifle";
         this.ID = "Rifle";
-        this.DamagePer = 25;
-        this.FireRate = 4; 
+        this.DamagePer = 20;
+        this.FireRate = 3.5; 
         this.AmmoPerShot = 4;
         this.RelodTime = 5;
         this.MaxRange = 25;
@@ -218,9 +218,7 @@ class TerribleAssaultRifle : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("not very good assault rifle but\nit will get the job done");
-        lore.Add("terrible all around");
-        lore.Add("why would you use this?");
+        lore.Add("Not very good assault rifle, but it will get the job done");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
