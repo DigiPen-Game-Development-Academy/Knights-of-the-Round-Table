@@ -66,13 +66,13 @@ class Boomerang : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("kangaroo's worst fear");
-        lore.Add("the weapon from down under");
-        lore.Add("i don't remember what this if\nfor but it will come back to me"); 
-        lore.Add("these things are dangerous");
-        lore.Add("if you can dodge a boomerang you can dodge a bullet");
-        lore.Add("an only childs game of catch");
-        lore.Add("great for removing whale parasites");
+        lore.Add("Kangaroo's worst fear");
+        lore.Add("The weapon from down under");
+        lore.Add("I don't remember what this is for but it will come back to me"); 
+        lore.Add("These things are dangerous!");
+        lore.Add("If you can dodge a boomerang, you can dodge a bullet");
+        lore.Add("An only childs game of catch");
+        lore.Add("Great for removing whale parasites");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
