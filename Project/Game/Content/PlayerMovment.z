@@ -3,6 +3,9 @@
 class PlayerMovment : ZilchComponent
 {
     
+    [Dependency]
+    var Sprite : PlayerSprites;
+    
     [Property]
     var MoveSpeed : Real = 10;
     
@@ -40,6 +43,9 @@ class PlayerMovment : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(inMngr.South)) vel +=  ((Real3( 0, -1, 0)) * this.MoveSpeed);
         if(Zero.Keyboard.KeyIsDown(inMngr.West)) vel +=  ((Real3(-1,  0, 0)) * this.MoveSpeed);
         if(Zero.Keyboard.KeyIsDown(inMngr.East)) vel +=  ((Real3( 1,  0, 0)) * this.MoveSpeed);
+        
+        if(vel != Real3(0))
+            this.Sprite.Dir = vel;
         
         if(vel != Real3(0))
             this.Dir = Math.Normalize(vel);

@@ -3,6 +3,9 @@
 class UseWeapon : ZilchComponent
 {
     
+    [Dependency]
+    var Sprite : PlayerSprites;
+    
     var Primary : Item;
     var Secondary : Item;
     var Utility : Item;
@@ -12,6 +15,9 @@ class UseWeapon : ZilchComponent
     var PrimarySelected : Boolean = true;
     
     var Up : Boolean = true;
+    
+    [Property]
+    var AnimLockTime : Real = 0.5;
     
     function Initialize(init : CogInitializer) {
         this.Primary = Fists();
@@ -69,6 +75,10 @@ class UseWeapon : ZilchComponent
         var vec = mousePos - this.Owner.Transform.WorldTranslation;
         
         var angle = Math.ATan2(vec.Y, vec.X);
+        
+        if(!this.Up) {
+            this.Sprite.LockDir(vec, this.AnimLockTime);
+        }
         
         if(this.PrimarySelected) {
             if(!this.Primary.Auto && this.Up) {
@@ -145,12 +155,14 @@ class UseWeapon : ZilchComponent
                 if(this.Primary.MagSize != -1 && this.Primary.Auto)
                     this.Primary.CurrentMag -= 1;
                 this.Primary.Use(angle);
+                this.Sprite.LockDir(vec, this.AnimLockTime);
             } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && this.Secondary.CurrentMag > 0) {
                 this.Up = false;
                 if(this.Secondary.Auto)
                     this.Secondary.Timer = 1 / this.Secondary.FireRate;
                 if(this.Secondary.MagSize != -1 && this.Secondary.Auto)
                     this.Secondary.CurrentMag -= 1;
+                this.Sprite.LockDir(vec, this.AnimLockTime);
                 this.Secondary.Use(angle);
             }
             
