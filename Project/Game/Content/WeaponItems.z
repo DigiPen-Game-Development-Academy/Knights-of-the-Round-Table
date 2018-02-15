@@ -263,17 +263,18 @@ class SlugShotgun : Item {
         this.MagSize = 2;
         this.Name = "Shotgun";
         this.ID = "Shotgun";
-        this.DamagePer = 27;
+        this.DamagePer = 50;
         this.FireRate = 2; 
         this.AmmoPerShot = 15;
         this.RelodTime = 8;
+        this.MaxRange = 2.5;
     }
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("texan bb gun");
-        lore.Add("a rather big laser");
-        lore.Add("this is my boom stick");
+        lore.Add("Texan bb gun");
+        lore.Add("A rather big laser");
+        lore.Add("This is my boom stick");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -325,9 +326,9 @@ class Laserbeam : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("the 11 year old extra terrestreal's\nbest friend");
-        lore.Add("im a firin ma lasar baaaaaaaa");
-        lore.Add("wow it  really shoots");
+        lore.Add("The 11 year old extraterrestrial's best friend");
+        lore.Add("Im firin mah laser baaaaaaaa");
+        lore.Add("Wow it  really shoots");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -356,9 +357,9 @@ class StunMissile : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("its shocking how effective this is");
-        lore.Add("where are you going to find ammo for this?");
-        lore.Add("only three percent of people are smart enough\nto shoot this if you can see this call a doctor");
+        lore.Add("Its shocking how effective this is");
+        lore.Add("Where are you going to find ammo for this?");
+        lore.Add("Only three percent of people are smart enough to shoot this, if you can see this call a doctor");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
