@@ -1,0 +1,30 @@
+class TimeTimer : ZilchComponent {
+    var Timer : Real = 0;
+    var Once : Boolean = false;
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        this.Timer -= event.Dt;
+        if(this.Once && this.Timer <= 0) {
+            this.Once = false;
+            this.Space.TimeSpace.TimeScale = 1;
+            GlobalVariables.Player.PlayerMovment.MoveSpeed = GlobalVariables.Player.PlayerMovment.StartSpd;
+            GlobalVariables.SloMo = false;
+        }
+    }
+    
+    function SetTimer (timeScale : Real, time : Real, movSpd : Real) {
+        
+        GlobalVariables.Player.PlayerMovment.MoveSpeed *= movSpd;
+        this.Once = true;
+        this.Timer = time;
+        this.Space.TimeSpace.TimeScale = timeScale;
+        if(timeScale < 1)
+            GlobalVariables.SloMo = true;
+        
+    }
+    
+}

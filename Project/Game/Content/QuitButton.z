@@ -1,0 +1,11 @@
+class QuitButton : ZilchComponent {
+    [Dependency]
+    var Button : Button;
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent) {
+        this.GameSession.Quit();
+    }
+}

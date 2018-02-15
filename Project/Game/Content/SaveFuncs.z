@@ -6,19 +6,21 @@ class SaveFuncs {
             return "";
         str = ";";
         foreach (var e in enemies) {
-            str = "`str`,`e.Name`";
-            str = "`str`,`e.Transform.WorldTranslation.X`";
-            str = "`str`,`e.Transform.WorldTranslation.Y`";
-            str = "`str`,`e.Transform.WorldTranslation.Z`";
-            str = "`str`,`e.EnemyAI.Suspitious`";
-            str = "`str`,`e.EnemyAI.PlayerSpotted`";
-            str = "`str`,`e.EnemyAI.ViewDirection.X`";
-            str = "`str`,`e.EnemyAI.ViewDirection.Y`";
-            str = "`str`,`e.EnemyAI.Timer`";
-            str = "`str`,`e.EnemyAI.GuardPos.X`";
-            str = "`str`,`e.EnemyAI.GuardPos.Y`";
-            str = "`str`,`e.Health.CurrentHealth`";
-            str = "`str`,;";
+            if(e != null) {
+                str = "`str`,`e.Name`";
+                str = "`str`,`e.Transform.WorldTranslation.X`";
+                str = "`str`,`e.Transform.WorldTranslation.Y`";
+                str = "`str`,`e.Transform.WorldTranslation.Z`";
+                str = "`str`,`e.EnemyAI.Suspitious`";
+                str = "`str`,`e.EnemyAI.PlayerSpotted`";
+                str = "`str`,`e.EnemyAI.ViewDirection.X`";
+                str = "`str`,`e.EnemyAI.ViewDirection.Y`";
+                str = "`str`,`e.EnemyAI.Timer`";
+                str = "`str`,`e.EnemyAI.GuardPos.X`";
+                str = "`str`,`e.EnemyAI.GuardPos.Y`";
+                str = "`str`,`e.Health.CurrentHealth`";
+                str = "`str`,;";
+            }
         }
         str = "`str`";
         Console.WriteLine(str);

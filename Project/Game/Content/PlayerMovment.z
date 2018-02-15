@@ -9,14 +9,28 @@ class PlayerMovment : ZilchComponent
     [Property]
     var SprintMultiplier : Real = 2;
     
+    [Property]
+    var SprintSoundDist : Real = 5;
+    
     var Dir : Real3 = Real3(0);
     
+    var FreezeTimer : Real = 0;
+    
+    var StartSpd : Real;
+    
     function Initialize(init : CogInitializer) {
+        this.StartSpd = this.MoveSpeed;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         GlobalVariables.Player = this.Owner;
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.FreezeTimer > 0) {
+            this.FreezeTimer -= event.Dt;
+            this.Owner.RigidBody.Velocity = Real3(0);
+            return;
+        }
         
         var vel = Real3(0);
         
@@ -30,9 +44,17 @@ class PlayerMovment : ZilchComponent
         if(vel != Real3(0))
             this.Dir = Math.Normalize(vel);
         
-        if(Zero.Keyboard.KeyIsDown(Keys.Shift)) vel *= this.SprintMultiplier;
+        if(Zero.Keyboard.KeyIsDown(Keys.Shift)){
+            vel *= this.SprintMultiplier;
+            Utilities.SendSound(this.SprintSoundDist);
+        }
         
         this.Owner.RigidBody.Velocity = vel;
         
     }
+    
+    function Freeze (time : Real) {
+        this.FreezeTimer = time;
+    }
+    
 }

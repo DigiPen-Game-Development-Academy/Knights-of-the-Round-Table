@@ -26,7 +26,8 @@ class Utilities
     /*Enemy Auto-Complete Array*/
     [Static]
     var EnemiesIDS : Array[EnemyID] = Array[EnemyID](){
-        EnemyID(Archetype.Enemy_Rusher)
+        EnemyID(Archetype.Enemy_Rusher),
+        EnemyID(Archetype.Enemy_GI_Pistol)
     };
     
     /*Item Auto-Compete Array*/
@@ -40,7 +41,15 @@ class Utilities
         ItemID("Test"),
         ItemID("Test2"),
         ItemID("Pistol"),
-        ItemID("Radar")
+        ItemID("Radar"),
+        ItemID("Rifle"),
+        ItemID("Shotgun"),
+        ItemID("Saw_Laser"),
+        ItemID("MMS_Sniper"),
+        ItemID("Sniper"),
+        ItemID("Watch"),
+        ItemID("Sword"),
+        ItemID("Boomerang")
     };
     
     [Static]
@@ -145,6 +154,12 @@ class Utilities
         
     }
     
+    [Static]
+    function TimeTimerSet (timeScale : Real, time : Real, movSpd : Real) {
+        
+        GlobalVariables.GameSpace.LevelSettings.TimeTimer.SetTimer(timeScale, time, movSpd);
+        
+    }
     
     [Static]
     function ItemFromID(id : String) : Item {
@@ -168,6 +183,22 @@ class Utilities
             return Plasma_Pistol();
         else if(id == "Radar")
             return Radar();
+        else if(id == "Rifle")
+            return TerribleAssaultRifle();
+        else if(id == "Shotgun")
+            return SlugShotgun();
+        else if(id == "Saw_Laser")
+            return SawLaser();
+        else if(id == "Sniper")
+            return Lasersniper();
+        else if(id == "MMS_Sniper")
+            return MMS_Sniper();
+        else if(id == "Watch")
+            return Watch();
+        else if(id == "Sword")
+            return PlasmaSword();
+        else if(id == "Boomerang")
+            return Boomerang();
         else
             return null;
         

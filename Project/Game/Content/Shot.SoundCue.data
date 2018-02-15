@@ -18,8 +18,8 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5a84cbaca2faa04e:Shot",
-			string GeneratedSoundName = "",
+			string SoundName = "5a76ad046e48a2d3:Saw_laser_Sounds",
+			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,

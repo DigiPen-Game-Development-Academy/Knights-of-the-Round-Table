@@ -15,30 +15,33 @@ class Potato : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("a generic frozen potato");
-        lore.Add("ye olde potat");
-        lore.Add("the irish dream");
-        lore.Add("the United states population consumes 1.5 billion\npounds of potatoes per year");
-        lore.Add("the potatoe's allegiance is with you");
-        lore.Add("legend says that four large lifeforms killed by\nthis potato will award the user with a legendary weapon");
-        lore.Add("every year potatoes are gruesomely fried into fries,\nthis cruelty needs to stop.\nsupport the no potato left behind initiative");
+        lore.Add("A generic frozen potato");
+        lore.Add("Ye olde potat");
+        lore.Add("The Irish dream");
+        lore.Add("The United States population consumes 1.5 billion pounds of potatoes per year");
+        lore.Add("The potatoe's allegiance is with you");
+        lore.Add("Legend says that four large lifeforms killed by this potato will reward the user with a legendary weapon");
+        lore.Add("Every year potatoes are gruesomely turned into fries,this cruelty needs to stop. Support the no potato left behind initiative");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
     
     function Use (radAngle : Real) {
-        var contacts = GlobalVariables.Player.BoxCollider.Contacts;
-        GlobalVariables.Player.PlayerMovment.Dir = Math.Normalize(GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - GlobalVariables.Player.Transform.WorldTranslation);
-        foreach (var contact in contacts) {
-            var dot = Math.Dot(Math.Normalize(contact.OtherObject.Transform.WorldTranslation - GlobalVariables.Player.Transform.WorldTranslation), Math.Normalize(GlobalVariables.Player.PlayerMovment.Dir));
-            var angle = Math.ACos(dot);
-            if(angle <= Math.ToRadians(45)) {
-                var toSend = Damage();
-                toSend.Damage = this.DamagePer;
-                contact.OtherObject.DispatchEvent(Events.Damage, toSend);
+        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3);
+        
+        if(res != null) {
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            if(res.ObjectHit.Health != null) {
+                GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
+                if(res.ObjectHit.EnemyAI != null && !res.ObjectHit.EnemyAI.Suspitious && !res.ObjectHit.EnemyAI.PlayerSpotted) {
+                    Utilities.SendSound(5, res.ObjectHit.Transform.WorldTranslation);
+                    res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
+                    GlobalVariables.Player.PlayerMovment.Freeze(1);
+                }
             }
-            
         }
+        
     }
     
 }
@@ -46,33 +49,44 @@ class Potato : Item {
 //
 class Boomerang : Item {
     
+    var Boomerang : Cog;
+    
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Boomerang;
+        this.GroundSprite = SpriteSource.Boomerang;
         this.Stackable = false;
         this.MagSize = -1;
         this.Name = "Boomerang";
-        this.DamagePer = 2;
-        this.FireRate = 2;
-         
+        this.ID = "Boomerang";
+        this.DamagePer = 10;
+        this.FireRate = -1;
+        this.SoundDistance = 4;
     }
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("kangaroo's worst fear");
-        lore.Add("the weapon from down under");
-        lore.Add("i don't remember what this if\nfor but it will come back to me"); 
-        lore.Add("these things are dangerous");
-        lore.Add("if you can dodge a boomerang you can dodge a bullet");
-        lore.Add("an only childs game of catch");
-        lore.Add("great for removing whale parasites");
+        lore.Add("Kangaroo's worst fear");
+        lore.Add("The weapon from down under");
+        lore.Add("I don't remember what this is for but it will come back to me"); 
+        lore.Add("These things are dangerous!");
+        lore.Add("If you can dodge a boomerang, you can dodge a bullet");
+        lore.Add("An only childs game of catch");
+        lore.Add("Great for removing whale parasites");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
     
     function Use (radAngle : Real) {
-         Console.WriteLine("Boomerang");
+        if(this.Boomerang == null || this.Boomerang.BoomerangScript == null) {
+            this.Boomerang = GlobalVariables.GameSpace.CreateAtPosition(Archetype.Boomerang, GlobalVariables.Player.Transform.WorldTranslation);
+            this.Boomerang.BoomerangScript.StartDir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+            this.Boomerang.BoomerangScript.AngleDir = radAngle;
+            this.Boomerang.BoomerangScript.Damage = this.DamagePer;
+            this.Boomerang.RigidBody.Velocity = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0) * this.Boomerang.BoomerangScript.MovSpeed;
+            this.Boomerang.BoomerangScript.SoundDist = this.SoundDistance;
+            Utilities.SendSound(this.SoundDistance);
+        }
     }
     
 }
@@ -89,7 +103,7 @@ class Plasma_Pistol : Item {
         this.MagSize = 15;
         this.Name = "Plasma pistol";
         this.ID = "Pistol";
-        this.DamagePer = 50;
+        this.DamagePer = 35;
         this.FireRate = 2.5 ;
         this.AmmoPerShot = 1;
         this.RelodTime = 1;
@@ -101,7 +115,7 @@ class Plasma_Pistol : Item {
     function ReturnLore () : String {
         var lore = Array[String]();
         lore.Add("pew pew");
-        lore.Add("a peashooter of unknown origin");
+        lore.Add("A peashooter of unknown origin");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -109,19 +123,23 @@ class Plasma_Pistol : Item {
     function Use (radAngle : Real) {
         Console.WriteLine("Plasma Pistol");
         
+        radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
+        
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
         
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
-        if(res != null){
+        if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer);
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }else{
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
         }
         
         Utilities.SendSound(this.SoundDistance);
@@ -138,31 +156,46 @@ class Plasma_Pistol : Item {
 class PlasmaSword : Item {
     
     function Init () {
-         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Type = ItemType.Weapon;
+        this.Icon = SpriteSource.Sword;
+        this.GroundSprite = SpriteSource.Sword;
         this.Stackable = false;
-        this.MagSize = 1;
-        this.Name = "Plasma_Sword";
+        this.MagSize = 10;
+        this.Name = "Plasma Sword";
+        this.ID = "Sword";
         this.DamagePer = 25;
-        this.FireRate = 0.1; 
+        this.FireRate = 2.5;
         this.AmmoPerShot = 2;
-        this.RelodTime = 2; 
+        this.RelodTime = 1;
+        this.SoundDistance = 7;
     }
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("hi guys billy maiz here this laser\nsword cuts potatoes easillly");
-        lore.Add("slice and dice");
-        lore.Add("legend has it, this very blade was\nwielded by the legendary darth potater");
+        lore.Add("Hi guys, Billy Mays here, this laser sword cuts potatoes easillly");
+        lore.Add("Slice and dice");
+        lore.Add("Legend has it, this very blade was wielded by the legendary Darth Potater");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Laser Sword");
+        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3.5);
+        
+        if(res != null) {
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            if(res.ObjectHit.Health != null) {
+                GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
+                if(res.ObjectHit.EnemyAI != null && !res.ObjectHit.EnemyAI.Suspitious && !res.ObjectHit.EnemyAI.PlayerSpotted) {
+                    Utilities.SendSound(5, res.ObjectHit.Transform.WorldTranslation);
+                    res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
+                    GlobalVariables.Player.PlayerMovment.Freeze(1);
+                }
+            }
+        }
+        Utilities.SendSound(this.SoundDistance);
     }
-    
 }
 //TERRIBLE ASSAULT RIFLE 
 //
@@ -170,28 +203,51 @@ class TerribleAssaultRifle : Item {
     
     function Init () {
          this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Icon_Weapon_TRifle;
+        this.GroundSprite = SpriteSource.Icon_Weapon_TRifle;
         this.Stackable = false;
-        this.MagSize = 30;
-        this.Name = "Weathered alien rifle";
-        this.DamagePer = 2;
-        this.FireRate = 0.25; 
-        this.AmmoPerShot = 1;
-        this.RelodTime = 3;
+        this.MagSize = 20;
+        this.Name = "Ramshackle Rifle";
+        this.ID = "Rifle";
+        this.DamagePer = 20;
+        this.FireRate = 3.5; 
+        this.AmmoPerShot = 4;
+        this.RelodTime = 5;
+        this.MaxRange = 25;
     }
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("not very good assault rifle but\nit will get the job done");
-        lore.Add("terrible all around");
-        lore.Add("why would you use this?");
+        lore.Add("Not very good assault rifle, but it will get the job done");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
     
     function Use (radAngle : Real) {
         Console.WriteLine("weathered laser rifle");
+        
+        radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
+        
+        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+        
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        
+        if(res != null && !GlobalVariables.SloMo){
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }else{
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }
+        
+        Utilities.SendSound(this.SoundDistance);
+        
+        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
     }
     
 }
@@ -206,23 +262,48 @@ class SlugShotgun : Item {
         this.Stackable = false;
         this.MagSize = 2;
         this.Name = "Shotgun";
-        this.DamagePer = 27;
+        this.ID = "Shotgun";
+        this.DamagePer = 50;
         this.FireRate = 2; 
         this.AmmoPerShot = 15;
         this.RelodTime = 8;
+        this.MaxRange = 2.5;
     }
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("texan bb gun");
-        lore.Add("a rather big laser");
-        lore.Add("this is my boom stick");
+        lore.Add("Texan bb gun");
+        lore.Add("A rather big laser");
+        lore.Add("This is my boom stick");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
     
     function Use (radAngle : Real) {
         Console.WriteLine("Shotgun");
+        
+        radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
+        
+        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+        
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        
+        if(res != null && !GlobalVariables.SloMo){
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }else{
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }
+        
+        Utilities.SendSound(this.SoundDistance);
+        
+        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
     }
     
 }
@@ -245,9 +326,9 @@ class Laserbeam : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("the 11 year old extra terrestreal's\nbest friend");
-        lore.Add("im a firin ma lasar baaaaaaaa");
-        lore.Add("wow it  really shoots");
+        lore.Add("The 11 year old extraterrestrial's best friend");
+        lore.Add("Im firin mah laser baaaaaaaa");
+        lore.Add("Wow it  really shoots");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -276,9 +357,9 @@ class StunMissile : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("its shocking how effective this is");
-        lore.Add("where are you going to find ammo for this?");
-        lore.Add("only three percent of people are smart enough\nto shoot this if you can see this call a doctor");
+        lore.Add("Its shocking how effective this is");
+        lore.Add("Where are you going to find ammo for this?");
+        lore.Add("Only three percent of people are smart enough to shoot this, if you can see this call a doctor");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -296,26 +377,50 @@ class SawLaser  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Sound = SoundCue.Shot;
         this.Stackable = false;
-        this.MagSize = 50;
-        this.Name = "Saw_laser";
-        this.DamagePer = 5;
-        this.FireRate = 0.09; 
-        this.AmmoPerShot = 1;
-        this.RelodTime = 10;
+        this.MagSize = 100;
+        this.Name = "Saw laser";
+        this.ID = "Saw Laser";
+        this.DamagePer = 30;
+        this.FireRate = 15; 
+        this.AmmoPerShot = 2;
+        this.RelodTime = 15;
+        this.MaxRange = 10;
     }
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("you foes will be vanquished as\nfast as your ammo");
-        lore.Add("use your ammo wisely");
-        lore.Add("a weaponized saw");
+        lore.Add("Your foes will be vanquished as fast as your ammo");
+        lore.Add("Use your ammo wisely");
+        lore.Add("A weaponized saw");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
     
     function Use (radAngle : Real) {
-             Console.WriteLine("Saw laser");   
+        radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
+             
+        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+        
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        
+        if(res != null && !GlobalVariables.SloMo){
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }else{
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }
+        
+        Utilities.SendSound(this.SoundDistance);
+        
+        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
 
     }
     
@@ -324,30 +429,77 @@ class SawLaser  : Item {
 //
 class Lasersniper  : Item {
     
+    var Aim : Boolean = false;
+    
+    var Lazer : Cog;
+    
     function Init () {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Sound = SoundCue.Shot;
         this.Stackable = false;
+        this.Auto = false;
         this.MagSize = 30;
-        this.Name = "Laser_Sniper";
-        this.DamagePer = 30;
+        this.Name = "Laser Sniper";
+        this.ID = "Sniper";
+        this.DamagePer = 50;
         this.FireRate = 0.2; 
         this.AmmoPerShot =25;
         this.RelodTime = 15;
+        this.MaxRange = 30;
+        this.RandAngle = 0;
+    }
+
+    function UseReleased() {
+        
+        this.Aim = false;
+        
+        if(this.Lazer != null)
+            this.Lazer.Destroy();
+        
+        GlobalVariables.CamSense = 6;
+        
+        var dir = Math.Normalize(GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - GlobalVariables.Player.Transform.WorldTranslation);
+        
+        var radAngle = Math.ATan2(dir.Y, dir.X);
+        
+        radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
+        
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        
+        if(res != null && !GlobalVariables.SloMo){
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }else{
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }
+        
+        Utilities.SendSound(this.SoundDistance);
+        
+        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        
+        
     }
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("long range retaliator ");
-        lore.Add("scoped savior");
-        lore.Add("shoot far stick");
+        lore.Add("Scoped savior");
+        lore.Add("Shoot far stick");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Laser Sniper");  
+        this.Aim = true;
+        GlobalVariables.CamSense = 1.4;
+        this.Lazer = GlobalVariables.GameSpace.CreateAtPosition(Archetype.Lazer, GlobalVariables.Player.Transform.WorldTranslation);
     }
     
 }
@@ -370,10 +522,10 @@ class Missile  : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("be careful with this thing");
-        lore.Add("use your ammo wisely");
-        lore.Add("biggest boom of them all");
-        lore.Add("arnold schwarzenegger's only possesion");
+        lore.Add("Be careful with this thing");
+        lore.Add("Use your ammo wisely");
+        lore.Add("Biggest boom of them all");
+        lore.Add("Arnold Schwarzenegger's only possesion");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -403,10 +555,10 @@ class Potatocannon  : Item {
     function ReturnLore () : String {
         var lore = Array[String]();
         lore.Add("Irish food processor");
-        lore.Add("you have read the weapon lore");
-        lore.Add("helping hashbrown");
-        lore.Add("alien weapons all around and you chose this...\ngood choice");
-        lore.Add("potatus prime");
+        lore.Add("You have read the weapon lore");
+        lore.Add("Helping hashbrown");
+        lore.Add("Alien weapons all around and you chose this...Naisu.");
+        lore.Add("Potatus Prime");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -420,6 +572,10 @@ class Potatocannon  : Item {
 //
 class MMS_Sniper  : Item {
     
+    var Aim : Boolean = false;
+    
+    var Lazer : Cog;
+    
     function Init () {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
@@ -427,25 +583,79 @@ class MMS_Sniper  : Item {
         this.Stackable = false;
         this.MagSize = 10;
         this.Name = "Sniper";
+        this.ID = "MMS_Sniper";
         this.DamagePer = 70;
         this.FireRate = 0.1; 
         this.AmmoPerShot = 20 ;
         this.RelodTime = 20;
+        this.RandAngle = 0;
+        this.Auto = false;
+    }
+    
+    function UseReleased() {
+        
+        var toSend = UseRadar();
+        toSend.Timer = 0;
+        GlobalVariables.GameSpace.DispatchEvent(Events.UseRadar, toSend);
+        
+        Utilities.TimeTimerSet(0.05, 0, 1);
+        
+        this.Aim = false;
+        
+        if(this.Lazer != null)
+            this.Lazer.Destroy();
+        
+        GlobalVariables.CamSense = 6;
+        
+        var dir = Math.Normalize(GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - GlobalVariables.Player.Transform.WorldTranslation);
+        
+        var radAngle = Math.ATan2(dir.Y, dir.X);
+        
+        Console.WriteLine("Laser Sniper");
+        
+        radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
+        
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        
+        if(res != null && !GlobalVariables.SloMo){
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, res.Distance, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }else{
+            var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
+            wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
+            wake.Transform.Scale = Real3(0.05, this.MaxRange, 0);
+            wake.Wake.DamagePer = this.DamagePer;
+        }
+        
+        Utilities.SendSound(this.SoundDistance);
+        
+        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        
+        
     }
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("a upgraded variant of the laser sniper");
-        lore.Add("have the sight of an eagle, and the power of one too");
-        lore.Add("that moment when you eat too many carrots");
-        lore.Add("omniscience achived");
-        lore.Add("no where to hide");
+        lore.Add("Scoped savior");
+        lore.Add("Shoot far stick");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Radar sniper");  
+        
+        var toSend = UseRadar();
+        toSend.Timer = Real.PositiveMax;
+        GlobalVariables.GameSpace.DispatchEvent(Events.UseRadar, toSend);
+        
+        Utilities.TimeTimerSet(0.05, Real.PositiveMax, 1);
+        
+        this.Aim = true;
+        GlobalVariables.CamSense = 1.4;
+        this.Lazer = GlobalVariables.GameSpace.CreateAtPosition(Archetype.Lazer, GlobalVariables.Player.Transform.WorldTranslation);
     }
     
 }

@@ -8,6 +8,10 @@ Cog =
 	{
 		string Name = "Chest",
 	},
+	Archetyped = 
+	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+	},
 	Transform = 
 	{
 		Vec3 Translation = [10, 0, 0],
@@ -20,17 +24,17 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0.605000019, 0.417450041, 0, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5a7033740294d239:ChestSpriteRev",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
-		uint StartFrame = 0,
+		uint StartFrame = 4,
 	},
 	Reactive = 
 	{

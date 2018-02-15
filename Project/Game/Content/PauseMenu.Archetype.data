@@ -34,7 +34,7 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "SpriteText",
+				string Name = "PAUSED",
 			},
 			Transform = 
 			{
@@ -53,7 +53,7 @@ Cog =
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 100,
+				uint FontSize = 99,
 				string Text = "Paused",
 				TextAlign Align = Center,
 				float PixelsPerUnit = 128,

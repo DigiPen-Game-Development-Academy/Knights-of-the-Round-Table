@@ -6,6 +6,12 @@ class PlayerHealth : ZilchComponent {
     }
 
     function OnNoHealth(event : NoHealth) {
+        GlobalVariables.Enemies.Clear();
+        GlobalVariables.Chests.Clear();
+        GlobalVariables.GroundItems.Clear();
+        for(var i = 0; i < GlobalVariables.Items.Count; ++i) {
+            GlobalVariables.Items[i] = null;
+        }
         this.Space.ReloadLevel();
     }
 }

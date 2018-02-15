@@ -21,6 +21,9 @@ class EnemyAI : ZilchComponent {
     [Property]
     var ChaseSpeedMultiplier : Real = 2;
     var ViewDirection : Real3 = Real3(0);
+    
+    var Ex : Cog;
+    
     function Initialize(init : CogInitializer) {
         if(GlobalVariables.Enemies == null)
             GlobalVariables.Enemies = Array[Cog]();
@@ -65,9 +68,8 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
-        
-        if(this.Owner.EnemyPathFind.Path != null && this.Owner.EnemyPathFind.Path.Count != 0)
-            this.ViewDirection = Math.Normalize(this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation);
+        if (GlobalVariables.Invis)
+            this.PlayerSpotted = false;
         
         this.Owner.RigidBody.Velocity *= this.MoveSpeed;
         //State Handeling
@@ -78,6 +80,11 @@ class EnemyAI : ZilchComponent {
                 this.ViewDirection = -this.ViewDirection;
                 this.Timer = this.WaitTime;
             } else {
+                if(this.Ex == null && this.Timer > 0) {
+                    this.Ex = this.Space.CreateAtPosition(Archetype.Exclaim, Real3(0, 1, 0));
+                    this.Ex.AttachTo(this.Owner);
+                    this.Ex.Despawn.Timer = this.WaitTime+0.5;
+                }
                 this.Timer -= event.Dt;
                 if(this.Timer <= 0) {
                     var toSend = Notice();
@@ -125,7 +132,8 @@ class EnemyAI : ZilchComponent {
             this.Timer = this.WaitTime;
             
         }
-        
+        if(this.Owner.EnemyPathFind.Path != null && this.Owner.EnemyPathFind.Path.Count != 0)
+            this.ViewDirection = Math.Normalize(this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation);
     }
     
     function FindClosePos (pos : Real3) : Real3 {

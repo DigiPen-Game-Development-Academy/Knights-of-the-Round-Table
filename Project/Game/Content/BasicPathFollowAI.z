@@ -17,7 +17,7 @@ class BasicPathFollowAI : ZilchComponent {
         if(this.Owner.EnemyPathFind.Path != null && (this.Owner.EnemyPathFind.Path.Count <= 0 || this.Timer <= 0)){
             this.Timer = 1;
             this.Owner.EnemyPathFind.Recalculate(this.Target);
-            if(this.Owner.EnemyPathFind.Path.Count <= 0){
+            if(this.Owner.EnemyPathFind.Path != null && this.Owner.EnemyPathFind.Path.Count <= 0){
                 this.Owner.EnemyPathFind.Path = null;
             }
         }

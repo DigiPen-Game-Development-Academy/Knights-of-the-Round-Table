@@ -43,6 +43,31 @@ ResourceTable =
 			string Value = "Radar",
 			float Weight = 1,
 		},
+		{
+			string Name = "Crappy Rifle",
+			string Value = "Rifle",
+			float Weight = 1,
+		},
+		{
+			string Name = "Slug Shotgun",
+			string Value = "Shotgun",
+			float Weight = 1,
+		},
+		{
+			string Name = "Saw Laser",
+			string Value = "Saw_Laser",
+			float Weight = 1,
+		},
+		{
+			string Name = "Laser Sniper",
+			string Value = "Sniper",
+			float Weight = 1,
+		},
+		{
+			string Name = "MMS Sniper",
+			string Value = "MMS_Sniper",
+			float Weight = 1,
+		},
 	],
 	float MaxWeight = 1,
 },

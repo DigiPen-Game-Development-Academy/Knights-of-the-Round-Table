@@ -11,18 +11,19 @@ class Fists : Item
     }
     
     function Use (radAngle : Real) {
-        var contacts = GlobalVariables.Player.BoxCollider.Contacts;
-        GlobalVariables.Player.PlayerMovment.Dir = Math.Normalize(GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - GlobalVariables.Player.Transform.WorldTranslation);
-        foreach (var contact in contacts) {
-            var dot = Math.Dot(Math.Normalize(contact.OtherObject.Transform.WorldTranslation - GlobalVariables.Player.Transform.WorldTranslation), Math.Normalize(GlobalVariables.Player.PlayerMovment.Dir));
-            var angle = Math.ACos(dot);
-            if(angle <= Math.ToRadians(45)) {
-                var toSend = Damage();
-                toSend.Damage = this.DamagePer;
-                contact.OtherObject.DispatchEvent(Events.Damage, toSend);
-                return;
+        var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 2.5);
+        
+        if(res != null) {
+            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            if(res.ObjectHit.Health != null) {
+                GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
+                if(res.ObjectHit.EnemyAI != null && !res.ObjectHit.EnemyAI.Suspitious && !res.ObjectHit.EnemyAI.PlayerSpotted) {
+                    Utilities.SendSound(5, res.ObjectHit.Transform.WorldTranslation);
+                    res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
+                    GlobalVariables.Player.PlayerMovment.Freeze(1);
+                }
             }
-            
         }
     }
 }

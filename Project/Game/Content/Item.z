@@ -17,7 +17,7 @@ class Item {
     
     var GroundSprite : SpriteSource;
     
-    var WakeSprite : Archetype;
+    var WakeSprite : Archetype = Archetype.Wake;
     
     var Stackable : Boolean = false;
     
@@ -48,6 +48,11 @@ class Item {
     
     var ID : String = "NULLITEM";
     
+    var Auto : Boolean = true;
+    
+    //defines how random (inaccurate) the shots are
+    var RandAngle : Real = 5;
+    
     [Virtual]
     function Init () {
         Console.WriteLine("This Item Will Not Initialize Properly!");
@@ -55,7 +60,12 @@ class Item {
     
     [Virtual]
     function ReturnLore () : String {
-        return "NULL";
+        return "";
+    }
+    
+    [Virtual]
+    function UseReleased () {
+        
     }
     
     [Virtual]

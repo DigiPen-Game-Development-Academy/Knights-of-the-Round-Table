@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.5, 25.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -91,14 +91,19 @@ Cog =
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,
-		float ChaseSpeedMultiplier = 2,
+		float ChaseSpeedMultiplier = 3,
 	},
 	EnemySprite = 
 	{
-		string NorthSprite = "5a0b6a2f64f50013:arrow4",
-		string SouthSprite = "5a0b6a2f64f4df58:arrow2",
-		string EastSprite = "5a0b6a2f64f4cabc:arrow1",
-		string WestSprite = "5a0b6a2f64f4ec5b:arrow3",
+		string North = "5a0759f3f416b0a2:Temp_Enemy002",
+		string NorthEast = "5a07589e80afd996:Temp_Enemy007",
+		string East = "5a0759f3f417f88d:Temp_Enemy003",
+		string SouthEast = "5a0759f3f415546c:Temp_Enemy004",
+		string South = "5a0759f3f41bf838:Temp_Enemy000",
+		string SouthWest = "5a0759f3f4129b4b:Temp_Enemy005",
+		string West = "5a0759f3f419221b:Temp_Enemy001",
+		string NorthWest = "5a0759f0f413d20b:Temp_Enemy006",
+		float Cooldown = 0.25,
 	},
 	EnemyMelee = 
 	{
@@ -108,6 +113,8 @@ Cog =
 	Health = 
 	{
 		float InitialHealth = 100,
+		float Cooldown = 3,
+		float RegenRate = 0.333333343,
 	},
 	EnemyDeath = 
 	{
