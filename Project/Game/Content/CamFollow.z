@@ -13,6 +13,7 @@ class CamFollow : ZilchComponent {
             if(this.Timer <= 0) {
                 this.Space.SoundSpace.PlayCue(SoundCue.Do_it);
                 this.Timer = 0.5;
+                Utilities.ConsoleSend("Type In The Correct Password!!!", Real4(Random().Range(0,1), Random().Range(0,1), Random().Range(0,1), 1));
             }
         } else {
             this.Owner.Transform.SetEulerAnglesXYZ(0, 0, 0);
