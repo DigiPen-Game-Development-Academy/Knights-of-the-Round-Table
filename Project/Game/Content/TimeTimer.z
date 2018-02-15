@@ -8,10 +8,9 @@ class TimeTimer : ZilchComponent {
 
     function OnLogicUpdate(event : UpdateEvent) {
         this.Timer -= event.Dt;
-        this.Space.SoundSpace.Pitch = this.Space.TimeSpace.TimeScale;
+        this.Space.SoundSpace.Pitch = this.Space.TimeSpace.TimeScale-1;
         if(this.Once && this.Timer <= 0) {
             this.Once = false;
-            this.Space.SoundSpace.Pitch = 1;
             this.Space.TimeSpace.TimeScale = 1;
             GlobalVariables.Player.PlayerMovment.MoveSpeed = GlobalVariables.Player.PlayerMovment.StartSpd;
             GlobalVariables.SloMo = false;

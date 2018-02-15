@@ -1,5 +1,6 @@
 class CamFollow : ZilchComponent {
     var Spin : Boolean = false;
+    var Timer : Real = 0;
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
@@ -7,7 +8,12 @@ class CamFollow : ZilchComponent {
     function OnLogicUpdate(event : UpdateEvent) {
         
         if(this.Spin) {
+            this.Timer -= event.Dt;
             this.Owner.Transform.SetEulerAnglesXYZ(0, 0, this.Owner.Transform.EulerAngles.Z + event.Dt*3);
+            if(this.Timer <= 0) {
+                this.Space.SoundSpace.PlayCue(SoundCue.Do_it);
+                this.Timer = 1;
+            }
         } else {
             this.Owner.Transform.SetEulerAnglesXYZ(0, 0, 0);
         }
