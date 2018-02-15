@@ -383,8 +383,8 @@ class SawLaser  : Item {
         this.Name = "Saw laser";
         this.ID = "Saw Laser";
         this.DamagePer = 30;
-        this.FireRate = 15; 
-        this.AmmoPerShot = 2;
+        this.FireRate = 10; 
+        this.AmmoPerShot = 3;
         this.RelodTime = 15;
         this.MaxRange = 10;
     }
