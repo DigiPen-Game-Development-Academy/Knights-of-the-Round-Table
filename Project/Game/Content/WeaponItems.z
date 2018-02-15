@@ -34,8 +34,11 @@ class Potato : Item {
             Utilities.Damage(res.ObjectHit, this.DamagePer);
             if(res.ObjectHit.Health != null) {
                 GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
-                if(res.ObjectHit.EnemyAI != null && !res.ObjectHit.EnemyAI.Suspitious && !res.ObjectHit.EnemyAI.PlayerSpotted) {
-                    Utilities.SendSound(5, res.ObjectHit.Transform.WorldTranslation);
+                if(res.ObjectHit.EnemyAI != null && (
+                        (res.ObjectHit.EnemyAI.PlayerSpotted && res.ObjectHit.EnemyAI.Timer > 0) || 
+                        (!res.ObjectHit.EnemyAI.Suspitious && !res.ObjectHit.EnemyAI.PlayerSpotted) || 
+                        (res.ObjectHit.EnemyAI.Suspitious && res.ObjectHit.EnemyAI.Timer > 0))) {
+                    Utilities.SendSoundWeapon(5, res.ObjectHit.Transform.WorldTranslation);
                     res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
                     GlobalVariables.Player.PlayerMovment.Freeze(1);
                 }
@@ -85,7 +88,7 @@ class Boomerang : Item {
             this.Boomerang.BoomerangScript.Damage = this.DamagePer;
             this.Boomerang.RigidBody.Velocity = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0) * this.Boomerang.BoomerangScript.MovSpeed;
             this.Boomerang.BoomerangScript.SoundDist = this.SoundDistance;
-            Utilities.SendSound(this.SoundDistance);
+            Utilities.SendSoundWeapon(this.SoundDistance);
         }
     }
     
@@ -142,7 +145,7 @@ class Plasma_Pistol : Item {
             wake.Wake.DamagePer = this.DamagePer;
         }
         
-        Utilities.SendSound(this.SoundDistance);
+        Utilities.SendSoundWeapon(this.SoundDistance);
         
         GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
         
@@ -188,13 +191,13 @@ class PlasmaSword : Item {
             if(res.ObjectHit.Health != null) {
                 GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
                 if(res.ObjectHit.EnemyAI != null && !res.ObjectHit.EnemyAI.Suspitious && !res.ObjectHit.EnemyAI.PlayerSpotted) {
-                    Utilities.SendSound(5, res.ObjectHit.Transform.WorldTranslation);
+                    Utilities.SendSoundWeapon(5, res.ObjectHit.Transform.WorldTranslation);
                     res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
                     GlobalVariables.Player.PlayerMovment.Freeze(1);
                 }
             }
         }
-        Utilities.SendSound(this.SoundDistance);
+        Utilities.SendSoundWeapon(this.SoundDistance);
     }
 }
 //TERRIBLE ASSAULT RIFLE 
@@ -245,7 +248,7 @@ class TerribleAssaultRifle : Item {
             wake.Wake.DamagePer = this.DamagePer;
         }
         
-        Utilities.SendSound(this.SoundDistance);
+        Utilities.SendSoundWeapon(this.SoundDistance);
         
         GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
     }
@@ -301,7 +304,7 @@ class SlugShotgun : Item {
             wake.Wake.DamagePer = this.DamagePer;
         }
         
-        Utilities.SendSound(this.SoundDistance);
+        Utilities.SendSoundWeapon(this.SoundDistance);
         
         GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
     }
@@ -418,7 +421,7 @@ class SawLaser  : Item {
             wake.Wake.DamagePer = this.DamagePer;
         }
         
-        Utilities.SendSound(this.SoundDistance);
+        Utilities.SendSoundWeapon(this.SoundDistance);
         
         GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
 
@@ -481,7 +484,7 @@ class Lasersniper  : Item {
             wake.Wake.DamagePer = this.DamagePer;
         }
         
-        Utilities.SendSound(this.SoundDistance);
+        Utilities.SendSoundWeapon(this.SoundDistance);
         
         GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
         
@@ -630,7 +633,7 @@ class MMS_Sniper  : Item {
             wake.Wake.DamagePer = this.DamagePer;
         }
         
-        Utilities.SendSound(this.SoundDistance);
+        Utilities.SendSoundWeapon(this.SoundDistance);
         
         GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
         

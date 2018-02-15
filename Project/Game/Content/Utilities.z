@@ -49,7 +49,9 @@ class Utilities
         ItemID("Sniper"),
         ItemID("Watch"),
         ItemID("Sword"),
-        ItemID("Boomerang")
+        ItemID("Boomerang"),
+        ItemID("Shoes"),
+        ItemID("Silencer")
     };
     
     [Static]
@@ -68,9 +70,21 @@ class Utilities
         }
     }
     
-     [Static]
+    [Static]
     function SendSound (dist : Real) {
         Utilities.SendSound(dist, GlobalVariables.Player.Transform.WorldTranslation);
+    }
+    
+    [Static]
+    function SendSoundWeapon (dist : Real) {
+        if(GlobalVariables.UseWeapon.Utility == null || GlobalVariables.UseWeapon.Utility.ID != "Silencer")
+            Utilities.SendSound(dist, GlobalVariables.Player.Transform.WorldTranslation);
+    }
+    
+    [Static]
+    function SendSoundWeapon (dist : Real, pos : Real3) {
+        if(GlobalVariables.UseWeapon.Utility == null || GlobalVariables.UseWeapon.Utility.ID != "Silencer")
+            Utilities.SendSound(dist, pos);
     }
     
     [Static]
@@ -199,6 +213,10 @@ class Utilities
             return PlasmaSword();
         else if(id == "Boomerang")
             return Boomerang();
+        else if(id == "Shoes")
+            return SoftShoes();
+        else if(id == "Silencer")
+            return Silencer();
         else
             return null;
         

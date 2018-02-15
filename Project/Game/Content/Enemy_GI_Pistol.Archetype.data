@@ -92,6 +92,7 @@ Cog =
 		float ViewAngle = 45,
 		float ViewRange = 10,
 		float ChaseSpeedMultiplier = 2,
+		float GuardWaitTime = 5,
 	},
 	EnemySprite = 
 	{
@@ -103,7 +104,6 @@ Cog =
 		string SouthWest = "5a0759f3f4129b4b:Temp_Enemy005",
 		string West = "5a0759f3f419221b:Temp_Enemy001",
 		string NorthWest = "5a0759f0f413d20b:Temp_Enemy006",
-		float Cooldown = 0.25,
 	},
 	EnemyMelee = 
 	{
@@ -134,6 +134,9 @@ Cog =
 		float ReloadTime = 2,
 		float FireRate = 4,
 		float MinDist = 4,
+	},
+	EnemyPing = 
+	{
 	},
 	Hierarchy = 
 	{

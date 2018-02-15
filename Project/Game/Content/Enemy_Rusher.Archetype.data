@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-9.5, 25.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -92,6 +92,7 @@ Cog =
 		float ViewAngle = 45,
 		float ViewRange = 10,
 		float ChaseSpeedMultiplier = 3,
+		float GuardWaitTime = 5,
 	},
 	EnemySprite = 
 	{
@@ -103,7 +104,6 @@ Cog =
 		string SouthWest = "5a0759f3f4129b4b:Temp_Enemy005",
 		string West = "5a0759f3f419221b:Temp_Enemy001",
 		string NorthWest = "5a0759f0f413d20b:Temp_Enemy006",
-		float Cooldown = 0.25,
 	},
 	EnemyMelee = 
 	{
@@ -121,6 +121,9 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
+	},
+	EnemyPing = 
+	{
 	},
 	Hierarchy = 
 	{

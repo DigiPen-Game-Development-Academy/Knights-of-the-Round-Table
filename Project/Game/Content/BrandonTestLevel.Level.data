@@ -92,7 +92,7 @@ Level =
 			bool Hdr = false,
 			bool Shadows = false,
 			bool AntiAliasing = false,
-			bool Refraction = false,
+			bool Refraction = true,
 			bool Reflections = true,
 			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
 			bool GodRays = false,
@@ -150,7 +150,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.842764854, 0.77418673, 111.565193],
+			Vec3 Translation = [-0.522427499, 0.32872349, 111.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -162,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.96341705,
+			float Size = 4.91921902,
 		},
 		EditorCameraController = 
 		{
@@ -170,7 +170,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.842764854, 0.77418673, 6.85193356e-07],
+			Vec3 LookTarget = [-0.522427499, 0.32872349, 6.25519874e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -182,12 +182,19 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a019e04c7cf6461:Player",
 		LinkId = 
 		{
 			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+		Archetyped = 
+		{
+			string Name = "5a019e04c7cf6461:Player",
 		},
 		Transform = 
 		{
@@ -195,16 +202,172 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Player",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 1, 0.100000143, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5a917b88a0971f8b:Player",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.449999988, 0.449999988, 0.5],
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = true,
+			bool Force = true,
+			bool Gravity = true,
+			bool Thrust = true,
+			bool Vortex = true,
+			bool Wind = true,
+			bool Invalid = false,
+			bool Torque = true,
+			bool PointGravity = true,
+			bool PointForce = true,
+			bool Buoyancy = true,
+			bool Custom = true,
+		},
+		PlayerMovment = 
+		{
+			float MoveSpeed = 4,
+			float SprintMultiplier = 2,
+			float SprintSoundDist = 15,
+		},
+		UseWeapon = 
+		{
+			float AnimLockTime = 0.5,
+		},
+		Health = 
+		{
+			float InitialHealth = 100,
+			float Cooldown = 3,
+			float RegenRate = 0.333333343,
+		},
+		PlayerHealth = 
+		{
+		},
+		PlayerSprites = 
+		{
+			string North = "5a0759f3f416b0a2:Temp_Enemy002",
+			string NorthEast = "5a07589e80afd996:Temp_Enemy007",
+			string East = "5a0759f3f417f88d:Temp_Enemy003",
+			string SouthEast = "5a0759f3f415546c:Temp_Enemy004",
+			string South = "5a0759f3f41bf838:Temp_Enemy000",
+			string SouthWest = "5a0759f3f4129b4b:Temp_Enemy005",
+			string West = "5a0759f3f419221b:Temp_Enemy001",
+			string NorthWest = "5a0759f0f413d20b:Temp_Enemy006",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 2,
+				},
+				Named = 
+				{
+					string Name = "Camera",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 40],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Camera = 
+				{
+					ProjectionMode ProjectionMode = Orthographic,
+					Facing Facing = NegativeZ,
+					CameraTransparentSort TransparentSort = ViewDepth,
+					float FieldOfView = 45,
+					float NearPlane = 0.5,
+					float FarPlane = 50,
+					float Size = 10,
+				},
+				SoundListener = 
+				{
+					bool Active = true,
+					float Volume = 1,
+				},
+				CamFollow = 
+				{
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 5,
+				},
+				Named = 
+				{
+					string Name = "TrollWarp",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Camera = 
+				{
+					ProjectionMode ProjectionMode = Orthographic,
+					Facing Facing = NegativeZ,
+					CameraTransparentSort TransparentSort = InheritFromSpace,
+					float FieldOfView = 45,
+					float NearPlane = 0.5,
+					float FarPlane = 200,
+					float Size = 1,
+				},
+				ScreenWarpRing = 
+				{
+					float Size = 10.5,
+					float Thickness = 10,
+					float Intensity = 0,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -239,7 +402,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -274,7 +437,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -309,7 +472,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -345,7 +508,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 10,
 		},
 		Transform = 
 		{
@@ -363,7 +526,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Transform = 
 		{
@@ -380,7 +543,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -439,7 +602,7 @@ Level =
 		string Name = "5a019a715d23f111:Twig",
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 13,
 		},
 		Transform = 
 		{
@@ -456,7 +619,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -513,7 +676,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -570,7 +733,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -579,7 +742,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-3.75, 1, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Scale = [0.5, 0.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -602,7 +765,7 @@ Level =
 		},
 		ItemPickup = 
 		{
-			string ID = "Potato",
+			string ID = "Sniper",
 		},
 		BoxCollider = 
 		{
@@ -627,7 +790,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -684,7 +847,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -741,7 +904,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -798,7 +961,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -855,7 +1018,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -913,7 +1076,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -964,63 +1127,6 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 22,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3.75, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "4e07948c35993095:DefaultSprite",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		ItemPickup = 
-		{
-			string ID = "Potato",
-		},
-		BoxCollider = 
-		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Visibility = 
-		{
 		},
 	},
 	Cog = 
@@ -1092,7 +1198,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.25, -1, 0],
+			Vec3 Translation = [-3.75, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1128,13 +1234,13 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
-		Visibility = 
-		{
-		},
 		Reactive = 
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
+		},
+		Visibility = 
+		{
 		},
 	},
 	Cog = 
@@ -1149,7 +1255,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.75, -1, 0],
+			Vec3 Translation = [-5.25, -1, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1206,7 +1312,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.25, -4, 0],
+			Vec3 Translation = [-6.75, -1, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1256,6 +1362,63 @@ Level =
 		LinkId = 
 		{
 			uint Id = 27,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.25, -4, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "4e07948c35993095:DefaultSprite",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		ItemPickup = 
+		{
+			string ID = "Potato",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		Visibility = 
+		{
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 28,
 		},
 		Named = 
 		{
@@ -1313,7 +1476,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 28,
+			uint Id = 29,
 		},
 		Transform = 
 		{
@@ -1331,7 +1494,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 29,
+			uint Id = 30,
 		},
 		Transform = 
 		{
@@ -1349,7 +1512,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 31,
 		},
 		Transform = 
 		{

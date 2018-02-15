@@ -40,7 +40,7 @@ class EnemyRayShooting : ZilchComponent {
         var angle = Math.ATan2(vec.Y, vec.X);
         if(this.Timer >= 0)
             this.Timer -= event.Dt;
-        if(this.EnemyAI.PlayerSpotted) {
+        if(this.EnemyAI.PlayerSpotted && this.EnemyAI.Timer <= 0) {
             if(this.Vis.DirectLine && Math.Distance(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation) <= this.MaxRange) {
                 this.Owner.EnemyPathFind.Path = null;
                 if(this.CurrentMag <= 0 && !this.Reloading) {

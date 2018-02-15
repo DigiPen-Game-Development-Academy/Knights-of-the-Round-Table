@@ -65,3 +65,63 @@ class Watch : Item {
     }
     
 }
+
+class SoftShoes : Item {
+    
+    function Init() {
+        this.Name = "Padded Shoes";
+        this.ID = "Shoes";
+        this.Type = ItemType.Utility;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.MagSize = -1;
+        this.FireRate = -1;
+        this.Stackable = false;
+    }
+    
+    function ReturnLore() : String {
+        var lore = Array[String]();
+        lore.Add("a pair of old shoes!");
+        lore.Add("wait...  are these shoes branded as MIKE'S??!?!?");
+        lore.Add("It's more that just a shoe...  It's a life style!");
+        lore.Add("Quiet...");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {}
+    
+}
+
+class Silencer : Item {
+    
+    function Init() {
+        this.Name = "Silencer";
+        this.ID = "Silencer";
+        this.Type = ItemType.Utility;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.MagSize = -1;
+        this.FireRate = -1;
+        this.Stackable = false;
+    }
+    
+    function ReturnLore() : String {
+        var lore = Array[String]();
+        lore.Add("Silencer for all weapons");
+        lore.Add("ADD MORE LORE");
+        lore.Add("ADD MORE LORE");
+        lore.Add("ADD MORE LORE");
+        lore.Add("ADD MORE LORE");
+        lore.Add("ADD MORE LORE");
+        lore.Add("ADD MORE LORE");
+        lore.Add("ADD MORE LORE");
+        lore.Add("ADD MORE LORE");
+        lore.Add("ADD MORE LORE");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {}
+    
+}

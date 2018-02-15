@@ -15,7 +15,9 @@ class CamFollow : ZilchComponent {
                 this.Timer = 0.5;
                 Utilities.ConsoleSend("Type In The Correct Password!!!", Real4(Random().Range(0,1), Random().Range(0,1), Random().Range(0,1), 1));
             }
+            this.Owner.Parent.FindChildByName("TrollWarp").ScreenWarpRing.Intensity = 100;
         } else {
+            this.Owner.Parent.FindChildByName("TrollWarp").ScreenWarpRing.Intensity = 0;
             this.Owner.Transform.SetEulerAnglesXYZ(0, 0, 0);
         }
         
