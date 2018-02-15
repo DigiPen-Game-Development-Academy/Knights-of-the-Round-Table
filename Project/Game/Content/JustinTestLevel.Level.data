@@ -141,7 +141,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-69.5551834, 73.2222443, 64],
+			Vec3 Translation = [-42.2448654, 62.7045593, 64],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -153,7 +153,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 2.73238039,
+			float Size = 22.3130493,
 		},
 		EditorCameraController = 
 		{
@@ -161,7 +161,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-69.5551834, 73.2222443, 4.42667897e-07],
+			Vec3 LookTarget = [-42.2448654, 62.7045593, 2.68327256e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1040,6 +1040,42 @@ Level =
 		Named = 
 		{
 			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a026fe412609373:Enemy_Rusher",
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-61.7759171, 53.5409088, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
+		LinkId = 
+		{
+			uint Id = 22,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-49.6556816, 60.1957855, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
 		},
 	},
 },
