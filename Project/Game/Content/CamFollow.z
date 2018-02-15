@@ -1,9 +1,23 @@
 class CamFollow : ZilchComponent {
+    var Spin : Boolean = false;
+    var Timer : Real = 0;
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.Spin) {
+            this.Timer -= event.Dt;
+            this.Owner.Transform.SetEulerAnglesXYZ(0, 0, this.Owner.Transform.EulerAngles.Z + event.Dt*3);
+            if(this.Timer <= 0) {
+                this.Space.SoundSpace.PlayCue(SoundCue.Do_it);
+                this.Timer = 0.5;
+                Utilities.ConsoleSend("Type In The Correct Password!!!", Real4(Random().Range(0,1), Random().Range(0,1), Random().Range(0,1), 1));
+            }
+        } else {
+            this.Owner.Transform.SetEulerAnglesXYZ(0, 0, 0);
+        }
         
         var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
         this.Owner.Transform.WorldTranslation = GlobalVariables.Player.Transform.WorldTranslation + (mousePos - GlobalVariables.Player.Transform.WorldTranslation)/GlobalVariables.CamSense;

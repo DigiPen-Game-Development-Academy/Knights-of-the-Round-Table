@@ -20,6 +20,8 @@ class EnemyAI : ZilchComponent {
     var MoveSpeed : Real = 2;
     [Property]
     var ChaseSpeedMultiplier : Real = 2;
+    [Property]
+    var GuardWaitTime : Real = 5;
     var ViewDirection : Real3 = Real3(0);
     
     var Ex : Cog;
@@ -37,14 +39,14 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnNotice(event : Notice) {
-        if(Math.Distance(event.Pos, this.Owner.Transform.WorldTranslation) <= 10 && !GlobalVariables.Invis) {
+        if(Math.Distance(event.Pos, this.Owner.Transform.WorldTranslation) <= 10 && !GlobalVariables.Invis && !this.PlayerSpotted) {
             this.PlayerSpotted = true;
             this.Suspitious = false;
         }
     }
 
     function OnCollisionStarted(event : CollisionEvent) {
-        if(event.OtherObject == GlobalVariables.Player && !GlobalVariables.Invis) {
+        if(event.OtherObject == GlobalVariables.Player && !GlobalVariables.Invis && !this.PlayerSpotted) {
             this.PlayerSpotted = true;
             this.Suspitious = false;
             this.Timer = this.WaitTime;
@@ -57,8 +59,10 @@ class EnemyAI : ZilchComponent {
                     Utilities.DrawCircle(this.Owner.Transform.WorldTranslation, this.InstantSpotRadius, false, Real4(0,1,0,1));
             //if next to player instantly spot them
             if(this.Owner.Visibility.InSight && Math.Distance(this.Owner.Transform.WorldTranslation, event.Source) <= this.InstantSpotRadius && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, event.Source) <= 1) {
-                this.PlayerSpotted = true;
-                this.Suspitious = false;
+                if(!this.PlayerSpotted) {
+                    this.PlayerSpotted = true;
+                    this.Suspitious = false;
+                }
                 return;
             }
             this.PathFind.SetTarget(this.FindClosePos(event.Source));
@@ -77,7 +81,6 @@ class EnemyAI : ZilchComponent {
             if(Math.Distance(this.Owner.Transform.WorldTranslation, this.GuardPos) > this.MaxDistFromGuard) {
                 this.PlayerSpotted = false;
                 this.Owner.EnemyPathFind.Path = null;
-                this.ViewDirection = -this.ViewDirection;
                 this.Timer = this.WaitTime;
             } else {
                 if(this.Ex == null && this.Timer > 0) {
@@ -111,7 +114,7 @@ class EnemyAI : ZilchComponent {
             if(this.Owner.EnemyPathFind.Path == null) {
                 this.Timer -= event.Dt;
                 if(this.Timer <= 0) {
-                    this.Timer = this.WaitTime;
+                    this.Timer = this.GuardWaitTime;
                     this.PathFind.SetTarget(this.FindClosePos(this.GuardPos));
                 }
             }
@@ -132,8 +135,8 @@ class EnemyAI : ZilchComponent {
             this.Timer = this.WaitTime;
             
         }
-        if(this.Owner.EnemyPathFind.Path != null && this.Owner.EnemyPathFind.Path.Count != 0)
-            this.ViewDirection = Math.Normalize(this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation);
+        //if(this.Owner.EnemyPathFind.Path != null && this.Owner.EnemyPathFind.Path.Count != 0)
+            //this.ViewDirection = Math.Normalize(this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation);
     }
     
     function FindClosePos (pos : Real3) : Real3 {

@@ -6,6 +6,8 @@ class BasicPathFollowAI : ZilchComponent {
     
     var Target : Real3;
     
+    var TurnSpeed : Real = 360;
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
@@ -13,6 +15,11 @@ class BasicPathFollowAI : ZilchComponent {
     function OnLogicUpdate(event : UpdateEvent) {
         
         this.Timer -= event.Dt;
+        
+        var tSpeed = Math.ToRadians(this.TurnSpeed);
+        var angle = Math.ATan2(this.Owner.EnemyAI.ViewDirection.Y, this.Owner.EnemyAI.ViewDirection.X);
+        
+        this.Owner.RigidBody.Velocity = Math.Normalize(this.Owner.EnemyAI.ViewDirection);
         
         if(this.Owner.EnemyPathFind.Path != null && (this.Owner.EnemyPathFind.Path.Count <= 0 || this.Timer <= 0)){
             this.Timer = 1;
@@ -25,10 +32,22 @@ class BasicPathFollowAI : ZilchComponent {
         if(this.Owner.EnemyPathFind.Path == null){
             this.Owner.RigidBody.Velocity = Real3(0);
         } else {
-            this.Owner.RigidBody.Velocity = Math.Normalize(this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation);
+            var tDir = this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation;
+            var tAngle = Math.ATan2(tDir.Y, tDir.X);
+            var a = Math.ATan2(Math.Sin(tAngle-angle), Math.Cos(tAngle-angle));
+            if(Math.Abs(a - angle) < tSpeed*event.Dt)
+                angle = tAngle;
+            else if(a > 0) {
+                angle += tSpeed*event.Dt;
+            } else {
+                angle += -tSpeed*event.Dt;
+            }
+            
             if(Math.Distance(this.Owner.EnemyPathFind.Path[0].WorldPos, this.Owner.Transform.WorldTranslation) < 0.1)
                 this.Owner.EnemyPathFind.Recalculate(this.Target);
         }
+        
+        this.Owner.EnemyAI.ViewDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
         
     }
     

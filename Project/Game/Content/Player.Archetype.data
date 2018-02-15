@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0.5, 0.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -91,6 +91,17 @@ Cog =
 	},
 	PlayerHealth = 
 	{
+	},
+	PlayerSprites = 
+	{
+		string North = "5a0759f3f416b0a2:Temp_Enemy002",
+		string NorthEast = "5a07589e80afd996:Temp_Enemy007",
+		string East = "5a0759f3f417f88d:Temp_Enemy003",
+		string SouthEast = "5a0759f3f415546c:Temp_Enemy004",
+		string South = "5a0759f3f41bf838:Temp_Enemy000",
+		string SouthWest = "5a0759f3f4129b4b:Temp_Enemy005",
+		string West = "5a0759f3f419221b:Temp_Enemy001",
+		string NorthWest = "5a0759f0f413d20b:Temp_Enemy006",
 	},
 	Hierarchy = 
 	{
