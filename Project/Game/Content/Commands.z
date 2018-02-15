@@ -18,6 +18,9 @@ class Commands {
     var Xray : Boolean = false;
     
     [Static]
+    var LoggedOn : Boolean = false;
+    
+    [Static]
     function Init () {
         /*initilize array of commands*/
         if(Commands.Commands == null) {
@@ -47,6 +50,7 @@ class Commands {
             Commands.Commands.Add(CMD("/killall",           Commands.KillEnemies));
             Commands.Commands.Add(CMD("/time",              Commands.Time));
             Commands.Commands.Add(CMD("/devsaw",            Commands.DevSaw));
+            Commands.Commands.Add(CMD("/loggon",            Commands.Login));
             
         }
     }
@@ -61,7 +65,12 @@ class Commands {
         if(Commands.Commands != null) {
             foreach(var command in Commands.Commands) {
                 if(cmd == command.Cmd) {
-                    command.Func(vals);
+                    if(command.Cmd == "/loggon" || Commands.LoggedOn == true)
+                        command.Func(vals);
+                    else {
+                        Utilities.ConsoleSend("YOU DIDN'T LOG ON!", Real4(1, 1, 0, 1));
+                        GlobalVariables.Player.FindChildByName("Camera").CamFollow.Spin = true;
+                    }
                     return;
                 }
             }
@@ -118,6 +127,8 @@ class Commands {
             Utilities.ConsoleSend("/time <time scale>", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("-gives Saw Laser with infanate ammo-", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("/devsaw", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-loggs on-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/loggon", Real4(0, 1, 0, 1));
         }
     }
     
@@ -324,6 +335,24 @@ class Commands {
         saw.Init();
         saw.MagSize = -1;
         GlobalVariables.AddInventoryItem(saw);
+    }
+    
+    [Static]
+    function Login (vals : Array[String]) {
+        if(vals == null || vals.Count == 0) {
+            Utilities.ConsoleSend("INVALID PARAMETERS, use /zoom <zoom>", Real4(1, 1, 0, 1));
+            return;
+        }
+        
+        if(vals[0] == "sus") {
+            Commands.LoggedOn = true;
+            Utilities.ConsoleSend("Logged on!", Real4(1, 0, 0, 1));
+            GlobalVariables.Player.FindChildByName("Camera").CamFollow.Spin = false;
+        } else {
+            Utilities.ConsoleSend("WRONG!", Real4(1, 1, 0, 1));
+            GlobalVariables.Player.FindChildByName("Camera").CamFollow.Spin = true;
+        }
+        
     }
     
     [Static]
