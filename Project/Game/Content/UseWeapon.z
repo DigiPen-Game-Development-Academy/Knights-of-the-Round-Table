@@ -156,7 +156,8 @@ class UseWeapon : ZilchComponent
         
         if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey) || Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse)) {
             if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0 && this.Up) {
-                this.Up = false;
+                if(!this.Primary.Auto)
+                    this.Up = false;
                 if(this.Primary.Auto)
                     this.Primary.Timer = 1 / this.Primary.FireRate;
                 if(this.Primary.MagSize != -1 && this.Primary.Auto)
@@ -164,7 +165,8 @@ class UseWeapon : ZilchComponent
                 this.Primary.Use(angle);
                 this.Sprite.LockDir(vec, this.AnimLockTime);
             } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && this.Secondary.CurrentMag > 0 && this.Up) {
-                this.Up = false;
+                if(!this.Primary.Auto)
+                    this.Up = false;
                 if(this.Secondary.Auto)
                     this.Secondary.Timer = 1 / this.Secondary.FireRate;
                 if(this.Secondary.MagSize != -1 && this.Secondary.Auto)
