@@ -22,6 +22,11 @@ class ItemPickup : ZilchComponent
     }
 
     function OnMouseDown(event : ViewportMouseEvent) {
+        var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation-this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 3);
+        
+        if(res == null || res.ObjectHit != GlobalVariables.Player) {
+            return;
+        }
         if(this.Item != null && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) <= 3){
             if(GlobalVariables.AddInventoryItem(this.Item)) {
                 this.Owner.Destroy();
@@ -36,6 +41,11 @@ class ItemPickup : ZilchComponent
     }
 
     function OnMouseEnter(event : ViewportMouseEvent) {
+        var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation-this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 3);
+        
+        if(res == null || res.ObjectHit != GlobalVariables.Player) {
+            return;
+        }
         if(this.Item == null || Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) > 3)
             return;
         GlobalVariables.LorePanel.Sprite.Visible = true;

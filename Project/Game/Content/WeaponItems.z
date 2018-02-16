@@ -534,7 +534,7 @@ class Missile  : Item {
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Missile launcher");  
+        Console.WriteLine("Missile launcher");
     }
     
 }
@@ -542,17 +542,46 @@ class Missile  : Item {
 //
 class Potatocannon  : Item {
     
+    var Circle : Cog;
+    var ImpactRange : Real = 3;
+    var PotatoMoveSpd : Real = 3;
+    var ArcIntencity : Real = 0.75;
+    var ExpSoundDist : Real = 10;
+    
     function Init () {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
+        this.SoundDistance = 5;
         this.MagSize = 100;
-        this.Name = "Potato_cannon";
+        this.Name = "Potato Cannon";
+        this.ID = "Potato_cannon";
         this.DamagePer = 50;
-        this.FireRate = 0.125; 
+        this.FireRate = 3;
         this.AmmoPerShot = 5;
-        this.RelodTime = 20;
+        this.RelodTime = 5;
+        this.Auto = false;
+    }
+    
+    function UseReleased () {
+        
+        if(this.Circle != null)
+            this.Circle.Destroy();
+        
+        Utilities.SendSoundWeapon(this.SoundDistance);
+        
+        var potat = GlobalVariables.GameSpace.CreateAtPosition(Archetype.PotatProjectile, GlobalVariables.Player.Transform.WorldTranslation);
+        
+        potat.PotatProjectile.Target = GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 1);
+        potat.PotatProjectile.StartDist = 0;
+        potat.PotatProjectile.MovSpd = this.PotatoMoveSpd;
+        potat.PotatProjectile.Damage = this.DamagePer;
+        potat.PotatProjectile.ImpactSize = this.ImpactRange;
+        potat.PotatProjectile.ArcIntencity = this.ArcIntencity;
+        potat.PotatProjectile.SoundRad = this.ExpSoundDist;
+        potat.PotatProjectile.Set = true;
+        
     }
     
     function ReturnLore () : String {
@@ -567,7 +596,10 @@ class Potatocannon  : Item {
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Potato cannon");  
+        
+        this.Circle = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GlowyCircle, GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 1));
+        this.Circle.Transform.Scale = Real3(this.ImpactRange);
+        
     }
     
 }

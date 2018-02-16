@@ -14,14 +14,14 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1.11001635, 1.99816132, 3.75608892e-07],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
 	{
 		bool Visible = true,
-		bool VisibilityCulling = true,
+		bool VisibilityCulling = false,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
 		Vec4 Color = [1, 1, 1, 1],
@@ -61,7 +61,7 @@ Cog =
 			Sprite = 
 			{
 				bool Visible = true,
-				bool VisibilityCulling = true,
+				bool VisibilityCulling = false,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
 				Vec4 Color = [1, 1, 1, 1],

@@ -1,0 +1,14 @@
+Material = 
+{
+	Transparency = 
+	{
+		MaterialBlendMode BlendMode = Alpha,
+	},
+	GlowyCircle = 
+	{
+		string TestTexture = "4fab71e8bcb7a8ce:DefaultTexture",
+		float EdgeFalloffPower = 1,
+		float EdgeFalloffScale = 1,
+		Vec4 EdgeGlowColor = [1, 0, 0, 0.389999986],
+	},
+},

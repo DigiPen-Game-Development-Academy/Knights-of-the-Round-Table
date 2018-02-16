@@ -31,6 +31,8 @@ class UseWeapon : ZilchComponent
     }
 
     function OnKeyUp(event : KeyboardEvent) {
+        if(GlobalVariables.GameSpace.TimeSpace.Paused)
+            return;
         if(event.Key == GlobalVariables.InputManager.UseWeaponKey) {
             if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0) {
                 if(!this.Primary.Auto)
@@ -50,6 +52,8 @@ class UseWeapon : ZilchComponent
     }
 
     function OnMouseUp(event : ViewportMouseEvent) {
+        if(GlobalVariables.GameSpace.TimeSpace.Paused)
+            return;
         if(event.Button == GlobalVariables.InputManager.UseWeaponMouse) {
             if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0) {
                 if(!this.Primary.Auto)
@@ -69,6 +73,9 @@ class UseWeapon : ZilchComponent
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(GlobalVariables.GameSpace.TimeSpace.Paused)
+            return;
         
         var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
         
@@ -148,7 +155,7 @@ class UseWeapon : ZilchComponent
         }
         
         if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey) || Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse)) {
-            if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0) {
+            if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0 && this.Up) {
                 this.Up = false;
                 if(this.Primary.Auto)
                     this.Primary.Timer = 1 / this.Primary.FireRate;
@@ -156,7 +163,7 @@ class UseWeapon : ZilchComponent
                     this.Primary.CurrentMag -= 1;
                 this.Primary.Use(angle);
                 this.Sprite.LockDir(vec, this.AnimLockTime);
-            } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && this.Secondary.CurrentMag > 0) {
+            } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && this.Secondary.CurrentMag > 0 && this.Up) {
                 this.Up = false;
                 if(this.Secondary.Auto)
                     this.Secondary.Timer = 1 / this.Secondary.FireRate;

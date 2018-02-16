@@ -51,7 +51,8 @@ class Utilities
         ItemID("Sword"),
         ItemID("Boomerang"),
         ItemID("Shoes"),
-        ItemID("Silencer")
+        ItemID("Silencer"),
+        ItemID("Potato_cannon")
     };
     
     [Static]
@@ -217,6 +218,8 @@ class Utilities
             return SoftShoes();
         else if(id == "Silencer")
             return Silencer();
+        else if(id == "Potato_cannon")
+            return Potatocannon();
         else
             return null;
         
