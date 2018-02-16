@@ -6,15 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Chest",
-	},
-	Archetyped = 
-	{
-		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		string Name = "StunProj",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [10, 0, 0],
+		Vec3 Translation = [-5.5, 2.5, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,21 +24,22 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a7033740294d239:ChestSpriteRev",
+		string SpriteSource = "5a75bd91646544bb:ProjectilePotate",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
-		uint StartFrame = 4,
+		uint StartFrame = 0,
 	},
-	Reactive = 
+	Orientation = 
 	{
-		bool Active = true,
-		bool CaptureMouse = false,
+		Vec3 GlobalUp = [0, 0, 1],
+		Vec3 UpVector = [0, 0, 1],
+		Vec3 ForwardVector = [1, 0, 0],
+		OrientationBases DefaultBases = ForwardXUpZ,
 	},
-	AutoChest = 
+	StunProjectile = 
 	{
-		string LootTable = "5a11b100e0d8983f:Loot",
 	},
 },

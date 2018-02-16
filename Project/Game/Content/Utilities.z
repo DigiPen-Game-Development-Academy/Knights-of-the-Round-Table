@@ -52,7 +52,10 @@ class Utilities
         ItemID("Boomerang"),
         ItemID("Shoes"),
         ItemID("Silencer"),
-        ItemID("Potato_cannon")
+        ItemID("Potato_cannon"),
+        ItemID("Laser_Beam"),
+        ItemID("Stun_m"),
+        ItemID("Missile")
     };
     
     [Static]
@@ -220,6 +223,12 @@ class Utilities
             return Silencer();
         else if(id == "Potato_cannon")
             return Potatocannon();
+        else if(id == "Laser_Beam")
+            return Laserbeam();
+        else if(id == "Stun_m")
+            return StunMissile();
+        else if(id == "Missile")
+            return Missile();
         else
             return null;
         

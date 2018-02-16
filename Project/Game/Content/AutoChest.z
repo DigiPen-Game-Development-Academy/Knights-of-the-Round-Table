@@ -3,6 +3,9 @@ class AutoChest : ZilchComponent {
     [Dependency]
     var Reactive : Reactive;
     
+    [Property]
+    var LootTable : ResourceTable;
+    
     var Items : Array[Item];
     
     var Set : Boolean = false;
@@ -33,7 +36,7 @@ class AutoChest : ZilchComponent {
         if((this.Items == null || this.Items.Count == 0) && this.Owner.SetChest == null && !this.Set) {
             this.Items = Array[Item]();
             this.Items.Resize(GlobalVariables.ChestItems.Count);
-            var table = ResourceTable.Loot;
+            var table = this.LootTable;
             var rand = Random();
             for(var i = 0; i < this.Items.Count; ++i) {
                 var name = table.SampleValue(rand.Range(0, 1), rand.Range(0, 1));

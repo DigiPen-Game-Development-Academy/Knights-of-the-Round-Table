@@ -8,8 +8,16 @@ class BasicPathFollowAI : ZilchComponent {
     
     var TurnSpeed : Real = 360;
     
+    var Stunned : Boolean = false;
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.Stun, this.OnStun);
+    }
+
+    function OnStun(event : Stun) {
+        this.Stunned = true;
+        this.Timer = event.Time;
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
@@ -20,6 +28,19 @@ class BasicPathFollowAI : ZilchComponent {
         var angle = Math.ATan2(this.Owner.EnemyAI.ViewDirection.Y, this.Owner.EnemyAI.ViewDirection.X);
         
         this.Owner.RigidBody.Velocity = Math.Normalize(this.Owner.EnemyAI.ViewDirection);
+        
+        if(this.Stunned) {
+            if(this.Timer <= 0)
+                this.Stunned = false;
+            
+            angle += tSpeed*event.Dt;
+            
+            this.Owner.RigidBody.Velocity *= this.Owner.EnemyAI.MoveSpeed;
+            
+            this.Owner.EnemyAI.ViewDirection = Real3(Math.Cos(angle), Math.Sin(angle), 0);
+            
+            return;
+        }
         
         if(this.Owner.EnemyPathFind.Path != null && (this.Owner.EnemyPathFind.Path.Count <= 0 || this.Timer <= 0)){
             this.Timer = 1;

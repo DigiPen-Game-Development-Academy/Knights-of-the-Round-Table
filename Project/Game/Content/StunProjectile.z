@@ -1,12 +1,13 @@
-class PotatProjectile : ZilchComponent {
+class StunProjectile : ZilchComponent {
     
     var MovSpd : Real = 3;
     var Target : Real3 = Real3(0);
-    var Damage : Real = 25;
+    var StnTime : Real = 5;
     var ImpactSize : Real = 3;
     var ArcIntencity : Real = 0.75;
     var Set : Boolean = false;
     var SoundRad : Real = 10;
+    var ImpactSpd : Real = 4;
     
     [Dependency]
     var Orientation : Orientation;
@@ -32,12 +33,14 @@ class PotatProjectile : ZilchComponent {
         
         if(this.StartDist == 0) {
             if(dist < event.Dt * this.MovSpd) {
-                var dmg = Damage();
-                dmg.Damage = this.Damage;
-                var res = this.Space.PhysicsSpace.DispatchWithinSphere(this.Owner.Transform.WorldTranslation, this.ImpactSize, Events.Damage, dmg);
+                Utilities.SendSound(this.SoundRad, this.Owner.Transform.WorldTranslation);
+                var stn = Stun();
+                stn.Time = this.StnTime;
+                this.Space.PhysicsSpace.DispatchWithinSphere(this.Owner.Transform.WorldTranslation, this.ImpactSize, Events.Stun, stn);
                 this.Owner.Destroy();
-                var exp = this.Space.CreateAtPosition(Archetype.PotatExplotion, this.Owner.Transform.WorldTranslation + Real3(0,0,1));
-                exp.Transform.Scale = Real3(this.ImpactSize);
+                var exp = this.Space.CreateAtPosition(Archetype.StunExp, this.Owner.Transform.WorldTranslation + Real3(0,0,1));
+                exp.StunExp.Size = this.ImpactSize;
+                exp.StunExp.Spd = this.ImpactSpd;
             }
             return;
         }
@@ -50,14 +53,13 @@ class PotatProjectile : ZilchComponent {
         
         if(dist < event.Dt * this.MovSpd) {
             Utilities.SendSound(this.SoundRad, this.Owner.Transform.WorldTranslation);
-            var dmg = Damage();
-            dmg.Damage = this.Damage;
-            var res = this.Space.PhysicsSpace.DispatchWithinSphere(this.Owner.Transform.WorldTranslation, this.ImpactSize, Events.Damage, dmg);
-            this.Owner.FindChildByName("Trail").SphericalParticleEmitter.Active = false;
-            this.Owner.FindChildByName("Trail").DetachRelative();
+            var stn = Stun();
+            stn.Time = this.StnTime;
+            this.Space.PhysicsSpace.DispatchWithinSphere(this.Owner.Transform.WorldTranslation, this.ImpactSize, Events.Stun, stn);
             this.Owner.Destroy();
-            var exp = this.Space.CreateAtPosition(Archetype.PotatExplotion, this.Owner.Transform.WorldTranslation + Real3(0,0,1));
-            exp.Transform.Scale = Real3(this.ImpactSize);
+            var exp = this.Space.CreateAtPosition(Archetype.StunExp, this.Owner.Transform.WorldTranslation + Real3(0,0,1));
+            exp.StunExp.Size = this.ImpactSize;
+            exp.StunExp.Spd = this.ImpactSpd;
         }
     }
 }

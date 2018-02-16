@@ -270,7 +270,8 @@ class SlugShotgun : Item {
         this.FireRate = 2; 
         this.AmmoPerShot = 15;
         this.RelodTime = 8;
-        this.MaxRange = 2.5;
+        this.MaxRange = 10;
+        this.RandAngle = 10;
     }
     
     function ReturnLore () : String {
@@ -320,7 +321,8 @@ class Laserbeam : Item {
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
         this.MagSize = 10;
-        this.Name = "Laser_Beam";
+        this.Name = "Laser Beam";
+        this.ID = "Laser_Beam";
         this.DamagePer = 10;
         this.FireRate = 0.50; 
         this.AmmoPerShot = 4;
@@ -345,17 +347,47 @@ class Laserbeam : Item {
 //
 class StunMissile : Item {
     
+    var Circle : Cog;
+    var ImpactRange : Real = 3;
+    var MoveSpd : Real = 3;
+    var ArcIntencity : Real = 0.75;
+    var ExpSoundDist : Real = 10;
+    var ImpactSpd : Real = 4;
+    var StunTime : Real = 5;
+    
     function Init () {
-     this.Type = ItemType.Weapon;
+        this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
         this.MagSize = 6;
-        this.Name = "Stun_m";
+        this.Name = "Stun Missile";
+        this.ID = "Stun_m";
         this.DamagePer = 15;
         this.FireRate = 0.6; 
         this.AmmoPerShot = 8;
-        this.RelodTime = 10;   
+        this.RelodTime = 10;
+        this.Auto = false;
+    }
+    
+    function UseReleased () {
+        
+        if(this.Circle != null)
+            this.Circle.Destroy();
+        
+        Utilities.SendSoundWeapon(this.SoundDistance);
+        
+        var stn = GlobalVariables.GameSpace.CreateAtPosition(Archetype.StunProj, GlobalVariables.Player.Transform.WorldTranslation);
+        
+        stn.StunProjectile.Target = GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 1);
+        stn.StunProjectile.StartDist = 0;
+        stn.StunProjectile.MovSpd = this.MoveSpd;
+        stn.StunProjectile.StnTime = this.StunTime;
+        stn.StunProjectile.ImpactSize = this.ImpactRange;
+        stn.StunProjectile.ArcIntencity = this.ArcIntencity;
+        stn.StunProjectile.SoundRad = this.ExpSoundDist;
+        stn.StunProjectile.Set = true;
+        
     }
     
     function ReturnLore () : String {
@@ -368,7 +400,8 @@ class StunMissile : Item {
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Stun Missile");
+        this.Circle = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GlowyCircle, GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 1));
+        this.Circle.Transform.Scale = Real3(this.ImpactRange);
     }
     
 }
@@ -384,7 +417,7 @@ class SawLaser  : Item {
         this.Stackable = false;
         this.MagSize = 100;
         this.Name = "Saw laser";
-        this.ID = "Saw Laser";
+        this.ID = "Saw_Laser";
         this.DamagePer = 30;
         this.FireRate = 10; 
         this.AmmoPerShot = 3;
@@ -517,6 +550,7 @@ class Missile  : Item {
         this.Stackable = false;
         this.MagSize = 1;
         this.Name = "Missile";
+        this.ID = "Missile";
         this.DamagePer = 40;
         this.FireRate = 1; 
         this.AmmoPerShot = 20;
@@ -617,7 +651,7 @@ class MMS_Sniper  : Item {
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
         this.MagSize = 10;
-        this.Name = "Sniper";
+        this.Name = "MMS Sniper";
         this.ID = "MMS_Sniper";
         this.DamagePer = 150;
         this.FireRate = 0.1; 

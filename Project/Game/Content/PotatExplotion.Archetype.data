@@ -14,14 +14,14 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-6.5, 2, 1],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [3, 3, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	SpriteParticleSystem = 
 	{
 		bool Visible = true,
-		bool VisibilityCulling = true,
+		bool VisibilityCulling = false,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
 		SystemChildMode ChildMode = Independent,
@@ -76,5 +76,9 @@ Cog =
 		Vec4 Color2 = [1, 0.72480011, 0.360000014, 1],
 		Vec4 Color3 = [0.534999967, 0.454562724, 0.275524974, 1],
 		Vec4 Color4 = [0.274999976, 0.197999984, 0, 0],
+	},
+	Despawn = 
+	{
+		float Timer = 30,
 	},
 },

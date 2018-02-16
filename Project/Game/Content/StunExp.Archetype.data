@@ -6,16 +6,12 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "GlowyCircle",
-	},
-	Archetyped = 
-	{
-		string Name = "5a75bfc9c313becf:GlowyCircle",
+		string Name = "StunExp",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [0, 0, 0.99999994],
+		Vec3 Scale = [9.99999975e-05, 9.99999975e-05, 9.99999975e-05],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Model = 
@@ -26,9 +22,9 @@ Cog =
 		bool CastShadows = true,
 		string MaterialName = "5a75bcea994faa8c:GlowyCircle",
 		string MeshName = "4de0354322b376ae:Sphere",
-		Vec4 Color = [1, 0, 0, 0.399999976],
+		Vec4 Color = [1, 1, 1, 0.999899983],
 	},
-	LockToMouse = 
+	StunExp = 
 	{
 	},
 },

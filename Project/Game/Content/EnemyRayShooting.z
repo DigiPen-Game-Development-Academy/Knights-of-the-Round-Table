@@ -36,6 +36,9 @@ class EnemyRayShooting : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        if(this.Owner.BasicPathFollowAI.Stunned)
+            return;
+        
         var vec = GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation;
         var angle = Math.ATan2(vec.Y, vec.X);
         if(this.Timer >= 0)

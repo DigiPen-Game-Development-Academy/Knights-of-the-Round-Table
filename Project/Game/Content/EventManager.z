@@ -10,6 +10,14 @@ class Damage : ZilchEvent {
     
 }
 
+class Stun : ZilchEvent {
+    
+    var Time : Real = 0;
+    
+    sends Stun : Stun;
+    
+}
+
 class PathFound : ZilchEvent {
     
     var Path : Array[NavNode];

@@ -39,6 +39,8 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnNotice(event : Notice) {
+        if(this.PathFind.Stunned)
+            return;
         if(Math.Distance(event.Pos, this.Owner.Transform.WorldTranslation) <= 10 && !GlobalVariables.Invis && !this.PlayerSpotted) {
             this.PlayerSpotted = true;
             this.Suspitious = false;
@@ -46,6 +48,9 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnCollisionStarted(event : CollisionEvent) {
+        if(this.PathFind.Stunned)
+            return;
+            
         if(event.OtherObject == GlobalVariables.Player && !GlobalVariables.Invis && !this.PlayerSpotted) {
             this.PlayerSpotted = true;
             this.Suspitious = false;
@@ -54,6 +59,9 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnInSound(event : InSound) {
+        if(this.PathFind.Stunned)
+            return;
+            
         if(!this.PlayerSpotted && Math.Distance(event.Source, this.GuardPos) <= this.MaxDistFromGuard) {
             if(GlobalVariables.DebugLinesActive)
                     Utilities.DrawCircle(this.Owner.Transform.WorldTranslation, this.InstantSpotRadius, false, Real4(0,1,0,1));
@@ -72,6 +80,10 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.PathFind.Stunned)
+            return;
+        
         if (GlobalVariables.Invis)
             this.PlayerSpotted = false;
         
