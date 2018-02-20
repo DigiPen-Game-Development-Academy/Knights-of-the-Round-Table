@@ -363,7 +363,7 @@ class StunMissile : Item {
         this.MagSize = 6;
         this.Name = "Stun Missile";
         this.ID = "Stun_m";
-        this.DamagePer = 15;
+        this.DamagePer = 25;
         this.FireRate = 0.6; 
         this.AmmoPerShot = 8;
         this.RelodTime = 10;
