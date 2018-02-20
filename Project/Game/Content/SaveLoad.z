@@ -6,6 +6,12 @@ class SaveLoad : ZilchComponent {
     var Once : Boolean = true;
     
     function Initialize(init : CogInitializer) {
+        if(GlobalVariables.GroundItems == null)
+            GlobalVariables.GroundItems = Array[Cog]();
+        if(GlobalVariables.Enemies == null)
+            GlobalVariables.Enemies = Array[Cog]();
+        if(GlobalVariables.Chests == null)
+            GlobalVariables.Chests = Array[Cog]();
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
     }
