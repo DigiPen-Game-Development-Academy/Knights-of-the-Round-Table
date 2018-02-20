@@ -18,6 +18,9 @@ class GlobalVariables {
     var ShadowObjects : Array[Cog];
     
     [Static]
+    var SoundUI : SoundWaves = null;
+    
+    [Static]
     var Invis : Boolean = false;
     
     [Static]
