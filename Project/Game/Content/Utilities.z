@@ -72,6 +72,7 @@ class Utilities
         if(GlobalVariables.DebugLinesActive) {
             Utilities.DrawCircle(pos, dist, false, Real4(1,0,0,1));
         }
+        GlobalVariables.SoundUI.Sound(dist);
     }
     
     [Static]

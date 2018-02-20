@@ -1,0 +1,28 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "SoundWaves",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0.00540453568, 0.35579291, 1],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SoundWaves = 
+	{
+		int WaveNum = 10,
+		float Spacing = 0.0500000007,
+		float Whidth = 0.100000001,
+		float Height = 5,
+		float Intencity = 0,
+		float Speed = 1,
+		float MinH = 0.25,
+		string ColorGradient = "5a6dca6a17b25fdf:SoundInd",
+	},
+},
