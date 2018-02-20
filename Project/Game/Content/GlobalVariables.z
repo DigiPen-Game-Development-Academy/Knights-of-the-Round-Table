@@ -6,6 +6,9 @@ class GlobalVariables {
     var Save : Cog;
     
     [Static]
+    var QuestItems : Array[Boolean];
+    
+    [Static]
     var Enemies : Array[Cog];
     
     [Static]

@@ -12,6 +12,13 @@ class SaveLoad : ZilchComponent {
             GlobalVariables.Enemies = Array[Cog]();
         if(GlobalVariables.Chests == null)
             GlobalVariables.Chests = Array[Cog]();
+        if(GlobalVariables.QuestItems == null){
+            GlobalVariables.QuestItems = Array[Boolean]();
+            GlobalVariables.QuestItems.Resize(6);
+            foreach(var b in GlobalVariables.QuestItems) {
+                b = false;
+            }
+        }
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
     }
@@ -41,6 +48,7 @@ class SaveLoad : ZilchComponent {
         GlobalVariables.Save.SaveController.Mouse = SaveFuncs.SerializeItem(GlobalVariables.Inv.InventoryManager.MSlot.MouseSlot.Item);
         GlobalVariables.Save.SaveController.Chests = SaveFuncs.SerializeChests(GlobalVariables.Chests);
         GlobalVariables.Save.SaveController.GItems = SaveFuncs.SerializeGItems(GlobalVariables.GroundItems);
+        GlobalVariables.Save.SaveController.QuestItems = SaveFuncs.SerializeBools(GlobalVariables.QuestItems);
         Zero.ObjectStore.Store("Save", GlobalVariables.Save);
     }
     
@@ -98,5 +106,10 @@ class SaveLoad : ZilchComponent {
         }
         
         GlobalVariables.Inv.InventoryManager.MSlot.MouseSlot.Item = SaveFuncs.DeserializeItem(save.SaveController.Mouse);
+        
+        var qItems = SaveFuncs.DeserializeBools(GlobalVariables.Save.SaveController.QuestItems);
+        qItems.Resize(6);
+        GlobalVariables.QuestItems = qItems;
+        
     }
 }

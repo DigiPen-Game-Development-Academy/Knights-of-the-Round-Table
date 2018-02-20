@@ -1,0 +1,47 @@
+class QuestItemPickup : ZilchComponent {
+    [Property] var Index : Integer = 0;
+    [Property] var Name : String = "";
+    [Property] var Lore : String = "";
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        
+        
+        if(GlobalVariables.QuestItems[this.Index]) {
+            this.Owner.Destroy();
+        }
+        
+    }
+    
+    function OnMouseDown(event : ViewportMouseEvent) {
+        GlobalVariables.QuestItems[this.Index] = true;
+        this.Owner.Destroy();
+        GlobalVariables.LorePanel.Sprite.Visible = false;
+    }
+    
+    function OnMouseExit(event : ViewportMouseEvent) {
+        GlobalVariables.LorePanel.Sprite.Visible = false;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation-this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 3);
+        
+        if(res == null || res.ObjectHit != GlobalVariables.Player) {
+            return;
+        }
+        
+        GlobalVariables.LorePanel.Sprite.Visible = true;
+        
+        var text = "`this.Name`\n`this.Lore`";
+        
+        GlobalVariables.LorePanel.LorePanel.Text = text;
+    }
+    
+}
