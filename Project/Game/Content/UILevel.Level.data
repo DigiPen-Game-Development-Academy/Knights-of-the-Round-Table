@@ -1111,7 +1111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.80220342, -4.81766176, 50],
+			Vec3 Translation = [7.74210596, -4.44880724, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1123,7 +1123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.96338463,
+			float Size = 4.45108175,
 		},
 		EditorCameraController = 
 		{
@@ -1131,7 +1131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.80220342, -4.81766176, 6.58455349e-07],
+			Vec3 LookTarget = [7.74210596, -4.44880724, 8.74385364e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2757,8 +2757,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 1.625, 0],
-					Vec3 Scale = [1, 1, 1],
+					Vec3 Translation = [4.5, -2, 0],
+					Vec3 Scale = [2, 2, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -2786,12 +2786,19 @@ Level =
 				},
 				Hierarchy = 
 				{
-					ArchetypeInstance = 
+					Cog = 
 					{
-						string Name = "5a1c24e6b5c27ce6:QuestItem",
 						LinkId = 
 						{
 							uint Id = 68,
+						},
+						Named = 
+						{
+							string Name = "QuestItem1",
+						},
+						Archetyped = 
+						{
+							string Name = "5a1c24e6b5c27ce6:QuestItem",
 						},
 						Transform = 
 						{
@@ -2799,17 +2806,42 @@ Level =
 							Vec3 Scale = [0.25, 0.25, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
-						Named = 
+						Sprite = 
 						{
-							string Name = "QuestItem1",
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.165000021, 0.165000021, 0.165000021, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5275aa4d802dd6dc:Square",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						QuestItem = 
+						{
+							int Index = 0,
 						},
 					},
-					ArchetypeInstance = 
+					Cog = 
 					{
-						string Name = "5a1c24e6b5c27ce6:QuestItem",
 						LinkId = 
 						{
 							uint Id = 69,
+						},
+						Named = 
+						{
+							string Name = "QuestItem6",
+						},
+						Archetyped = 
+						{
+							string Name = "5a1c24e6b5c27ce6:QuestItem",
 						},
 						Transform = 
 						{
@@ -2817,17 +2849,42 @@ Level =
 							Vec3 Scale = [0.25, 0.25, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
-						Named = 
+						Sprite = 
 						{
-							string Name = "QuestItem2",
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.164705887, 0.164705887, 0.164705887, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5275aa4d802dd6dc:Square",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						QuestItem = 
+						{
+							int Index = 5,
 						},
 					},
-					ArchetypeInstance = 
+					Cog = 
 					{
-						string Name = "5a1c24e6b5c27ce6:QuestItem",
 						LinkId = 
 						{
 							uint Id = 70,
+						},
+						Named = 
+						{
+							string Name = "QuestItem5",
+						},
+						Archetyped = 
+						{
+							string Name = "5a1c24e6b5c27ce6:QuestItem",
 						},
 						Transform = 
 						{
@@ -2835,17 +2892,42 @@ Level =
 							Vec3 Scale = [0.25, 0.25, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
-						Named = 
+						Sprite = 
 						{
-							string Name = "QuestItem3",
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.164705887, 0.164705887, 0.164705887, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5275aa4d802dd6dc:Square",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						QuestItem = 
+						{
+							int Index = 4,
 						},
 					},
-					ArchetypeInstance = 
+					Cog = 
 					{
-						string Name = "5a1c24e6b5c27ce6:QuestItem",
 						LinkId = 
 						{
 							uint Id = 71,
+						},
+						Named = 
+						{
+							string Name = "QuestItem4",
+						},
+						Archetyped = 
+						{
+							string Name = "5a1c24e6b5c27ce6:QuestItem",
 						},
 						Transform = 
 						{
@@ -2853,17 +2935,42 @@ Level =
 							Vec3 Scale = [0.25, 0.25, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
-						Named = 
+						Sprite = 
 						{
-							string Name = "QuestItem4",
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.164705887, 0.164705887, 0.164705887, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5275aa4d802dd6dc:Square",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						QuestItem = 
+						{
+							int Index = 3,
 						},
 					},
-					ArchetypeInstance = 
+					Cog = 
 					{
-						string Name = "5a1c24e6b5c27ce6:QuestItem",
 						LinkId = 
 						{
 							uint Id = 72,
+						},
+						Named = 
+						{
+							string Name = "QuestItem3",
+						},
+						Archetyped = 
+						{
+							string Name = "5a1c24e6b5c27ce6:QuestItem",
 						},
 						Transform = 
 						{
@@ -2871,17 +2978,42 @@ Level =
 							Vec3 Scale = [0.25, 0.25, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
-						Named = 
+						Sprite = 
 						{
-							string Name = "QuestItem5",
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.164705887, 0.164705887, 0.164705887, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5a6dd62c1a9c1891:Compass01 (1)",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						QuestItem = 
+						{
+							int Index = 2,
 						},
 					},
-					ArchetypeInstance = 
+					Cog = 
 					{
-						string Name = "5a1c24e6b5c27ce6:QuestItem",
 						LinkId = 
 						{
 							uint Id = 73,
+						},
+						Named = 
+						{
+							string Name = "QuestItem2",
+						},
+						Archetyped = 
+						{
+							string Name = "5a1c24e6b5c27ce6:QuestItem",
 						},
 						Transform = 
 						{
@@ -2889,9 +3021,27 @@ Level =
 							Vec3 Scale = [0.25, 0.25, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
-						Named = 
+						Sprite = 
 						{
-							string Name = "QuestItem6",
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.164705887, 0.164705887, 0.164705887, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5a6dd62c1a9db0df:WeldingMask_(2)",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						QuestItem = 
+						{
+							int Index = 1,
 						},
 					},
 				},
@@ -4233,14 +4383,14 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 150,
-			string Text = "Alpha V0.1",
+			string Text = "Alpha V0.15",
 			TextAlign Align = Right,
 			float PixelsPerUnit = 429.0383,
 			bool Smoothing = true,
 		},
 		Area = 
 		{
-			Vec2 Size = [2, 0.5],
+			Vec2 Size = [2.29999995, 0.5],
 			Location Origin = BottomRight,
 		},
 	},

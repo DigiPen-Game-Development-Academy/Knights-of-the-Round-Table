@@ -1,4 +1,38 @@
 class SaveFuncs {
+    
+    [Static]
+    function SerializeBools (bools : Array[Boolean]) : String {
+        var str = "";
+        if(bools == null || bools.Count == 0)
+            return "";
+        foreach (var b in bools) {
+            str = "`str`,`b`";
+        }
+        return str;
+    }
+    
+    [Static]
+    function DeserializeBools (str : String) : Array[Boolean] {
+        
+        var bools = Array[Boolean]();
+        var last = -1;
+        
+        for(var i = 0; i < str.Count; ++i) {
+            var c = str[i];
+            if(c == ","[0]) {
+                if(last == -1) {
+                    last = i;
+                    continue;
+                }
+                bools.Add(str.SubStringFromRuneIndices(last+1, i) == "true");
+                last = i;
+            }
+        }
+        
+        return bools;
+        
+    }
+    
     [Static]
     function SerializeEnemies (enemies : Array[Cog]) : String {
         var str = "";

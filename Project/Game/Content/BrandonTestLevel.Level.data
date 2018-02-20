@@ -1,8 +1,7 @@
 Level = 
 {
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a75bff7ccaa4af3:LVSettings",
 		LinkId = 
 		{
 			uint Id = 1,
@@ -11,12 +10,143 @@ Level =
 		{
 			string Name = "LevelSettings",
 		},
+		Archetyped = 
+		{
+			string Name = "5a75bff7ccaa4af3:LVSettings",
+		},
+		GravityEffect = 
+		{
+			bool Active = false,
+			bool WakeUpOnChange = false,
+			bool LocalSpaceDirection = true,
+			float Strength = 10,
+			Vec3 Direction = [0, -1, 0],
+		},
+		DragEffect = 
+		{
+			bool Active = true,
+			bool WakeUpOnChange = false,
+			float Drag = 0.699999988,
+			float AngularDrag = 0.100000001,
+		},
+		CameraViewport = 
+		{
+			bool Background = true,
+			Vec2 Offset = [0, 0],
+			Vec2 Size = [1, 1],
+			int Layer = 0,
+			bool Active = true,
+			bool Blocking = true,
+			CogPath Renderer = 
+			{
+				string Path = ".",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 1,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			CogPath Camera = 
+			{
+				string Path = ":/Player/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			ViewportScaling Scaling = Letterbox,
+			Vec2 Resolution = [1280, 720],
+			Vec4 MarginColor = [0, 0, 0, 1],
+		},
+		GridDraw = 
+		{
+			bool Active = true,
+			bool HalfCellOffset = false,
+			float CellSize = 1,
+			GridAxis Axis = ZAxis,
+			int Lines = 100,
+			bool DrawAxisOrigins = true,
+			bool AlwaysDrawInEditor = true,
+			bool DrawInGame = false,
+			Vec4 GridColor = [0.5, 0.5, 0.5, 0.400000006],
+			Vec4 GridHiLight = [0, 0, 0, 0.400000006],
+			int HilightInterval = 10,
+			bool FollowEditorCamera = false,
+		},
+		DeferredRenderer = 
+		{
+			Vec4 ClearColor = [0, 0, 0, 1],
+			bool DrawNonVisible = false,
+			bool DrawDebugObjects = true,
+			bool DrawEditorIcons = true,
+			bool EditorIconDepth = true,
+			bool Hdr = false,
+			bool Shadows = false,
+			bool AntiAliasing = false,
+			bool Refraction = true,
+			bool Reflections = true,
+			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
+			bool GodRays = false,
+			bool RenderMasks = false,
+			bool Glow = false,
+			float GlowThreshold = 1,
+		},
+		InputManager = 
+		{
+			Enum North = W,
+			Enum South = S,
+			Enum West = A,
+			Enum East = D,
+			Enum Sprint = Shift,
+			Enum UseWeaponMouse = Left,
+			Enum UseWeaponKey = Space,
+			Enum ToggleSecondary = E,
+			Enum PauseOrInventory = Escape,
+			Enum AltPOrInventory = I,
+			Enum UseUtility = F,
+			Enum OpenConsole = Tilde,
+		},
+		CreateUI = 
+		{
+			string UILevel = "5a1c3268256273d9:UILevel",
+		},
+		FindPath = 
+		{
+		},
+		CreateNavGrid = 
+		{
+			Vec2 WorldSize = [100, 100],
+		},
+		CreateLargeNavGrid = 
+		{
+			Vec2 WorldSize = [100, 100],
+		},
+		SaveLoad = 
+		{
+			bool LoadOnStart = false,
+		},
+		TimeTimer = 
+		{
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 2,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -24,7 +154,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.100252107, 0.305809021, 112.565193],
+			Vec3 Translation = [0.31965667, 0.425262868, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -36,7 +166,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.45108175,
+			float Size = 3.29744291,
 		},
 		EditorCameraController = 
 		{
@@ -44,7 +174,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.100252107, 0.305809021, 1],
+			Vec3 LookTarget = [0.31965667, 0.425262868, 1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -56,12 +186,19 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a019e04c7cf6461:Player",
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+		Archetyped = 
+		{
+			string Name = "5a019e04c7cf6461:Player",
 		},
 		Transform = 
 		{
@@ -69,16 +206,172 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Player",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5afd92272f3d7f10:Pat Walk South",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5a917b88a0971f8b:Player",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.125, 0.449999988, 0.5],
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = true,
+			bool Force = true,
+			bool Gravity = true,
+			bool Thrust = true,
+			bool Vortex = true,
+			bool Wind = true,
+			bool Invalid = false,
+			bool Torque = true,
+			bool PointGravity = true,
+			bool PointForce = true,
+			bool Buoyancy = true,
+			bool Custom = true,
+		},
+		PlayerMovment = 
+		{
+			float MoveSpeed = 4,
+			float SprintMultiplier = 2,
+			float SprintSoundDist = 15,
+		},
+		UseWeapon = 
+		{
+			float AnimLockTime = 0.5,
+		},
+		Health = 
+		{
+			float InitialHealth = 100,
+			float Cooldown = 3,
+			float RegenRate = 0.333333343,
+		},
+		PlayerHealth = 
+		{
+		},
+		PlayerSprites = 
+		{
+			string North = "5a6d247539981dd2:Pat Walk N Anim",
+			string NorthEast = "5a6d249a48605e1f:Pat Walk NE Anim",
+			string East = "5a6d24143c97bf0c:Pat Walk E Anim",
+			string SouthEast = "5a6d24e3423ddd76:Pat Walk SE Anim",
+			string South = "5afd92272f3d7f10:Pat Walk South",
+			string SouthWest = "5a6d26098c352d3f:Pat walk SW Anim",
+			string West = "5a6d2454350b07e9:Pat Walk W Anim",
+			string NorthWest = "5a6d248c47a04450:Pat Walk NW Anim",
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 2,
+				},
+				Named = 
+				{
+					string Name = "Camera",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 40],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Camera = 
+				{
+					ProjectionMode ProjectionMode = Orthographic,
+					Facing Facing = NegativeZ,
+					CameraTransparentSort TransparentSort = ViewDepth,
+					float FieldOfView = 45,
+					float NearPlane = 0.5,
+					float FarPlane = 50,
+					float Size = 10,
+				},
+				SoundListener = 
+				{
+					bool Active = true,
+					float Volume = 1,
+				},
+				CamFollow = 
+				{
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 5,
+				},
+				Named = 
+				{
+					string Name = "TrollWarp",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Camera = 
+				{
+					ProjectionMode ProjectionMode = Orthographic,
+					Facing Facing = NegativeZ,
+					CameraTransparentSort TransparentSort = InheritFromSpace,
+					float FieldOfView = 45,
+					float NearPlane = 0.5,
+					float FarPlane = 200,
+					float Size = 1,
+				},
+				ScreenWarpRing = 
+				{
+					float Size = 10.5,
+					float Thickness = 10,
+					float Intensity = 0,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -113,7 +406,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -148,7 +441,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -183,7 +476,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -219,7 +512,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 10,
 		},
 		Transform = 
 		{
@@ -236,7 +529,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -284,7 +577,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -332,7 +625,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -380,7 +673,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -440,7 +733,7 @@ Level =
 		string Name = "5a019a715d23f111:Twig",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 15,
 		},
 		Transform = 
 		{
@@ -458,7 +751,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 16,
 		},
 		Transform = 
 		{
@@ -476,7 +769,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 17,
 		},
 		Transform = 
 		{
@@ -494,7 +787,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 18,
 		},
 		Transform = 
 		{
@@ -511,7 +804,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -559,7 +852,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -607,7 +900,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -655,7 +948,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -703,7 +996,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -751,7 +1044,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 24,
 		},
 		Named = 
 		{
@@ -799,7 +1092,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 25,
 		},
 		Named = 
 		{
@@ -847,7 +1140,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 26,
 		},
 		Named = 
 		{
@@ -895,7 +1188,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 27,
 		},
 		Named = 
 		{

@@ -1,0 +1,25 @@
+class QuestItem : ZilchComponent {
+    [Property] var Index : Integer = 0;
+    var Color : Real4;
+    function Initialize(init : CogInitializer) {
+        if(GlobalVariables.QuestItems == null){
+            GlobalVariables.QuestItems = Array[Boolean]();
+            GlobalVariables.QuestItems.Resize(6);
+            foreach(var b in GlobalVariables.QuestItems) {
+                b = false;
+            }
+        }
+        this.Color = this.Owner.Sprite.Color;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(GlobalVariables.QuestItems[this.Index]) {
+            this.Owner.Sprite.Color = Real4(1);
+        } else {
+            this.Owner.Sprite.Color = this.Color;
+        }
+        
+    }
+}
