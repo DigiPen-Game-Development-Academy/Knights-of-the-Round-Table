@@ -7,6 +7,9 @@ class SaveController : ZilchComponent {
     var PlayerHealth : Real = 100;
     
     [Serialized]
+    var QuestItems : String = "";
+    
+    [Serialized]
     var Enemies : String = "";
     
     [Serialized]
