@@ -578,7 +578,7 @@ class Potatocannon  : Item {
     
     var Circle : Cog;
     var ImpactRange : Real = 3;
-    var PotatoMoveSpd : Real = 3;
+    var PotatoMoveSpd : Real = 10;
     var ArcIntencity : Real = 0.75;
     var ExpSoundDist : Real = 10;
     
