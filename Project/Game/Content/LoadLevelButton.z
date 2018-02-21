@@ -1,0 +1,15 @@
+class LoadLevelButton : ZilchComponent {
+    [Dependency] var Button : Button;
+    [Property]   var Level  : Level;
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent) {
+        var uiSpace = this.GameSession.FindSpaceByName("UI");
+        if(uiSpace != null) {
+            uiSpace.Destroy();
+        }
+        this.Space.LoadLevel(this.Level);
+    }
+}

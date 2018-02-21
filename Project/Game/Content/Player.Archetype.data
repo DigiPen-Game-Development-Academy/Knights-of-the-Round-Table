@@ -95,14 +95,14 @@ Cog =
 	},
 	PlayerSprites = 
 	{
-		string North = "5a0759f3f416b0a2:Temp_Enemy002",
-		string NorthEast = "5a07589e80afd996:Temp_Enemy007",
-		string East = "5a0759f3f417f88d:Temp_Enemy003",
-		string SouthEast = "5a0759f3f415546c:Temp_Enemy004",
+		string North = "5a6d247539981dd2:Pat Walk N Anim",
+		string NorthEast = "5a6d249a48605e1f:Pat Walk NE Anim",
+		string East = "5a6d24143c97bf0c:Pat Walk E Anim",
+		string SouthEast = "5a6d24e3423ddd76:Pat Walk SE Anim",
 		string South = "5afd92272f3d7f10:Pat Walk South",
-		string SouthWest = "5a0759f3f4129b4b:Temp_Enemy005",
-		string West = "5a0759f3f419221b:Temp_Enemy001",
-		string NorthWest = "5a0759f0f413d20b:Temp_Enemy006",
+		string SouthWest = "5a6d26098c352d3f:Pat walk SW Anim",
+		string West = "5a6d2454350b07e9:Pat Walk W Anim",
+		string NorthWest = "5a6d248c47a04450:Pat Walk NW Anim",
 	},
 	Hierarchy = 
 	{
