@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 0.990000129, 0, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -96,19 +96,20 @@ Cog =
 	},
 	EnemySprite = 
 	{
-		string North = "5a0759f3f416b0a2:Temp_Enemy002",
-		string NorthEast = "5a07589e80afd996:Temp_Enemy007",
-		string East = "5a0759f3f417f88d:Temp_Enemy003",
-		string SouthEast = "5a0759f3f415546c:Temp_Enemy004",
-		string South = "5a0759f3f41bf838:Temp_Enemy000",
-		string SouthWest = "5a0759f3f4129b4b:Temp_Enemy005",
-		string West = "5a0759f3f419221b:Temp_Enemy001",
-		string NorthWest = "5a0759f0f413d20b:Temp_Enemy006",
+		string North = "5af4dcd2583e40fb:Ranger004",
+		string NorthEast = "5af4dcd25831d337:Ranger005",
+		string East = "5af4dcd358356d7f:Ranger006",
+		string SouthEast = "5af4dcd35808ecc3:Ranger007",
+		string South = "5af4dcd2582df625:Ranger000",
+		string SouthWest = "5af4dcd2582316b1:Ranger001",
+		string West = "5af4dcd258275797:Ranger002",
+		string NorthWest = "5af4dcd2583acbe8:Ranger003",
 	},
 	EnemyMelee = 
 	{
 		float AttacksPerSecond = 3,
 		float DamagerPerAttack = 5,
+		string DeathMSG = "You Where Bitten by an Enemy",
 	},
 	Health = 
 	{
@@ -134,6 +135,7 @@ Cog =
 		float ReloadTime = 2,
 		float FireRate = 4,
 		float MinDist = 4,
+		string DeathMSG = "You Where Shot by an Enemy",
 	},
 	EnemyPing = 
 	{
