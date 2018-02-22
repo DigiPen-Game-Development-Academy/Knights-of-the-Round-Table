@@ -113,7 +113,7 @@ Cog =
 		Enum UseWeaponKey = Space,
 		Enum ToggleSecondary = E,
 		Enum PauseOrInventory = Escape,
-		Enum AltPOrInventory = I,
+		Enum AltPOrInventory = Tab,
 		Enum UseUtility = F,
 		Enum OpenConsole = Tilde,
 	},
