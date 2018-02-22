@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-8.5, 3.375, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -29,5 +29,17 @@ Cog =
 		float MinH = 0.25,
 		string ColorGradient = "5a6dca6a17b25fdf:SoundInd",
 		float CooldownTime = 0.100000001,
+		float IntecityFSpd = 15,
+	},
+	Area = 
+	{
+		Vec2 Size = [1, 1],
+		Location Origin = Center,
+	},
+	ScreenAlign = 
+	{
+		Enum Pos = Topleft,
+		Vec3 Offset = [0, 0, 0],
+		Vec2 RelOffset = [0.400000006, 2],
 	},
 },

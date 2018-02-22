@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Cursor",
-		uint64 ResourceId = 5af493b40c44fe54,
+		string Name = "Shotgun003",
+		uint64 ResourceId = 5af492a6259160e0,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 160,
 		uint FrameSizeY = 160,

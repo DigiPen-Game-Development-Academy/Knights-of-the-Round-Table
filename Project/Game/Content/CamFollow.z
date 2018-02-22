@@ -1,7 +1,11 @@
 class CamFollow : ZilchComponent {
     var Spin : Boolean = false;
     var Timer : Real = 0;
+    var TargetPos : Real3 = Real3(0);
+    [Property] var MoveSpd : Real = 5;
+    var StartSpd : Real = 5;
     function Initialize(init : CogInitializer) {
+        this.StartSpd = this.MoveSpd;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
@@ -22,8 +26,10 @@ class CamFollow : ZilchComponent {
         }
         
         var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
-        this.Owner.Transform.WorldTranslation = GlobalVariables.Player.Transform.WorldTranslation + (mousePos - GlobalVariables.Player.Transform.WorldTranslation)/GlobalVariables.CamSense;
-        this.Owner.Transform.WorldTranslation = Real3(this.Owner.Transform.WorldTranslation.X, this.Owner.Transform.WorldTranslation.Y, 40);
+        this.TargetPos = GlobalVariables.Player.Transform.WorldTranslation + (mousePos - GlobalVariables.Player.Transform.WorldTranslation)/GlobalVariables.CamSense;
+        this.TargetPos = Real3(this.TargetPos.X, this.TargetPos.Y, 40);
+        
+        this.Owner.Transform.WorldTranslation = Math.Lerp(this.Owner.Transform.WorldTranslation, this.TargetPos, event.Dt*this.MoveSpd);
         
     }
 }

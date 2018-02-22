@@ -140,6 +140,7 @@ Cog =
 			},
 			CamFollow = 
 			{
+				float MoveSpd = 15,
 			},
 			Hierarchy = 
 			{
@@ -176,6 +177,49 @@ Cog =
 				float Size = 10.5,
 				float Thickness = 10,
 				float Intensity = 0,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Named = 
+			{
+				string Name = "Hold",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 0.100000001],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af4923cd5b44732:ShotgunHolding",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = false,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			Holding = 
+			{
+			},
+			Area = 
+			{
+				Vec2 Size = [1, 1],
+				Location Origin = Center,
 			},
 		},
 	},

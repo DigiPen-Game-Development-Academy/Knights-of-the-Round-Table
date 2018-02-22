@@ -13,6 +13,7 @@ class TimeTimer : ZilchComponent {
             this.Once = false;
             this.Space.TimeSpace.TimeScale = 1;
             GlobalVariables.Player.PlayerMovment.MoveSpeed = GlobalVariables.Player.PlayerMovment.StartSpd;
+            this.LevelSettings.CameraViewport.Camera.CamFollow.MoveSpd = this.LevelSettings.CameraViewport.Camera.CamFollow.StartSpd;
             GlobalVariables.SloMo = false;
         }
     }
@@ -23,6 +24,7 @@ class TimeTimer : ZilchComponent {
         this.Once = true;
         this.Timer = time;
         this.Space.TimeSpace.TimeScale = timeScale;
+        this.LevelSettings.CameraViewport.Camera.CamFollow.MoveSpd *= 1/timeScale;
         if(timeScale < 1)
             GlobalVariables.SloMo = true;
         

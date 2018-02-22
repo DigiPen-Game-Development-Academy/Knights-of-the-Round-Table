@@ -32,6 +32,9 @@ class AutoChest : ZilchComponent {
             return;
         }
         
+        if(event.Button == MouseButtons.Left)
+            return;
+        
         /*Generate Loot*/
         if((this.Items == null || this.Items.Count == 0) && this.Owner.SetChest == null && !this.Set) {
             this.Items = Array[Item]();
@@ -107,7 +110,7 @@ class AutoChest : ZilchComponent {
         this.Owner.Sprite.SpriteSource = SpriteSource.ChestSprite;
         
         GlobalVariables.LorePanel.Sprite.Visible = true;
-        GlobalVariables.LorePanel.LorePanel.Text = "This is a chest\nClick to open";
+        GlobalVariables.LorePanel.LorePanel.Text = "This is a chest\nRight click to open";
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
