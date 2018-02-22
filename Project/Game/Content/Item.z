@@ -29,7 +29,7 @@ class Item {
     var FireRate : Real = 4;
     
     var MagSize : Integer = 20;
-    var CurrentMag : Integer = 20;
+    var CurrentMag : Integer = 0;
     var Reloading : Boolean = false;
     
     var MaxRange : Real = 10;

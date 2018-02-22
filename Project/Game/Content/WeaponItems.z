@@ -315,18 +315,22 @@ class SlugShotgun : Item {
 //
 class Laserbeam : Item {
     
+    var Laser : Cog = null;
+    
     function Init () {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
-        this.MagSize = 10;
+        //use mag size for ammount of seconds active before reload
+        this.MagSize = 5;
         this.Name = "Laser Beam";
         this.ID = "Laser_Beam";
-        this.DamagePer = 10;
+        this.DamagePer = 25;
         this.FireRate = 0.50; 
         this.AmmoPerShot = 4;
         this.RelodTime = 3;
+        this.Auto = false;
     }
     
     function ReturnLore () : String {
@@ -339,7 +343,7 @@ class Laserbeam : Item {
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Laserbeam");
+        this.Laser = GlobalVariables.GameSpace.CreateAtPosition(Archetype.BeamLaser, GlobalVariables.Player.Transform.WorldTranslation);
     }
     
 }

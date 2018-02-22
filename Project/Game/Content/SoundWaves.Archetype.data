@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "SoundWaves",
 	},
+	Archetyped = 
+	{
+		string Name = "5a6dc57e30d123ad:SoundWaves",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0.00540453568, 0.35579291, 1],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,5 +28,6 @@ Cog =
 		float Speed = 1,
 		float MinH = 0.25,
 		string ColorGradient = "5a6dca6a17b25fdf:SoundInd",
+		float CooldownTime = 0.100000001,
 	},
 },

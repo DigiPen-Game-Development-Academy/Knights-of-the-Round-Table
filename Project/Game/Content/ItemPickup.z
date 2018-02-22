@@ -27,7 +27,7 @@ class ItemPickup : ZilchComponent
         if(res == null || res.ObjectHit != GlobalVariables.Player) {
             return;
         }
-        if(this.Item != null && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) <= 3){
+        if(this.Item != null && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) <= 3 && event.Button == MouseButtons.Right){
             if(GlobalVariables.AddInventoryItem(this.Item)) {
                 this.Owner.Destroy();
                 GlobalVariables.LorePanel.Sprite.Visible = false;
@@ -67,6 +67,8 @@ class ItemPickup : ZilchComponent
                 text = "`item.Name`\n`item.ReturnLore()`";
             else
                 text = "`item.Name`\n`item.ReturnLore()`";
+                
+            text = "`text`\nRight Click to Pick up";
             
             GlobalVariables.LorePanel.LorePanel.Text = text;
     }

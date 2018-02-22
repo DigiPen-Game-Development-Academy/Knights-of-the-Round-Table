@@ -212,7 +212,7 @@ class InventorySlot : ZilchComponent
             
             if(item.Type == ItemType.Weapon){
                 if(item.MagSize != -1)
-                    text = "`item.Name`\n`item.ReturnLore()`Mag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
+                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
                 else
                     text = "`item.Name`\n`item.ReturnLore()`\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
             } else if(item.Type == ItemType.Utility){
@@ -239,7 +239,7 @@ class InventorySlot : ZilchComponent
             
             if(item.Type == ItemType.Weapon){
                 if(item.MagSize != -1)
-                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
+                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
                 else
                     text = "`item.Name`\n`item.ReturnLore()`\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
             } else if(item.Type == ItemType.Utility){

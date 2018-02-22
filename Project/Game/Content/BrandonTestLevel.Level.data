@@ -154,7 +154,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.136564925, 0.804694653, 112.565193],
+			Vec3 Translation = [0.707432091, 0.311868131, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -166,7 +166,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 3.29744291,
+			float Size = 4.0275054,
 		},
 		EditorCameraController = 
 		{
@@ -174,7 +174,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.136564925, 0.804694653, 1],
+			Vec3 LookTarget = [0.707432091, 0.311868131, 1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -186,19 +186,12 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a019e04c7cf6461:Player",
 		LinkId = 
 		{
 			uint Id = 4,
-		},
-		Named = 
-		{
-			string Name = "Player",
-		},
-		Archetyped = 
-		{
-			string Name = "5a019e04c7cf6461:Player",
 		},
 		Transform = 
 		{
@@ -206,172 +199,16 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5afd92272f3d7f10:Pat Walk South",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5a917b88a0971f8b:Player",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.125, 0.449999988, 0.5],
-		},
-		IgnoreSpaceEffects = 
-		{
-			bool Drag = true,
-			bool Flow = true,
-			bool Force = true,
-			bool Gravity = true,
-			bool Thrust = true,
-			bool Vortex = true,
-			bool Wind = true,
-			bool Invalid = false,
-			bool Torque = true,
-			bool PointGravity = true,
-			bool PointForce = true,
-			bool Buoyancy = true,
-			bool Custom = true,
-		},
-		PlayerMovment = 
-		{
-			float MoveSpeed = 4,
-			float SprintMultiplier = 2,
-			float SprintSoundDist = 15,
-		},
-		UseWeapon = 
-		{
-			float AnimLockTime = 0.5,
-		},
-		Health = 
-		{
-			float InitialHealth = 100,
-			float Cooldown = 3,
-			float RegenRate = 0.333333343,
-		},
-		PlayerHealth = 
-		{
-		},
-		PlayerSprites = 
-		{
-			string North = "5a6d247539981dd2:Pat Walk N Anim",
-			string NorthEast = "5a6d249a48605e1f:Pat Walk NE Anim",
-			string East = "5a6d24143c97bf0c:Pat Walk E Anim",
-			string SouthEast = "5a6d24e3423ddd76:Pat Walk SE Anim",
-			string South = "5afd92272f3d7f10:Pat Walk South",
-			string SouthWest = "5a6d26098c352d3f:Pat walk SW Anim",
-			string West = "5a6d2454350b07e9:Pat Walk W Anim",
-			string NorthWest = "5a6d248c47a04450:Pat Walk NW Anim",
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 2,
-				},
-				Named = 
-				{
-					string Name = "Camera",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, 40],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Camera = 
-				{
-					ProjectionMode ProjectionMode = Orthographic,
-					Facing Facing = NegativeZ,
-					CameraTransparentSort TransparentSort = ViewDepth,
-					float FieldOfView = 45,
-					float NearPlane = 0.5,
-					float FarPlane = 50,
-					float Size = 10,
-				},
-				SoundListener = 
-				{
-					bool Active = true,
-					float Volume = 1,
-				},
-				CamFollow = 
-				{
-				},
-				Hierarchy = 
-				{
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 5,
-				},
-				Named = 
-				{
-					string Name = "TrollWarp",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Camera = 
-				{
-					ProjectionMode ProjectionMode = Orthographic,
-					Facing Facing = NegativeZ,
-					CameraTransparentSort TransparentSort = InheritFromSpace,
-					float FieldOfView = 45,
-					float NearPlane = 0.5,
-					float FarPlane = 200,
-					float Size = 1,
-				},
-				ScreenWarpRing = 
-				{
-					float Size = 10.5,
-					float Thickness = 10,
-					float Intensity = 0,
-				},
-			},
+			string Name = "Player",
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -406,7 +243,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -441,7 +278,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -476,7 +313,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -512,7 +349,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Transform = 
 		{
@@ -529,7 +366,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -577,7 +414,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -625,7 +462,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -673,7 +510,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -733,7 +570,7 @@ Level =
 		string Name = "5a019a715d23f111:Twig",
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 14,
 		},
 		Transform = 
 		{
@@ -751,7 +588,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 15,
 		},
 		Transform = 
 		{
@@ -769,7 +606,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 16,
 		},
 		Transform = 
 		{
@@ -787,7 +624,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 17,
 		},
 		Transform = 
 		{
@@ -804,7 +641,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -852,7 +689,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -900,7 +737,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -948,7 +785,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -996,7 +833,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -1044,7 +881,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -1092,7 +929,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 24,
 		},
 		Named = 
 		{
@@ -1140,7 +977,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 25,
 		},
 		Named = 
 		{
@@ -1188,7 +1025,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 26,
 		},
 		Named = 
 		{

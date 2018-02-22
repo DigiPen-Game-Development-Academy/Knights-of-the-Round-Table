@@ -17,7 +17,7 @@ class Lazer : ZilchComponent {
 
     function OnLogicUpdate(event : UpdateEvent) {
         
-        this.Owner.Transform.WorldTranslation = GlobalVariables.Player.Transform.WorldTranslation;
+        this.Owner.Transform.WorldTranslation = GlobalVariables.Player.Transform.WorldTranslation + Real3(0,0,-0.1);
         var dir = Math.Normalize(this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - this.Owner.Transform.WorldTranslation);
         
         var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, dir, this.Space.PhysicsSpace, 50);
