@@ -31,7 +31,7 @@ class Potato : Item {
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3);
         
         if(res != null) {
-            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             if(res.ObjectHit.Health != null) {
                 GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
                 if(res.ObjectHit.EnemyAI != null && (
@@ -133,7 +133,7 @@ class Plasma_Pistol : Item {
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
         if(res != null && !GlobalVariables.SloMo){
-            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
@@ -187,7 +187,7 @@ class PlasmaSword : Item {
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3.5);
         
         if(res != null) {
-            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             if(res.ObjectHit.Health != null) {
                 GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
                 if(res.ObjectHit.EnemyAI != null && !res.ObjectHit.EnemyAI.Suspitious && !res.ObjectHit.EnemyAI.PlayerSpotted) {
@@ -236,7 +236,7 @@ class TerribleAssaultRifle : Item {
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
         if(res != null && !GlobalVariables.SloMo){
-            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
@@ -293,7 +293,7 @@ class SlugShotgun : Item {
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
         if(res != null && !GlobalVariables.SloMo){
-            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
@@ -344,6 +344,10 @@ class Laserbeam : Item {
     
     function Use (radAngle : Real) {
         this.Laser = GlobalVariables.GameSpace.CreateAtPosition(Archetype.BeamLaser, GlobalVariables.Player.Transform.WorldTranslation);
+        this.Laser.LazerNoArea.Damage = this.DamagePer;
+        this.Laser.LazerNoArea.DeathMSG = this.ReturnDeathMSG();
+        this.Laser.LazerNoArea.SoundRange = this.SoundDistance;
+        this.Laser.LazerNoArea.Range = this.MaxRange;
     }
     
 }
@@ -446,7 +450,7 @@ class SawLaser  : Item {
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
         if(res != null && !GlobalVariables.SloMo){
-            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
@@ -509,7 +513,7 @@ class Lasersniper  : Item {
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
         if(res != null && !GlobalVariables.SloMo){
-            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
@@ -618,6 +622,7 @@ class Potatocannon  : Item {
         potat.PotatProjectile.ImpactSize = this.ImpactRange;
         potat.PotatProjectile.ArcIntencity = this.ArcIntencity;
         potat.PotatProjectile.SoundRad = this.ExpSoundDist;
+        potat.PotatProjectile.DamageMSG = this.ReturnDeathMSG();
         potat.PotatProjectile.Set = true;
         
     }
@@ -691,7 +696,7 @@ class MMS_Sniper  : Item {
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
         if(res != null && !GlobalVariables.SloMo){
-            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);
@@ -706,7 +711,6 @@ class MMS_Sniper  : Item {
         Utilities.SendSoundWeapon(this.SoundDistance);
         
         GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
-        
         
     }
     

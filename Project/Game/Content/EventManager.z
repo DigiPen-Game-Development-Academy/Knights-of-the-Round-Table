@@ -6,6 +6,8 @@ class Damage : ZilchEvent {
     
     var Damage : Real = 0;
     
+    var DeathMSG : String;
+    
     sends Damage : Damage;
     
 }
@@ -34,6 +36,9 @@ class InSound : ZilchEvent {
 }
 
 class NoHealth : ZilchEvent {
+    
+    var DeathMSG : String;
+    
     sends NoHealth : NoHealth;
 }
 

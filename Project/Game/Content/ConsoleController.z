@@ -8,11 +8,11 @@ class ConsoleController : ZilchComponent {
         GlobalVariables.Console = this.Owner;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.Text = Array[Cog]();
-        
+        if(GlobalVariables.DeathMSG != "") {
+            this.AddMSG(GlobalVariables.DeathMSG, Real4(1,0,0,1));
+        }
     }
     function OnLogicUpdate(event : UpdateEvent) {
-        
-        
         
     }
     

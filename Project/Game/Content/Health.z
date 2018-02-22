@@ -5,6 +5,7 @@ class Health : ZilchComponent {
     var Cooldown : Real = 3;
     [Property]
     var RegenRate : Real = 0.3333333333333;
+    var DeathMSG : String = "";
     var Timer : Real = 0;
     var CooldownTimer : Real = 0;
     var CurrentHealth : Real = 0;
@@ -16,8 +17,12 @@ class Health : ZilchComponent {
 
     function OnDamage(event : Damage) {
         this.CurrentHealth  -= event.Damage;
-        if(this.CurrentHealth <= 0)
-            this.Owner.DispatchEvent(Events.NoHealth, NoHealth());
+        this.DeathMSG = event.DeathMSG;
+        if(this.CurrentHealth <= 0) {
+            var nh = NoHealth();
+            nh.DeathMSG = this.DeathMSG;
+            this.Owner.DispatchEvent(Events.NoHealth, nh);
+        }
         if(this.CurrentHealth < 0)
             this.CurrentHealth = 0;
         this.CooldownTimer = this.Cooldown;

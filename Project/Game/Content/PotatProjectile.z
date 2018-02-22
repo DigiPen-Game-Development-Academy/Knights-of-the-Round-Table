@@ -12,6 +12,8 @@ class PotatProjectile : ZilchComponent {
     var Orientation : Orientation;
     var StartDist : Real = 0;
     
+    var DamageMSG : String = "";
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
@@ -52,6 +54,7 @@ class PotatProjectile : ZilchComponent {
             Utilities.SendSound(this.SoundRad, this.Owner.Transform.WorldTranslation);
             var dmg = Damage();
             dmg.Damage = this.Damage;
+            dmg.DeathMSG = this.DamageMSG;
             var res = this.Space.PhysicsSpace.DispatchWithinSphere(this.Owner.Transform.WorldTranslation, this.ImpactSize, Events.Damage, dmg);
             this.Owner.FindChildByName("Trail").SphericalParticleEmitter.Active = false;
             this.Owner.FindChildByName("Trail").DetachRelative();

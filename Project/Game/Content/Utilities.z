@@ -163,11 +163,13 @@ class Utilities
     
     
     [Static]
-    function Damage(obj : Cog, damage : Real) {
+    function Damage(obj : Cog, damage : Real, msg : String) {
         
         var dmg = Damage();
         
         dmg.Damage = damage;
+        
+        dmg.DeathMSG = msg;
         
         obj.DispatchEvent(Events.Damage, dmg);
         

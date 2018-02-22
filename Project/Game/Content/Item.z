@@ -55,12 +55,18 @@ class Item {
     
     [Virtual]
     function Init () {
-        Console.WriteLine("This Item Will Not Initialize Properly!");
+        Console.WriteLine("`this.Name` Will Not Initialize Properly!");
+        Utilities.ConsoleSend("`this.Name` Will Not Initialize Properly!", Real4(1));
     }
     
     [Virtual]
     function ReturnLore () : String {
         return "";
+    }
+    
+    [Virtual]
+    function ReturnDeathMSG () : String {
+        return "You where defeated!";
     }
     
     [Virtual]
@@ -70,7 +76,8 @@ class Item {
     
     [Virtual]
     function Use (radAngle : Real) {
-        Console.WriteLine("This Item Does Not Do Anything!");
+        Console.WriteLine("`this.Name` Does Not Do Anything!");
+        Utilities.ConsoleSend("`this.Name` Does Not Do Anything!", Real4(1));
     }
     
 }

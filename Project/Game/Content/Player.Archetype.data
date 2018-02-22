@@ -76,7 +76,7 @@ Cog =
 	},
 	PlayerMovment = 
 	{
-		float MoveSpeed = 4,
+		float MoveSpeed = 2,
 		float SprintMultiplier = 2,
 		float SprintSoundDist = 15,
 	},

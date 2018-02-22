@@ -13,5 +13,9 @@ class PlayerHealth : ZilchComponent {
             GlobalVariables.Items[i] = null;
         }
         this.Space.ReloadLevel();
+        GlobalVariables.DeathMSG = event.DeathMSG;
+        if(event.DeathMSG == null) {
+            GlobalVariables.DeathMSG = "You Were Defeated!";
+        }
     }
 }

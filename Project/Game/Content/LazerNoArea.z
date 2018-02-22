@@ -16,6 +16,8 @@ class LazerNoArea : ZilchComponent {
     
     var AmmoTimer : Real = 1;
     
+    var DeathMSG : String = "";
+    
     function Initialize(init : CogInitializer) {
         this.EmitRate = this.Owner.BoxParticleEmitter.EmitRate;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -79,7 +81,7 @@ class LazerNoArea : ZilchComponent {
             this.Owner.Transform.WorldScale = Real3(this.Owner.Transform.WorldScale.X, res.Distance, 1);
             this.Owner.Transform.WorldTranslation += dir*(res.Distance/2);
             this.Owner.BoxParticleEmitter.EmitRate = this.EmitRate*res.Distance;
-            Utilities.Damage(res.ObjectHit, this.Damage*event.Dt);
+            Utilities.Damage(res.ObjectHit, this.Damage*event.Dt, this.DeathMSG);
         } else {
             this.Owner.Transform.WorldScale = Real3(this.Owner.Transform.WorldScale.X, this.Range, 1);
             this.Owner.Transform.WorldTranslation += dir*(this.Range/2);

@@ -9,6 +9,9 @@ class GlobalVariables {
     var QuestItems : Array[Boolean];
     
     [Static]
+    var DeathMSG : String = "";
+    
+    [Static]
     var Enemies : Array[Cog];
     
     [Static]
