@@ -115,7 +115,7 @@ Level =
 			Enum UseWeaponKey = Space,
 			Enum ToggleSecondary = E,
 			Enum PauseOrInventory = Escape,
-			Enum AltPOrInventory = I,
+			Enum AltPOrInventory = Tab,
 			Enum UseUtility = F,
 			Enum OpenConsole = Tilde,
 		},
@@ -154,7 +154,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.4320991, 8.17835808, 112.565193],
+			Vec3 Translation = [-5.33115292, 17.3151169, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -166,7 +166,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.7594585,
+			float Size = 32.889286,
 		},
 		EditorCameraController = 
 		{
@@ -174,7 +174,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.4320991, 8.17835808, 1],
+			Vec3 LookTarget = [-5.33115292, 17.3151169, 0.99999994],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
