@@ -65,7 +65,7 @@ Cog =
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,
 		},
-		ViewportScaling Scaling = Letterbox,
+		ViewportScaling Scaling = Fill,
 		Vec2 Resolution = [1280, 720],
 		Vec4 MarginColor = [0, 0, 0, 1],
 	},

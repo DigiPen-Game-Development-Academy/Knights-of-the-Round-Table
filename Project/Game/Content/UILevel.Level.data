@@ -63,7 +63,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			ViewportScaling Scaling = Letterbox,
+			ViewportScaling Scaling = Fill,
 			Vec2 Resolution = [1920, 1080],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
@@ -142,6 +142,12 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Topleft,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [11.5, 1.5],
 		},
 		Hierarchy = 
 		{
@@ -1111,7 +1117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.74210596, -4.44880724, 50],
+			Vec3 Translation = [2.2449882, 1.50783265, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1123,7 +1129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.45108175,
+			float Size = 5.43657398,
 		},
 		EditorCameraController = 
 		{
@@ -1131,7 +1137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [7.74210596, -4.44880724, 8.74385364e-07],
+			Vec3 LookTarget = [2.2449882, 1.50783265, 6.34098285e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1225,6 +1231,12 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Topleft,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [1.25, 1.5],
 		},
 		Hierarchy = 
 		{
@@ -3212,13 +3224,133 @@ Level =
 					},
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 78,
+				},
+				Named = 
+				{
+					string Name = "HealthBar",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 1.625, -1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.585000038],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a08e71b4d4fc75e:Health",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [10, 0.5],
+					Location Origin = CenterLeft,
+				},
+				HealthBar = 
+				{
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 79,
+						},
+						Named = 
+						{
+							string Name = "TXT",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0.0625, 0.1875, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0, 0, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "4e7bac697bec55c5:Verdana",
+							uint FontSize = 150,
+							string Text = "Sprite Text...",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 512,
+							bool Smoothing = true,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 80,
+						},
+						Named = 
+						{
+							string Name = "Back",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 0, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.524999976, 0.524999976, 0.524999976, 0.550000012],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5a08e71b4d4fc75e:Health",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						Area = 
+						{
+							Vec2 Size = [10, 0.5],
+							Location Origin = CenterLeft,
+						},
+					},
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 78,
+			uint Id = 81,
 		},
 		Named = 
 		{
@@ -3237,13 +3369,24 @@ Level =
 		SizeStor = 
 		{
 		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = TopRight,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Topright,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [0.100000001, 0.100000001],
+		},
 		Hierarchy = 
 		{
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 79,
+					uint Id = 82,
 				},
 				Named = 
 				{
@@ -3282,7 +3425,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 80,
+							uint Id = 83,
 						},
 						Named = 
 						{
@@ -3316,7 +3459,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 81,
+							uint Id = 84,
 						},
 						Named = 
 						{
@@ -3350,7 +3493,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 82,
+							uint Id = 85,
 						},
 						Named = 
 						{
@@ -3392,7 +3535,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 83,
+					uint Id = 86,
 				},
 				Named = 
 				{
@@ -3431,7 +3574,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 84,
+							uint Id = 87,
 						},
 						Named = 
 						{
@@ -3465,7 +3608,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 85,
+							uint Id = 88,
 						},
 						Named = 
 						{
@@ -3499,7 +3642,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 86,
+							uint Id = 89,
 						},
 						Named = 
 						{
@@ -3541,7 +3684,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 87,
+					uint Id = 90,
 				},
 				Named = 
 				{
@@ -3580,7 +3723,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 88,
+							uint Id = 91,
 						},
 						Named = 
 						{
@@ -3614,7 +3757,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 89,
+							uint Id = 92,
 						},
 						Named = 
 						{
@@ -3648,7 +3791,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 90,
+							uint Id = 93,
 						},
 						Named = 
 						{
@@ -3690,7 +3833,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 91,
+					uint Id = 94,
 				},
 				Named = 
 				{
@@ -3728,7 +3871,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 92,
+					uint Id = 95,
 				},
 				Named = 
 				{
@@ -3773,7 +3916,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 93,
+			uint Id = 96,
 		},
 		Named = 
 		{
@@ -3795,13 +3938,24 @@ Level =
 		MenuVisibilityController = 
 		{
 		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Topright,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [6.5, 3],
+		},
 		Hierarchy = 
 		{
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 94,
+					uint Id = 97,
 				},
 				Named = 
 				{
@@ -3843,7 +3997,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 95,
+					uint Id = 98,
 				},
 				Named = 
 				{
@@ -3900,7 +4054,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 96,
+					uint Id = 99,
 				},
 				Named = 
 				{
@@ -3940,7 +4094,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 97,
+			uint Id = 100,
 		},
 		Named = 
 		{
@@ -3952,31 +4106,19 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.235000014, 0.235000014, 0.235000014, 0.829999983],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
 		Area = 
 		{
 			Vec2 Size = [4, 4],
-			Location Origin = BottomLeft,
+			Location Origin = Center,
 		},
 		ConsoleController = 
 		{
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Bottomleft,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [-4, -3.5],
 		},
 		Hierarchy = 
 		{
@@ -3984,7 +4126,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 98,
+					uint Id = 101,
 				},
 				Named = 
 				{
@@ -4033,7 +4175,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 99,
+							uint Id = 102,
 						},
 						Named = 
 						{
@@ -4071,7 +4213,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 100,
+			uint Id = 103,
 		},
 		Named = 
 		{
@@ -4079,7 +4221,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.28125, 4.59375, 0],
+			Vec3 Translation = [4, 4.125, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4096,132 +4238,23 @@ Level =
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 99,
 			string Text = "Debug",
-			TextAlign Align = Right,
+			TextAlign Align = Center,
 			float PixelsPerUnit = 128,
 			bool Smoothing = true,
 		},
 		DebugTextUI = 
 		{
 		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 101,
-		},
-		Named = 
-		{
-			string Name = "HealthBar",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-8.5, 4.375, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 0, 0, 0.585000038],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a08e71b4d4fc75e:Health",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
 		Area = 
 		{
-			Vec2 Size = [10, 0.5],
-			Location Origin = CenterLeft,
+			Vec2 Size = [2.75, 1],
+			Location Origin = Center,
 		},
-		HealthBar = 
+		ScreenAlign = 
 		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 102,
-				},
-				Named = 
-				{
-					string Name = "TXT",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.0625, 0.1875, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0, 0, 0, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 150,
-					string Text = "Sprite Text...",
-					TextAlign Align = Left,
-					float PixelsPerUnit = 512,
-					bool Smoothing = true,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 103,
-				},
-				Named = 
-				{
-					string Name = "Back",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.524999976, 0.524999976, 0.524999976, 0.550000012],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a08e71b4d4fc75e:Health",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Area = 
-				{
-					Vec2 Size = [10, 0.5],
-					Location Origin = CenterLeft,
-				},
-			},
+			Enum Pos = Topright,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [4, 0],
 		},
 	},
 	Cog = 
@@ -4337,12 +4370,19 @@ Level =
 		{
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a6dc57e30d123ad:SoundWaves",
 		LinkId = 
 		{
 			uint Id = 107,
+		},
+		Named = 
+		{
+			string Name = "SoundWaves",
+		},
+		Archetyped = 
+		{
+			string Name = "5a6dc57e30d123ad:SoundWaves",
 		},
 		Transform = 
 		{
@@ -4350,9 +4390,28 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		SoundWaves = 
 		{
-			string Name = "SoundWaves",
+			int WaveNum = 10,
+			float Spacing = 0.0500000007,
+			float Whidth = 0.100000001,
+			float Height = 5,
+			float Intencity = 0,
+			float Speed = 1,
+			float MinH = 0.25,
+			string ColorGradient = "5a6dca6a17b25fdf:SoundInd",
+			float CooldownTime = 0.100000001,
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Topleft,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [0.400000006, 2],
 		},
 	},
 	Cog = 
@@ -4391,7 +4450,13 @@ Level =
 		Area = 
 		{
 			Vec2 Size = [2.29999995, 0.5],
-			Location Origin = BottomRight,
+			Location Origin = Center,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Bottomright,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [0, 0],
 		},
 	},
 },
