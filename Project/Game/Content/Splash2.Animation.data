@@ -1,7 +1,7 @@
 RichAnimation = 
 {
 	float SampleTolerance = 0.0500000007,
-	float Duration = 4.33333349,
+	float Duration = 5.5,
 	Object Root = 
 	{
 		TrackType Type = Object,
@@ -83,10 +83,10 @@ RichAnimation =
 												},
 											},
 											{
-												float key = 3.5,
+												float key = 4.66666651,
 												Object value = 
 												{
-													float Time = 3.5,
+													float Time = 4.66666651,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -94,10 +94,10 @@ RichAnimation =
 												},
 											},
 											{
-												float key = 4,
+												float key = 5.16666651,
 												Object value = 
 												{
-													float Time = 4,
+													float Time = 5.16666651,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -141,10 +141,10 @@ RichAnimation =
 												},
 											},
 											{
-												float key = 3.5,
+												float key = 4.66666651,
 												Object value = 
 												{
-													float Time = 3.5,
+													float Time = 4.66666651,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -152,10 +152,10 @@ RichAnimation =
 												},
 											},
 											{
-												float key = 4,
+												float key = 5.16666651,
 												Object value = 
 												{
-													float Time = 4,
+													float Time = 5.16666651,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -199,10 +199,10 @@ RichAnimation =
 												},
 											},
 											{
-												float key = 3.5,
+												float key = 4.66666651,
 												Object value = 
 												{
-													float Time = 3.5,
+													float Time = 4.66666651,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -210,10 +210,10 @@ RichAnimation =
 												},
 											},
 											{
-												float key = 4,
+												float key = 5.16666651,
 												Object value = 
 												{
-													float Time = 4,
+													float Time = 5.16666651,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -257,10 +257,10 @@ RichAnimation =
 												},
 											},
 											{
-												float key = 3.5,
+												float key = 4.66666651,
 												Object value = 
 												{
-													float Time = 3.5,
+													float Time = 4.66666651,
 													float Value = 0.999842286,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -268,10 +268,10 @@ RichAnimation =
 												},
 											},
 											{
-												float key = 4,
+												float key = 5.16666651,
 												Object value = 
 												{
-													float Time = 4,
+													float Time = 5.16666651,
 													float Value = 0,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -317,10 +317,10 @@ RichAnimation =
 										},
 									},
 									{
-										float key = 3.5,
+										float key = 4.66666651,
 										Object value = 
 										{
-											float Time = 3.5,
+											float Time = 4.66666651,
 											bool Value = false,
 											Vec2 TangentIn = [-0.0500000007, 0],
 											Vec2 TangentOut = [0.0500000007, 0],
@@ -342,10 +342,10 @@ RichAnimation =
 								Array KeyFrames = 
 								[
 									{
-										float key = 3.66666675,
+										float key = 4.83333302,
 										Object value = 
 										{
-											float Time = 3.66666675,
+											float Time = 4.83333302,
 											bool Value = true,
 											Vec2 TangentIn = [-0.0500000007, 0],
 											Vec2 TangentOut = [0.0500000007, 0],
@@ -353,10 +353,10 @@ RichAnimation =
 										},
 									},
 									{
-										float key = 4,
+										float key = 5.16666651,
 										Object value = 
 										{
-											float Time = 4,
+											float Time = 5.16666651,
 											bool Value = false,
 											Vec2 TangentIn = [-0.0500000007, 0],
 											Vec2 TangentOut = [0.0500000007, 0],
@@ -364,10 +364,10 @@ RichAnimation =
 										},
 									},
 									{
-										float key = 4.33333349,
+										float key = 5.5,
 										Object value = 
 										{
-											float Time = 4.33333349,
+											float Time = 5.5,
 											bool Value = false,
 											Vec2 TangentIn = [-0.0500000007, 0],
 											Vec2 TangentOut = [0.0500000007, 0],
@@ -414,10 +414,10 @@ RichAnimation =
 										},
 									},
 									{
-										float key = 4,
+										float key = 5.16666651,
 										Object value = 
 										{
-											float Time = 4,
+											float Time = 5.16666651,
 											bool Value = false,
 											Vec2 TangentIn = [-0.0500000007, 0],
 											Vec2 TangentOut = [0.0500000007, 0],
@@ -425,10 +425,10 @@ RichAnimation =
 										},
 									},
 									{
-										float key = 4.16666651,
+										float key = 5.33333349,
 										Object value = 
 										{
-											float Time = 4.16666651,
+											float Time = 5.33333349,
 											bool Value = true,
 											Vec2 TangentIn = [-0.0500000007, 0],
 											Vec2 TangentOut = [0.0500000007, 0],

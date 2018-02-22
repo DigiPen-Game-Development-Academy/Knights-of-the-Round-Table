@@ -1,0 +1,49 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "Version",
+	},
+	Archetyped = 
+	{
+		string Name = "5af4af2480366ec0:Version",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [8.5, -4.875, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	SpriteText = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string FontName = "4e7bac697bec55c5:Verdana",
+		uint FontSize = 150,
+		string Text = "Alpha V0.2",
+		TextAlign Align = Right,
+		float PixelsPerUnit = 429.0383,
+		bool Smoothing = true,
+	},
+	Area = 
+	{
+		Vec2 Size = [2.29999995, 0.5],
+		Location Origin = Center,
+	},
+	ScreenAlign = 
+	{
+		Enum Pos = Bottomright,
+		Vec3 Offset = [0, 0, 0],
+		Vec2 RelOffset = [0, 0],
+	},
+},
