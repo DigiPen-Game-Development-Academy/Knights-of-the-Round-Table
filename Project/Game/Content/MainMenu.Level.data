@@ -64,12 +64,12 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			ViewportScaling Scaling = Letterbox,
-			Vec2 Resolution = [1280, 720],
-			Vec4 MarginColor = [0, 0, 0, 1],
+			Vec2 Resolution = [2, 1],
+			Vec4 MarginColor = [0.125490203, 0.125490203, 0.125490203, 1],
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0, 0, 0, 1],
+			Vec4 ClearColor = [0.125490203, 0.125490203, 0.125490203, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -91,6 +91,12 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		CreateUI = 
+		{
+			string UILevel = "",
+			string DialogLevel = "5a7cf996660d2f54:MenuDialogUI",
+			string MouseLevel = "5a7c13ecda359492:MouseUI",
+		},
 	},
 	Cog = 
 	{
@@ -104,7 +110,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.260281026, -0.843507171, 50],
+			Vec3 Translation = [-0.705610394, 0.650289595, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +122,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.11040878,
+			float Size = 13.3717899,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +130,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.260281026, -0.843507171, 1.13772938e-08],
+			Vec3 LookTarget = [-0.705610394, 0.650289595, -3.08431645e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 

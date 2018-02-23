@@ -309,7 +309,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0160959065, 2.80718589, 50],
+			Vec3 Translation = [0.794859707, 1.22912669, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -321,7 +321,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90606594,
+			float Size = 6.00833368,
 		},
 		EditorCameraController = 
 		{
@@ -329,7 +329,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0160959065, 2.80718589, 5.366702e-07],
+			Vec3 LookTarget = [0.794859707, 1.22912669, 5.70710995e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2470,50 +2470,12 @@ Level =
 			},
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 68,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.50373733, 0.966432512, 5.57986198e-07],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5af493b40c44fe54:Cursor",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		CursorController = 
-		{
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "5a6dc57e30d123ad:SoundWaves",
 		LinkId = 
 		{
-			uint Id = 69,
+			uint Id = 68,
 		},
 		Transform = 
 		{
@@ -2536,7 +2498,7 @@ Level =
 		string Name = "5af4af2480366ec0:Version",
 		LinkId = 
 		{
-			uint Id = 70,
+			uint Id = 69,
 		},
 		Transform = 
 		{

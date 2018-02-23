@@ -1,0 +1,22 @@
+class DialogButton : ZilchComponent {
+    
+    [Property] var Type : DialogReturn;
+    
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    function OnMouseDown(event : ViewportMouseEvent) {
+        
+        if(this.GameSession.FindSpaceByName("UI") != null)
+            this.GameSession.FindSpaceByName("UI").TimeSpace.Paused = false;
+        GlobalVariables.GameSpace.TimeSpace.Paused = false;
+        
+        var toSend = DialogEnded();
+        toSend.Type = this.Type;
+        this.Owner.Parent.DispatchEvent(Events.DialogEnded, toSend);
+        
+        this.Owner.Parent.Destroy();
+        
+    }
+}

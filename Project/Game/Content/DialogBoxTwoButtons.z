@@ -1,0 +1,43 @@
+class DialogBoxTwoButtons : ZilchComponent {
+    [Property] var Margin : Real = 0.125;
+    [Property] var ButtonSpace : Real = 10;
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.GameSession.FindSpaceByName("UI") != null)
+            this.GameSession.FindSpaceByName("UI").TimeSpace.Paused = true;
+        GlobalVariables.GameSpace.TimeSpace.Paused = true;
+        
+        this.Owner.Area.Size = this.Owner.FindChildByName("TXT").SpriteText.MeasureText() + Real2(this.Margin, this.Margin+this.ButtonSpace);
+        
+        this.Owner.FindChildByName("TXT").Transform.Translation = Real3(0, (this.ButtonSpace+this.Owner.FindChildByName("TXT").SpriteText.MeasureText().Y)/2, 1);
+        
+        var ok = this.Owner.FindChildByName("OK");
+        
+        ok.Transform.WorldScale = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
+        ok.Transform.Translation = Real3(this.Owner.Area.Size.X/4, -((this.Owner.Area.Size.Y/2) - (this.ButtonSpace/2)), 2);
+        ok.Button.StartSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
+        ok.Button.TargetSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
+        var smallest = this.ButtonSpace;
+        if(ok.Transform.WorldScale.X < smallest) {
+            smallest = ok.Transform.WorldScale.X;
+        }
+        ok.FindChildByName("TXTOK").Transform.WorldScale = Real3(smallest);
+        
+        var cancel = this.Owner.FindChildByName("CANCEL");
+        
+        cancel.Transform.WorldScale = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
+        cancel.Transform.Translation = Real3(-this.Owner.Area.Size.X/4, -((this.Owner.Area.Size.Y/2) - (this.ButtonSpace/2)), 2);
+        cancel.Button.StartSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
+        cancel.Button.TargetSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
+        smallest = this.ButtonSpace;
+        if(cancel.Transform.WorldScale.X/2 < smallest) {
+            smallest = cancel.Transform.WorldScale.X;
+        }
+        cancel.FindChildByName("TXTOK").Transform.WorldScale = Real3(smallest);
+        
+    }
+}

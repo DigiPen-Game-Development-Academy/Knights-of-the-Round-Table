@@ -3,6 +3,12 @@ class CreateUI : ZilchComponent {
     [Property]
     var UILevel : Level = null;
     
+    [Property]
+    var DialogLevel : Level = null;
+    
+    [Property]
+    var MouseLevel : Level = null;
+    
     var UISpace : Space = null;
     
     function Initialize(init : CogInitializer) {
@@ -13,15 +19,39 @@ class CreateUI : ZilchComponent {
     }
 
     function OnLevelStarted(event : GameEvent) {
-        if(event.LevelName != this.UILevel.Name) {
+        if( (this.UILevel == null || event.LevelName != this.UILevel.Name) && 
+            (this.DialogLevel == null || event.LevelName != this.DialogLevel.Name) &&
+            (this.MouseLevel == null || event.LevelName != this.MouseLevel.Name)) {
             
-            if(this.GameSession.FindSpaceByName("UI") != null) {
-                this.GameSession.FindSpaceByName("UI").Destroy();
+            if(this.UILevel != null) {
+                if(this.GameSession.FindSpaceByName("UI") != null) {
+                    this.GameSession.FindSpaceByName("UI").Destroy();
+                }
+                
+                this.UISpace = this.GameSession.CreateNamedSpace("UI", Archetype.UISpace);
+                
+                this.UISpace.LoadLevel(this.UILevel);
             }
             
-            this.UISpace = this.GameSession.CreateNamedSpace("UI", Archetype.UISpace);
+            if(this.DialogLevel != null) {
+                if(this.GameSession.FindSpaceByName("Dialog") != null) {
+                    this.GameSession.FindSpaceByName("Dialog").Destroy();
+                }
+                
+                this.UISpace = this.GameSession.CreateNamedSpace("Dialog", Archetype.UISpace);
+                
+                this.UISpace.LoadLevel(this.DialogLevel);
+            }
             
-            this.UISpace.LoadLevel(this.UILevel);
+            if(this.DialogLevel != null) {
+                if(this.GameSession.FindSpaceByName("Mouse") != null) {
+                    this.GameSession.FindSpaceByName("Mouse").Destroy();
+                }
+                
+                this.UISpace = this.GameSession.CreateNamedSpace("Mouse", Archetype.UISpace);
+                
+                this.UISpace.LoadLevel(this.MouseLevel);
+            }
             
         }
         

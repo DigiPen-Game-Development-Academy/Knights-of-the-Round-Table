@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-9.5, 25.5, 0],
+		Vec3 Translation = [-11.5, 23.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -109,6 +109,7 @@ Cog =
 	{
 		float AttacksPerSecond = 3,
 		float DamagerPerAttack = 5,
+		string DeathMSG = "You Where Bitten by an Enemy",
 	},
 	Health = 
 	{
@@ -125,7 +126,33 @@ Cog =
 	EnemyPing = 
 	{
 	},
+	MenuVisibilityController = 
+	{
+	},
 	Hierarchy = 
 	{
+		ArchetypeInstance = 
+		{
+			string Name = "5a7c1968c9af3d26:Healthbar",
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, -0.625, 1],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Area = 
+			{
+				Vec2 Size = [1, 0.100000001],
+				Location Origin = Center,
+			},
+			Named = 
+			{
+				string Name = "Healthbar",
+			},
+		},
 	},
 },

@@ -1,6 +1,11 @@
 
-
-
+class DialogEnded : ZilchEvent {
+    
+    var Type : DialogReturn;
+    
+    sends DialogEnded : DialogEnded;
+    
+}
 
 class Damage : ZilchEvent {
     

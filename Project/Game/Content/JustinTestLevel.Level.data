@@ -85,6 +85,8 @@ Level =
 		CreateUI = 
 		{
 			string UILevel = "5a1c3268256273d9:UILevel",
+			string DialogLevel = "5a7cf996660d2f54:MenuDialogUI",
+			string MouseLevel = "5a7c13ecda359492:MouseUI",
 		},
 		InputManager = 
 		{
@@ -150,7 +152,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-15.3139286, 2.99630547, 64.0000076],
+			Vec3 Translation = [-16.3233852, 3.04763365, 64.0000076],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -170,7 +172,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-15.3139286, 2.99630547, 4.32126808e-06],
+			Vec3 LookTarget = [-16.3233852, 3.04763365, 4.27714394e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 

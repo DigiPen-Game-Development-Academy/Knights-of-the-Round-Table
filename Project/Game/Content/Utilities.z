@@ -251,7 +251,8 @@ class Utilities
     }
     [Static]
     function ConsoleSend(msg : String, color : Real4) {
-        GlobalVariables.Console.ConsoleController.AddMSG(msg, color);
+        if(GlobalVariables.Console != null)
+            GlobalVariables.Console.ConsoleController.AddMSG(msg, color);
     }
     
     [Static]
@@ -261,5 +262,37 @@ class Utilities
         return item;
     }
     
-  
+    [Static]
+    var DialogBox : Cog = null;
+    
+    [Static]
+    function Dialog(text : String, dialogType : DialogTypes, size : Real) : Cog {
+        
+        var dialogBox : Cog = null;
+        
+        var dialogspace = GlobalVariables.GameSpace.GameSession.FindSpaceByName("Dialog");
+        
+        if(dialogspace == null || Utilities.DialogBox != null)
+            return null;
+        
+        if(dialogType == DialogTypes.OK) {
+            dialogBox = dialogspace.Create(Archetype.DialogBoxOK);
+        } else if(dialogType == DialogTypes.OKCANCEL) {
+            dialogBox = dialogspace.Create(Archetype.DialogBoxOKCancel);
+        } else if(dialogType == DialogTypes.YESNO) {
+            dialogBox = dialogspace.Create(Archetype.DialogBoxYESNO);
+        }
+        
+        dialogBox.FindChildByName("TXT").SpriteText.Text = text;
+        
+        Utilities.ConsoleSend("Dialog: `text`", Real4(0, 0, 1, 1));
+        
+        dialogspace.LevelSettings.CameraViewport.Camera.Camera.Size = 20-size;
+        
+        Utilities.DialogBox = dialogBox;
+        
+        return dialogBox;
+        
+    }
+    
 }

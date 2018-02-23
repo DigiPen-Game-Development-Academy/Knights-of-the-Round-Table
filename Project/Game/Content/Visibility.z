@@ -53,6 +53,9 @@ class Visibility : ZilchComponent {
             this.Owner.Sprite.Visible = true;
         }
         
+        if(this.Owner.MenuVisibilityController != null)
+            this.Owner.MenuVisibilityController.Vis = this.Owner.Sprite.Visible;
+        
         GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
         GlobalVariables.Player.RigidBody.Velocity = vel;
         GlobalVariables.Player.BoxCollider.Ghost = ghost;
