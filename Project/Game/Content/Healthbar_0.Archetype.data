@@ -85,10 +85,10 @@ Cog =
 				Vec2 Size = [1, 0.100000001],
 				Location Origin = CenterLeft,
 			},
-			Healthbar = 
+			MenuVisibilitySprite = 
 			{
 			},
-			MenuVisibilitySprite = 
+			HealthBar = 
 			{
 			},
 		},
