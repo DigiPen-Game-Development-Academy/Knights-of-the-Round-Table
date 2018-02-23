@@ -41,7 +41,7 @@ class ScreenAlign : ZilchComponent {
                 oY = 0;
             }
             
-            return Real3(oX, oY, 0) + this.Offset;
+            return Real3(oX/2, oY/2, 0) + this.Offset;
             
         }
     }
@@ -72,7 +72,7 @@ class ScreenAlign : ZilchComponent {
         
         pos = this.Viewport.ViewportToScreen(pos);
         
-        transform.WorldTranslation = this.Viewport.ScreenToWorldZPlane(pos, 0) + this.Off;
+        transform.WorldTranslation = this.Viewport.ScreenToWorldZPlane(pos, this.Owner.Transform.WorldTranslation.Z) + this.Off;
         
     }
 }

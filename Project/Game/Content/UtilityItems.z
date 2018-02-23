@@ -60,7 +60,7 @@ class Watch : Item {
     
     function Use (radAngle : Real) {
         
-        Utilities.TimeTimerSet(0.15, 5, 5);
+        Utilities.TimeTimerSet(0.15, 5, 1/0.15);
         
     }
     

@@ -262,6 +262,7 @@ class SlugShotgun : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.HoldingSprite = SpriteSource.ShotgunHolding;
         this.Stackable = false;
         this.MagSize = 2;
         this.Name = "Shotgun";

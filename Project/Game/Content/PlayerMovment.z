@@ -53,7 +53,8 @@ class PlayerMovment : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.Shift)){
             vel *= this.SprintMultiplier;
             if(GlobalVariables.UseWeapon.Utility == null || GlobalVariables.UseWeapon.Utility.ID != "Shoes")
-                Utilities.SendSound(this.SprintSoundDist);
+                if(vel != Real3(0))
+                    Utilities.SendSound(this.SprintSoundDist);
         }
         
         this.Owner.RigidBody.Velocity = vel;

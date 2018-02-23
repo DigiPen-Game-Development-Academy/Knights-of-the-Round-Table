@@ -10,6 +10,13 @@ class LoadLevelButton : ZilchComponent {
         if(uiSpace != null) {
             uiSpace.Destroy();
         }
-        this.Space.LoadLevel(this.Level);
+        if(GlobalVariables.GameSpace == null) {
+            this.Space.LoadLevel(this.Level);
+            this.Space.TimeSpace.Paused = false;
+        } else {
+            GlobalVariables.GameSpace.LoadLevel(this.Level);
+            GlobalVariables.GameSpace.TimeSpace.Paused = false;
+        }
+        Zero.Mouse.Trapped = false;
     }
 }

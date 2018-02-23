@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0835165381, 1.240412, 50],
+			Vec3 Translation = [0.800674856, -1.24757516, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.4064064,
+			float Size = 8.13140202,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0835165381, 1.240412, 3.65059405e-09],
+			Vec3 LookTarget = [0.800674856, -1.24757516, 3.49985747e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -181,7 +181,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -229,24 +229,24 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
 		{
-			bool Visible = false,
+			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 0],
+			Vec4 Color = [1, 1, 1, 0.999878049],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5afd92272f3d7f10:Pat Walk South",
+			string SpriteSource = "5af491d15ad51171:TeamNameAnim",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
-			bool AnimationActive = false,
+			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
