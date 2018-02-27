@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "DialogBoxOKCancel",
+		string Name = "DialogBoxSettings",
 	},
 	Archetyped = 
 	{
-		string Name = "5a7ce2b84fb665bf:DialogBoxOKCancel",
+		string Name = "5a66463570e96e0d:DialogBoxSettings",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0, 0, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,13 +38,8 @@ Cog =
 	},
 	Area = 
 	{
-		Vec2 Size = [1, 1],
+		Vec2 Size = [3, 4],
 		Location Origin = Center,
-	},
-	DialogBoxTwoButtons = 
-	{
-		float Margin = 1,
-		float ButtonSpace = 0.5,
 	},
 	AnimationGraph = 
 	{
@@ -52,7 +47,7 @@ Cog =
 		AnimPlayMode PlayMode = PlayOnce,
 		float TimeScale = 1,
 		string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-		uint64 DebugPreviewId = 3efeff003f800000,
+		uint64 DebugPreviewId = 3f8000003f66d95f,
 	},
 	SimpleAnimation = 
 	{
@@ -69,45 +64,11 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "TXT",
+				string Name = "Exit",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, -1],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 150,
-				string Text = "TEST!",
-				TextAlign Align = Center,
-				float PixelsPerUnit = 523.609131,
-				bool Smoothing = true,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
-			},
-			Named = 
-			{
-				string Name = "OK",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 0, 2],
+				Vec3 Translation = [0, -1.75, 2],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -136,14 +97,19 @@ Cog =
 			},
 			Button = 
 			{
-				float ScaleM = 1.20000005,
+				float ScaleM = 1,
 				Vec4 HoverColor = [0, 0.72570014, 0.88499999, 0.730000019],
 				Vec4 ClickColor = [0, 0.178600058, 0.235000014, 0.999899983],
 				float ScaleSpeed = 5,
 			},
+			Area = 
+			{
+				Vec2 Size = [3, 0.5],
+				Location Origin = Center,
+			},
 			DialogButton = 
 			{
-				Enum Type = OK,
+				Enum Type = EXIT,
 			},
 			Hierarchy = 
 			{
@@ -151,11 +117,11 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 4,
+						uint Id = 3,
 					},
 					Named = 
 					{
-						string Name = "TXTOK",
+						string Name = "Exit",
 					},
 					Transform = 
 					{
@@ -175,14 +141,14 @@ Cog =
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 						string FontName = "4e7bac697bec55c5:Verdana",
 						uint FontSize = 30,
-						string Text = "OK",
+						string Text = "Exit",
 						TextAlign Align = Left,
 						float PixelsPerUnit = 64,
 						bool Smoothing = true,
 					},
 					Area = 
 					{
-						Vec2 Size = [0.75, 0.600000024],
+						Vec2 Size = [0.899999976, 0.600000024],
 						Location Origin = Center,
 					},
 				},
@@ -192,15 +158,15 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 5,
+				uint Id = 4,
 			},
 			Named = 
 			{
-				string Name = "CANCEL",
+				string Name = "SettingsTXT",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, 2],
+				Vec3 Translation = [0, 1.625, 1],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -210,75 +176,17 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [0, 0.639999628, 1, 0.999899983],
+				Vec4 Color = [1, 1, 1, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
+				string SpriteSource = "5af4d4e66b19f232:SettingsAnim",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
-				bool AnimationActive = true,
+				bool AnimationActive = false,
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
-			},
-			Reactive = 
-			{
-				bool Active = true,
-				bool CaptureMouse = false,
-			},
-			Button = 
-			{
-				float ScaleM = 1.20000005,
-				Vec4 HoverColor = [0, 0.72570014, 0.88499999, 0.730000019],
-				Vec4 ClickColor = [0, 0.178600058, 0.235000014, 0.999899983],
-				float ScaleSpeed = 5,
-			},
-			DialogButton = 
-			{
-				Enum Type = CANCEL,
-			},
-			Hierarchy = 
-			{
-				Cog = 
-				{
-					LinkId = 
-					{
-						uint Id = 6,
-					},
-					Named = 
-					{
-						string Name = "TXTOK",
-					},
-					Transform = 
-					{
-						Vec3 Translation = [0, 0, 1],
-						Vec3 Scale = [1, 1, 1],
-						Quat Rotation = [0, 0, 0, 1],
-					},
-					SpriteText = 
-					{
-						bool Visible = true,
-						bool VisibilityCulling = true,
-						bool VisibilityEvents = true,
-						bool CastShadows = false,
-						Vec4 Color = [1, 1, 1, 1],
-						BlendMode BlendMode = Alpha,
-						SpriteGeometryMode GeometryMode = ZPlane,
-						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string FontName = "4e7bac697bec55c5:Verdana",
-						uint FontSize = 53,
-						string Text = "CANCEL",
-						TextAlign Align = Left,
-						float PixelsPerUnit = 144.539764,
-						bool Smoothing = true,
-					},
-					Area = 
-					{
-						Vec2 Size = [1.5, 0.460000008],
-						Location Origin = Center,
-					},
-				},
 			},
 		},
 	},

@@ -281,15 +281,22 @@ class Utilities
             dialogBox = dialogspace.Create(Archetype.DialogBoxOKCancel);
         } else if(dialogType == DialogTypes.YESNO) {
             dialogBox = dialogspace.Create(Archetype.DialogBoxYESNO);
+        } else if(dialogType == DialogTypes.SETTINGS) {
+            dialogBox = dialogspace.Create(Archetype.DialogBoxSettings);
         }
         
-        dialogBox.FindChildByName("TXT").SpriteText.Text = text;
-        
-        Utilities.ConsoleSend("Dialog: `text`", Real4(0, 0, 1, 1));
+        if(dialogType != DialogTypes.SETTINGS) {
+            dialogBox.FindChildByName("TXT").SpriteText.Text = text;
+            
+            Utilities.ConsoleSend("Dialog: `text`", Real4(0, 0, 1, 1));
+            
+        }
         
         dialogspace.LevelSettings.CameraViewport.Camera.Camera.Size = 20-size;
         
         Utilities.DialogBox = dialogBox;
+        
+        dialogBox.Transform.Scale = Real3(0.0001, 0.0001, 1);
         
         return dialogBox;
         

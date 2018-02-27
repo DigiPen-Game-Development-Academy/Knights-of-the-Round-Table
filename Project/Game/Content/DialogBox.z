@@ -2,13 +2,15 @@ enum DialogReturn {
     OK,
     CANCEL,
     YES,
-    NO
+    NO,
+    EXIT
 }
 
 enum DialogTypes {
     OK,
     OKCANCEL,
-    YESNO
+    YESNO,
+    SETTINGS
 }
 
 class DialogBox : ZilchComponent {
@@ -30,13 +32,13 @@ class DialogBox : ZilchComponent {
         
         var ok = this.Owner.FindChildByName("OK");
         
-        ok.Transform.WorldScale = Real3(this.Owner.Area.Size.X, this.ButtonSpace, 1);
+        ok.Transform.WorldScale = Real3(this.Owner.Area.Size.X, this.ButtonSpace, 1)*this.Owner.Transform.WorldScale;
         ok.Transform.Translation = Real3(0, -((this.Owner.Area.Size.Y/2) - (this.ButtonSpace/2)), 2);
         ok.Button.StartSize = Real3(this.Owner.Area.Size.X, this.ButtonSpace, 1);
         ok.Button.TargetSize = Real3(this.Owner.Area.Size.X, this.ButtonSpace, 1);
-        var smallest = this.ButtonSpace;
-        if(ok.Transform.WorldScale.X < smallest) {
-            smallest = ok.Transform.WorldScale.X;
+        var smallest = this.ButtonSpace*this.Owner.Transform.WorldScale.Y;
+        if(ok.Transform.WorldScale.X*this.Owner.Transform.WorldScale.X < smallest) {
+            smallest = ok.Transform.WorldScale.X*this.Owner.Transform.WorldScale.X;
         }
         ok.FindChildByName("TXTOK").Transform.WorldScale = Real3(smallest);
         
