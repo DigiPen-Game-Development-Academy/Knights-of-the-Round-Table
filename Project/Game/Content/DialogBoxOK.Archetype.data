@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 1],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -45,6 +45,19 @@ Cog =
 	{
 		float Margin = 0.25,
 		float ButtonSpace = 0.5,
+	},
+	AnimationGraph = 
+	{
+		bool Active = true,
+		AnimPlayMode PlayMode = PlayOnce,
+		float TimeScale = 1,
+		string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+		uint64 DebugPreviewId = 2079646165726c61,
+	},
+	SimpleAnimation = 
+	{
+		string AnimationName = "5a6641ddb81fc367:Dialog",
+		AnimPlayMode PlayMode = PlayOnce,
 	},
 	Hierarchy = 
 	{

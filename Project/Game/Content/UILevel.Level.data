@@ -309,7 +309,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.59040737, 3.76416326, 50],
+			Vec3 Translation = [3.28070331, 1.80918872, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -321,7 +321,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.6402359,
+			float Size = 6.00833225,
 		},
 		EditorCameraController = 
 		{
@@ -329,7 +329,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.59040737, 3.76416326, 2.91602106e-07],
+			Vec3 LookTarget = [3.28070331, 1.80918872, 6.79370658e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2089,6 +2089,9 @@ Level =
 				LoadLevelButton = 
 				{
 					string Level = "5a7e54ababd94aa3:MainMenu",
+					bool DialogBox = true,
+					string DialogText = "WARNING!  All unsaved progress will be lost!",
+					Enum DialogType = OKCANCEL,
 				},
 			},
 			Cog = 

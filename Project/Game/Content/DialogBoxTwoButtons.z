@@ -17,23 +17,23 @@ class DialogBoxTwoButtons : ZilchComponent {
         
         var ok = this.Owner.FindChildByName("OK");
         
-        ok.Transform.WorldScale = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
+        ok.Transform.WorldScale = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1)*this.Owner.Transform.WorldScale;
         ok.Transform.Translation = Real3(this.Owner.Area.Size.X/4, -((this.Owner.Area.Size.Y/2) - (this.ButtonSpace/2)), 2);
         ok.Button.StartSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
         ok.Button.TargetSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
-        var smallest = this.ButtonSpace;
-        if(ok.Transform.WorldScale.X < smallest) {
-            smallest = ok.Transform.WorldScale.X;
+        var smallest = this.ButtonSpace*this.Owner.Transform.WorldScale.Y;
+        if(ok.Transform.WorldScale.X*this.Owner.Transform.WorldScale.X < smallest) {
+            smallest = ok.Transform.WorldScale.X*this.Owner.Transform.WorldScale.X;
         }
         ok.FindChildByName("TXTOK").Transform.WorldScale = Real3(smallest);
         
         var cancel = this.Owner.FindChildByName("CANCEL");
         
-        cancel.Transform.WorldScale = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
+        cancel.Transform.WorldScale = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1)*this.Owner.Transform.WorldScale;
         cancel.Transform.Translation = Real3(-this.Owner.Area.Size.X/4, -((this.Owner.Area.Size.Y/2) - (this.ButtonSpace/2)), 2);
         cancel.Button.StartSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
         cancel.Button.TargetSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
-        smallest = this.ButtonSpace;
+        smallest = this.ButtonSpace*this.Owner.Transform.WorldScale.Y;
         if(cancel.Transform.WorldScale.X/2 < smallest) {
             smallest = cancel.Transform.WorldScale.X;
         }
