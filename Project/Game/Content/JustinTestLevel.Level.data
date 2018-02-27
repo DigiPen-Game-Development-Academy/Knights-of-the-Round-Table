@@ -152,7 +152,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-16.3233852, 3.04763365, 64.0000076],
+			Vec3 Translation = [20.8489799, -48.0339584, 63.9990044],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -164,7 +164,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 13.533555,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -172,7 +172,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-16.3233852, 3.04763365, 4.27714394e-06],
+			Vec3 LookTarget = [20.8489799, -48.0339584, -0.000997035764],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -371,8 +371,8 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "",
-			string PaletteName = "",
+			string SourceName = "5a746adbd997cf3e:JustinTestLevel_TileMap05",
+			string PaletteName = "5a746a87c0a65254:tilemap2.0",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
 		},
@@ -1533,6 +1533,240 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 48,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.4550705, 26.5129147, 3.81469727e-06],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 49,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [55.4758377, 7.46616602, -0.000995635986],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 50,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [36.3367767, 61.7227707, -0.000995635986],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 51,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-87.9171066, -26.4039936, -0.000999450684],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 52,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-29.1326752, -19.2065468, -0.000999450684],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 53,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-55.2865791, -50.8112259, -0.000999450684],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 54,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-22.393713, -55.5214767, -0.000999450684],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 55,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10.3226109, -30.293932, -0.000995635986],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 56,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [70.9962082, -14.4901829, -0.000995635986],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 57,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.563774645, -83.860733, -0.000995635986],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 58,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [34.6285095, -52.7583656, -0.000995635986],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 59,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [78.9198456, -80.5142746, -0.000995635986],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5af4806bfaf533ea:SavePoint",
+		LinkId = 
+		{
+			uint Id = 60,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [40.3371696, -82.6796265, -0.000995635986],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
 		},
 	},
 },
