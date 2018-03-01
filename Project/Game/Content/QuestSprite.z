@@ -1,0 +1,24 @@
+class QuestSprite : ZilchComponent {
+    function Initialize(init : CogInitializer) {
+        GlobalVariables.QuestSprite = this;
+        this.Clear();
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+    }
+    
+    function Set(text : String) {
+        this.Owner.FindChildByName("txt").SpriteText.Visible = true;
+        this.Owner.Sprite.Visible = true;
+        this.Owner.FindChildByName("txt").SpriteText.Text = text;
+        this.Owner.Transform.Scale = Real3(this.Owner.FindChildByName("txt").SpriteText.MeasureText().X+0.25,1,1);
+        this.Owner.FindChildByName("txt").Transform.WorldScale = Real3(1);
+    }
+    
+    function Clear() {
+        this.Owner.FindChildByName("txt").SpriteText.Visible = false;
+        this.Owner.Sprite.Visible = false;
+    }
+    
+}

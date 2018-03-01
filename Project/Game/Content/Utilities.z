@@ -302,4 +302,14 @@ class Utilities
         
     }
     
+    [Static]
+    function SetQuest(text : String) {
+        GlobalVariables.QuestSprite.Set(text);
+    }
+    
+    [Static]
+    function ClearQuest() {
+        GlobalVariables.QuestSprite.Clear();
+    }
+    
 }
