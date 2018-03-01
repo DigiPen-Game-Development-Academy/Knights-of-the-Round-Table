@@ -16,6 +16,8 @@ class CreateUI : ZilchComponent {
         GlobalVariables.GameSpace = this.Space;
         
         Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStarted);
+        
+        SaveLoad.LoadSettings();
     }
 
     function OnLevelStarted(event : GameEvent) {
