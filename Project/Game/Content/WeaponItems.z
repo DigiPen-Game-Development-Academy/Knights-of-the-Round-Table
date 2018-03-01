@@ -21,7 +21,7 @@ class Potato : Item {
         lore.Add("The United States population consumes 1.5 billion pounds of potatoes per year");
         lore.Add("The potatoe's allegiance is with you");
         lore.Add("Legend says that four large lifeforms killed by this potato will reward the user with a legendary weapon");
-        lore.Add("Every year potatoes are gruesomely turned into fries,this cruelty needs to stop. Support the no potato left behind initiative");
+        lore.Add("Every year potatoes are gruesomely turned into fries,this cruelty needs to stop. Support the no potato left behind movement");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
