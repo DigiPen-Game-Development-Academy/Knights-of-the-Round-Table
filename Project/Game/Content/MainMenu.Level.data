@@ -110,7 +110,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.69228363, -2.2301414, 50],
+			Vec3 Translation = [0.62868315, 0.401585937, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -122,7 +122,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.3717995,
+			float Size = 12.0993061,
 		},
 		EditorCameraController = 
 		{
@@ -130,7 +130,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.69228363, -2.2301414, 1.61394908e-07],
+			Vec3 LookTarget = [0.62868315, 0.401585937, 2.74806453e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -450,19 +450,12 @@ Level =
 			AnimPlayMode PlayMode = PlayOnce,
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5af4af2480366ec0:Version",
 		LinkId = 
 		{
 			uint Id = 9,
-		},
-		Named = 
-		{
-			string Name = "Version",
-		},
-		Archetyped = 
-		{
-			string Name = "5af4af2480366ec0:Version",
 		},
 		Transform = 
 		{
@@ -470,80 +463,14 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 150,
-			string Text = "Alpha V0.3 DEV",
-			TextAlign Align = Right,
-			float PixelsPerUnit = 429.0383,
-			bool Smoothing = true,
-		},
 		Area = 
 		{
-			Vec2 Size = [3, 0.5],
-			Location Origin = CenterRight,
-		},
-		ScreenAlign = 
-		{
-			Enum Pos = Bottomright,
-			Vec3 Offset = [0, 0, 0],
-			Vec2 RelOffset = [-1, 0],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 10,
+			Vec2 Size = [2.29999995, 0.5],
+			Location Origin = Center,
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.25, -3, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.735000014, 0.735000014, 0.735000014, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
-			uint FontSize = 150,
-			string Text = "Island of Potato",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 148.159775,
-			bool Smoothing = true,
-		},
-		AnimationGraph = 
-		{
-			bool Active = true,
-			AnimPlayMode PlayMode = PlayOnce,
-			float TimeScale = 1,
-			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-			uint64 DebugPreviewId = 0000001200000033,
-		},
-		SimpleAnimation = 
-		{
-			string AnimationName = "5a7e502445d852b1:fadeIn",
-			AnimPlayMode PlayMode = PlayOnce,
+			string Name = "Version",
 		},
 	},
 },

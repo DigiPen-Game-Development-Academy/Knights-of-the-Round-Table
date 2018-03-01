@@ -15,8 +15,8 @@ class LoadLevelButton : ZilchComponent {
     }
     
     function OnDialogEnded(event : DialogEnded) {
+        
         if(event.Type == DialogReturn.YES || event.Type == DialogReturn.OK) {
-            Utilities.DialogBox = null;
             this.LoadTheLevel();
         }
         
