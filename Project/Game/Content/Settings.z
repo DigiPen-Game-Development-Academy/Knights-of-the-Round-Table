@@ -1,6 +1,0 @@
-class Settings {
-    //Settings go here
-    [Static] var MASTERvol : Real = 1;
-    [Static] var SFXvol : Real = 1;
-    [Static] var MUSICvol : Real = 1;
-}

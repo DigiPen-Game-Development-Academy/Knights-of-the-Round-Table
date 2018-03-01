@@ -6,7 +6,7 @@ class SettingsButton : ZilchComponent {
 
     function OnMouseDown(event : ViewportMouseEvent) {
         
-        Utilities.Dialog("", DialogTypes.SETTINGS, 15);
+        Utilities.Dialog("", DialogTypes.SETTINGS, 10);
         
     }
 }

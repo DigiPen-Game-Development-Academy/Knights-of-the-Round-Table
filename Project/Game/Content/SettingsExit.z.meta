@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "SettingsExit",
-		uint64 ResourceId = 5ae3d0f75790945c,
-	},
-},
