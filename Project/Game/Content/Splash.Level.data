@@ -91,6 +91,21 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		InputManager = 
+		{
+			Enum North = W,
+			Enum South = S,
+			Enum West = A,
+			Enum East = D,
+			Enum Sprint = Shift,
+			Enum UseWeaponMouse = Left,
+			Enum UseWeaponKey = Space,
+			Enum ToggleSecondary = E,
+			Enum PauseOrInventory = Escape,
+			Enum AltPOrInventory = I,
+			Enum UseUtility = F,
+			Enum OpenConsole = Tilde,
+		},
 	},
 	Cog = 
 	{
@@ -104,7 +119,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.428593248, -0.24581717, 50],
+			Vec3 Translation = [0.723743916, -1.54280937, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +131,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.93171501,
+			float Size = 8.98658848,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +139,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.428593248, -0.24581717, 1.87343758e-08],
+			Vec3 LookTarget = [0.723743916, -1.54280937, 3.16358317e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 

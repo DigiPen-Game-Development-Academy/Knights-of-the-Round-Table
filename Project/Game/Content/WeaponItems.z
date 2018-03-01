@@ -21,7 +21,7 @@ class Potato : Item {
         lore.Add("The United States population consumes 1.5 billion pounds of potatoes per year");
         lore.Add("The potatoe's allegiance is with you");
         lore.Add("Legend says that four large lifeforms killed by this potato will reward the user with a legendary weapon");
-        lore.Add("Every year potatoes are gruesomely turned into fries,this cruelty needs to stop. Support the no potato left behind initiative");
+        lore.Add("Every year potatoes are gruesomely turned into fries,this cruelty needs to stop. Support the no potato left behind movement");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -107,12 +107,13 @@ class Plasma_Pistol : Item {
         this.Name = "Plasma pistol";
         this.ID = "Pistol";
         this.DamagePer = 35;
-        this.FireRate = 2.5 ;
+        this.FireRate = 5;
         this.AmmoPerShot = 1;
         this.RelodTime = 1;
         this.Sound = SoundCue.Shot;
         this.SoundDistance = 10;
         this.MaxRange = 6;
+        this.Auto = false;
     }
     
     function ReturnLore () : String {
@@ -217,6 +218,7 @@ class TerribleAssaultRifle : Item {
         this.AmmoPerShot = 4;
         this.RelodTime = 5;
         this.MaxRange = 8;
+        this.SoundDistance = 13;
     }
     
     function ReturnLore () : String {
@@ -273,6 +275,7 @@ class SlugShotgun : Item {
         this.RelodTime = 5;
         this.MaxRange = 10;
         this.RandAngle = 10;
+        this.SoundDistance = 14;
     }
     
     function ReturnLore () : String {
@@ -332,6 +335,7 @@ class Laserbeam : Item {
         this.AmmoPerShot = 4;
         this.RelodTime = 3;
         this.Auto = false;
+        this.SoundDistance = 8;
     }
     
     function ReturnLore () : String {
@@ -377,6 +381,7 @@ class StunMissile : Item {
         this.AmmoPerShot = 8;
         this.RelodTime = 10;
         this.Auto = false;
+        this.SoundDistance = 4;
     }
     
     function UseReleased () {
@@ -432,6 +437,7 @@ class SawLaser  : Item {
         this.AmmoPerShot = 3;
         this.RelodTime = 8;
         this.MaxRange = 10;
+        this.SoundDistance = 15;
     }
     
     function ReturnLore () : String {
@@ -494,6 +500,7 @@ class Lasersniper  : Item {
         this.RelodTime = 15;
         this.MaxRange = 30;
         this.RandAngle = 0;
+        this.SoundDistance = 6.5;
     }
 
     function UseReleased() {
@@ -564,6 +571,7 @@ class Missile  : Item {
         this.FireRate = 1; 
         this.AmmoPerShot = 20;
         this.RelodTime = 3;
+        this.SoundDistance = 15;
     }
     
     function ReturnLore () : String {
@@ -669,6 +677,7 @@ class MMS_Sniper  : Item {
         this.RelodTime = 12;
         this.RandAngle = 0;
         this.Auto = false;
+        this.SoundDistance = 5;
     }
     
     function UseReleased() {

@@ -29,7 +29,7 @@ class CamFollow : ZilchComponent {
         this.TargetPos = GlobalVariables.Player.Transform.WorldTranslation + (mousePos - GlobalVariables.Player.Transform.WorldTranslation)/GlobalVariables.CamSense;
         this.TargetPos = Real3(this.TargetPos.X, this.TargetPos.Y, 40);
         
-        this.Owner.Transform.WorldTranslation = Math.Lerp(this.Owner.Transform.WorldTranslation, this.TargetPos, event.Dt*this.MoveSpd);
+        this.Owner.Transform.WorldTranslation = Math.Lerp(this.Owner.Transform.WorldTranslation, this.TargetPos, (event.Dt*this.MoveSpd)/(0.5+(10*Settings.CamSmoothness)));
         
     }
 }

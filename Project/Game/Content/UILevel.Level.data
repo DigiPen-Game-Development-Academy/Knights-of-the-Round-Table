@@ -309,7 +309,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.28070331, 1.80918872, 50],
+			Vec3 Translation = [-0.129922032, -4.0692215, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -321,7 +321,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.00833225,
+			float Size = 4.02750492,
 		},
 		EditorCameraController = 
 		{
@@ -329,7 +329,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.28070331, 1.80918872, 6.79370658e-07],
+			Vec3 LookTarget = [-0.129922032, -4.0692215, 5.30289128e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1985,9 +1985,9 @@ Level =
 		},
 		ScreenAlign = 
 		{
-			Enum Pos = Bottom,
+			Enum Pos = Bottomright,
 			Vec3 Offset = [0, 0, 0],
-			Vec2 RelOffset = [0, 3.5],
+			Vec2 RelOffset = [2, 6],
 		},
 		Hierarchy = 
 		{
@@ -2041,11 +2041,11 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "Quit",
+					string Name = "Manu",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, -0.5, 0],
+					Vec3 Translation = [0, -1.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2076,7 +2076,7 @@ Level =
 				},
 				Button = 
 				{
-					float ScaleM = 1.12,
+					float ScaleM = 1.04999995,
 					Vec4 HoverColor = [0, 0, 0, 0.999899983],
 					Vec4 ClickColor = [0, 0, 0, 0.350000024],
 					float ScaleSpeed = 5,
@@ -2102,11 +2102,68 @@ Level =
 				},
 				Named = 
 				{
+					string Name = "Settings",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 99,
+					string Text = "Settings",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 136.192566,
+					bool Smoothing = true,
+				},
+				MenuVisibilitySpriteText = 
+				{
+				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				Button = 
+				{
+					float ScaleM = 1.04999995,
+					Vec4 HoverColor = [0, 0, 0, 0.999899983],
+					Vec4 ClickColor = [0, 0, 0, 0.350000024],
+					float ScaleSpeed = 5,
+				},
+				Area = 
+				{
+					Vec2 Size = [3, 1],
+					Location Origin = Center,
+				},
+				SettingsButton = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 60,
+				},
+				Named = 
+				{
 					string Name = "Quit",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, -1.5, 0],
+					Vec3 Translation = [0, -2.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2137,7 +2194,7 @@ Level =
 				},
 				Button = 
 				{
-					float ScaleM = 1.12,
+					float ScaleM = 1.04999995,
 					Vec4 HoverColor = [0, 0, 0, 0.999899983],
 					Vec4 ClickColor = [0, 0, 0, 0.350000024],
 					float ScaleSpeed = 5,
@@ -2155,7 +2212,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 60,
+					uint Id = 61,
 				},
 				Named = 
 				{
@@ -2163,8 +2220,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, -0.533538818, -1],
-					Vec3 Scale = [3.02577353, 3.0670774, 1],
+					Vec3 Translation = [0, -0.991291046, -1],
+					Vec3 Scale = [3.02577353, 3.98258138, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -2195,7 +2252,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 62,
 		},
 		Named = 
 		{
@@ -2227,7 +2284,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 62,
+					uint Id = 63,
 				},
 				Named = 
 				{
@@ -2276,7 +2333,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 63,
+							uint Id = 64,
 						},
 						Named = 
 						{
@@ -2312,7 +2369,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 64,
+					uint Id = 65,
 				},
 				Named = 
 				{
@@ -2347,6 +2404,15 @@ Level =
 					Vec2 Size = [4, 4],
 					Location Origin = BottomLeft,
 				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				BackFade = 
+				{
+					float FadeSpd = 2.5,
+				},
 			},
 		},
 	},
@@ -2354,7 +2420,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 65,
+			uint Id = 66,
 		},
 		Named = 
 		{
@@ -2402,7 +2468,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 66,
+			uint Id = 67,
 		},
 		Named = 
 		{
@@ -2441,7 +2507,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 67,
+					uint Id = 68,
 				},
 				Named = 
 				{
@@ -2478,7 +2544,7 @@ Level =
 		string Name = "5a6dc57e30d123ad:SoundWaves",
 		LinkId = 
 		{
-			uint Id = 68,
+			uint Id = 69,
 		},
 		Transform = 
 		{
@@ -2501,7 +2567,7 @@ Level =
 		string Name = "5af4af2480366ec0:Version",
 		LinkId = 
 		{
-			uint Id = 69,
+			uint Id = 70,
 		},
 		Transform = 
 		{
@@ -2517,6 +2583,85 @@ Level =
 		Named = 
 		{
 			string Name = "Version",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 71,
+		},
+		Named = 
+		{
+			string Name = "QuestPointer",
+		},
+		Archetyped = 
+		{
+			string Name = "5ae3f30b748bd0fa:QuestPointer",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -4.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.254999995, 0.254999995, 0.254999995, 0.485000014],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		QuestSprite = 
+		{
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 72,
+				},
+				Named = 
+				{
+					string Name = "txt",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 30,
+					string Text = "Sprite Text...",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
 		},
 	},
 },

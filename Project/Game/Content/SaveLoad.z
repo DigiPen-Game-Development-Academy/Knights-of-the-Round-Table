@@ -38,6 +38,21 @@ class SaveLoad : ZilchComponent {
             this.Once = false;
         }
     }
+    [Static]
+    function SaveSettings() {
+        
+        Zero.ObjectStore.Store("Config", GlobalVariables.Settings);
+        
+    }
+    [Static]
+    function LoadSettings() {
+        
+        if(GlobalVariables.Settings != null)
+            GlobalVariables.Settings.Destroy();
+        
+        Zero.ObjectStore.RestoreOrArchetype("Config", Archetype.SettingsSave, GlobalVariables.GameSpace);
+        
+    }
     
     function Save() {
         GlobalVariables.Save.SaveController.Enemies = SaveFuncs.SerializeEnemies(GlobalVariables.Enemies);

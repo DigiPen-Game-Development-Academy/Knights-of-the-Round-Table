@@ -288,7 +288,7 @@ class Utilities
         if(dialogType != DialogTypes.SETTINGS) {
             dialogBox.FindChildByName("TXT").SpriteText.Text = text;
             
-            Utilities.ConsoleSend("Dialog: `text`", Real4(0, 0, 1, 1));
+            Utilities.ConsoleSend("Dialog: `text`", Real4(1, 1, 1, 1));
             
         }
         
@@ -300,6 +300,16 @@ class Utilities
         
         return dialogBox;
         
+    }
+    
+    [Static]
+    function SetQuest(text : String) {
+        GlobalVariables.QuestSprite.Set(text);
+    }
+    
+    [Static]
+    function ClearQuest() {
+        GlobalVariables.QuestSprite.Clear();
     }
     
 }

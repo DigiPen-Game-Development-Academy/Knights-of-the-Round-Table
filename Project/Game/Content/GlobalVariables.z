@@ -75,6 +75,12 @@ class GlobalVariables {
     var CamSense : Real = 6;
     
     [Static]
+    var Settings : Cog = null;
+    
+    [Static]
+    var QuestSprite : QuestSprite = null;
+    
+    [Static]
     function AddInventoryItem (item : Item) : Boolean {
         
         for(var i = 0; i < GlobalVariables.Items.Count; ++i){
