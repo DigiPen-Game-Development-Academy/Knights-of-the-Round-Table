@@ -1,6 +1,6 @@
 class DialogBoxTwoButtons : ZilchComponent {
-    [Property] var Margin : Real = 0.125;
-    [Property] var ButtonSpace : Real = 10;
+    var Margin : Real = 1;
+    var ButtonSpace : Real = 1;
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
@@ -18,7 +18,7 @@ class DialogBoxTwoButtons : ZilchComponent {
         var ok = this.Owner.FindChildByName("OK");
         
         ok.Transform.WorldScale = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1)*this.Owner.Transform.WorldScale;
-        ok.Transform.Translation = Real3(this.Owner.Area.Size.X/4, -((this.Owner.Area.Size.Y/2) - (this.ButtonSpace/2)), 2);
+        ok.Transform.Translation = Real3(this.Owner.Area.Size.X/4, -((this.Owner.Area.Size.Y/2) - (this.ButtonSpace/1.25)), 2);
         ok.Button.StartSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
         ok.Button.TargetSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
         var smallest = this.ButtonSpace*this.Owner.Transform.WorldScale.Y;
@@ -30,7 +30,7 @@ class DialogBoxTwoButtons : ZilchComponent {
         var cancel = this.Owner.FindChildByName("CANCEL");
         
         cancel.Transform.WorldScale = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1)*this.Owner.Transform.WorldScale;
-        cancel.Transform.Translation = Real3(-this.Owner.Area.Size.X/4, -((this.Owner.Area.Size.Y/2) - (this.ButtonSpace/2)), 2);
+        cancel.Transform.Translation = Real3(-this.Owner.Area.Size.X/4, -((this.Owner.Area.Size.Y/2) - (this.ButtonSpace/1.25)), 2);
         cancel.Button.StartSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
         cancel.Button.TargetSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
         smallest = this.ButtonSpace*this.Owner.Transform.WorldScale.Y;
@@ -38,6 +38,15 @@ class DialogBoxTwoButtons : ZilchComponent {
             smallest = cancel.Transform.WorldScale.X;
         }
         cancel.FindChildByName("TXTOK").Transform.WorldScale = Real3(smallest);
+        
+        //alter size
+        var scale = 0.75;
+        ok.Transform.WorldScale *= scale;
+        ok.Button.StartSize *= scale;
+        ok.Button.TargetSize *= scale;
+        cancel.Transform.WorldScale *= scale;
+        cancel.Button.StartSize *= scale;
+        cancel.Button.TargetSize *= scale;
         
     }
 }

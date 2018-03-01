@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 0.0400002003, 1, 0.585000038],
+		Vec4 Color = [1, 1, 1, 0.999899983],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -68,8 +68,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.75, -1.75, 2],
-				Vec3 Scale = [1, 1, 1],
+				Vec3 Translation = [0.75, -1.625, 2],
+				Vec3 Scale = [0.75, 0.75, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -78,11 +78,11 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [0, 0.639999628, 1, 0.999899983],
+				Vec4 Color = [0.760784388, 0.760784388, 0.760784388, 0.999899983],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
+				string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -98,8 +98,8 @@ Cog =
 			Button = 
 			{
 				float ScaleM = 1,
-				Vec4 HoverColor = [0, 0.72570014, 0.88499999, 0.730000019],
-				Vec4 ClickColor = [0, 0.178600058, 0.235000014, 0.999899983],
+				Vec4 HoverColor = [0.63499999, 0.63499999, 0.63499999, 0.999899983],
+				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
 			},
 			Area = 
@@ -169,8 +169,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.75, -1.75, 2],
-				Vec3 Scale = [1, 1, 1],
+				Vec3 Translation = [-0.75, -1.625, 2],
+				Vec3 Scale = [0.75, 0.75, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -179,11 +179,11 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [0, 0.639999628, 1, 0.999899983],
+				Vec4 Color = [0.75999999, 0.75999999, 0.75999999, 0.999899983],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
+				string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -199,8 +199,8 @@ Cog =
 			Button = 
 			{
 				float ScaleM = 1,
-				Vec4 HoverColor = [0, 0.72570014, 0.88499999, 0.730000019],
-				Vec4 ClickColor = [0, 0.178600058, 0.235000014, 0.999899983],
+				Vec4 HoverColor = [0.635294139, 0.635294139, 0.635294139, 0.999899983],
+				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
 			},
 			Area = 
