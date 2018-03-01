@@ -91,6 +91,21 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		InputManager = 
+		{
+			Enum North = W,
+			Enum South = S,
+			Enum West = A,
+			Enum East = D,
+			Enum Sprint = Shift,
+			Enum UseWeaponMouse = Left,
+			Enum UseWeaponKey = Space,
+			Enum ToggleSecondary = E,
+			Enum PauseOrInventory = Escape,
+			Enum AltPOrInventory = I,
+			Enum UseUtility = F,
+			Enum OpenConsole = Tilde,
+		},
 	},
 	Cog = 
 	{
