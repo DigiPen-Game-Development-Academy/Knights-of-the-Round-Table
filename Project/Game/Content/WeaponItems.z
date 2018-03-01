@@ -272,7 +272,7 @@ class SlugShotgun : Item {
         this.DamagePer = 50;
         this.FireRate = 2; 
         this.AmmoPerShot = 15;
-        this.RelodTime = 8;
+        this.RelodTime = 5;
         this.MaxRange = 10;
         this.RandAngle = 10;
         this.SoundDistance = 14;
@@ -435,7 +435,7 @@ class SawLaser  : Item {
         this.DamagePer = 30;
         this.FireRate = 10; 
         this.AmmoPerShot = 3;
-        this.RelodTime = 15;
+        this.RelodTime = 8;
         this.MaxRange = 10;
         this.SoundDistance = 15;
     }
@@ -497,7 +497,7 @@ class Lasersniper  : Item {
         this.DamagePer = 100;
         this.FireRate = 0.1; 
         this.AmmoPerShot = 25;
-        this.RelodTime = 10;
+        this.RelodTime = 15;
         this.MaxRange = 30;
         this.RandAngle = 0;
         this.SoundDistance = 6.5;
@@ -674,7 +674,7 @@ class MMS_Sniper  : Item {
         this.DamagePer = 150;
         this.FireRate = 0.1; 
         this.AmmoPerShot = 20;
-        this.RelodTime = 5;
+        this.RelodTime = 12;
         this.RandAngle = 0;
         this.Auto = false;
         this.SoundDistance = 5;
