@@ -6,6 +6,7 @@ class SettingsExit : ZilchComponent {
         this.Owner.Parent.FindChildByName("MasterVol").SlideBox.Value = Settings.MASTERvol;
         this.Owner.Parent.FindChildByName("MusicVol").SlideBox.Value = Settings.MUSICvol;
         this.Owner.Parent.FindChildByName("SFXVol").SlideBox.Value = Settings.SFXvol;
+        this.Owner.Parent.FindChildByName("CameraSmothness").SlideBox.Value = Settings.CamSmoothness;
         
     }
 
@@ -19,6 +20,7 @@ class SettingsExit : ZilchComponent {
         Settings.MASTERvol = this.Owner.Parent.FindChildByName("MasterVol").SlideBox.Value;
         Settings.MUSICvol = this.Owner.Parent.FindChildByName("MusicVol").SlideBox.Value;
         Settings.SFXvol = this.Owner.Parent.FindChildByName("SFXVol").SlideBox.Value;
+        Settings.CamSmoothness = this.Owner.Parent.FindChildByName("CameraSmothness").SlideBox.Value;
         GlobalVariables.Settings.SettingsSave.Save();
     }
 
