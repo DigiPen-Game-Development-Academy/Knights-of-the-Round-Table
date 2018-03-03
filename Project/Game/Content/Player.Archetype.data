@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-106.354057, 53.9702034, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -130,7 +130,7 @@ Cog =
 				CameraTransparentSort TransparentSort = ViewDepth,
 				float FieldOfView = 45,
 				float NearPlane = 0.5,
-				float FarPlane = 50,
+				float FarPlane = 100,
 				float Size = 10,
 			},
 			SoundListener = 

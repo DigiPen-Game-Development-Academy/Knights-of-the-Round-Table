@@ -292,6 +292,8 @@ class Utilities
             
         }
         
+        Utilities.Block();
+        
         dialogspace.LevelSettings.CameraViewport.Camera.Camera.Size = 20-size;
         
         Utilities.DialogBox = dialogBox;
@@ -310,6 +312,46 @@ class Utilities
     [Static]
     function ClearQuest() {
         GlobalVariables.QuestSprite.Clear();
+    }
+    
+    [Static]
+    function PlaySFX(sound : SoundCue) {
+        
+        GlobalVariables.SFXSpace.SoundSpace.PlayCue(sound);
+        
+    }
+    
+    [Static]
+    var Blocked : Boolean = false;
+    
+    [Static]
+    function Block () {
+        if(!Utilities.Blocked) {
+            Utilities.Blocked = true;
+            var ui = GlobalVariables.GameSpace.GameSession.FindSpaceByName("UI");
+            if(ui != null) {
+                ui.CreateAtPosition(Archetype.Blocker, Real3(0, 0, 25));
+            }
+            if(GlobalVariables.Player != null)
+                GlobalVariables.GameSpace.CreateAtPosition(Archetype.Blocker, GlobalVariables.Player.Transform.WorldTranslation + Real3(0, 0, 25));
+            else
+                GlobalVariables.GameSpace.CreateAtPosition(Archetype.Blocker, Real3(0, 0, 25));
+        }
+    }
+    
+    [Static]
+    function UnBlock () {
+        
+        Utilities.Blocked = false;
+        
+        var ui = GlobalVariables.GameSpace.GameSession.FindSpaceByName("UI");
+        if(ui != null) {
+            if(ui.FindObjectByName("Blocker") != null)
+                ui.FindObjectByName("Blocker").Destroy();
+        }
+        if(GlobalVariables.GameSpace.FindObjectByName("Blocker") != null)
+            GlobalVariables.GameSpace.FindObjectByName("Blocker").Destroy();
+        
     }
     
 }

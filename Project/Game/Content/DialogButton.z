@@ -24,6 +24,8 @@ class DialogButton : ZilchComponent {
                 this.Owner.Parent.DispatchEvent(Events.DialogEnded, toSend);
                 
                 this.Owner.Parent.Destroy();
+                
+                Utilities.UnBlock();
             }
         }
     }

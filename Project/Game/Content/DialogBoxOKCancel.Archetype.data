@@ -138,6 +138,7 @@ Cog =
 				Vec4 HoverColor = [0.394999981, 0.394999981, 0.394999981, 0.999899983],
 				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
+				bool Alpha = false,
 			},
 			DialogButton = 
 			{
@@ -212,7 +213,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
+				string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -228,9 +229,10 @@ Cog =
 			Button = 
 			{
 				float ScaleM = 1.20000005,
-				Vec4 HoverColor = [0.514999986, 0.514999986, 0.514999986, 0.999899983],
+				Vec4 HoverColor = [0.396078467, 0.396078467, 0.396078467, 0.999899983],
 				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
+				bool Alpha = false,
 			},
 			DialogButton = 
 			{

@@ -1,3 +1,5 @@
+//Author Brandon Wolenetz
+
 class Button : ZilchComponent {
     [Property]
     var ScaleM : Real = 1.2;
@@ -10,6 +12,9 @@ class Button : ZilchComponent {
     
     [Property]
     var ScaleSpeed : Real = 5;
+    
+    [Property]
+    var Alpha : Boolean = false;
     
     var Color : Real4;
     
@@ -52,14 +57,20 @@ class Button : ZilchComponent {
             this.Owner.SpriteText.Color = this.ClickColor;
         else
             this.Owner.Sprite.Color = this.ClickColor;
+        Utilities.PlaySFX(SoundCue.ButtonPress);
     }
 
     function OnMouseExit(event : ViewportMouseEvent) {
+        
+        var c = this.Color;
+        if(!this.Alpha)
+            c = Real4(this.Color.X, this.Color.Y, this.Color.Z, 1);
+        
         this.TargetSize = this.StartSize;
         if(this.ST)
-            this.Owner.SpriteText.Color = Real4(this.Color.X, this.Color.Y, this.Color.Z, 1);
+            this.Owner.SpriteText.Color = c;
         else {
-            this.Owner.Sprite.Color = Real4(this.Color.X, this.Color.Y, this.Color.Z, 1);
+            this.Owner.Sprite.Color = c;
             this.Owner.Sprite.CurrentFrame = 0;
         }
     }

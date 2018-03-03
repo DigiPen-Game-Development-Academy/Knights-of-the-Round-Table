@@ -1,3 +1,5 @@
+//Author Brandon Wolenetz
+
 enum DialogReturn {
     OK,
     CANCEL,

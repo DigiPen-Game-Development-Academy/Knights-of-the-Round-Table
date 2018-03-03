@@ -1,3 +1,5 @@
+//Author Brandon Wolenetz
+
 class CreateUI : ZilchComponent {
     
     [Property]
@@ -53,6 +55,17 @@ class CreateUI : ZilchComponent {
                 this.UISpace = this.GameSession.CreateNamedSpace("Mouse", Archetype.UISpace);
                 
                 this.UISpace.LoadLevel(this.MouseLevel);
+                
+                if(this.GameSession.FindSpaceByName("SFX") != null) {
+                    this.GameSession.FindSpaceByName("SFX").Destroy();
+                }
+                
+                this.UISpace = this.GameSession.CreateNamedSpace("SFX", Archetype.UISpace);
+                
+                this.UISpace.LoadLevel(this.MouseLevel);
+                
+                GlobalVariables.SFXSpace = this.UISpace;
+                
             }
             
         }

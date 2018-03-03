@@ -148,7 +148,7 @@ class Plasma_Pistol : Item {
         
         Utilities.SendSoundWeapon(this.SoundDistance);
         
-        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        Utilities.PlaySFX(this.Sound);
         
     }
     
@@ -252,7 +252,7 @@ class TerribleAssaultRifle : Item {
         
         Utilities.SendSoundWeapon(this.SoundDistance);
         
-        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        Utilities.PlaySFX(this.Sound);
     }
     
 }
@@ -311,7 +311,7 @@ class SlugShotgun : Item {
         
         Utilities.SendSoundWeapon(this.SoundDistance);
         
-        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        Utilities.PlaySFX(this.Sound);
     }
     
 }
@@ -471,7 +471,7 @@ class SawLaser  : Item {
         
         Utilities.SendSoundWeapon(this.SoundDistance);
         
-        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        Utilities.PlaySFX(this.Sound);
 
     }
     
@@ -488,7 +488,7 @@ class Lasersniper  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
-        this.Sound = SoundCue.Shot;
+        this.Sound = SoundCue.LSniper;
         this.Stackable = false;
         this.Auto = false;
         this.MagSize = 30;
@@ -535,7 +535,7 @@ class Lasersniper  : Item {
         
         Utilities.SendSoundWeapon(this.SoundDistance);
         
-        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        Utilities.PlaySFX(this.Sound);
         
         
     }
@@ -720,7 +720,7 @@ class MMS_Sniper  : Item {
         
         Utilities.SendSoundWeapon(this.SoundDistance);
         
-        GlobalVariables.GameSpace.SoundSpace.PlayCue(this.Sound);
+        Utilities.PlaySFX(this.Sound);
         
     }
     

@@ -140,6 +140,7 @@ Cog =
 				Vec4 HoverColor = [0.444999993, 0.444999993, 0.444999993, 0.999899983],
 				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
+				bool Alpha = false,
 			},
 			DialogButton = 
 			{
