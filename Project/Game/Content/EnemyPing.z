@@ -24,7 +24,7 @@ class EnemyPing : ZilchComponent {
         
         if(this.LastVel == Real3(0) && this.Owner.RigidBody.Velocity != Real3(0)) {
             this.Ping(1);
-        } else if (this.AI.PlayerSpotted) {
+        } else if (this.AI.State == State.Spotted) {
             this.Ping(2, true);
         }
         
