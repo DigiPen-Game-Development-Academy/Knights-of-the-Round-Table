@@ -599,7 +599,7 @@ class Missile  : Item {
         missile.PotatProjectile.SoundRad = this.ExpSoundDist;
         missile.PotatProjectile.DamageMSG = this.ReturnDeathMSG();
         missile.PotatProjectile.Set = true;
-        missile.Sprite.SpriteSource = SpriteSource.ProjectilePotate;
+        missile.Sprite.SpriteSource = SpriteSource.Missile;
         
     }
     
