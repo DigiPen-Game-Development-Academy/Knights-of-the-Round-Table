@@ -1,0 +1,25 @@
+//Author Brandon Wolenetz
+
+class TriggerObjective : ZilchComponent {
+    
+    [Property] var ObjectiveIndex : Integer = 0;
+    
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent) {
+        
+        Utilities.SetQuest(this.ObjectiveIndex);
+        
+    }
+}
+
+class Objective {
+    
+    [Static] var Quests : Array[String] = Array[String] () {
+        "TEST",
+        "TEST2"
+    };
+    
+}

@@ -128,5 +128,13 @@ class SaveLoad : ZilchComponent {
         qItems.Resize(6);
         GlobalVariables.QuestItems = qItems;
         
+        if (GlobalVariables.Save.SaveController.Quest != "") {
+            GlobalVariables.QuestSprite.Set(GlobalVariables.Save.SaveController.Quest);
+        } else {
+            GlobalVariables.QuestSprite.Clear();
+        }
+        
+        Utilities.MaxIndex = GlobalVariables.Save.SaveController.MaxQIndex;
+        
     }
 }

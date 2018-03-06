@@ -33,6 +33,12 @@ class SaveController : ZilchComponent {
     [Serialized]
     var GItems : String = "";
     
+    [Serialized]
+    var Quest : String = "";
+    
+    [Serialized]
+    var MaxQIndex : Integer = -1;
+    
     function Initialize(init : CogInitializer) {
         GlobalVariables.Save = this.Owner;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -41,5 +47,6 @@ class SaveController : ZilchComponent {
     function OnLogicUpdate(event : UpdateEvent) {
         this.PlayerPos = GlobalVariables.Player.Transform.WorldTranslation;
         this.PlayerHealth = GlobalVariables.Player.Health.CurrentHealth;
+        this.MaxQIndex = Utilities.MaxIndex;
     }
 }

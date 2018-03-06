@@ -305,13 +305,21 @@ class Utilities
     }
     
     [Static]
-    function SetQuest(text : String) {
-        GlobalVariables.QuestSprite.Set(text);
+    var MaxIndex : Integer = -1;
+    
+    [Static]
+    function SetQuest(index : Integer) {
+        if(index > Utilities.MaxIndex) {
+            GlobalVariables.QuestSprite.Set(Objective.Quests[index]);
+            Utilities.MaxIndex = index;
+            GlobalVariables.Save.SaveController.Quest = Objective.Quests[index];
+        }
     }
     
     [Static]
     function ClearQuest() {
         GlobalVariables.QuestSprite.Clear();
+        GlobalVariables.Save.SaveController.Quest = "";
     }
     
     [Static]
