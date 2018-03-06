@@ -28,6 +28,13 @@ class UseWeapon : ZilchComponent
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Space, Events.MouseUp, this.OnMouseUp);
         Zero.Connect(Zero.Keyboard, Events.KeyUp, this.OnKeyUp);
+        Zero.Connect(this.Space, Events.MouseScroll, this.OnMouseScroll);
+    }
+
+    function OnMouseScroll(event : ViewportMouseEvent) {
+        
+        this.PrimarySelected = !this.PrimarySelected;
+        
     }
 
     function OnKeyUp(event : KeyboardEvent) {
