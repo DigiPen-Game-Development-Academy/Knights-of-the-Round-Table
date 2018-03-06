@@ -45,8 +45,7 @@ class SaveFuncs {
                 str = "`str`,`e.Transform.WorldTranslation.X`";
                 str = "`str`,`e.Transform.WorldTranslation.Y`";
                 str = "`str`,`e.Transform.WorldTranslation.Z`";
-                str = "`str`,`e.EnemyAI.Suspitious`";
-                str = "`str`,`e.EnemyAI.PlayerSpotted`";
+                str = "`str`,`e.EnemyAI.State`";
                 str = "`str`,`e.EnemyAI.ViewDirection.X`";
                 str = "`str`,`e.EnemyAI.ViewDirection.Y`";
                 str = "`str`,`e.EnemyAI.Timer`";
@@ -93,12 +92,11 @@ class SaveFuncs {
             var enemy = GlobalVariables.GameSpace.CreateAtPosition(Utilities.EnemyFromID(properties[0]), Real3(Real.Parse(properties[1]), Real.Parse(properties[2]), Real.Parse(properties[3])));
             Console.WriteLine(properties[0]);
             if(enemy != null && properties.Count >= 12) {
-                enemy.EnemyAI.Suspitious = properties[4] == "true";
-                enemy.EnemyAI.PlayerSpotted = properties[5] == "true";
-                enemy.EnemyAI.ViewDirection = Real3(Real.Parse(properties[6]), Real.Parse(properties[7]), 0);
-                enemy.EnemyAI.Timer = Real.Parse(properties[8]);
-                enemy.EnemyAI.GuardPos = Real3(Real.Parse(properties[9]), Real.Parse(properties[10]), 0);
-                enemy.Health.CurrentHealth = Real.Parse(properties[11]);
+                enemy.EnemyAI.State = Integer.Parse(properties[4]) as State;
+                enemy.EnemyAI.ViewDirection = Real3(Real.Parse(properties[5]), Real.Parse(properties[6]), 0);
+                enemy.EnemyAI.Timer = Real.Parse(properties[7]);
+                enemy.EnemyAI.GuardPos = Real3(Real.Parse(properties[8]), Real.Parse(properties[9]), 0);
+                enemy.Health.CurrentHealth = Real.Parse(properties[10]);
             }
         }
         return;

@@ -18,7 +18,7 @@ class Fists : Item
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             if(res.ObjectHit.Health != null) {
                 GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
-                if(res.ObjectHit.EnemyAI != null && !res.ObjectHit.EnemyAI.Suspitious && !res.ObjectHit.EnemyAI.PlayerSpotted) {
+                if(res.ObjectHit.EnemyAI != null && res.ObjectHit.EnemyAI.State != State.Suspitious && res.ObjectHit.EnemyAI.State != State.Spotted) {
                     Utilities.SendSound(5, res.ObjectHit.Transform.WorldTranslation);
                     res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
                     GlobalVariables.Player.PlayerMovment.Freeze(1);
