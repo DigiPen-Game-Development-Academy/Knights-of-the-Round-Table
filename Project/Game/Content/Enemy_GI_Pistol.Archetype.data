@@ -79,7 +79,7 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "5a08c96d04f0597c:Enemy",
-		string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
 		float Radius = 0.5,
 	},

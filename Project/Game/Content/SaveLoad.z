@@ -32,11 +32,9 @@ class SaveLoad : ZilchComponent {
 
     function OnLogicUpdate(event : UpdateEvent) {
         if(this.Once) {
-            if(!this.LoadOnStart) {
-                GlobalVariables.GameSpace.Create(Archetype.Save);
-            } else {
-                this.Load();
-            }
+            if(!this.LoadOnStart)
+                Zero.ObjectStore.Erase("Save");
+            this.Load();
             this.Once = false;
         }
     }

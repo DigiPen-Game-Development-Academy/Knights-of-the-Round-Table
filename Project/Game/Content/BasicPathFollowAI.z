@@ -10,8 +10,6 @@ class BasicPathFollowAI : ZilchComponent {
     
     var Stunned : Boolean = false;
     
-    var Instaturn : Boolean = false;
-    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.Stun, this.OnStun);
@@ -56,12 +54,6 @@ class BasicPathFollowAI : ZilchComponent {
             this.Owner.RigidBody.Velocity = Real3(0);
         } else {
             var tDir = this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation;
-            
-            if(this.Instaturn) {
-                this.Owner.RigidBody.Velocity = Math.Normalize(tDir);
-                return;
-            }
-            
             var tAngle = Math.ATan2(tDir.Y, tDir.X);
             var a = Math.ATan2(Math.Sin(tAngle-angle), Math.Cos(tAngle-angle));
             if(Math.ToDegrees(a) > 180)
