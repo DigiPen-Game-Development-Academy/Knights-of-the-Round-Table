@@ -152,7 +152,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-38.6143188, 44.3764458, 64],
+			Vec3 Translation = [95.5401306, -80.9213028, 64],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -164,7 +164,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 9.0718298,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -172,7 +172,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-38.6143188, 44.3764458, 0],
+			Vec3 LookTarget = [95.5401306, -80.9213028, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1528,28 +1528,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a026fe412609373:Enemy_Rusher",
-		LinkId = 
-		{
-			uint Id = 42,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [1.30319929, 7.63058662, 3.81469727e-06],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy_Rusher",
-		},
-	},
-	ArchetypeInstance = 
-	{
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 43,
+			uint Id = 42,
 		},
 		Transform = 
 		{
@@ -1562,47 +1544,11 @@ Level =
 			string Name = "Enemy_GI_Pistol",
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
-		LinkId = 
-		{
-			uint Id = 44,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [9.49035358, 3.37803459, 3.81469727e-06],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy_GI_Pistol",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a026fe412609373:Enemy_Rusher",
-		LinkId = 
-		{
-			uint Id = 45,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-18.5685329, 3.33829117, 3.81469727e-06],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy_Rusher",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 46,
+			uint Id = 43,
 		},
 		Named = 
 		{
@@ -1662,7 +1608,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 47,
+			uint Id = 44,
 		},
 		Transform = 
 		{
@@ -1680,7 +1626,7 @@ Level =
 		string Name = "5a6dd29eca18018f:QuestItemPickup",
 		LinkId = 
 		{
-			uint Id = 48,
+			uint Id = 45,
 		},
 		Transform = 
 		{
@@ -1693,62 +1639,12 @@ Level =
 			string Name = "QuestItemPickup",
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 49,
-		},
-		Named = 
-		{
-			string Name = "QuestItemPickup",
-		},
-		Archetyped = 
-		{
-			string Name = "5a6dd29eca18018f:QuestItemPickup",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-12.5, 2.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a6dd62c1a9db0df:WeldingMask_(2)",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		QuestItemPickup = 
-		{
-			int Index = 1,
-			string Name = "Welding Materials",
-			string Lore = "You will need this to repair your boat",
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 50,
+			uint Id = 46,
 		},
 		Transform = 
 		{
@@ -1766,7 +1662,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 51,
+			uint Id = 47,
 		},
 		Transform = 
 		{
@@ -1784,7 +1680,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 52,
+			uint Id = 48,
 		},
 		Transform = 
 		{
@@ -1802,7 +1698,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 53,
+			uint Id = 49,
 		},
 		Transform = 
 		{
@@ -1820,7 +1716,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 54,
+			uint Id = 50,
 		},
 		Transform = 
 		{
@@ -1838,7 +1734,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 55,
+			uint Id = 51,
 		},
 		Transform = 
 		{
@@ -1856,7 +1752,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 52,
 		},
 		Transform = 
 		{
@@ -1874,7 +1770,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 53,
 		},
 		Transform = 
 		{
@@ -1892,7 +1788,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 58,
+			uint Id = 54,
 		},
 		Transform = 
 		{
@@ -1910,7 +1806,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 55,
 		},
 		Transform = 
 		{
@@ -1928,7 +1824,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 60,
+			uint Id = 56,
 		},
 		Transform = 
 		{
@@ -1946,7 +1842,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 57,
 		},
 		Transform = 
 		{
@@ -1964,7 +1860,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 62,
+			uint Id = 58,
 		},
 		Transform = 
 		{
@@ -1981,7 +1877,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 63,
+			uint Id = 59,
 		},
 		Named = 
 		{
@@ -2004,6 +1900,41 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string SpriteSource = "5af8a891e2b329ad:TileMapPrime2045",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 60,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-35.6273308, -22.3622017, 4.57062697e-06],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
