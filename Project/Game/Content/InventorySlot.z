@@ -231,7 +231,7 @@ class InventorySlot : ZilchComponent
             this.LorePanel.LorePanel.Text = text;
             this.LorePanel.Sprite.Visible = true;
             
-        }else if(this.Item != null){
+        } else if(this.Item != null) {
             
             var item = this.Item;
             
@@ -251,6 +251,25 @@ class InventorySlot : ZilchComponent
             
             this.LorePanel.LorePanel.Text = text;
             this.LorePanel.Sprite.Visible = true;
+            
+        } else {
+            
+            var text = "";
+            
+            this.LorePanel.Sprite.Visible = true;
+            
+            //no item is in slot, if hotbar slot tell player
+            if(this.Owner.Name == "PrimarySlot") {
+                text = "Primary Weapon Slot";
+            } else if(this.Owner.Name == "SecondarySlot"){
+                text = "Secondary Weapon Slot";
+            } else if(this.Owner.Name == "UntlitySlot") { //yes I know this slots name is spelled wrong
+                text = "Utility Item Slot";
+            } else {
+                this.LorePanel.Sprite.Visible = false;
+            }
+            
+            this.LorePanel.LorePanel.Text = text;
             
         }
         
