@@ -153,7 +153,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-80.5565033, 45.4788704, 63.9999924],
+			Vec3 Translation = [-49.5231781, 50.55653, 63.9999962],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -165,7 +165,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 100,
+			float Size = 3.68832541,
 		},
 		EditorCameraController = 
 		{
@@ -173,7 +173,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-80.5565033, 45.4788704, -5.7356242e-06],
+			Vec3 LookTarget = [-49.5231781, 50.55653, -4.37911331e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1378,12 +1378,19 @@ Level =
 			string LootTable = "",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
 			uint Id = 41,
+		},
+		Named = 
+		{
+			string Name = "SavePoint",
+		},
+		Archetyped = 
+		{
+			string Name = "5af4806bfaf533ea:SavePoint",
 		},
 		Transform = 
 		{
@@ -1391,9 +1398,31 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "SavePoint",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5274db4c2e7c11f9:Circle",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		SavePoint = 
+		{
 		},
 	},
 	ArchetypeInstance = 
