@@ -1,0 +1,151 @@
+//Author Brandon Wolenetz
+
+/*TODO:
+    
+    1. finnish this script
+    
+    2. maybe change min/max over health to sample curves
+    
+*/
+
+enum RState {
+    Idle,
+    Normal,
+    Rush,
+    AngryRush,
+    Dazed
+}
+
+class Boss_Rusher_AI : ZilchComponent {
+    
+    //*****Dependencies*****
+    [Dependency] var Health : Health;
+    [Dependency] var PathFollow : GenericPathFollowAI;
+    [Dependency] var PathFind : EnemyPathFind;
+    [Dependency] var RigidBody : RigidBody;
+    
+    //*****Properties*****
+    //how fast to move when in 'normal' state
+    [Property] var MovSpeed : Real = 2;
+    //how fast to dash
+    [Property] var DashSpeed : Real = 7;
+    //how fast to angry dash
+    [Property] var AngryDashSpeed : Real = 7;
+    
+    //wind up time before dash at full health
+    [Property] var WindUpTimeMax : Real = 1.5;
+    //wind up time before dash at no health
+    [Property] var WindUpTimeMin : Real = 0.5;
+    //how far to travel with normal dash
+    [Property] var DashDistance : Real = 7;
+    //how long to chase player with angry dash
+    [Property] var AngryDashTime : Real = 4;
+    //ammount of time to be dazed after running into wall
+    [Property] var DazeTime : Real = 4;
+    //% of health to switch from dashing to angry dashing (0-1)
+    [Property] var AngryDashHealth : Real = 0.25;
+    //damage dealt when hit player with dash
+    [Property] var DashDamage : Real = 50;
+    //time between entering dash state at full health
+    [Property] var DashCooldownMax : Real = 6;
+    //time between entering dash state at no health
+    [Property] var DashCooldownMin : Real = 4;
+    //Randomness for time between entering dash states
+    [Property] var DashCooldownRand : Real = 0.1;
+    
+    //*****Variables*****
+    //current boss state
+    var State : RState = RState.Idle;
+    //Timer used for delays and sutch
+    var Timer : Real = 0;
+    //Timer used for wind up before dashes, we need this because the normal timer is in use for angry dash
+    var WindTimer : Real = 0;
+    //Random() used for randomness
+    var Rand : Random;
+    
+    function Initialize(init : CogInitializer) {
+        this.Rand = Random();
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        //DEBUG:
+        Console.WriteLine(this.State);
+        
+        //run current state
+        if (this.State == RState.Idle) {
+            this.Idle(event.Dt);
+        } else if (this.State == RState.Normal) {
+            this.Normal(event.Dt);
+        } else if (this.State == RState.Rush) {
+            this.Rush(event.Dt);
+        } else if (this.State == RState.AngryRush) {
+            this.AngryRush(event.Dt);
+        } else if (this.State == RState.Dazed) {
+            this.Dazed(event.Dt);
+        }
+        
+    }
+    
+    //*****State Functions*****
+    
+    //pre boss fight, wait until player gets close
+    function Idle (dt : Real) {
+        this.RigidBody.Velocity = Real3(0);
+        
+        //set state to normal
+        this.State = RState.Normal;
+        //set timer for dash cooldown
+        this.Timer = Math.Lerp(this.DashCooldownMin, this.DashCooldownMax, this.Health.Percent) + this.Rand.Range(-this.DashCooldownRand, this.DashCooldownRand);
+    }
+    
+    //follow the player around slowly
+    function Normal (dt : Real) {
+        //go towards player
+        this.PathFollow.SetTarget(GlobalVariables.Player.Transform.WorldTranslation);
+        this.RigidBody.Velocity *= this.MovSpeed;
+        
+        //count down dash timer
+        this.Timer -= dt;
+        
+        //go to dash state
+        if (this.Timer <= 0) {
+            
+            //set to dash if over angry dash health, otherwise set to angry dash
+            if (this.Health.Percent < this.AngryDashHealth) {
+                
+                //set state to angry dash
+                this.State = RState.AngryRush;
+                //set up timer for angry dash
+                this.Timer = this.AngryDashTime;
+                
+            } else {
+                
+                //set state to dash
+                this.State = RState.Rush;
+                
+            }
+            
+            //set up wind-up timer
+            this.WindTimer = Math.Lerp(this.WindUpTimeMin, this.WindUpTimeMax, this.Health.Percent);
+            
+        }
+    }
+    
+    //dash in the direction of the player
+    function Rush (dt : Real) {
+        
+    }
+    
+    //dash turning to the player
+    function AngryRush (dt : Real) {
+        
+    }
+    
+    //sit there dazed, this is the only time when the player can deal damage
+    function Dazed (dt : Real) {
+        
+    }
+    
+}

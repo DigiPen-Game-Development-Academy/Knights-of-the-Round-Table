@@ -1,43 +1,69 @@
 class Health : ZilchComponent {
-    [Property]
-    var InitialHealth : Real = 100;
-    [Property]
-    var Cooldown : Real = 3;
-    [Property]
-    var RegenRate : Real = 0.3333333333333;
+    
+    [Property] var InitialHealth : Real = 100;
+    [Property] var Cooldown : Real = 3;
+    [Property] var RegenRate : Real = 0.3333333333333;
+    
     var DeathMSG : String = "";
     var Timer : Real = 0;
     var CooldownTimer : Real = 0;
     var CurrentHealth : Real = 0;
-    function Initialize(init : CogInitializer) {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.Damage, this.OnDamage);
-        this.CurrentHealth = this.InitialHealth;
-    }
-
-    function OnDamage(event : Damage) {
-        this.CurrentHealth  -= event.Damage;
-        this.DeathMSG = event.DeathMSG;
-        if(this.CurrentHealth <= 0) {
-            var nh = NoHealth();
-            nh.DeathMSG = this.DeathMSG;
-            this.Owner.DispatchEvent(Events.NoHealth, nh);
-        }
-        if(this.CurrentHealth < 0)
-            this.CurrentHealth = 0;
-        this.CooldownTimer = this.Cooldown;
-    }
-
-    function OnLogicUpdate(event : UpdateEvent) {
-        if(this.Timer >= 0 && this.CooldownTimer <= 0)
-            this.Timer -= event.Dt;
-        if(this.CooldownTimer >= 0)
-            this.CooldownTimer -= event.Dt;
-        if(this.Timer <= 0) {
-            this.Timer = (1/this.RegenRate)/2;
-            if(this.CurrentHealth + 1 <= this.InitialHealth)
-                this.CurrentHealth += 0.5;
+    var Locked : Boolean = false;
+    
+    var Percent : Real {
+        get {
+            return this.CurrentHealth / this.InitialHealth;
         }
     }
     
+    function Initialize(init : CogInitializer) {
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.Damage, this.OnDamage);
+        this.CurrentHealth = this.InitialHealth;
+        
+    }
+
+    function OnDamage(event : Damage) {
+        
+        if(!this.Locked) {
+            
+            this.CurrentHealth  -= event.Damage;
+            this.DeathMSG = event.DeathMSG;
+            
+            if (this.CurrentHealth <= 0) {
+                var nh = NoHealth();
+                nh.DeathMSG = this.DeathMSG;
+                this.Owner.DispatchEvent(Events.NoHealth, nh);
+            }
+            
+            if (this.CurrentHealth < 0) {
+                this.CurrentHealth = 0;
+            }
+            
+            this.CooldownTimer = this.Cooldown;
+            
+        }
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if (this.Timer >= 0 && this.CooldownTimer <= 0) {
+            this.Timer -= event.Dt;
+        }
+        
+        if (this.CooldownTimer >= 0) {
+            this.CooldownTimer -= event.Dt;
+        }
+        
+        if (this.Timer <= 0) {
+            
+            this.Timer = (1/this.RegenRate)/2;
+            
+            if (this.CurrentHealth + 1 <= this.InitialHealth) {
+                this.CurrentHealth += 0.5;
+            }
+        }
+    }
 }

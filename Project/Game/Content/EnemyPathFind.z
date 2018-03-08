@@ -12,15 +12,10 @@ class EnemyPathFind : ZilchComponent {
         
         Zero.Connect(this.Owner, Events.PathFound, this.OnPathFound);
         
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
     }
 
     function OnPathFound(event : PathFound) {
         this.Path = event.Path;
-    }
-    
-    function OnLogicUpdate(event : UpdateEvent) {
     }
     
     function Recalculate(target : Real3) {

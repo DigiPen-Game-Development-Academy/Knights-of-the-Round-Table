@@ -11,7 +11,7 @@ class InputManager : ZilchComponent {
     [Property] var UseWeaponKey    : Keys           = Keys.Space;
     [Property] var ToggleSecondary : Keys           = Keys.E;
     [Property] var PauseOrInventory: Keys           = Keys.Escape;
-    [Property] var AltPOrInventory : Keys           = Keys.I;
+    [Property] var AltPOrInventory : Keys           = Keys.Tab;
     [Property] var UseUtility      : Keys           = Keys.F;
     [Property] var OpenConsole     : Keys           = Keys.Tilde;
     
