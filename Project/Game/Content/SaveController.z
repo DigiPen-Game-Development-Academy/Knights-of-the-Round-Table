@@ -39,6 +39,9 @@ class SaveController : ZilchComponent {
     [Serialized]
     var MaxQIndex : Integer = -1;
     
+    [Serialized]
+    var FirstLoad : Boolean = false;
+    
     function Initialize(init : CogInitializer) {
         GlobalVariables.Save = this.Owner;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);

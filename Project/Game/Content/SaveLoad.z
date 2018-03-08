@@ -76,9 +76,13 @@ class SaveLoad : ZilchComponent {
         var save = Zero.ObjectStore.Restore("Save", GlobalVariables.GameSpace);
         if (save == null) {
             save = GlobalVariables.GameSpace.Create(Archetype.Save);
+            save.SaveController.FirstLoad = true;
             Console.WriteLine("No Save File Detected");
             return;
         }
+        
+        save.SaveController.FirstLoad = false;
+        
         //load values into game
         GlobalVariables.Player.Transform.WorldTranslation = save.SaveController.PlayerPos;
         GlobalVariables.Player.Health.CurrentHealth = save.SaveController.PlayerHealth;
