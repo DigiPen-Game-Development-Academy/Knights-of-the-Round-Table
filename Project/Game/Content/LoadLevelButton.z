@@ -20,7 +20,7 @@ class LoadLevelButton : ZilchComponent {
             this.LoadTheLevel();
         }
         
-        Zero.Disconnect(this.Owner, Events.DialogEnded, this.Dialog);
+        
         
     }
     

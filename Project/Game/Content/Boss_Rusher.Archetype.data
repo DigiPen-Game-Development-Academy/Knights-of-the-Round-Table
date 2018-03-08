@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -13.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -60,9 +60,9 @@ Cog =
 	},
 	Health = 
 	{
-		float InitialHealth = 100,
-		float Cooldown = 3,
-		float RegenRate = 0.333333343,
+		float InitialHealth = 1000,
+		float Cooldown = 10,
+		float RegenRate = 0.5,
 	},
 	EnemyPathFind = 
 	{
@@ -74,7 +74,29 @@ Cog =
 	{
 		float MovSpeed = 2,
 		float DashSpeed = 7,
-		float WindUpTime = 1.5,
+		float AngryDashSpeed = 7,
+		float WindUpTimeMax = 1.5,
+		float WindUpTimeMin = 0.5,
+		float DashDistance = 7,
+		float AngryDashTime = 4,
+		float DazeTime = 4,
+		float AngryDashHealth = 0.25,
+		float AngryTurnSpeed = 45,
+		float DashDamage = 50,
+		float PassiveDamage = 50,
+		float DashCooldownMax = 6,
+		float DashCooldownMin = 4,
+		float DashCooldownRand = 0.100000001,
+		float StartRange = 5,
+		string DashDamageMSG = "You where run over by a giant rusher!",
+		string PassiveDamageMSG = "Wait...  did that rusher just sit on you?!?",
+	},
+	BossDrops = 
+	{
+		string Part = "5a6dd29eca18018f:QuestItemPickup",
+		string Note = "THIS IS A NOTE",
+		string Drops = "",
+		float DropRange = 1,
 	},
 	Hierarchy = 
 	{

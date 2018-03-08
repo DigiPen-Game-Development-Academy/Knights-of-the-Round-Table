@@ -24,10 +24,6 @@ class NavNode {
         if(!walkable) this.CloseToWall = false;
     }
     
-    destructor () {
-        delete this.Parent;
-    }
-    
     var FCost : Integer {
         
         get {

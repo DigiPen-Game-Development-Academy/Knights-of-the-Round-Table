@@ -119,7 +119,7 @@ Level =
 		},
 		SaveLoad = 
 		{
-			bool LoadOnStart = false,
+			bool LoadOnStart = true,
 		},
 		DeferredRenderer = 
 		{
@@ -152,7 +152,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-13.1592379, 34.2460136, 63.9999962],
+			Vec3 Translation = [-80.5565033, 45.4788704, 63.9999924],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -172,7 +172,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-13.1592379, 34.2460136, -2.78959783e-06],
+			Vec3 LookTarget = [-80.5565033, 45.4788704, -5.7356242e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
