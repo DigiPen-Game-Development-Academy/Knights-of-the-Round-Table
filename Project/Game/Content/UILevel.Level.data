@@ -118,11 +118,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+			Vec4 Color = [1, 1, 1, 0.999899983],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -309,7 +309,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.129922032, -4.0692215, 50],
+			Vec3 Translation = [-4.00088072, -2.8708303, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -321,7 +321,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.02750492,
+			float Size = 6.64023733,
 		},
 		EditorCameraController = 
 		{
@@ -329,7 +329,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.129922032, -4.0692215, 5.30289128e-07],
+			Vec3 LookTarget = [-4.00088072, -2.8708303, 3.61084432e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -399,11 +399,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.355000019, 0.355000019, 0.355000019, 0.949999988],
+			Vec4 Color = [1, 1, 1, 0.999899983],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -772,11 +772,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -810,7 +810,7 @@ Level =
 				Transform = 
 				{
 					Vec3 Translation = [4.5, -2, 0],
-					Vec3 Scale = [2, 2, 1],
+					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -819,11 +819,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -833,7 +833,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [2.5, 0.5],
+					Vec2 Size = [4.5, 1],
 					Location Origin = Center,
 				},
 				Hierarchy = 
@@ -854,8 +854,8 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-0.9375, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
+							Vec3 Translation = [-1.75, 0, 1],
+							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
 						Sprite = 
@@ -897,8 +897,8 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.9375, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
+							Vec3 Translation = [1.75, 0, 1],
+							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
 						Sprite = 
@@ -940,8 +940,8 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.5625, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
+							Vec3 Translation = [1.0625, 0, 1],
+							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
 						Sprite = 
@@ -983,8 +983,8 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.1875, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
+							Vec3 Translation = [0.375, 0, 1],
+							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
 						Sprite = 
@@ -1026,8 +1026,8 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-0.1875, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
+							Vec3 Translation = [-0.375, 0, 1],
+							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
 						Sprite = 
@@ -1069,8 +1069,8 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-0.5625, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
+							Vec3 Translation = [-1.0625, 0, 1],
+							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
 						Sprite = 
@@ -1929,11 +1929,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2080,6 +2080,7 @@ Level =
 					Vec4 HoverColor = [0, 0, 0, 0.999899983],
 					Vec4 ClickColor = [0, 0, 0, 0.350000024],
 					float ScaleSpeed = 5,
+					bool Alpha = false,
 				},
 				Area = 
 				{
@@ -2141,6 +2142,7 @@ Level =
 					Vec4 HoverColor = [0, 0, 0, 0.999899983],
 					Vec4 ClickColor = [0, 0, 0, 0.350000024],
 					float ScaleSpeed = 5,
+					bool Alpha = false,
 				},
 				Area = 
 				{
@@ -2198,6 +2200,7 @@ Level =
 					Vec4 HoverColor = [0, 0, 0, 0.999899983],
 					Vec4 ClickColor = [0, 0, 0, 0.350000024],
 					float ScaleSpeed = 5,
+					bool Alpha = false,
 				},
 				Area = 
 				{
@@ -2221,7 +2224,7 @@ Level =
 				Transform = 
 				{
 					Vec3 Translation = [0, -0.991291046, -1],
-					Vec3 Scale = [3.02577353, 3.98258138, 1],
+					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -2230,11 +2233,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2244,6 +2247,11 @@ Level =
 				},
 				MenuVisibilitySprite = 
 				{
+				},
+				Area = 
+				{
+					Vec2 Size = [3.02576995, 3.98257995],
+					Location Origin = Center,
 				},
 			},
 		},
@@ -2387,11 +2395,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.394999981, 0.394999981, 0.394999981, 0.334999979],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,

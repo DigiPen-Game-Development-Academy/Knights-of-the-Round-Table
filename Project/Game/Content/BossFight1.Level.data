@@ -143,7 +143,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.719509184, 0.970365584, 50],
+			Vec3 Translation = [-0.618092775, -15.7378559, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -155,7 +155,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299339,
+			float Size = 3.68832994,
 		},
 		EditorCameraController = 
 		{
@@ -163,7 +163,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.719509184, 0.970365584, -3.31151739e-07],
+			Vec3 LookTarget = [-0.618092775, -15.7378559, -3.89620283e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -309,14 +309,14 @@ Level =
 		},
 		PlayerSprites = 
 		{
-			string North = "5a6d247539981dd2:Pat Walk N Anim",
-			string NorthEast = "5a6d249a48605e1f:Pat Walk NE Anim",
-			string East = "5a6d24143c97bf0c:Pat Walk E Anim",
-			string SouthEast = "5a6d24e3423ddd76:Pat Walk SE Anim",
-			string South = "5afd92272f3d7f10:Pat Walk South",
-			string SouthWest = "5a6d26098c352d3f:Pat walk SW Anim",
-			string West = "5a6d2454350b07e9:Pat Walk W Anim",
-			string NorthWest = "5a6d248c47a04450:Pat Walk NW Anim",
+			string North = "5a5341ec590a3054:Pat Walk NAnim",
+			string NorthEast = "5a5340356d6e6b67:Pat Walk NEAnim",
+			string East = "5a5341d75d67251c:Pat Walk EAnim",
+			string SouthEast = "5a53406972aa13ca:Pat Walk SEAnim",
+			string South = "5a534002641c43be:Pat Walk SAnim",
+			string SouthWest = "5a53407e70ea7606:Pat walk SWAnim",
+			string West = "5a53401860e6d328:Pat Walk WAnim",
+			string NorthWest = "5a53404069aea011:Pat Walk NWAnim",
 			float AnimSpeed = 0.5,
 		},
 		Hierarchy = 
