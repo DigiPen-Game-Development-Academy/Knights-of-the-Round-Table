@@ -275,8 +275,7 @@ class InventorySlot : ZilchComponent
         
     }
 
-    function OnLogicUpdate(event : UpdateEvent)
-    {
+    function OnLogicUpdate(event : UpdateEvent) {
         
         this.Owner.Transform.Translation = Real3(this.Owner.Transform.Translation.X, this.Owner.Transform.Translation.Y, 0.1);
         

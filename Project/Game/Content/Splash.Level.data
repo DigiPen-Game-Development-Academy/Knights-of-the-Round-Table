@@ -106,6 +106,13 @@ Level =
 			Enum UseUtility = F,
 			Enum OpenConsole = Tilde,
 		},
+		CreateUI = 
+		{
+			string UILevel = "",
+			string DialogLevel = "",
+			string MouseLevel = "",
+			string MusicLevel = "5adae3eaef33a047:MusicLevel",
+		},
 	},
 	Cog = 
 	{
@@ -119,7 +126,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.679155707, 0.457368016, 50],
+			Vec3 Translation = [0.30618453, -0.501700819, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -139,7 +146,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.679155707, 0.457368016, 2.9686932e-08],
+			Vec3 LookTarget = [0.30618453, -0.501700819, 1.33838416e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 

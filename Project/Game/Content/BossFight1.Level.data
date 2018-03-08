@@ -123,6 +123,7 @@ Level =
 			string UILevel = "5a1c3268256273d9:UILevel",
 			string DialogLevel = "5a7cf996660d2f54:MenuDialogUI",
 			string MouseLevel = "5a7c13ecda359492:MouseUI",
+			string MusicLevel = "5adae3eaef33a047:MusicLevel",
 		},
 		TimeTimer = 
 		{

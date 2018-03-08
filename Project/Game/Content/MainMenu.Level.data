@@ -96,6 +96,7 @@ Level =
 			string UILevel = "",
 			string DialogLevel = "5a7cf996660d2f54:MenuDialogUI",
 			string MouseLevel = "5a7c13ecda359492:MouseUI",
+			string MusicLevel = "5adae3eaef33a047:MusicLevel",
 		},
 		InputManager = 
 		{
@@ -125,7 +126,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.672312021, -0.0718250871, 50],
+			Vec3 Translation = [-0.768237233, -1.17496455, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -145,7 +146,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.672312021, -0.0718250871, -2.93876283e-08],
+			Vec3 LookTarget = [-0.768237233, -1.17496455, -3.35806547e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -234,6 +235,7 @@ Level =
 					Vec4 HoverColor = [1, 1, 1, 0.999899983],
 					Vec4 ClickColor = [0.25, 0.25, 0.25, 0.999899983],
 					float ScaleSpeed = 5,
+					bool Alpha = false,
 				},
 				Area = 
 				{
@@ -302,6 +304,7 @@ Level =
 					Vec4 HoverColor = [1, 1, 1, 0.999899983],
 					Vec4 ClickColor = [0.25, 0.25, 0.25, 0.999899983],
 					float ScaleSpeed = 5,
+					bool Alpha = false,
 				},
 				Area = 
 				{
@@ -374,6 +377,7 @@ Level =
 					Vec4 HoverColor = [1, 1, 1, 0.999899983],
 					Vec4 ClickColor = [0.25, 0.25, 0.25, 0.999899983],
 					float ScaleSpeed = 5,
+					bool Alpha = false,
 				},
 				Area = 
 				{
