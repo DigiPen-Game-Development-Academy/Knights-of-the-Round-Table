@@ -18,8 +18,11 @@ class TriggerObjective : ZilchComponent {
 class Objective {
     
     [Static] var Quests : Array[String] = Array[String] () {
-        "TEST",
-        "TEST2"
+        "Explore the wrackage of yur ship",
+        "This is a save point, save your progress or die",
+        "This is a chest, collect valuable loots here",
+        "This is a enemy, sneak up and R.K.O. him from beind",
+        "unlike the other enemy this enemy is real, good luck foof"
     };
     
 }

@@ -28,7 +28,8 @@ class Utilities
     var EnemiesIDS : Array[EnemyID] = Array[EnemyID](){
         EnemyID(Archetype.Enemy_Rusher),
         EnemyID(Archetype.Enemy_GI_Pistol),
-        EnemyID(Archetype.Boss_Rusher)
+        EnemyID(Archetype.Boss_Rusher),
+        EnemyID(Archetype.Enemy_Rusher_Tutorial)
     };
     
     /*Item Auto-Compete Array*/
@@ -314,6 +315,9 @@ class Utilities
             GlobalVariables.QuestSprite.Set(Objective.Quests[index]);
             Utilities.MaxIndex = index;
             GlobalVariables.Save.SaveController.Quest = Objective.Quests[index];
+            
+            Utilities.Dialog(Objective.Quests[index], DialogTypes.OK, 15);
+            
         }
     }
     

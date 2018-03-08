@@ -10,6 +10,8 @@ class AutoChest : ZilchComponent {
     
     var Set : Boolean = false;
     
+    var Once : Boolean = false;
+    
     function Initialize(init : CogInitializer) {
         if(GlobalVariables.Chests == null)
             GlobalVariables.Chests = Array[Cog]();
@@ -35,8 +37,52 @@ class AutoChest : ZilchComponent {
         if(event.Button == MouseButtons.Left)
             return;
         
+        GlobalVariables.ChestItems = this.Items;
+        GlobalVariables.Inv.Transform.WorldTranslation = Real3(GlobalVariables.Inv.Transform.WorldTranslation.X, GlobalVariables.Inv.Transform.WorldTranslation.Y, GlobalVariables.Inv.InventoryManager.InitalZ);
+        GlobalVariables.CInv.ChestInventory.Vis = true;
+        GlobalVariables.PauseMenu.MenuVisibilityController.Vis = true;
+        this.Space.TimeSpace.Paused = true;
+        
+    }
+
+    function OnMouseExit(event : ViewportMouseEvent) {
+        
+        this.Owner.Sprite.CurrentFrame = 0;
+        this.Owner.Sprite.StartFrame = 0;
+        this.Owner.Sprite.SpriteSource = SpriteSource.ChestSpriteRev;
+        
+        GlobalVariables.LorePanel.Sprite.Visible = false;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        
+        var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation-this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 3);
+        
+        if(res == null || res.ObjectHit != GlobalVariables.Player) {
+            return;
+        }
+        
+        this.Owner.Sprite.CurrentFrame = 0;
+        this.Owner.Sprite.StartFrame = 0;
+        this.Owner.Sprite.SpriteSource = SpriteSource.ChestSprite;
+        
+        GlobalVariables.LorePanel.Sprite.Visible = true;
+        GlobalVariables.LorePanel.LorePanel.Text = "This is a chest\nRight click to open";
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(!this.Once) {
+            this.Once = true;
+            this.GenLoot();
+        }
+        
+    }
+    
+    function GenLoot () {
         /*Generate Loot*/
         if((this.Items == null || this.Items.Count == 0) && this.Owner.SetChest == null && !this.Set) {
+            
             this.Items = Array[Item]();
             this.Items.Resize(GlobalVariables.ChestItems.Count);
             var table = this.LootTable;
@@ -48,7 +94,9 @@ class AutoChest : ZilchComponent {
                     n.Init();
                 this.Items[i] = n;
             }
+            
         } else if((this.Items == null || this.Items.Count == 0) && this.Owner.SetChest != null && !this.Set) {
+            
             var n : Item = null;
             this.Items = Array[Item]();
             this.Items.Resize(GlobalVariables.ChestItems.Count);
@@ -81,41 +129,5 @@ class AutoChest : ZilchComponent {
                 this.Items[i].Init();
             }
         }
-        GlobalVariables.ChestItems = this.Items;
-        GlobalVariables.Inv.Transform.WorldTranslation = Real3(GlobalVariables.Inv.Transform.WorldTranslation.X, GlobalVariables.Inv.Transform.WorldTranslation.Y, GlobalVariables.Inv.InventoryManager.InitalZ);
-        GlobalVariables.CInv.ChestInventory.Vis = true;
-        GlobalVariables.PauseMenu.MenuVisibilityController.Vis = true;
-        this.Space.TimeSpace.Paused = true;
-    }
-
-    function OnMouseExit(event : ViewportMouseEvent) {
-        
-        this.Owner.Sprite.CurrentFrame = 0;
-        this.Owner.Sprite.StartFrame = 0;
-        this.Owner.Sprite.SpriteSource = SpriteSource.ChestSpriteRev;
-        
-        GlobalVariables.LorePanel.Sprite.Visible = false;
-    }
-
-    function OnMouseEnter(event : ViewportMouseEvent) {
-        
-        var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation-this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 3);
-        
-        if(res == null || res.ObjectHit != GlobalVariables.Player) {
-            return;
-        }
-        
-        this.Owner.Sprite.CurrentFrame = 0;
-        this.Owner.Sprite.StartFrame = 0;
-        this.Owner.Sprite.SpriteSource = SpriteSource.ChestSprite;
-        
-        GlobalVariables.LorePanel.Sprite.Visible = true;
-        GlobalVariables.LorePanel.LorePanel.Text = "This is a chest\nRight click to open";
-    }
-
-    function OnLogicUpdate(event : UpdateEvent) {
-        
-        
-        
     }
 }
