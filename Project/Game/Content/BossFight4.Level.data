@@ -67,15 +67,6 @@ Level =
 			Vec2 Resolution = [1280, 720],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
-		ForwardRenderer = 
-		{
-			Vec4 ClearColor = [0, 0, 0, 1],
-			bool DrawNonVisible = false,
-			bool DrawDebugObjects = true,
-			bool DrawEditorIcons = true,
-			bool EditorIconDepth = true,
-			bool Wireframe = false,
-		},
 		GridDraw = 
 		{
 			bool Active = true,
@@ -137,6 +128,24 @@ Level =
 			float FadeSped = 1,
 			string Music = "5a518fc0d995d168:Boss",
 		},
+		DeferredRenderer = 
+		{
+			Vec4 ClearColor = [0, 0, 0, 1],
+			bool DrawNonVisible = false,
+			bool DrawDebugObjects = false,
+			bool DrawEditorIcons = false,
+			bool EditorIconDepth = false,
+			bool Hdr = false,
+			bool Shadows = false,
+			bool AntiAliasing = false,
+			bool Refraction = true,
+			bool Reflections = false,
+			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
+			bool GodRays = false,
+			bool RenderMasks = true,
+			bool Glow = false,
+			float GlowThreshold = 1,
+		},
 	},
 	Cog = 
 	{
@@ -150,7 +159,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.33378613, -11.7547331, 50],
+			Vec3 Translation = [4.24653387, -0.154094219, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -162,7 +171,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 27.2532349,
+			float Size = 81.8730927,
 		},
 		EditorCameraController = 
 		{
@@ -170,7 +179,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.33378613, -11.7547331, -2.60606157e-07],
+			Vec3 LookTarget = [4.24653387, -0.154094219, -1.33285283e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -194,7 +203,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, -0.5],
+			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -211,7 +220,7 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "5a525a34f95422a1:BossFight2_TileMap00",
+			string SourceName = "5a5162887fc3658e:BossFight4_TileMap00",
 			string PaletteName = "5a11b7b61863cdae:Floor",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
@@ -443,24 +452,180 @@ Level =
 					Location Origin = Center,
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 8,
+				},
+				Named = 
+				{
+					string Name = "LightMask",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 1],
+					Vec3 Scale = [2, 2, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a516e5f19d483c9:LightMask",
+					bool RenderMask = true,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				LightMask = 
+				{
+				},
+			},
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a525a3807624072:Boss_GI",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
+		},
+		Named = 
+		{
+			string Name = "Boss_Stealth",
+		},
+		Archetyped = 
+		{
+			string Name = "5a5168e28abe7f8d:Boss_Stealth",
 		},
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [2, 2, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		SphereCollider = 
 		{
-			string Name = "Boss_GI",
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5a08c96d04f0597c:Enemy",
+			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.5,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Health = 
+		{
+			float InitialHealth = 1000,
+			float Cooldown = 10,
+			float RegenRate = 0.5,
+		},
+		BossDrops = 
+		{
+			string Part = "5a6dd29eca18018f:QuestItemPickup",
+			string Note = "THIS IS A NOTE",
+			string Drops = "",
+			float DropRange = 1,
+			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
+		},
+		EnemyPathFind = 
+		{
+		},
+		BasicPathFollowAI = 
+		{
+		},
+		EnemyAI = 
+		{
+			float InstantSpotRadius = 2,
+			float MaxDistFromGuard = 100,
+			float WaitTime = 1,
+			float Range = 3,
+			float ViewAngle = 360,
+			float ViewRange = 6,
+			float ChaseSpeedMultiplier = 2,
+			float GuardWaitTime = 5,
+			float SearchTimer = 20,
+			float MaxTimeOutOfSight = 1,
+			float SearchRange = 10,
+			float ViewDist = 10,
+		},
+		MenuVisibilityController = 
+		{
+		},
+		Visibility = 
+		{
+		},
+		Stealth = 
+		{
+			float SneakRange = 50,
+		},
+		StealthBoss = 
+		{
+			float SneakCooldown = 5,
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "5a7c1968c9af3d26:Healthbar",
+				LinkId = 
+				{
+					uint Id = 10,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.625, 1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Area = 
+				{
+					Vec2 Size = [1, 0.100000001],
+					Location Origin = Center,
+				},
+				Named = 
+				{
+					string Name = "Healthbar",
+				},
+			},
 		},
 	},
 },

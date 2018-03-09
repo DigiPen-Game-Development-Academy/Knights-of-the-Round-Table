@@ -46,5 +46,9 @@ class BossDrops : ZilchComponent {
         
         Utilities.Dialog("You found a note!  It reads:\n`this.Note`", DialogTypes.OK, 10);
         
+        if (this.LevelSettings.DeferredRenderer != null) {
+            this.LevelSettings.DeferredRenderer.RenderMasks = false;
+        }
+        
     }
 }

@@ -57,7 +57,8 @@ class Utilities
         ItemID("Potato_cannon"),
         ItemID("Laser_Beam"),
         ItemID("Stun_m"),
-        ItemID("Missile")
+        ItemID("Missile"),
+        ItemID("Light")
     };
     
     [Static]
@@ -101,7 +102,7 @@ class Utilities
         ray.Start = start;
         ray.Direction = direction;
         var result = physSpace.CastRayFirst(ray);
-        if(result.Distance > range){
+        if(range != -1 && result.Distance > range){
             if(GlobalVariables.DebugLinesActive) Utilities.DrawdebugLine(start, start + (range * Math.Normalize(direction)), Real4(0, 0, 1, 1));
             return null;
         }
@@ -119,7 +120,7 @@ class Utilities
         ray.Start = start;
         ray.Direction = direction;
         var result = physSpace.CastRayFirstFiltered(ray, filter);
-        if(result.Distance > range){
+        if(range != -1 && result.Distance > range){
             if(GlobalVariables.DebugLinesActive) Utilities.DrawdebugLine(start, start + (range * Math.Normalize(direction)), Real4(0, 0, 1, 1));
             return null;
         }
@@ -234,6 +235,8 @@ class Utilities
             return StunMissile();
         else if(id == "Missile")
             return Missile();
+        else if(id == "Light")
+            return Flashlight();
         else
             return null;
         

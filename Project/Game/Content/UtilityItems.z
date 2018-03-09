@@ -125,3 +125,35 @@ class Silencer : Item {
     function Use (radAngle : Real) {}
     
 }
+
+class Flashlight : Item {
+    
+    function Init() {
+        this.Name = "Light";
+        this.ID = "Light";
+        this.Type = ItemType.Utility;
+        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.MagSize = -1;
+        this.FireRate = -1;
+        this.Stackable = false;
+    }
+    
+    function ReturnLore() : String {
+        var lore = Array[String]();
+        lore.Add("You should keep this, it may come in handy!");
+        lore.Add("You should keep this, it may come in handy!");
+        lore.Add("You should keep this, it may come in handy!");
+        lore.Add("You should keep this, it may come in handy!");
+        lore.Add("You should keep this, it may come in handy!");
+        lore.Add("You should keep this, it may come in handy!");
+        lore.Add("For all your room lighting needs");
+        lore.Add("With our new and patented design, this flashlight will never run out of battery!\nAnd it will shine through walls!");
+        lore.Add("It's a flashlight!");
+        var rand = Random();
+        return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
+    }
+    
+    function Use (radAngle : Real) {}
+    
+}
