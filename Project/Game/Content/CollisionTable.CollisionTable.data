@@ -4,6 +4,7 @@ CollisionTable =
 	[
 		"4e740859314e5515:DefaultGroup",
 		"5a11bc4854a4df8c:NotEnemies",
+		"5a52410dd5b6e6ae:Bullet",
 		"5a11bfba4f162cf2:Enemies",
 	],
 	Array CollisionFilters = 
@@ -30,6 +31,26 @@ CollisionTable =
 		},
 		{
 			string TypeA = "5a11bfba4f162cf2:Enemies",
+			string TypeB = "5a11bfba4f162cf2:Enemies",
+			bool SkipResolution = false,
+			bool SkipDetectingCollision = true,
+			bool StartEvent = false,
+			bool EndEvent = false,
+			bool PersistedEvent = false,
+			bool PreSolveEvent = false,
+		},
+		{
+			string TypeA = "5a52410dd5b6e6ae:Bullet",
+			string TypeB = "5a52410dd5b6e6ae:Bullet",
+			bool SkipResolution = false,
+			bool SkipDetectingCollision = true,
+			bool StartEvent = false,
+			bool EndEvent = false,
+			bool PersistedEvent = false,
+			bool PreSolveEvent = false,
+		},
+		{
+			string TypeA = "5a52410dd5b6e6ae:Bullet",
 			string TypeB = "5a11bfba4f162cf2:Enemies",
 			bool SkipResolution = false,
 			bool SkipDetectingCollision = true,

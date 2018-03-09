@@ -1,13 +1,5 @@
 //Author Brandon Wolenetz
 
-/*TODO:
-    
-    1. finnish this script
-    
-    2. maybe change min/max over health to sample curves
-    
-*/
-
 enum RState {
     Idle,
     Normal,
@@ -32,7 +24,6 @@ class Boss_Rusher_AI : ZilchComponent {
     [Property] var DashSpeed : Real = 7;
     //how fast to angry dash
     [Property] var AngryDashSpeed : Real = 7;
-    
     //wind up time before dash at full health
     [Property] var WindUpTimeMax : Real = 1.5;
     //wind up time before dash at no health
@@ -79,6 +70,12 @@ class Boss_Rusher_AI : ZilchComponent {
     var DashDir : Real3 = Real3(0);
     
     function Initialize(init : CogInitializer) {
+        
+        //set collision table so enemies do not collide
+        if(this.Space.PhysicsSpace.CollisionTable != CollisionTable.CollisionTable) {
+            this.Space.PhysicsSpace.CollisionTable = CollisionTable.CollisionTable;
+        }
+        
         this.Rand = Random();
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
