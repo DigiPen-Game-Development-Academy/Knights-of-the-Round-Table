@@ -25,10 +25,14 @@ class MusicUtils {
     [Static]
     function PlayFade (music : SoundCue, fadeSpeed : Real) {
         
-        MusicUtils.MusicController.Music = music;
-        MusicUtils.MusicController.Timer = 0;
-        MusicUtils.MusicController.Fading = true;
-        MusicUtils.MusicController.Speed = fadeSpeed;
+        if(MusicUtils.Music != music) {
+            MusicUtils.Music = music;
+            MusicUtils.MusicController.Music = music;
+            MusicUtils.MusicController.Timer = 0;
+            MusicUtils.MusicController.Fading = true;
+            MusicUtils.MusicController.Speed = fadeSpeed;
+            MusicUtils.MusicController.Faded = false;
+        }
         
     }
     
@@ -44,6 +48,8 @@ class MusicController : ZilchComponent {
     var Fading : Boolean = false;
     //speed to fade
     var Speed : Real = 0;
+    //done fading down
+    var Faded : Boolean = false;
     
     function Initialize(init : CogInitializer) {
         
@@ -55,6 +61,7 @@ class MusicController : ZilchComponent {
         
         //dont fade if not fading
         if (!this.Fading) {
+            MusicUtils.MusicSoundSpace.Volume = Settings.MUSICvol * Settings.MASTERvol;
             return;
         }
         
@@ -62,7 +69,7 @@ class MusicController : ZilchComponent {
         
         var vol = Settings.MUSICvol * Settings.MASTERvol;
         
-        if (MusicUtils.Music != this.Music) {
+        if (!this.Faded) {
             //fade volume to 0%
             MusicUtils.MusicSoundSpace.Volume = Math.Lerp(vol, 0, this.Timer);
             
@@ -72,6 +79,7 @@ class MusicController : ZilchComponent {
             
             //done fading
             if (MusicUtils.MusicSoundSpace.Volume >= Settings.MUSICvol * Settings.MASTERvol) {
+                MusicUtils.MusicSoundSpace.Volume = Settings.MUSICvol * Settings.MASTERvol;
                 this.Fading = false;
             }
             
@@ -81,7 +89,7 @@ class MusicController : ZilchComponent {
             //set music to new track and start fading up
             MusicUtils.MusicSoundSpace.StopAllSounds();
             MusicUtils.MusicSoundSpace.PlayCue(this.Music);
-            MusicUtils.Music = this.Music;
+            this.Faded = true;
             this.Timer = 0;
             
         }

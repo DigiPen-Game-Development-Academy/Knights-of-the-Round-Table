@@ -200,6 +200,11 @@ class EnemyAI : ZilchComponent {
     
     //chase player
     function Spotted (dt : Real) {
+        
+        if (this.LevelSettings.BattleMusic != null) {
+            this.LevelSettings.BattleMusic.Spotted = true;
+        }
+        
         if(Math.Distance(this.Owner.Transform.WorldTranslation, this.GuardPos) > this.MaxDistFromGuard) {
             this.State = State.Idle;
             this.Owner.EnemyPathFind.Path = null;

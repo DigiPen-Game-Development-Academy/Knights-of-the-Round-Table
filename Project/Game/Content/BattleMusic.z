@@ -1,0 +1,34 @@
+class BattleMusic : ZilchComponent {
+    
+    var Spotted : Boolean = false;
+    var Timer : Real = 0;
+    
+    [Property] var Music : SoundCue;
+    [Property] var FadeSpeed : Real = 1;
+    [Property] var Coldown : Real = 2.25;
+    
+    function Initialize(init : CogInitializer) {
+        this.Timer = this.Coldown;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        
+        if (this.Spotted) {
+            MusicUtils.PlayFade(this.Music, this.FadeSpeed);
+            this.Timer = this.Coldown;
+        } else {
+            
+            this.Timer -= event.Dt;
+            
+            if (this.Timer <= 0) {
+                MusicUtils.PlayFade(this.LevelSettings.MusicOnLevelStart.Music, this.FadeSpeed);
+            }
+            
+        }
+        
+        this.Spotted = false;
+        
+    }
+}

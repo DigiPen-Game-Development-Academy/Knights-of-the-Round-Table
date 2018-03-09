@@ -61,10 +61,10 @@ RichAnimation =
 										Array KeyFrames = 
 										[
 											{
-												float key = 0,
+												float key = 0.166666672,
 												Object value = 
 												{
-													float Time = 0,
+													float Time = 0.166666672,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -119,10 +119,10 @@ RichAnimation =
 										Array KeyFrames = 
 										[
 											{
-												float key = 0,
+												float key = 0.166666672,
 												Object value = 
 												{
-													float Time = 0,
+													float Time = 0.166666672,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -177,10 +177,10 @@ RichAnimation =
 										Array KeyFrames = 
 										[
 											{
-												float key = 0,
+												float key = 0.166666672,
 												Object value = 
 												{
-													float Time = 0,
+													float Time = 0.166666672,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -235,10 +235,10 @@ RichAnimation =
 										Array KeyFrames = 
 										[
 											{
-												float key = 0,
+												float key = 0.166666672,
 												Object value = 
 												{
-													float Time = 0,
+													float Time = 0.166666672,
 													float Value = 0,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],

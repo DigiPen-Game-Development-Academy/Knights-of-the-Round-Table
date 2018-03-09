@@ -131,6 +131,12 @@ Level =
 		FindPath = 
 		{
 		},
+		MusicOnLevelStart = 
+		{
+			bool Fade = true,
+			float FadeSpeed = 2.5,
+			string Music = "5a518fc0d995d168:Boss",
+		},
 	},
 	Cog = 
 	{
@@ -144,7 +150,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.61771727, -0.27717486, 50],
+			Vec3 Translation = [-0.524861991, -0.155746475, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -164,7 +170,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.61771727, -0.27717486, -3.89620283e-07],
+			Vec3 LookTarget = [-0.524861991, -0.155746475, -3.4185004e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 

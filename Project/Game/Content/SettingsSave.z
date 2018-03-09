@@ -21,7 +21,6 @@ class SettingsSave : ZilchComponent {
         if(GlobalVariables.SFXSpace != null) {
             GlobalVariables.SFXSpace.SoundSpace.Volume = Settings.SFXvol * Settings.MASTERvol;
         }
-        MusicUtils.MusicSoundSpace.Volume = Settings.MUSICvol * Settings.MASTERvol;
         
     }
     

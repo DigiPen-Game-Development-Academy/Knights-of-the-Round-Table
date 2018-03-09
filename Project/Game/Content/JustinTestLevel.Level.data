@@ -143,6 +143,18 @@ Level =
 		DialogOnLevelStart = 
 		{
 		},
+		MusicOnLevelStart = 
+		{
+			bool Fade = true,
+			float FadeSped = 1,
+			string Music = "5a518f65cac35b18:Nuetral",
+		},
+		BattleMusic = 
+		{
+			string Music = "5a518f87d49d5db0:Spotted",
+			float FadeSpeed = 1,
+			float Cooldown = 1,
+		},
 	},
 	Cog = 
 	{
@@ -156,7 +168,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-78.2373886, 45.8527985, 63.0999985],
+			Vec3 Translation = [-38.4825859, 45.8024445, 63.1000023],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -168,7 +180,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 7.42738199,
+			float Size = 90.483757,
 		},
 		EditorCameraController = 
 		{
@@ -176,7 +188,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-78.2373886, 45.8527985, -0.899999976],
+			Vec3 LookTarget = [-38.4825859, 45.8024445, -0.899998188],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1689,6 +1701,41 @@ Level =
 		},
 		Transform = 
 		{
+			Vec3 Translation = [0, 0, -40],
+			Vec3 Scale = [1000000, 1000000, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5af8a891e2b329ad:TileMapPrime2045",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 58,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
 			Vec3 Translation = [-35.6273308, -22.3622017, 4.57062697e-06],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -1717,7 +1764,7 @@ Level =
 		string Name = "5a019e04c7cf6461:Player",
 		LinkId = 
 		{
-			uint Id = 58,
+			uint Id = 59,
 		},
 		Transform = 
 		{
@@ -1734,7 +1781,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 60,
 		},
 		Named = 
 		{
@@ -1787,7 +1834,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 60,
+			uint Id = 61,
 		},
 		Named = 
 		{
@@ -1840,7 +1887,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 62,
 		},
 		Named = 
 		{
@@ -1893,7 +1940,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 62,
+			uint Id = 63,
 		},
 		Named = 
 		{
@@ -1946,7 +1993,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 63,
+			uint Id = 64,
 		},
 		Named = 
 		{
@@ -1999,7 +2046,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 64,
+			uint Id = 65,
 		},
 		Named = 
 		{
@@ -2052,7 +2099,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 65,
+			uint Id = 66,
 		},
 		Named = 
 		{
@@ -2105,7 +2152,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 66,
+			uint Id = 67,
 		},
 		Named = 
 		{

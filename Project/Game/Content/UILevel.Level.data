@@ -309,7 +309,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.04153872, 0.665410876, 50],
+			Vec3 Translation = [3.3378377, 0.695569456, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -321,7 +321,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90606594,
+			float Size = 7.33859539,
 		},
 		EditorCameraController = 
 		{
@@ -329,7 +329,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.04153872, 0.665410876, 7.12629685e-07],
+			Vec3 LookTarget = [3.3378377, 0.695569456, 6.81869949e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2076,7 +2076,7 @@ Level =
 				},
 				Button = 
 				{
-					float ScaleM = 0,
+					float ScaleM = 1,
 					Vec4 HoverColor = [0, 0, 0, 0.999899983],
 					Vec4 ClickColor = [0, 0, 0, 0.350000024],
 					float ScaleSpeed = 5,
@@ -2138,7 +2138,7 @@ Level =
 				},
 				Button = 
 				{
-					float ScaleM = 0,
+					float ScaleM = 1,
 					Vec4 HoverColor = [0, 0, 0, 0.999899983],
 					Vec4 ClickColor = [0, 0, 0, 0.350000024],
 					float ScaleSpeed = 5,
@@ -2196,7 +2196,7 @@ Level =
 				},
 				Button = 
 				{
-					float ScaleM = 0,
+					float ScaleM = 1,
 					Vec4 HoverColor = [0, 0, 0, 0.999899983],
 					Vec4 ClickColor = [0, 0, 0, 0.350000024],
 					float ScaleSpeed = 5,

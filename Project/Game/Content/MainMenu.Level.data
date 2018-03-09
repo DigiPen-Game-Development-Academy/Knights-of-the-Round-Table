@@ -113,6 +113,12 @@ Level =
 			Enum UseUtility = F,
 			Enum OpenConsole = Tilde,
 		},
+		MusicOnLevelStart = 
+		{
+			bool Fade = true,
+			float FadeSpeed = 2.5,
+			string Music = "5a518f27c53e5953:MenuMusic",
+		},
 	},
 	Cog = 
 	{

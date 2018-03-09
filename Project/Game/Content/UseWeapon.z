@@ -113,7 +113,7 @@ class UseWeapon : ZilchComponent
         
         this.AmmoCount = this.GetAmmoCount();
         
-        if(this.Primary.CurrentMag == 0 && !this.Primary.Reloading && this.AmmoCount != 0 && this.Secondary.MagSize != -1){
+        if(this.Primary.CurrentMag == 0 && !this.Primary.Reloading && this.AmmoCount != 0 && this.Primary.MagSize != -1){
             this.Primary.Reloading = true;
             this.Primary.Timer = this.Primary.RelodTime;
         } else if(this.Primary.CurrentMag == 0 && this.Primary.Timer <= 0){
@@ -173,7 +173,7 @@ class UseWeapon : ZilchComponent
                 this.Primary.Use(angle);
                 this.Sprite.LockDir(vec, this.AnimLockTime);
             } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && (this.Secondary.CurrentMag > 0  || this.Secondary.MagSize == -1) && this.Up) {
-                if(!this.Primary.Auto)
+                if(!this.Secondary.Auto)
                     this.Up = false;
                 if(this.Secondary.Auto)
                     this.Secondary.Timer = 1 / this.Secondary.FireRate;
