@@ -10,7 +10,9 @@ class TriggerObjective : ZilchComponent {
 
     function OnCollisionStarted(event : CollisionEvent) {
         
-        Utilities.SetQuest(this.ObjectiveIndex);
+        if (event.OtherObject == GlobalVariables.Player) {
+            Utilities.SetQuest(this.ObjectiveIndex);
+        }
         
     }
 }

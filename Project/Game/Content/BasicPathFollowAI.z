@@ -57,11 +57,6 @@ class BasicPathFollowAI : ZilchComponent {
         } else {
             var tDir = this.Owner.EnemyPathFind.Path[0].WorldPos - this.Owner.Transform.WorldTranslation;
             
-            if(this.Instaturn) {
-                this.Owner.RigidBody.Velocity = Math.Normalize(tDir);
-                return;
-            }
-            
             var tAngle = Math.ATan2(tDir.Y, tDir.X);
             var a = Math.ATan2(Math.Sin(tAngle-angle), Math.Cos(tAngle-angle));
             if(Math.ToDegrees(a) > 180)
@@ -75,6 +70,10 @@ class BasicPathFollowAI : ZilchComponent {
                 angle += tSpeed*event.Dt;
             } else {
                 angle += -tSpeed*event.Dt;
+            }
+            
+            if(this.Instaturn) {
+                angle = tAngle;
             }
             
             if(Math.Abs(a) > Math.ToRadians(20)) {

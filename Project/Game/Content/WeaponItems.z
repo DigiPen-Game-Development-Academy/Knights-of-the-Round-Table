@@ -33,7 +33,7 @@ class Potato : Item {
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             if(res.ObjectHit.Health != null) {
-                GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
+                GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance);
                 if(res.ObjectHit.EnemyAI != null && (
                         (res.ObjectHit.EnemyAI.State == State.Spotted && res.ObjectHit.EnemyAI.Timer > 0) || 
                         (res.ObjectHit.EnemyAI.State != State.Suspitious && res.ObjectHit.EnemyAI.State != State.Spotted) || 
@@ -190,7 +190,7 @@ class PlasmaSword : Item {
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             if(res.ObjectHit.Health != null) {
-                GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance - 0.75);
+                GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance);
                 if(res.ObjectHit.EnemyAI != null && res.ObjectHit.EnemyAI.State != State.Suspitious && res.ObjectHit.EnemyAI.State != State.Spotted) {
                     Utilities.SendSoundWeapon(5, res.ObjectHit.Transform.WorldTranslation);
                     res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());

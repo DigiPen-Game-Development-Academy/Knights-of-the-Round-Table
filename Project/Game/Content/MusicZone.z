@@ -9,12 +9,14 @@ class MusicZone : ZilchComponent {
 
     function OnCollisionPersisted(event : CollisionEvent) {
         
-        if (this.LevelSettings.BattleMusic != null) {
-            if (!this.LevelSettings.BattleMusic.ActualSpotted) {
+        if (event.OtherObject == GlobalVariables.Player) {
+            if (this.LevelSettings.BattleMusic != null) {
+                if (!this.LevelSettings.BattleMusic.ActualSpotted) {
+                    MusicUtils.PlayFade(this.Music, this.FadeSpeed);
+                }
+            } else {
                 MusicUtils.PlayFade(this.Music, this.FadeSpeed);
             }
-        } else {
-            MusicUtils.PlayFade(this.Music, this.FadeSpeed);
         }
         
     }

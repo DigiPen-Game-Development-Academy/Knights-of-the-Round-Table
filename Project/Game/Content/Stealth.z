@@ -6,10 +6,11 @@ class Stealth : ZilchComponent {
     [Dependency] var Sprite : Sprite;
     
     [Property] var SneakRange : Real = 10;
+    [Property] var SneakCooldown : Real = 3;
     
     var Movspd : Real = 0;
     
-    var Cooldwon : Real = 3;
+    var Cooldwon : Real = 0;
     
     var Rand : Random;
     
@@ -26,11 +27,17 @@ class Stealth : ZilchComponent {
         if (this.Vis.InSight) {
             this.Sprite.Visible = true;
             this.AI.MoveSpeed = this.Movspd;
+            if (this.Owner.BasicPathFollowAI != null) {
+                this.Owner.BasicPathFollowAI.Instaturn = false;
+            }
         } else {
             this.Sprite.Visible = false;
             this.AI.MoveSpeed = this.Movspd * 2;
+            if (this.Owner.BasicPathFollowAI != null) {
+                this.Owner.BasicPathFollowAI.Instaturn = true;
+            }
             if (this.Cooldwon <= 0) {
-                this.Cooldwon = 3;
+                this.Cooldwon = this.SneakCooldown;
                 
                 this.Sneak();
                 
@@ -53,7 +60,7 @@ class Stealth : ZilchComponent {
         var pos = Real3(0);
         for (var i = 0; i < 50; ++i) {
             
-            pos = this.Owner.Transform.WorldTranslation + Real3(this.Rand.Range(-this.SneakRange, this.SneakRange), this.Rand.Range(-this.SneakRange, this.SneakRange), 0);
+            pos = GlobalVariables.Player.Transform.WorldTranslation + Real3(this.Rand.Range(-this.SneakRange, this.SneakRange), this.Rand.Range(-this.SneakRange, this.SneakRange), 0);
             
             var res = Utilities.Raycast(pos, GlobalVariables.Player.Transform.WorldTranslation - pos, this.Space.PhysicsSpace, 50, filter);
             
