@@ -38,7 +38,7 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.5,
+		float Radius = 0.25,
 	},
 	Sprite = 
 	{
@@ -50,7 +50,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5a5085d1c141c287:RusherBoss000",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -90,6 +90,14 @@ Cog =
 		float StartRange = 5,
 		string DashDamageMSG = "You where run over by a giant rusher!",
 		string PassiveDamageMSG = "Wait...  did that rusher just sit on you?!?",
+		string North = "5a5085ddc0e6bd58:RusherBoss004",
+		string NorthEast = "5a5085dec001bd74:RusherBoss005",
+		string East = "5a5085dfc039e63e:RusherBoss006",
+		string SouthEast = "5a5085d8c051b77b:RusherBoss007",
+		string South = "5a5085d1c141c287:RusherBoss000",
+		string SouthWest = "5a5085d2c1792553:RusherBoss001",
+		string West = "5a5085d3c096f6bd:RusherBoss002",
+		string NorthWest = "5a5085dcc0cd1d6f:RusherBoss003",
 	},
 	BossDrops = 
 	{
@@ -97,6 +105,7 @@ Cog =
 		string Note = "THIS IS A NOTE",
 		string Drops = "",
 		float DropRange = 1,
+		string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 	},
 	Hierarchy = 
 	{
