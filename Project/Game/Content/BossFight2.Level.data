@@ -144,7 +144,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.851565599, 1.06997573, 50],
+			Vec3 Translation = [3.98444343, -10.2614069, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -156,7 +156,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 11.0803452,
+			float Size = 27.2532349,
 		},
 		EditorCameraController = 
 		{
@@ -164,7 +164,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.851565599, 1.06997573, -3.5613084e-07],
+			Vec3 LookTarget = [3.98444343, -10.2614069, -1.44742202e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -439,19 +439,12 @@ Level =
 			},
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a525a3807624072:Boss_GI",
 		LinkId = 
 		{
 			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "Boss_GI",
-		},
-		Archetyped = 
-		{
-			string Name = "5a525a3807624072:Boss_GI",
 		},
 		Transform = 
 		{
@@ -459,106 +452,27 @@ Level =
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SphereCollider = 
+		Named = 
 		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
-			Vec3 Offset = [0, 0, 0],
-			float Radius = 0.5,
+			string Name = "Boss_GI",
 		},
-		Sprite = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6dd29eca18018f:QuestItemPickup",
+		LinkId = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			uint Id = 9,
 		},
-		Health = 
+		Transform = 
 		{
-			float InitialHealth = 1000,
-			float Cooldown = 10,
-			float RegenRate = 0.5,
+			Vec3 Translation = [3.46178126, -14.8533907, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
-		Boss_GI_AI = 
+		Named = 
 		{
-			float FireRateFull = 10,
-			float FireRateEmpty = 15,
-			float PFireRateFull = 3,
-			float PFireRateEmpty = 5,
-			float FireCooldownMax = 6,
-			float FireCooldownMin = 4,
-			float FireCooldownRand = 0.100000001,
-			float SprayLength = 3.25,
-			float SpraySpeedMax = 2,
-			float SpraySpeedMin = 5,
-			float SprayAngleMax = 90,
-			float SprayAngleMin = 25,
-			float SpreadMax = 10,
-			float SpreadMin = 5,
-			float SpreadNumMax = 5,
-			float SpreadNumMin = 20,
-			float SpinFull = 1,
-			float SpinEmpty = 3,
-			float SpinSpeedFull = 360,
-			float SpinSpeedEmpty = 720,
-			float SpinFireRateFull = 25,
-			float SpinFireRateEmpty = 40,
-			float BSpeedFull = 3,
-			float BSpeedEmpty = 10,
-			float DamageFull = 10,
-			float DamageEmpty = 25,
-			float SpreadHealth = 0.75,
-			float SpinHealth = 0.5,
-			float WindCooldownFull = 1,
-			float WindCooldownEmpty = 1,
-			string DamageMSG = "",
-		},
-		BossDrops = 
-		{
-			string Part = "5a6dd29eca18018f:QuestItemPickup",
-			string Note = "THIS IS A NOTE",
-			string Drops = "",
-			float DropRange = 1,
-		},
-		Hierarchy = 
-		{
-			ArchetypeInstance = 
-			{
-				string Name = "5a7c1968c9af3d26:Healthbar",
-				LinkId = 
-				{
-					uint Id = 9,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, -0.625, 1],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Area = 
-				{
-					Vec2 Size = [1, 0.100000001],
-					Location Origin = Center,
-				},
-				Named = 
-				{
-					string Name = "Healthbar",
-				},
-			},
+			string Name = "QuestItemPickup",
 		},
 	},
 },

@@ -161,6 +161,7 @@ class SaveFuncs {
         str = "`str`,`item.Timer`";
         str = "`str`,`item.CurrentMag`";
         str = "`str`,`item.Reloading`";
+        str = "`str`,`item.Auto`";
         str = "`str`,";
         return str;
     }
@@ -192,6 +193,7 @@ class SaveFuncs {
             nItem.Timer = Real.Parse(properties[2]);
             nItem.CurrentMag = Integer.Parse(properties[3]);
             nItem.Reloading = properties[4] == "true";
+            nItem.Auto = properties[5] == "true";
         }
         return nItem;
         

@@ -360,7 +360,8 @@ class Commands {
     
     [Static]
     function Test (vals : Array[String]) {
-        GlobalVariables.GameSpace.LoadLevel(Level.BossFight1);
+        GlobalVariables.GameSpace.LoadLevel(Level.BossFight2);
+        GlobalVariables.GameSpace.LevelSettings.SaveLoad.Save();
     }
     
     [Static]

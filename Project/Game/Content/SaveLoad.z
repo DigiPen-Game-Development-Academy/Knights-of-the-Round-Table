@@ -32,11 +32,7 @@ class SaveLoad : ZilchComponent {
 
     function OnLogicUpdate(event : UpdateEvent) {
         if(this.Once) {
-            if(!this.LoadOnStart) {
-                GlobalVariables.GameSpace.Create(Archetype.Save);
-            } else {
-                this.Load();
-            }
+            this.Load();
             this.Once = false;
         }
     }
@@ -66,6 +62,21 @@ class SaveLoad : ZilchComponent {
         GlobalVariables.Save.SaveController.Chests = SaveFuncs.SerializeChests(GlobalVariables.Chests);
         GlobalVariables.Save.SaveController.GItems = SaveFuncs.SerializeGItems(GlobalVariables.GroundItems);
         GlobalVariables.Save.SaveController.QuestItems = SaveFuncs.SerializeBools(GlobalVariables.QuestItems);
+        GlobalVariables.Save.SaveController.PlayerPos = GlobalVariables.Player.Transform.WorldTranslation;
+        GlobalVariables.Save.SaveController.PlayerHealth = GlobalVariables.Player.Health.CurrentHealth;
+        GlobalVariables.Save.SaveController.MaxQIndex = Utilities.MaxIndex;
+        Zero.ObjectStore.Store("Save", GlobalVariables.Save);
+    }
+    
+    function PartialSave() {
+        GlobalVariables.Save.SaveController.Inventory = SaveFuncs.SerializeInventory(GlobalVariables.Items);
+        GlobalVariables.Save.SaveController.Primary = SaveFuncs.SerializeItem(GlobalVariables.Inv.InventoryManager.PrimarySlot.InventorySlot.Item);
+        GlobalVariables.Save.SaveController.Secondary = SaveFuncs.SerializeItem(GlobalVariables.Inv.InventoryManager.SecodarySlot.InventorySlot.Item);
+        GlobalVariables.Save.SaveController.Utility = SaveFuncs.SerializeItem(GlobalVariables.Inv.InventoryManager.UtilitySlot.InventorySlot.Item);
+        GlobalVariables.Save.SaveController.Mouse = SaveFuncs.SerializeItem(GlobalVariables.Inv.InventoryManager.MSlot.MouseSlot.Item);
+        GlobalVariables.Save.SaveController.QuestItems = SaveFuncs.SerializeBools(GlobalVariables.QuestItems);
+        GlobalVariables.Save.SaveController.PlayerHealth = GlobalVariables.Player.Health.CurrentHealth;
+        GlobalVariables.Save.SaveController.MaxQIndex = Utilities.MaxIndex;
         Zero.ObjectStore.Store("Save", GlobalVariables.Save);
     }
     
@@ -81,26 +92,6 @@ class SaveLoad : ZilchComponent {
             return;
         }
         
-        save.SaveController.FirstLoad = false;
-        
-        //load values into game
-        GlobalVariables.Player.Transform.WorldTranslation = save.SaveController.PlayerPos;
-        GlobalVariables.Player.Health.CurrentHealth = save.SaveController.PlayerHealth;
-        foreach(var e in GlobalVariables.Enemies)
-            if(e != null)
-                e.Destroy();
-        GlobalVariables.Enemies.Clear();
-        foreach(var c in GlobalVariables.Chests)
-            if(c != null)
-                c.Destroy();
-        GlobalVariables.Chests.Clear();
-        foreach(var g in GlobalVariables.GroundItems)
-            if(g != null)
-                g.Destroy();
-        GlobalVariables.GroundItems.Clear();
-        SaveFuncs.DeserializeGItems(save.SaveController.GItems);
-        SaveFuncs.DeserializeChests(save.SaveController.Chests);
-        SaveFuncs.DeserializeEnemies(save.SaveController.Enemies);
         GlobalVariables.Items = SaveFuncs.DeserializeInventory(save.SaveController.Inventory);
         
         GlobalVariables.Inv.InventoryManager.PrimarySlot.InventorySlot.Item = SaveFuncs.DeserializeItem(save.SaveController.Primary);
@@ -126,11 +117,9 @@ class SaveLoad : ZilchComponent {
             GlobalVariables.UseWeapon.Utility = null;
         }
         
-        GlobalVariables.Inv.InventoryManager.MSlot.MouseSlot.Item = SaveFuncs.DeserializeItem(save.SaveController.Mouse);
+        GlobalVariables.Player.Health.CurrentHealth = save.SaveController.PlayerHealth;
         
-        var qItems = SaveFuncs.DeserializeBools(GlobalVariables.Save.SaveController.QuestItems);
-        qItems.Resize(6);
-        GlobalVariables.QuestItems = qItems;
+        GlobalVariables.Inv.InventoryManager.MSlot.MouseSlot.Item = SaveFuncs.DeserializeItem(save.SaveController.Mouse);
         
         if (GlobalVariables.Save.SaveController.Quest != "") {
             GlobalVariables.QuestSprite.Set(GlobalVariables.Save.SaveController.Quest);
@@ -139,6 +128,33 @@ class SaveLoad : ZilchComponent {
         }
         
         Utilities.MaxIndex = GlobalVariables.Save.SaveController.MaxQIndex;
+        
+        var qItems = SaveFuncs.DeserializeBools(GlobalVariables.Save.SaveController.QuestItems);
+        qItems.Resize(6);
+        GlobalVariables.QuestItems = qItems;
+        
+        if(!this.LoadOnStart)
+            return;
+        
+        save.SaveController.FirstLoad = false;
+        
+        //load values into game
+        GlobalVariables.Player.Transform.WorldTranslation = save.SaveController.PlayerPos;
+        foreach(var e in GlobalVariables.Enemies)
+            if(e != null)
+                e.Destroy();
+        GlobalVariables.Enemies.Clear();
+        foreach(var c in GlobalVariables.Chests)
+            if(c != null)
+                c.Destroy();
+        GlobalVariables.Chests.Clear();
+        foreach(var g in GlobalVariables.GroundItems)
+            if(g != null)
+                g.Destroy();
+        GlobalVariables.GroundItems.Clear();
+        SaveFuncs.DeserializeGItems(save.SaveController.GItems);
+        SaveFuncs.DeserializeChests(save.SaveController.Chests);
+        SaveFuncs.DeserializeEnemies(save.SaveController.Enemies);
         
     }
 }

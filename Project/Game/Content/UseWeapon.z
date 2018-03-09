@@ -95,6 +95,7 @@ class UseWeapon : ZilchComponent
         }
         
         if(this.PrimarySelected) {
+            
             if(!this.Primary.Auto && this.Up) {
                 this.Primary.Timer -= event.Dt;
             }else if(this.Primary.Auto) {
@@ -112,7 +113,7 @@ class UseWeapon : ZilchComponent
         
         this.AmmoCount = this.GetAmmoCount();
         
-        if(this.Primary.CurrentMag == 0 && !this.Primary.Reloading && this.AmmoCount != 0){
+        if(this.Primary.CurrentMag == 0 && !this.Primary.Reloading && this.AmmoCount != 0 && this.Secondary.MagSize != -1){
             this.Primary.Reloading = true;
             this.Primary.Timer = this.Primary.RelodTime;
         } else if(this.Primary.CurrentMag == 0 && this.Primary.Timer <= 0){
@@ -126,7 +127,7 @@ class UseWeapon : ZilchComponent
             }
         }
         
-        if(this.Secondary.CurrentMag == 0 && !this.Secondary.Reloading && this.AmmoCount != 0){
+        if(this.Secondary.CurrentMag == 0 && !this.Secondary.Reloading && this.AmmoCount != 0 && this.Secondary.MagSize != -1){
             this.Secondary.Reloading = true;
             this.Secondary.Timer = this.Secondary.RelodTime;
         } else if(this.Secondary.CurrentMag == 0 && this.Secondary.Timer <= 0){

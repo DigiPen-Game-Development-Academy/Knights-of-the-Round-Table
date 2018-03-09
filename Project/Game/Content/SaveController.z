@@ -48,8 +48,5 @@ class SaveController : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
-        this.PlayerPos = GlobalVariables.Player.Transform.WorldTranslation;
-        this.PlayerHealth = GlobalVariables.Player.Health.CurrentHealth;
-        this.MaxQIndex = Utilities.MaxIndex;
     }
 }

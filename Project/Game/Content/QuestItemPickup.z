@@ -21,9 +21,16 @@ class QuestItemPickup : ZilchComponent {
     }
     
     function OnMouseDown(event : ViewportMouseEvent) {
-        GlobalVariables.QuestItems[this.Index] = true;
-        this.Owner.Destroy();
-        GlobalVariables.LorePanel.Sprite.Visible = false;
+        if (event.Button == MouseButtons.Right) {
+            GlobalVariables.QuestItems[this.Index] = true;
+            this.Owner.Destroy();
+            GlobalVariables.LorePanel.Sprite.Visible = false;
+            
+            
+            this.LevelSettings.SaveLoad.PartialSave();
+            this.Space.LoadLevel(Level.JustinTestLevel);
+            
+        }
     }
     
     function OnMouseExit(event : ViewportMouseEvent) {
@@ -39,7 +46,7 @@ class QuestItemPickup : ZilchComponent {
         
         GlobalVariables.LorePanel.Sprite.Visible = true;
         
-        var text = "`this.Name`\n`this.Lore`";
+        var text = "`this.Name`\n`this.Lore`\nRight click to pick up\nYou will return to main level when you pick this up";
         
         GlobalVariables.LorePanel.LorePanel.Text = text;
     }
