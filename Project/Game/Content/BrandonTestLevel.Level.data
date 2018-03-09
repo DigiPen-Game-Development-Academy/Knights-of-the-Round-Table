@@ -144,6 +144,12 @@ Level =
 		TimeTimer = 
 		{
 		},
+		BattleMusic = 
+		{
+			string Music = "5a518f87d49d5db0:Spotted",
+			float FadeSpeed = 1,
+			float Coldown = 2.25,
+		},
 	},
 	Cog = 
 	{
@@ -157,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.373957723, -0.183169931, 112.565193],
+			Vec3 Translation = [0.799477696, 3.85859346, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -169,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90607071,
+			float Size = 90.4838028,
 		},
 		EditorCameraController = 
 		{
@@ -177,7 +183,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.373957723, -0.183169931, 1.00000191],
+			Vec3 LookTarget = [0.799477696, 3.85859346, 1.00000191],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1098,25 +1104,35 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Stealth",
+			string Name = "TriggerMusicZone",
 		},
 		Archetyped = 
 		{
-			string Name = "5a5086c44183c1a9:Enemy_Stealth",
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.42678738, 0.468848705, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-9.16630936, 8.83592224, -5],
+			Vec3 Scale = [73.2106171, 86.7693634, 1],
 			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
 		},
 		Sprite = 
 		{
-			bool Visible = true,
+			bool Visible = false,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0.820000172, 1, 1],
+			Vec4 Color = [1, 0, 0, 0.230000019],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1128,131 +1144,13 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
-		RigidBody = 
+		MusicZone = 
 		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		IgnoreSpaceEffects = 
-		{
-			bool Drag = true,
-			bool Flow = true,
-			bool Force = true,
-			bool Gravity = true,
-			bool Thrust = true,
-			bool Vortex = true,
-			bool Wind = true,
-			bool Invalid = false,
-			bool Torque = true,
-			bool PointGravity = true,
-			bool PointForce = true,
-			bool Buoyancy = true,
-			bool Custom = true,
-		},
-		EnemyPathFind = 
-		{
-		},
-		BasicPathFollowAI = 
-		{
-		},
-		SphereCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5a08c96d04f0597c:Enemy",
-			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
-			Vec3 Offset = [0, 0, 0],
-			float Radius = 0.5,
-		},
-		Visibility = 
-		{
-		},
-		EnemyAI = 
-		{
-			float InstantSpotRadius = 3,
-			float MaxDistFromGuard = 20,
-			float WaitTime = 1,
-			float Range = 3,
-			float ViewAngle = 45,
-			float ViewRange = 10,
-			float ChaseSpeedMultiplier = 2,
-			float GuardWaitTime = 5,
-			float SearchTimer = 20,
-			float MaxTimeOutOfSight = 5,
-			float SearchRange = 10,
-			float ViewDist = 10,
-		},
-		EnemySprite = 
-		{
-			string North = "5a0759f3f416b0a2:Temp_Enemy002",
-			string NorthEast = "5a07589e80afd996:Temp_Enemy007",
-			string East = "5a0759f3f417f88d:Temp_Enemy003",
-			string SouthEast = "5a0759f3f415546c:Temp_Enemy004",
-			string South = "5a0759f3f41bf838:Temp_Enemy000",
-			string SouthWest = "5a0759f3f4129b4b:Temp_Enemy005",
-			string West = "5a0759f3f419221b:Temp_Enemy001",
-			string NorthWest = "5a0759f0f413d20b:Temp_Enemy006",
-		},
-		EnemyMelee = 
-		{
-			float AttacksPerSecond = 3,
-			float DamagerPerAttack = 5,
-			string DeathMSG = "You Where Bitten by an Enemy",
-		},
-		Health = 
-		{
-			float InitialHealth = 100,
-			float Cooldown = 3,
-			float RegenRate = 0.333333343,
-		},
-		EnemyDeath = 
-		{
-			int NumberOfDrops = 3,
-			int NumberOfDropsVariation = 1,
-			float DropRange = 0.5,
-			string LootTable = "5a11b100e0d8983f:Loot",
-		},
-		MenuVisibilityController = 
-		{
-		},
-		Stealth = 
-		{
-			float SneakRange = 5,
-			float SneakCooldown = 7,
+			string Music = "5a517d34dd1868cb:Neurtral2",
+			float FadeSpeed = 1,
 		},
 		Hierarchy = 
 		{
-			ArchetypeInstance = 
-			{
-				string Name = "5a7c1968c9af3d26:Healthbar",
-				LinkId = 
-				{
-					uint Id = 29,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, -0.625, 1],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Area = 
-				{
-					Vec2 Size = [1, 0.100000001],
-					Location Origin = Center,
-				},
-				Named = 
-				{
-					string Name = "Healthbar",
-				},
-			},
 		},
 	},
 },

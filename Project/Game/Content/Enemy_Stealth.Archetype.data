@@ -80,6 +80,9 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		float Radius = 0.5,
 	},
+	Visibility = 
+	{
+	},
 	EnemyAI = 
 	{
 		float InstantSpotRadius = 3,
@@ -91,7 +94,7 @@ Cog =
 		float ChaseSpeedMultiplier = 2,
 		float GuardWaitTime = 5,
 		float SearchTimer = 20,
-		float MaxTimeOutOfSight = 1,
+		float MaxTimeOutOfSight = 5,
 		float SearchRange = 10,
 		float ViewDist = 10,
 	},
@@ -112,9 +115,6 @@ Cog =
 		float DamagerPerAttack = 5,
 		string DeathMSG = "You Where Bitten by an Enemy",
 	},
-	Visibility = 
-	{
-	},
 	Health = 
 	{
 		float InitialHealth = 100,
@@ -128,15 +128,13 @@ Cog =
 		float DropRange = 0.5,
 		string LootTable = "5a11b100e0d8983f:Loot",
 	},
-	EnemyPing = 
-	{
-	},
 	MenuVisibilityController = 
 	{
 	},
 	Stealth = 
 	{
-		float SneakRange = 10,
+		float SneakRange = 5,
+		float SneakCooldown = 7,
 	},
 	Hierarchy = 
 	{
