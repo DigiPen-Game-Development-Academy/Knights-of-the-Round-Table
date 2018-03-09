@@ -13,8 +13,6 @@ class PlayerHealth : ZilchComponent {
     
     function OnDialogEnded(event : DialogEnded) {
         
-        MusicUtils.MusicSoundSpace.Pause = false;
-        
         if (event.Type == DialogReturn.YES) {
             
             GlobalVariables.Enemies.Clear();
@@ -66,7 +64,7 @@ class PlayerHealth : ZilchComponent {
         if(dialog != null) {
             this.Dialog = dialog;
             Zero.Connect(this.Dialog, Events.DialogEnded, this.OnDialogEnded);
-            MusicUtils.MusicSoundSpace.Pause = true;
+            MusicUtils.MusicSoundSpace.StopAllSounds();
         }
     }
 }

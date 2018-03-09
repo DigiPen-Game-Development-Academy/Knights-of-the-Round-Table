@@ -2,6 +2,7 @@ class BattleMusic : ZilchComponent {
     
     var Spotted : Boolean = false;
     var Timer : Real = 0;
+    var ActualSpotted : Boolean = false;
     
     [Property] var Music : SoundCue;
     [Property] var FadeSpeed : Real = 1;
@@ -16,6 +17,7 @@ class BattleMusic : ZilchComponent {
         
         
         if (this.Spotted) {
+            this.ActualSpotted = true;
             MusicUtils.PlayFade(this.Music, this.FadeSpeed);
             this.Timer = this.Coldown;
         } else {
@@ -23,7 +25,7 @@ class BattleMusic : ZilchComponent {
             this.Timer -= event.Dt;
             
             if (this.Timer <= 0) {
-                MusicUtils.PlayFade(this.LevelSettings.MusicOnLevelStart.Music, this.FadeSpeed);
+                this.ActualSpotted = false;
             }
             
         }

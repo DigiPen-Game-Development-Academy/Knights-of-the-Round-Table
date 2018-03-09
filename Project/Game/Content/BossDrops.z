@@ -6,6 +6,7 @@ class BossDrops : ZilchComponent {
     [Property] var Note  : String = "THIS IS A NOTE";
     [Property] var Drops : ResourceTable;
     [Property] var DropRange : Real = 1;
+    [Property] var NeurtralMusic : SoundCue = SoundCue.Nuetral;
     
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Owner, Events.NoHealth, this.OnNoHealth);
@@ -40,6 +41,8 @@ class BossDrops : ZilchComponent {
             }
             
         }
+        
+        MusicUtils.PlayFade(this.NeurtralMusic, 1);
         
         Utilities.Dialog("You found a note!  It reads:\n`this.Note`", DialogTypes.OK, 10);
         
