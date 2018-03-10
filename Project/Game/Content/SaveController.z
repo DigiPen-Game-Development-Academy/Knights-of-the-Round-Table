@@ -42,6 +42,9 @@ class SaveController : ZilchComponent {
     [Serialized]
     var FirstLoad : Boolean = false;
     
+    [Serialized]
+    var PotatKillCount : Real = 0;
+    
     function Initialize(init : CogInitializer) {
         GlobalVariables.Save = this.Owner;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);

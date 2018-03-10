@@ -138,29 +138,11 @@ Level =
 			string Music = "5a518fc0d995d168:Boss",
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a53e87b7cda6d5e:Boss_Rusher",
-		LinkId = 
-		{
-			uint Id = 3,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Boss_Rusher",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -168,7 +150,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.55049944, -1.72220755, 50],
+			Vec3 Translation = [0.753309846, -0.699503899, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -180,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1194725,
+			float Size = 11.0803423,
 		},
 		EditorCameraController = 
 		{
@@ -188,7 +170,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.55049944, -1.72220755, -4.74104837e-07],
+			Vec3 LookTarget = [0.753309846, -0.699503899, -2.85979382e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -204,7 +186,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -229,7 +211,7 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "5a7ea795cbc62dfe:BossFight1_TileMap06",
+			string SourceName = "5a50d20b049a5eab:BossFight3_TileMap00",
 			string PaletteName = "5a11b7b61863cdae:Floor",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
@@ -239,7 +221,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -389,7 +371,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 7,
+					uint Id = 6,
 				},
 				Named = 
 				{
@@ -422,7 +404,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 7,
 				},
 				Named = 
 				{
@@ -461,6 +443,24 @@ Level =
 					Location Origin = Center,
 				},
 			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a50a4bb66325ddc:Boss_Shield",
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Boss_Shield",
 		},
 	},
 },

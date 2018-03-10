@@ -8,9 +8,13 @@ class Potato : Item {
         this.MagSize = -1;
         this.Name = "Potato";
         this.ID = "Potato";
-        this.DamagePer = 5;
+        this.DamagePer = 500;
         this.FireRate = 2.5;
         
+    }
+    
+    function ReturnDeathMSG() : String {
+        return "POTATO";
     }
     
     function ReturnLore () : String {
@@ -20,8 +24,15 @@ class Potato : Item {
         lore.Add("The Irish dream");
         lore.Add("The United States population consumes 1.5 billion pounds of potatoes per year");
         lore.Add("The potatoe's allegiance is with you");
-        lore.Add("Legend says that four large lifeforms killed by this potato will reward the user with a legendary weapon");
-        lore.Add("Every year potatoes are gruesomely turned into fries,this cruelty needs to stop. Support the no potato left behind movement");
+        lore.Add("Legend says that four large lifeforms killed by a\npotato will reward the user with a legendary weapon");
+        lore.Add("Every year potatoes are gruesomely turned into fries,\nthis cruelty needs to stop. Support the no potato left behind movement");
+        lore.Add("The potato is a starchy, tuberous crop from the perennial nightshade\nSolanum tuberosum.\nPotato may be applied to both the plant and the edible tuber.");
+        lore.Add("Today potatoes are grown in all 50 states of the USA and in about 125\ncountries throughout the world.");
+        lore.Add("The potato is about 80% water and 20% solids.");
+        lore.Add("An 8 ounce baked or boiled potato has only about 100 calories.");
+        lore.Add("The average American eats about 124 pounds of potatoes per year while\nGermans eat about twice as much.");
+        lore.Add("The largest potato grown was 18 pounds and 4 ounces according to the\nGuinness Book of World Records. It was grown in England in 1795.");
+        lore.Add("In October 1995, the potato became the first\nvegetable to be grown in space.");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -637,13 +648,13 @@ class Potatocannon  : Item {
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
         this.SoundDistance = 5;
-        this.MagSize = 100;
+        this.MagSize = 200;
         this.Name = "Potato Cannon";
         this.ID = "Potato_cannon";
         this.DamagePer = 50;
-        this.FireRate = 3;
-        this.AmmoPerShot = 5;
-        this.RelodTime = 5;
+        this.FireRate = 10;
+        this.AmmoPerShot = 1;
+        this.RelodTime = 0.1;
         this.Auto = false;
     }
     

@@ -19,13 +19,16 @@ class DialogButton : ZilchComponent {
                     this.GameSession.FindSpaceByName("UI").TimeSpace.Paused = false;
                 GlobalVariables.GameSpace.TimeSpace.Paused = false;
                 
+                Utilities.UnBlock();
+                
+                Utilities.DialogBox = null;
+                
                 var toSend = DialogEnded();
                 toSend.Type = this.Type;
                 this.Owner.Parent.DispatchEvent(Events.DialogEnded, toSend);
                 
                 this.Owner.Parent.Destroy();
                 
-                Utilities.UnBlock();
             }
         }
     }
