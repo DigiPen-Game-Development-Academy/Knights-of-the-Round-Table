@@ -27,9 +27,16 @@ class BossDrops : ZilchComponent {
         this.Dialog = null;
         this.Owner.Destroy();
         
+        if (this.LevelSettings.DeferredRenderer != null) {
+            this.LevelSettings.DeferredRenderer.RenderMasks = false;
+        }
+        
     }
 
     function OnNoHealth(event : NoHealth) {
+        
+        if(this.Owner.FinalBoss != null)
+            this.Owner.FinalBoss.Active = false;
         
         var rand = Random();
         

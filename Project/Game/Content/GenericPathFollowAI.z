@@ -10,6 +10,8 @@ class GenericPathFollowAI : ZilchComponent {
     
     var Stunned : Boolean = false;
     
+    var Active : Boolean = true;
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.Stun, this.OnStun);
@@ -21,6 +23,9 @@ class GenericPathFollowAI : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(!this.Active)
+            return;
         
         this.Timer -= event.Dt;
         

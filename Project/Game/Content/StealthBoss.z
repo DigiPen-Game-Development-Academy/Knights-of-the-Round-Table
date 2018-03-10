@@ -9,12 +9,26 @@ class StealthBoss : ZilchComponent {
     
     var Rand : Random;
     
+    var Active : Boolean = true;
+    
     function Initialize(init : CogInitializer) {
+        //set collision table so raycast goes through enemies
+        if(this.Space.PhysicsSpace.CollisionTable != CollisionTable.CollisionTable) {
+            this.Space.PhysicsSpace.CollisionTable = CollisionTable.CollisionTable;
+        }
+        
+        this.Timer = this.SneakCooldown;
+        
         this.Rand = Random();
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        this.Stealth.Active = this.Active;
+        
+        if(!this.Active)
+            return;
         
         this.Timer -= event.Dt;
         
@@ -53,6 +67,7 @@ class StealthBoss : ZilchComponent {
         GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Static;
         filter.IgnoreDynamic = true;
         filter.IgnoreGhost = true;
+        filter.CollisionGroup = CollisionGroup.Enemies;
         
         var pos = Real3(0);
         for (var i = 0; i < 50; ++i) {

@@ -6,6 +6,7 @@ CollisionTable =
 		"5a11bc4854a4df8c:NotEnemies",
 		"5a52410dd5b6e6ae:Bullet",
 		"5a11bfba4f162cf2:Enemies",
+		"5a57db49dff94fe2:Shield",
 	],
 	Array CollisionFilters = 
 	[

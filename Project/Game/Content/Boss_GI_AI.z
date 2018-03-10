@@ -88,6 +88,8 @@ class Boss_GI_AI : ZilchComponent {
     var Facing : Real3 = Real3(0);
     //Random() used for randomness
     var Rand : Random;
+    //is the ai currently active?
+    var Active : Boolean = true;
     
     function Initialize(init : CogInitializer) {
         
@@ -103,6 +105,9 @@ class Boss_GI_AI : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if (!this.Active)
+            return;
         
         //run current state
         if (this.State == GIState.Idle) {
