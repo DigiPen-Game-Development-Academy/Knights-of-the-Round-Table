@@ -22,6 +22,7 @@ class EnemyAI : ZilchComponent {
     var ViewAngle : Real = 45;
     [Property]
     var ViewRange : Real = 6;
+    [Property]
     var MoveSpeed : Real = 2;
     [Property]
     var ChaseSpeedMultiplier : Real = 2;

@@ -1,0 +1,41 @@
+class Shield : ZilchComponent {
+    
+    [Property] var TurnSpeed : Real = 2.5;
+    
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        var tDir = Real3(0);
+        
+        if(this.Owner.Parent.EnemyAI.State == State.Spotted) {
+            tDir = GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation;
+        } else {
+            tDir = this.Owner.Parent.EnemyAI.ViewDirection;
+        }
+        
+        var tAngle = Math.ATan2(tDir.Y, tDir.X);
+        
+        var angle = this.Owner.Transform.EulerAngles.Z;
+        
+        var a = Math.ATan2(Math.Sin(tAngle-angle), Math.Cos(tAngle-angle));
+        if(Math.ToDegrees(a) > 180)
+            a -= Math.ToRadians(360);
+        if(Math.ToDegrees(a) < -180)
+            a += Math.ToRadians(360);
+        //Console.WriteLine(Math.ToDegrees(a));
+        if(Math.Abs(a - angle) < this.TurnSpeed*event.Dt)
+            angle = tAngle;
+        else if(a > 0) {
+            angle += this.TurnSpeed*event.Dt;
+        } else {
+            angle += -this.TurnSpeed*event.Dt;
+        }
+        
+        
+        this.Owner.Transform.SetEulerAnglesXYZ(0,0,angle);
+        
+    }
+}

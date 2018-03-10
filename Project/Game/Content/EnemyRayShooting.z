@@ -25,6 +25,8 @@ class EnemyRayShooting : ZilchComponent {
     [Property]
     var MinDist : Real = 2;
     [Property]
+    var MaxDist : Real = 10;
+    [Property]
     var DeathMSG : String = "You Where Shot by an Enemy";
     
     var Timer : Real = 0;
@@ -46,7 +48,7 @@ class EnemyRayShooting : ZilchComponent {
         if(this.Timer >= 0)
             this.Timer -= event.Dt;
         if(this.EnemyAI.Timer <= 0 && this.Vis.InSight) {
-            if(this.Vis.DirectLine && Math.Distance(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation) <= this.MaxRange) {
+            if(this.Vis.DirectLine && Math.Distance(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation) <= this.MaxDist) {
                 this.Owner.EnemyPathFind.Path = null;
                 if(this.CurrentMag <= 0 && !this.Reloading) {
                     this.Reloading = true;
