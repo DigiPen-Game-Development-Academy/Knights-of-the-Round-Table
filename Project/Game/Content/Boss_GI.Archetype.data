@@ -88,10 +88,11 @@ Cog =
 	},
 	BossDrops = 
 	{
-		string Part = "5a6dd29eca18018f:QuestItemPickup",
+		string Part = "5a50196fd480ebb5:QuestItem2",
 		string Note = "THIS IS A NOTE",
 		string Drops = "",
 		float DropRange = 1,
+		string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 	},
 	Hierarchy = 
 	{

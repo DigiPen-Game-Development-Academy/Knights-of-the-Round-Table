@@ -1,29 +1,14 @@
 class QuestItemPickup : ZilchComponent {
     [Property] var Index : Integer = 0;
     function Initialize(init : CogInitializer) {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
         Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
         Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
         Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
-    }
-
-    function OnLogicUpdate(event : UpdateEvent) {
-        
-        
-        
-        if(GlobalVariables.QuestItems[this.Index]) {
-            this.Owner.Destroy();
-        }
-        
     }
     
     function OnMouseDown(event : ViewportMouseEvent) {
         if (event.Button == MouseButtons.Right) {
             GlobalVariables.QuestItems[this.Index] = true;
-            this.Owner.Destroy();
-            GlobalVariables.LorePanel.Sprite.Visible = false;
-            
             
             this.LevelSettings.SaveLoad.PartialSave();
             this.Space.LoadLevel(Level.JustinTestLevel);

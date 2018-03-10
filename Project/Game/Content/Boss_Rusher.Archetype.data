@@ -101,7 +101,7 @@ Cog =
 	},
 	BossDrops = 
 	{
-		string Part = "5a6dd29eca18018f:QuestItemPickup",
+		string Part = "5a501946cb973583:QuestItem1",
 		string Note = "THIS IS A NOTE",
 		string Drops = "",
 		float DropRange = 1,

@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.213986933, 0.0254326053, 112.565193],
+			Vec3 Translation = [-6.39120483, -0.73269707, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 5.43656301,
+			float Size = 4.91920853,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.213986933, 0.0254326053, 1.00000203],
+			Vec3 LookTarget = [-6.39120483, -0.73269707, 1.00000203],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1162,7 +1162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.5, 0.5, 1],
+			Vec3 Translation = [-10.5, 1, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1180,7 +1180,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.5, 0.5, 1],
+			Vec3 Translation = [-9, 1, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1198,7 +1198,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.5, 0.5, 1],
+			Vec3 Translation = [-7.5, 1, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1216,13 +1216,85 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.5, 0.5, 1],
+			Vec3 Translation = [-6, 1, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
 			string Name = "QuestItem4",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a501ec6b1d434c0:HatchRusher",
+		LinkId = 
+		{
+			uint Id = 33,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10.5, -0.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "HatchRusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a500473a8a4fae7:HatchGI",
+		LinkId = 
+		{
+			uint Id = 34,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9, -0.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "HatchGI",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a50048cb5abb492:HatchShield",
+		LinkId = 
+		{
+			uint Id = 35,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.5, -0.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "HatchShield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a50049fb2d3a8b3:HatchStealth",
+		LinkId = 
+		{
+			uint Id = 36,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6, -0.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "HatchStealth",
 		},
 	},
 },

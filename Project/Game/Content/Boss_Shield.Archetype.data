@@ -69,7 +69,7 @@ Cog =
 	},
 	BossDrops = 
 	{
-		string Part = "5a6dd29eca18018f:QuestItemPickup",
+		string Part = "5a501997de7c61af:QuestItem3",
 		string Note = "THIS IS A NOTE",
 		string Drops = "",
 		float DropRange = 1,
@@ -105,7 +105,16 @@ Cog =
 	},
 	Boss_Shield = 
 	{
-		float FireRate = 1,
+		float FireRateFull = 1,
+		float FireRateEmpty = 1,
+		float SpeedFull = 1,
+		float SpeedEmpty = 1,
+		float DamageFull = 1,
+		float DamageEmpty = 1,
+		float SplashFull = 1,
+		float SplashEmpty = 1,
+		float ArcIntencity = 1,
+		string DeathMSG = "You where hit in the face with a missile",
 	},
 	Hierarchy = 
 	{

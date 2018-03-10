@@ -6,15 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "HatchRusher",
-	},
-	Archetyped = 
-	{
-		string Name = "5a501ec6b1d434c0:HatchRusher",
+		string Name = "HatchShield",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-9.5, -0.5, 1],
+		Vec3 Translation = [-7.5, -0.5, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -43,7 +39,7 @@ Cog =
 	},
 	BossLevelHatch = 
 	{
-		string Level = "5a7ea487b28fdfc7:BossFight1",
-		int Index = 0,
+		string Level = "5a50a5f2381c0c1a:BossFight3",
+		int Index = 2,
 	},
 },

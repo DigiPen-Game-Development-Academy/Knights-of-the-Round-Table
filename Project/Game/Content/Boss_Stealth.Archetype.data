@@ -66,7 +66,7 @@ Cog =
 	},
 	BossDrops = 
 	{
-		string Part = "5a6dd29eca18018f:QuestItemPickup",
+		string Part = "5a5019f6eda94e41:QuestItem4",
 		string Note = "THIS IS A NOTE",
 		string Drops = "",
 		float DropRange = 1,
@@ -86,6 +86,7 @@ Cog =
 		float Range = 3,
 		float ViewAngle = 360,
 		float ViewRange = 6,
+		float MoveSpeed = 2,
 		float ChaseSpeedMultiplier = 2,
 		float GuardWaitTime = 5,
 		float SearchTimer = 20,
@@ -101,10 +102,12 @@ Cog =
 	},
 	Stealth = 
 	{
-		float SneakRange = 10,
+		float SneakRange = 50,
+		float SneakCooldown = 3,
 	},
 	StealthBoss = 
 	{
+		float SneakCooldown = 5,
 	},
 	Hierarchy = 
 	{
