@@ -309,7 +309,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.3378377, 0.695569456, 50],
+			Vec3 Translation = [0.27948615, -4.47035837, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -321,7 +321,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 7.33859539,
+			float Size = 3.29744291,
 		},
 		EditorCameraController = 
 		{
@@ -329,7 +329,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.3378377, 0.695569456, 6.81869949e-07],
+			Vec3 LookTarget = [0.27948615, -4.47035837, 5.48185142e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1354,7 +1354,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0, 0, 0],
+							Vec3 Translation = [0, 0, -1],
 							Vec3 Scale = [1, 1, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -2585,7 +2585,7 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [2.29999995, 0.5],
+			Vec2 Size = [3, 0.5],
 			Location Origin = Center,
 		},
 		Named = 
@@ -2619,11 +2619,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.254999995, 0.254999995, 0.254999995, 0.485000014],
+			Vec4 Color = [1, 1, 1, 0.999899983],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -2633,6 +2633,17 @@ Level =
 		},
 		QuestSprite = 
 		{
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Bottom,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [0, 0],
 		},
 		Hierarchy = 
 		{
@@ -2648,7 +2659,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0.25, 0],
+					Vec3 Translation = [0, 0.25, 1],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2668,6 +2679,11 @@ Level =
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
 					bool Smoothing = true,
+				},
+				Area = 
+				{
+					Vec2 Size = [1, 1],
+					Location Origin = Center,
 				},
 			},
 		},

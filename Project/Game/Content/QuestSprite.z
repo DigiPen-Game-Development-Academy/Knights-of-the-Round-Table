@@ -1,19 +1,57 @@
 class QuestSprite : ZilchComponent {
+    
+    var MaxWhidth : Real = 3;
+    
+    var Last : Real = 0;
+    
     function Initialize(init : CogInitializer) {
         GlobalVariables.QuestSprite = this;
         this.Clear();
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        var screensize = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(this.LevelSettings.CameraViewport.ViewportToScreen(this.LevelSettings.CameraViewport.ViewportResolution),0);
+        
+        if (screensize.X != this.Last) {
+            
+            this.Last = screensize.X;
+            
+            var txt = this.Owner.FindChildByName("txt");
+            
+            txt.Area.Size = Real2((screensize.X) - 0.5, 100);
+            
+            txt.Area.Size = Real2(txt.Area.Size.X, txt.SpriteText.MeasureText().Y);
+            
+            this.Owner.Area.Size = Real2(screensize.X, txt.SpriteText.MeasureText().Y) + Real2(0.5);
+            
+        }
+        
     }
     
     function Set(text : String) {
-        this.Owner.FindChildByName("txt").SpriteText.Visible = true;
+        
+        var txt = this.Owner.FindChildByName("txt");
+        
+        txt.SpriteText.Visible = true;
         this.Owner.Sprite.Visible = true;
-        this.Owner.FindChildByName("txt").SpriteText.Text = text;
-        this.Owner.Transform.Scale = Real3(this.Owner.FindChildByName("txt").SpriteText.MeasureText().X+0.25,1,1);
-        this.Owner.FindChildByName("txt").Transform.WorldScale = Real3(1);
+        
+        /*if(txt.SpriteText.MeasureGivenText(text).X > this.MaxWhidth) {
+            var txt2 = "";
+            for (var i = 0; i < text.Count; ++i){
+                if(txt.SpriteText.MeasureGivenText("`txt2``String.FromChar(text.Get(i))`").X > this.MaxWhidth)
+                    txt2 = "`txt2`\n";
+                txt2 = "`txt2``String.FromChar(text.Get(i))`";
+            }
+            text = txt2;
+        }*/
+        
+        txt.SpriteText.Text = text;
+        this.Owner.Area.Size = txt.SpriteText.MeasureGivenText(text) + Real2(0.5);
+        txt.Area.Size = this.Owner.Area.Size - Real2(0.5);
+        txt.Transform.Translation = Real3(0, 0, 1);
+        txt.Transform.WorldScale = Real3(1);
     }
     
     function Clear() {
