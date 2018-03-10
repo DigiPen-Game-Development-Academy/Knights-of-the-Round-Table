@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [8.5, -4.5, 0],
+		Vec3 Translation = [8.5, -4.875, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,12 +38,12 @@ Cog =
 	Area = 
 	{
 		Vec2 Size = [3, 0.5],
-		Location Origin = CenterRight,
+		Location Origin = Center,
 	},
 	ScreenAlign = 
 	{
 		Enum Pos = Bottomright,
 		Vec3 Offset = [0, 0, 0],
-		Vec2 RelOffset = [-1, 0],
+		Vec2 RelOffset = [-2, 0],
 	},
 },

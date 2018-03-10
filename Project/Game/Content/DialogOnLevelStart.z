@@ -1,5 +1,5 @@
 class DialogOnLevelStart : ZilchComponent {
-    var Text : String = "";
+    var Text : String = "CONTROLS:\nW,A,S,D to move\nE or SCROLL WHEEL to swap between primary and secodary weapons\nTAB or ESCAPE to pause/open inventory\nF to use utility\nRIGHT CLICK to interact\nLEFT CLICK to use weapon\nSHIFT to sprint\nMOUSE to aim";
     
     var Once : Boolean = false;
     
