@@ -34,13 +34,13 @@ class DialogBox : ZilchComponent {
         
         var ok = this.Owner.FindChildByName("OK");
         
-        ok.Transform.WorldScale = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1)*this.Owner.Transform.WorldScale;
-        ok.Transform.Translation = Real3(this.Owner.Area.Size.X/4, -((this.Owner.Area.Size.Y/2) - (this.ButtonSpace/1.25)), 2);
-        ok.Button.StartSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
-        ok.Button.TargetSize = Real3(this.Owner.Area.Size.X/2, this.ButtonSpace, 1);
-        var smallest = this.ButtonSpace*this.Owner.Transform.WorldScale.Y;
-        if(ok.Transform.WorldScale.X*this.Owner.Transform.WorldScale.X < smallest) {
-            smallest = ok.Transform.WorldScale.X*this.Owner.Transform.WorldScale.X;
+        ok.Area.Size = Real2(this.Owner.Area.Size.X / 2, this.ButtonSpace) * this.Owner.Transform.WorldScale.XY;
+        ok.Transform.Translation = Real3(this.Owner.Area.Size.X / 4, -((this.Owner.Area.Size.Y / 2) - (this.ButtonSpace / 1.25)), 2);
+        ok.Button.Scaling = false;
+        ok.Transform.Scale = Real3(1);
+        var smallest = this.ButtonSpace * this.Owner.Transform.WorldScale.Y;
+        if(ok.Area.Size.X * this.Owner.Transform.WorldScale.X < smallest) {
+            smallest = ok.Area.Size.X * this.Owner.Transform.WorldScale.X;
         }
         ok.FindChildByName("TXTOK").Transform.WorldScale = Real3(smallest);
         

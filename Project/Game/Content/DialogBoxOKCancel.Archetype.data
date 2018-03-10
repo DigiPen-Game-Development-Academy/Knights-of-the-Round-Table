@@ -134,7 +134,7 @@ Cog =
 			},
 			Button = 
 			{
-				float ScaleM = 1.20000005,
+				float ScaleM = 1,
 				Vec4 HoverColor = [0.394999981, 0.394999981, 0.394999981, 0.999899983],
 				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
@@ -143,6 +143,11 @@ Cog =
 			DialogButton = 
 			{
 				Enum Type = OK,
+			},
+			Area = 
+			{
+				Vec2 Size = [1, 1],
+				Location Origin = Center,
 			},
 			Hierarchy = 
 			{
@@ -228,7 +233,7 @@ Cog =
 			},
 			Button = 
 			{
-				float ScaleM = 1.20000005,
+				float ScaleM = 1,
 				Vec4 HoverColor = [0.396078467, 0.396078467, 0.396078467, 0.999899983],
 				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
@@ -237,6 +242,11 @@ Cog =
 			DialogButton = 
 			{
 				Enum Type = CANCEL,
+			},
+			Area = 
+			{
+				Vec2 Size = [1, 1],
+				Location Origin = Center,
 			},
 			Hierarchy = 
 			{

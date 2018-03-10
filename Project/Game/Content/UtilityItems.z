@@ -39,7 +39,7 @@ class Radar : Item {
 class Watch : Item {
     
     function Init() {
-        this.Name = "Mysterious Watch";
+        this.Name = "Strange Watch";
         this.ID = "Watch";
         this.Type = ItemType.Utility;
         this.Icon = SpriteSource.Icon_Weapon_Potato;

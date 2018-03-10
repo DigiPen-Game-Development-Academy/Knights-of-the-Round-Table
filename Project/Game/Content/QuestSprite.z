@@ -57,7 +57,9 @@ class QuestSprite : ZilchComponent {
         
         txt.Area.Size = Real2(txt.Area.Size.X, txt.SpriteText.MeasureText().Y);
         
-        this.Owner.Area.Size = Real2(screensize.X, txt.SpriteText.MeasureText().Y) + Real2(0.5);
+        this.Owner.Area.Size = txt.SpriteText.MeasureText() + Real2(0.25);
+        
+        txt.Transform.Translation = Real3(0, 0, 1);
         
     }
     

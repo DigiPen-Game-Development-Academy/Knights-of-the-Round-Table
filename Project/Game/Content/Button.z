@@ -16,6 +16,9 @@ class Button : ZilchComponent {
     [Property]
     var Alpha : Boolean = false;
     
+    [Property]
+    var Scaling : Boolean = true;
+    
     var Color : Real4;
     
     [Dependency]
@@ -87,7 +90,9 @@ class Button : ZilchComponent {
 
     function OnLogicUpdate(event : UpdateEvent) {
         
-        this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, this.TargetSize, event.Dt*this.ScaleSpeed);
+        if(this.Scaling) {
+            this.Owner.Transform.Scale = Math.Lerp(this.Owner.Transform.Scale, this.TargetSize, event.Dt*this.ScaleSpeed);
+        }
         
     }
 }
