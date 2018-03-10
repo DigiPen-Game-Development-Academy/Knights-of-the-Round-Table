@@ -8,7 +8,7 @@ class Potato : Item {
         this.MagSize = -1;
         this.Name = "Potato";
         this.ID = "Potato";
-        this.DamagePer = 500;
+        this.DamagePer = 5;
         this.FireRate = 2.5;
         
     }

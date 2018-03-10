@@ -48,10 +48,17 @@ class QuestSprite : ZilchComponent {
         }*/
         
         txt.SpriteText.Text = text;
-        this.Owner.Area.Size = txt.SpriteText.MeasureGivenText(text) + Real2(0.5);
-        txt.Area.Size = this.Owner.Area.Size - Real2(0.5);
-        txt.Transform.Translation = Real3(0, 0, 1);
-        txt.Transform.WorldScale = Real3(1);
+        
+        var screensize = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(this.LevelSettings.CameraViewport.ViewportToScreen(this.LevelSettings.CameraViewport.ViewportResolution),0);
+        
+        this.Last = screensize.X;
+        
+        txt.Area.Size = Real2((screensize.X) - 0.5, 100);
+        
+        txt.Area.Size = Real2(txt.Area.Size.X, txt.SpriteText.MeasureText().Y);
+        
+        this.Owner.Area.Size = Real2(screensize.X, txt.SpriteText.MeasureText().Y) + Real2(0.5);
+        
     }
     
     function Clear() {
