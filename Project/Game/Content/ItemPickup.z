@@ -1,7 +1,6 @@
 //author Brandon Wolenetz
 
-class ItemPickup : ZilchComponent
-{
+class ItemPickup : ZilchComponent {
     
     var Item : Item = null;
     

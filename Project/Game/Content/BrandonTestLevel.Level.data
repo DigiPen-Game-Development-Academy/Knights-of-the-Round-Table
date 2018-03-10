@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0893982351, 1.11378932, 112.565193],
+			Vec3 Translation = [-0.213986933, 0.0254326053, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5335321,
+			float Size = 5.43656301,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.0893982351, 1.11378932, 1.00000203],
+			Vec3 LookTarget = [-0.213986933, 0.0254326053, 1.00000203],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1151,6 +1151,78 @@ Level =
 		},
 		Hierarchy = 
 		{
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a501946cb973583:QuestItem1",
+		LinkId = 
+		{
+			uint Id = 29,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9.5, 0.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "QuestItem1",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a50196fd480ebb5:QuestItem2",
+		LinkId = 
+		{
+			uint Id = 30,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-8.5, 0.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "QuestItem2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a501997de7c61af:QuestItem3",
+		LinkId = 
+		{
+			uint Id = 31,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.5, 0.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "QuestItem3",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a5019f6eda94e41:QuestItem4",
+		LinkId = 
+		{
+			uint Id = 32,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-6.5, 0.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "QuestItem4",
 		},
 	},
 },

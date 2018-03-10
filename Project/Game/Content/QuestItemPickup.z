@@ -1,7 +1,5 @@
 class QuestItemPickup : ZilchComponent {
     [Property] var Index : Integer = 0;
-    [Property] var Name : String = "";
-    [Property] var Lore : String = "";
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
@@ -46,7 +44,7 @@ class QuestItemPickup : ZilchComponent {
         
         GlobalVariables.LorePanel.Sprite.Visible = true;
         
-        var text = "`this.Name`\n`this.Lore`\nRight click to pick up\nYou will return to main level when you pick this up";
+        var text = "`QuestItem.Lore[this.Index]`\n\nRight click to pick up\nYou will return to main level when you pick this up";
         
         GlobalVariables.LorePanel.LorePanel.Text = text;
     }
