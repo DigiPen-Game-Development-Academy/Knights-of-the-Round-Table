@@ -14,9 +14,16 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1, 0, 1],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [0, 0, 1],
+		Vec3 Scale = [0.5, 0.5, 1],
 		Quat Rotation = [0, 0, 0, 1],
+	},
+	MenuVisibilityController = 
+	{
+	},
+	Shield = 
+	{
+		float TurnSpeed = 1,
 	},
 	Hierarchy = 
 	{
@@ -32,8 +39,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.5, 0, 0],
-				Vec3 Scale = [0.25, 1, 1],
+				Vec3 Translation = [1.375, 0, 0],
+				Vec3 Scale = [0.25, 2, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -60,21 +67,24 @@ Cog =
 				bool SendsMessages = true,
 				bool Seamless = true,
 				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+				string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.5, 0.5, 0.5],
+				Vec3 Size = [0.5, 0.5, 2.5],
 			},
 			RigidBody = 
 			{
 				bool Static = false,
 				bool Asleep = false,
-				bool Kinematic = false,
+				bool Kinematic = true,
 				bool RotationLocked = false,
 				bool Mode2D = true,
 				bool AllowSleep = true,
 				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
+				Vec3 Velocity = [15.624999, 0, 0],
 				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			MenuVisibilitySprite = 
+			{
 			},
 		},
 	},
