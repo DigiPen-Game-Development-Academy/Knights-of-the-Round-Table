@@ -52,6 +52,7 @@ class Commands {
             Commands.Commands.Add(CMD("/devsaw",            Commands.DevSaw));
             Commands.Commands.Add(CMD("/loggon",            Commands.Login));
             Commands.Commands.Add(CMD("/test",              Commands.Test));
+            Commands.Commands.Add(CMD("/level",             Commands.Level));
             
         }
     }
@@ -132,6 +133,11 @@ class Commands {
             Utilities.ConsoleSend("/loggon", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("-Runs test finction-", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("/test", Real4(0, 1, 0, 1));
+        }  else if (Integer.Parse(vals[0]) == 3) {
+            Commands.Clear(null);
+            Utilities.ConsoleSend("---Commands---", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-Loads a level (has no auto-complete cause zero engine -_-)-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/level <level name>", Real4(0, 1, 0, 1));
         }
     }
     
@@ -355,6 +361,37 @@ class Commands {
             Utilities.ConsoleSend("WRONG!", Real4(1, 1, 0, 1));
             GlobalVariables.Player.FindChildByName("Camera").CamFollow.Spin = true;
         }
+        
+    }
+    
+    [Static]
+    function Level (vals : Array[String]) {
+        if(vals == null || vals.Count == 0) {
+            Utilities.ConsoleSend("INVALID PARAMETERS, use /level <level name>", Real4(1, 1, 0, 1));
+            return;
+        }
+        
+        var level = Zero.ResourceSystem.GetResourceByTypeAndName("Level", vals[0]) as Level;
+        
+        if(level == null) {
+            Utilities.ConsoleSend("Level `vals[0]` not found!", Real4(1, 1, 0, 1));
+            return;
+        }
+        
+        Utilities.ConsoleSend("Loading level `vals[0]`", Real4(1, 0, 0, 1));
+        
+        var uiSpace = GlobalVariables.GameSpace.GameSession.FindSpaceByName("UI");
+        if(uiSpace != null) {
+            uiSpace.Destroy();
+        }
+        if(GlobalVariables.GameSpace == null) {
+            GlobalVariables.GameSpace.Space.LoadLevel(level);
+            GlobalVariables.GameSpace.Space.TimeSpace.Paused = false;
+        } else {
+            GlobalVariables.GameSpace.LoadLevel(level);
+            GlobalVariables.GameSpace.TimeSpace.Paused = false;
+        }
+        Zero.Mouse.Trapped = false;
         
     }
     
