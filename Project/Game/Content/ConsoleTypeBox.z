@@ -101,7 +101,7 @@ class ConsoleTypeBox : ZilchComponent {
     
     function GetIndexFromPos (pos : Real3) : Integer {
         var x = pos.X - this.Owner.Transform.WorldTranslation.X;
-        Console.WriteLine(x);
+        
         for (var i = 0; i < this.CurrentIn.Count; ++i) {
             if(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, i)`").X >= x) {
                 return i;
@@ -336,13 +336,18 @@ class ConsoleTypeBox : ZilchComponent {
             
             if(Zero.Keyboard.KeyIsDown(Keys.Control)) {
                 
-                if(!this.Selection || this.SelectionMin - this.CursorIndex != 1) {
+                if(!this.Selection) {
                     this.Selection = true;
                     this.SelectionMax = this.CursorIndex+1;
                     this.SelectionMin = this.CursorIndex;
                 } else {
                     
-                    this.SelectionMin = this.CursorIndex;
+                    Console.WriteLine(this.SelectionMin - this.CursorIndex);
+                    
+                    if(this.SelectionMin - this.CursorIndex < 0)
+                        this.SelectionMax = this.CursorIndex;
+                    else
+                        this.SelectionMin = this.CursorIndex;
                     
                 }
             } else {
@@ -359,13 +364,18 @@ class ConsoleTypeBox : ZilchComponent {
             }
             
             if(Zero.Keyboard.KeyIsDown(Keys.Control)) {
-                if(!this.Selection || this.CursorIndex - this.SelectionMax != 1) {
+                if(!this.Selection) {
                     this.Selection = true;
                     this.SelectionMax = this.CursorIndex;
                     this.SelectionMin = this.CursorIndex-1;
                 } else {
                     
-                    this.SelectionMax = this.CursorIndex;
+                    Console.WriteLine(this.SelectionMax - this.CursorIndex);
+                    
+                    if(this.SelectionMax - this.CursorIndex < 1)
+                        this.SelectionMax = this.CursorIndex;
+                    else
+                        this.SelectionMin = this.CursorIndex;
                     
                 }
             } else {
