@@ -35,6 +35,10 @@ class ConsoleTypeBox : ZilchComponent {
     
     var Timer : Real = 1;
     
+    var Held : Boolean = false;
+    
+    var Dir : Boolean = false;
+    
     function Initialize(init : CogInitializer) {
         Commands.Init();
         this.InitialPos = this.Owner.Parent.ScreenAlign.Offset;
@@ -48,10 +52,77 @@ class ConsoleTypeBox : ZilchComponent {
         Zero.Connect(Zero.Keyboard, Events.TextTyped, this.OnTextTyped);
         Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
         Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        Zero.Connect(this.Space, Events.MouseUp, this.OnMouseUp);
+        Zero.Connect(this.Space, Events.MouseMove, this.OnMouseMove);
         Zero.Shell.ClipboardText;
     }
 
+    function OnMouseMove(event : ViewportMouseEvent) {
+        
+        if(this.Held) {
+            
+            var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
+            
+            if(this.Dir)
+                this.SelectionMax = this.GetIndexFromPos(mousePos);
+            else
+                this.SelectionMin = this.GetIndexFromPos(mousePos);
+            
+            if(this.SelectionMax < this.SelectionMin) {
+                
+                var temp = this.SelectionMin;
+                this.SelectionMin = this.SelectionMax;
+                this.SelectionMax = temp;
+                
+                this.Dir = !this.Dir;
+                
+            }
+            
+        }
+        
+    }
+
+    function OnMouseUp(event : ViewportMouseEvent) {
+        
+        if(!this.Selected || !this.Active)
+            return;
+        
+        this.Held = false;
+        this.CursorIndex = this.GetIndexFromPos(this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0));
+        if(this.SelectionMax == this.SelectionMin) {
+            
+            this.Selection = false;
+            this.Timer = 1;
+            this.Cursor.Sprite.Visible = true;
+            
+        }
+        
+    }
+    
+    function GetIndexFromPos (pos : Real3) : Integer {
+        var x = pos.X - this.Owner.Transform.WorldTranslation.X;
+        Console.WriteLine(x);
+        for (var i = 0; i < this.CurrentIn.Count; ++i) {
+            if(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, i)`").X >= x) {
+                return i;
+            }
+        }
+        
+        return this.CurrentIn.Count;
+    }
+
     function OnMouseDown(event : ViewportMouseEvent) {
+        
+        if (this.Selected) {
+            
+            this.Selection = true;
+            var index = this.GetIndexFromPos(this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0));
+            this.SelectionMax = index;
+            this.SelectionMin = index;
+            this.Held = true;
+            
+        }
+        
         this.Selected = true;
     }
 
@@ -121,7 +192,7 @@ class ConsoleTypeBox : ZilchComponent {
         this.Special(event.Character);
         
     }
-
+    
     function OnLogicUpdate(event : UpdateEvent) {
         
         
@@ -132,7 +203,7 @@ class ConsoleTypeBox : ZilchComponent {
             this.Cursor.Sprite.Visible = !this.Cursor.Sprite.Visible;
         }
         
-        if(!this.Selected || !this.Active) {
+        if(!this.Selected || !this.Active || this.Held) {
             this.Timer = 1;
             this.Cursor.Sprite.Visible = false;
         }
@@ -142,8 +213,6 @@ class ConsoleTypeBox : ZilchComponent {
             this.SelectionBar.Sprite.Visible = false;
         } else { 
             
-            Console.WriteLine(this.SelectionMin);
-            Console.WriteLine(this.SelectionMax);
             this.SelectionBar.Sprite.Visible = true;
             
             this.SelectionBar.Transform.Scale = Real3(this.Text.SpriteText.MeasureGivenText("`this.CurrentIn.SubStringFromRuneIndices(this.SelectionMin, this.SelectionMax)`").X, this.SelectionBar.Transform.Scale.Y, 1);
@@ -304,13 +373,16 @@ class ConsoleTypeBox : ZilchComponent {
                 this.Timer = 1;
                 this.Cursor.Sprite.Visible = true;
             }
+        } else if (key == Keys.Delete) {
+            
+            if(this.CursorIndex + 1 <= this.CurrentIn.Count) {
+                this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)``this.CurrentIn.SubStringFromRuneIndices(this.CursorIndex + 1, this.CurrentIn.Count)`";
+            }
         }
         
     }
     
     function Special (key : Integer) {
-        
-        Console.WriteLine(key);
         
         if(!this.Selected || !this.Active) {
             return;
