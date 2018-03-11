@@ -21,17 +21,34 @@ class ConsoleTypeBox : ZilchComponent {
     
     var ACIndex : Integer = -1;
     
+    var CursorIndex : Integer = 0;
+    
+    var Cursor : Cog;
+    
+    var Selection : Boolean = false;
+    
+    var SelectionMax : Integer = 0;
+    
+    var SelectionMin : Integer = 0;
+    
+    var SelectionBar : Cog;
+    
+    var Timer : Real = 1;
+    
     function Initialize(init : CogInitializer) {
         Commands.Init();
         this.InitialPos = this.Owner.Parent.ScreenAlign.Offset;
         this.History = Array[String]();
         this.History.Add("");
         this.Text = this.Owner.FindChildByName("Text");
+        this.Cursor = this.Owner.FindChildByName("Cursor");
+        this.SelectionBar = this.Owner.FindChildByName("Selection");
         this.Text.SpriteText.Color = Real4(1,1,1,1);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(Zero.Keyboard, Events.TextTyped, this.OnTextTyped);
         Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
         Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        Zero.Shell.ClipboardText;
     }
 
     function OnMouseDown(event : ViewportMouseEvent) {
@@ -42,6 +59,38 @@ class ConsoleTypeBox : ZilchComponent {
         if (!this.Selected && event.Key == Keys.Slash)
             this.Selected = true;
         
+        if (event.Key == Keys.V && Zero.Keyboard.KeyIsDown(Keys.Control)) {
+            if (this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn``Zero.Shell.ClipboardText`").X <= (this.Owner.Area.Size.X - 0.125)) {
+                this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)``Zero.Shell.ClipboardText``this.CurrentIn.SubStringFromRuneIndices(this.CursorIndex, this.CurrentIn.Count)`";
+                this.CursorIndex += Zero.Shell.ClipboardText.Count;
+            }
+        }
+        
+        if (event.Key == Keys.C && Zero.Keyboard.KeyIsDown(Keys.Control)) {
+            if (this.Selection) {
+                Zero.Shell.ClipboardText = this.CurrentIn.SubStringFromRuneIndices(this.SelectionMin, this.SelectionMax);
+                this.Selection = false;
+            }
+        }
+        
+        if (event.Key == Keys.X && Zero.Keyboard.KeyIsDown(Keys.Control)) {
+            if (this.Selection) {
+                Zero.Shell.ClipboardText = this.CurrentIn.SubStringFromRuneIndices(this.SelectionMin, this.SelectionMax);
+                
+                this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)``this.CurrentIn.SubStringFromRuneIndices(this.SelectionMax, this.CurrentIn.Count)`";
+                this.CursorIndex = this.SelectionMin;
+                
+                this.Selection = false;
+            }
+        }
+        
+        if (event.Key == Keys.A && Zero.Keyboard.KeyIsDown(Keys.Control)) {
+            this.Selection = true;
+            this.SelectionMin = 0;
+            this.SelectionMax = this.CurrentIn.Count;
+        }
+        
+        
         
         this.Special(event.Key);
     }
@@ -51,17 +100,59 @@ class ConsoleTypeBox : ZilchComponent {
         if (this.Selected && this.Active) {
             var key = String.FromChar(event.Character);
             if(this.IsRenderable(event.Character) && this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn``key`").X <= (this.Owner.Area.Size.X - 0.125)) {
-                this.CurrentIn = "`this.CurrentIn``key`";
+                
+                if(this.Selection) {
+                    this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)``this.CurrentIn.SubStringFromRuneIndices(this.SelectionMax, this.CurrentIn.Count)`";
+                    this.CursorIndex = this.SelectionMin;
+                }
+                
+                this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)``key``this.CurrentIn.SubStringFromRuneIndices(this.CursorIndex, this.CurrentIn.Count)`";
                 this.LastIn = this.CurrentIn;
                 this.ACIndex = -1;
+                ++this.CursorIndex;
+                this.Selection = false;
+                
+                this.Timer = 1;
+                this.Cursor.Sprite.Visible = true;
+                
                 return;
             }
-            
         }
-        
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        
+        //blinking
+        this.Timer -= event.Dt;
+        if(this.Timer <= 0) {
+            this.Timer = 1;
+            this.Cursor.Sprite.Visible = !this.Cursor.Sprite.Visible;
+        }
+        
+        if(!this.Selected || !this.Active) {
+            this.Timer = 1;
+            this.Cursor.Sprite.Visible = !this.Cursor.Sprite.Visible;
+        }
+        
+        //selection stuffage
+        if(!this.Selection) {
+            this.SelectionBar.Sprite.Visible = false;
+        } else { 
+            
+            Console.WriteLine(this.SelectionMin);
+            Console.WriteLine(this.SelectionMax);
+            this.SelectionBar.Sprite.Visible = true;
+            
+            this.SelectionBar.Transform.Scale = Real3(this.Text.SpriteText.MeasureGivenText("`this.CurrentIn.SubStringFromRuneIndices(this.SelectionMin, this.SelectionMax)`").X, this.SelectionBar.Transform.Scale.Y, 1);
+            
+            this.SelectionBar.Transform.Translation = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)`").X + 0.05 + (this.SelectionBar.Transform.Scale.X/2), 0.125, 2);
+            
+            this.Timer = 1;
+            this.Cursor.Sprite.Visible = false;
+            
+        }
+        
         
         if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.OpenConsole) && !this.Selected)
             this.Active = !this.Active;
@@ -75,6 +166,10 @@ class ConsoleTypeBox : ZilchComponent {
         
         this.Text.SpriteText.Visible = this.Active;
         this.Text.SpriteText.Text = ":>`this.CurrentIn`";
+        
+        var pos = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)`").X + 0.05, 0.125, 1);
+        
+        this.Cursor.Transform.Translation = pos;
         
         if(this.Selected && this.Active) {
             this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.X, this.Owner.Sprite.Color.Y, this.Owner.Sprite.Color.Z, 1);
@@ -132,10 +227,22 @@ class ConsoleTypeBox : ZilchComponent {
         
         if (key == Keys.Back) {
         
-            if(this.CurrentIn.Count > 0) {
-                this.CurrentIn = this.CurrentIn.SubStringFromRuneIndices(0, this.CurrentIn.Count-1);
+            if(this.CurrentIn.Count > 0 && this.CursorIndex > 0) {
+                
+                if(this.Selection) {
+                    this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)``this.CurrentIn.SubStringFromRuneIndices(this.SelectionMax, this.CurrentIn.Count)`";
+                    this.CursorIndex = this.SelectionMin;
+                } else {
+                    this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex-1)``this.CurrentIn.SubStringFromRuneIndices(this.CursorIndex, this.CurrentIn.Count)`";
+                    --this.CursorIndex;
+                }
                 this.LastIn = this.CurrentIn;
                 this.ACIndex = -1;
+                this.Selection = false;
+                
+                this.Timer = 1;
+                this.Cursor.Sprite.Visible = true;
+                
             }
         
         } else if (key == Keys.Enter) {
@@ -153,6 +260,8 @@ class ConsoleTypeBox : ZilchComponent {
             this.Selected = false;
             this.HistoryIndex = -1;
             this.ACIndex = -1;
+            this.CursorIndex = 0;
+            this.Selection = false;
             
         } else if (key == Keys.Up) {
             
@@ -166,6 +275,12 @@ class ConsoleTypeBox : ZilchComponent {
                 this.CurrentIn = this.History[this.HistoryIndex];
             }
             
+            this.CursorIndex = this.CurrentIn.Count;
+            this.Selection = false;
+            
+            this.Timer = 1;
+            this.Cursor.Sprite.Visible = true;
+            
         } else if (key == Keys.Down) {
             
             --this.HistoryIndex;
@@ -176,6 +291,12 @@ class ConsoleTypeBox : ZilchComponent {
             if(this.History.Count > 1) {
                 this.CurrentIn = this.History[this.HistoryIndex];
             }
+            
+            this.CursorIndex = this.CurrentIn.Count;
+            this.Selection = false;
+            
+            this.Timer = 1;
+            this.Cursor.Sprite.Visible = true;
             
         } else if (Zero.Keyboard.KeyIsDown(Keys.Shift) && key == Keys.Tab) {
             
@@ -194,6 +315,9 @@ class ConsoleTypeBox : ZilchComponent {
                 this.ACIndex = ac.Count-1;
             this.CurrentIn = ac[this.ACIndex];
             
+            this.CursorIndex = this.CurrentIn.Count;
+            this.Selection = false;
+            
         } else if (key == Keys.Tab) {
             
             var ac = this.GetAC(this.LastIn);
@@ -211,9 +335,58 @@ class ConsoleTypeBox : ZilchComponent {
                 this.ACIndex = 0;
             this.CurrentIn = ac[this.ACIndex];
             
+            this.CursorIndex = this.CurrentIn.Count;
+            this.Selection = false;
+            
+            this.Timer = 1;
+            this.Cursor.Sprite.Visible = true;
+            
+        } else if (key == Keys.Left) {
+            
+            --this.CursorIndex;
+            if (this.CursorIndex < 0) {
+                this.CursorIndex = 0;
+            }
+            
+            if(Zero.Keyboard.KeyIsDown(Keys.Control)) {
+                
+                if(!this.Selection || this.SelectionMin - this.CursorIndex != 1) {
+                    this.Selection = true;
+                    this.SelectionMax = this.CursorIndex+1;
+                    this.SelectionMin = this.CursorIndex;
+                } else {
+                    
+                    this.SelectionMin = this.CursorIndex;
+                    
+                }
+            } else {
+                this.Selection = false;
+                this.Timer = 1;
+                this.Cursor.Sprite.Visible = true;
+            }
+            
+        } else if (key == Keys.Right) {
+            
+            ++this.CursorIndex;
+            if (this.CursorIndex > this.CurrentIn.Count) {
+                this.CursorIndex = this.CurrentIn.Count;
+            }
+            
+            if(Zero.Keyboard.KeyIsDown(Keys.Control)) {
+                if(!this.Selection || this.CursorIndex - this.SelectionMax != 1) {
+                    this.Selection = true;
+                    this.SelectionMax = this.CursorIndex;
+                    this.SelectionMin = this.CursorIndex-1;
+                } else {
+                    
+                    this.SelectionMax = this.CursorIndex;
+                    
+                }
+            } else {
+                this.Selection = false;
+                this.Timer = 1;
+                this.Cursor.Sprite.Visible = true;
+            }
         }
-        
-        
     }
-    
 }

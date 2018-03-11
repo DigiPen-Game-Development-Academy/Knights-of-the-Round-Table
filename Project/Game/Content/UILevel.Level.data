@@ -309,7 +309,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.956692815, 0.377674013, 50],
+			Vec3 Translation = [-8.21384811, -4.86448669, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -321,7 +321,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 5.43656349,
+			float Size = 3.29744291,
 		},
 		EditorCameraController = 
 		{
@@ -329,7 +329,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.956692815, 0.377674013, 4.94149617e-07],
+			Vec3 LookTarget = [-8.21384811, -4.86448669, 1.76929461e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2348,13 +2348,83 @@ Level =
 							bool Smoothing = true,
 						},
 					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 63,
+						},
+						Named = 
+						{
+							string Name = "Cursor",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 0.125, 0],
+							Vec3 Scale = [0.0250000004, 0.25, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5275aa4d802dd6dc:Square",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 64,
+						},
+						Named = 
+						{
+							string Name = "Selection",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 0.125, 1],
+							Vec3 Scale = [0.0250000004, 0.25, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = MultiplyAdd,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5275aa4d802dd6dc:Square",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+					},
 				},
 			},
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 63,
+					uint Id = 65,
 				},
 				Named = 
 				{
@@ -2405,7 +2475,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 64,
+			uint Id = 66,
 		},
 		Named = 
 		{
@@ -2453,7 +2523,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 65,
+			uint Id = 67,
 		},
 		Named = 
 		{
@@ -2492,7 +2562,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 66,
+					uint Id = 68,
 				},
 				Named = 
 				{
@@ -2529,7 +2599,7 @@ Level =
 		string Name = "5a6dc57e30d123ad:SoundWaves",
 		LinkId = 
 		{
-			uint Id = 67,
+			uint Id = 69,
 		},
 		Transform = 
 		{
@@ -2551,7 +2621,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 68,
+			uint Id = 70,
 		},
 		Named = 
 		{
@@ -2600,7 +2670,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 69,
+			uint Id = 71,
 		},
 		Named = 
 		{
@@ -2654,7 +2724,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 70,
+					uint Id = 72,
 				},
 				Named = 
 				{
