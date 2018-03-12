@@ -117,6 +117,7 @@ class ConsoleTypeBox : ZilchComponent {
     }
     
     function GetIndexFromPos (pos : Real3) : Integer {
+        
         var x = pos.X - this.Owner.Transform.WorldTranslation.X;
         
         for (var i = 0; i < this.CurrentIn.Count; ++i) {
@@ -150,8 +151,12 @@ class ConsoleTypeBox : ZilchComponent {
     }
 
     function OnKeyDown (event : KeyboardEvent) {
-        if (!this.Selected && event.Key == Keys.Slash)
+        
+        if (!this.Selected && event.Key == Keys.Slash) {
+            
             this.Selected = true;
+            
+        }
         
         if (event.Key == Keys.V && Zero.Keyboard.KeyIsDown(Keys.Control)) {
             
@@ -225,9 +230,12 @@ class ConsoleTypeBox : ZilchComponent {
                 }
                 
                 this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)``key``this.CurrentIn.SubStringFromRuneIndices(this.CursorIndex, this.CurrentIn.Count)`";
+                
                 this.LastIn = this.CurrentIn;
                 this.ACIndex = -1;
+                
                 ++this.CursorIndex;
+                
                 this.Selection = false;
                 
                 this.Timer = 1;
@@ -437,7 +445,7 @@ class ConsoleTypeBox : ZilchComponent {
                 
             }
             
-            if(Zero.Keyboard.KeyIsDown(Keys.Control)) {
+            if(Zero.Keyboard.KeyIsDown(Keys.Shift)) {
                 
                 if(!this.Selection) {
                     
@@ -467,6 +475,12 @@ class ConsoleTypeBox : ZilchComponent {
                 this.Timer = 1;
                 this.Cursor.Sprite.Visible = true;
                 
+                if(Zero.Keyboard.KeyIsDown(Keys.Control)) {
+                    
+                    this.CursorIndex = 0;
+                    
+                }
+                
             }
             
         } else if (key == Keys.Right) {
@@ -478,7 +492,7 @@ class ConsoleTypeBox : ZilchComponent {
                 
             }
             
-            if(Zero.Keyboard.KeyIsDown(Keys.Control)) {
+            if(Zero.Keyboard.KeyIsDown(Keys.Shift)) {
                 if(!this.Selection) {
                     
                     this.Selection = true;
@@ -506,6 +520,12 @@ class ConsoleTypeBox : ZilchComponent {
                 this.Selection = false;
                 this.Timer = 1;
                 this.Cursor.Sprite.Visible = true;
+                
+                if(Zero.Keyboard.KeyIsDown(Keys.Control)) {
+                    
+                    this.CursorIndex = this.CurrentIn.Count;
+                    
+                }
                 
             }
             
