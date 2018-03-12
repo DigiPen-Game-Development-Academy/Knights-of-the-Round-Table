@@ -132,8 +132,20 @@ class ConsoleTypeBox : ZilchComponent {
         
         if (event.Key == Keys.V && Zero.Keyboard.KeyIsDown(Keys.Control)) {
             if (this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn``Zero.Shell.ClipboardText`").X <= (this.Owner.Area.Size.X - 0.125)) {
-                this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)``Zero.Shell.ClipboardText``this.CurrentIn.SubStringFromRuneIndices(this.CursorIndex, this.CurrentIn.Count)`";
-                this.CursorIndex += Zero.Shell.ClipboardText.Count;
+                
+                var str = Zero.Shell.ClipboardText;
+                var toAdd = "";
+                
+                for (var i = 0; i < str.Count; ++i) {
+                    Console.WriteLine(str[i]);
+                    if(this.IsRenderable(str[i])) {
+                        toAdd = "`toAdd``String.FromChar(str[i])`";
+                    }
+                    
+                }
+                
+                this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)``toAdd``this.CurrentIn.SubStringFromRuneIndices(this.CursorIndex, this.CurrentIn.Count)`";
+                this.CursorIndex += toAdd.Count;
             }
         }
         
