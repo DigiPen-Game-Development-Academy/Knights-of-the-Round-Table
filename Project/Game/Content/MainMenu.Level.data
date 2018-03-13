@@ -63,13 +63,13 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			ViewportScaling Scaling = Letterbox,
+			ViewportScaling Scaling = Fill,
 			Vec2 Resolution = [2, 1],
-			Vec4 MarginColor = [0.125490203, 0.125490203, 0.125490203, 1],
+			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0, 0, 0, 1],
+			Vec4 ClearColor = [0.125, 0.125, 0.125, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -132,7 +132,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.00492500141, -1.70322776, 50],
+			Vec3 Translation = [1.39242065, 2.21682143, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -144,7 +144,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.04636,
+			float Size = 4.91921234,
 		},
 		EditorCameraController = 
 		{
@@ -152,7 +152,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.00492500141, -1.70322776, -2.15260365e-10],
+			Vec3 LookTarget = [1.39242065, 2.21682143, 6.08647497e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -510,21 +510,21 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 150,
-			string Text = "Alpha V0.3 DEV",
+			string Text = "Beta 1.0",
 			TextAlign Align = Right,
 			float PixelsPerUnit = 429.0383,
 			bool Smoothing = true,
 		},
 		Area = 
 		{
-			Vec2 Size = [3, 0.5],
+			Vec2 Size = [2, 0.5],
 			Location Origin = CenterRight,
 		},
 		ScreenAlign = 
 		{
 			Enum Pos = Bottomright,
-			Vec3 Offset = [0, 0, 0],
-			Vec2 RelOffset = [-1, 0],
+			Vec3 Offset = [0.899999976, 0, 0],
+			Vec2 RelOffset = [0, 0],
 		},
 	},
 	Cog = 
@@ -572,6 +572,53 @@ Level =
 		SimpleAnimation = 
 		{
 			string AnimationName = "5a7e4b0078293a5c:FadeInSprite",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.719999969, 3, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0.473749369],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 150,
+			string Text = "Now in Beta!",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 310.496155,
+			bool Smoothing = true,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 2020656d61472064,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a7e502445d852b1:fadeIn",
 			AnimPlayMode PlayMode = PlayOnce,
 		},
 	},

@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Alien Welder",
-		uint64 ResourceId = 5ad392be67f7f9ea,
+		string Name = "HatchAlpha000",
+		uint64 ResourceId = 5ad385cecedf3489,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 32,
 		uint FrameSizeY = 32,
