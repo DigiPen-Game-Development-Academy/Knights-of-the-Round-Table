@@ -371,4 +371,10 @@ class Utilities
         
     }
     
+    [Static]
+    function ScreenShake (intencity : Real, falloff : Real) {
+        GlobalVariables.CamFollow.ScreenShakeIntencity = intencity;
+        GlobalVariables.CamFollow.Falloff = falloff;
+    }
+    
 }

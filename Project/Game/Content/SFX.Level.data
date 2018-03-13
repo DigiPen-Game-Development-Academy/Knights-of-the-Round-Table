@@ -10,21 +10,6 @@ Level =
 		{
 			string Name = "LevelSettings",
 		},
-		GravityEffect = 
-		{
-			bool Active = true,
-			bool WakeUpOnChange = false,
-			bool LocalSpaceDirection = true,
-			float Strength = 10,
-			Vec3 Direction = [0, -1, 0],
-		},
-		DragEffect = 
-		{
-			bool Active = true,
-			bool WakeUpOnChange = false,
-			float Drag = 0.699999988,
-			float AngularDrag = 0.100000001,
-		},
 		CameraViewport = 
 		{
 			bool Background = false,
@@ -63,13 +48,13 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			ViewportScaling Scaling = Fill,
+			ViewportScaling Scaling = Letterbox,
 			Vec2 Resolution = [1280, 720],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0.155000001, 0.155000001, 0.155000001, 1],
+			Vec4 ClearColor = [0, 0, 0, 0],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -104,7 +89,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.698223412, 0.666981101, 50],
+			Vec3 Translation = [2.43835616, -0.383561671, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +101,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 2,
+			float Size = 20,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +109,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.698223412, 0.666981101, 3.05203116e-08],
+			Vec3 LookTarget = [2.43835616, -0.383561671, 1.0658394e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -166,48 +151,6 @@ Level =
 		{
 			bool Active = true,
 			float Volume = 1,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 4,
-		},
-		Named = 
-		{
-			string Name = "MouseCursor",
-		},
-		Archetyped = 
-		{
-			string Name = "5a7c13a3d53cf81f:MouseCursor",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.50373733, 0.966432512, 5.57986198e-07],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5af493b40c44fe54:Cursor",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		CursorController = 
-		{
 		},
 	},
 },

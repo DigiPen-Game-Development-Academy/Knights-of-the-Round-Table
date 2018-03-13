@@ -39,6 +39,8 @@ class ConsoleTypeBox : ZilchComponent {
     
     var Dir : Boolean = false;
     
+    var Offset : Real = 0;
+    
     function Initialize(init : CogInitializer) {
         
         Commands.Init();
@@ -60,8 +62,26 @@ class ConsoleTypeBox : ZilchComponent {
         Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
         Zero.Connect(this.Space, Events.MouseUp, this.OnMouseUp);
         Zero.Connect(this.Space, Events.MouseMove, this.OnMouseMove);
+        Zero.Connect(this.GameSession, Events.KeyHeld, this.OnKeyHeld);
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
         
         Zero.Shell.ClipboardText;
+        
+    }
+
+    function OnMouseExit(event : ViewportMouseEvent) {
+        GlobalVariables.Cursor.CursorController.SetNormal();
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        if(this.Selected && this.Active)
+            GlobalVariables.Cursor.CursorController.SetText();
+    }
+
+    function OnKeyHeld(event : KeyHeld) {
+        
+        this.Arrows(event.Key);
         
     }
 
@@ -220,7 +240,7 @@ class ConsoleTypeBox : ZilchComponent {
             
             var key = String.FromChar(event.Character);
             
-            if(this.IsRenderable(event.Character) && this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn``key`").X <= (this.Owner.Area.Size.X - 0.125)) {
+            if(this.IsRenderable(event.Character)) {
                 
                 if(this.Selection) {
                     
@@ -255,7 +275,7 @@ class ConsoleTypeBox : ZilchComponent {
         
         //blinking
         this.Timer -= event.Dt;
-        if(this.Timer <= 0) {
+        if(this.Timer <= 0.5) {
             
             this.Timer = 1;
             this.Cursor.Sprite.Visible = !this.Cursor.Sprite.Visible;
@@ -287,10 +307,12 @@ class ConsoleTypeBox : ZilchComponent {
             
         }
         
-        
         if(Zero.Keyboard.KeyIsPressed(GlobalVariables.InputManager.OpenConsole) && !this.Selected) {
             
             this.Active = !this.Active;
+            
+            if(this.Active)
+                this.Selected = true;
             
         }
         
@@ -390,6 +412,10 @@ class ConsoleTypeBox : ZilchComponent {
     
     function Arrows (key : Keys) {
         
+        if(!this.Selected || !this.Active) {
+            return;
+        }
+        
          if (key == Keys.Up) {
             
             ++this.HistoryIndex;
@@ -457,7 +483,7 @@ class ConsoleTypeBox : ZilchComponent {
                     
                     Console.WriteLine(this.SelectionMin - this.CursorIndex);
                     
-                    if(this.SelectionMin - this.CursorIndex < 0) {
+                    if(this.SelectionMin - this.CursorIndex < 1) {
                         
                         this.SelectionMax = this.CursorIndex;
                         
@@ -503,7 +529,7 @@ class ConsoleTypeBox : ZilchComponent {
                     
                     Console.WriteLine(this.SelectionMax - this.CursorIndex);
                     
-                    if(this.SelectionMax - this.CursorIndex < 1) {
+                    if(this.SelectionMax - this.CursorIndex < 0) {
                         
                         this.SelectionMax = this.CursorIndex;
                         
@@ -599,6 +625,7 @@ class ConsoleTypeBox : ZilchComponent {
             this.ACIndex = -1;
             this.CursorIndex = 0;
             this.Selection = false;
+            GlobalVariables.Cursor.CursorController.SetNormal();
             
         }else if (Zero.Keyboard.KeyIsDown(Keys.Shift) && key == 9) { // shift tab
             

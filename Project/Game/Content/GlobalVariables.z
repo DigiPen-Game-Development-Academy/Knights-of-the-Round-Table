@@ -84,6 +84,12 @@ class GlobalVariables {
     var SFXSpace : Space = null;
     
     [Static]
+    var Cursor : Cog;
+    
+    [Static]
+    var CamFollow : CamFollow;
+    
+    [Static]
     function AddInventoryItem (item : Item) : Boolean {
         
         for(var i = 0; i < GlobalVariables.Items.Count; ++i){

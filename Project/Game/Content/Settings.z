@@ -4,4 +4,5 @@ class Settings {
     [Static] var SFXvol : Real = 1;
     [Static] var MUSICvol : Real = 1;
     [Static] var CamSmoothness : Real = 1;
+    [Static] var ScreenShake : Real = 1;
 }

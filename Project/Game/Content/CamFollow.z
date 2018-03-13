@@ -6,7 +6,16 @@ class CamFollow : ZilchComponent {
     var TargetPos : Real3 = Real3(0);
     [Property] var MoveSpd : Real = 5;
     var StartSpd : Real = 5;
+    
+    var Rand : Random;
+    
+    var ScreenShakeIntencity : Real = 0;
+    
+    var Falloff : Real = 5;
+    
     function Initialize(init : CogInitializer) {
+        GlobalVariables.CamFollow = this;
+        this.Rand = Random();
         this.StartSpd = this.MoveSpd;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.Owner.Transform.WorldTranslation = GlobalVariables.Player.Transform.WorldTranslation + Real3(0,0,40);
@@ -34,5 +43,19 @@ class CamFollow : ZilchComponent {
         
         this.Owner.Transform.WorldTranslation = Math.Lerp(this.Owner.Transform.WorldTranslation, this.TargetPos, (event.Dt*this.MoveSpd)/(0.5+(10*Settings.CamSmoothness)));
         
+        this.HandelScreenShake(event.Dt);
+        
     }
+    
+    function HandelScreenShake(dt : Real) {
+        
+        this.Owner.Transform.WorldTranslation += Settings.ScreenShake * (Real3(this.Rand.Range(-this.ScreenShakeIntencity, this.ScreenShakeIntencity), this.Rand.Range(-this.ScreenShakeIntencity, this.ScreenShakeIntencity), 0) * dt);
+        
+        this.ScreenShakeIntencity -= dt * this.Falloff;
+        
+        if(this.ScreenShakeIntencity < 0)
+            this.ScreenShakeIntencity = 0;
+        
+    }
+    
 }

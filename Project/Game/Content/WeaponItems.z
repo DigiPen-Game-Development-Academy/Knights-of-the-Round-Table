@@ -161,6 +161,8 @@ class Plasma_Pistol : Item {
         
         Utilities.PlaySFX(this.Sound);
         
+        Utilities.ScreenShake(3, 10);
+        
     }
     
 }
