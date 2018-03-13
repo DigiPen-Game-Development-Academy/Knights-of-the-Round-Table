@@ -63,9 +63,9 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			ViewportScaling Scaling = Fill,
+			ViewportScaling Scaling = Letterbox,
 			Vec2 Resolution = [2, 1],
-			Vec4 MarginColor = [0, 0, 0, 1],
+			Vec4 MarginColor = [0.125490203, 0.125490203, 0.125490203, 1],
 		},
 		ForwardRenderer = 
 		{
@@ -132,7 +132,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.39242065, 2.21682143, 50],
+			Vec3 Translation = [0.67148906, -1.18897533, 117.557846],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -144,15 +144,15 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.91921234,
+			float Size = 32.8893166,
 		},
 		EditorCameraController = 
 		{
 			ControlMode ControlMode = ZPlane,
-			float LookDistance = 50,
+			float LookDistance = 91.105896,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.39242065, 2.21682143, 6.08647497e-08],
+			Vec3 LookTarget = [0.67148906, -1.18897533, 26.4519501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -597,7 +597,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 0.473749369],
+			Vec4 Color = [1, 1, 1, 0.231269687],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
