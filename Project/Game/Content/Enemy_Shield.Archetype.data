@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-4.5, 1.5, 0],
+		Vec3 Translation = [6.25790834, -0.656946719, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -217,7 +217,7 @@ Cog =
 					Transform = 
 					{
 						Vec3 Translation = [0.625, 0, 0],
-						Vec3 Scale = [0.25, 1, 1],
+						Vec3 Scale = [1, 1, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
 					Sprite = 
@@ -230,7 +230,7 @@ Cog =
 						BlendMode BlendMode = Alpha,
 						SpriteGeometryMode GeometryMode = ZPlane,
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string SpriteSource = "5275aa4d802dd6dc:Square",
+						string SpriteSource = "5ad391c7f0ed4e59:BossyShieldAlpha",
 						bool RenderMask = false,
 						bool FlipX = false,
 						bool FlipY = false,
@@ -246,7 +246,7 @@ Cog =
 						string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 						string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
 						Vec3 Offset = [0, 0, 0],
-						Vec3 Size = [0.5, 0.5, 2],
+						Vec3 Size = [0.125, 0.5, 2],
 					},
 					RigidBody = 
 					{
@@ -257,11 +257,16 @@ Cog =
 						bool Mode2D = true,
 						bool AllowSleep = true,
 						bool Inherit2DMode = true,
-						Vec3 Velocity = [-54.6874962, 0, 0],
+						Vec3 Velocity = [0, 0, 0],
 						Vec3 AngularVelocity = [0, 0, 0],
 					},
 					MenuVisibilitySprite = 
 					{
+					},
+					Area = 
+					{
+						Vec2 Size = [0.25, 1],
+						Location Origin = Center,
 					},
 				},
 			},
