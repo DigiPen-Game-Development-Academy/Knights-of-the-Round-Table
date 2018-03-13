@@ -331,7 +331,7 @@ class ConsoleTypeBox : ZilchComponent {
         this.Text.SpriteText.Visible = this.Active;
         this.Text.SpriteText.Text = ":>`this.CurrentIn`";
         
-        var pos = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)`").X + 0.05, 0.125, 1);
+        var pos = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)`").X, 0.125, 1);
         
         this.Cursor.Transform.Translation = pos;
         
