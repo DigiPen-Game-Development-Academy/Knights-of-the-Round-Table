@@ -174,8 +174,8 @@ class PlasmaSword : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Sword;
-        this.GroundSprite = SpriteSource.Sword;
+        this.Icon = SpriteSource.FlareSaberAlpha;
+        this.GroundSprite = SpriteSource.FlareSaberAlpha;
         this.Stackable = false;
         this.MagSize = 10;
         this.Name = "Plasma Sword";
@@ -438,8 +438,8 @@ class SawLaser  : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.DragonRoarAlpha;
+        this.GroundSprite = SpriteSource.DragonRoarAlpha;
         this.Sound = SoundCue.Shot;
         this.Stackable = false;
         this.MagSize = 100;
@@ -499,8 +499,8 @@ class Lasersniper  : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.InfernoSniperAlpha;
+        this.GroundSprite = SpriteSource.InfernoSniperAlpha;
         this.Sound = SoundCue.LSniper;
         this.Stackable = false;
         this.Auto = false;
@@ -650,7 +650,7 @@ class Potatocannon  : Item {
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
         this.SoundDistance = 5;
-        this.MagSize = 200;
+        this.MagSize = 1;
         this.Name = "Potato Cannon";
         this.ID = "Potato_cannon";
         this.DamagePer = 50;
@@ -710,8 +710,8 @@ class MMS_Sniper  : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.InfernoSniperAlpha;
+        this.GroundSprite = SpriteSource.InfernoSniperAlpha;
         this.Stackable = false;
         this.MagSize = 10;
         this.Name = "MMS Sniper";
