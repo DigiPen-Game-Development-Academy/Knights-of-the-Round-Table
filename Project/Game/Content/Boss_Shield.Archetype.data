@@ -46,7 +46,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 0.0400002003, 1, 1],
+		Vec4 Color = [1, 1, 1, 0.999899983],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -116,6 +116,17 @@ Cog =
 		float ArcIntencity = 1,
 		string DeathMSG = "You where hit in the face with a missile",
 	},
+	EnemySprite = 
+	{
+		string North = "5ad3979db88a06bd:ShieldBossAlpha002",
+		string NorthEast = "5ad3979db88a06bd:ShieldBossAlpha002",
+		string East = "5ad3979dbb65979e:ShieldBossAlpha003",
+		string SouthEast = "5ad3979cb8a4f2a3:ShieldBossAlpha000",
+		string South = "5ad3979cb8a4f2a3:ShieldBossAlpha000",
+		string SouthWest = "5ad3979cb8a4f2a3:ShieldBossAlpha000",
+		string West = "5ad3979cb89cf4f9:ShieldBossAlpha001",
+		string NorthWest = "5ad3979db88a06bd:ShieldBossAlpha002",
+	},
 	Hierarchy = 
 	{
 		ArchetypeInstance = 
@@ -141,12 +152,19 @@ Cog =
 				string Name = "Healthbar",
 			},
 		},
-		ArchetypeInstance = 
+		Cog = 
 		{
-			string Name = "5a508b0a00bfa5a3:Shield",
 			LinkId = 
 			{
 				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "Shield",
+			},
+			Archetyped = 
+			{
+				string Name = "5a508b0a00bfa5a3:Shield",
 			},
 			Transform = 
 			{
@@ -154,9 +172,80 @@ Cog =
 				Vec3 Scale = [0.5, 0.5, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
-			Named = 
+			MenuVisibilityController = 
 			{
-				string Name = "Shield",
+			},
+			Shield = 
+			{
+				float TurnSpeed = 1,
+			},
+			Hierarchy = 
+			{
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 4,
+					},
+					Named = 
+					{
+						string Name = "Blocker",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [1.375, 0, 0],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5ad391c7f0ed4e59:BossyShieldAlpha",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+					BoxCollider = 
+					{
+						bool Ghost = false,
+						bool SendsMessages = true,
+						bool Seamless = true,
+						string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+						string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
+						Vec3 Offset = [0, 0, 0],
+						Vec3 Size = [0.125, 1, 2.5],
+					},
+					RigidBody = 
+					{
+						bool Static = false,
+						bool Asleep = false,
+						bool Kinematic = true,
+						bool RotationLocked = false,
+						bool Mode2D = true,
+						bool AllowSleep = true,
+						bool Inherit2DMode = true,
+						Vec3 Velocity = [0, 0, 0],
+						Vec3 AngularVelocity = [0, 0, 0],
+					},
+					MenuVisibilitySprite = 
+					{
+					},
+					Area = 
+					{
+						Vec2 Size = [0.25, 2],
+						Location Origin = Center,
+					},
+				},
 			},
 		},
 	},
