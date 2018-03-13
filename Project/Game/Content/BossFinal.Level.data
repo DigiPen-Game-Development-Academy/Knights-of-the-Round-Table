@@ -159,7 +159,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.45918083, -0.471691638, 50],
+			Vec3 Translation = [1.17614317, -0.0102679785, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -171,7 +171,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2456656,
+			float Size = 6.00833797,
 		},
 		EditorCameraController = 
 		{
@@ -179,7 +179,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.45918083, -0.471691638, 6.37839079e-08],
+			Vec3 LookTarget = [1.17614317, -0.0102679785, 5.14120124e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -830,7 +830,7 @@ Level =
 						Transform = 
 						{
 							Vec3 Translation = [1.375, 0, 0],
-							Vec3 Scale = [0.25, 2, 1],
+							Vec3 Scale = [1, 1, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
 						Sprite = 
@@ -843,7 +843,7 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5275aa4d802dd6dc:Square",
+							string SpriteSource = "5ad391c7f0ed4e59:BossyShieldAlpha",
 							bool RenderMask = false,
 							bool FlipX = false,
 							bool FlipY = false,
@@ -859,7 +859,7 @@ Level =
 							string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 							string SerializedGroupName = "5a57db49dff94fe2:Shield",
 							Vec3 Offset = [0, 0, 0],
-							Vec3 Size = [0.5, 0.5, 2.5],
+							Vec3 Size = [0.125, 1, 2.5],
 						},
 						RigidBody = 
 						{
@@ -870,11 +870,16 @@ Level =
 							bool Mode2D = true,
 							bool AllowSleep = true,
 							bool Inherit2DMode = true,
-							Vec3 Velocity = [85.9374924, 0, 62.4999962],
+							Vec3 Velocity = [0, 0, 0],
 							Vec3 AngularVelocity = [0, 0, 0],
 						},
 						MenuVisibilitySprite = 
 						{
+						},
+						Area = 
+						{
+							Vec2 Size = [0.25, 2],
+							Location Origin = Center,
 						},
 					},
 				},

@@ -309,7 +309,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.57806301, 0.496714771, 50],
+			Vec3 Translation = [7.06604195, -5.84685612, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -321,7 +321,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.96338463,
+			float Size = 6.00833941,
 		},
 		EditorCameraController = 
 		{
@@ -329,7 +329,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [7.57806301, 0.496714771, 8.67215988e-07],
+			Vec3 LookTarget = [7.06604195, -5.84685612, 8.44834915e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2654,14 +2654,14 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 150,
-			string Text = "Alpha V0.3 DEV",
+			string Text = "Beta 1.0",
 			TextAlign Align = Right,
 			float PixelsPerUnit = 429.0383,
 			bool Smoothing = true,
 		},
 		Area = 
 		{
-			Vec2 Size = [3, 0.5],
+			Vec2 Size = [2, 0.5],
 			Location Origin = Center,
 		},
 		ScreenAlign = 

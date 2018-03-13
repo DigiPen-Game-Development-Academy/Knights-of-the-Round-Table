@@ -65,7 +65,7 @@ RichAnimation =
 												Object value = 
 												{
 													float Time = 2,
-													float Value = 0.549019635,
+													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
@@ -90,7 +90,7 @@ RichAnimation =
 												Object value = 
 												{
 													float Time = 2,
-													float Value = 0.549019635,
+													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
@@ -115,7 +115,7 @@ RichAnimation =
 												Object value = 
 												{
 													float Time = 2,
-													float Value = 0.549019635,
+													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
