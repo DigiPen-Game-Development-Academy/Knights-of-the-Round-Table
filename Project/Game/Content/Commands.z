@@ -66,8 +66,8 @@ class Commands {
         
         if(Commands.Commands != null) {
             foreach(var command in Commands.Commands) {
-                if(cmd == command.Cmd) {
-                    if(command.Cmd == "/loggon" || Commands.LoggedOn == true)
+                if(cmd.ToLower() == command.Cmd.ToLower()) {
+                    if(command.Cmd.ToLower() == "/loggon" || Commands.LoggedOn == true)
                         command.Func(vals);
                     else {
                         Utilities.ConsoleSend("YOU DIDN'T LOG ON!", Real4(1, 1, 0, 1));

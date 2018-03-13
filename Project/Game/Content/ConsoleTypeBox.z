@@ -343,13 +343,13 @@ class ConsoleTypeBox : ZilchComponent {
         
         var strs = Array[String]();
         
-        if (str.StartsWith ("/give")) {
+        if (str.ToLower().StartsWith ("/give")) {
             
             foreach (var cmd in Utilities.Ids) {
                 
                 var nCmd = "/give `cmd.ID`";
                 
-                if (nCmd.StartsWith(str)) {
+                if (nCmd.ToLower().StartsWith(str.ToLower())) {
                     
                     strs.Add(nCmd);
                     
@@ -363,7 +363,7 @@ class ConsoleTypeBox : ZilchComponent {
                 
                 var nCmd = "/spawn `id.ID`";
                 
-                if (nCmd.StartsWith(str)) {
+                if (nCmd.ToLower().StartsWith(str.ToLower())) {
                     
                     strs.Add(nCmd);
                     
@@ -375,7 +375,7 @@ class ConsoleTypeBox : ZilchComponent {
             
             foreach (var cmd in Commands.Commands) {
                 
-                if (cmd.Cmd.StartsWith(str)) {
+                if (cmd.Cmd.ToLower().StartsWith(str.ToLower())) {
                     
                     strs.Add(cmd.Cmd);
                     
