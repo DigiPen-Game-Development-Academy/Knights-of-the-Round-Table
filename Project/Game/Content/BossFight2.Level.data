@@ -162,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 3.33732772,
+			float Size = 7.42736101,
 		},
 		EditorCameraController = 
 		{
@@ -495,7 +495,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 1000,
+			float InitialHealth = 2000,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 		},
@@ -526,7 +526,7 @@ Level =
 			float BSpeedFull = 3,
 			float BSpeedEmpty = 10,
 			float DamageFull = 10,
-			float DamageEmpty = 25,
+			float DamageEmpty = 15,
 			float SpreadHealth = 0.75,
 			float SpinHealth = 0.5,
 			float WindCooldownFull = 1,
@@ -537,7 +537,7 @@ Level =
 		{
 			string Part = "5a50196fd480ebb5:QuestItem2",
 			string Note = "THIS IS A NOTE",
-			string Drops = "",
+			string Drops = "5a74b95ba553bc1f:Winning",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 		},
