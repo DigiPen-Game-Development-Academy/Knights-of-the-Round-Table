@@ -171,7 +171,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.00833797,
+			float Size = 9.90607548,
 		},
 		EditorCameraController = 
 		{
@@ -627,7 +627,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 1000,
+			float InitialHealth = 5000,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 		},
@@ -668,8 +668,8 @@ Level =
 			float FireRateEmpty = 1,
 			float SpeedFull = 1,
 			float SpeedEmpty = 1,
-			float DamageFull = 1,
-			float DamageEmpty = 1,
+			float DamageFull = 100,
+			float DamageEmpty = 100,
 			float SplashFull = 1,
 			float SplashEmpty = 1,
 			float ArcIntencity = 1,
@@ -678,11 +678,11 @@ Level =
 		Stealth = 
 		{
 			float SneakRange = 10,
-			float SneakCooldown = 3,
+			float SneakCooldown = 7,
 		},
 		StealthBoss = 
 		{
-			float SneakCooldown = 5,
+			float SneakCooldown = 7,
 		},
 		Boss_GI_AI = 
 		{
@@ -701,7 +701,7 @@ Level =
 			float SpreadMax = 10,
 			float SpreadMin = 5,
 			float SpreadNumMax = 5,
-			float SpreadNumMin = 20,
+			float SpreadNumMin = 15,
 			float SpinFull = 1,
 			float SpinEmpty = 3,
 			float SpinSpeedFull = 25,
@@ -710,7 +710,7 @@ Level =
 			float SpinFireRateEmpty = 15,
 			float BSpeedFull = 3,
 			float BSpeedEmpty = 7,
-			float DamageFull = 10,
+			float DamageFull = 15,
 			float DamageEmpty = 25,
 			float SpreadHealth = 0.75,
 			float SpinHealth = 0.5,
@@ -730,10 +730,10 @@ Level =
 			float DazeTime = 4,
 			float AngryDashHealth = 0.25,
 			float AngryTurnSpeed = 10,
-			float DashDamage = 50,
+			float DashDamage = 100,
 			float PassiveDamage = 50,
-			float DashCooldownMax = 6,
-			float DashCooldownMin = 4,
+			float DashCooldownMax = 10,
+			float DashCooldownMin = 8,
 			float DashCooldownRand = 0.100000001,
 			float StartRange = 100,
 			string DashDamageMSG = "You where run over by a giant enemy!",
@@ -759,7 +759,7 @@ Level =
 		{
 			string Part = "5a501997de7c61af:QuestItem3",
 			string Note = "THIS IS A NOTE",
-			string Drops = "",
+			string Drops = "5a11b100e0d8983f:Loot",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 		},
@@ -870,7 +870,7 @@ Level =
 							bool Mode2D = true,
 							bool AllowSleep = true,
 							bool Inherit2DMode = true,
-							Vec3 Velocity = [0, 0, 0],
+							Vec3 Velocity = [85.9374924, 0, 62.4999962],
 							Vec3 AngularVelocity = [0, 0, 0],
 						},
 						MenuVisibilitySprite = 
