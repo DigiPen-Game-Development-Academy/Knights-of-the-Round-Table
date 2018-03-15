@@ -261,6 +261,10 @@ class EnemyAI : ZilchComponent {
     //search for player
     function Search (dt : Real) {
         
+        if (this.LevelSettings.BattleMusic != null) {
+            this.LevelSettings.BattleMusic.Spotted = true;
+        }
+        
         this.Timer -= dt;
         if(this.Timer <= 0) {
             this.State = State.Idle;
