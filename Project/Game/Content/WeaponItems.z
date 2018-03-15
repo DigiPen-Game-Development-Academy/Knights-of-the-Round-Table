@@ -614,6 +614,8 @@ class Missile  : Item {
         missile.PotatProjectile.Set = true;
         missile.Sprite.SpriteSource = SpriteSource.Missile;
         
+        GlobalVariables.SFXSpace.SoundSpace.PlayCue(SoundCue.Rockettravelsound);
+        
     }
     
     function ReturnLore () : String {

@@ -300,7 +300,7 @@ class ConsoleTypeBox : ZilchComponent {
             
             this.SelectionBar.Transform.Scale = Real3(this.Text.SpriteText.MeasureGivenText("`this.CurrentIn.SubStringFromRuneIndices(this.SelectionMin, this.SelectionMax)`").X, this.SelectionBar.Transform.Scale.Y, 1);
             
-            this.SelectionBar.Transform.Translation = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)`").X + 0.05 + (this.SelectionBar.Transform.Scale.X/2), 0.125, 2);
+            this.SelectionBar.Transform.Translation = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)`").X, 0.125, 2);
             
             this.Timer = 1;
             this.Cursor.Sprite.Visible = false;
