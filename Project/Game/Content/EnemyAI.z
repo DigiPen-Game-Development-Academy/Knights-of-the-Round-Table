@@ -128,11 +128,12 @@ class EnemyAI : ZilchComponent {
         this.Owner.RigidBody.Velocity *= this.MoveSpeed; //set the movement speed
         
         //max distance
-        if(Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.GuardPos) > this.MaxDistFromGuard && Math.Distance(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation) < this.ViewDist) {
+        if(Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.GuardPos) > this.MaxDistFromGuard && Math.Distance(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation) < this.ViewDist && this.Owner.Visibility.InSight) {
             this.ViewDirection = Math.Normalize(GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation);
             //this.Owner.RigidBody.Velocity = -Math.Normalize(GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation) * this.MoveSpeed / 2;
             this.PathFind.SetTarget(this.GuardPos);
             this.PathFind.Instaturn = true;
+            this.State = State.Idle;
             
             if (this.LevelSettings.BattleMusic != null) {
                 this.LevelSettings.BattleMusic.Spotted = true;
@@ -150,6 +151,11 @@ class EnemyAI : ZilchComponent {
             } else if (this.State == State.Searching) {
                 this.Search(event.Dt);
             }
+        }
+        
+        if(this.Owner.Name == "Enemy_Rusher_Tutorial") {
+            Console.WriteLine(this.PathFind.Instaturn);
+            Console.WriteLine(this.State);
         }
         
         //Player Spotting
