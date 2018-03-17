@@ -457,6 +457,8 @@ class ConsoleTypeBox : ZilchComponent {
             
             this.Timer = 1;
             this.Cursor.Sprite.Visible = true;
+            this.ACIndex = -1;
+            this.LastIn = this.CurrentIn;
             
         } else if (key == Keys.Down) {
             
@@ -479,6 +481,8 @@ class ConsoleTypeBox : ZilchComponent {
             
             this.Timer = 1;
             this.Cursor.Sprite.Visible = true;
+            this.ACIndex = -1;
+            this.LastIn = this.CurrentIn;
             
         }  else if (key == Keys.Left) {
             
