@@ -1117,7 +1117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7.51619577, -4.37651253, 50],
+			Vec3 Translation = [2.41588521, -4.52958488, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1129,7 +1129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 2.44280553,
+			float Size = 2,
 		},
 		EditorCameraController = 
 		{
@@ -1137,7 +1137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-7.51619577, -4.37651253, 2.07424904e-07],
+			Vec3 LookTarget = [2.41588521, -4.52958488, 6.41569898e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4301,10 +4301,10 @@ Level =
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 							string FontName = "57343753bb4eaaec:NotoSans-Regular",
-							uint FontSize = 10,
+							uint FontSize = 47,
 							string Text = "aaa",
 							TextAlign Align = Left,
-							float PixelsPerUnit = 70.0436478,
+							float PixelsPerUnit = 323.031982,
 							bool Smoothing = false,
 						},
 						Area = 
@@ -4318,6 +4318,45 @@ Level =
 						LinkId = 
 						{
 							uint Id = 103,
+						},
+						Named = 
+						{
+							string Name = "AutoText",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [11.875, 0.125, 1],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0, 0, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
+							uint FontSize = 47,
+							string Text = "aaa",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 323.031982,
+							bool Smoothing = false,
+						},
+						Area = 
+						{
+							Vec2 Size = [11.8999996, 0.200000003],
+							Location Origin = CenterLeft,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 104,
 						},
 						Named = 
 						{
@@ -4352,7 +4391,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 104,
+							uint Id = 105,
 						},
 						Named = 
 						{
@@ -4388,13 +4427,138 @@ Level =
 							Location Origin = CenterLeft,
 						},
 					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 106,
+						},
+						Named = 
+						{
+							string Name = "Auto",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0.125, 0.375, 3],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0, 0, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
+							uint FontSize = 97,
+							string Text = "Auto",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 512,
+							bool Smoothing = false,
+						},
+						Area = 
+						{
+							Vec2 Size = [2, 100],
+							Location Origin = BottomLeft,
+						},
+						Hierarchy = 
+						{
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 107,
+								},
+								Named = 
+								{
+									string Name = "back",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [-0.100000001, -0.100000001, -1],
+									Vec3 Scale = [1, 1, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [1, 1, 1, 1],
+									BlendMode BlendMode = Alpha,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "5ae3e0de08fe7635:MenuBack",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+								Area = 
+								{
+									Vec2 Size = [1, 1],
+									Location Origin = BottomLeft,
+								},
+								Backing = 
+								{
+								},
+							},
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 108,
+								},
+								Named = 
+								{
+									string Name = "Sel",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [-0.125, 0.375, 1],
+									Vec3 Scale = [1, 1, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [0.757691979, 0.779999971, 0.577199996, 0.444999993],
+									BlendMode BlendMode = MultiplyAdd,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "5275aa4d802dd6dc:Square",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+								Area = 
+								{
+									Vec2 Size = [1, 1],
+									Location Origin = BottomLeft,
+								},
+							},
+						},
+					},
 				},
 			},
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 105,
+					uint Id = 109,
 				},
 				Named = 
 				{
@@ -4445,7 +4609,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 106,
+			uint Id = 110,
 		},
 		Named = 
 		{
@@ -4493,7 +4657,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 107,
+			uint Id = 111,
 		},
 		Named = 
 		{
@@ -4532,7 +4696,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 108,
+					uint Id = 112,
 				},
 				Named = 
 				{
@@ -4569,7 +4733,7 @@ Level =
 		string Name = "5a6dc57e30d123ad:SoundWaves",
 		LinkId = 
 		{
-			uint Id = 109,
+			uint Id = 113,
 		},
 		Transform = 
 		{
@@ -4591,7 +4755,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 110,
+			uint Id = 114,
 		},
 		Named = 
 		{
@@ -4640,7 +4804,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 111,
+			uint Id = 115,
 		},
 		Named = 
 		{
@@ -4694,7 +4858,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 112,
+					uint Id = 116,
 				},
 				Named = 
 				{
