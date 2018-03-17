@@ -143,7 +143,7 @@ class ConsoleTypeBox : ZilchComponent {
             
             this.Selection = false;
             this.Timer = 1;
-            this.Cursor.Sprite.Visible = true;
+            this.Cursor.SpriteText.Visible = true;
             
         }
         
@@ -274,7 +274,7 @@ class ConsoleTypeBox : ZilchComponent {
                 this.Selection = false;
                 
                 this.Timer = 1;
-                this.Cursor.Sprite.Visible = true;
+                this.Cursor.SpriteText.Visible = true;
                 
                 this.UpdateAuto();
                 
@@ -297,14 +297,14 @@ class ConsoleTypeBox : ZilchComponent {
         if(this.Timer <= 0.5) {
             
             this.Timer = 1;
-            this.Cursor.Sprite.Visible = !this.Cursor.Sprite.Visible;
+            this.Cursor.SpriteText.Visible = !this.Cursor.SpriteText.Visible;
             
         }
         
         if(!this.Selected || !this.Active || this.Held) {
             
             this.Timer = 1;
-            this.Cursor.Sprite.Visible = false;
+            this.Cursor.SpriteText.Visible = false;
             
         }
         
@@ -322,7 +322,7 @@ class ConsoleTypeBox : ZilchComponent {
             this.SelectionBar.Transform.Translation = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)`").X, 0.125, 2);
             
             this.Timer = 1;
-            this.Cursor.Sprite.Visible = false;
+            this.Cursor.SpriteText.Visible = false;
             
         }
         
@@ -350,7 +350,7 @@ class ConsoleTypeBox : ZilchComponent {
         this.Text.SpriteText.Visible = this.Active;
         this.Text.SpriteText.Text = ":>`this.CurrentIn`";
         
-        var pos = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)`").X, 0.125, 1);
+        var pos = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)`").X-0.05, 0.25, 1);
         
         this.Cursor.Transform.Translation = pos;
         
@@ -456,7 +456,7 @@ class ConsoleTypeBox : ZilchComponent {
             this.Selection = false;
             
             this.Timer = 1;
-            this.Cursor.Sprite.Visible = true;
+            this.Cursor.SpriteText.Visible = true;
             this.ACIndex = -1;
             this.LastIn = this.CurrentIn;
             
@@ -480,7 +480,7 @@ class ConsoleTypeBox : ZilchComponent {
             this.Selection = false;
             
             this.Timer = 1;
-            this.Cursor.Sprite.Visible = true;
+            this.Cursor.SpriteText.Visible = true;
             this.ACIndex = -1;
             this.LastIn = this.CurrentIn;
             
@@ -522,7 +522,7 @@ class ConsoleTypeBox : ZilchComponent {
                 
                 this.Selection = false;
                 this.Timer = 1;
-                this.Cursor.Sprite.Visible = true;
+                this.Cursor.SpriteText.Visible = true;
                 
                 if(Zero.Keyboard.KeyIsDown(Keys.Control)) {
                     
@@ -568,7 +568,7 @@ class ConsoleTypeBox : ZilchComponent {
                 
                 this.Selection = false;
                 this.Timer = 1;
-                this.Cursor.Sprite.Visible = true;
+                this.Cursor.SpriteText.Visible = true;
                 
                 if(Zero.Keyboard.KeyIsDown(Keys.Control)) {
                     
@@ -620,7 +620,7 @@ class ConsoleTypeBox : ZilchComponent {
                 this.Selection = false;
                 
                 this.Timer = 1;
-                this.Cursor.Sprite.Visible = true;
+                this.Cursor.SpriteText.Visible = true;
                 this.UpdateAuto();
                 
             }
@@ -710,7 +710,7 @@ class ConsoleTypeBox : ZilchComponent {
             this.Selection = false;
             
             this.Timer = 1;
-            this.Cursor.Sprite.Visible = true;
+            this.Cursor.SpriteText.Visible = true;
             
         }
     }

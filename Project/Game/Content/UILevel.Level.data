@@ -1117,7 +1117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.41588521, -4.52958488, 50],
+			Vec3 Translation = [-8.31412601, -4.56725931, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1137,7 +1137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.41588521, -4.52958488, 6.41569898e-07],
+			Vec3 LookTarget = [-8.31412601, -4.56725931, 1.72546223e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4365,10 +4365,10 @@ Level =
 						Transform = 
 						{
 							Vec3 Translation = [0, 0.125, 0],
-							Vec3 Scale = [0.0250000004, 0.25, 1],
+							Vec3 Scale = [1, 1, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
-						Sprite = 
+						SpriteText = 
 						{
 							bool Visible = true,
 							bool VisibilityCulling = true,
@@ -4378,13 +4378,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5275aa4d802dd6dc:Square",
-							bool RenderMask = false,
-							bool FlipX = false,
-							bool FlipY = false,
-							bool AnimationActive = true,
-							float AnimationSpeed = 1,
-							uint StartFrame = 0,
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
+							uint FontSize = 47,
+							string Text = "|",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 323.032013,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -4403,28 +4402,28 @@ Level =
 							Vec3 Scale = [0.0250000004, 0.25, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
+						Area = 
+						{
+							Vec2 Size = [1, 1],
+							Location Origin = CenterLeft,
+						},
 						Sprite = 
 						{
 							bool Visible = true,
 							bool VisibilityCulling = true,
 							bool VisibilityEvents = true,
 							bool CastShadows = false,
-							Vec4 Color = [1, 1, 1, 1],
-							BlendMode BlendMode = MultiplyAdd,
+							Vec4 Color = [0.909999967, 0.909999967, 0.909999967, 0.590000033],
+							BlendMode BlendMode = Additive,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5275aa4d802dd6dc:Square",
+							string SpriteSource = "4e07948c35993095:DefaultSprite",
 							bool RenderMask = false,
 							bool FlipX = false,
 							bool FlipY = false,
 							bool AnimationActive = true,
 							float AnimationSpeed = 1,
 							uint StartFrame = 0,
-						},
-						Area = 
-						{
-							Vec2 Size = [1, 1],
-							Location Origin = CenterLeft,
 						},
 					},
 					Cog = 
