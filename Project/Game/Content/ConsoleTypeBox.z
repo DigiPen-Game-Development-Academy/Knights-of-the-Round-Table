@@ -255,7 +255,7 @@ class ConsoleTypeBox : ZilchComponent {
             
             var key = String.FromChar(event.Character);
             
-            if(this.IsRenderable(event.Character)) {
+            if(this.IsRenderable(event.Character) && this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn``key`").X < this.Owner.Area.Size.X - 0.05) {
                 
                 if(this.Selection) {
                     
@@ -319,7 +319,7 @@ class ConsoleTypeBox : ZilchComponent {
             
             this.SelectionBar.Transform.Scale = Real3(this.Text.SpriteText.MeasureGivenText("`this.CurrentIn.SubStringFromRuneIndices(this.SelectionMin, this.SelectionMax)`").X, this.SelectionBar.Transform.Scale.Y, 1);
             
-            this.SelectionBar.Transform.Translation = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)`").X, 0.125, 2);
+            this.SelectionBar.Transform.Translation = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)`").X-0.025, 0.125, 2);
             
             this.Timer = 1;
             this.Cursor.SpriteText.Visible = false;
@@ -350,7 +350,7 @@ class ConsoleTypeBox : ZilchComponent {
         this.Text.SpriteText.Visible = this.Active;
         this.Text.SpriteText.Text = ":>`this.CurrentIn`";
         
-        var pos = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)`").X-0.05, 0.25, 1);
+        var pos = Real3(this.Text.SpriteText.MeasureGivenText(":>`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)`").X-0.05, 0.25, 5);
         
         this.Cursor.Transform.Translation = pos;
         
@@ -506,7 +506,7 @@ class ConsoleTypeBox : ZilchComponent {
                     
                     Console.WriteLine(this.SelectionMin - this.CursorIndex);
                     
-                    if(this.SelectionMin - this.CursorIndex < 1) {
+                    if(this.SelectionMin - this.CursorIndex < 1 && this.CursorIndex != 0) {
                         
                         this.SelectionMax = this.CursorIndex;
                         
@@ -552,7 +552,7 @@ class ConsoleTypeBox : ZilchComponent {
                     
                     Console.WriteLine(this.SelectionMax - this.CursorIndex);
                     
-                    if(this.SelectionMax - this.CursorIndex < 0) {
+                    if(this.SelectionMax - this.CursorIndex < 0 || this.CursorIndex == this.CurrentIn.Count) {
                         
                         this.SelectionMax = this.CursorIndex;
                         
