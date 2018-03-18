@@ -1,50 +1,29 @@
 class ConsoleTypeBox : ZilchComponent {
     
-    var CurrentIn : String = "";
-    
-    var LastIn : String = "";
-    
-    var History : Array[String];
-    
-    var Selected : Boolean = false;
-    
-    var Active : Boolean = false;
-    
-    var Text : Cog = null;
-    
     [Dependency]
     var Reactive : Reactive;
     
+    var CurrentIn : String = "";
+    var LastIn : String = "";
+    var History : Array[String];
+    var Selected : Boolean = false;
+    var Active : Boolean = false;
+    var Text : Cog = null;
     var HistoryIndex : Integer = -1;
-    
     var InitialPos : Real3;
-    
     var ACIndex : Integer = -1;
-    
     var CursorIndex : Integer = 0;
-    
     var Cursor : Cog;
-    
     var Selection : Boolean = false;
-    
     var SelectionMax : Integer = 0;
-    
     var SelectionMin : Integer = 0;
-    
     var SelectionBar : Cog;
-    
     var Timer : Real = 1;
-    
     var Held : Boolean = false;
-    
     var Dir : Boolean = false;
-    
     var Offset : Real = 0;
-    
     var Auto : Cog;
-    
     var AutoSel : Cog;
-    
     var AutoText : Cog;
     
     function Initialize(init : CogInitializer) {
@@ -92,7 +71,7 @@ class ConsoleTypeBox : ZilchComponent {
 
     function OnKeyHeld(event : KeyHeld) {
         
-        this.Arrows(event.Key);
+        this.Special(event.Key);
         
         this.UpdateAuto();
         
@@ -243,7 +222,7 @@ class ConsoleTypeBox : ZilchComponent {
             
         }
         
-        this.Arrows(event.Key);
+        this.Special(event.Key);
         
         this.UpdateAuto();
         
@@ -282,8 +261,6 @@ class ConsoleTypeBox : ZilchComponent {
                 
             }
         }
-        
-        this.Special(event.Character);
         
         this.UpdateAuto();
         
@@ -429,13 +406,129 @@ class ConsoleTypeBox : ZilchComponent {
         return strs;
     }
     
-    function Arrows (key : Keys) {
+    function Special (key : Keys) {
         
         if(!this.Selected || !this.Active) {
+            
             return;
+            
         }
         
-         if (key == Keys.Up) {
+        //backspace
+        if (key == Keys.Back) {
+        
+            if(this.CurrentIn.Count > 0 && this.CursorIndex > 0) {
+                
+                if(this.Selection) {
+                    
+                    this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)``this.CurrentIn.SubStringFromRuneIndices(this.SelectionMax, this.CurrentIn.Count)`";
+                    this.CursorIndex = this.SelectionMin;
+                    
+                } else {
+                    
+                    this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex-1)``this.CurrentIn.SubStringFromRuneIndices(this.CursorIndex, this.CurrentIn.Count)`";
+                    --this.CursorIndex;
+                    
+                }
+                
+                this.LastIn = this.CurrentIn;
+                this.ACIndex = -1;
+                this.Selection = false;
+                
+                this.Timer = 1;
+                this.Cursor.SpriteText.Visible = true;
+                this.UpdateAuto();
+                
+            }
+        
+        } else if (key == Keys.Enter) {
+            
+            if (this.CurrentIn.Count != 0 && String.FromChar(this.CurrentIn.Get(0)) == "/") {
+                
+                Commands.CheckForCommands(this.CurrentIn);
+                
+                if(this.History[0] != this.CurrentIn) {
+                    
+                    this.History.Insert(0, this.CurrentIn);
+                    
+                }
+            } else {
+                
+                Utilities.ConsoleSend(this.CurrentIn, Real4(1,1,1,1));
+                
+            }
+            
+            this.CurrentIn = "";
+            this.LastIn = "";
+            this.Selected = false;
+            this.HistoryIndex = -1;
+            this.ACIndex = -1;
+            this.CursorIndex = 0;
+            this.Selection = false;
+            GlobalVariables.Cursor.CursorController.SetNormal();
+            
+        }else if (Zero.Keyboard.KeyIsDown(Keys.Shift) && key == Keys.Tab) {
+            
+            var ac = this.GetAC(this.LastIn);
+            if (ac.Count == 0)
+                return;
+            if (this.ACIndex == -1) {
+                
+                var str = "";
+                
+                foreach(var cmd in ac) {
+                    
+                    str = "`str`, `cmd`";
+                    
+                }
+                
+                //Utilities.ConsoleSend("Auto-Complete: `str`", Real4(0,1,0,1));
+            }
+            
+            --this.ACIndex;
+            
+            if(this.ACIndex < 0) {
+                this.ACIndex = ac.Count-1;
+            }
+            
+            this.CurrentIn = ac[this.ACIndex];
+            
+            this.CursorIndex = this.CurrentIn.Count;
+            this.Selection = false;
+            
+        } else if (key == Keys.Tab) {
+            
+            var ac = this.GetAC(this.LastIn);
+            if (ac.Count == 0)
+                return;
+            if (this.ACIndex == -1) {
+                
+                var str = "`ac[0]`";
+                
+                for(var i = 1; i < ac.Count; ++i) {
+                    
+                    str = "`str`, `ac[i]`";
+                    
+                }
+                
+                //Utilities.ConsoleSend("Auto-Complete: `str`", Real4(0,1,0,1));
+            }
+            
+            ++this.ACIndex;
+            
+            if (this.ACIndex > ac.Count-1) {
+                this.ACIndex = 0;
+            }
+            
+            this.CurrentIn = ac[this.ACIndex];
+            
+            this.CursorIndex = this.CurrentIn.Count;
+            this.Selection = false;
+            
+            this.Timer = 1;
+            this.Cursor.SpriteText.Visible = true;
+            
+        } else if (key == Keys.Up) {
             
             ++this.HistoryIndex;
             
@@ -484,7 +577,7 @@ class ConsoleTypeBox : ZilchComponent {
             this.ACIndex = -1;
             this.LastIn = this.CurrentIn;
             
-        }  else if (key == Keys.Left) {
+        } else if (key == Keys.Left) {
             
             --this.CursorIndex;
             
@@ -585,132 +678,6 @@ class ConsoleTypeBox : ZilchComponent {
                 this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex)``this.CurrentIn.SubStringFromRuneIndices(this.CursorIndex + 1, this.CurrentIn.Count)`";
                 
             }
-            
-        }
-        
-    }
-    
-    function Special (key : Integer) {
-        
-        if(!this.Selected || !this.Active) {
-            
-            return;
-            
-        }
-        
-        //backspace
-        if (key == 8) {
-        
-            if(this.CurrentIn.Count > 0 && this.CursorIndex > 0) {
-                
-                if(this.Selection) {
-                    
-                    this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.SelectionMin)``this.CurrentIn.SubStringFromRuneIndices(this.SelectionMax, this.CurrentIn.Count)`";
-                    this.CursorIndex = this.SelectionMin;
-                    
-                } else {
-                    
-                    this.CurrentIn = "`this.CurrentIn.SubStringFromRuneIndices(0, this.CursorIndex-1)``this.CurrentIn.SubStringFromRuneIndices(this.CursorIndex, this.CurrentIn.Count)`";
-                    --this.CursorIndex;
-                    
-                }
-                
-                this.LastIn = this.CurrentIn;
-                this.ACIndex = -1;
-                this.Selection = false;
-                
-                this.Timer = 1;
-                this.Cursor.SpriteText.Visible = true;
-                this.UpdateAuto();
-                
-            }
-        
-        } else if (key == 13) { //enter
-            
-            if (this.CurrentIn.Count != 0 && String.FromChar(this.CurrentIn.Get(0)) == "/") {
-                
-                Commands.CheckForCommands(this.CurrentIn);
-                
-                if(this.History[0] != this.CurrentIn) {
-                    
-                    this.History.Insert(0, this.CurrentIn);
-                    
-                }
-            } else {
-                
-                Utilities.ConsoleSend(this.CurrentIn, Real4(1,1,1,1));
-                
-            }
-            
-            this.CurrentIn = "";
-            this.LastIn = "";
-            this.Selected = false;
-            this.HistoryIndex = -1;
-            this.ACIndex = -1;
-            this.CursorIndex = 0;
-            this.Selection = false;
-            GlobalVariables.Cursor.CursorController.SetNormal();
-            
-        }else if (Zero.Keyboard.KeyIsDown(Keys.Shift) && key == 9) { // shift tab
-            
-            var ac = this.GetAC(this.LastIn);
-            if (ac.Count == 0)
-                return;
-            if (this.ACIndex == -1) {
-                
-                var str = "";
-                
-                foreach(var cmd in ac) {
-                    
-                    str = "`str`, `cmd`";
-                    
-                }
-                
-                //Utilities.ConsoleSend("Auto-Complete: `str`", Real4(0,1,0,1));
-            }
-            
-            --this.ACIndex;
-            
-            if(this.ACIndex < 0) {
-                this.ACIndex = ac.Count-1;
-            }
-            
-            this.CurrentIn = ac[this.ACIndex];
-            
-            this.CursorIndex = this.CurrentIn.Count;
-            this.Selection = false;
-            
-        } else if (key == 9) { //tab
-            
-            var ac = this.GetAC(this.LastIn);
-            if (ac.Count == 0)
-                return;
-            if (this.ACIndex == -1) {
-                
-                var str = "`ac[0]`";
-                
-                for(var i = 1; i < ac.Count; ++i) {
-                    
-                    str = "`str`, `ac[i]`";
-                    
-                }
-                
-                //Utilities.ConsoleSend("Auto-Complete: `str`", Real4(0,1,0,1));
-            }
-            
-            ++this.ACIndex;
-            
-            if (this.ACIndex > ac.Count-1) {
-                this.ACIndex = 0;
-            }
-            
-            this.CurrentIn = ac[this.ACIndex];
-            
-            this.CursorIndex = this.CurrentIn.Count;
-            this.Selection = false;
-            
-            this.Timer = 1;
-            this.Cursor.SpriteText.Visible = true;
             
         }
     }
