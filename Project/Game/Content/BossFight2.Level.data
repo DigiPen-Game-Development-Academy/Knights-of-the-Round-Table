@@ -495,7 +495,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 1750,
+			float InitialHealth = 1675,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 		},

@@ -61,7 +61,7 @@ class Health : ZilchComponent {
             
             this.Timer = (1/this.RegenRate)/2;
             
-            if (this.CurrentHealth + 1 <= this.InitialHealth) {
+            if (this.CurrentHealth + 1 <= this.InitialHealth/2) {
                 this.CurrentHealth += 0.5;
             }
         }
