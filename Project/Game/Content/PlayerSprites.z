@@ -15,18 +15,14 @@ class PlayerSprites : ZilchComponent {
     [Property] var West       : SpriteSource;
     [Property] var NorthWest  : SpriteSource;
     [Property] var AnimSpeed  : Real;
-    
-    function Initialize(init : CogInitializer) {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
 
-    function OnLogicUpdate(event : UpdateEvent) {
+    function Update(dt : Real) {
         
         var hSprite = this.Owner.FindChildByName("Hold").Sprite;
         
         if(this.Timer > 0) {
             this.Dir = this.LDir;
-            this.Timer -= event.Dt;
+            this.Timer -= dt;
         }
         
         var angle = Math.ToDegrees(Math.ATan2(this.Dir.Y, this.Dir.X));

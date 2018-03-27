@@ -28,7 +28,7 @@ class Potato : Item {
         lore.Add("Every year potatoes are gruesomely turned into fries,\nthis cruelty needs to stop. Support the no potato left behind movement");
         lore.Add("The potato is a starchy, tuberous crop from the perennial nightshade\nSolanum tuberosum.\nPotato may be applied to both the plant and the edible tuber.");
         lore.Add("Today potatoes are grown in all 50 states of the USA and in about 125\ncountries throughout the world.");
-        lore.Add("The potato is about 80% water and 20% solids.");
+        lore.Add("The potato is about 80 percent water and 20 percent solids.");
         lore.Add("An 8 ounce baked or boiled potato has only about 100 calories.");
         lore.Add("The average American eats about 124 pounds of potatoes per year while\nGermans eat about twice as much.");
         lore.Add("The largest potato grown was 18 pounds and 4 ounces according to the\nGuinness Book of World Records. It was grown in England in 1795.");

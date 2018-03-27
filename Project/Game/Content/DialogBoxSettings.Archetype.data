@@ -102,6 +102,7 @@ Cog =
 				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
 				bool Alpha = false,
+				bool Scaling = true,
 			},
 			Area = 
 			{
@@ -143,7 +144,7 @@ Cog =
 						BlendMode BlendMode = Alpha,
 						SpriteGeometryMode GeometryMode = ZPlane,
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string FontName = "4e7bac697bec55c5:Verdana",
+						string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 						uint FontSize = 30,
 						string Text = "Apply",
 						TextAlign Align = Left,
@@ -204,6 +205,7 @@ Cog =
 				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
 				bool Alpha = false,
+				bool Scaling = true,
 			},
 			Area = 
 			{
@@ -242,7 +244,7 @@ Cog =
 						BlendMode BlendMode = Alpha,
 						SpriteGeometryMode GeometryMode = ZPlane,
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string FontName = "4e7bac697bec55c5:Verdana",
+						string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 						uint FontSize = 30,
 						string Text = "Cancel",
 						TextAlign Align = Left,
@@ -343,6 +345,7 @@ Cog =
 				Vec4 ClickColor = [0.458823562, 0.458823562, 0.458823562, 0.25999999],
 				float ScaleSpeed = 5,
 				bool Alpha = true,
+				bool Scaling = true,
 			},
 			Hierarchy = 
 			{
@@ -420,7 +423,7 @@ Cog =
 								BlendMode BlendMode = Alpha,
 								SpriteGeometryMode GeometryMode = ZPlane,
 								string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-								string FontName = "4e7bac697bec55c5:Verdana",
+								string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 								uint FontSize = 30,
 								string Text = "Master Volume",
 								TextAlign Align = Left,
@@ -483,6 +486,7 @@ Cog =
 				Vec4 ClickColor = [0.458823562, 0.458823562, 0.458823562, 0.25999999],
 				float ScaleSpeed = 5,
 				bool Alpha = true,
+				bool Scaling = true,
 			},
 			Hierarchy = 
 			{
@@ -560,7 +564,7 @@ Cog =
 								BlendMode BlendMode = Alpha,
 								SpriteGeometryMode GeometryMode = ZPlane,
 								string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-								string FontName = "4e7bac697bec55c5:Verdana",
+								string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 								uint FontSize = 30,
 								string Text = "Music Volume",
 								TextAlign Align = Left,
@@ -623,6 +627,7 @@ Cog =
 				Vec4 ClickColor = [0.458823562, 0.458823562, 0.458823562, 0.25999999],
 				float ScaleSpeed = 5,
 				bool Alpha = true,
+				bool Scaling = true,
 			},
 			Hierarchy = 
 			{
@@ -700,7 +705,7 @@ Cog =
 								BlendMode BlendMode = Alpha,
 								SpriteGeometryMode GeometryMode = ZPlane,
 								string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-								string FontName = "4e7bac697bec55c5:Verdana",
+								string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 								uint FontSize = 30,
 								string Text = "FX Volume",
 								TextAlign Align = Left,
@@ -763,6 +768,7 @@ Cog =
 				Vec4 ClickColor = [0.458823562, 0.458823562, 0.458823562, 0.25999999],
 				float ScaleSpeed = 5,
 				bool Alpha = true,
+				bool Scaling = true,
 			},
 			Hierarchy = 
 			{
@@ -840,7 +846,7 @@ Cog =
 								BlendMode BlendMode = Alpha,
 								SpriteGeometryMode GeometryMode = ZPlane,
 								string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-								string FontName = "4e7bac697bec55c5:Verdana",
+								string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 								uint FontSize = 30,
 								string Text = "Camera Smoothness",
 								TextAlign Align = Left,

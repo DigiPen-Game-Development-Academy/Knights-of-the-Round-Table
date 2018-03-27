@@ -1,7 +1,7 @@
 RichAnimation = 
 {
 	float SampleTolerance = 0.0500000007,
-	float Duration = 68.1085968,
+	float Duration = 11.666667,
 	Object Root = 
 	{
 		TrackType Type = Object,
@@ -29,8 +29,8 @@ RichAnimation =
 				[
 					{
 						TrackType Type = Component,
-						string Name = "Sprite",
-						string Path = "Sprite",
+						string Name = "SpriteText",
+						string Path = "SpriteText",
 						bool Disabled = false,
 						uint PropertyTypeId = 0,
 						string PropertyTypeName = "",
@@ -42,7 +42,7 @@ RichAnimation =
 							{
 								TrackType Type = Property,
 								string Name = "Color",
-								string Path = "Sprite.Color",
+								string Path = "SpriteText.Color",
 								bool Disabled = false,
 								uint PropertyTypeId = 9,
 								string PropertyTypeName = "Vec4",
@@ -54,17 +54,17 @@ RichAnimation =
 									{
 										TrackType Type = SubProperty,
 										string Name = "R",
-										string Path = "Sprite.Color.R",
+										string Path = "SpriteText.Color.R",
 										bool Disabled = false,
 										uint PropertyTypeId = 3,
 										string PropertyTypeName = "",
 										Array KeyFrames = 
 										[
 											{
-												float key = 5.33333349,
+												float key = 0,
 												Object value = 
 												{
-													float Time = 5.33333349,
+													float Time = 0,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -72,10 +72,21 @@ RichAnimation =
 												},
 											},
 											{
-												float key = 6,
+												float key = 10,
 												Object value = 
 												{
-													float Time = 6,
+													float Time = 10,
+													float Value = 1,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 10.666667,
+												Object value = 
+												{
+													float Time = 10.666667,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -90,29 +101,40 @@ RichAnimation =
 									{
 										TrackType Type = SubProperty,
 										string Name = "G",
-										string Path = "Sprite.Color.G",
+										string Path = "SpriteText.Color.G",
 										bool Disabled = false,
 										uint PropertyTypeId = 3,
 										string PropertyTypeName = "",
 										Array KeyFrames = 
 										[
 											{
-												float key = 5.33333349,
+												float key = 0,
 												Object value = 
 												{
-													float Time = 5.33333349,
-													float Value = 1,
+													float Time = 0,
+													float Value = 0,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
 												},
 											},
 											{
-												float key = 6,
+												float key = 10,
 												Object value = 
 												{
-													float Time = 6,
-													float Value = 1,
+													float Time = 10,
+													float Value = 0,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 10.666667,
+												Object value = 
+												{
+													float Time = 10.666667,
+													float Value = 0,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
@@ -126,29 +148,40 @@ RichAnimation =
 									{
 										TrackType Type = SubProperty,
 										string Name = "B",
-										string Path = "Sprite.Color.B",
+										string Path = "SpriteText.Color.B",
 										bool Disabled = false,
 										uint PropertyTypeId = 3,
 										string PropertyTypeName = "",
 										Array KeyFrames = 
 										[
 											{
-												float key = 5.33333349,
+												float key = 0,
 												Object value = 
 												{
-													float Time = 5.33333349,
-													float Value = 1,
+													float Time = 0,
+													float Value = 0,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
 												},
 											},
 											{
-												float key = 6,
+												float key = 10,
 												Object value = 
 												{
-													float Time = 6,
-													float Value = 1,
+													float Time = 10,
+													float Value = 0,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 10.666667,
+												Object value = 
+												{
+													float Time = 10.666667,
+													float Value = 0,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
@@ -162,17 +195,17 @@ RichAnimation =
 									{
 										TrackType Type = SubProperty,
 										string Name = "A",
-										string Path = "Sprite.Color.A",
+										string Path = "SpriteText.Color.A",
 										bool Disabled = false,
 										uint PropertyTypeId = 3,
 										string PropertyTypeName = "",
 										Array KeyFrames = 
 										[
 											{
-												float key = 5.33333349,
+												float key = 0,
 												Object value = 
 												{
-													float Time = 5.33333349,
+													float Time = 0,
 													float Value = 0,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -180,11 +213,33 @@ RichAnimation =
 												},
 											},
 											{
-												float key = 6,
+												float key = 0.5,
 												Object value = 
 												{
-													float Time = 6,
+													float Time = 0.5,
 													float Value = 0.999899983,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 10,
+												Object value = 
+												{
+													float Time = 10,
+													float Value = 0.843856454,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 10.666667,
+												Object value = 
+												{
+													float Time = 10.666667,
+													float Value = 0,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,
@@ -195,53 +250,6 @@ RichAnimation =
 										[
 										],
 									},
-								],
-							},
-							{
-								TrackType Type = Property,
-								string Name = "AnimationActive",
-								string Path = "Sprite.AnimationActive",
-								bool Disabled = false,
-								uint PropertyTypeId = 5,
-								string PropertyTypeName = "bool",
-								Array KeyFrames = 
-								[
-									{
-										float key = 5.33333349,
-										Object value = 
-										{
-											float Time = 5.33333349,
-											bool Value = false,
-											Vec2 TangentIn = [-0.0500000007, 0],
-											Vec2 TangentOut = [0.0500000007, 0],
-											uint EditorFlags = 0,
-										},
-									},
-									{
-										float key = 6,
-										Object value = 
-										{
-											float Time = 6,
-											bool Value = false,
-											Vec2 TangentIn = [-0.0500000007, 0],
-											Vec2 TangentOut = [0.0500000007, 0],
-											uint EditorFlags = 0,
-										},
-									},
-									{
-										float key = 6.5,
-										Object value = 
-										{
-											float Time = 6.5,
-											bool Value = true,
-											Vec2 TangentIn = [-0.0500000007, 0],
-											Vec2 TangentOut = [0.0500000007, 0],
-											uint EditorFlags = 0,
-										},
-									},
-								],
-								Array Children = 
-								[
 								],
 							},
 						],
@@ -267,6 +275,50 @@ RichAnimation =
 								string PropertyTypeName = "bool",
 								Array KeyFrames = 
 								[
+									{
+										float key = 10.666667,
+										Object value = 
+										{
+											float Time = 10.666667,
+											bool Value = false,
+											Vec2 TangentIn = [-0.0500000007, 0],
+											Vec2 TangentOut = [0.0500000007, 0],
+											uint EditorFlags = 0,
+										},
+									},
+									{
+										float key = 11,
+										Object value = 
+										{
+											float Time = 11,
+											bool Value = false,
+											Vec2 TangentIn = [-0.0500000007, 0],
+											Vec2 TangentOut = [0.0500000007, 0],
+											uint EditorFlags = 0,
+										},
+									},
+									{
+										float key = 11.333333,
+										Object value = 
+										{
+											float Time = 11.333333,
+											bool Value = true,
+											Vec2 TangentIn = [-0.0500000007, 0],
+											Vec2 TangentOut = [0.0500000007, 0],
+											uint EditorFlags = 0,
+										},
+									},
+									{
+										float key = 11.666667,
+										Object value = 
+										{
+											float Time = 11.666667,
+											bool Value = true,
+											Vec2 TangentIn = [-0.0500000007, 0],
+											Vec2 TangentOut = [0.0500000007, 0],
+											uint EditorFlags = 0,
+										},
+									},
 								],
 								Array Children = 
 								[
