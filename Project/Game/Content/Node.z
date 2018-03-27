@@ -1,7 +1,6 @@
 //Author Brandon Wolenetz
 
-class NavNode
-{
+class NavNode {
     var Walkable : Boolean = true;
     var CloseToWall : Boolean = false;
     var WorldPos : Real3 = Real3(0,0,0);
@@ -15,8 +14,7 @@ class NavNode
     
     var HeapIndex : Integer;
     
-    constructor (walkable : Boolean, worldPos : Real3, gridX : Integer, gridY : Integer, closeToWall : Boolean)
-    {
+    constructor (walkable : Boolean, worldPos : Real3, gridX : Integer, gridY : Integer, closeToWall : Boolean) {
         
         this.Walkable = walkable;
         this.WorldPos = worldPos;
@@ -26,10 +24,11 @@ class NavNode
         if(!walkable) this.CloseToWall = false;
     }
     
-    var FCost : Integer
-    {
+    var FCost : Integer {
         
-        get { return this.GCost + this.HCost; }
+        get {
+            return this.GCost + this.HCost;
+        }
         
     }
 }

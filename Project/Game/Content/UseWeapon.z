@@ -26,14 +26,21 @@ class UseWeapon : ZilchComponent
         this.Secondary.Init();
         GlobalVariables.UseWeapon = this;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Space, Events.MouseUp, this.OnMouseUp);
         Zero.Connect(Zero.Keyboard, Events.KeyUp, this.OnKeyUp);
+        Zero.Connect(this.Space, Events.MouseScroll, this.OnMouseScroll);
+        Zero.Connect(this.Space, Events.MouseUp, this.OnMouseUp);
+    }
+    
+    function OnMouseScroll(event : ViewportMouseEvent) {
+        
+        this.PrimarySelected = !this.PrimarySelected;
+        
     }
 
     function OnKeyUp(event : KeyboardEvent) {
         if(GlobalVariables.GameSpace.TimeSpace.Paused)
             return;
-        if(event.Key == GlobalVariables.InputManager.UseWeaponKey) {
+        if(event.Key == GlobalVariables.InputManager.UseWeaponKey || event.Key == GlobalVariables.InputManager.PauseOrInventory) {
             if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0) {
                 if(!this.Primary.Auto)
                     this.Primary.Timer = 1 / this.Primary.FireRate;
@@ -88,6 +95,7 @@ class UseWeapon : ZilchComponent
         }
         
         if(this.PrimarySelected) {
+            
             if(!this.Primary.Auto && this.Up) {
                 this.Primary.Timer -= event.Dt;
             }else if(this.Primary.Auto) {
@@ -105,7 +113,7 @@ class UseWeapon : ZilchComponent
         
         this.AmmoCount = this.GetAmmoCount();
         
-        if(this.Primary.CurrentMag == 0 && !this.Primary.Reloading && this.AmmoCount != 0){
+        if(this.Primary.CurrentMag == 0 && !this.Primary.Reloading && this.AmmoCount != 0 && this.Primary.MagSize != -1){
             this.Primary.Reloading = true;
             this.Primary.Timer = this.Primary.RelodTime;
         } else if(this.Primary.CurrentMag == 0 && this.Primary.Timer <= 0){
@@ -119,7 +127,7 @@ class UseWeapon : ZilchComponent
             }
         }
         
-        if(this.Secondary.CurrentMag == 0 && !this.Secondary.Reloading && this.AmmoCount != 0){
+        if(this.Secondary.CurrentMag == 0 && !this.Secondary.Reloading && this.AmmoCount != 0 && this.Secondary.MagSize != -1){
             this.Secondary.Reloading = true;
             this.Secondary.Timer = this.Secondary.RelodTime;
         } else if(this.Secondary.CurrentMag == 0 && this.Secondary.Timer <= 0){
@@ -155,7 +163,7 @@ class UseWeapon : ZilchComponent
         }
         
         if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseWeaponKey) || Zero.Mouse.IsButtonDown(GlobalVariables.InputManager.UseWeaponMouse)) {
-            if(this.PrimarySelected && this.Primary.Timer <= 0 && this.Primary.CurrentMag > 0 && this.Up) {
+            if(this.PrimarySelected && this.Primary.Timer <= 0 && (this.Primary.CurrentMag > 0 || this.Primary.MagSize == -1) && this.Up) {
                 if(!this.Primary.Auto)
                     this.Up = false;
                 if(this.Primary.Auto)
@@ -164,8 +172,8 @@ class UseWeapon : ZilchComponent
                     this.Primary.CurrentMag -= 1;
                 this.Primary.Use(angle);
                 this.Sprite.LockDir(vec, this.AnimLockTime);
-            } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && this.Secondary.CurrentMag > 0 && this.Up) {
-                if(!this.Primary.Auto)
+            } else if(!this.PrimarySelected && this.Secondary.Timer <= 0 && (this.Secondary.CurrentMag > 0  || this.Secondary.MagSize == -1) && this.Up) {
+                if(!this.Secondary.Auto)
                     this.Up = false;
                 if(this.Secondary.Auto)
                     this.Secondary.Timer = 1 / this.Secondary.FireRate;
@@ -178,7 +186,7 @@ class UseWeapon : ZilchComponent
         }
         
         if(Zero.Keyboard.KeyIsDown(GlobalVariables.InputManager.UseUtility)){
-            if(this.Utility != null && this.Utility.Timer <= 0 && this.Utility.CurrentMag > 0) {
+            if(this.Utility != null && this.Utility.Timer <= 0 && (this.Utility.CurrentMag > 0 || this.Utility.MagSize == -1)) {
                 this.Utility.Timer = 1 / this.Utility.FireRate;
                 if(this.Utility.MagSize != -1)
                     this.Utility.CurrentMag -= 1;

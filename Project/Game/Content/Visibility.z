@@ -26,6 +26,7 @@ class Visibility : ZilchComponent {
         GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Static;
         filter.IgnoreDynamic = true;
         filter.IgnoreGhost = true;
+        filter.CollisionGroup = CollisionGroup.Enemies;
         
         var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 50, filter);
         
@@ -52,6 +53,9 @@ class Visibility : ZilchComponent {
                 this.Timer -= event.Dt;
             this.Owner.Sprite.Visible = true;
         }
+        
+        if(this.Owner.MenuVisibilityController != null)
+            this.Owner.MenuVisibilityController.Vis = this.Owner.Sprite.Visible;
         
         GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
         GlobalVariables.Player.RigidBody.Velocity = vel;

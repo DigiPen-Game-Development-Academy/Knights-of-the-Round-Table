@@ -1,10 +1,17 @@
 
-
-
+class DialogEnded : ZilchEvent {
+    
+    var Type : DialogReturn;
+    
+    sends DialogEnded : DialogEnded;
+    
+}
 
 class Damage : ZilchEvent {
     
     var Damage : Real = 0;
+    
+    var DeathMSG : String;
     
     sends Damage : Damage;
     
@@ -34,6 +41,9 @@ class InSound : ZilchEvent {
 }
 
 class NoHealth : ZilchEvent {
+    
+    var DeathMSG : String;
+    
     sends NoHealth : NoHealth;
 }
 
@@ -45,4 +55,9 @@ class UseRadar : ZilchEvent {
 class Notice : ZilchEvent {
     var Pos : Real3;
     sends Notice : Notice;
+}
+
+class KeyHeld : ZilchEvent {
+    var Key : Keys;
+    sends KeyHeld : KeyHeld;
 }

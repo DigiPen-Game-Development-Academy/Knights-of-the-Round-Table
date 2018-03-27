@@ -63,7 +63,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			ViewportScaling Scaling = Letterbox,
+			ViewportScaling Scaling = Fill,
 			Vec2 Resolution = [1920, 1080],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
@@ -118,11 +118,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+			Vec4 Color = [1, 1, 1, 0.999899983],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -142,6 +142,12 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Topleft,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [11.5, 1.5],
 		},
 		Hierarchy = 
 		{
@@ -171,11 +177,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -254,12 +260,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -290,11 +296,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -373,12 +379,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -409,11 +415,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -492,12 +498,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -528,11 +534,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -611,12 +617,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -647,11 +653,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -730,12 +736,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -766,11 +772,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -849,12 +855,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -885,11 +891,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -968,12 +974,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -1004,11 +1010,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1087,12 +1093,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 				},
@@ -1111,7 +1117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.74210596, -4.44880724, 50],
+			Vec3 Translation = [-7.73098803, -4.83598709, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1123,7 +1129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.45108175,
+			float Size = 2,
 		},
 		EditorCameraController = 
 		{
@@ -1131,7 +1137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [7.74210596, -4.44880724, 8.74385364e-07],
+			Vec3 LookTarget = [-7.73098803, -4.83598709, 1.9803602e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1201,11 +1207,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.355000019, 0.355000019, 0.355000019, 0.949999988],
+			Vec4 Color = [1, 1, 1, 0.999899983],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1225,6 +1231,12 @@ Level =
 		{
 			bool Active = true,
 			bool CaptureMouse = false,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Topleft,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [1.25, 1.5],
 		},
 		Hierarchy = 
 		{
@@ -1254,11 +1266,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1337,12 +1349,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -1416,11 +1428,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1499,12 +1511,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -1578,11 +1590,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1661,12 +1673,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -1740,11 +1752,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1823,12 +1835,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -1902,11 +1914,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -1985,12 +1997,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -2064,11 +2076,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2147,12 +2159,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -2226,11 +2238,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2309,12 +2321,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -2388,11 +2400,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cecdb5:Inventory border",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2471,12 +2483,12 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 30,
 							string Text = "1",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
@@ -2550,11 +2562,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6ceabcd:Inventory border2",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2635,11 +2647,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6ceabcd:Inventory border2",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2720,11 +2732,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2757,8 +2769,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [4.5, -2, 0],
-					Vec3 Scale = [2, 2, 1],
+					Vec3 Translation = [3.6875, -2, 0],
+					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -2767,11 +2779,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -2781,7 +2793,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [2.5, 0.5],
+					Vec2 Size = [2.875, 1],
 					Location Origin = Center,
 				},
 				Hierarchy = 
@@ -2802,9 +2814,19 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-0.9375, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
+							Vec3 Translation = [-1.0625, 0, 1],
+							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
+						},
+						BoxCollider = 
+						{
+							bool Ghost = false,
+							bool SendsMessages = true,
+							bool Seamless = true,
+							string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+							string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							Vec3 Size = [0.5, 0.5, 0.5],
 						},
 						Sprite = 
 						{
@@ -2828,98 +2850,17 @@ Level =
 						{
 							int Index = 0,
 						},
+						Reactive = 
+						{
+							bool Active = true,
+							bool CaptureMouse = false,
+						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
 							uint Id = 69,
-						},
-						Named = 
-						{
-							string Name = "QuestItem6",
-						},
-						Archetyped = 
-						{
-							string Name = "5a1c24e6b5c27ce6:QuestItem",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0.9375, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Sprite = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [0.164705887, 0.164705887, 0.164705887, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5275aa4d802dd6dc:Square",
-							bool RenderMask = false,
-							bool FlipX = false,
-							bool FlipY = false,
-							bool AnimationActive = true,
-							float AnimationSpeed = 1,
-							uint StartFrame = 0,
-						},
-						QuestItem = 
-						{
-							int Index = 5,
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 70,
-						},
-						Named = 
-						{
-							string Name = "QuestItem5",
-						},
-						Archetyped = 
-						{
-							string Name = "5a1c24e6b5c27ce6:QuestItem",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0.5625, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Sprite = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [0.164705887, 0.164705887, 0.164705887, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5275aa4d802dd6dc:Square",
-							bool RenderMask = false,
-							bool FlipX = false,
-							bool FlipY = false,
-							bool AnimationActive = true,
-							float AnimationSpeed = 1,
-							uint StartFrame = 0,
-						},
-						QuestItem = 
-						{
-							int Index = 4,
-						},
-					},
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 71,
 						},
 						Named = 
 						{
@@ -2931,9 +2872,19 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.1875, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
+							Vec3 Translation = [1.0625, 0, 1],
+							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
+						},
+						BoxCollider = 
+						{
+							bool Ghost = false,
+							bool SendsMessages = true,
+							bool Seamless = true,
+							string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+							string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							Vec3 Size = [0.5, 0.5, 0.5],
 						},
 						Sprite = 
 						{
@@ -2945,7 +2896,7 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5275aa4d802dd6dc:Square",
+							string SpriteSource = "5a5019edef1439cc:Motor",
 							bool RenderMask = false,
 							bool FlipX = false,
 							bool FlipY = false,
@@ -2957,12 +2908,17 @@ Level =
 						{
 							int Index = 3,
 						},
+						Reactive = 
+						{
+							bool Active = true,
+							bool CaptureMouse = false,
+						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 72,
+							uint Id = 70,
 						},
 						Named = 
 						{
@@ -2974,9 +2930,19 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-0.1875, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
+							Vec3 Translation = [0.3125, 0, 1],
+							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
+						},
+						BoxCollider = 
+						{
+							bool Ghost = false,
+							bool SendsMessages = true,
+							bool Seamless = true,
+							string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+							string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							Vec3 Size = [0.5, 0.5, 0.5],
 						},
 						Sprite = 
 						{
@@ -2988,7 +2954,7 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5a6dd62c1a9c1891:Compass01 (1)",
+							string SpriteSource = "5a6dd62c1aa2e929:Fuel01",
 							bool RenderMask = false,
 							bool FlipX = false,
 							bool FlipY = false,
@@ -3000,12 +2966,17 @@ Level =
 						{
 							int Index = 2,
 						},
+						Reactive = 
+						{
+							bool Active = true,
+							bool CaptureMouse = false,
+						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 73,
+							uint Id = 71,
 						},
 						Named = 
 						{
@@ -3017,9 +2988,19 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-0.5625, 0, 0.100000001],
-							Vec3 Scale = [0.25, 0.25, 1],
+							Vec3 Translation = [-0.375, 0, 1],
+							Vec3 Scale = [0.5, 0.5, 1],
 							Quat Rotation = [0, 0, 0, 1],
+						},
+						BoxCollider = 
+						{
+							bool Ghost = false,
+							bool SendsMessages = true,
+							bool Seamless = true,
+							string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+							string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+							Vec3 Offset = [0, 0, 0],
+							Vec3 Size = [0.5, 0.5, 0.5],
 						},
 						Sprite = 
 						{
@@ -3043,6 +3024,11 @@ Level =
 						{
 							int Index = 1,
 						},
+						Reactive = 
+						{
+							bool Active = true,
+							bool CaptureMouse = false,
+						},
 					},
 				},
 			},
@@ -3050,7 +3036,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 74,
+					uint Id = 72,
 				},
 				Named = 
 				{
@@ -3072,11 +3058,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.944999993, 0.944999993, 0.944999993, 0.5],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5af4da4da6cebff2:Inventory border3",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -3098,7 +3084,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 75,
+							uint Id = 73,
 						},
 						Named = 
 						{
@@ -3135,7 +3121,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 76,
+					uint Id = 74,
 				},
 				Named = 
 				{
@@ -3153,11 +3139,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.170000017, 0.170000017, 0.170000017, 0.949999988],
+					Vec4 Color = [0.680000007, 0.680000007, 0.680000007, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -3172,7 +3158,7 @@ Level =
 				},
 				LorePanel = 
 				{
-					float Padding = 0.100000001,
+					float Padding = 0.5,
 				},
 				Hierarchy = 
 				{
@@ -3180,7 +3166,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 77,
+							uint Id = 75,
 						},
 						Named = 
 						{
@@ -3202,12 +3188,132 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "5ad145146737fc79:Cavemanly-Regular",
 							uint FontSize = 100,
 							string Text = "hello\nI am bob",
 							TextAlign Align = Left,
 							float PixelsPerUnit = 512,
-							bool Smoothing = true,
+							bool Smoothing = false,
+						},
+					},
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 76,
+				},
+				Named = 
+				{
+					string Name = "HealthBar",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 1.625, -1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.585000038],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a08e71b4d4fc75e:Health",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [10, 0.5],
+					Location Origin = CenterLeft,
+				},
+				PlayerHealthBar = 
+				{
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 77,
+						},
+						Named = 
+						{
+							string Name = "TXT",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0.0625, 0.1875, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0, 0, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
+							uint FontSize = 150,
+							string Text = "Sprite Text...",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 512,
+							bool Smoothing = false,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 78,
+						},
+						Named = 
+						{
+							string Name = "Back",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 0, -1],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.524999976, 0.524999976, 0.524999976, 0.550000012],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5a08e71b4d4fc75e:Health",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						Area = 
+						{
+							Vec2 Size = [10, 0.5],
+							Location Origin = CenterLeft,
 						},
 					},
 				},
@@ -3218,7 +3324,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 78,
+			uint Id = 79,
 		},
 		Named = 
 		{
@@ -3237,13 +3343,24 @@ Level =
 		SizeStor = 
 		{
 		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = TopRight,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Topright,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [0.100000001, 0.100000001],
+		},
 		Hierarchy = 
 		{
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 79,
+					uint Id = 80,
 				},
 				Named = 
 				{
@@ -3282,7 +3399,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 80,
+							uint Id = 81,
 						},
 						Named = 
 						{
@@ -3304,19 +3421,19 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 125,
 							string Text = "Sprite Text...",
 							TextAlign Align = Right,
 							float PixelsPerUnit = 512,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 81,
+							uint Id = 82,
 						},
 						Named = 
 						{
@@ -3338,19 +3455,19 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 125,
 							string Text = "Sprite Text...",
 							TextAlign Align = Right,
 							float PixelsPerUnit = 512,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 82,
+							uint Id = 83,
 						},
 						Named = 
 						{
@@ -3392,7 +3509,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 83,
+					uint Id = 84,
 				},
 				Named = 
 				{
@@ -3431,7 +3548,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 84,
+							uint Id = 85,
 						},
 						Named = 
 						{
@@ -3453,19 +3570,19 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 125,
 							string Text = "Sprite Text...",
 							TextAlign Align = Right,
 							float PixelsPerUnit = 512,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 85,
+							uint Id = 86,
 						},
 						Named = 
 						{
@@ -3487,19 +3604,19 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
 							uint FontSize = 125,
 							string Text = "Sprite Text...",
 							TextAlign Align = Right,
 							float PixelsPerUnit = 512,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 86,
+							uint Id = 87,
 						},
 						Named = 
 						{
@@ -3541,7 +3658,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 87,
+					uint Id = 88,
 				},
 				Named = 
 				{
@@ -3580,7 +3697,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 88,
+							uint Id = 89,
 						},
 						Named = 
 						{
@@ -3602,19 +3719,19 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 150,
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
+							uint FontSize = 125,
 							string Text = "Sprite Text...",
 							TextAlign Align = Right,
 							float PixelsPerUnit = 512,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 89,
+							uint Id = 90,
 						},
 						Named = 
 						{
@@ -3636,19 +3753,19 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 150,
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
+							uint FontSize = 125,
 							string Text = "Sprite Text...",
 							TextAlign Align = Right,
 							float PixelsPerUnit = 512,
-							bool Smoothing = true,
+							bool Smoothing = false,
 						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 90,
+							uint Id = 91,
 						},
 						Named = 
 						{
@@ -3690,7 +3807,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 91,
+					uint Id = 92,
 				},
 				Named = 
 				{
@@ -3712,7 +3829,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a0b6a2f64f4cabc:arrow1",
+					string SpriteSource = "5ad3939e45c7344a:MenuArrowAlpha",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -3728,7 +3845,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 92,
+					uint Id = 93,
 				},
 				Named = 
 				{
@@ -3746,11 +3863,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -3773,7 +3890,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 93,
+			uint Id = 94,
 		},
 		Named = 
 		{
@@ -3795,13 +3912,24 @@ Level =
 		MenuVisibilityController = 
 		{
 		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Bottomright,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [2, 6],
+		},
 		Hierarchy = 
 		{
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 94,
+					uint Id = 95,
 				},
 				Named = 
 				{
@@ -3823,12 +3951,12 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5ad145146737fc79:Cavemanly-Regular",
 					uint FontSize = 99,
 					string Text = "Paused",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 				MenuVisibilitySpriteText = 
 				{
@@ -3843,11 +3971,74 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 95,
+					uint Id = 96,
 				},
 				Named = 
 				{
-					string Name = "Quit",
+					string Name = "Manu",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -1.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 0, 0, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5ad145146737fc79:Cavemanly-Regular",
+					uint FontSize = 99,
+					string Text = "Menu",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+				MenuVisibilitySpriteText = 
+				{
+				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				Button = 
+				{
+					float ScaleM = 1,
+					Vec4 HoverColor = [1, 1, 1, 0.999899983],
+					Vec4 ClickColor = [0, 0, 0, 0.350000024],
+					float ScaleSpeed = 5,
+					bool Alpha = false,
+					bool Scaling = true,
+				},
+				Area = 
+				{
+					Vec2 Size = [3, 1],
+					Location Origin = Center,
+				},
+				LoadLevelButton = 
+				{
+					string Level = "5a7e54ababd94aa3:MainMenu",
+					bool DialogBox = true,
+					string DialogText = "WARNING!  All unsaved progress will be lost!",
+					Enum DialogType = OKCANCEL,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 97,
+				},
+				Named = 
+				{
+					string Name = "Settings",
 				},
 				Transform = 
 				{
@@ -3861,16 +4052,16 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [0, 0, 0, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "5ad145146737fc79:Cavemanly-Regular",
 					uint FontSize = 99,
-					string Text = "Quit",
+					string Text = "Settings",
 					TextAlign Align = Center,
-					float PixelsPerUnit = 128,
-					bool Smoothing = true,
+					float PixelsPerUnit = 136.192566,
+					bool Smoothing = false,
 				},
 				MenuVisibilitySpriteText = 
 				{
@@ -3882,10 +4073,71 @@ Level =
 				},
 				Button = 
 				{
-					float ScaleM = 1.20000005,
-					Vec4 HoverColor = [0, 0, 0, 0.999899983],
+					float ScaleM = 1,
+					Vec4 HoverColor = [1, 1, 1, 0.999899983],
 					Vec4 ClickColor = [0, 0, 0, 0.350000024],
 					float ScaleSpeed = 5,
+					bool Alpha = false,
+					bool Scaling = true,
+				},
+				Area = 
+				{
+					Vec2 Size = [3, 1],
+					Location Origin = Center,
+				},
+				SettingsButton = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 98,
+				},
+				Named = 
+				{
+					string Name = "Quit",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -2.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 0, 0, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5ad145146737fc79:Cavemanly-Regular",
+					uint FontSize = 99,
+					string Text = "Quit",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+				MenuVisibilitySpriteText = 
+				{
+				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				Button = 
+				{
+					float ScaleM = 1,
+					Vec4 HoverColor = [1, 1, 1, 0.999899983],
+					Vec4 ClickColor = [0, 0, 0, 0.350000024],
+					float ScaleSpeed = 5,
+					bool Alpha = false,
+					bool Scaling = true,
 				},
 				Area = 
 				{
@@ -3900,7 +4152,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 96,
+					uint Id = 99,
 				},
 				Named = 
 				{
@@ -3908,8 +4160,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0, -1],
-					Vec3 Scale = [3.02577353, 2, 1],
+					Vec3 Translation = [0, -0.991291046, -1],
+					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -3918,11 +4170,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.356862754, 0.356862754, 0.356862754, 0.949999988],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -3933,6 +4185,11 @@ Level =
 				MenuVisibilitySprite = 
 				{
 				},
+				Area = 
+				{
+					Vec2 Size = [3.02576995, 3.98257995],
+					Location Origin = Center,
+				},
 			},
 		},
 	},
@@ -3940,7 +4197,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 97,
+			uint Id = 100,
 		},
 		Named = 
 		{
@@ -3952,31 +4209,19 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.235000014, 0.235000014, 0.235000014, 0.829999983],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
 		Area = 
 		{
 			Vec2 Size = [4, 4],
-			Location Origin = BottomLeft,
+			Location Origin = Center,
 		},
 		ConsoleController = 
 		{
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Bottomleft,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [-4, -3.5],
 		},
 		Hierarchy = 
 		{
@@ -3984,7 +4229,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 98,
+					uint Id = 101,
 				},
 				Named = 
 				{
@@ -4033,7 +4278,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 99,
+							uint Id = 102,
 						},
 						Named = 
 						{
@@ -4041,7 +4286,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [0.0625, 0.21875, 0],
+							Vec3 Translation = [11.875, 0.125, 1],
 							Vec3 Scale = [1, 1, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -4055,14 +4300,306 @@ Level =
 							BlendMode BlendMode = Alpha,
 							SpriteGeometryMode GeometryMode = ZPlane,
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string FontName = "4e7bac697bec55c5:Verdana",
-							uint FontSize = 10,
-							string Text = "",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
+							uint FontSize = 47,
+							string Text = "aaa",
 							TextAlign Align = Left,
-							float PixelsPerUnit = 64,
-							bool Smoothing = true,
+							float PixelsPerUnit = 323.031982,
+							bool Smoothing = false,
+						},
+						Area = 
+						{
+							Vec2 Size = [11.8999996, 0.200000003],
+							Location Origin = CenterRight,
 						},
 					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 103,
+						},
+						Named = 
+						{
+							string Name = "AutoText",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [11.875, 0.125, 1],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0, 0, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
+							uint FontSize = 47,
+							string Text = "aaa",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 323.031982,
+							bool Smoothing = false,
+						},
+						Area = 
+						{
+							Vec2 Size = [11.8999996, 0.200000003],
+							Location Origin = CenterLeft,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 104,
+						},
+						Named = 
+						{
+							string Name = "Cursor",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 0.125, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
+							uint FontSize = 55,
+							string Text = "|",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 323.032013,
+							bool Smoothing = false,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 105,
+						},
+						Named = 
+						{
+							string Name = "Selection",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 0.125, 1],
+							Vec3 Scale = [0.0250000004, 0.25, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.720000029, 0.720000029, 0.720000029, 0.279999971],
+							BlendMode BlendMode = MultiplyAdd,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5275aa4d802dd6dc:Square",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						Area = 
+						{
+							Vec2 Size = [1, 1],
+							Location Origin = CenterLeft,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 106,
+						},
+						Named = 
+						{
+							string Name = "Auto",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0.125, 0.375, 3],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						SpriteText = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0, 0, 0, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string FontName = "57343753bb4eaaec:NotoSans-Regular",
+							uint FontSize = 97,
+							string Text = "Auto",
+							TextAlign Align = Left,
+							float PixelsPerUnit = 512,
+							bool Smoothing = false,
+						},
+						Area = 
+						{
+							Vec2 Size = [2, 100],
+							Location Origin = BottomLeft,
+						},
+						Hierarchy = 
+						{
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 107,
+								},
+								Named = 
+								{
+									string Name = "back",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [-0.100000001, -0.100000001, -1],
+									Vec3 Scale = [1, 1, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [1, 1, 1, 1],
+									BlendMode BlendMode = Alpha,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "5ae3e0de08fe7635:MenuBack",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+								Area = 
+								{
+									Vec2 Size = [1, 1],
+									Location Origin = BottomLeft,
+								},
+								Backing = 
+								{
+								},
+							},
+							Cog = 
+							{
+								LinkId = 
+								{
+									uint Id = 108,
+								},
+								Named = 
+								{
+									string Name = "Sel",
+								},
+								Transform = 
+								{
+									Vec3 Translation = [-0.125, 0.375, 1],
+									Vec3 Scale = [1, 1, 1],
+									Quat Rotation = [0, 0, 0, 1],
+								},
+								Sprite = 
+								{
+									bool Visible = true,
+									bool VisibilityCulling = true,
+									bool VisibilityEvents = true,
+									bool CastShadows = false,
+									Vec4 Color = [0.757691979, 0.779999971, 0.577199996, 0.444999993],
+									BlendMode BlendMode = MultiplyAdd,
+									SpriteGeometryMode GeometryMode = ZPlane,
+									string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+									string SpriteSource = "5275aa4d802dd6dc:Square",
+									bool RenderMask = false,
+									bool FlipX = false,
+									bool FlipY = false,
+									bool AnimationActive = true,
+									float AnimationSpeed = 1,
+									uint StartFrame = 0,
+								},
+								Area = 
+								{
+									Vec2 Size = [1, 1],
+									Location Origin = BottomLeft,
+								},
+							},
+						},
+					},
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 109,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0.999899983],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5ae3e0de08fe7635:MenuBack",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [4, 4],
+					Location Origin = BottomLeft,
+				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				BackFade = 
+				{
+					float FadeSpd = 2.5,
 				},
 			},
 		},
@@ -4071,7 +4608,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 100,
+			uint Id = 110,
 		},
 		Named = 
 		{
@@ -4079,7 +4616,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.28125, 4.59375, 0],
+			Vec3 Translation = [4, 4.125, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4096,139 +4633,30 @@ Level =
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 99,
 			string Text = "Debug",
-			TextAlign Align = Right,
+			TextAlign Align = Center,
 			float PixelsPerUnit = 128,
 			bool Smoothing = true,
 		},
 		DebugTextUI = 
 		{
 		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 101,
-		},
-		Named = 
-		{
-			string Name = "HealthBar",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-8.5, 4.375, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 0, 0, 0.585000038],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a08e71b4d4fc75e:Health",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
 		Area = 
 		{
-			Vec2 Size = [10, 0.5],
-			Location Origin = CenterLeft,
+			Vec2 Size = [2.75, 1],
+			Location Origin = Center,
 		},
-		HealthBar = 
+		ScreenAlign = 
 		{
-		},
-		Hierarchy = 
-		{
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 102,
-				},
-				Named = 
-				{
-					string Name = "TXT",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.0625, 0.1875, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0, 0, 0, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 150,
-					string Text = "Sprite Text...",
-					TextAlign Align = Left,
-					float PixelsPerUnit = 512,
-					bool Smoothing = true,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 103,
-				},
-				Named = 
-				{
-					string Name = "Back",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.524999976, 0.524999976, 0.524999976, 0.550000012],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a08e71b4d4fc75e:Health",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Area = 
-				{
-					Vec2 Size = [10, 0.5],
-					Location Origin = CenterLeft,
-				},
-			},
+			Enum Pos = Topright,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [4, 0],
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 104,
+			uint Id = 111,
 		},
 		Named = 
 		{
@@ -4267,7 +4695,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 105,
+					uint Id = 112,
 				},
 				Named = 
 				{
@@ -4289,52 +4717,14 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
+					string FontName = "57343753bb4eaaec:NotoSans-Regular",
 					uint FontSize = 30,
 					string Text = "1",
 					TextAlign Align = Right,
 					float PixelsPerUnit = 64,
-					bool Smoothing = true,
+					bool Smoothing = false,
 				},
 			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 106,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.50373733, 0.966432512, 5.57986198e-07],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a0194ff84b9233d:Cursor",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		CursorController = 
-		{
 		},
 	},
 	ArchetypeInstance = 
@@ -4342,13 +4732,18 @@ Level =
 		string Name = "5a6dc57e30d123ad:SoundWaves",
 		LinkId = 
 		{
-			uint Id = 107,
+			uint Id = 113,
 		},
 		Transform = 
 		{
 			Vec3 Translation = [-8.5, 3.375, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
 		},
 		Named = 
 		{
@@ -4359,11 +4754,15 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 108,
+			uint Id = 114,
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Version",
+		},
+		Archetyped = 
+		{
+			string Name = "5af4af2480366ec0:Version",
 		},
 		Transform = 
 		{
@@ -4381,17 +4780,118 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "4e7bac697bec55c5:Verdana",
+			string FontName = "57343753bb4eaaec:NotoSans-Regular",
 			uint FontSize = 150,
-			string Text = "Alpha V0.15",
+			string Text = "Beta 1.0",
 			TextAlign Align = Right,
 			float PixelsPerUnit = 429.0383,
-			bool Smoothing = true,
+			bool Smoothing = false,
 		},
 		Area = 
 		{
-			Vec2 Size = [2.29999995, 0.5],
-			Location Origin = BottomRight,
+			Vec2 Size = [2, 0.5],
+			Location Origin = Center,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Bottomright,
+			Vec3 Offset = [-0.25, 0, 0],
+			Vec2 RelOffset = [0, 0],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 115,
+		},
+		Named = 
+		{
+			string Name = "QuestPointer",
+		},
+		Archetyped = 
+		{
+			string Name = "5ae3f30b748bd0fa:QuestPointer",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -4.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0.999899983],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5ae3e0de08fe7635:MenuBack",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		QuestSprite = 
+		{
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = Center,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Bottom,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [0, 0],
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 116,
+				},
+				Named = 
+				{
+					string Name = "txt",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0.25, 1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 0, 0, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "57343753bb4eaaec:NotoSans-Regular",
+					uint FontSize = 30,
+					string Text = "Sprite Text...",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 128,
+					bool Smoothing = false,
+				},
+				Area = 
+				{
+					Vec2 Size = [1, 1],
+					Location Origin = Center,
+				},
+			},
 		},
 	},
 },

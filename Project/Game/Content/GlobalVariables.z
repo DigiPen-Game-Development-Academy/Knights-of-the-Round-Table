@@ -9,6 +9,9 @@ class GlobalVariables {
     var QuestItems : Array[Boolean];
     
     [Static]
+    var DeathMSG : String = "";
+    
+    [Static]
     var Enemies : Array[Cog];
     
     [Static]
@@ -70,6 +73,21 @@ class GlobalVariables {
     
     [Static]
     var CamSense : Real = 6;
+    
+    [Static]
+    var Settings : Cog = null;
+    
+    [Static]
+    var QuestSprite : QuestSprite = null;
+    
+    [Static]
+    var SFXSpace : Space = null;
+    
+    [Static]
+    var Cursor : Cog;
+    
+    [Static]
+    var CamFollow : CamFollow;
     
     [Static]
     function AddInventoryItem (item : Item) : Boolean {

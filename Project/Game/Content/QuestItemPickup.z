@@ -1,29 +1,19 @@
 class QuestItemPickup : ZilchComponent {
     [Property] var Index : Integer = 0;
-    [Property] var Name : String = "";
-    [Property] var Lore : String = "";
     function Initialize(init : CogInitializer) {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
         Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
         Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
         Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
     }
-
-    function OnLogicUpdate(event : UpdateEvent) {
-        
-        
-        
-        if(GlobalVariables.QuestItems[this.Index]) {
-            this.Owner.Destroy();
-        }
-        
-    }
     
     function OnMouseDown(event : ViewportMouseEvent) {
-        GlobalVariables.QuestItems[this.Index] = true;
-        this.Owner.Destroy();
-        GlobalVariables.LorePanel.Sprite.Visible = false;
+        if (event.Button == MouseButtons.Right) {
+            GlobalVariables.QuestItems[this.Index] = true;
+            
+            this.LevelSettings.SaveLoad.PartialSave();
+            this.Space.LoadLevel(Level.JustinTestLevel);
+            
+        }
     }
     
     function OnMouseExit(event : ViewportMouseEvent) {
@@ -39,7 +29,7 @@ class QuestItemPickup : ZilchComponent {
         
         GlobalVariables.LorePanel.Sprite.Visible = true;
         
-        var text = "`this.Name`\n`this.Lore`";
+        var text = "`QuestItem.Lore[this.Index]`\n\nRight click to pick up\nYou will return to main level when you pick this up";
         
         GlobalVariables.LorePanel.LorePanel.Text = text;
     }

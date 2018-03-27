@@ -1,0 +1,89 @@
+class Stealth : ZilchComponent {
+    
+    [Dependency] var MenuVisController : MenuVisibilityController;
+    [Dependency] var Vis : Visibility;
+    [Dependency] var AI : EnemyAI;
+    [Dependency] var Sprite : Sprite;
+    
+    [Property] var SneakRange : Real = 10;
+    [Property] var SneakCooldown : Real = 3;
+    
+    var Movspd : Real = 0;
+    
+    var Cooldwon : Real = 0;
+    
+    var Rand : Random;
+    
+    var Active : Boolean = true;
+    
+    function Initialize(init : CogInitializer) {
+        this.Cooldwon = this.SneakCooldown;
+        this.Rand = Random();
+        this.Movspd = this.AI.MoveSpeed;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if (!this.Active)
+            return;
+        
+        this.Cooldwon -= event.Dt;
+        
+        if (this.Vis.InSight) {
+            this.Sprite.Visible = true;
+            this.AI.MoveSpeed = this.Movspd;
+            if (this.Owner.BasicPathFollowAI != null) {
+                this.Owner.BasicPathFollowAI.Instaturn = false;
+            }
+        } else {
+            this.Sprite.Visible = false;
+            this.AI.MoveSpeed = this.Movspd * 2;
+            if (this.Owner.BasicPathFollowAI != null) {
+                this.Owner.BasicPathFollowAI.Instaturn = true;
+            }
+            if (this.Cooldwon <= 0) {
+                this.Cooldwon = this.SneakCooldown;
+                
+                this.Sneak();
+                
+            }
+        }
+        
+        this.Vis.InSight = true;
+        
+    }
+    
+    function Sneak () {
+        var filter = CastFilter();
+        var vel = GlobalVariables.Player.RigidBody.Velocity;
+        var ghost = GlobalVariables.Player.BoxCollider.Ghost;
+        GlobalVariables.Player.BoxCollider.Ghost = false;
+        GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Static;
+        filter.IgnoreDynamic = true;
+        filter.IgnoreGhost = true;
+        
+        var pos = Real3(0);
+        for (var i = 0; i < 50; ++i) {
+            
+            pos = GlobalVariables.Player.Transform.WorldTranslation + Real3(this.Rand.Range(-this.SneakRange, this.SneakRange), this.Rand.Range(-this.SneakRange, this.SneakRange), 0);
+            
+            var res = Utilities.Raycast(pos, GlobalVariables.Player.Transform.WorldTranslation - pos, this.Space.PhysicsSpace, 50, filter);
+            
+            var node = this.LevelSettings.CreateNavGrid.GetNodeFromPos(pos);
+            
+            if(node != null && node.Walkable && (res == null || res.ObjectHit != GlobalVariables.Player)) {
+                
+                this.Owner.Transform.WorldTranslation = pos;
+                break;
+                
+            }
+        }
+        
+        GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
+        GlobalVariables.Player.RigidBody.Velocity = vel;
+        GlobalVariables.Player.BoxCollider.Ghost = ghost;
+        
+    }
+    
+}

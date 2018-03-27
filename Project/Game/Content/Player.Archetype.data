@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.5, 0.5, 0],
+		Vec3 Translation = [0, -15, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -54,7 +54,7 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "5a917b88a0971f8b:Player",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		string SerializedGroupName = "5a11bc4854a4df8c:NotEnemies",
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.125, 0.449999988, 0.5],
 	},
@@ -76,9 +76,9 @@ Cog =
 	},
 	PlayerMovment = 
 	{
-		float MoveSpeed = 4,
+		float MoveSpeed = 2,
 		float SprintMultiplier = 2,
-		float SprintSoundDist = 15,
+		float SprintSoundDist = 5,
 	},
 	UseWeapon = 
 	{
@@ -92,17 +92,20 @@ Cog =
 	},
 	PlayerHealth = 
 	{
+		bool OnMainLevel = true,
+		string MainLevel = "5a1a864f77326081:JustinTestLevel",
 	},
 	PlayerSprites = 
 	{
-		string North = "5a0759f3f416b0a2:Temp_Enemy002",
-		string NorthEast = "5a07589e80afd996:Temp_Enemy007",
-		string East = "5a0759f3f417f88d:Temp_Enemy003",
-		string SouthEast = "5a0759f3f415546c:Temp_Enemy004",
-		string South = "5afd92272f3d7f10:Pat Walk South",
-		string SouthWest = "5a0759f3f4129b4b:Temp_Enemy005",
-		string West = "5a0759f3f419221b:Temp_Enemy001",
-		string NorthWest = "5a0759f0f413d20b:Temp_Enemy006",
+		string North = "5a5341ec590a3054:Pat Walk NAnim",
+		string NorthEast = "5a5340356d6e6b67:Pat Walk NEAnim",
+		string East = "5a5341d75d67251c:Pat Walk EAnim",
+		string SouthEast = "5a53406972aa13ca:Pat Walk SEAnim",
+		string South = "5a534002641c43be:Pat Walk SAnim",
+		string SouthWest = "5a53407e70ea7606:Pat walk SWAnim",
+		string West = "5a53401860e6d328:Pat Walk WAnim",
+		string NorthWest = "5a53404069aea011:Pat Walk NWAnim",
+		float AnimSpeed = 0.5,
 	},
 	Hierarchy = 
 	{
@@ -129,7 +132,7 @@ Cog =
 				CameraTransparentSort TransparentSort = ViewDepth,
 				float FieldOfView = 45,
 				float NearPlane = 0.5,
-				float FarPlane = 50,
+				float FarPlane = 100,
 				float Size = 10,
 			},
 			SoundListener = 
@@ -139,6 +142,7 @@ Cog =
 			},
 			CamFollow = 
 			{
+				float MoveSpd = 15,
 			},
 			Hierarchy = 
 			{
@@ -175,6 +179,49 @@ Cog =
 				float Size = 10.5,
 				float Thickness = 10,
 				float Intensity = 0,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Named = 
+			{
+				string Name = "Hold",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 0.100000001],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af4923cd5b44732:ShotgunHolding",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = false,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			Holding = 
+			{
+			},
+			Area = 
+			{
+				Vec2 Size = [1, 1],
+				Location Origin = Center,
 			},
 		},
 	},

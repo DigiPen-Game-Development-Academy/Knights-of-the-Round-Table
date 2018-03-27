@@ -27,7 +27,10 @@ class Utilities
     [Static]
     var EnemiesIDS : Array[EnemyID] = Array[EnemyID](){
         EnemyID(Archetype.Enemy_Rusher),
-        EnemyID(Archetype.Enemy_GI_Pistol)
+        EnemyID(Archetype.Enemy_GI_Pistol),
+        EnemyID(Archetype.Boss_Rusher),
+        EnemyID(Archetype.Enemy_Rusher_Tutorial),
+        EnemyID(Archetype.Enemy_Stealth)
     };
     
     /*Item Auto-Compete Array*/
@@ -55,7 +58,8 @@ class Utilities
         ItemID("Potato_cannon"),
         ItemID("Laser_Beam"),
         ItemID("Stun_m"),
-        ItemID("Missile")
+        ItemID("Missile"),
+        ItemID("Light")
     };
     
     [Static]
@@ -99,7 +103,7 @@ class Utilities
         ray.Start = start;
         ray.Direction = direction;
         var result = physSpace.CastRayFirst(ray);
-        if(result.Distance > range){
+        if(range != -1 && result.Distance > range){
             if(GlobalVariables.DebugLinesActive) Utilities.DrawdebugLine(start, start + (range * Math.Normalize(direction)), Real4(0, 0, 1, 1));
             return null;
         }
@@ -117,7 +121,7 @@ class Utilities
         ray.Start = start;
         ray.Direction = direction;
         var result = physSpace.CastRayFirstFiltered(ray, filter);
-        if(result.Distance > range){
+        if(range != -1 && result.Distance > range){
             if(GlobalVariables.DebugLinesActive) Utilities.DrawdebugLine(start, start + (range * Math.Normalize(direction)), Real4(0, 0, 1, 1));
             return null;
         }
@@ -163,11 +167,13 @@ class Utilities
     
     
     [Static]
-    function Damage(obj : Cog, damage : Real) {
+    function Damage(obj : Cog, damage : Real, msg : String) {
         
         var dmg = Damage();
         
         dmg.Damage = damage;
+        
+        dmg.DeathMSG = msg;
         
         obj.DispatchEvent(Events.Damage, dmg);
         
@@ -230,6 +236,8 @@ class Utilities
             return StunMissile();
         else if(id == "Missile")
             return Missile();
+        else if(id == "Light")
+            return Flashlight();
         else
             return null;
         
@@ -249,7 +257,8 @@ class Utilities
     }
     [Static]
     function ConsoleSend(msg : String, color : Real4) {
-        GlobalVariables.Console.ConsoleController.AddMSG(msg, color);
+        if(GlobalVariables.Console != null)
+            GlobalVariables.Console.ConsoleController.AddMSG(msg, color);
     }
     
     [Static]
@@ -259,5 +268,113 @@ class Utilities
         return item;
     }
     
-  
+    [Static]
+    var DialogBox : Cog = null;
+    
+    [Static]
+    function Dialog(text : String, dialogType : DialogTypes, size : Real) : Cog {
+        
+        var dialogBox : Cog = null;
+        
+        var dialogspace = GlobalVariables.GameSpace.GameSession.FindSpaceByName("Dialog");
+        
+        if(dialogspace == null || Utilities.DialogBox != null)
+            return null;
+        
+        if(dialogType == DialogTypes.OK) {
+            dialogBox = dialogspace.Create(Archetype.DialogBoxOK);
+        } else if(dialogType == DialogTypes.OKCANCEL) {
+            dialogBox = dialogspace.Create(Archetype.DialogBoxOKCancel);
+        } else if(dialogType == DialogTypes.YESNO) {
+            dialogBox = dialogspace.Create(Archetype.DialogBoxYESNO);
+        } else if(dialogType == DialogTypes.SETTINGS) {
+            dialogBox = dialogspace.Create(Archetype.DialogBoxSettings);
+        }
+        
+        if(dialogType != DialogTypes.SETTINGS) {
+            dialogBox.FindChildByName("TXT").SpriteText.Text = text;
+            
+            Utilities.ConsoleSend("Dialog: `text`", Real4(1, 1, 1, 1));
+            
+        }
+        
+        Utilities.Block();
+        
+        dialogspace.LevelSettings.CameraViewport.Camera.Camera.Size = 20-size;
+        
+        Utilities.DialogBox = dialogBox;
+        
+        dialogBox.Transform.Scale = Real3(0.0001, 0.0001, 1);
+        
+        return dialogBox;
+        
+    }
+    
+    [Static]
+    var MaxIndex : Integer = -1;
+    
+    [Static]
+    function SetQuest(index : Integer) {
+        if(index > Utilities.MaxIndex) {
+            GlobalVariables.QuestSprite.Set(Objective.Quests[index]);
+            Utilities.MaxIndex = index;
+            GlobalVariables.Save.SaveController.Quest = Objective.Quests[index];
+            
+            Utilities.Dialog(Objective.Quests[index], DialogTypes.OK, 15);
+            
+        }
+    }
+    
+    [Static]
+    function ClearQuest() {
+        GlobalVariables.QuestSprite.Clear();
+        GlobalVariables.Save.SaveController.Quest = "";
+    }
+    
+    [Static]
+    function PlaySFX(sound : SoundCue) {
+        
+        GlobalVariables.SFXSpace.SoundSpace.PlayCue(sound);
+        
+    }
+    
+    [Static]
+    var Blocked : Boolean = false;
+    
+    [Static]
+    function Block () {
+        if(!Utilities.Blocked) {
+            Utilities.Blocked = true;
+            var ui = GlobalVariables.GameSpace.GameSession.FindSpaceByName("UI");
+            if(ui != null) {
+                ui.CreateAtPosition(Archetype.Blocker, Real3(0, 0, 25));
+            }
+            if(GlobalVariables.Player != null)
+                GlobalVariables.GameSpace.CreateAtPosition(Archetype.Blocker, GlobalVariables.Player.Transform.WorldTranslation + Real3(0, 0, 25));
+            else
+                GlobalVariables.GameSpace.CreateAtPosition(Archetype.Blocker, Real3(0, 0, 25));
+        }
+    }
+    
+    [Static]
+    function UnBlock () {
+        
+        Utilities.Blocked = false;
+        
+        var ui = GlobalVariables.GameSpace.GameSession.FindSpaceByName("UI");
+        if(ui != null) {
+            if(ui.FindObjectByName("Blocker") != null)
+                ui.FindObjectByName("Blocker").Destroy();
+        }
+        if(GlobalVariables.GameSpace.FindObjectByName("Blocker") != null)
+            GlobalVariables.GameSpace.FindObjectByName("Blocker").Destroy();
+        
+    }
+    
+    [Static]
+    function ScreenShake (intencity : Real, falloff : Real) {
+        GlobalVariables.CamFollow.ScreenShakeIntencity = intencity;
+        GlobalVariables.CamFollow.Falloff = falloff;
+    }
+    
 }

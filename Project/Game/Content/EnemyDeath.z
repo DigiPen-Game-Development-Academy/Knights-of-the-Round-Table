@@ -6,6 +6,8 @@ class EnemyDeath : ZilchComponent {
     
     [Property] var DropRange : Real = 0.2;
     
+    [Property] var LootTable : ResourceTable = ResourceTable.Loot;
+    
     function Initialize(init : CogInitializer) {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.NoHealth, this.OnNoHealth);
@@ -22,7 +24,7 @@ class EnemyDeath : ZilchComponent {
         
         if(this.NumberOfDrops > 0) {
             for (var i = 0; i < this.NumberOfDrops; ++i) {
-                var item = Utilities.ItemFromID(ResourceTable.Loot.SampleValue(rand.Range(0, 1), rand.Range(0, 1)));
+                var item = Utilities.ItemFromID(this.LootTable.SampleValue(rand.Range(0, 1), rand.Range(0, 1)));
                 if(item == null)
                     continue;
                 item.Init();

@@ -57,6 +57,10 @@ class WeaponDisplay : ZilchComponent
                 }
             }
             
+            if (this.Progress.Area.Size.X > 1) {
+                this.Progress.Area.Size = Real2(1,1);
+            }
+            
         }
         
         

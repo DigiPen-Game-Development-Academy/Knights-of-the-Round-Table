@@ -16,5 +16,10 @@ class Pause : ZilchComponent {
                 this.Space.FindObjectByName("ChestInventoryBackground").ChestInventory.Vis = false;
         }
         
+        if(!GlobalVariables.GameSpace.TimeSpace.Paused) {
+            this.Space.FindObjectByName("ChestInventoryBackground").ChestInventory.Vis = false;
+            this.Owner.MenuVisibilityController.Vis = false;
+        }
+        
     }
 }

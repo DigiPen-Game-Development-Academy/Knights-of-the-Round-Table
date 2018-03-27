@@ -1,6 +1,14 @@
 class QuestItem : ZilchComponent {
     [Property] var Index : Integer = 0;
     var Color : Real4;
+    
+    [Static] var Lore : Array[String] = Array[String]() {
+        "Alien Welder\nYou need this to repair your boat!\nYou have enugh left over\nto build a bridge (but you need 'Welding Equipment')",
+        "Welding Materials\nYou need this to repair your boat!\nYou have enugh left over\nto build a bridge (but you need 'Scrap Meatal')",
+        "Fuel\nYou need this to fuel your boat!",
+        "Boat Motor\nYou need this to power your boat!"
+    };
+    
     function Initialize(init : CogInitializer) {
         if(GlobalVariables.QuestItems == null){
             GlobalVariables.QuestItems = Array[Boolean]();
@@ -11,8 +19,22 @@ class QuestItem : ZilchComponent {
         }
         this.Color = this.Owner.Sprite.Color;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+    }
+    
+    function OnMouseExit(event : ViewportMouseEvent) {
+        GlobalVariables.LorePanel.Sprite.Visible = false;
     }
 
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        var text = QuestItem.Lore[this.Index];
+        
+        GlobalVariables.LorePanel.LorePanel.Text = text;
+        
+        GlobalVariables.LorePanel.Sprite.Visible = true;
+    }
+    
     function OnLogicUpdate(event : UpdateEvent) {
         
         if(GlobalVariables.QuestItems[this.Index]) {
@@ -22,4 +44,5 @@ class QuestItem : ZilchComponent {
         }
         
     }
+    
 }

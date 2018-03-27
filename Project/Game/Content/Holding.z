@@ -1,0 +1,59 @@
+class Holding : ZilchComponent {
+    
+    [Dependency] var Area : Area;
+    
+    function Initialize(init : CogInitializer) {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        var holdingItem : Item = null;
+        
+        if(GlobalVariables.UseWeapon.PrimarySelected) {
+            holdingItem = GlobalVariables.UseWeapon.Primary;
+        } else {
+            holdingItem = GlobalVariables.UseWeapon.Secondary;
+        }
+        
+        if(holdingItem.HoldingSprite != null && holdingItem.HoldingSprite != SpriteSource.Square) {
+            this.Owner.Sprite.Visible = true;
+            if(this.Owner.Sprite.SpriteSource != holdingItem.HoldingSprite)
+                this.Owner.Sprite.SpriteSource = holdingItem.HoldingSprite;
+        } else {
+            this.Owner.Sprite.Visible = false;
+        }
+        
+        //move slightly to match up with player
+        var currFrame = this.Owner.Sprite.CurrentFrame;
+        var offset = Real3(0);
+        if(currFrame == 0) {
+            this.Area.Origin = Location.CenterLeft;
+            offset += Real3(-0.1, 0, 0.25);
+        } else if(currFrame == 1) {
+            this.Area.Origin = Location.BottomLeft;
+            offset += Real3(-0.2, -0.25, 0.25);
+        } else if(currFrame == 2) {
+            this.Area.Origin = Location.BottomCenter;
+            offset += Real3(0.05, -0.2, -0.25);
+        } else if(currFrame == 3) {
+            this.Area.Origin = Location.BottomRight;
+            offset += Real3(0.2, -0.25, -0.25);
+        } else if(currFrame == 4) {
+            this.Area.Origin = Location.CenterRight;
+            offset += Real3(0.1, -0, -0.25);
+        } else if(currFrame == 5) {
+            this.Area.Origin = Location.TopRight;
+            offset += Real3(0.2, 0.2, -0.25);
+        } else if(currFrame == 6) {
+            this.Area.Origin = Location.TopCenter;
+            offset += Real3(-0.05, 0.1, 0.25);
+        } else if(currFrame == 7) {
+            this.Area.Origin = Location.TopLeft;
+            offset += Real3(-0.2, 0.2, 0.25);
+        }
+        
+        this.Owner.Transform.Translation = offset*2;
+        
+    }
+}

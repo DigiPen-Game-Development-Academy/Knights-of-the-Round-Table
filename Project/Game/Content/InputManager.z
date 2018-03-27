@@ -11,15 +11,53 @@ class InputManager : ZilchComponent {
     [Property] var UseWeaponKey    : Keys           = Keys.Space;
     [Property] var ToggleSecondary : Keys           = Keys.E;
     [Property] var PauseOrInventory: Keys           = Keys.Escape;
-    [Property] var AltPOrInventory : Keys           = Keys.I;
+    [Property] var AltPOrInventory : Keys           = Keys.Tab;
     [Property] var UseUtility      : Keys           = Keys.F;
     [Property] var OpenConsole     : Keys           = Keys.Tilde;
     
+    var Held : Boolean = false;
+    
+    var Key : Keys;
+    
+    var Timer : Real = 0;
     
     function Initialize(init : CogInitializer) {
         GlobalVariables.InputManager = this;
         
         Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
+        
+        Zero.Connect(this.Space, Events.FrameUpdate, this.OnLogicUpdate);
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+        Zero.Connect(Zero.Keyboard, Events.KeyUp, this.OnKeyUp);
+        
+    }
+
+    function OnKeyUp(event : KeyboardEvent) {
+        
+        if(event.Key == this.Key) {
+            this.Held = false;
+        }
+        
+    }
+
+    function OnKeyDown(event : KeyboardEvent) {
+        
+        this.Timer = 0.5;
+        this.Key = event.Key;
+        this.Held = true;
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        this.Timer -= event.Dt;
+        
+        if(this.Timer <= 0 && this.Held) {
+            this.Timer = 0.025;
+            var toSend = KeyHeld();
+            toSend.Key = this.Key;
+            this.GameSession.DispatchEvent(Events.KeyHeld, toSend);
+        }
         
     }
 

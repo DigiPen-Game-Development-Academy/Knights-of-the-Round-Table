@@ -8,6 +8,8 @@ class Wake : ZilchComponent {
     
     var NoSlowmo : Boolean = false;
     
+    var DeathMSG : String = "";
+    
     var Hit : Boolean = false;
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -32,7 +34,7 @@ class Wake : ZilchComponent {
             var dir = Math.Normalize(Real3(Math.Cos(this.Owner.Transform.EulerAngles.Z+Math.ToRadians(90)), Math.Sin(this.Owner.Transform.EulerAngles.Z+Math.ToRadians(90)), 0));
             var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation + dir*(this.Owner.Transform.WorldScale.Y * this.Area.Size.Y), dir, GlobalVariables.GameSpace.PhysicsSpace, event.Dt*1000);
             if(res != null){
-                Utilities.Damage(res.ObjectHit, this.DamagePer);
+                Utilities.Damage(res.ObjectHit, this.DamagePer, this.DeathMSG);
                 this.Hit = true;
                 this.Owner.Transform.WorldScale = Real3(this.Owner.Transform.Scale.X, (this.Owner.Transform.WorldScale.Y * this.Area.Size.Y) + res.Distance, this.Owner.Transform.Scale.Z);
                 this.Area.Size = Real2(this.Area.Size.X, 1);
@@ -41,7 +43,7 @@ class Wake : ZilchComponent {
             var dir = Real3(Math.Cos(this.Owner.Transform.EulerAngles.Z+Math.ToRadians(90)), Math.Sin(this.Owner.Transform.EulerAngles.Z+Math.ToRadians(90)), 0);
             var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation + dir*(this.Owner.Transform.WorldScale.Y * this.Area.Size.Y), dir, GlobalVariables.GameSpace.PhysicsSpace, this.Owner.Transform.WorldScale.Y / this.Area.Size.Y);
             if(res != null){
-                Utilities.Damage(res.ObjectHit, this.DamagePer);
+                Utilities.Damage(res.ObjectHit, this.DamagePer, this.DeathMSG);
                 this.Owner.Transform.WorldScale = Real3(this.Owner.Transform.Scale.X, (this.Owner.Transform.WorldScale.Y * this.Area.Size.Y) + res.Distance, this.Owner.Transform.Scale.Z);
             }
             this.Area.Size = Real2(this.Area.Size.X, 1);

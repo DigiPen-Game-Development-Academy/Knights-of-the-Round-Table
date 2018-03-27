@@ -212,7 +212,7 @@ class InventorySlot : ZilchComponent
             
             if(item.Type == ItemType.Weapon){
                 if(item.MagSize != -1)
-                    text = "`item.Name`\n`item.ReturnLore()`Mag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
+                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
                 else
                     text = "`item.Name`\n`item.ReturnLore()`\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
             } else if(item.Type == ItemType.Utility){
@@ -231,7 +231,7 @@ class InventorySlot : ZilchComponent
             this.LorePanel.LorePanel.Text = text;
             this.LorePanel.Sprite.Visible = true;
             
-        }else if(this.Item != null){
+        } else if(this.Item != null) {
             
             var item = this.Item;
             
@@ -239,7 +239,7 @@ class InventorySlot : ZilchComponent
             
             if(item.Type == ItemType.Weapon){
                 if(item.MagSize != -1)
-                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
+                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
                 else
                     text = "`item.Name`\n`item.ReturnLore()`\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
             } else if(item.Type == ItemType.Utility){
@@ -252,12 +252,30 @@ class InventorySlot : ZilchComponent
             this.LorePanel.LorePanel.Text = text;
             this.LorePanel.Sprite.Visible = true;
             
+        } else {
+            
+            var text = "";
+            
+            this.LorePanel.Sprite.Visible = true;
+            
+            //no item is in slot, if hotbar slot tell player
+            if(this.Owner.Name == "PrimarySlot") {
+                text = "Primary Weapon Slot";
+            } else if(this.Owner.Name == "SecondarySlot"){
+                text = "Secondary Weapon Slot";
+            } else if(this.Owner.Name == "UntlitySlot") { //yes I know this slots name is spelled wrong
+                text = "Utility Item Slot";
+            } else {
+                this.LorePanel.Sprite.Visible = false;
+            }
+            
+            this.LorePanel.LorePanel.Text = text;
+            
         }
         
     }
 
-    function OnLogicUpdate(event : UpdateEvent)
-    {
+    function OnLogicUpdate(event : UpdateEvent) {
         
         this.Owner.Transform.Translation = Real3(this.Owner.Transform.Translation.X, this.Owner.Transform.Translation.Y, 0.1);
         

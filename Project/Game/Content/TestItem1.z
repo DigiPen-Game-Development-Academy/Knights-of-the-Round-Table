@@ -25,7 +25,7 @@ class TestItem1 : Item
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
         
         if(res != null){
-            Utilities.Damage(res.ObjectHit, this.DamagePer);
+            Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
             wake.Transform.Scale = Real3(0.05, res.Distance, 0);

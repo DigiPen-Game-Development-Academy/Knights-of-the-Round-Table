@@ -39,10 +39,14 @@ class PlayerMovment : ZilchComponent
         
         var inMngr = this.LevelSettings.InputManager;
         
-        if(Zero.Keyboard.KeyIsDown(inMngr.North)) vel +=  ((Real3( 0,  1, 0)) * this.MoveSpeed);
-        if(Zero.Keyboard.KeyIsDown(inMngr.South)) vel +=  ((Real3( 0, -1, 0)) * this.MoveSpeed);
-        if(Zero.Keyboard.KeyIsDown(inMngr.West)) vel +=  ((Real3(-1,  0, 0)) * this.MoveSpeed);
-        if(Zero.Keyboard.KeyIsDown(inMngr.East)) vel +=  ((Real3( 1,  0, 0)) * this.MoveSpeed);
+        if(Zero.Keyboard.KeyIsDown(inMngr.North)) vel +=  ((Real3( 0,  1, 0)));
+        if(Zero.Keyboard.KeyIsDown(inMngr.South)) vel +=  ((Real3( 0, -1, 0)));
+        if(Zero.Keyboard.KeyIsDown(inMngr.West)) vel +=  ((Real3(-1,  0, 0)));
+        if(Zero.Keyboard.KeyIsDown(inMngr.East)) vel +=  ((Real3( 1,  0, 0)));
+        
+        vel = Math.Normalize(vel);
+        
+        vel *= this.MoveSpeed;
         
         if(vel != Real3(0))
             this.Sprite.Dir = vel;
@@ -53,7 +57,8 @@ class PlayerMovment : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.Shift)){
             vel *= this.SprintMultiplier;
             if(GlobalVariables.UseWeapon.Utility == null || GlobalVariables.UseWeapon.Utility.ID != "Shoes")
-                Utilities.SendSound(this.SprintSoundDist);
+                if(vel != Real3(0))
+                    Utilities.SendSound(this.SprintSoundDist);
         }
         
         this.Owner.RigidBody.Velocity = vel;
