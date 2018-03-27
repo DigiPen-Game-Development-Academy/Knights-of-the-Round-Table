@@ -171,7 +171,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.2683697,
+			float Size = 33.2871208,
 		},
 		EditorCameraController = 
 		{
@@ -605,8 +605,8 @@ Level =
 		},
 		EnemyMelee = 
 		{
-			float AttacksPerSecond = 5,
-			float DamagerPerAttack = 10,
+			float AttacksPerSecond = 1,
+			float DamagerPerAttack = 5,
 			string DeathMSG = "You Were Bitten by an Enemy",
 		},
 		Hierarchy = 
