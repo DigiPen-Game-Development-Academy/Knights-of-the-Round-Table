@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [19.7002449, 9.08794689, 63.0999985],
+			Vec3 Translation = [36.2890625, -37.5915565, 63.0999985],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 7.42739105,
+			float Size = 44.9329224,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [19.7002449, 9.08794689, -0.900000453],
+			Vec3 LookTarget = [36.2890625, -37.5915565, -0.899999976],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -364,7 +364,7 @@ Level =
 		TileMap = 
 		{
 			string SourceName = "5a746adbd997cf3e:JustinTestLevel_TileMap05",
-			string PaletteName = "5a746a87c0a65254:tilemap2.0",
+			string PaletteName = "5a9ba11017491fb7:Walls",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
 		},
