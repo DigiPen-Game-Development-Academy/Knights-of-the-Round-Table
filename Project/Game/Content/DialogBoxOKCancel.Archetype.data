@@ -85,7 +85,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
+				string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 				uint FontSize = 150,
 				string Text = "TEST!",
 				TextAlign Align = Center,
@@ -139,6 +139,7 @@ Cog =
 				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
 				bool Alpha = false,
+				bool Scaling = true,
 			},
 			DialogButton = 
 			{
@@ -177,7 +178,7 @@ Cog =
 						BlendMode BlendMode = Alpha,
 						SpriteGeometryMode GeometryMode = ZPlane,
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string FontName = "4e7bac697bec55c5:Verdana",
+						string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 						uint FontSize = 30,
 						string Text = "OK",
 						TextAlign Align = Left,
@@ -238,6 +239,7 @@ Cog =
 				Vec4 ClickColor = [0, 0, 0, 0.999899983],
 				float ScaleSpeed = 5,
 				bool Alpha = false,
+				bool Scaling = true,
 			},
 			DialogButton = 
 			{
@@ -276,7 +278,7 @@ Cog =
 						BlendMode BlendMode = Alpha,
 						SpriteGeometryMode GeometryMode = ZPlane,
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string FontName = "4e7bac697bec55c5:Verdana",
+						string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 						uint FontSize = 53,
 						string Text = "CANCEL",
 						TextAlign Align = Left,

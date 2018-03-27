@@ -35,6 +35,8 @@ class PlayerMovment : ZilchComponent
             return;
         }
         
+        this.Owner.PlayerSprites.Update(event.Dt);
+        
         var vel = Real3(0);
         
         var inMngr = this.LevelSettings.InputManager;

@@ -91,34 +91,6 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
-		InputManager = 
-		{
-			Enum North = W,
-			Enum South = S,
-			Enum West = A,
-			Enum East = D,
-			Enum Sprint = Shift,
-			Enum UseWeaponMouse = Left,
-			Enum UseWeaponKey = Space,
-			Enum ToggleSecondary = E,
-			Enum PauseOrInventory = Escape,
-			Enum AltPOrInventory = I,
-			Enum UseUtility = F,
-			Enum OpenConsole = Tilde,
-		},
-		CreateUI = 
-		{
-			string UILevel = "",
-			string DialogLevel = "",
-			string MouseLevel = "",
-			string MusicLevel = "5adae3eaef33a047:MusicLevel",
-		},
-		MusicOnLevelStart = 
-		{
-			bool Fade = false,
-			float FadeSped = 1,
-			string Music = "5a518f27c53e5953:MenuMusic",
-		},
 	},
 	Cog = 
 	{
@@ -132,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.15172851, -3.49046659, 50],
+			Vec3 Translation = [0.391475737, -0.449063003, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -144,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1194439,
+			float Size = 18.0967464,
 		},
 		EditorCameraController = 
 		{
@@ -152,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.15172851, -3.49046659, -5.03437185e-08],
+			Vec3 LookTarget = [0.391475737, -0.449063003, 1.71119403e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -188,7 +160,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 200,
-			float Size = 10,
+			float Size = 15,
 		},
 		SoundListener = 
 		{
@@ -204,31 +176,45 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Splash",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [2, 2, 1],
+			Vec3 Translation = [-6, 2, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		SpriteText = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 0],
+			Vec4 Color = [1, 1, 1, 0.00828112476],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7e770229d30d74:DigipenLogo",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 150,
+			string Text = "    This game contains potatos.
+If you cannot handle the starchyness
+of potatos, do NOT play this game.
+If you start to develop a craving for
+potatos while playing this game,
+seek french fry attention IMMEDEATLY!
+",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 247.724426,
+			bool Smoothing = true,
+		},
+		SpriteTextBlock = 
+		{
+			string TextBlock = "5ac1e6f36055f6ea:Potato_Warning",
+		},
+		AnimTriggeredLevelLoad = 
+		{
+			bool Load = false,
+			string Level = "5a7e54ababd94aa3:MainMenu",
 		},
 		AnimationGraph = 
 		{
@@ -236,11 +222,11 @@ Level =
 			AnimPlayMode PlayMode = PlayOnce,
 			float TimeScale = 1,
 			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-			uint64 DebugPreviewId = 3efeff0061472064,
+			uint64 DebugPreviewId = 40583eab3f200000,
 		},
 		SimpleAnimation = 
 		{
-			string AnimationName = "5a7e774c3e12c840:Splash",
+			string AnimationName = "5ac11d8e30413b1a:splash4",
 			AnimPlayMode PlayMode = PlayOnce,
 		},
 	},
@@ -252,31 +238,30 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Splash2",
+			string Name = "SpriteText",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [2, 2, 1],
+			Vec3 Translation = [0, 4, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		SpriteText = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 0.999899983],
+			Vec4 Color = [1, 0, 0, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5af491d15ad51171:TeamNameAnim",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 150,
+			string Text = "WARNING",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 100,
+			bool Smoothing = true,
 		},
 		AnimationGraph = 
 		{
@@ -284,17 +269,17 @@ Level =
 			AnimPlayMode PlayMode = PlayOnce,
 			float TimeScale = 1,
 			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-			uint64 DebugPreviewId = 3efeff0061472064,
+			uint64 DebugPreviewId = 20656d6147206e69,
 		},
 		SimpleAnimation = 
 		{
-			string AnimationName = "5a7e76195a4742df:Splash2",
+			string AnimationName = "5ac1e321f54c4d9e:splash3",
 			AnimPlayMode PlayMode = PlayOnce,
 		},
 		AnimTriggeredLevelLoad = 
 		{
-			bool Load = false,
-			string Level = "5ac1e30ff603539d:WarningScreen",
+			bool Load = true,
+			string Level = "5a7e54ababd94aa3:MainMenu",
 		},
 	},
 },

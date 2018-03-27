@@ -132,7 +132,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.712912738, -1.11340165, 117.557846],
+			Vec3 Translation = [8.04272556, -4.3953824, 117.557846],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -144,7 +144,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90607357,
+			float Size = 3.64424253,
 		},
 		EditorCameraController = 
 		{
@@ -152,7 +152,7 @@ Level =
 			float LookDistance = 91.105896,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.712912738, -1.11340165, 26.4519501],
+			Vec3 LookTarget = [8.04272556, -4.3953824, 26.4519501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -508,12 +508,12 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5ad145146737fc79:Cavemanly-Regular",
+			string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 			uint FontSize = 150,
-			string Text = "Beta 1.0",
+			string Text = "Beta 1.1",
 			TextAlign Align = Right,
 			float PixelsPerUnit = 429.0383,
-			bool Smoothing = false,
+			bool Smoothing = true,
 		},
 		Area = 
 		{
@@ -523,8 +523,8 @@ Level =
 		ScreenAlign = 
 		{
 			Enum Pos = Bottomright,
-			Vec3 Offset = [0.899999976, 0, 0],
-			Vec2 RelOffset = [0, 0],
+			Vec3 Offset = [-0.100000001, 0, 0],
+			Vec2 RelOffset = [-2, 0],
 		},
 	},
 	Cog = 
@@ -601,7 +601,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5ad145146737fc79:Cavemanly-Regular",
+			string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
 			uint FontSize = 150,
 			string Text = "Now in Beta!",
 			TextAlign Align = Left,
