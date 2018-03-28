@@ -1,0 +1,12 @@
+DataContent = 
+{
+	ZilchPluginBuilder = 
+	{
+		string Name = "ModLoader",
+		uint64 ResourceId = 5a4f90afd4866d1d,
+		string LoaderType = "ZilchPluginSource",
+		uint Version = 0,
+		bool ShowInEditor = true,
+		uint64 SharedLibraryResourceId = 5a4f90afd4866d22,
+	},
+},
