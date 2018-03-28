@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.877792239, 0.751467228, 112.565193],
+			Vec3 Translation = [-0.752125025, 0.856651425, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 3.01974535,
+			float Size = 2.73237848,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.877792239, 0.751467228, 1.00000203],
+			Vec3 LookTarget = [-0.752125025, 0.856651425, 1.00000203],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1325,46 +1325,6 @@ Level =
 		Named = 
 		{
 			string Name = "HatchStealth",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 37,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-1.49325883, 0.511183977, 1.00000203],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		ModLoader = 
-		{
-			int Mives = 9,
-			float Health = 100,
 		},
 	},
 },
