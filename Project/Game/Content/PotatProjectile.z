@@ -7,6 +7,15 @@ class PotatProjectile : ZilchComponent {
     var ArcIntencity : Real = 0.75;
     var Set : Boolean = false;
     var SoundRad : Real = 10;
+    var ExplodeSound : SoundCue;
+    var SoundRange : Real = 10;
+    
+    var OscilationSpeed : Real = 0;
+    var OscilationIntencity : Real = 0;
+    
+    var Explosion : Archetype = Archetype.PotatExplotion;
+    
+    var Timer : Real = 0;
     
     [Dependency]
     var Orientation : Orientation;
@@ -23,11 +32,19 @@ class PotatProjectile : ZilchComponent {
         if(!this.Set)
             return;
         
+        this.Timer += event.Dt;
+        
         this.Orientation.LookAtPoint(this.Target);
         
-        var dir = Math.Normalize(this.Target - this.Owner.Transform.WorldTranslation);
+        this.Owner.Transform.SetEulerAnglesXYZ(0, 0, this.Owner.Transform.EulerAngles.Z + Math.Sin(this.OscilationSpeed * this.Timer)*this.OscilationIntencity);
         
-        var dist = Math.Distance(this.Owner.Transform.WorldTranslation, this.Target);
+        var dist = Math.Distance(this.Owner.Transform.WorldTranslation.XY, this.Target.XY);
+        
+        var dir = Real3(0);
+        
+        dir = Real3(Math.Cos(this.Owner.Transform.EulerAngles.Z), Math.Sin(this.Owner.Transform.EulerAngles.Z), 0);
+        
+        dir = Real3(dir.XY, 0);
         
         if(this.StartDist == 0)
             this.StartDist = dist;
@@ -49,6 +66,7 @@ class PotatProjectile : ZilchComponent {
         this.Owner.Transform.Scale = Real3(scale, scale, 0);
         
         this.Owner.Transform.WorldTranslation += dir * event.Dt * this.MovSpd;
+        this.Owner.Transform.WorldTranslation = Real3(this.Owner.Transform.WorldTranslation.XY, 0);
         
         if(dist < event.Dt * this.MovSpd) {
             Utilities.SendSound(this.SoundRad, this.Owner.Transform.WorldTranslation);
@@ -59,8 +77,12 @@ class PotatProjectile : ZilchComponent {
             this.Owner.FindChildByName("Trail").SphericalParticleEmitter.Active = false;
             this.Owner.FindChildByName("Trail").DetachRelative();
             this.Owner.Destroy();
-            var exp = this.Space.CreateAtPosition(Archetype.PotatExplotion, this.Owner.Transform.WorldTranslation + Real3(0,0,1));
+            var exp = this.Space.CreateAtPosition(this.Explosion, this.Owner.Transform.WorldTranslation + Real3(0,0,1));
             exp.Transform.Scale = Real3(this.ImpactSize);
+            exp.AddComponentByName("SoundEmitter");
+            exp.SoundEmitter.Volume = GlobalVariables.Settings.SettingsSave.SFXvol - Math.Clamp(GlobalVariables.Settings.SettingsSave.SFXvol, 0, 
+            Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation)/this.SoundRange);
+            exp.SoundEmitter.PlayCue(this.ExplodeSound);
         }
     }
 }
