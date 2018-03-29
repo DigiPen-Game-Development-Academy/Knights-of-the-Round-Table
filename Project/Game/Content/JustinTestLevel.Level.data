@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [74.5903091, 57.6345329, 63.9990005],
+			Vec3 Translation = [19.3016949, 40.9165115, 63.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 2.73238254,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [74.5903091, 57.6345329, -0.00100000005],
+			Vec3 LookTarget = [19.3016949, 40.9165115, -0.00100068271],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4043,54 +4043,6 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [75.5, 64.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 103,
-		},
-		Named = 
-		{
-			string Name = "Chest",
-		},
-		Archetyped = 
-		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
-		},
-		Transform = 
-		{
 			Vec3 Translation = [22.5238914, 58.4859314, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -4127,7 +4079,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 104,
+			uint Id = 103,
 		},
 		Named = 
 		{
@@ -4176,7 +4128,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 105,
+			uint Id = 104,
 		},
 		Transform = 
 		{
@@ -4194,7 +4146,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 106,
+			uint Id = 105,
 		},
 		Transform = 
 		{
@@ -4212,7 +4164,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 107,
+			uint Id = 106,
 		},
 		Transform = 
 		{
@@ -4230,7 +4182,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 108,
+			uint Id = 107,
 		},
 		Transform = 
 		{
@@ -4248,7 +4200,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 109,
+			uint Id = 108,
 		},
 		Transform = 
 		{
@@ -4266,7 +4218,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 110,
+			uint Id = 109,
 		},
 		Transform = 
 		{
@@ -4284,7 +4236,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 111,
+			uint Id = 110,
 		},
 		Transform = 
 		{
@@ -4302,7 +4254,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 112,
+			uint Id = 111,
 		},
 		Transform = 
 		{
@@ -4320,7 +4272,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 113,
+			uint Id = 112,
 		},
 		Transform = 
 		{
@@ -4338,7 +4290,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 114,
+			uint Id = 113,
 		},
 		Transform = 
 		{
@@ -4356,7 +4308,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 115,
+			uint Id = 114,
 		},
 		Transform = 
 		{
@@ -4373,7 +4325,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 116,
+			uint Id = 115,
 		},
 		Named = 
 		{
@@ -4423,7 +4375,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 117,
+			uint Id = 116,
 		},
 		Named = 
 		{
@@ -4475,11 +4427,70 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 116,
+				uint ResolvedCog = 115,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 117,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Archetyped = 
+		{
+			string Name = "5a0198d5f1c252dc:Manual_Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [76.476799, 65.5282364, -0.000999450684],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a70317fa8580499:ChestSprite",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		SetChest = 
+		{
+			string Slot1ID = "Health_Pack_(T3)",
+			string Slot2ID = "Potato",
+			string Slot3ID = "",
+			string Slot4ID = "",
+			string Slot5ID = "",
+			string Slot6ID = "Rifle",
+			string Slot7ID = "",
+			string Slot8ID = "",
+		},
+		AutoChest = 
+		{
+			string LootTable = "",
 		},
 	},
 },

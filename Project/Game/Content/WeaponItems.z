@@ -239,7 +239,7 @@ class TerribleAssaultRifle : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("Not very good assault rifle, but it will get the job done");
+        lore.Add("Not a very good assault rifle, but it will get the job done... probably");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -361,8 +361,8 @@ class Laserbeam : Item {
     function ReturnLore () : String {
         var lore = Array[String]();
         lore.Add("The 11 year old extraterrestrial's best friend");
-        lore.Add("Im firin mah laser baaaaaaaa");
-        lore.Add("Wow it  really shoots");
+        lore.Add("Ima firin mah laser baaaaaaaa!");
+        lore.Add("Wow, it  really shoots");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -426,9 +426,9 @@ class StunMissile : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("Its shocking how effective this is");
+        lore.Add("It's shocking how effective this is");
         lore.Add("Where are you going to find ammo for this?");
-        lore.Add("Only three percent of people are smart enough to shoot this, if you can see this call a doctor");
+        lore.Add("Only three percent of people are smart enough to shoot this, if you can see this, call a doctor");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -462,8 +462,8 @@ class SawLaser  : Item {
     
     function ReturnLore () : String {
         var lore = Array[String]();
-        lore.Add("Your foes will be vanquished as fast as your ammo");
-        lore.Add("Use your ammo wisely");
+        lore.Add("Your foes will be vanquished, as will your ammo");
+        lore.Add("Use your ammo unwisely");
         lore.Add("A weaponized saw");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
@@ -634,7 +634,7 @@ class Missile  : Item {
         lore.Add("Be careful with this thing");
         lore.Add("Use your ammo wisely");
         lore.Add("Biggest boom of them all");
-        lore.Add("Arnold Schwarzenegger's only possesion");
+        lore.Add("Arnold Schwarzenegger's prized possesion");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -699,7 +699,7 @@ class Potatocannon  : Item {
         lore.Add("Irish food processor");
         lore.Add("You have read the weapon lore");
         lore.Add("Helping hashbrown");
-        lore.Add("Alien weapons all around and you chose this...Naisu.");
+        lore.Add("Alien weapons all around and you chose this...nice.");
         lore.Add("Potatus Prime");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
