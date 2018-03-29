@@ -141,8 +141,9 @@ class Plasma_Pistol : Item {
         radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
         
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
-        
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        var filter = CastFilter();
+        filter.CollisionGroup = CollisionGroup.PlayerBullet;
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange, filter);
         
         if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
@@ -198,7 +199,9 @@ class PlasmaSword : Item {
     
     function Use (radAngle : Real) {
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3.5);
+        var filter = CastFilter();
+        filter.CollisionGroup = CollisionGroup.PlayerBullet;
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3.5, filter);
         
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
@@ -219,7 +222,7 @@ class PlasmaSword : Item {
 class TerribleAssaultRifle : Item {
     
     function Init () {
-         this.Type = ItemType.Weapon;
+        this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_TRifle;
         this.GroundSprite = SpriteSource.Icon_Weapon_TRifle;
         this.Stackable = false;
@@ -248,7 +251,9 @@ class TerribleAssaultRifle : Item {
         
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
         
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        var filter = CastFilter();
+        filter.CollisionGroup = CollisionGroup.PlayerBullet;
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange, filter);
         
         if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
@@ -307,7 +312,9 @@ class SlugShotgun : Item {
         
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
         
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        var filter = CastFilter();
+        filter.CollisionGroup = CollisionGroup.PlayerBullet;
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange, filter);
         
         if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
@@ -467,7 +474,9 @@ class SawLaser  : Item {
              
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
         
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        var filter = CastFilter();
+        filter.CollisionGroup = CollisionGroup.PlayerBullet;
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange, filter);
         
         if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
@@ -531,7 +540,9 @@ class Lasersniper  : Item {
         
         radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
         
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        var filter = CastFilter();
+        filter.CollisionGroup = CollisionGroup.PlayerBullet;
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange, filter);
         
         if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
@@ -750,7 +761,9 @@ class MMS_Sniper  : Item {
         
         radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
         
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange);
+        var filter = CastFilter();
+        filter.CollisionGroup = CollisionGroup.PlayerBullet;
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange, filter);
         
         if(res != null && !GlobalVariables.SloMo){
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
