@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [74.5903091, 57.6345329, 63.9990005],
+			Vec3 Translation = [-31.9753246, 51.8212242, 63.0999985],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 2.73238254,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [74.5903091, 57.6345329, -0.00100000005],
+			Vec3 LookTarget = [-31.9753246, 51.8212242, -0.900001407],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2060,6 +2060,11 @@ Level =
 		{
 			string Name = "5ae488236db44260:TriggerObjectiveZone",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [-109, 49.5366211, 0],
@@ -2112,6 +2117,11 @@ Level =
 		Archetyped = 
 		{
 			string Name = "5ae488236db44260:TriggerObjectiveZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -2166,6 +2176,11 @@ Level =
 		{
 			string Name = "5ae488236db44260:TriggerObjectiveZone",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [-111.5, 57.5, 0],
@@ -2218,6 +2233,11 @@ Level =
 		Archetyped = 
 		{
 			string Name = "5ae488236db44260:TriggerObjectiveZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -2272,6 +2292,11 @@ Level =
 		{
 			string Name = "5ae488236db44260:TriggerObjectiveZone",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [-85.5, 63.5, 0],
@@ -2325,6 +2350,11 @@ Level =
 		{
 			string Name = "5ae488236db44260:TriggerObjectiveZone",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [-58.5, 82, 0],
@@ -2377,6 +2407,11 @@ Level =
 		Archetyped = 
 		{
 			string Name = "5ae488236db44260:TriggerObjectiveZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -2490,6 +2525,11 @@ Level =
 		{
 			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [-87.9158859, 71.9062119, -5],
@@ -2544,6 +2584,11 @@ Level =
 				Archetyped = 
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
 				},
 				Transform = 
 				{
@@ -2602,6 +2647,11 @@ Level =
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
 				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
 				Transform = 
 				{
 					Vec3 Translation = [0.449216306, 0.147271872, 0],
@@ -2659,6 +2709,11 @@ Level =
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
 				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
 				Transform = 
 				{
 					Vec3 Translation = [0.491981089, -0.22739625, 0],
@@ -2715,6 +2770,11 @@ Level =
 				Archetyped = 
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
 				},
 				Transform = 
 				{
@@ -2775,6 +2835,11 @@ Level =
 		{
 			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [77.5, 71.5, -5],
@@ -2831,6 +2896,11 @@ Level =
 		Archetyped = 
 		{
 			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -2889,6 +2959,11 @@ Level =
 		{
 			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
 		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [-22.6235466, 20.6000023, -5],
@@ -2943,6 +3018,11 @@ Level =
 				Archetyped = 
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
 				},
 				Transform = 
 				{
@@ -3001,6 +3081,11 @@ Level =
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
 				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
 				Transform = 
 				{
 					Vec3 Translation = [1.50048351, -0.21446909, 0],
@@ -3057,6 +3142,11 @@ Level =
 				Archetyped = 
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
 				},
 				Transform = 
 				{
@@ -3115,6 +3205,11 @@ Level =
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
 				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
 				Transform = 
 				{
 					Vec3 Translation = [-0.200894415, 0.55390054, 0],
@@ -3171,6 +3266,11 @@ Level =
 				Archetyped = 
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
 				},
 				Transform = 
 				{
@@ -3229,6 +3329,11 @@ Level =
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
 				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
 				Transform = 
 				{
 					Vec3 Translation = [-0.739924014, -0.103296056, 0],
@@ -3285,6 +3390,11 @@ Level =
 				Archetyped = 
 				{
 					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
 				},
 				Transform = 
 				{
@@ -3448,7 +3558,7 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b956a7124833:Advanced",
 		},
 	},
 	Cog = 
@@ -3496,22 +3606,15 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b913910894ef:Crappy",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
 			uint Id = 91,
-		},
-		Named = 
-		{
-			string Name = "Chest",
-		},
-		Archetyped = 
-		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		},
 		Transform = 
 		{
@@ -3519,47 +3622,17 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 92,
-		},
 		Named = 
 		{
 			string Name = "Chest",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		LinkId = 
 		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+			uint Id = 92,
 		},
 		Transform = 
 		{
@@ -3567,47 +3640,17 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 93,
-		},
 		Named = 
 		{
 			string Name = "Chest",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		LinkId = 
 		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+			uint Id = 93,
 		},
 		Transform = 
 		{
@@ -3615,47 +3658,17 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 94,
-		},
 		Named = 
 		{
 			string Name = "Chest",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		LinkId = 
 		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+			uint Id = 94,
 		},
 		Transform = 
 		{
@@ -3663,32 +3676,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string Name = "Chest",
 		},
 	},
 	Cog = 
@@ -3736,7 +3726,7 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b913910894ef:Crappy",
 		},
 	},
 	Cog = 
@@ -3784,7 +3774,7 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b95ba553bc1f:Winning",
 		},
 	},
 	Cog = 
@@ -3832,7 +3822,7 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b95ba553bc1f:Winning",
 		},
 	},
 	Cog = 
@@ -3880,7 +3870,7 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b9469a7d36f5:Intermediate",
 		},
 	},
 	Cog = 
@@ -3928,7 +3918,7 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b913910894ef:Crappy",
 		},
 	},
 	Cog = 
@@ -3976,22 +3966,15 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b956a7124833:Advanced",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
 			uint Id = 101,
-		},
-		Named = 
-		{
-			string Name = "Chest",
-		},
-		Archetyped = 
-		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		},
 		Transform = 
 		{
@@ -3999,32 +3982,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string Name = "Chest",
 		},
 	},
 	Cog = 
@@ -4072,7 +4032,7 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b95ba553bc1f:Winning",
 		},
 	},
 	Cog = 
@@ -4120,7 +4080,7 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b9469a7d36f5:Intermediate",
 		},
 	},
 	Cog = 
@@ -4168,7 +4128,7 @@ Level =
 		},
 		AutoChest = 
 		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+			string LootTable = "5a74b9469a7d36f5:Intermediate",
 		},
 	},
 	ArchetypeInstance = 
