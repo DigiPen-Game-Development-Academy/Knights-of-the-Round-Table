@@ -607,12 +607,14 @@ class Missile  : Item {
     
     function UseReleased () {
         
+        GlobalVariables.CamSense = 6;
+        
         if(this.Circle != null)
             this.Circle.Destroy();
         
         Utilities.SendSoundWeapon(this.SoundDistance);
         
-        var missile = GlobalVariables.GameSpace.CreateAtPosition(Archetype.PotatProjectile, GlobalVariables.Player.Transform.WorldTranslation);
+        var missile = GlobalVariables.GameSpace.CreateAtPosition(Archetype.MissileProjectile, GlobalVariables.Player.Transform.WorldTranslation);
         
         missile.PotatProjectile.Target = GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 1);
         missile.PotatProjectile.StartDist = 0;
@@ -624,8 +626,17 @@ class Missile  : Item {
         missile.PotatProjectile.DamageMSG = this.ReturnDeathMSG();
         missile.PotatProjectile.Set = true;
         missile.Sprite.SpriteSource = SpriteSource.Missile;
+        missile.AddComponentByName("MissileSound");
+        missile.MissileSound.Sound = SoundCue.RocketFlying;
+        missile.MissileSound.Initialize(null);
+        missile.MissileSound.SoundRange = 15;
+        missile.PotatProjectile.SoundRange = 15;
+        missile.PotatProjectile.ExplodeSound = SoundCue.Explode;
+        missile.PotatProjectile.OscilationSpeed = 15;
+        missile.PotatProjectile.OscilationIntencity = 0.25;
+        missile.PotatProjectile.Explosion = Archetype.Explode;
         
-        GlobalVariables.SFXSpace.SoundSpace.PlayCue(SoundCue.Rockettravelsound);
+        //GlobalVariables.SFXSpace.SoundSpace.PlayCue(SoundCue.Rockettravelsound);
         
     }
     
@@ -643,6 +654,7 @@ class Missile  : Item {
         
         this.Circle = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GlowyCircle, GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 1));
         this.Circle.Transform.Scale = Real3(this.ImpactRange);
+        GlobalVariables.CamSense = 1.4;
         
     }
     

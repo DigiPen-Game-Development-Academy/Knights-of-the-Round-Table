@@ -35,7 +35,7 @@ class Boss_Shield : ZilchComponent {
         if (this.Timer <= 0) {
             this.Timer = 1 / this.LP(this.FireRateEmpty, this.FireRateFull);
             
-            var missile = GlobalVariables.GameSpace.CreateAtPosition(Archetype.PotatProjectile, Math.Normalize(GlobalVariables.Player.Transform.WorldTranslation-this.Owner.Transform.WorldTranslation) + (this.Owner.Transform.WorldTranslation + Real3(0,0,0.5)));
+            var missile = GlobalVariables.GameSpace.CreateAtPosition(Archetype.MissileProjectile, Math.Normalize(GlobalVariables.Player.Transform.WorldTranslation-this.Owner.Transform.WorldTranslation) + (this.Owner.Transform.WorldTranslation + Real3(0,0,0.5)));
             
             missile.PotatProjectile.Target = GlobalVariables.Player.Transform.WorldTranslation;
             missile.PotatProjectile.StartDist = 0;
@@ -46,6 +46,15 @@ class Boss_Shield : ZilchComponent {
             missile.PotatProjectile.DamageMSG = this.DeathMSG;
             missile.PotatProjectile.Set = true;
             missile.Sprite.SpriteSource = SpriteSource.Missile;
+            missile.AddComponentByName("MissileSound");
+            missile.MissileSound.Sound = SoundCue.RocketFlying;
+            missile.MissileSound.Initialize(null);
+            missile.MissileSound.SoundRange = 15;
+            missile.PotatProjectile.SoundRange = 15;
+            missile.PotatProjectile.ExplodeSound = SoundCue.Explode;
+            missile.PotatProjectile.OscilationSpeed = 15;
+            missile.PotatProjectile.OscilationIntencity = 0.25;
+            missile.PotatProjectile.Explosion = Archetype.Explode;
             
         }
         
