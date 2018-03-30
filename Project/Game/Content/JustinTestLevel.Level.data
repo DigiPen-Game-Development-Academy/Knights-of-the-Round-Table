@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-107.442551, 57.76828, 63.9990005],
+			Vec3 Translation = [-114.643089, 50.5733185, 63.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 16.5299263,
+			float Size = 14.9568863,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-107.442551, 57.76828, -0.000997882802],
+			Vec3 LookTarget = [-114.643089, 50.5733185, -0.000997728086],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4367,42 +4367,6 @@ Level =
 		AutoChest = 
 		{
 			string LootTable = "",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a5086c44183c1a9:Enemy_Stealth",
-		LinkId = 
-		{
-			uint Id = 114,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-111.168282, 53.7334175, -0.000999450684],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy_Stealth",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a5088d2fa22ab4f:Enemy_Shield",
-		LinkId = 
-		{
-			uint Id = 115,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-104.237427, 54.8397484, -0.000999450684],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Enemy_Shield",
 		},
 	},
 },
