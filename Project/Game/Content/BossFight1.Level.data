@@ -200,7 +200,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 2000,
+			float InitialHealth = 2250,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 		},
@@ -212,23 +212,23 @@ Level =
 		},
 		Boss_Rusher_AI = 
 		{
-			float MovSpeed = 3,
+			float MovSpeed = 3.75,
 			float DashSpeed = 7,
-			float AngryDashSpeed = 7,
+			float AngryDashSpeed = 5,
 			float WindUpTimeMax = 1.5,
 			float WindUpTimeMin = 0.5,
 			float DashDistance = 7,
 			float AngryDashTime = 4,
 			float DazeTime = 6,
 			float AngryDashHealth = 0.5,
-			float AngryTurnSpeed = 45,
+			float AngryTurnSpeed = 10,
 			float DashDamage = 100,
 			float PassiveDamage = 50,
 			float DashCooldownMax = 6,
 			float DashCooldownMin = 4,
 			float DashCooldownRand = 0.100000001,
 			float StartRange = 5,
-			string DashDamageMSG = "You where run over by a giant rusher!",
+			string DashDamageMSG = "You were run over by a giant rusher!",
 			string PassiveDamageMSG = "Wait...  did that rusher just sit on you?!?",
 			string North = "5a5085ddc0e6bd58:RusherBoss004",
 			string NorthEast = "5a5085dec001bd74:RusherBoss005",
@@ -286,7 +286,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.05304861, 0.0280094072, 50],
+			Vec3 Translation = [2.09670186, -1.1065309, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -298,7 +298,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.0500278,
+			float Size = 12.0993004,
 		},
 		EditorCameraController = 
 		{
@@ -306,7 +306,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [6.05304861, 0.0280094072, -5.43204877e-08],
+			Vec3 LookTarget = [2.09670186, -1.1065309, -2.27257871e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
