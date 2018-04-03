@@ -162,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.64024067,
+			float Size = 14.7781229,
 		},
 		EditorCameraController = 
 		{
@@ -510,7 +510,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 4000,
+			float InitialHealth = 3000,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 		},
@@ -553,13 +553,13 @@ Level =
 		Boss_Shield = 
 		{
 			float FireRateFull = 0.25,
-			float FireRateEmpty = 1,
-			float SpeedFull = 1.5,
+			float FireRateEmpty = 0.75,
+			float SpeedFull = 1.75,
 			float SpeedEmpty = 2.5,
-			float DamageFull = 50,
-			float DamageEmpty = 100,
-			float SplashFull = 3,
-			float SplashEmpty = 4,
+			float DamageFull = 10,
+			float DamageEmpty = 15,
+			float SplashFull = 1.75,
+			float SplashEmpty = 2.5,
 			float ArcIntencity = 1,
 			string DeathMSG = "You were hit in the face with a missile",
 		},
