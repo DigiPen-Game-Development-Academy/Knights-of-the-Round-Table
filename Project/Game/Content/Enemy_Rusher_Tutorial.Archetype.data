@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [13.1905603, -0.264804542, 0],
+		Vec3 Translation = [-61.4502068, 72.549057, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -85,19 +85,19 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float InstantSpotRadius = 3,
+		float InstantSpotRadius = 0,
 		float MaxDistFromGuard = 5,
-		float WaitTime = 1,
+		float WaitTime = 5,
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,
 		float MoveSpeed = 2,
 		float ChaseSpeedMultiplier = 3,
-		float GuardWaitTime = 5,
-		float SearchTimer = 20,
+		float GuardWaitTime = 1,
+		float SearchTimer = 3,
 		float MaxTimeOutOfSight = 1,
-		float SearchRange = 10,
-		float ViewDist = 10,
+		float SearchRange = 1,
+		float ViewDist = 5,
 	},
 	EnemySprite = 
 	{
