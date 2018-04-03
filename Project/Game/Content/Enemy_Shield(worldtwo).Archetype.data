@@ -8,13 +8,9 @@ Cog =
 	{
 		string Name = "Enemy_Shield",
 	},
-	Archetyped = 
-	{
-		string Name = "5a2268868c1f0c52:Enemy_Shield(worldone)",
-	},
 	Transform = 
 	{
-		Vec3 Translation = [24.7544136, 9.78360939, 1],
+		Vec3 Translation = [-86.6845322, -20.9891739, 1.75024033],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -127,7 +123,7 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
-		string LootTable = "5a226ceae71b9d57:atrammohealthgoodwep",
+		string LootTable = "5a2266fd60a18cf4:leveltwohealthammo",
 	},
 	EnemyPing = 
 	{
@@ -257,7 +253,7 @@ Cog =
 						bool Mode2D = true,
 						bool AllowSleep = true,
 						bool Inherit2DMode = true,
-						Vec3 Velocity = [0, 0, 0],
+						Vec3 Velocity = [-5378.72021, -1311.82324, 171.890015],
 						Vec3 AngularVelocity = [0, 0, 0],
 					},
 					MenuVisibilitySprite = 
