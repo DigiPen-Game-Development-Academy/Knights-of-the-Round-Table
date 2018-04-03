@@ -88,6 +88,7 @@ class EnemyRayShooting : ZilchComponent {
         GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Static;
         filter.IgnoreDynamic = true;
         filter.IgnoreGhost = true;
+        filter.CollisionGroup = CollisionGroup.Enemies;
         var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange, filter);
         
         if(res != null && !GlobalVariables.SloMo) {
