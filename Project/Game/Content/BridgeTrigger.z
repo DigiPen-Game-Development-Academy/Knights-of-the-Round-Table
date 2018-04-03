@@ -32,11 +32,11 @@ class BridgeTrigger : ZilchComponent {
             
             GlobalVariables.Save.SaveController.BridgeBuilt = true;
             
-            var dialog = Utilities.Dialog("Congrats! you have built a bridge!", DialogTypes.OK, 10);
+            var dialog = Utilities.Dialog("Congrats! you have built a bridge!", DialogTypes.OK, 15);
             
         } else {
             
-            var dialog = Utilities.Dialog("You need some SCRAP and\nsome WELDING EQUIPTMENT to\nrepair this bridge!", DialogTypes.OK, 10);
+            var dialog = Utilities.Dialog("You need some SCRAP and\nsome WELDING EQUIPTMENT to\nrepair this bridge!", DialogTypes.OK, 15);
             
         }
         
