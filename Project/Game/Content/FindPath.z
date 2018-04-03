@@ -9,17 +9,9 @@ class FindPath : ZilchComponent {
     
     function FindPath (start : Real3, goal : Real3, requester : Cog){
         
-        var path = this.AStarLarge(start, goal);
         var toSend = PathFound();
-        if(path != null){
-            if(path.Count <= 1)
-                path = this.AStar(start, goal);
-            else
-                path = this.AStar(start, path[0].WorldPos);
-            toSend.Path = path;
-        } else {
-            toSend.Path = null;
-        }
+        var path = this.AStar(start, goal);
+        toSend.Path = path;
         requester.DispatchEvent(Events.PathFound, toSend);
         
     }
