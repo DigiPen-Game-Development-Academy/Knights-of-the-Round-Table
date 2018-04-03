@@ -79,6 +79,8 @@ class Boss_Rusher_AI : ZilchComponent {
     var DashDir : Real3 = Real3(0);
     //is the ai currently acive?
     var Active : Boolean = true;
+    //exclaim point
+    var Ex : Cog;
     
     function Initialize(init : CogInitializer) {
         
@@ -335,6 +337,12 @@ class Boss_Rusher_AI : ZilchComponent {
     
     //wind up before rushing
     function Wind (dt : Real) {
+        
+        if(this.Ex == null) {
+            this.Ex = this.Space.CreateAtPosition(Archetype.Exclaim, Real3(0, 1, 0));
+            this.Ex.AttachTo(this.Owner);
+            this.Ex.Despawn.Timer = Math.Lerp(this.WindUpTimeMin, this.WindUpTimeMax, this.Health.Percent)+0.5;
+        }
         
         //wait until done winding up
         this.Timer -= dt;

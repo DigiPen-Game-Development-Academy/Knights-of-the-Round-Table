@@ -162,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90607357,
+			float Size = 6.64024067,
 		},
 		EditorCameraController = 
 		{
@@ -510,7 +510,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 3500,
+			float InitialHealth = 4000,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 		},
@@ -554,14 +554,14 @@ Level =
 		{
 			float FireRateFull = 0.25,
 			float FireRateEmpty = 1,
-			float SpeedFull = 2,
-			float SpeedEmpty = 5,
-			float DamageFull = 100,
-			float DamageEmpty = 150,
-			float SplashFull = 4,
-			float SplashEmpty = 5,
+			float SpeedFull = 1.5,
+			float SpeedEmpty = 2.5,
+			float DamageFull = 50,
+			float DamageEmpty = 100,
+			float SplashFull = 3,
+			float SplashEmpty = 4,
 			float ArcIntencity = 1,
-			string DeathMSG = "You where hit in the face with a missile",
+			string DeathMSG = "You were hit in the face with a missile",
 		},
 		EnemySprite = 
 		{
