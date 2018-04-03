@@ -1117,7 +1117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.23933315, -4.06741714, 50],
+			Vec3 Translation = [0.401391029, -6.45559311, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1129,7 +1129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.0992947,
+			float Size = 14.7781191,
 		},
 		EditorCameraController = 
 		{
@@ -1137,7 +1137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [7.23933315, -4.06741714, 8.52409471e-07],
+			Vec3 LookTarget = [0.401391029, -6.45559311, 5.5351353e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4750,12 +4750,19 @@ Level =
 			string Name = "SoundWaves",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5af4af2480366ec0:Version",
 		LinkId = 
 		{
 			uint Id = 114,
+		},
+		Named = 
+		{
+			string Name = "Version",
+		},
+		Archetyped = 
+		{
+			string Name = "5af4af2480366ec0:Version",
 		},
 		Transform = 
 		{
@@ -4763,14 +4770,33 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
+			uint FontSize = 150,
+			string Text = "Beta 1.2",
+			TextAlign Align = Right,
+			float PixelsPerUnit = 429.0383,
+			bool Smoothing = true,
+		},
 		Area = 
 		{
 			Vec2 Size = [2, 0.5],
 			Location Origin = Center,
 		},
-		Named = 
+		ScreenAlign = 
 		{
-			string Name = "Version",
+			Enum Pos = Bottomright,
+			Vec3 Offset = [-0.25, 0, 0],
+			Vec2 RelOffset = [0, 0],
 		},
 	},
 	Cog = 
