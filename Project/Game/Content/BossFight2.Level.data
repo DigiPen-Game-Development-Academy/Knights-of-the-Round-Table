@@ -162,7 +162,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 7.42736101,
+			float Size = 11.0803156,
 		},
 		EditorCameraController = 
 		{
@@ -495,7 +495,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 1675,
+			float InitialHealth = 2300,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 		},
@@ -525,7 +525,7 @@ Level =
 			float SpinFireRateEmpty = 40,
 			float BSpeedFull = 3,
 			float BSpeedEmpty = 10,
-			float DamageFull = 10,
+			float DamageFull = 9,
 			float DamageEmpty = 15,
 			float SpreadHealth = 0.75,
 			float SpinHealth = 0.5,

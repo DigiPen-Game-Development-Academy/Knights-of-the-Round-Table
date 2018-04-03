@@ -298,7 +298,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.0993004,
+			float Size = 36.3482857,
 		},
 		EditorCameraController = 
 		{
@@ -348,7 +348,7 @@ Level =
 		TileMap = 
 		{
 			string SourceName = "5a7ea795cbc62dfe:BossFight1_TileMap06",
-			string PaletteName = "5a11b7b61863cdae:Floor",
+			string PaletteName = "5a9ba11017491fb7:Walls",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
 		},
