@@ -1,7 +1,6 @@
 //Author Brandon Wolenetz
 
-class FindPath : ZilchComponent
-{
+class FindPath : ZilchComponent {
     
     [Dependency]
     var Grid : CreateNavGrid;
