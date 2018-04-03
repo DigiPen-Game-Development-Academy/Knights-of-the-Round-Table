@@ -17,8 +17,9 @@ class FindPath : ZilchComponent {
             else
                 path = this.AStar(start, path[0].WorldPos);
             toSend.Path = path;
-        }else
+        } else {
             toSend.Path = null;
+        }
         requester.DispatchEvent(Events.PathFound, toSend);
         
     }

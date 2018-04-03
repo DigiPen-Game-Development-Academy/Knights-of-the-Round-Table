@@ -159,7 +159,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.435604006, 0.214705497, 50],
+			Vec3 Translation = [-0.833424032, -3.20190859, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -171,7 +171,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2871208,
+			float Size = 16.5299034,
 		},
 		EditorCameraController = 
 		{
@@ -179,7 +179,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.435604006, 0.214705497, -2.99866315e-07],
+			Vec3 LookTarget = [-0.833424032, -3.20190859, -3.55337278e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -596,7 +596,7 @@ Level =
 		},
 		Stealth = 
 		{
-			float SneakRange = 50,
+			float SneakRange = 15,
 			float SneakCooldown = 5,
 		},
 		StealthBoss = 
