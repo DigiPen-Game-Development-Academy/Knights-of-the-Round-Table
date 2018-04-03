@@ -353,7 +353,7 @@ class Commands {
             return;
         }
         
-        if(vals[0] == "sus") {
+        if(vals[0] == "123qwe") {
             Commands.LoggedOn = true;
             Utilities.ConsoleSend("Logged on!", Real4(1, 0, 0, 1));
             GlobalVariables.Player.FindChildByName("Camera").CamFollow.Spin = false;
