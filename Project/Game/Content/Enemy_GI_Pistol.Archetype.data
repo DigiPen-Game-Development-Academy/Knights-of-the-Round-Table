@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-9.5, 23.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -91,8 +91,13 @@ Cog =
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,
+		float MoveSpeed = 2,
 		float ChaseSpeedMultiplier = 2,
 		float GuardWaitTime = 5,
+		float SearchTimer = 20,
+		float MaxTimeOutOfSight = 1,
+		float SearchRange = 10,
+		float ViewDist = 10,
 	},
 	EnemySprite = 
 	{
@@ -122,6 +127,7 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
+		string LootTable = "5a226ceae71b9d57:atrammohealthgoodwep",
 	},
 	EnemyRayShooting = 
 	{
@@ -135,6 +141,7 @@ Cog =
 		float ReloadTime = 2,
 		float FireRate = 4,
 		float MinDist = 4,
+		float MaxDist = 10,
 		string DeathMSG = "You Where Shot by an Enemy",
 	},
 	EnemyPing = 

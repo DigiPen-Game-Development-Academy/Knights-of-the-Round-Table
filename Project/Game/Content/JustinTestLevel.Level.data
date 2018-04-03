@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-93.6268082, 41.1712799, 63.9990082],
+			Vec3 Translation = [74.6507263, 63.1062469, 63.9990082],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 100,
+			float Size = 14.9569225,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-93.6268082, 41.1712799, -0.000990924193],
+			Vec3 LookTarget = [74.6507263, 63.1062469, -0.000991841545],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1567,7 +1567,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, -40],
+			Vec3 Translation = [1.71927357, -6.67261505, -40],
 			Vec3 Scale = [1000000, 1000000, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3012,7 +3012,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-20.5815792, 29.6879501, -1],
+			Vec3 Translation = [30.4872456, 10.4806843, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3030,7 +3030,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-15.5007992, 28.5110455, -1],
+			Vec3 Translation = [76.1247101, 67.3494415, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3048,7 +3048,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [34.4896049, 9.46870613, -1],
+			Vec3 Translation = [-9.08988571, -15.4850292, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3066,7 +3066,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-20.4742832, 23.4980869, -1],
+			Vec3 Translation = [36.529789, -37.7256393, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3283,7 +3283,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [32.5, 6.5, -1],
+			Vec3 Translation = [31.40798, 14.5525494, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3331,7 +3331,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [33.5, 12.5, -1],
+			Vec3 Translation = [23.5, 5.5, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3379,7 +3379,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [23.5, 5.5, -1],
+			Vec3 Translation = [18.5, 5.5, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3427,7 +3427,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [18.5, 5.5, -1],
+			Vec3 Translation = [-31.5492592, 0.621391773, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3475,7 +3475,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-31.5492592, 0.621391773, 0],
+			Vec3 Translation = [12.5, 31.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3523,7 +3523,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [12.5, 31.5, 0],
+			Vec3 Translation = [52.461853, 51.6133423, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3571,7 +3571,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [52.461853, 51.6133423, 0],
+			Vec3 Translation = [74.5903091, 57.6345329, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3619,102 +3619,6 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [74.5903091, 57.6345329, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 95,
-		},
-		Named = 
-		{
-			string Name = "Chest",
-		},
-		Archetyped = 
-		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [75.5, 64.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 96,
-		},
-		Named = 
-		{
-			string Name = "Chest",
-		},
-		Archetyped = 
-		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
-		},
-		Transform = 
-		{
 			Vec3 Translation = [22.5238914, 58.4859314, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -3751,7 +3655,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 97,
+			uint Id = 95,
 		},
 		Named = 
 		{
@@ -3800,7 +3704,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 98,
+			uint Id = 96,
 		},
 		Transform = 
 		{
@@ -3818,7 +3722,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 99,
+			uint Id = 97,
 		},
 		Transform = 
 		{
@@ -3836,7 +3740,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 100,
+			uint Id = 98,
 		},
 		Transform = 
 		{
@@ -3854,7 +3758,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 101,
+			uint Id = 99,
 		},
 		Transform = 
 		{
@@ -3872,7 +3776,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 102,
+			uint Id = 100,
 		},
 		Transform = 
 		{
@@ -3890,7 +3794,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 103,
+			uint Id = 101,
 		},
 		Transform = 
 		{
@@ -3908,7 +3812,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 104,
+			uint Id = 102,
 		},
 		Transform = 
 		{
@@ -3926,7 +3830,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 105,
+			uint Id = 103,
 		},
 		Transform = 
 		{
@@ -3944,7 +3848,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 106,
+			uint Id = 104,
 		},
 		Transform = 
 		{
@@ -3962,7 +3866,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 107,
+			uint Id = 105,
 		},
 		Transform = 
 		{
@@ -3980,7 +3884,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 108,
+			uint Id = 106,
 		},
 		Transform = 
 		{
@@ -3997,7 +3901,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 109,
+			uint Id = 107,
 		},
 		Named = 
 		{
@@ -4047,7 +3951,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 110,
+			uint Id = 108,
 		},
 		Named = 
 		{
@@ -4099,7 +4003,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 109,
+				uint ResolvedCog = 107,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -4110,7 +4014,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 111,
+			uint Id = 109,
 		},
 		Named = 
 		{
@@ -4158,6 +4062,172 @@ Level =
 			string Slot5ID = "",
 			string Slot6ID = "Health_Pack_(T2)",
 			string Slot7ID = "Health_Pack_(T2)",
+			string Slot8ID = "",
+		},
+		AutoChest = 
+		{
+			string LootTable = "",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 110,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Archetyped = 
+		{
+			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [65.4129944, 26.7364101, -0.000991821289],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 4,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		AutoChest = 
+		{
+			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 111,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Archetyped = 
+		{
+			string Name = "5a0198d5f1c252dc:Manual_Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [32.4864006, 6.55437946, -0.000991821289],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a70317fa8580499:ChestSprite",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		SetChest = 
+		{
+			string Slot1ID = "",
+			string Slot2ID = "",
+			string Slot3ID = "",
+			string Slot4ID = "",
+			string Slot5ID = "Rifle",
+			string Slot6ID = "",
+			string Slot7ID = "",
+			string Slot8ID = "",
+		},
+		AutoChest = 
+		{
+			string LootTable = "",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 112,
+		},
+		Named = 
+		{
+			string Name = "Chest",
+		},
+		Archetyped = 
+		{
+			string Name = "5a0198d5f1c252dc:Manual_Chest",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [74.532959, 65.5499954, -0.000991821289],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a70317fa8580499:ChestSprite",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		SetChest = 
+		{
+			string Slot1ID = "",
+			string Slot2ID = "",
+			string Slot3ID = "",
+			string Slot4ID = "",
+			string Slot5ID = "Sword",
+			string Slot6ID = "",
+			string Slot7ID = "",
 			string Slot8ID = "",
 		},
 		AutoChest = 
