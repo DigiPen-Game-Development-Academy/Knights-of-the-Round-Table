@@ -1,0 +1,12 @@
+DataContent = 
+{
+	ZilchPluginBuilder = 
+	{
+		string Name = "PathFind",
+		uint64 ResourceId = 5ab82980f4f7bcb0,
+		string LoaderType = "ZilchPluginSource",
+		uint Version = 0,
+		bool ShowInEditor = true,
+		uint64 SharedLibraryResourceId = 5ab82980f4f7bcb4,
+	},
+},

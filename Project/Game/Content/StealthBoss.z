@@ -5,6 +5,8 @@ class StealthBoss : ZilchComponent {
     
     [Property] var SneakCooldown : Real = 5;
     
+    var MinDist : Real = 3;
+    
     var Timer : Real = 0;
     
     var Rand : Random;
@@ -32,7 +34,7 @@ class StealthBoss : ZilchComponent {
         
         this.Timer -= event.Dt;
         
-        if (this.Timer <= 0 && !this.InFlashlightRange(this.Owner.Transform.WorldTranslation)) {
+        if (this.Timer <= 0 && !this.InFlashlightRange(this.Owner.Transform.WorldTranslation) && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) >= this.MinDist) {
             this.Timer = this.SneakCooldown;
             this.Sneak();
         }
