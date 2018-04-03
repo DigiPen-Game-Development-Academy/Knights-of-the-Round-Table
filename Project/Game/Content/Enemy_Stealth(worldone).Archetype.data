@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5a5086c44183c1a9:Enemy_Stealth",
+		string Name = "5a2268bf77cbefe9:Enemy_Stealth(worldone)",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [70.2458496, 69.5671539, -0.000995635986],
+		Vec3 Translation = [70.2458496, 69.5671539, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -127,7 +127,7 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
-		string LootTable = "5a11b100e0d8983f:Loot",
+		string LootTable = "5a226ceae71b9d57:atrammohealthgoodwep",
 	},
 	MenuVisibilityController = 
 	{

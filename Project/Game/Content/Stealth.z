@@ -25,7 +25,7 @@ class Stealth : ZilchComponent {
 
     function OnLogicUpdate(event : UpdateEvent) {
         
-        if (!this.Active)
+        if (!this.Active || this.Owner.EnemyAI.State != State.Spotted)
             return;
         
         this.Cooldwon -= event.Dt;
@@ -45,7 +45,7 @@ class Stealth : ZilchComponent {
             if (this.Cooldwon <= 0) {
                 this.Cooldwon = this.SneakCooldown;
                 
-                this.Sneak();
+                //this.Sneak();
                 
             }
         }
