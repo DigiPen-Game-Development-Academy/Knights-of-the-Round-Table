@@ -219,7 +219,7 @@ Level =
 			float WindUpTimeMin = 0.5,
 			float DashDistance = 7,
 			float AngryDashTime = 4,
-			float DazeTime = 6,
+			float DazeTime = 7,
 			float AngryDashHealth = 0.5,
 			float AngryTurnSpeed = 10,
 			float DashDamage = 100,
@@ -286,7 +286,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.31234002, -0.486787856, 50],
+			Vec3 Translation = [0.647343218, -0.992634892, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -298,7 +298,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 3.6442399,
+			float Size = 36.3482933,
 		},
 		EditorCameraController = 
 		{
@@ -306,7 +306,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.31234002, -0.486787856, -2.61543448e-07],
+			Vec3 LookTarget = [0.647343218, -0.992634892, -2.61543448e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -348,7 +348,7 @@ Level =
 		TileMap = 
 		{
 			string SourceName = "5a7ea795cbc62dfe:BossFight1_TileMap06",
-			string PaletteName = "5a11b7b61863cdae:Floor",
+			string PaletteName = "5a9ba11017491fb7:Walls",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
 		},
