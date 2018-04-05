@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [70.8975601, -14.5453129, 64.0000076],
+			Vec3 Translation = [-60.2698441, -33.649353, 64],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 10.0259047,
+			float Size = 40.6570435,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [70.8975601, -14.5453129, 8.59410193e-06],
+			Vec3 LookTarget = [-60.2698441, -33.649353, 9.50517006e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2608,9 +2608,9 @@ Level =
 			string Slot1ID = "Health_Pack_(T1)",
 			string Slot2ID = "Potato",
 			string Slot3ID = "",
-			string Slot4ID = "",
+			string Slot4ID = "Health_Pack_(T2)",
 			string Slot5ID = "",
-			string Slot6ID = ")",
+			string Slot6ID = "Health_Pack_(T2)",
 			string Slot7ID = "Health_Pack_(T2)",
 			string Slot8ID = "",
 		},
@@ -3612,7 +3612,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [67.2714996, -11.6029539, -1],
+			Vec3 Translation = [36.529789, -37.7256393, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
