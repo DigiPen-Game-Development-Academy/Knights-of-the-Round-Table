@@ -8,7 +8,7 @@ Cog =
 		string ProjectSpace = "Space",
 		uint ProjectEngineRevision = 16386,
 		bool AutoTakeProjectScreenshot = false,
-		uint64 Guid = 5abdcdf957e04b3b,
+		uint64 Guid = 5abdcec0d3c47938,
 	},
 	EditorSettings = 
 	{
