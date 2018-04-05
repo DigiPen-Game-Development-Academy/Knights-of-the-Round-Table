@@ -673,7 +673,7 @@ Level =
 			float SplashFull = 1,
 			float SplashEmpty = 1,
 			float ArcIntencity = 1,
-			string DeathMSG = "You where hit in the face with a missile",
+			string DeathMSG = "You were hit in the face with a missile.",
 		},
 		Stealth = 
 		{
@@ -759,7 +759,7 @@ Level =
 		{
 			string Part = "5a501997de7c61af:QuestItem3",
 			string Note = "THIS IS A NOTE",
-			string Drops = "5a11b100e0d8983f:Loot",
+			string Drops = "5a74b95ba553bc1f:Winning",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 		},
