@@ -673,7 +673,7 @@ Level =
 			float SplashFull = 1,
 			float SplashEmpty = 1,
 			float ArcIntencity = 1,
-			string DeathMSG = "You where hit in the face with a missile",
+			string DeathMSG = "You were hit in the face with a missile.",
 		},
 		Stealth = 
 		{

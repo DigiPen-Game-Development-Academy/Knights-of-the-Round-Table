@@ -561,7 +561,7 @@ Level =
 			float SplashFull = 1.75,
 			float SplashEmpty = 2.5,
 			float ArcIntencity = 1,
-			string DeathMSG = "You were hit in the face with a missile",
+			string DeathMSG = "You were hit in the face with a missile.",
 		},
 		EnemySprite = 
 		{

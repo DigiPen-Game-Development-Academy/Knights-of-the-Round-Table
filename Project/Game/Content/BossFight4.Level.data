@@ -607,7 +607,7 @@ Level =
 		{
 			float AttacksPerSecond = 1,
 			float DamagerPerAttack = 5,
-			string DeathMSG = "You Were Bitten by an Enemy",
+			string DeathMSG = "You were bitten by an enemy.",
 		},
 		Hierarchy = 
 		{
