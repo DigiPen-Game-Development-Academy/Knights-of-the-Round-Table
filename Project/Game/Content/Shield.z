@@ -2,6 +2,7 @@ class Shield : ZilchComponent {
     
     [Property] var TurnSpeed : Real = 2.5;
     [Property] var FlashSpeed : Real = 5;
+    [Property] var Shoot : Boolean = true;
     
     var RayShooting : EnemyRayShooting;
     
@@ -15,8 +16,10 @@ class Shield : ZilchComponent {
     
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        this.RayShooting = this.Owner.Parent.EnemyRayShooting;
-        this.ReloadTime = this.RayShooting.ReloadTime;
+        if(this.Shoot) {
+            this.RayShooting = this.Owner.Parent.EnemyRayShooting;
+            this.ReloadTime = this.RayShooting.ReloadTime;
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
@@ -51,6 +54,9 @@ class Shield : ZilchComponent {
         this.Owner.Transform.SetEulerAnglesXYZ(0,0,angle);
         
         //shooting
+        
+        if(!this.Shoot)
+            return;
         
         if(this.Owner.Parent.EnemyAI.State != State.Spotted) {
             this.Timer = this.ReloadTime;

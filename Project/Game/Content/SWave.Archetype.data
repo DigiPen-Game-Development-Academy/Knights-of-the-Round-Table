@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "SWave",
 	},
+	Archetyped = 
+	{
+		string Name = "5a6df20ad1882194:SWave",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0.358849078, 0.368570268, 1],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [0.100000001, 0.100000001, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -35,6 +39,6 @@ Cog =
 	Area = 
 	{
 		Vec2 Size = [1, 1],
-		Location Origin = Center,
+		Location Origin = TopCenter,
 	},
 },

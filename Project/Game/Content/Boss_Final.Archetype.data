@@ -46,11 +46,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 1, 0.100000143, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5abd11fc2be5f142:QueenDragon",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -63,17 +63,9 @@ Cog =
 	},
 	Health = 
 	{
-		float InitialHealth = 1000,
+		float InitialHealth = 5000,
 		float Cooldown = 10,
 		float RegenRate = 0.5,
-	},
-	BossDrops = 
-	{
-		string Part = "5a501997de7c61af:QuestItem3",
-		string Note = "THIS IS A NOTE",
-		string Drops = "",
-		float DropRange = 1,
-		string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 	},
 	EnemyPathFind = 
 	{
@@ -112,21 +104,22 @@ Cog =
 		float FireRateEmpty = 1,
 		float SpeedFull = 1,
 		float SpeedEmpty = 1,
-		float DamageFull = 1,
-		float DamageEmpty = 1,
+		float DamageFull = 50,
+		float DamageEmpty = 55,
 		float SplashFull = 1,
 		float SplashEmpty = 1,
 		float ArcIntencity = 1,
-		string DeathMSG = "You where hit in the face with a missile",
+		string DeathMSG = "You were hit in the face with a missile.",
 	},
 	Stealth = 
 	{
-		float SneakRange = 10,
-		float SneakCooldown = 3,
+		float InvisSpeedMultiplier = 2,
+		string OpacityCurve = "5abdc26d9fc78f57:StealthOpacity",
+		float CloseSpeedMultiplier = 2,
 	},
 	StealthBoss = 
 	{
-		float SneakCooldown = 5,
+		float SneakCooldown = 7,
 	},
 	Boss_GI_AI = 
 	{
@@ -145,7 +138,7 @@ Cog =
 		float SpreadMax = 10,
 		float SpreadMin = 5,
 		float SpreadNumMax = 5,
-		float SpreadNumMin = 20,
+		float SpreadNumMin = 15,
 		float SpinFull = 1,
 		float SpinEmpty = 3,
 		float SpinSpeedFull = 25,
@@ -154,8 +147,8 @@ Cog =
 		float SpinFireRateEmpty = 15,
 		float BSpeedFull = 3,
 		float BSpeedEmpty = 7,
-		float DamageFull = 10,
-		float DamageEmpty = 25,
+		float DamageFull = 5,
+		float DamageEmpty = 10,
 		float SpreadHealth = 0.75,
 		float SpinHealth = 0.5,
 		float WindCooldownFull = 1,
@@ -174,10 +167,10 @@ Cog =
 		float DazeTime = 4,
 		float AngryDashHealth = 0.25,
 		float AngryTurnSpeed = 10,
-		float DashDamage = 50,
+		float DashDamage = 100,
 		float PassiveDamage = 50,
-		float DashCooldownMax = 6,
-		float DashCooldownMin = 4,
+		float DashCooldownMax = 10,
+		float DashCooldownMin = 8,
 		float DashCooldownRand = 0.100000001,
 		float StartRange = 100,
 		string DashDamageMSG = "You where run over by a giant enemy!",
@@ -197,6 +190,15 @@ Cog =
 		float WindTimeEmpty = 1,
 		float StateTimeFull = 10,
 		float StateTimeEmpty = 5,
+		float AllOutHeath = 0.25,
+	},
+	BossDrops = 
+	{
+		string Part = "5a501997de7c61af:QuestItem3",
+		string Note = "THIS IS A NOTE",
+		string Drops = "5a74b95ba553bc1f:Winning",
+		float DropRange = 1,
+		string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 	},
 	Hierarchy = 
 	{
@@ -249,6 +251,8 @@ Cog =
 			Shield = 
 			{
 				float TurnSpeed = 1,
+				float FlashSpeed = 5,
+				bool Shoot = false,
 			},
 			Hierarchy = 
 			{
@@ -265,7 +269,7 @@ Cog =
 					Transform = 
 					{
 						Vec3 Translation = [1.375, 0, 0],
-						Vec3 Scale = [0.25, 2, 1],
+						Vec3 Scale = [1, 1, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
 					Sprite = 
@@ -278,7 +282,7 @@ Cog =
 						BlendMode BlendMode = Alpha,
 						SpriteGeometryMode GeometryMode = ZPlane,
 						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-						string SpriteSource = "5275aa4d802dd6dc:Square",
+						string SpriteSource = "5ad391c7f0ed4e59:BossyShieldAlpha",
 						bool RenderMask = false,
 						bool FlipX = false,
 						bool FlipY = false,
@@ -294,7 +298,7 @@ Cog =
 						string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 						string SerializedGroupName = "5a57db49dff94fe2:Shield",
 						Vec3 Offset = [0, 0, 0],
-						Vec3 Size = [0.5, 0.5, 2.5],
+						Vec3 Size = [0.125, 1, 2.5],
 					},
 					RigidBody = 
 					{
@@ -310,6 +314,11 @@ Cog =
 					},
 					MenuVisibilitySprite = 
 					{
+					},
+					Area = 
+					{
+						Vec2 Size = [0.25, 2],
+						Location Origin = Center,
 					},
 				},
 			},

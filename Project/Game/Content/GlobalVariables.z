@@ -115,6 +115,7 @@ class GlobalVariables {
             
         }
         
+        Utilities.Dialog("YOUR INVENTORY IS FULLLL!!!", DialogTypes.OK, 15);
         return false;
         
     }

@@ -132,7 +132,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.15541899, -0.130489081, 117.557846],
+			Vec3 Translation = [-2.25141335, 0.473457813, 117.557846],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -144,7 +144,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.3649597,
+			float Size = 6.00833225,
 		},
 		EditorCameraController = 
 		{
@@ -152,7 +152,7 @@ Level =
 			float LookDistance = 91.105896,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.15541899, -0.130489081, 26.4519501],
+			Vec3 LookTarget = [-2.25141335, 0.473457813, 26.4519501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -226,7 +226,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-2.625, 0.25, 0],
+					Vec3 Translation = [1.5, 0.1875, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -237,7 +237,7 @@ Level =
 				},
 				Button = 
 				{
-					float ScaleM = 1.00999999,
+					float ScaleM = 1,
 					Vec4 HoverColor = [1, 1, 1, 0.999899983],
 					Vec4 ClickColor = [0.25, 0.25, 0.25, 0.999899983],
 					float ScaleSpeed = 5,
@@ -296,7 +296,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [2, 0.875, 0],
+					Vec3 Translation = [-2.3125, 0.4375, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -307,7 +307,7 @@ Level =
 				},
 				Button = 
 				{
-					float ScaleM = 1.00999999,
+					float ScaleM = 1,
 					Vec4 HoverColor = [1, 1, 1, 0.999899983],
 					Vec4 ClickColor = [0.25, 0.25, 0.25, 0.999899983],
 					float ScaleSpeed = 5,
@@ -345,11 +345,11 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0.999899983],
+					Vec4 Color = [0.904999971, 0.701375008, 0.701375008, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a7e5da1dc4cd00f:Play_Button",
+					string SpriteSource = "5abd17791580bc91:PlayButton",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -370,7 +370,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.25, -1.125, 0],
+					Vec3 Translation = [1.5625, -1.3125, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -381,7 +381,7 @@ Level =
 				},
 				Button = 
 				{
-					float ScaleM = 1.00999999,
+					float ScaleM = 1,
 					Vec4 HoverColor = [1, 1, 1, 0.999899983],
 					Vec4 ClickColor = [0.25, 0.25, 0.25, 0.999899983],
 					float ScaleSpeed = 5,
@@ -539,7 +539,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.5, 4, 0],
+			Vec3 Translation = [-2.5625, 2.625, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -553,7 +553,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ad394ef76e2a494:Title000",
+			string SpriteSource = "5ad395027504d516:Title",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -587,7 +587,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.719999969, 3, 0],
+			Vec3 Translation = [0.6875, 2.625, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -620,6 +620,71 @@ Level =
 		{
 			string AnimationName = "5a7e502445d852b1:fadeIn",
 			AnimPlayMode PlayMode = PlayOnce,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.6875, -1.5625, 26.5],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Reactive = 
+		{
+			bool Active = true,
+			bool CaptureMouse = false,
+		},
+		Button = 
+		{
+			float ScaleM = 1,
+			Vec4 HoverColor = [1, 1, 1, 0.999899983],
+			Vec4 ClickColor = [1, 1, 1, 0.999899983],
+			float ScaleSpeed = 5,
+			bool Alpha = false,
+			bool Scaling = true,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 432e656d61472074,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a7e4b0078293a5c:FadeInSprite",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+		ClearSaveFileButton = 
+		{
 		},
 	},
 },

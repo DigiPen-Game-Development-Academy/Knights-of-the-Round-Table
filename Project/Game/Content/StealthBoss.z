@@ -29,8 +29,10 @@ class StealthBoss : ZilchComponent {
         
         this.Stealth.Active = this.Active;
         
-        if(!this.Active)
+        if(!this.Active) {
+            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.XYZ, 1);
             return;
+        }
         
         this.Timer -= event.Dt;
         
