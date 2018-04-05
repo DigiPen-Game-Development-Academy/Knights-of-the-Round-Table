@@ -4,29 +4,9 @@ ResourceTable =
 	Array EntryList = 
 	[
 		{
-			string Name = "NONE",
-			string Value = "NULL",
-			float Weight = 1,
-		},
-		{
-			string Name = "Potato",
-			string Value = "Potato",
-			float Weight = 1,
-		},
-		{
-			string Name = "Boomerang",
-			string Value = "Boomerang",
-			float Weight = 1,
-		},
-		{
-			string Name = "HP1",
-			string Value = "Health_Pack_(T1)",
-			float Weight = 1,
-		},
-		{
 			string Name = "ammo",
-			string Value = "Ammo",
-			float Weight = 1,
+			string Value = "ammo",
+			float Weight = 10,
 		},
 	],
 	float MaxWeight = 10,
