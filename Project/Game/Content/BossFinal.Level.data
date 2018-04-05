@@ -159,7 +159,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.17614317, -0.0102679785, 50],
+			Vec3 Translation = [-0.00961982086, -0.985233724, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -171,7 +171,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90607548,
+			float Size = 7.33860254,
 		},
 		EditorCameraController = 
 		{
@@ -179,7 +179,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.17614317, -0.0102679785, 5.14120124e-08],
+			Vec3 LookTarget = [-0.00961982086, -0.985233724, -4.19336121e-10],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -610,11 +610,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 1, 0.100000143, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5abd11fc2be5f142:QueenDragon",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -677,8 +677,9 @@ Level =
 		},
 		Stealth = 
 		{
-			float SneakRange = 10,
-			float SneakCooldown = 7,
+			float InvisSpeedMultiplier = 2,
+			string OpacityCurve = "5abdc26d9fc78f57:StealthOpacity",
+			float CloseSpeedMultiplier = 2,
 		},
 		StealthBoss = 
 		{
@@ -814,6 +815,8 @@ Level =
 				Shield = 
 				{
 					float TurnSpeed = 1,
+					float FlashSpeed = 5,
+					bool Shoot = false,
 				},
 				Hierarchy = 
 				{

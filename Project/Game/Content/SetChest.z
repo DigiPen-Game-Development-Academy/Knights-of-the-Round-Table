@@ -1,5 +1,4 @@
-class SetChest : ZilchComponent
-{
+class SetChest : ZilchComponent {
     [Dependency]
     var Reactive : Reactive;
     

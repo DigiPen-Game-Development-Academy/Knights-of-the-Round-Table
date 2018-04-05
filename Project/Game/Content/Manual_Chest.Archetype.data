@@ -28,12 +28,12 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a70317fa8580499:ChestSprite",
+		string SpriteSource = "5abd153aa98ae8d4:ChestSpriteRev",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
 		bool AnimationActive = true,
-		float AnimationSpeed = 0,
+		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
 	Reactive = 
@@ -54,5 +54,16 @@ Cog =
 	},
 	AutoChest = 
 	{
+		string LootTable = "",
+	},
+	BoxCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Size = [0.5, 0.5, 0.5],
 	},
 },

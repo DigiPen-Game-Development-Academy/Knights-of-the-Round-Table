@@ -3,12 +3,12 @@ ImageContent =
 	SpriteSourceBuilder = 
 	{
 		string Name = "ChestSprite",
-		uint64 ResourceId = 5a70317fa8580499,
+		uint64 ResourceId = 5abd152f56bd8230,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 32,
 		uint FrameSizeY = 32,
-		uint FrameCount = 5,
-		float FrameDelay = 0.125,
+		uint FrameCount = 2,
+		float FrameDelay = 0.0833333358,
 		float OriginX = 16,
 		float OriginY = 16,
 		float PixelsPerUnit = 32,
