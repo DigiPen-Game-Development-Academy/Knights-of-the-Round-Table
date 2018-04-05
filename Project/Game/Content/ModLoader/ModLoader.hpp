@@ -5,38 +5,30 @@
 
 // An example component being bound to the engine
 class ModLoader : public ZeroEngine::ZilchComponent {
-
+	
 public:
-  ZilchDeclareDerivedType(ModLoader, ZeroEngine::ZilchComponent);
-  
-  ModLoader();
-  ~ModLoader();
-  
-  void Initialize(ZeroEngine::CogInitializer* initializer);
-  
-  void OnLogicUpdate(ZeroEngine::UpdateEvent* event);
-  
-  // A method that we want to expose to script
-  Zilch::String Speak();
-  
-  // A field that we want to expose to script
-  int mLives;
-  
-  // A getter/setter that we want to expose to script
-  float GetHealth();
-  void SetHealth(float value);
-  
+	ZilchDeclareDerivedType(ModLoader, ZeroEngine::ZilchComponent);
+	
+	ModLoader();
+	~ModLoader();
+	
+	void Initialize(ZeroEngine::CogInitializer* initializer);
+	
+	void OnLogicUpdate(ZeroEngine::UpdateEvent* event);
+	  
 private:
-  float mHealth;
-
+	
+	static void InitMods();
+	static void InitMod(std::string path);
+	
 };
 
 // An example of a custom event that we can send
 class ModLoaderEvent : public ZeroEngine::ZilchEvent {
-
+	
 public:
-  ZilchDeclareDerivedType(ModLoaderEvent, ZeroEngine::ZilchEvent);
-  
-  int mLives;
-
+	ZilchDeclareDerivedType(ModLoaderEvent, ZeroEngine::ZilchEvent);
+	
+	int mLives;
+	
 };

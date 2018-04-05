@@ -12,6 +12,6 @@ ZilchDeclareStaticLibraryAndPlugin(ModLoaderLibrary, ModLoaderPlugin);
 // If another project needed to include any headers from our project, then they would simply
 // include our precompiled header instead (ideally within their own precompiled header)
 // This also must means you must order headers in dependency order (who depends on who)
-
+#include <io.h>
 #include "ModLoader.hpp"
 // Auto Includes (used by Visual Studio plugins, do not remove this line)

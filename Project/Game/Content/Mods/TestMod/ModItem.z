@@ -1,0 +1,24 @@
+class ModItem : Item {
+	
+	function Init () {
+        this.Type = ItemType.Consumable;
+        this.Stackable = true;
+        var rand = Random();
+        this.Ammount = Math.Round(rand.Range(5, 10)) as Integer;
+        this.Name = "ModItem";
+        this.ID = "ModItem";
+        this.GroundSprite = SpriteSource.ModItem;
+        this.Icon = SpriteSource.ModItem;
+    }
+    
+    function Use (radAngle : Real) {
+        
+        Console.WriteLine("ADD HEATH");
+        GlobalVariables.Player.Health.CurrentHealth += 10;
+        if(GlobalVariables.Player.Health.CurrentHealth > GlobalVariables.Player.Health.InitialHealth) {
+            GlobalVariables.Player.Health.CurrentHealth = GlobalVariables.Player.Health.InitialHealth;
+        }
+        
+    }
+	
+}
