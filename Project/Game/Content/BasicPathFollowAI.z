@@ -85,7 +85,7 @@ class BasicPathFollowAI : ZilchComponent {
                 this.Owner.RigidBody.Velocity = Real3(0);
             }
             
-            if(Math.Distance(this.Owner.EnemyPathFind.Path[0].WorldPos, this.Owner.Transform.WorldTranslation) < 0.1)
+            if(Math.Distance(this.Owner.EnemyPathFind.Path[0].WorldPos, this.Owner.Transform.WorldTranslation) < 0.2)
                 this.Owner.EnemyPathFind.Recalculate(this.Target);
         }
         

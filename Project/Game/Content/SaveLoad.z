@@ -88,7 +88,7 @@ class SaveLoad : ZilchComponent {
         if (save == null) {
             save = GlobalVariables.GameSpace.Create(Archetype.Save);
             save.SaveController.FirstLoad = true;
-            Console.WriteLine("No Save File Detected");
+            //Console.WriteLine("No Save File Detected");
             return;
         }
         

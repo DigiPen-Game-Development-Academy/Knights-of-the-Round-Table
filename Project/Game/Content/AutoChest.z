@@ -26,7 +26,7 @@ class AutoChest : ZilchComponent {
 
     function OnMouseDown(event : ViewportMouseEvent){
         
-        Console.WriteLine(this.Items == null);
+        //Console.WriteLine(this.Items == null);
         
         var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation-this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 3);
         

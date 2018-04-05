@@ -9,9 +9,17 @@ class FindPath : ZilchComponent {
     
     function FindPath (start : Real3, goal : Real3, requester : Cog){
         
+        var path = this.AStarLarge(start, goal);
         var toSend = PathFound();
-        var path = this.AStar(start, goal);
-        toSend.Path = path;
+        if(path != null){
+            if(path.Count <= 1)
+                path = this.AStar(start, goal);
+            else
+                path = this.AStar(start, path[0].WorldPos);
+            toSend.Path = path;
+        } else {
+            toSend.Path = null;
+        }
         requester.DispatchEvent(Events.PathFound, toSend);
         
     }
@@ -56,7 +64,7 @@ class FindPath : ZilchComponent {
             } else
                 break;
         }
-        Console.WriteLine("Somone is inside a wall at: `start`");
+        //Console.WriteLine("Somone is inside a wall at: `start`");
         return null;
     }
     

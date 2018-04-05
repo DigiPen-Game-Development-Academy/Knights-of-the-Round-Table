@@ -23,8 +23,11 @@ class Objective {
         "Explore the wrackage of yur ship",
         "This is a save point, save your progress or die",
         "This is a chest, collect valuable loots here",
-        "This is a enemy, sneak up and R.K.O. him from beind",
-        "unlike the other enemy this enemy is real, good luck foof"
+        "This is a enemy, sneak up and R.K.O. him from BEHIND\nRemember to be stealthy!",
+        "Unlike the other enemy this enemy is real, good luck!",
+        "Now explore ye island while i learn how to spel!",
+        "Rebuild the bridge",
+        "Find parts to fix your yaght"
     };
     
 }

@@ -45,7 +45,7 @@ class Visibility : ZilchComponent {
         
         res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation, this.Space.PhysicsSpace, 20, filter);
         
-        Console.WriteLine(res);
+        //Console.WriteLine(res);
         
         if(res != null && res.ObjectHit == GlobalVariables.Player) {
             this.DirectLine = true;

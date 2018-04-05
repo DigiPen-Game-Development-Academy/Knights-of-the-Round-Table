@@ -79,7 +79,7 @@ class CreateUI : ZilchComponent {
                 
                 if(MusicUtils.MusicSpace == null) {
                     
-                    Console.WriteLine("Creating music space");
+                    //Console.WriteLine("Creating music space");
                     
                     MusicUtils.MusicSpace = this.GameSession.CreateNamedSpace("Music", Archetype.UISpace);
                     

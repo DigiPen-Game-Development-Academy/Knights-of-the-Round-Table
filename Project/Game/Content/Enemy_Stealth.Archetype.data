@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [70.2458496, 69.5671539, -0.000995635986],
+		Vec3 Translation = [0.5, 5.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -91,8 +91,8 @@ Cog =
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,
-		float MoveSpeed = 2,
-		float ChaseSpeedMultiplier = 2,
+		float MoveSpeed = 1,
+		float ChaseSpeedMultiplier = 1.25,
 		float GuardWaitTime = 5,
 		float SearchTimer = 20,
 		float MaxTimeOutOfSight = 5,
@@ -134,8 +134,9 @@ Cog =
 	},
 	Stealth = 
 	{
-		float SneakRange = 5,
-		float SneakCooldown = 7,
+		float InvisSpeedMultiplier = 3,
+		string OpacityCurve = "5abdc26d9fc78f57:StealthOpacity",
+		float CloseSpeedMultiplier = 2,
 	},
 	Hierarchy = 
 	{

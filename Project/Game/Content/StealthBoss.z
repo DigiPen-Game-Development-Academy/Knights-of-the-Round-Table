@@ -34,11 +34,6 @@ class StealthBoss : ZilchComponent {
         
         this.Timer -= event.Dt;
         
-        if (this.Timer <= 0 && !this.InFlashlightRange(this.Owner.Transform.WorldTranslation) && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) >= this.MinDist) {
-            this.Timer = this.SneakCooldown;
-            this.Sneak();
-        }
-        
         this.AI.State = State.Spotted;
         
     }
@@ -59,39 +54,6 @@ class StealthBoss : ZilchComponent {
             
         }
         return true;
-    }
-    
-    function Sneak () {
-        var filter = CastFilter();
-        var vel = GlobalVariables.Player.RigidBody.Velocity;
-        var ghost = GlobalVariables.Player.BoxCollider.Ghost;
-        GlobalVariables.Player.BoxCollider.Ghost = false;
-        GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Static;
-        filter.IgnoreDynamic = true;
-        filter.IgnoreGhost = true;
-        filter.CollisionGroup = CollisionGroup.Enemies;
-        
-        var pos = Real3(0);
-        for (var i = 0; i < 50; ++i) {
-            
-            pos = this.Owner.Transform.WorldTranslation + Real3(this.Rand.Range(-this.Stealth.SneakRange, this.Stealth.SneakRange), this.Rand.Range(-this.Stealth.SneakRange, this.Stealth.SneakRange), 0);
-            
-            var res = Utilities.Raycast(pos, GlobalVariables.Player.Transform.WorldTranslation - pos, this.Space.PhysicsSpace, 50, filter);
-            
-            var node = this.LevelSettings.CreateNavGrid.GetNodeFromPos(pos);
-            
-            if(node != null && node.Walkable && (res == null || res.ObjectHit != GlobalVariables.Player || !this.InFlashlightRange(pos))) {
-                
-                this.Owner.Transform.WorldTranslation = pos;
-                break;
-                
-            }
-        }
-        
-        GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
-        GlobalVariables.Player.RigidBody.Velocity = vel;
-        GlobalVariables.Player.BoxCollider.Ghost = ghost;
-        
     }
     
 }

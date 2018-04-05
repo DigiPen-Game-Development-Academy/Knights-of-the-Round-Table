@@ -178,7 +178,7 @@ class ConsoleTypeBox : ZilchComponent {
                 var toAdd = "";
                 
                 for (var i = 0; i < str.Count; ++i) {
-                    Console.WriteLine(str[i]);
+                    //Console.WriteLine(str[i]);
                     if(this.IsRenderable(str[i])) {
                         toAdd = "`toAdd``String.FromChar(str[i])`";
                     }
@@ -597,7 +597,7 @@ class ConsoleTypeBox : ZilchComponent {
                     
                 } else {
                     
-                    Console.WriteLine(this.SelectionMin - this.CursorIndex);
+                    //Console.WriteLine(this.SelectionMin - this.CursorIndex);
                     
                     if(this.SelectionMin - this.CursorIndex < 1 && this.CursorIndex != 0) {
                         
@@ -643,7 +643,7 @@ class ConsoleTypeBox : ZilchComponent {
                     
                 } else {
                     
-                    Console.WriteLine(this.SelectionMax - this.CursorIndex);
+                    //Console.WriteLine(this.SelectionMax - this.CursorIndex);
                     
                     if(this.SelectionMax - this.CursorIndex < 0 || this.CursorIndex == this.CurrentIn.Count) {
                         
@@ -729,7 +729,7 @@ class ConsoleTypeBox : ZilchComponent {
                 
                 this.AutoText.Transform.Translation = Real3(this.Text.SpriteText.MeasureGivenText(this.CurrentIn).X + 0.1, 0.125, 1);
                 
-                Console.WriteLine(this.CurrentIn);
+                //Console.WriteLine(this.CurrentIn);
                 
                 this.AutoText.SpriteText.Text = ac[0].SubStringFromRuneIndices(this.CurrentIn.Count, ac[0].Count);
                 

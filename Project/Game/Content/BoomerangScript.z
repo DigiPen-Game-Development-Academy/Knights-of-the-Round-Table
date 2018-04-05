@@ -65,7 +65,7 @@ class BoomerangScript : ZilchComponent {
         } else {
             
             this.Owner.RigidBody.Velocity += (this.StartDir * this.MovSpeed * event.Dt);
-            Console.WriteLine(this.StartDir);
+            //Console.WriteLine(this.StartDir);
             
         }
         

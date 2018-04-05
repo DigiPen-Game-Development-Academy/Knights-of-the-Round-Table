@@ -153,11 +153,6 @@ class EnemyAI : ZilchComponent {
             }
         }
         
-        if(this.Owner.Name == "Enemy_Rusher_Tutorial") {
-            Console.WriteLine(this.PathFind.Instaturn);
-            Console.WriteLine(this.State);
-        }
-        
         //Player Spotting
         this.Spot();
         

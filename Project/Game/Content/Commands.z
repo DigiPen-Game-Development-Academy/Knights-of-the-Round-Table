@@ -413,7 +413,7 @@ class Commands {
         var cmd = "";
         for (var i = 0; i < str.Count; ++i) {
             if(String.FromChar(str[i]) == " ") {
-                Console.WriteLine("hello");
+                //Console.WriteLine("hello");
                 cmd = str.SubStringFromRuneIndices(0, i);
                 return cmd;
             }

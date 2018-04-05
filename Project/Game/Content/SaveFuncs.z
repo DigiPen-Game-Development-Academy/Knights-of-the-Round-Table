@@ -56,7 +56,7 @@ class SaveFuncs {
             }
         }
         str = "`str`";
-        Console.WriteLine(str);
+        //Console.WriteLine(str);
         return str;
     }
     
@@ -90,7 +90,7 @@ class SaveFuncs {
                 }
             }
             var enemy = GlobalVariables.GameSpace.CreateAtPosition(Utilities.EnemyFromID(properties[0]), Real3(Real.Parse(properties[1]), Real.Parse(properties[2]), Real.Parse(properties[3])));
-            Console.WriteLine(properties[0]);
+            //Console.WriteLine(properties[0]);
             if(enemy != null && properties.Count >= 12) {
                 enemy.EnemyAI.State = Integer.Parse(properties[4]) as State;
                 enemy.EnemyAI.ViewDirection = Real3(Real.Parse(properties[5]), Real.Parse(properties[6]), 0);
@@ -117,7 +117,7 @@ class SaveFuncs {
             str = "`str`;";
         }
         str = "`str`";
-        Console.WriteLine(str);
+        //Console.WriteLine(str);
         return str;
     }
     
@@ -214,7 +214,7 @@ class SaveFuncs {
             str = "`str`|]";
         }
         str = "`str`";
-        Console.WriteLine(str);
+        //Console.WriteLine(str);
         return str;
     }
     
@@ -276,7 +276,7 @@ class SaveFuncs {
             str = "`str`|]";
         }
         str = "`str`";
-        Console.WriteLine(str);
+        //Console.WriteLine(str);
         return str;
     }
     

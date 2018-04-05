@@ -16,7 +16,7 @@ class BossDrops : ZilchComponent {
     }
     
     function OnDialogEnded(event : DialogEnded) {
-        Console.WriteLine("BLAH");
+        //Console.WriteLine("BLAH");
         
         ++GlobalVariables.Save.SaveController.PotatKillCount;
         

@@ -157,6 +157,7 @@ class Utilities
         debugLine.Start(start);
         debugLine.End(end);
         debugLine.Float4Color(color);
+        debugLine.Duration(0.1);
         debugLine.Draw();
     }
      [Static]
