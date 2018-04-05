@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-105.116409, 55.0331993, 65.7502441],
+			Vec3 Translation = [-19.3844833, 24.8584709, 63],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 9.07180786,
+			float Size = 40.6570244,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-105.116409, 55.0331993, 1.75024164],
+			Vec3 LookTarget = [-19.3844833, 24.8584709, -1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -798,12 +798,19 @@ Level =
 			bool CaptureMouse = false,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5ada2d9ceca1fb7f:Enemy_Rusher_Tutorial",
 		LinkId = 
 		{
 			uint Id = 16,
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher_Tutorial",
+		},
+		Archetyped = 
+		{
+			string Name = "5ada2d9ceca1fb7f:Enemy_Rusher_Tutorial",
 		},
 		Transform = 
 		{
@@ -811,17 +818,156 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Enemy_Rusher_Tutorial",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = true,
+			bool Force = true,
+			bool Gravity = true,
+			bool Thrust = true,
+			bool Vortex = true,
+			bool Wind = true,
+			bool Invalid = false,
+			bool Torque = true,
+			bool PointGravity = true,
+			bool PointForce = true,
+			bool Buoyancy = true,
+			bool Custom = true,
+		},
+		EnemyPathFind = 
+		{
+		},
+		BasicPathFollowAI = 
+		{
+		},
+		Visibility = 
+		{
+		},
+		SphereCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5a08c96d04f0597c:Enemy",
+			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.5,
+		},
+		EnemyAI = 
+		{
+			float InstantSpotRadius = 0,
+			float MaxDistFromGuard = 5,
+			float WaitTime = 5,
+			float Range = 3,
+			float ViewAngle = 45,
+			float ViewRange = 10,
+			float MoveSpeed = 2,
+			float ChaseSpeedMultiplier = 3,
+			float GuardWaitTime = 1,
+			float SearchTimer = 3,
+			float MaxTimeOutOfSight = 1,
+			float SearchRange = 1,
+			float ViewDist = 5,
+		},
+		EnemySprite = 
+		{
+			string North = "5ad380509249d3c4:DreadHound000",
+			string NorthEast = "5ad380519224c282:DreadHound001",
+			string East = "5ad380519217b04c:DreadHound002",
+			string SouthEast = "5ad3805292006231:DreadHound003",
+			string South = "5ad3805292f0df03:DreadHound004",
+			string SouthWest = "5ad3805392e20005:DreadHound005",
+			string West = "5ad3805392d2a121:DreadHound006",
+			string NorthWest = "5ad3805392c39257:DreadHound007",
+		},
+		EnemyMelee = 
+		{
+			float AttacksPerSecond = 3,
+			float DamagerPerAttack = 5,
+			string DeathMSG = "You Where Bitten by an Enemy",
+		},
+		Health = 
+		{
+			float InitialHealth = 100,
+			float Cooldown = 3,
+			float RegenRate = 0.333333343,
+		},
+		EnemyDeath = 
+		{
+			int NumberOfDrops = 3,
+			int NumberOfDropsVariation = 1,
+			float DropRange = 0.5,
+			string LootTable = "5ac6d54dcd7e09e8:ammohealth",
+		},
+		EnemyPing = 
+		{
+		},
+		MenuVisibilityController = 
+		{
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "5a7c1968c9af3d26:Healthbar",
+				LinkId = 
+				{
+					uint Id = 17,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.625, 1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Area = 
+				{
+					Vec2 Size = [1, 0.100000001],
+					Location Origin = Center,
+				},
+				Named = 
+				{
+					string Name = "Healthbar",
+				},
+			},
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a026fe412609373:Enemy_Rusher",
+		string Name = "5a27fe5869ca9b6d:Enemy_Rusher(tutorial)",
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 18,
 		},
 		Transform = 
 		{
@@ -839,7 +985,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 19,
 		},
 		Transform = 
 		{
@@ -857,7 +1003,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 20,
 		},
 		Transform = 
 		{
@@ -875,7 +1021,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 21,
 		},
 		Transform = 
 		{
@@ -893,7 +1039,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -911,7 +1057,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 23,
 		},
 		Transform = 
 		{
@@ -929,7 +1075,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 24,
 		},
 		Transform = 
 		{
@@ -947,7 +1093,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 25,
 		},
 		Transform = 
 		{
@@ -965,7 +1111,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 26,
 		},
 		Transform = 
 		{
@@ -983,7 +1129,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 27,
 		},
 		Transform = 
 		{
@@ -1001,7 +1147,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 28,
 		},
 		Transform = 
 		{
@@ -1019,7 +1165,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 28,
+			uint Id = 29,
 		},
 		Transform = 
 		{
@@ -1037,7 +1183,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 29,
+			uint Id = 30,
 		},
 		Transform = 
 		{
@@ -1055,7 +1201,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 31,
 		},
 		Transform = 
 		{
@@ -1073,7 +1219,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 31,
+			uint Id = 32,
 		},
 		Transform = 
 		{
@@ -1091,7 +1237,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 32,
+			uint Id = 33,
 		},
 		Transform = 
 		{
@@ -1109,7 +1255,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 33,
+			uint Id = 34,
 		},
 		Transform = 
 		{
@@ -1127,7 +1273,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 34,
+			uint Id = 35,
 		},
 		Transform = 
 		{
@@ -1145,11 +1291,11 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 35,
+			uint Id = 36,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-57.9424324, 16.7804317, 3.81469727e-06],
+			Vec3 Translation = [-57.9424324, 16.7804317, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1162,7 +1308,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 36,
+			uint Id = 37,
 		},
 		Named = 
 		{
@@ -1222,11 +1368,11 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 37,
+			uint Id = 38,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-23.2582626, -3.33861208, 3.81469727e-06],
+			Vec3 Translation = [-23.2582626, -3.33861208, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1240,7 +1386,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 38,
+			uint Id = 39,
 		},
 		Transform = 
 		{
@@ -1257,7 +1403,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 39,
+			uint Id = 40,
 		},
 		Named = 
 		{
@@ -1269,7 +1415,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-96.1682892, 64.1718445, -7.62939453e-06],
+			Vec3 Translation = [-78.0791473, 77.5988464, -7.62939453e-06],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1308,7 +1454,7 @@ Level =
 		string Name = "5a6dd29eca18018f:QuestItemPickup",
 		LinkId = 
 		{
-			uint Id = 40,
+			uint Id = 41,
 		},
 		Transform = 
 		{
@@ -1326,7 +1472,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 41,
+			uint Id = 42,
 		},
 		Transform = 
 		{
@@ -1344,7 +1490,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 42,
+			uint Id = 43,
 		},
 		Transform = 
 		{
@@ -1362,7 +1508,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 43,
+			uint Id = 44,
 		},
 		Transform = 
 		{
@@ -1380,7 +1526,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 44,
+			uint Id = 45,
 		},
 		Transform = 
 		{
@@ -1398,7 +1544,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 45,
+			uint Id = 46,
 		},
 		Transform = 
 		{
@@ -1416,7 +1562,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 46,
+			uint Id = 47,
 		},
 		Transform = 
 		{
@@ -1434,7 +1580,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 47,
+			uint Id = 48,
 		},
 		Transform = 
 		{
@@ -1452,7 +1598,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 48,
+			uint Id = 49,
 		},
 		Transform = 
 		{
@@ -1470,7 +1616,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 49,
+			uint Id = 50,
 		},
 		Transform = 
 		{
@@ -1488,7 +1634,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 50,
+			uint Id = 51,
 		},
 		Transform = 
 		{
@@ -1506,7 +1652,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 51,
+			uint Id = 52,
 		},
 		Transform = 
 		{
@@ -1524,7 +1670,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 52,
+			uint Id = 53,
 		},
 		Transform = 
 		{
@@ -1542,7 +1688,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 53,
+			uint Id = 54,
 		},
 		Transform = 
 		{
@@ -1559,7 +1705,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 54,
+			uint Id = 55,
 		},
 		Named = 
 		{
@@ -1595,7 +1741,7 @@ Level =
 		string Name = "5a019e04c7cf6461:Player",
 		LinkId = 
 		{
-			uint Id = 55,
+			uint Id = 56,
 		},
 		Transform = 
 		{
@@ -1612,7 +1758,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 56,
+			uint Id = 57,
 		},
 		Named = 
 		{
@@ -1670,7 +1816,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 58,
 		},
 		Named = 
 		{
@@ -1728,7 +1874,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 58,
+			uint Id = 59,
 		},
 		Named = 
 		{
@@ -1786,7 +1932,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 59,
+			uint Id = 60,
 		},
 		Named = 
 		{
@@ -1803,7 +1949,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-96, 64, 0],
+			Vec3 Translation = [-78.439064, 77.6293945, 3.81469727e-06],
 			Vec3 Scale = [5.27351522, 4.72574043, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1844,7 +1990,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 60,
+			uint Id = 61,
 		},
 		Named = 
 		{
@@ -1861,7 +2007,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-85.5, 63.5, 0],
+			Vec3 Translation = [-73.1777267, 80.9865112, 0],
 			Vec3 Scale = [5.27351522, 4.72574043, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1902,7 +2048,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 61,
+			uint Id = 62,
 		},
 		Named = 
 		{
@@ -1960,7 +2106,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 62,
+			uint Id = 63,
 		},
 		Named = 
 		{
@@ -2018,7 +2164,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 63,
+			uint Id = 64,
 		},
 		Named = 
 		{
@@ -2030,7 +2176,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-85.5, 63.5, 0],
+			Vec3 Translation = [-71.4845581, 79.6183319, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2077,7 +2223,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 64,
+			uint Id = 65,
 		},
 		Named = 
 		{
@@ -2137,7 +2283,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 65,
+					uint Id = 66,
 				},
 				Named = 
 				{
@@ -2199,7 +2345,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 66,
+					uint Id = 67,
 				},
 				Named = 
 				{
@@ -2261,7 +2407,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 67,
+					uint Id = 68,
 				},
 				Named = 
 				{
@@ -2323,7 +2469,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 68,
+					uint Id = 69,
 				},
 				Named = 
 				{
@@ -2387,7 +2533,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 69,
+			uint Id = 70,
 		},
 		Named = 
 		{
@@ -2449,7 +2595,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 70,
+			uint Id = 71,
 		},
 		Named = 
 		{
@@ -2511,7 +2657,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 71,
+			uint Id = 72,
 		},
 		Named = 
 		{
@@ -2571,7 +2717,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 72,
+					uint Id = 73,
 				},
 				Named = 
 				{
@@ -2633,7 +2779,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 73,
+					uint Id = 74,
 				},
 				Named = 
 				{
@@ -2695,7 +2841,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 74,
+					uint Id = 75,
 				},
 				Named = 
 				{
@@ -2757,7 +2903,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 75,
+					uint Id = 76,
 				},
 				Named = 
 				{
@@ -2819,7 +2965,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 76,
+					uint Id = 77,
 				},
 				Named = 
 				{
@@ -2881,7 +3027,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 77,
+					uint Id = 78,
 				},
 				Named = 
 				{
@@ -2943,7 +3089,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 78,
+					uint Id = 79,
 				},
 				Named = 
 				{
@@ -3008,7 +3154,7 @@ Level =
 		string Name = "5a500473a8a4fae7:HatchGI",
 		LinkId = 
 		{
-			uint Id = 79,
+			uint Id = 80,
 		},
 		Transform = 
 		{
@@ -3026,7 +3172,7 @@ Level =
 		string Name = "5a501ec6b1d434c0:HatchRusher",
 		LinkId = 
 		{
-			uint Id = 80,
+			uint Id = 81,
 		},
 		Transform = 
 		{
@@ -3044,7 +3190,7 @@ Level =
 		string Name = "5a50048cb5abb492:HatchShield",
 		LinkId = 
 		{
-			uint Id = 81,
+			uint Id = 82,
 		},
 		Transform = 
 		{
@@ -3062,7 +3208,7 @@ Level =
 		string Name = "5a50049fb2d3a8b3:HatchStealth",
 		LinkId = 
 		{
-			uint Id = 82,
+			uint Id = 83,
 		},
 		Transform = 
 		{
@@ -3079,7 +3225,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 83,
+			uint Id = 84,
 		},
 		Named = 
 		{
@@ -3127,7 +3273,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 84,
+			uint Id = 85,
 		},
 		Named = 
 		{
@@ -3175,7 +3321,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 85,
+			uint Id = 86,
 		},
 		Named = 
 		{
@@ -3223,7 +3369,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 86,
+			uint Id = 87,
 		},
 		Named = 
 		{
@@ -3271,7 +3417,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 87,
+			uint Id = 88,
 		},
 		Named = 
 		{
@@ -3319,7 +3465,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 88,
+			uint Id = 89,
 		},
 		Named = 
 		{
@@ -3367,7 +3513,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 89,
+			uint Id = 90,
 		},
 		Named = 
 		{
@@ -3415,7 +3561,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 90,
+			uint Id = 91,
 		},
 		Named = 
 		{
@@ -3463,7 +3609,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 91,
+			uint Id = 92,
 		},
 		Named = 
 		{
@@ -3511,7 +3657,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 92,
+			uint Id = 93,
 		},
 		Named = 
 		{
@@ -3559,7 +3705,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 93,
+			uint Id = 94,
 		},
 		Named = 
 		{
@@ -3607,7 +3753,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 94,
+			uint Id = 95,
 		},
 		Named = 
 		{
@@ -3655,7 +3801,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 95,
+			uint Id = 96,
 		},
 		Named = 
 		{
@@ -3704,7 +3850,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 96,
+			uint Id = 97,
 		},
 		Transform = 
 		{
@@ -3722,7 +3868,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 97,
+			uint Id = 98,
 		},
 		Transform = 
 		{
@@ -3740,7 +3886,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 98,
+			uint Id = 99,
 		},
 		Transform = 
 		{
@@ -3758,11 +3904,11 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 99,
+			uint Id = 100,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [35.9722214, 3.84784412, -0.000999450684],
+			Vec3 Translation = [35.9722214, 3.84784412, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3776,7 +3922,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 100,
+			uint Id = 101,
 		},
 		Transform = 
 		{
@@ -3794,7 +3940,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 101,
+			uint Id = 102,
 		},
 		Transform = 
 		{
@@ -3812,7 +3958,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 102,
+			uint Id = 103,
 		},
 		Transform = 
 		{
@@ -3830,7 +3976,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 103,
+			uint Id = 104,
 		},
 		Transform = 
 		{
@@ -3848,7 +3994,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 104,
+			uint Id = 105,
 		},
 		Transform = 
 		{
@@ -3866,11 +4012,11 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 105,
+			uint Id = 106,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-37.2629738, 9.06281376, -0.000999450684],
+			Vec3 Translation = [-37.2629738, 9.06281376, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3883,7 +4029,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 106,
+			uint Id = 107,
 		},
 		Named = 
 		{
@@ -3933,7 +4079,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 107,
+			uint Id = 108,
 		},
 		Named = 
 		{
@@ -3985,7 +4131,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 106,
+				uint ResolvedCog = 107,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -3996,7 +4142,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 108,
+			uint Id = 109,
 		},
 		Named = 
 		{
@@ -4055,7 +4201,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 109,
+			uint Id = 110,
 		},
 		Named = 
 		{
@@ -4103,7 +4249,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 110,
+			uint Id = 111,
 		},
 		Named = 
 		{
@@ -4162,7 +4308,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 111,
+			uint Id = 112,
 		},
 		Named = 
 		{
@@ -4222,7 +4368,7 @@ Level =
 		string Name = "5a2268868c1f0c52:Enemy_Shield(worldone)",
 		LinkId = 
 		{
-			uint Id = 112,
+			uint Id = 113,
 		},
 		Transform = 
 		{
@@ -4240,7 +4386,7 @@ Level =
 		string Name = "5a2268bf77cbefe9:Enemy_Stealth(worldone)",
 		LinkId = 
 		{
-			uint Id = 113,
+			uint Id = 114,
 		},
 		Transform = 
 		{
@@ -4257,7 +4403,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 114,
+			uint Id = 115,
 		},
 		Named = 
 		{
@@ -4412,7 +4558,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 115,
+					uint Id = 116,
 				},
 				Transform = 
 				{
@@ -4434,7 +4580,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 116,
+					uint Id = 117,
 				},
 				Named = 
 				{
@@ -4463,7 +4609,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 117,
+							uint Id = 118,
 						},
 						Named = 
 						{
@@ -4533,7 +4679,7 @@ Level =
 		string Name = "5a2263fcd30cf9c5:Enemy_Shield(worldtwo)",
 		LinkId = 
 		{
-			uint Id = 118,
+			uint Id = 119,
 		},
 		Transform = 
 		{
@@ -4551,7 +4697,7 @@ Level =
 		string Name = "5ada2d9ceca1fb7f:Enemy_Rusher_Tutorial",
 		LinkId = 
 		{
-			uint Id = 119,
+			uint Id = 120,
 		},
 		Transform = 
 		{
@@ -4569,7 +4715,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 120,
+			uint Id = 121,
 		},
 		Transform = 
 		{
@@ -4587,7 +4733,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 121,
+			uint Id = 122,
 		},
 		Transform = 
 		{
@@ -4605,7 +4751,7 @@ Level =
 		string Name = "5a2263fcd30cf9c5:Enemy_Shield(worldtwo)",
 		LinkId = 
 		{
-			uint Id = 122,
+			uint Id = 123,
 		},
 		Transform = 
 		{

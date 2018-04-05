@@ -48,6 +48,11 @@ ResourceTable =
 			string Value = "Sniper",
 			float Weight = 5,
 		},
+		{
+			string Name = "Name10",
+			string Value = "null",
+			float Weight = 60,
+		},
 	],
 	float MaxWeight = 100,
 },
