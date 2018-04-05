@@ -562,7 +562,7 @@ Level =
 		{
 			string Part = "5a5019f6eda94e41:QuestItem4",
 			string Note = "THIS IS A NOTE",
-			string Drops = "5a11b100e0d8983f:Loot",
+			string Drops = "5a74b95ba553bc1f:Winning",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 		},

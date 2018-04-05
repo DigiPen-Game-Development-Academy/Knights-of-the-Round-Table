@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-86.5595322, -21.0766735, 66.7502441],
+			Vec3 Translation = [26.645195, 38.3423729, 64.7502518],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 4.4073267,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-86.5595322, -21.0766735, 2.75024033],
+			Vec3 LookTarget = [26.645195, 38.3423729, 0.750252903],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -814,7 +814,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-61.6465111, 72.549057, 0],
+			Vec3 Translation = [-63.9844208, 74.29496, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -927,7 +927,7 @@ Level =
 			int NumberOfDrops = 3,
 			int NumberOfDropsVariation = 1,
 			float DropRange = 0.5,
-			string LootTable = "5a11b100e0d8983f:Loot",
+			string LootTable = "5a74b913910894ef:Crappy",
 		},
 		EnemyPing = 
 		{
