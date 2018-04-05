@@ -60,7 +60,7 @@ class PlayerHealth : ZilchComponent {
         }
         
         //open dialog box and wait for confirmation
-        var dialog = Utilities.Dialog("`GlobalVariables.DeathMSG`\nContinue from last save?", DialogTypes.YESNO, 10);
+        var dialog = Utilities.Dialog("`GlobalVariables.DeathMSG`\nContinue from last save?", DialogTypes.YESNO, 15);
         if(dialog != null) {
             this.Dialog = dialog;
             Zero.Connect(this.Dialog, Events.DialogEnded, this.OnDialogEnded);
