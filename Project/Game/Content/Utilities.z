@@ -315,13 +315,15 @@ class Utilities
     var MaxIndex : Integer = -1;
     
     [Static]
-    function SetQuest(index : Integer) {
+    function SetQuest(index : Integer, prompt : Boolean) {
         if(index > Utilities.MaxIndex) {
             GlobalVariables.QuestSprite.Set(Objective.Quests[index]);
             Utilities.MaxIndex = index;
             GlobalVariables.Save.SaveController.Quest = Objective.Quests[index];
             
-            Utilities.Dialog(Objective.Quests[index], DialogTypes.OK, 15);
+            if(prompt) {
+                Utilities.Dialog(Objective.Quests[index], DialogTypes.OK, 15);
+            }
             
         }
     }
