@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [9.03215027, 1.3608191, 112.565193],
+			Vec3 Translation = [10.2444248, -0.498381168, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.5049367,
+			float Size = 8.11040115,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [9.03215027, 1.3608191, 1.00000334],
+			Vec3 LookTarget = [10.2444248, -0.498381168, 1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -497,19 +497,12 @@ Level =
 			string Name = "Chest",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
 			uint Id = 17,
-		},
-		Named = 
-		{
-			string Name = "Chest",
-		},
-		Archetyped = 
-		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		},
 		Transform = 
 		{
@@ -517,47 +510,17 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5a74b956a7124833:Advanced",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 18,
-		},
 		Named = 
 		{
 			string Name = "Chest",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		LinkId = 
 		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+			uint Id = 18,
 		},
 		Transform = 
 		{
@@ -565,47 +528,17 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5a74b956a7124833:Advanced",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 19,
-		},
 		Named = 
 		{
 			string Name = "Chest",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		LinkId = 
 		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+			uint Id = 19,
 		},
 		Transform = 
 		{
@@ -613,47 +546,17 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5a74b956a7124833:Advanced",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 20,
-		},
 		Named = 
 		{
 			string Name = "Chest",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		LinkId = 
 		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+			uint Id = 20,
 		},
 		Transform = 
 		{
@@ -661,47 +564,17 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5a74b95ba553bc1f:Winning",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 21,
-		},
 		Named = 
 		{
 			string Name = "Chest",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		LinkId = 
 		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+			uint Id = 21,
 		},
 		Transform = 
 		{
@@ -709,47 +582,17 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5a74b95ba553bc1f:Winning",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 22,
-		},
 		Named = 
 		{
 			string Name = "Chest",
 		},
-		Archetyped = 
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+		LinkId = 
 		{
-			string Name = "5a0198dcf2832eb0:AutoGen_Chest",
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -757,32 +600,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7033740294d239:ChestSpriteRev",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 4,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		AutoChest = 
-		{
-			string LootTable = "5a74b95ba553bc1f:Winning",
+			string Name = "Chest",
 		},
 	},
 	ArchetypeInstance = 

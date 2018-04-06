@@ -162,7 +162,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [70.8975601, -14.5453129, 64.0000076],
+			Vec3 Translation = [-2.28356862, -5.45759678, 64.0000076],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +174,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 10.0259047,
+			float Size = 12.2456684,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +182,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [70.8975601, -14.5453129, 8.59410193e-06],
+			Vec3 LookTarget = [-2.28356862, -5.45759678, 5.39525536e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4437,7 +4437,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2, -6.5, -1],
+			Vec3 Translation = [-2, -6.5, -0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4451,7 +4451,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a7461ec1be4a622:TileMapAlpha - Sprite052",
+			string SpriteSource = "5a3557f8aae7f8a6:Bridge000",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -4480,6 +4480,46 @@ Level =
 		LinkId = 
 		{
 			uint Id = 114,
+		},
+		Named = 
+		{
+			string Name = "BridgeBroken",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2, -6.5, -1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a3557f9aa13e158:Bridge001",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [2, 5],
+			Location Origin = Center,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 115,
 		},
 		Named = 
 		{
@@ -4542,7 +4582,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 115,
+			uint Id = 116,
 		},
 		Named = 
 		{
@@ -4601,7 +4641,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 116,
+			uint Id = 117,
 		},
 		Named = 
 		{
@@ -4649,7 +4689,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 117,
+			uint Id = 118,
 		},
 		Named = 
 		{
@@ -4708,7 +4748,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 118,
+			uint Id = 119,
 		},
 		Named = 
 		{
@@ -4768,7 +4808,7 @@ Level =
 		string Name = "5a2268868c1f0c52:Enemy_Shield(worldone)",
 		LinkId = 
 		{
-			uint Id = 119,
+			uint Id = 120,
 		},
 		Transform = 
 		{
@@ -4786,7 +4826,7 @@ Level =
 		string Name = "5a2268bf77cbefe9:Enemy_Stealth(worldone)",
 		LinkId = 
 		{
-			uint Id = 120,
+			uint Id = 121,
 		},
 		Transform = 
 		{
@@ -4803,7 +4843,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 121,
+			uint Id = 122,
 		},
 		Named = 
 		{
@@ -4958,7 +4998,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 122,
+					uint Id = 123,
 				},
 				Transform = 
 				{
@@ -4980,7 +5020,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 123,
+					uint Id = 124,
 				},
 				Named = 
 				{
@@ -5000,6 +5040,7 @@ Level =
 				{
 					float TurnSpeed = 0.75,
 					float FlashSpeed = 5,
+					bool Shoot = true,
 				},
 				MenuVisibilityController = 
 				{
@@ -5010,7 +5051,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 124,
+							uint Id = 125,
 						},
 						Named = 
 						{
@@ -5080,7 +5121,7 @@ Level =
 		string Name = "5a2263fcd30cf9c5:Enemy_Shield(worldtwo)",
 		LinkId = 
 		{
-			uint Id = 125,
+			uint Id = 126,
 		},
 		Transform = 
 		{
@@ -5098,7 +5139,7 @@ Level =
 		string Name = "5ada2d9ceca1fb7f:Enemy_Rusher_Tutorial",
 		LinkId = 
 		{
-			uint Id = 126,
+			uint Id = 127,
 		},
 		Transform = 
 		{
@@ -5116,7 +5157,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 127,
+			uint Id = 128,
 		},
 		Transform = 
 		{
@@ -5134,7 +5175,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 128,
+			uint Id = 129,
 		},
 		Transform = 
 		{
@@ -5152,7 +5193,7 @@ Level =
 		string Name = "5a2263fcd30cf9c5:Enemy_Shield(worldtwo)",
 		LinkId = 
 		{
-			uint Id = 129,
+			uint Id = 130,
 		},
 		Transform = 
 		{
@@ -5169,7 +5210,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 130,
+			uint Id = 131,
 		},
 		Named = 
 		{
@@ -5217,7 +5258,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 131,
+			uint Id = 132,
 		},
 		Named = 
 		{
@@ -5276,7 +5317,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 132,
+			uint Id = 133,
 		},
 		Named = 
 		{
@@ -5335,7 +5376,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 133,
+			uint Id = 134,
 		},
 		Named = 
 		{
@@ -5383,7 +5424,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 134,
+			uint Id = 135,
 		},
 		Named = 
 		{
@@ -5538,7 +5579,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 135,
+					uint Id = 136,
 				},
 				Transform = 
 				{
@@ -5560,7 +5601,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 136,
+					uint Id = 137,
 				},
 				Named = 
 				{
@@ -5580,6 +5621,7 @@ Level =
 				{
 					float TurnSpeed = 0.75,
 					float FlashSpeed = 5,
+					bool Shoot = true,
 				},
 				MenuVisibilityController = 
 				{
@@ -5590,7 +5632,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 137,
+							uint Id = 138,
 						},
 						Named = 
 						{
@@ -5659,7 +5701,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 138,
+			uint Id = 139,
 		},
 		Named = 
 		{
@@ -5814,7 +5856,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 139,
+					uint Id = 140,
 				},
 				Transform = 
 				{
@@ -5836,7 +5878,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 140,
+					uint Id = 141,
 				},
 				Named = 
 				{
@@ -5856,6 +5898,7 @@ Level =
 				{
 					float TurnSpeed = 0.75,
 					float FlashSpeed = 5,
+					bool Shoot = true,
 				},
 				MenuVisibilityController = 
 				{
@@ -5866,7 +5909,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 141,
+							uint Id = 142,
 						},
 						Named = 
 						{
@@ -5935,7 +5978,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 142,
+			uint Id = 143,
 		},
 		Named = 
 		{
@@ -6078,7 +6121,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 143,
+					uint Id = 144,
 				},
 				Transform = 
 				{
@@ -6102,7 +6145,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 144,
+			uint Id = 145,
 		},
 		Named = 
 		{
@@ -6257,7 +6300,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 145,
+					uint Id = 146,
 				},
 				Transform = 
 				{
@@ -6281,7 +6324,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 146,
+			uint Id = 147,
 		},
 		Named = 
 		{
@@ -6421,7 +6464,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 147,
+					uint Id = 148,
 				},
 				Transform = 
 				{
@@ -6445,7 +6488,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 148,
+			uint Id = 149,
 		},
 		Named = 
 		{
@@ -6600,7 +6643,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 149,
+					uint Id = 150,
 				},
 				Transform = 
 				{
@@ -6624,7 +6667,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 150,
+			uint Id = 151,
 		},
 		Named = 
 		{
@@ -6764,7 +6807,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 151,
+					uint Id = 152,
 				},
 				Transform = 
 				{
@@ -6788,7 +6831,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 152,
+			uint Id = 153,
 		},
 		Named = 
 		{
@@ -6928,7 +6971,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 153,
+					uint Id = 154,
 				},
 				Transform = 
 				{
@@ -6952,7 +6995,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 154,
+			uint Id = 155,
 		},
 		Named = 
 		{
@@ -7107,7 +7150,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 155,
+					uint Id = 156,
 				},
 				Transform = 
 				{
@@ -7131,7 +7174,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 156,
+			uint Id = 157,
 		},
 		Named = 
 		{
@@ -7274,7 +7317,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 157,
+					uint Id = 158,
 				},
 				Transform = 
 				{
@@ -7298,7 +7341,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 158,
+			uint Id = 159,
 		},
 		Named = 
 		{
@@ -7453,7 +7496,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 159,
+					uint Id = 160,
 				},
 				Transform = 
 				{
@@ -7475,7 +7518,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 160,
+					uint Id = 161,
 				},
 				Named = 
 				{
@@ -7495,6 +7538,7 @@ Level =
 				{
 					float TurnSpeed = 0.75,
 					float FlashSpeed = 5,
+					bool Shoot = true,
 				},
 				MenuVisibilityController = 
 				{
@@ -7505,7 +7549,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 161,
+							uint Id = 162,
 						},
 						Named = 
 						{
@@ -7574,7 +7618,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 162,
+			uint Id = 163,
 		},
 		Named = 
 		{
@@ -7714,7 +7758,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 163,
+					uint Id = 164,
 				},
 				Transform = 
 				{
@@ -7738,7 +7782,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 164,
+			uint Id = 165,
 		},
 		Named = 
 		{
@@ -7893,7 +7937,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 165,
+					uint Id = 166,
 				},
 				Transform = 
 				{
@@ -7917,7 +7961,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 166,
+			uint Id = 167,
 		},
 		Named = 
 		{
@@ -8057,7 +8101,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 167,
+					uint Id = 168,
 				},
 				Transform = 
 				{
@@ -8081,7 +8125,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 168,
+			uint Id = 169,
 		},
 		Named = 
 		{
@@ -8221,7 +8265,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 169,
+					uint Id = 170,
 				},
 				Transform = 
 				{
@@ -8245,7 +8289,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 170,
+			uint Id = 171,
 		},
 		Named = 
 		{
@@ -8293,7 +8337,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 171,
+			uint Id = 172,
 		},
 		Named = 
 		{
@@ -8341,7 +8385,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 172,
+			uint Id = 173,
 		},
 		Named = 
 		{
@@ -8496,7 +8540,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 173,
+					uint Id = 174,
 				},
 				Transform = 
 				{
@@ -8520,7 +8564,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 174,
+			uint Id = 175,
 		},
 		Named = 
 		{
@@ -8660,7 +8704,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 175,
+					uint Id = 176,
 				},
 				Transform = 
 				{
@@ -8684,7 +8728,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 176,
+			uint Id = 177,
 		},
 		Named = 
 		{
@@ -8827,7 +8871,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 177,
+					uint Id = 178,
 				},
 				Transform = 
 				{
@@ -8851,7 +8895,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 178,
+			uint Id = 179,
 		},
 		Named = 
 		{
@@ -8994,7 +9038,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 179,
+					uint Id = 180,
 				},
 				Transform = 
 				{
@@ -9018,7 +9062,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 180,
+			uint Id = 181,
 		},
 		Named = 
 		{
@@ -9161,7 +9205,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 181,
+					uint Id = 182,
 				},
 				Transform = 
 				{
@@ -9185,7 +9229,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 182,
+			uint Id = 183,
 		},
 		Named = 
 		{
@@ -9328,7 +9372,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 183,
+					uint Id = 184,
 				},
 				Transform = 
 				{
@@ -9352,7 +9396,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 184,
+			uint Id = 185,
 		},
 		Named = 
 		{
