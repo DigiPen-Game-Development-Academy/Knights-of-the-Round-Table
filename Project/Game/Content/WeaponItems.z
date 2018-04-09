@@ -8,7 +8,7 @@ class Potato : Item {
         this.MagSize = -1;
         this.Name = "Potato";
         this.ID = "Potato";
-        this.DamagePer = 5;
+        this.DamagePer = 10;
         this.FireRate = 2.5;
         
     }
@@ -73,9 +73,9 @@ class Boomerang : Item {
         this.MagSize = -1;
         this.Name = "Boomerang";
         this.ID = "Boomerang";
-        this.DamagePer = 20;
+        this.DamagePer = 25;
         this.FireRate = -1;
-        this.SoundDistance = 4;
+        this.SoundDistance = 1;
     }
     
     function ReturnLore () : String {
@@ -118,12 +118,12 @@ class Plasma_Pistol : Item {
         this.Name = "Plasma pistol";
         this.ID = "Pistol";
         this.DamagePer = 35;
-        this.FireRate = 2.5;
+        this.FireRate = 3;
         this.AmmoPerShot = 1;
         this.RelodTime = 1;
         this.Sound = SoundCue.Shot;
-        this.SoundDistance = 10;
-        this.MaxRange = 6;
+        this.SoundDistance = 7;
+        this.MaxRange = 10;
         this.Auto = false;
     }
     
@@ -185,7 +185,7 @@ class PlasmaSword : Item {
         this.FireRate = 4;
         this.AmmoPerShot = 1;
         this.RelodTime = 1;
-        this.SoundDistance = 7;
+        this.SoundDistance = 1;
     }
     
     function ReturnLore () : String {
@@ -229,12 +229,12 @@ class TerribleAssaultRifle : Item {
         this.MagSize = 20;
         this.Name = "Ramshackle Rifle";
         this.ID = "Rifle";
-        this.DamagePer = 20;
-        this.FireRate = 3.5; 
-        this.AmmoPerShot = 4;
+        this.DamagePer = 40;
+        this.FireRate = 4; 
+        this.AmmoPerShot = 1;
         this.RelodTime = 5;
-        this.MaxRange = 8;
-        this.SoundDistance = 13;
+        this.MaxRange = 14;
+        this.SoundDistance = 8;
     }
     
     function ReturnLore () : String {
@@ -291,7 +291,7 @@ class SlugShotgun : Item {
         this.FireRate = 2; 
         this.AmmoPerShot = 15;
         this.RelodTime = 5;
-        this.MaxRange = 10;
+        this.MaxRange = 6.5;
         this.RandAngle = 10;
         this.SoundDistance = 14;
     }
@@ -350,12 +350,12 @@ class Laserbeam : Item {
         this.MagSize = 5;
         this.Name = "Laser Beam";
         this.ID = "Laser_Beam";
-        this.DamagePer = 25;
+        this.DamagePer = 50;
         this.FireRate = 0.50; 
         this.AmmoPerShot = 4;
         this.RelodTime = 3;
         this.Auto = false;
-        this.SoundDistance = 8;
+        this.SoundDistance = 10;
     }
     
     function ReturnLore () : String {
