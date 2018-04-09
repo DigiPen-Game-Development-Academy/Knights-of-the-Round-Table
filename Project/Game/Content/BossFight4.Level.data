@@ -130,7 +130,7 @@ Level =
 		},
 		DeferredRenderer = 
 		{
-			Vec4 ClearColor = [0, 0, 0, 1],
+			Vec4 ClearColor = [0.513725519, 0.0313725509, 0.0313725509, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = false,
 			bool DrawEditorIcons = false,
@@ -159,7 +159,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.833424032, -3.20190859, 50],
+			Vec3 Translation = [-0.542094827, -9.20098877, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -171,7 +171,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5299034,
+			float Size = 33.2871437,
 		},
 		EditorCameraController = 
 		{
@@ -179,7 +179,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.833424032, -3.20190859, -3.55337278e-07],
+			Vec3 LookTarget = [-0.542094827, -9.20098877, -3.42602846e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -221,7 +221,7 @@ Level =
 		TileMap = 
 		{
 			string SourceName = "5a5162887fc3658e:BossFight4_TileMap00",
-			string PaletteName = "5a11b7b61863cdae:Floor",
+			string PaletteName = "5a9ba11017491fb7:Walls",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
 		},
@@ -574,17 +574,17 @@ Level =
 		},
 		EnemyAI = 
 		{
-			float InstantSpotRadius = 2,
-			float MaxDistFromGuard = 100,
+			float InstantSpotRadius = 2000,
+			float MaxDistFromGuard = 1000,
 			float WaitTime = 1,
 			float Range = 3,
 			float ViewAngle = 360,
-			float ViewRange = 6,
-			float MoveSpeed = 3,
-			float ChaseSpeedMultiplier = 2,
+			float ViewRange = 600,
+			float MoveSpeed = 2,
+			float ChaseSpeedMultiplier = 1,
 			float GuardWaitTime = 5,
 			float SearchTimer = 20,
-			float MaxTimeOutOfSight = 1,
+			float MaxTimeOutOfSight = 1000,
 			float SearchRange = 10,
 			float ViewDist = 10,
 		},
@@ -596,17 +596,17 @@ Level =
 		},
 		Stealth = 
 		{
-			float SneakRange = 15,
-			float SneakCooldown = 5,
+			float InvisSpeedMultiplier = 2,
+			string OpacityCurve = "5abdc26d9fc78f57:StealthOpacity",
+			float CloseSpeedMultiplier = 2,
 		},
 		StealthBoss = 
 		{
-			float SneakCooldown = 5,
 		},
 		EnemyMelee = 
 		{
-			float AttacksPerSecond = 1,
-			float DamagerPerAttack = 5,
+			float AttacksPerSecond = 50,
+			float DamagerPerAttack = 1,
 			string DeathMSG = "You were bitten by an enemy.",
 		},
 		Hierarchy = 

@@ -67,15 +67,6 @@ Level =
 			Vec2 Resolution = [1280, 720],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
-		ForwardRenderer = 
-		{
-			Vec4 ClearColor = [0, 0, 0, 1],
-			bool DrawNonVisible = false,
-			bool DrawDebugObjects = true,
-			bool DrawEditorIcons = true,
-			bool EditorIconDepth = true,
-			bool Wireframe = false,
-		},
 		GridDraw = 
 		{
 			bool Active = true,
@@ -137,6 +128,24 @@ Level =
 			float FadeSped = 1,
 			string Music = "5a518fc0d995d168:Boss",
 		},
+		DeferredRenderer = 
+		{
+			Vec4 ClearColor = [0.513725519, 0.0313725509, 0.0313725509, 1],
+			bool DrawNonVisible = false,
+			bool DrawDebugObjects = false,
+			bool DrawEditorIcons = false,
+			bool EditorIconDepth = false,
+			bool Hdr = false,
+			bool Shadows = false,
+			bool AntiAliasing = false,
+			bool Refraction = true,
+			bool Reflections = false,
+			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
+			bool GodRays = false,
+			bool RenderMasks = false,
+			bool Glow = false,
+			float GlowThreshold = 1,
+		},
 	},
 	Cog = 
 	{
@@ -150,7 +159,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.475604355, -7.02900219, 50],
+			Vec3 Translation = [-9.01765823, -1.22328615, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -162,7 +171,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 32.8892937,
+			float Size = 40.1710625,
 		},
 		EditorCameraController = 
 		{
@@ -170,7 +179,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.475604355, -7.02900219, -2.98118351e-07],
+			Vec3 LookTarget = [-9.01765823, -1.22328615, -7.13082102e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -212,7 +221,7 @@ Level =
 		TileMap = 
 		{
 			string SourceName = "5a525a34f95422a1:BossFight2_TileMap00",
-			string PaletteName = "5a11b7b61863cdae:Floor",
+			string PaletteName = "5a9ba11017491fb7:Walls",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
 		},

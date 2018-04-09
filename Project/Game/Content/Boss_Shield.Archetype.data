@@ -63,7 +63,7 @@ Cog =
 	},
 	Health = 
 	{
-		float InitialHealth = 3500,
+		float InitialHealth = 3000,
 		float Cooldown = 10,
 		float RegenRate = 0.5,
 	},
@@ -71,7 +71,7 @@ Cog =
 	{
 		string Part = "5a501997de7c61af:QuestItem3",
 		string Note = "THIS IS A NOTE",
-		string Drops = "",
+		string Drops = "5a74b95ba553bc1f:Winning",
 		float DropRange = 1,
 		string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 	},
@@ -105,16 +105,16 @@ Cog =
 	},
 	Boss_Shield = 
 	{
-		float FireRateFull = 0.5,
-		float FireRateEmpty = 3,
-		float SpeedFull = 5,
-		float SpeedEmpty = 20,
-		float DamageFull = 100,
-		float DamageEmpty = 150,
-		float SplashFull = 4,
-		float SplashEmpty = 10,
+		float FireRateFull = 0.25,
+		float FireRateEmpty = 0.75,
+		float SpeedFull = 1.75,
+		float SpeedEmpty = 2.5,
+		float DamageFull = 10,
+		float DamageEmpty = 15,
+		float SplashFull = 1.75,
+		float SplashEmpty = 2.5,
 		float ArcIntencity = 1,
-		string DeathMSG = "You where hit in the face with a missile",
+		string DeathMSG = "You were hit in the face with a missile.",
 	},
 	EnemySprite = 
 	{
@@ -178,6 +178,8 @@ Cog =
 			Shield = 
 			{
 				float TurnSpeed = 1,
+				float FlashSpeed = 5,
+				bool Shoot = false,
 			},
 			Hierarchy = 
 			{

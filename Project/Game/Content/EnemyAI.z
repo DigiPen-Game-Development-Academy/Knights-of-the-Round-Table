@@ -68,6 +68,7 @@ class EnemyAI : ZilchComponent {
         Zero.Connect(this.Owner, Events.InSound, this.OnInSound);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Space, Events.Notice, this.OnNotice);
+        this.Owner.Transform.WorldTranslation = Real3(this.Owner.Transform.WorldTranslation.XY, 0);
     }
     
     //notice player if other enemies have spotted them
@@ -112,9 +113,18 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
-        
         if(Math.Distance(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation) > this.MaxDistFromGuard*0.75) { //max distance to run ai
+            this.PathFind.Active = false;
+            this.Owner.RigidBody.Velocity = Real3(0);
+            if(this.Owner.Stealth != null) {
+                this.Owner.Stealth.Active = false;
+            }
             return;
+        } else {
+            this.PathFind.Active = true;
+            if(this.Owner.Stealth != null) {
+                this.Owner.Stealth.Active = true;
+            }
         }
         
         if (this.PathFind.Stunned) { //do not do anything if stunned

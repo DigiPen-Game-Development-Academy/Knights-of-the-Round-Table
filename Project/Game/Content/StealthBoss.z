@@ -3,11 +3,7 @@ class StealthBoss : ZilchComponent {
     [Dependency] var Stealth : Stealth;
     [Dependency] var AI : EnemyAI;
     
-    [Property] var SneakCooldown : Real = 5;
-    
     var MinDist : Real = 3;
-    
-    var Timer : Real = 0;
     
     var Rand : Random;
     
@@ -18,8 +14,6 @@ class StealthBoss : ZilchComponent {
         if(this.Space.PhysicsSpace.CollisionTable != CollisionTable.CollisionTable) {
             this.Space.PhysicsSpace.CollisionTable = CollisionTable.CollisionTable;
         }
-        
-        this.Timer = this.SneakCooldown;
         
         this.Rand = Random();
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -34,7 +28,9 @@ class StealthBoss : ZilchComponent {
             return;
         }
         
-        this.Timer -= event.Dt;
+        if(!this.InFlashlightRange(this.Owner.Transform.WorldTranslation)) {
+            this.Owner.RigidBody.Velocity *= 4;
+        }
         
         this.AI.State = State.Spotted;
         
@@ -50,9 +46,11 @@ class StealthBoss : ZilchComponent {
         
         var dist = Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, pos);
         
-        if(angle > Math.ToRadians(45) || dist > 10 || (dist > 2 && (GlobalVariables.UseWeapon.Utility == null || GlobalVariables.UseWeapon.Utility.ID != "Light"))) {
-            
-            return false;
+        if(angle > Math.ToRadians(45) || dist > 25 || (dist > 2 && (GlobalVariables.UseWeapon.Utility == null || GlobalVariables.UseWeapon.Utility.ID != "Light"))) {
+            if(dist < 2)
+                return true;
+            else
+                return false;
             
         }
         return true;

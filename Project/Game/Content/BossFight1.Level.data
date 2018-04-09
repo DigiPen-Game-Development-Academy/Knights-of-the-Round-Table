@@ -67,15 +67,6 @@ Level =
 			Vec2 Resolution = [1280, 720],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
-		ForwardRenderer = 
-		{
-			Vec4 ClearColor = [0, 0, 0, 1],
-			bool DrawNonVisible = false,
-			bool DrawDebugObjects = true,
-			bool DrawEditorIcons = true,
-			bool EditorIconDepth = true,
-			bool Wireframe = false,
-		},
 		GridDraw = 
 		{
 			bool Active = true,
@@ -137,6 +128,24 @@ Level =
 			float FadeSped = 1,
 			string Music = "5a518fc0d995d168:Boss",
 		},
+		DeferredRenderer = 
+		{
+			Vec4 ClearColor = [0.513725519, 0.0313725509, 0.0313725509, 1],
+			bool DrawNonVisible = false,
+			bool DrawDebugObjects = false,
+			bool DrawEditorIcons = false,
+			bool EditorIconDepth = false,
+			bool Hdr = false,
+			bool Shadows = false,
+			bool AntiAliasing = false,
+			bool Refraction = true,
+			bool Reflections = false,
+			string ReflectionEnvironmentName = "4fab71e8bcb7a8ce:DefaultTexture",
+			bool GodRays = false,
+			bool RenderMasks = false,
+			bool Glow = false,
+			float GlowThreshold = 1,
+		},
 	},
 	Cog = 
 	{
@@ -178,7 +187,7 @@ Level =
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
 			Vec3 Offset = [0, 0, 0],
-			float Radius = 0.25,
+			float Radius = 0.239999995,
 		},
 		Sprite = 
 		{
@@ -221,7 +230,7 @@ Level =
 			float AngryDashTime = 4,
 			float DazeTime = 7,
 			float AngryDashHealth = 0.5,
-			float AngryTurnSpeed = 10,
+			float AngryTurnSpeed = 90,
 			float DashDamage = 100,
 			float PassiveDamage = 50,
 			float DashCooldownMax = 6,
@@ -229,7 +238,7 @@ Level =
 			float DashCooldownRand = 0.100000001,
 			float StartRange = 5,
 			string DashDamageMSG = "You were run over by a giant rusher!",
-			string PassiveDamageMSG = "Rusher",
+			string PassiveDamageMSG = "You where bitten by a giant rusher",
 			string North = "5a5085ddc0e6bd58:RusherBoss004",
 			string NorthEast = "5a5085dec001bd74:RusherBoss005",
 			string East = "5a5085dfc039e63e:RusherBoss006",
@@ -286,7 +295,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.288984478, -0.802655339, 50],
+			Vec3 Translation = [0.247560471, -0.809423625, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -298,7 +307,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90607548,
+			float Size = 26.9274998,
 		},
 		EditorCameraController = 
 		{
@@ -306,7 +315,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.288984478, -0.802655339, -3.02471648e-07],
+			Vec3 LookTarget = [0.247560471, -0.809423625, -2.79018565e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -330,7 +339,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, -0.5],
+			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -348,7 +357,7 @@ Level =
 		TileMap = 
 		{
 			string SourceName = "5a7ea795cbc62dfe:BossFight1_TileMap06",
-			string PaletteName = "5a9ba11017491fb7:Walls",
+			string PaletteName = "5a11b7b61863cdae:Floor",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
 		},
