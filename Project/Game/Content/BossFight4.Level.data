@@ -108,6 +108,7 @@ Level =
 			Enum AltPOrInventory = Tab,
 			Enum UseUtility = F,
 			Enum OpenConsole = Tilde,
+			Enum Reload = R,
 		},
 		CreateUI = 
 		{
@@ -171,7 +172,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2871437,
+			float Size = 49.6585922,
 		},
 		EditorCameraController = 
 		{
@@ -203,7 +204,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [-0.954785347, -2.00833607, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -554,7 +555,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 1500,
+			float InitialHealth = 1000,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 		},
@@ -596,9 +597,9 @@ Level =
 		},
 		Stealth = 
 		{
-			float InvisSpeedMultiplier = 2,
+			float InvisSpeedMultiplier = 1,
 			string OpacityCurve = "5abdc26d9fc78f57:StealthOpacity",
-			float CloseSpeedMultiplier = 2,
+			float CloseSpeedMultiplier = 4,
 		},
 		StealthBoss = 
 		{
