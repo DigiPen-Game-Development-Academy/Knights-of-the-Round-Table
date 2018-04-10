@@ -113,7 +113,7 @@ class EnemyAI : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
-        if(Math.Distance(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation) > this.MaxDistFromGuard*0.75) { //max distance to run ai
+        if(Math.DistanceSq(this.Owner.Transform.WorldTranslation, GlobalVariables.Player.Transform.WorldTranslation) > Math.Pow(this.MaxDistFromGuard*0.75, 2)) { //max distance to run ai
             this.PathFind.Active = false;
             this.Owner.RigidBody.Velocity = Real3(0);
             if(this.Owner.Stealth != null) {

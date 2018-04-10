@@ -8,7 +8,7 @@ class SaveFuncs {
         foreach (var b in bools) {
             str = "`str`,`b`";
         }
-        return str;
+        return "`str`,";
     }
     
     [Static]
@@ -28,7 +28,7 @@ class SaveFuncs {
                 last = i;
             }
         }
-        
+        Console.WriteLine(bools);
         return bools;
         
     }

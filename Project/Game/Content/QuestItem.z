@@ -12,7 +12,7 @@ class QuestItem : ZilchComponent {
     function Initialize(init : CogInitializer) {
         if(GlobalVariables.QuestItems == null){
             GlobalVariables.QuestItems = Array[Boolean]();
-            GlobalVariables.QuestItems.Resize(6);
+            GlobalVariables.QuestItems.Resize(4);
             foreach(var b in GlobalVariables.QuestItems) {
                 b = false;
             }

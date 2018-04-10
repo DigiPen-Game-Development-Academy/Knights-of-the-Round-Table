@@ -49,6 +49,9 @@ class Health : ZilchComponent {
 
     function OnLogicUpdate(event : UpdateEvent) {
         
+        if(this.CurrentHealth >= this.InitialHealth)
+            return;
+        
         if (this.Timer >= 0 && this.CooldownTimer <= 0) {
             this.Timer -= event.Dt;
         }

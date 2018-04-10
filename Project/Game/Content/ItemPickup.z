@@ -50,26 +50,26 @@ class ItemPickup : ZilchComponent {
         GlobalVariables.LorePanel.Sprite.Visible = true;
         var item = this.Item;
             
-            var text = "";
-            
-            if(item.Type == ItemType.Weapon){
-                if(item.MagSize != -1)
-                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
-                else
-                    text = "`item.Name`\n`item.ReturnLore()`\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
-            } else if(item.Type == ItemType.Utility){
-                if(item.MagSize != -1)
-                    text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nAmmo Per Shot: `item.AmmoPerShot`";
-                else
-                    text = "`item.Name`\n`item.ReturnLore()`\nFire Rate: `item.FireRate` per second";
-            } else if(item.Type == ItemType.Consumable)
-                text = "`item.Name`\n`item.ReturnLore()`";
+        var text = "";
+        
+        if(item.Type == ItemType.Weapon){
+            if(item.MagSize != -1)
+                text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`\nAmmo Per Shot: `item.AmmoPerShot`";
             else
-                text = "`item.Name`\n`item.ReturnLore()`";
-                
-            text = "`text`\nRight Click to Pick up";
+                text = "`item.Name`\n`item.ReturnLore()`\nMag: INF\nFire Rate: `item.FireRate` per second\nDamage Per: `item.DamagePer`";
+        } else if(item.Type == ItemType.Utility){
+            if(item.MagSize != -1)
+                text = "`item.Name`\n`item.ReturnLore()`\nMag: `item.CurrentMag`/`item.MagSize`\nFire Rate: `item.FireRate` per second\nAmmo Per Shot: `item.AmmoPerShot`";
+            else
+                text = "`item.Name`\n`item.ReturnLore()`\nFire Rate: `item.FireRate` per second";
+        } else if(item.Type == ItemType.Consumable)
+            text = "`item.Name`\n`item.ReturnLore()`";
+        else
+            text = "`item.Name`\n`item.ReturnLore()`";
             
-            GlobalVariables.LorePanel.LorePanel.Text = text;
+        text = "`text`\nRight Click to Pick up";
+        
+        GlobalVariables.LorePanel.LorePanel.Text = text;
     }
     
     function SetItemType (item : Item) {

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-5.08241606, 0.703196049, 1],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5ad392be67f7f9ea:Alien Welder",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -39,8 +39,6 @@ Cog =
 	QuestItemPickup = 
 	{
 		int Index = 0,
-		string Name = "Metal Scrap",
-		string Lore = "You will need this to repair your boat",
 	},
 	Reactive = 
 	{

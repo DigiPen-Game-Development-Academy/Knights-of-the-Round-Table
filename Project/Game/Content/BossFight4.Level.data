@@ -131,7 +131,7 @@ Level =
 		},
 		DeferredRenderer = 
 		{
-			Vec4 ClearColor = [0.513725519, 0.0313725509, 0.0313725509, 1],
+			Vec4 ClearColor = [0, 0, 0, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = false,
 			bool DrawEditorIcons = false,
@@ -160,7 +160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-12.435256, 4.37732983, 50],
+			Vec3 Translation = [-1.17770469, -2.42143822, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -172,7 +172,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 49.6585922,
+			float Size = 40.6570244,
 		},
 		EditorCameraController = 
 		{
@@ -180,7 +180,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-12.435256, 4.37732983, -2.6202332e-07],
+			Vec3 LookTarget = [-1.17770469, -2.42143822, 2.30059825e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
