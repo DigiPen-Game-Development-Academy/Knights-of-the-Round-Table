@@ -108,6 +108,7 @@ Level =
 			Enum AltPOrInventory = Tab,
 			Enum UseUtility = F,
 			Enum OpenConsole = Tilde,
+			Enum Reload = R,
 		},
 		CreateUI = 
 		{
@@ -159,7 +160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.01765823, -1.22328615, 50],
+			Vec3 Translation = [0.108430378, -5.47848034, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -171,7 +172,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.1710625,
+			float Size = 8.96337986,
 		},
 		EditorCameraController = 
 		{
@@ -179,7 +180,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-9.01765823, -1.22328615, -7.13082102e-07],
+			Vec3 LookTarget = [0.108430378, -5.47848034, -3.14168119e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -504,7 +505,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 2300,
+			float InitialHealth = 1000,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 		},
@@ -546,7 +547,7 @@ Level =
 		{
 			string Part = "5a50196fd480ebb5:QuestItem2",
 			string Note = "THIS IS A NOTE",
-			string Drops = "5a74b95ba553bc1f:Winning",
+			string Drops = "",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 		},

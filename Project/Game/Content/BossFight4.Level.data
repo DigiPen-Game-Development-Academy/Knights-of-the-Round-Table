@@ -108,6 +108,7 @@ Level =
 			Enum AltPOrInventory = Tab,
 			Enum UseUtility = F,
 			Enum OpenConsole = Tilde,
+			Enum Reload = R,
 		},
 		CreateUI = 
 		{
@@ -159,7 +160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.542094827, -9.20098877, 50],
+			Vec3 Translation = [-12.435256, 4.37732983, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -171,7 +172,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2871437,
+			float Size = 49.6585922,
 		},
 		EditorCameraController = 
 		{
@@ -179,7 +180,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.542094827, -9.20098877, -3.42602846e-07],
+			Vec3 LookTarget = [-12.435256, 4.37732983, -2.6202332e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -203,7 +204,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [-0.954785347, -2.00833607, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -554,7 +555,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 1500,
+			float InitialHealth = 1000,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 		},
@@ -562,7 +563,7 @@ Level =
 		{
 			string Part = "5a5019f6eda94e41:QuestItem4",
 			string Note = "THIS IS A NOTE",
-			string Drops = "5a74b95ba553bc1f:Winning",
+			string Drops = "",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 		},
@@ -596,9 +597,9 @@ Level =
 		},
 		Stealth = 
 		{
-			float InvisSpeedMultiplier = 2,
+			float InvisSpeedMultiplier = 1,
 			string OpacityCurve = "5abdc26d9fc78f57:StealthOpacity",
-			float CloseSpeedMultiplier = 2,
+			float CloseSpeedMultiplier = 4,
 		},
 		StealthBoss = 
 		{
