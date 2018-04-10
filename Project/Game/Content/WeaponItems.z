@@ -351,12 +351,12 @@ class Laserbeam : Item {
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
         //use mag size for ammount of seconds active before reload
-        this.MagSize = 5;
+        this.MagSize = 10;
         this.Name = "Laser Beam";
         this.ID = "Laser_Beam";
-        this.DamagePer = 50;
-        this.FireRate = 0.50; 
-        this.AmmoPerShot = 4;
+        this.DamagePer = 150;
+        this.FireRate = 3; 
+        this.AmmoPerShot = 1;
         this.RelodTime = 5;
         this.Auto = false;
         this.SoundDistance = 10;
