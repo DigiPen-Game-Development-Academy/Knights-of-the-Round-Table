@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -15, 0],
+		Vec3 Translation = [0.5, 0.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -133,7 +133,7 @@ Cog =
 				float FieldOfView = 45,
 				float NearPlane = 0.5,
 				float FarPlane = 100,
-				float Size = 10,
+				float Size = 12,
 			},
 			SoundListener = 
 			{
