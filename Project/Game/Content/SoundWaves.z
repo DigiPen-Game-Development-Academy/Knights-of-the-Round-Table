@@ -31,7 +31,7 @@ class SoundWaves : ZilchComponent {
             
             var x = i*(this.Whidth+this.Spacing);
             
-            var pos = Real3(x,0,-10);
+            var pos = Real3(x,0,1);
             
             this.Bars[i] = this.Space.CreateAtPosition(Archetype.SWave, pos);
             

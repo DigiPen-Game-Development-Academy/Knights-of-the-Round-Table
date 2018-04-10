@@ -39,6 +39,6 @@ Cog =
 	Area = 
 	{
 		Vec2 Size = [1, 1],
-		Location Origin = TopCenter,
+		Location Origin = BottomCenter,
 	},
 },

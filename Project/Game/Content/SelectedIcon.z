@@ -1,7 +1,6 @@
 //Author Brandon Wolenetz
 
-class SelectedIcon : ZilchComponent
-{
+class SelectedIcon : ZilchComponent {
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
@@ -9,9 +8,9 @@ class SelectedIcon : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent) {
         
         if(GlobalVariables.UseWeapon.PrimarySelected) {
-            this.Owner.Transform.Translation = Real3(this.Owner.Transform.Translation.X, 0, this.Owner.Transform.Translation.Z);
+            this.Owner.Transform.Translation = Real3(-1, this.Owner.Transform.Translation.YZ);
         } else {
-            this.Owner.Transform.Translation = Real3(this.Owner.Transform.Translation.X, -2, this.Owner.Transform.Translation.Z);
+            this.Owner.Transform.Translation = Real3(0, this.Owner.Transform.Translation.YZ);
         }
         
     }

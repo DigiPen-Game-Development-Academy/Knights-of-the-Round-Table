@@ -103,6 +103,7 @@ Level =
 			Enum AltPOrInventory = Tab,
 			Enum UseUtility = F,
 			Enum OpenConsole = Tilde,
+			Enum Reload = R,
 		},
 		CreateNavGrid = 
 		{
@@ -162,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-15.8827477, -55.0704002, 63.9999962],
+			Vec3 Translation = [-21.8929977, 9.59181118, 63.9999962],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -174,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 100,
+			float Size = 49.6585426,
 		},
 		EditorCameraController = 
 		{
@@ -182,7 +183,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-15.8827477, -55.0704002, -3.12711859e-06],
+			Vec3 LookTarget = [-21.8929977, 9.59181118, -3.38983273e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1613,6 +1614,16 @@ Level =
 		{
 			string LootTable = "",
 		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.375, 0.375, 0.5],
+		},
 	},
 	ArchetypeInstance = 
 	{
@@ -1946,7 +1957,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.71927357, -6.67261505, -40],
+			Vec3 Translation = [0, 0, -40],
 			Vec3 Scale = [1000000, 1000000, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2634,6 +2645,16 @@ Level =
 		AutoChest = 
 		{
 			string LootTable = "",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.375, 0.375, 0.5],
 		},
 	},
 	Cog = 
@@ -5117,7 +5138,7 @@ Level =
 							bool Mode2D = true,
 							bool AllowSleep = true,
 							bool Inherit2DMode = true,
-							Vec3 Velocity = [-50.9667358, -156.92662, 0],
+							Vec3 Velocity = [-5429.68701, -1468.74988, 62.4999962],
 							Vec3 AngularVelocity = [0, 0, 0],
 						},
 						MenuVisibilitySprite = 
@@ -5698,7 +5719,7 @@ Level =
 							bool Mode2D = true,
 							bool AllowSleep = true,
 							bool Inherit2DMode = true,
-							Vec3 Velocity = [-12.3040667, 23.0627041, 0],
+							Vec3 Velocity = [-3929.68726, -4031.24976, 62.4999962],
 							Vec3 AngularVelocity = [0, 0, 0],
 						},
 						MenuVisibilitySprite = 
@@ -5975,7 +5996,7 @@ Level =
 							bool Mode2D = true,
 							bool AllowSleep = true,
 							bool Inherit2DMode = true,
-							Vec3 Velocity = [-8.71300602, 9.80949306, 0],
+							Vec3 Velocity = [-3367.18726, -3343.74976, 62.4999962],
 							Vec3 AngularVelocity = [0, 0, 0],
 						},
 						MenuVisibilitySprite = 
@@ -7615,7 +7636,7 @@ Level =
 							bool Mode2D = true,
 							bool AllowSleep = true,
 							bool Inherit2DMode = true,
-							Vec3 Velocity = [0.436186761, -22.2344379, 0],
+							Vec3 Velocity = [-1054.68738, -2218.74976, 62.4999962],
 							Vec3 AngularVelocity = [0, 0, 0],
 						},
 						MenuVisibilitySprite = 

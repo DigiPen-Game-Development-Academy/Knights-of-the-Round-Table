@@ -16,15 +16,17 @@ class QuestSprite : ZilchComponent {
         
         if (screensize.X != this.Last) {
             
-            this.Last = screensize.X;
-            
             var txt = this.Owner.FindChildByName("txt");
             
-            txt.Area.Size = Real2((screensize.X) - 0.5, 100);
+            this.Last = screensize.X;
+            
+            txt.Area.Size = Real2((screensize.X) - 3, 100);
             
             txt.Area.Size = Real2(txt.Area.Size.X, txt.SpriteText.MeasureText().Y);
             
-            this.Owner.Area.Size = Real2(screensize.X, txt.SpriteText.MeasureText().Y) + Real2(0.5);
+            this.Owner.Area.Size = txt.SpriteText.MeasureText() + Real2(0.25);
+            
+            txt.Transform.Translation = Real3(0, 0, 1);
             
         }
         
@@ -36,16 +38,6 @@ class QuestSprite : ZilchComponent {
         
         txt.SpriteText.Visible = true;
         this.Owner.Sprite.Visible = true;
-        
-        /*if(txt.SpriteText.MeasureGivenText(text).X > this.MaxWhidth) {
-            var txt2 = "";
-            for (var i = 0; i < text.Count; ++i){
-                if(txt.SpriteText.MeasureGivenText("`txt2``String.FromChar(text.Get(i))`").X > this.MaxWhidth)
-                    txt2 = "`txt2`\n";
-                txt2 = "`txt2``String.FromChar(text.Get(i))`";
-            }
-            text = txt2;
-        }*/
         
         txt.SpriteText.Text = text;
         

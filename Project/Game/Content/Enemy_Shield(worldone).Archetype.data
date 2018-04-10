@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.5, 5.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -143,9 +143,9 @@ Cog =
 		float SoundDistance = 10,
 		string Sound = "5a84cbaca2f7cdf9:Shot",
 		float RandAngle = 7,
-		int MagSize = 10,
+		int MagSize = 20,
 		float ReloadTime = 3,
-		float FireRate = 7,
+		float FireRate = 17,
 		float MinDist = 2,
 		float MaxDist = 3,
 		string DeathMSG = "You Where Shot by an Enemy",
@@ -199,6 +199,7 @@ Cog =
 			{
 				float TurnSpeed = 1.45000005,
 				float FlashSpeed = 25,
+				bool Shoot = true,
 			},
 			MenuVisibilityController = 
 			{
@@ -255,10 +256,10 @@ Cog =
 						bool Asleep = false,
 						bool Kinematic = true,
 						bool RotationLocked = false,
-						bool Mode2D = true,
+						bool Mode2D = false,
 						bool AllowSleep = true,
 						bool Inherit2DMode = true,
-						Vec3 Velocity = [13.9323835, -11.9219112, -62.4999962],
+						Vec3 Velocity = [0, 0, 0],
 						Vec3 AngularVelocity = [0, 0, 0],
 					},
 					MenuVisibilitySprite = 

@@ -307,9 +307,6 @@ class ConsoleTypeBox : ZilchComponent {
             
             this.Active = !this.Active;
             
-            if(this.Active)
-                this.Selected = true;
-            
         }
         
         this.Owner.Sprite.Visible = this.Active;
