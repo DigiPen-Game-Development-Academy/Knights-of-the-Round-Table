@@ -159,7 +159,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.542094827, -9.20098877, 50],
+			Vec3 Translation = [-12.435256, 4.37732983, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -179,7 +179,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.542094827, -9.20098877, -3.42602846e-07],
+			Vec3 LookTarget = [-12.435256, 4.37732983, -2.6202332e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -562,7 +562,7 @@ Level =
 		{
 			string Part = "5a5019f6eda94e41:QuestItem4",
 			string Note = "THIS IS A NOTE",
-			string Drops = "5a74b95ba553bc1f:Winning",
+			string Drops = "",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
 		},
