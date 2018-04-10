@@ -29,6 +29,27 @@ class UseWeapon : ZilchComponent
         Zero.Connect(Zero.Keyboard, Events.KeyUp, this.OnKeyUp);
         Zero.Connect(this.Space, Events.MouseScroll, this.OnMouseScroll);
         Zero.Connect(this.Space, Events.MouseUp, this.OnMouseUp);
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+    }
+
+    function OnKeyDown(event : KeyboardEvent) {
+        
+        if(event.Key == GlobalVariables.InputManager.Reload && this.Up) {
+            
+            if(this.PrimarySelected) {
+                if(this.Primary.MagSize != -1 && this.Primary.CurrentMag != this.Primary.MagSize && this.Primary.CurrentMag > 0 && !this.Primary.Reloading) {
+                    this.Primary.Reloading = true;
+                    this.Primary.Timer = this.Primary.RelodTime;
+                }
+            } else {
+                if(this.Secondary.MagSize != -1 && this.Secondary.CurrentMag != this.Secondary.MagSize && this.Secondary.CurrentMag > 0 && !this.Secondary.Reloading) {
+                    this.Secondary.Reloading = true;
+                    this.Secondary.Timer = this.Secondary.RelodTime;
+                }
+            }
+            
+        }
+        
     }
     
     function OnMouseScroll(event : ViewportMouseEvent) {
@@ -116,28 +137,28 @@ class UseWeapon : ZilchComponent
         if(this.Primary.CurrentMag == 0 && !this.Primary.Reloading && this.AmmoCount != 0 && this.Primary.MagSize != -1){
             this.Primary.Reloading = true;
             this.Primary.Timer = this.Primary.RelodTime;
-        } else if(this.Primary.CurrentMag == 0 && this.Primary.Timer <= 0){
+        } else if(this.Primary.Reloading && this.Primary.Timer <= 0){
             this.Primary.Reloading = false;
             if(this.AmmoCount - (this.Primary.MagSize*this.Primary.AmmoPerShot) < 0){
                 this.Primary.CurrentMag = this.AmmoCount/this.Primary.AmmoPerShot;
                 this.RemoveAmmo(this.AmmoCount);
             } else{
+                this.RemoveAmmo((this.Primary.MagSize*this.Primary.AmmoPerShot) - this.Primary.CurrentMag);
                 this.Primary.CurrentMag = this.Primary.MagSize;
-                this.RemoveAmmo(this.Primary.MagSize*this.Primary.AmmoPerShot);
             }
         }
         
         if(this.Secondary.CurrentMag == 0 && !this.Secondary.Reloading && this.AmmoCount != 0 && this.Secondary.MagSize != -1){
             this.Secondary.Reloading = true;
             this.Secondary.Timer = this.Secondary.RelodTime;
-        } else if(this.Secondary.CurrentMag == 0 && this.Secondary.Timer <= 0){
+        } else if(this.Secondary.Reloading && this.Secondary.Timer <= 0){
             this.Secondary.Reloading = false;
             if(this.AmmoCount - (this.Secondary.MagSize*this.Secondary.AmmoPerShot) < 0){
                 this.Secondary.CurrentMag = this.AmmoCount/this.Secondary.AmmoPerShot;
                 this.RemoveAmmo(this.AmmoCount);
             } else{
+                this.RemoveAmmo((this.Secondary.MagSize*this.Secondary.AmmoPerShot) - this.Secondary.CurrentMag);
                 this.Secondary.CurrentMag = this.Secondary.MagSize;
-                this.RemoveAmmo(this.Secondary.MagSize*this.Secondary.AmmoPerShot);
             }
         }
         
@@ -145,14 +166,14 @@ class UseWeapon : ZilchComponent
         if(this.Utility != null && this.Utility.CurrentMag == 0 && !this.Utility.Reloading && this.AmmoCount != 0){
             this.Utility.Reloading = true;
             this.Utility.Timer = this.Utility.RelodTime;
-        } else if(this.Utility != null && this.Utility.CurrentMag == 0 && this.Utility.Timer <= 0){
+        } else if(this.Utility != null && this.Utility.Reloading && this.Utility.Timer <= 0){
             this.Utility.Reloading = false;
             if(this.AmmoCount - (this.Utility.MagSize*this.Secondary.AmmoPerShot) < 0){
                 this.Utility.CurrentMag = this.AmmoCount/this.Utility.AmmoPerShot;
                 this.RemoveAmmo(this.AmmoCount);
             } else{
+                this.RemoveAmmo((this.Utility.MagSize*this.Utility.AmmoPerShot) - this.Utility.CurrentMag);
                 this.Utility.CurrentMag = this.Utility.MagSize;
-                this.RemoveAmmo(this.Utility.MagSize*this.Secondary.AmmoPerShot);
             }
         }
         
