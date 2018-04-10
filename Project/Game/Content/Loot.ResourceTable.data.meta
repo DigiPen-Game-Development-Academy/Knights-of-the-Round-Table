@@ -3,7 +3,7 @@ DataContent =
 	DataBuilder = 
 	{
 		string Name = "Loot",
-		uint64 ResourceId = 5a8172346e726d8f,
+		uint64 ResourceId = 5a11b100e0d8983f,
 		string LoaderType = "ResourceTable",
 		uint Version = 0,
 		bool ShowInEditor = true,
