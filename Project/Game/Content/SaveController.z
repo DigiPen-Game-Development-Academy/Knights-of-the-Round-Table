@@ -50,9 +50,5 @@ class SaveController : ZilchComponent {
     
     function Initialize(init : CogInitializer) {
         GlobalVariables.Save = this.Owner;
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-
-    function OnLogicUpdate(event : UpdateEvent) {
     }
 }

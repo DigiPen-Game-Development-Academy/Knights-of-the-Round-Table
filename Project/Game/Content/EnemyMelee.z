@@ -27,6 +27,8 @@ class EnemyMelee : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        if(this.Owner.BasicPathFollowAI != null && !this.Owner.BasicPathFollowAI.Active)
+            return;
         this.Timer -= event.Dt;
     }
 }

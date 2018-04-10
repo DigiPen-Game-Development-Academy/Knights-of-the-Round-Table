@@ -16,7 +16,7 @@ class Visibility : ZilchComponent {
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
-        if(GlobalVariables.Player == null)
+        if(GlobalVariables.Player == null || (this.Owner.BasicPathFollowAI != null && !this.Owner.BasicPathFollowAI.Active))
             return;
         
         var filter = CastFilter();

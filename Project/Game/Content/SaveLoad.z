@@ -14,7 +14,7 @@ class SaveLoad : ZilchComponent {
             GlobalVariables.Chests = Array[Cog]();
         if(GlobalVariables.QuestItems == null){
             GlobalVariables.QuestItems = Array[Boolean]();
-            GlobalVariables.QuestItems.Resize(6);
+            GlobalVariables.QuestItems.Resize(4);
             foreach(var b in GlobalVariables.QuestItems) {
                 b = false;
             }
@@ -130,7 +130,7 @@ class SaveLoad : ZilchComponent {
         Utilities.MaxIndex = GlobalVariables.Save.SaveController.MaxQIndex;
         
         var qItems = SaveFuncs.DeserializeBools(GlobalVariables.Save.SaveController.QuestItems);
-        qItems.Resize(6);
+        qItems.Resize(4);
         GlobalVariables.QuestItems = qItems;
         
         if(!this.LoadOnStart)

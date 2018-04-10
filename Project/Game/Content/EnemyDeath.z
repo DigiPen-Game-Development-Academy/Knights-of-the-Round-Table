@@ -9,7 +9,6 @@ class EnemyDeath : ZilchComponent {
     [Property] var LootTable : ResourceTable = ResourceTable.Loot;
     
     function Initialize(init : CogInitializer) {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.NoHealth, this.OnNoHealth);
         Zero.Connect(this.GameSession, Events.NoHealth, this.OnNoHealth);
     }
@@ -39,8 +38,5 @@ class EnemyDeath : ZilchComponent {
         
         GlobalVariables.Enemies.RemoveFirst(this.Owner);
         this.Owner.Destroy();
-    }
-
-    function OnLogicUpdate(event : UpdateEvent) {
     }
 }
