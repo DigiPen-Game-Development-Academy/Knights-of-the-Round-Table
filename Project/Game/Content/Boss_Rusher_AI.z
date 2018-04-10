@@ -81,6 +81,8 @@ class Boss_Rusher_AI : ZilchComponent {
     var Active : Boolean = true;
     //exclaim point
     var Ex : Cog;
+    //stars
+    var Stars : Cog;
     
     function Initialize(init : CogInitializer) {
         
@@ -315,6 +317,12 @@ class Boss_Rusher_AI : ZilchComponent {
     
     //sit there dazed, this is the only time when the player can deal damage
     function Dazed (dt : Real) {
+        
+        if(this.Stars == null) {
+            this.Stars = this.Space.CreateAtPosition(Archetype.Stars, Real3(0, 0.4, 0.25));
+            this.Stars.AttachTo(this.Owner);
+            this.Stars.Despawn.Timer = this.DazeTime;
+        }
         
         //allow damage when dazed
         this.Health.Locked = false;
