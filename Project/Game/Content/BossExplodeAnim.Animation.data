@@ -1,7 +1,7 @@
 RichAnimation = 
 {
 	float SampleTolerance = 0.0500000007,
-	float Duration = 9.16666698,
+	float Duration = 9.5,
 	Object Root = 
 	{
 		TrackType Type = Object,
@@ -49,10 +49,10 @@ RichAnimation =
 								Array KeyFrames = 
 								[
 									{
-										float key = 8.66666698,
+										float key = 9.16666698,
 										Object value = 
 										{
-											float Time = 8.66666698,
+											float Time = 9.16666698,
 											bool Value = false,
 											Vec2 TangentIn = [-0.0500000007, 0],
 											Vec2 TangentOut = [0.0500000007, 0],
@@ -60,10 +60,10 @@ RichAnimation =
 										},
 									},
 									{
-										float key = 9,
+										float key = 9.33333302,
 										Object value = 
 										{
-											float Time = 9,
+											float Time = 9.33333302,
 											bool Value = true,
 											Vec2 TangentIn = [-0.0500000007, 0],
 											Vec2 TangentOut = [0.0500000007, 0],
@@ -71,10 +71,10 @@ RichAnimation =
 										},
 									},
 									{
-										float key = 9.16666698,
+										float key = 9.5,
 										Object value = 
 										{
-											float Time = 9.16666698,
+											float Time = 9.5,
 											bool Value = true,
 											Vec2 TangentIn = [-0.0500000007, 0],
 											Vec2 TangentOut = [0.0500000007, 0],

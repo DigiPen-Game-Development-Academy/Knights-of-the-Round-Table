@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.17672479, 1.44550681, 50],
+			Vec3 Translation = [3.59893751, 0.244168878, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.1034641,
+			float Size = 14.7781267,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.17672479, 1.44550681, 5.14345047e-08],
+			Vec3 LookTarget = [3.59893751, 0.244168878, 1.57312925e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -264,11 +264,11 @@ Level =
 		},
 		Sprite = 
 		{
-			bool Visible = false,
+			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [1, 1, 1, 0.760064423],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -276,8 +276,8 @@ Level =
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
-			bool AnimationActive = false,
-			float AnimationSpeed = 0.75,
+			bool AnimationActive = true,
+			float AnimationSpeed = 0.25,
 			uint StartFrame = 0,
 		},
 		AnimationGraph = 
@@ -303,6 +303,11 @@ Level =
 		Named = 
 		{
 			string Name = "Blocker",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -357,7 +362,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.125, -1.375, -0.125],
+			Vec3 Translation = [-2.9307673, -1.51051152, -0.125],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -386,39 +391,39 @@ Level =
 		{
 			bool Active = false,
 			uint EmitCount = 0,
-			float EmitRate = 35,
+			float EmitRate = 250,
 			float EmitVariance = 0,
-			float Size = 0.25,
-			float SizeVariance = 0.125,
-			float Lifetime = 1,
+			float Size = 0.0500000007,
+			float SizeVariance = 0.0625,
+			float Lifetime = 3,
 			float LifetimeVariance = 0.200000003,
 			float Spin = 0,
 			float SpinVariance = 50,
 			bool RandomSpin = true,
 			float Fill = 1,
 			float EmitterVelocityPercent = 0,
-			Vec3 StartVelocity = [0, 1, 0],
-			Vec3 RandomVelocity = [0.5, 0.5, 0],
+			Vec3 StartVelocity = [0, 0.75, 0],
+			Vec3 RandomVelocity = [0.25, 0.125, 0],
 			Vec3 TangentVelocity = [0, 0, 0],
-			Vec3 EmitterSize = [0, 0, 0],
+			Vec3 EmitterSize = [0.125, 0, 0],
 			bool FastMovingEmitter = false,
 		},
 		LinearParticleAnimator = 
 		{
-			Vec3 Force = [0, 0, 0],
+			Vec3 Force = [0, 0.100000001, 0],
 			Vec3 RandomForce = [0, 0, 0],
 			float Torque = 0,
-			float Growth = 0,
-			float Dampening = 0,
+			float Growth = 0.125,
+			float Dampening = 0.25,
 			Vec3 Twist = [0, 0, 0],
 		},
 		ParticleColorAnimator = 
 		{
 			Vec4 Color0 = [1, 0.869999886, 0, 0.999899983],
-			Vec4 Color1 = [1, 0.600000143, 0, 1],
-			Vec4 Color2 = [1, 0.330000043, 0, 0.764999986],
-			Vec4 Color3 = [0.290000021, 0.290000021, 0.290000021, 0.63499999],
-			Vec4 Color4 = [0.279999971, 0.279999971, 0.279999971, 0],
+			Vec4 Color1 = [1, 0.389999986, 0, 0.595000029],
+			Vec4 Color2 = [0.189999998, 0.189999998, 0.189999998, 0.0899999738],
+			Vec4 Color3 = [0.154999971, 0.154999971, 0.154999971, 0.0950000286],
+			Vec4 Color4 = [0.0450000167, 0.0450000167, 0.0450000167, 0.00999999046],
 		},
 		AnimationGraph = 
 		{
@@ -446,7 +451,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2, -1.375, 0.125],
+			Vec3 Translation = [-1.59480619, -1.375, 0.125],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -474,12 +479,12 @@ Level =
 		SphericalParticleEmitter = 
 		{
 			bool Active = true,
-			uint EmitCount = 1000,
-			float EmitRate = 3000,
+			uint EmitCount = 200,
+			float EmitRate = 2000,
 			float EmitVariance = 0,
-			float Size = 0.25,
-			float SizeVariance = 0.125,
-			float Lifetime = 1,
+			float Size = 0.125,
+			float SizeVariance = 0.0500000007,
+			float Lifetime = 2,
 			float LifetimeVariance = 0.200000003,
 			float Spin = 0,
 			float SpinVariance = 50,
@@ -487,7 +492,7 @@ Level =
 			float Fill = 1,
 			float EmitterVelocityPercent = 0,
 			Vec3 StartVelocity = [0, 0, 0],
-			Vec3 RandomVelocity = [5, 5, 0],
+			Vec3 RandomVelocity = [15, 15, 0],
 			Vec3 TangentVelocity = [0, 0, 0],
 			Vec3 EmitterSize = [0, 0, 0],
 			bool FastMovingEmitter = false,
@@ -497,17 +502,17 @@ Level =
 			Vec3 Force = [0, 0, 0],
 			Vec3 RandomForce = [0, 0, 0],
 			float Torque = 0,
-			float Growth = 0.25,
-			float Dampening = 1,
+			float Growth = 0.75,
+			float Dampening = 6,
 			Vec3 Twist = [0, 0, 0],
 		},
 		ParticleColorAnimator = 
 		{
-			Vec4 Color0 = [1, 0.869999886, 0, 0.999899983],
-			Vec4 Color1 = [1, 0.600000143, 0, 1],
-			Vec4 Color2 = [1, 0.330000043, 0, 0.764999986],
-			Vec4 Color3 = [0.290000021, 0.290000021, 0.290000021, 0.63499999],
-			Vec4 Color4 = [0.279999971, 0.279999971, 0.279999971, 0],
+			Vec4 Color0 = [1, 0.630000114, 0, 0.999899983],
+			Vec4 Color1 = [1, 0.419999957, 0, 0.74000001],
+			Vec4 Color2 = [0.245000005, 0.245000005, 0.245000005, 0.524999976],
+			Vec4 Color3 = [0.120000005, 0.120000005, 0.120000005, 0.230000019],
+			Vec4 Color4 = [0.120000005, 0.120000005, 0.120000005, 0.0649999976],
 		},
 		AnimationGraph = 
 		{
@@ -535,7 +540,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [17.9073143, -1.62500012, 0],
+			Vec3 Translation = [1.77006149, -1.625, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -553,8 +558,8 @@ Level =
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 3,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
 		AnimationGraph = 
