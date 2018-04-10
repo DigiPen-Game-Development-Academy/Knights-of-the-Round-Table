@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [171.92453, -0.59176755, 0],
+		Vec3 Translation = [39.2714729, -0.59176755, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -31,8 +31,8 @@ Cog =
 	},
 	TileMap = 
 	{
-		string SourceName = "5ab69c7c9eee2322:IntroCutscene_TileMap01",
-		string PaletteName = "5a11b7b61863cdae:Floor",
+		string SourceName = "5ab69b525696608c:IntroCutscene_TileMap02",
+		string PaletteName = "5a0815c6bc36dbbd:GroundClutter",
 		float UnitsPerTile = 1,
 		float MeshThickness = 1.20000005,
 	},

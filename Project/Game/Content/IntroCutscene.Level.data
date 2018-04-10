@@ -351,7 +351,7 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "5ab69b525696608c:IntroCutscene_TileMap02",
+			string SourceName = "5ab6bd4640b7c79b:IntroCutscene_TileMap03",
 			string PaletteName = "5a0815c6bc36dbbd:GroundClutter",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,

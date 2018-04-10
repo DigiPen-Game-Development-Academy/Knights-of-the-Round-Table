@@ -13,7 +13,7 @@ ImageContent =
 		float OriginY = 32,
 		float PixelsPerUnit = 32,
 		bool Smoothing = false,
-		bool Looping = true,
+		bool Looping = false,
 		Vec4 Slices = [0, 0, 0, 0],
 		SpriteFill Fill = Stretch,
 	},

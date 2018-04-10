@@ -1,0 +1,574 @@
+Level = 
+{
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 1,
+		},
+		Named = 
+		{
+			string Name = "LevelSettings",
+		},
+		GravityEffect = 
+		{
+			bool Active = true,
+			bool WakeUpOnChange = false,
+			bool LocalSpaceDirection = true,
+			float Strength = 10,
+			Vec3 Direction = [0, -1, 0],
+		},
+		DragEffect = 
+		{
+			bool Active = true,
+			bool WakeUpOnChange = false,
+			float Drag = 0.699999988,
+			float AngularDrag = 0.100000001,
+		},
+		CameraViewport = 
+		{
+			bool Background = true,
+			Vec2 Offset = [0, 0],
+			Vec2 Size = [1, 1],
+			int Layer = 0,
+			bool Active = true,
+			bool Blocking = true,
+			CogPath Renderer = 
+			{
+				string Path = ".",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 1,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			CogPath Camera = 
+			{
+				string Path = ":/Camera",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			ViewportScaling Scaling = Letterbox,
+			Vec2 Resolution = [1920, 720],
+			Vec4 MarginColor = [0, 0, 0, 1],
+		},
+		ForwardRenderer = 
+		{
+			Vec4 ClearColor = [0.203921586, 0.254901975, 0.376470625, 1],
+			bool DrawNonVisible = false,
+			bool DrawDebugObjects = true,
+			bool DrawEditorIcons = true,
+			bool EditorIconDepth = true,
+			bool Wireframe = false,
+		},
+		GridDraw = 
+		{
+			bool Active = true,
+			bool HalfCellOffset = false,
+			float CellSize = 1,
+			GridAxis Axis = ZAxis,
+			int Lines = 100,
+			bool DrawAxisOrigins = true,
+			bool AlwaysDrawInEditor = true,
+			bool DrawInGame = false,
+			Vec4 GridColor = [0.5, 0.5, 0.5, 0.400000006],
+			Vec4 GridHiLight = [0, 0, 0, 0.400000006],
+			int HilightInterval = 10,
+			bool FollowEditorCamera = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 3,
+		},
+		Named = 
+		{
+			string Name = "EditorCamera",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.17672479, 1.44550681, 50],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
+		},
+		Camera = 
+		{
+			ProjectionMode ProjectionMode = Orthographic,
+			Facing Facing = NegativeZ,
+			CameraTransparentSort TransparentSort = ZDepth,
+			float FieldOfView = 45,
+			float NearPlane = 0.5,
+			float FarPlane = 500,
+			float Size = 22.1034641,
+		},
+		EditorCameraController = 
+		{
+			ControlMode ControlMode = ZPlane,
+			float LookDistance = 50,
+			float VerticalAngle = 0,
+			float HorizontalAngle = 0,
+			Vec3 LookTarget = [1.17672479, 1.44550681, 5.14345047e-08],
+			float MoveSensitivity = 1,
+		},
+		EditorRenderer = 
+		{
+			Vec4 ClearColor = [0.155000001, 0.155000001, 0.155000001, 1],
+			bool DrawNonVisible = true,
+			bool DrawDebugObjects = true,
+			bool DrawEditorIcons = true,
+			bool Wireframe = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 2,
+		},
+		Named = 
+		{
+			string Name = "Camera",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 40],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Camera = 
+		{
+			ProjectionMode ProjectionMode = Orthographic,
+			Facing Facing = NegativeZ,
+			CameraTransparentSort TransparentSort = InheritFromSpace,
+			float FieldOfView = 45,
+			float NearPlane = 0.5,
+			float FarPlane = 200,
+			float Size = 8,
+		},
+		SoundListener = 
+		{
+			bool Active = true,
+			float Volume = 1,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Island",
+		},
+		Archetyped = 
+		{
+			string Name = "5ab69d35717d9077:TutorialFloor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, -0.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5ab6bd1358869760:FinalBossCutscene_TileMap01",
+			string PaletteName = "5a0815c6bc36dbbd:GroundClutter",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Named = 
+		{
+			string Name = "IslandTransitions",
+		},
+		Archetyped = 
+		{
+			string Name = "5ab69d35717d9077:TutorialFloor",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.5, -0.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5ab6bcf65cb2ec06:FinalBossCutscene_TileMap02",
+			string PaletteName = "5a0815c6bc36dbbd:GroundClutter",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "Yacht",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.5, -1, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5ab767329879f05e:YachtDestroyed",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 0.75,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 3efeff0000000000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5ab6aed21fccc1d2:YachtBossAnim",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "Blocker",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 39],
+			Vec3 Scale = [1000000, 1000000, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 0, 0.0103389528],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 20656d6147206e69,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5ab6b646ff9041a3:BossCutscceneBlocker",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+		CutsceneControllerBoss = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Named = 
+		{
+			string Name = "Fire",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.125, -1.375, -0.125],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteParticleSystem = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			Vec4 Tint = [1, 1, 1, 1],
+			float WarmUpTime = 0,
+			ParticleGeometry GeometryMode = Billboarded,
+			ParticleRenderMode RenderMode = Blended,
+			ParticleSortMode SortMode = Youngest,
+			ParticleAnimation ParticleAnimation = Single,
+			string Texture = "5274db4c2e7c11f9:Circle",
+			float VelocityScale = 1,
+			float LengthScale = 1,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [4, 4, 4],
+		},
+		SphericalParticleEmitter = 
+		{
+			bool Active = false,
+			uint EmitCount = 0,
+			float EmitRate = 35,
+			float EmitVariance = 0,
+			float Size = 0.25,
+			float SizeVariance = 0.125,
+			float Lifetime = 1,
+			float LifetimeVariance = 0.200000003,
+			float Spin = 0,
+			float SpinVariance = 50,
+			bool RandomSpin = true,
+			float Fill = 1,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [0, 1, 0],
+			Vec3 RandomVelocity = [0.5, 0.5, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [0, 0, 0],
+			bool FastMovingEmitter = false,
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 0, 0],
+			Vec3 RandomForce = [0, 0, 0],
+			float Torque = 0,
+			float Growth = 0,
+			float Dampening = 0,
+			Vec3 Twist = [0, 0, 0],
+		},
+		ParticleColorAnimator = 
+		{
+			Vec4 Color0 = [1, 0.869999886, 0, 0.999899983],
+			Vec4 Color1 = [1, 0.600000143, 0, 1],
+			Vec4 Color2 = [1, 0.330000043, 0, 0.764999986],
+			Vec4 Color3 = [0.290000021, 0.290000021, 0.290000021, 0.63499999],
+			Vec4 Color4 = [0.279999971, 0.279999971, 0.279999971, 0],
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 4094d2223f400000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5ab6acf3c9e73074:BossFire",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Named = 
+		{
+			string Name = "Explotion",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2, -1.375, 0.125],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteParticleSystem = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			Vec4 Tint = [1, 1, 1, 1],
+			float WarmUpTime = 0,
+			ParticleGeometry GeometryMode = Billboarded,
+			ParticleRenderMode RenderMode = Blended,
+			ParticleSortMode SortMode = Youngest,
+			ParticleAnimation ParticleAnimation = Single,
+			string Texture = "5274db4c2e7c11f9:Circle",
+			float VelocityScale = 1,
+			float LengthScale = 1,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [4, 4, 4],
+		},
+		SphericalParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 1000,
+			float EmitRate = 3000,
+			float EmitVariance = 0,
+			float Size = 0.25,
+			float SizeVariance = 0.125,
+			float Lifetime = 1,
+			float LifetimeVariance = 0.200000003,
+			float Spin = 0,
+			float SpinVariance = 50,
+			bool RandomSpin = true,
+			float Fill = 1,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [0, 0, 0],
+			Vec3 RandomVelocity = [5, 5, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [0, 0, 0],
+			bool FastMovingEmitter = false,
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 0, 0],
+			Vec3 RandomForce = [0, 0, 0],
+			float Torque = 0,
+			float Growth = 0.25,
+			float Dampening = 1,
+			Vec3 Twist = [0, 0, 0],
+		},
+		ParticleColorAnimator = 
+		{
+			Vec4 Color0 = [1, 0.869999886, 0, 0.999899983],
+			Vec4 Color1 = [1, 0.600000143, 0, 1],
+			Vec4 Color2 = [1, 0.330000043, 0, 0.764999986],
+			Vec4 Color3 = [0.290000021, 0.290000021, 0.290000021, 0.63499999],
+			Vec4 Color4 = [0.279999971, 0.279999971, 0.279999971, 0],
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 3ee0e0e23f7e77a6,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5ab6aee41a162bef:BossExplodeAnim",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Named = 
+		{
+			string Name = "Pat",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [17.9073143, -1.62500012, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a534002641c43be:Pat Walk SAnim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 3,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 3f3a0b613f000000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5ab6b2ad74332f4c:BossPatAnim",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+	},
+},
