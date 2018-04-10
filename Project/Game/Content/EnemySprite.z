@@ -14,9 +14,14 @@ class EnemySprite : ZilchComponent {
     
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.Owner.Sprite.SpriteSource = this.South;
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(!this.Owner.BasicPathFollowAI.Active) {
+            return;
+        }
         
         var angle = Math.ToDegrees(Math.ATan2(this.AI.ViewDirection.Y, this.AI.ViewDirection.X));
         if(angle >= 22.5)

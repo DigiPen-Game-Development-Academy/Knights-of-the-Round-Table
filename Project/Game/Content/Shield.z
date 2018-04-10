@@ -24,6 +24,10 @@ class Shield : ZilchComponent {
 
     function OnLogicUpdate(event : UpdateEvent) {
         
+        if(this.Owner.Parent.BasicPathFollowAI != null && !this.Owner.Parent.BasicPathFollowAI.Active) {
+            return;
+        }
+        
         var tDir = Real3(0);
         
         if(this.Owner.Parent.EnemyAI.State == State.Spotted) {
