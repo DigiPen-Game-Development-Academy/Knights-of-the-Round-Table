@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.59893751, 0.244168878, 50],
+			Vec3 Translation = [-1.07722652, -1.76838934, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.7781267,
+			float Size = 12.0993032,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.59893751, 0.244168878, 1.57312925e-07],
+			Vec3 LookTarget = [-1.07722652, -1.76838934, 5.56446045e-09],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -148,7 +148,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 40],
+			Vec3 Translation = [4.53853941, 0, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -167,12 +167,70 @@ Level =
 			bool Active = true,
 			float Volume = 1,
 		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 419000013f000000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a3dd7849ed645d2:camBossAnim",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
 			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Camera",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.53853941, 0, 40],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Camera = 
+		{
+			ProjectionMode ProjectionMode = Orthographic,
+			Facing Facing = NegativeZ,
+			CameraTransparentSort TransparentSort = InheritFromSpace,
+			float FieldOfView = 45,
+			float NearPlane = 0.5,
+			float FarPlane = 200,
+			float Size = 8,
+		},
+		SoundListener = 
+		{
+			bool Active = true,
+			float Volume = 1,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 419000013f000000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a3dd7849ed645d2:camBossAnim",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -211,7 +269,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -250,7 +308,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -298,7 +356,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -321,7 +379,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 0.0103389528],
+			Vec4 Color = [0, 0, 0, 0.859306633],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -348,13 +406,15 @@ Level =
 		},
 		CutsceneControllerBoss = 
 		{
+			string Level = "5a57a9c9da0f1273:BossFinal",
+			bool Load = false,
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -375,7 +435,7 @@ Level =
 			SystemChildMode ChildMode = Independent,
 			SystemSpace SystemSpace = WorldSpace,
 			uint DrawOrder = 0,
-			Vec4 Tint = [1, 1, 1, 1],
+			Vec4 Tint = [0.430000007, 0.430000007, 0.430000007, 1],
 			float WarmUpTime = 0,
 			ParticleGeometry GeometryMode = Billboarded,
 			ParticleRenderMode RenderMode = Blended,
@@ -438,12 +498,25 @@ Level =
 			string AnimationName = "5ab6acf3c9e73074:BossFire",
 			AnimPlayMode PlayMode = PlayOnce,
 		},
+		AnimExplodeSound = 
+		{
+			string Sound = "5a3df303a1ed7ce9:FireTemp",
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = true,
+			bool Positional = true,
+			int Version = 1,
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -464,7 +537,7 @@ Level =
 			SystemChildMode ChildMode = Independent,
 			SystemSpace SystemSpace = WorldSpace,
 			uint DrawOrder = 0,
-			Vec4 Tint = [1, 1, 1, 1],
+			Vec4 Tint = [0.464999974, 0.464999974, 0.464999974, 1],
 			float WarmUpTime = 0,
 			ParticleGeometry GeometryMode = Billboarded,
 			ParticleRenderMode RenderMode = Blended,
@@ -527,12 +600,25 @@ Level =
 			string AnimationName = "5ab6aee41a162bef:BossExplodeAnim",
 			AnimPlayMode PlayMode = PlayOnce,
 		},
+		AnimExplodeSound = 
+		{
+			string Sound = "5ac6d42eebda26d0:Explode",
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = true,
+			bool Positional = true,
+			int Version = 1,
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -540,7 +626,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.77006149, -1.625, 0],
+			Vec3 Translation = [6.93526268, 0.185464621, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -558,7 +644,7 @@ Level =
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
-			bool AnimationActive = false,
+			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
@@ -574,6 +660,196 @@ Level =
 		{
 			string AnimationName = "5ab6b2ad74332f4c:BossPatAnim",
 			AnimPlayMode PlayMode = PlayOnce,
+		},
+		AnimSpritesDir = 
+		{
+			string North = "5a5341ec590a3054:Pat Walk NAnim",
+			string NorthEast = "5a5340356d6e6b67:Pat Walk NEAnim",
+			string East = "5a5341d75d67251c:Pat Walk EAnim",
+			string SouthEast = "5a53406972aa13ca:Pat Walk SEAnim",
+			string South = "5a534002641c43be:Pat Walk SAnim",
+			string SouthWest = "5a53407e70ea7606:Pat walk SWAnim",
+			string West = "5a53401860e6d328:Pat Walk WAnim",
+			string NorthWest = "5a53404069aea011:Pat Walk NWAnim",
+			string AltAnim = "5a3dc048cb440677:AbductAnim",
+			float AnimSpeed = 0.5,
+			bool ActivateAlt = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Named = 
+		{
+			string Name = "Exclaim",
+		},
+		Archetyped = 
+		{
+			string Name = "5a703da86100a0c7:Exclaim",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.87962127, -0.634230554, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a7031139968f6f8:questionmark",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		FlashSprite = 
+		{
+			float Speed = 10,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 3efeff0047206e69,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a3daac824e13d42:ExclaimPoint",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "ufo",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.91662836, 46.9400864, 2],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a3dd497776ebb4d:ufo",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 0065005a005c0073,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a3dd4ce7dec6bf4:UFOBoss",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = true,
+			bool Positional = true,
+			int Version = 1,
+		},
+		UFOSOUND = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Named = 
+		{
+			string Name = "TractorBeam",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.90254974, 0.947222054, 1],
+			Vec3 Scale = [1.20000005, 1.20000005, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.379999995, 0.646599889, 1, 0.475000024],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a3dcf34a5a825a6:TractorBeamAnim",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 41c0c9e83f600000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a3dcf9db46021df:BossTracotBeam",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1.99526238,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = true,
+			bool Positional = true,
+			int Version = 1,
+		},
+		TractorSound = 
+		{
 		},
 	},
 },
