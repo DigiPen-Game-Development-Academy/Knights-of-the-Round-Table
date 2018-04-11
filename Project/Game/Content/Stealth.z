@@ -1,3 +1,5 @@
+//Author Brandon Wolenetz
+
 class Stealth : ZilchComponent {
     
     [Dependency] var MenuVisController : MenuVisibilityController;
@@ -26,6 +28,7 @@ class Stealth : ZilchComponent {
     function OnLogicUpdate(event : UpdateEvent) {
         
         if (!this.Active || this.Owner.EnemyAI.State != State.Spotted) {
+            this.SetHealthbarOpacity(1);
             return;
         }
         

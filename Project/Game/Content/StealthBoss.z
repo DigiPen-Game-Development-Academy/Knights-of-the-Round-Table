@@ -25,6 +25,7 @@ class StealthBoss : ZilchComponent {
         
         if(!this.Active) {
             this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.XYZ, 1);
+            this.Stealth.SetHealthbarOpacity(1);
             return;
         }
         

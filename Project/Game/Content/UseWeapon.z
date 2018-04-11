@@ -1,7 +1,6 @@
 //Author Brandon Wolenetz
 
-class UseWeapon : ZilchComponent
-{
+class UseWeapon : ZilchComponent {
     
     [Dependency]
     var Sprite : PlayerSprites;
