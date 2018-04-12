@@ -39,11 +39,13 @@ class UseWeapon : ZilchComponent {
                 if(this.Primary.MagSize != -1 && this.Primary.CurrentMag != this.Primary.MagSize && this.Primary.CurrentMag > 0 && !this.Primary.Reloading) {
                     this.Primary.Reloading = true;
                     this.Primary.Timer = this.Primary.RelodTime;
+                    Utilities.PlaySFX(SoundCue.NeedAmmo);
                 }
             } else {
                 if(this.Secondary.MagSize != -1 && this.Secondary.CurrentMag != this.Secondary.MagSize && this.Secondary.CurrentMag > 0 && !this.Secondary.Reloading) {
                     this.Secondary.Reloading = true;
                     this.Secondary.Timer = this.Secondary.RelodTime;
+                    Utilities.PlaySFX(SoundCue.NeedAmmo);
                 }
             }
             
@@ -136,6 +138,7 @@ class UseWeapon : ZilchComponent {
         if(this.Primary.CurrentMag == 0 && !this.Primary.Reloading && this.AmmoCount != 0 && this.Primary.MagSize != -1){
             this.Primary.Reloading = true;
             this.Primary.Timer = this.Primary.RelodTime;
+            Utilities.PlaySFX(SoundCue.NeedAmmo);
         } else if(this.Primary.Reloading && this.Primary.Timer <= 0){
             this.Primary.Reloading = false;
             if(this.AmmoCount - (this.Primary.MagSize*this.Primary.AmmoPerShot) < 0){
@@ -150,6 +153,7 @@ class UseWeapon : ZilchComponent {
         if(this.Secondary.CurrentMag == 0 && !this.Secondary.Reloading && this.AmmoCount != 0 && this.Secondary.MagSize != -1){
             this.Secondary.Reloading = true;
             this.Secondary.Timer = this.Secondary.RelodTime;
+            Utilities.PlaySFX(SoundCue.NeedAmmo);
         } else if(this.Secondary.Reloading && this.Secondary.Timer <= 0){
             this.Secondary.Reloading = false;
             if(this.AmmoCount - (this.Secondary.MagSize*this.Secondary.AmmoPerShot) < 0){
@@ -165,6 +169,7 @@ class UseWeapon : ZilchComponent {
         if(this.Utility != null && this.Utility.CurrentMag == 0 && !this.Utility.Reloading && this.AmmoCount != 0){
             this.Utility.Reloading = true;
             this.Utility.Timer = this.Utility.RelodTime;
+            Utilities.PlaySFX(SoundCue.NeedAmmo);
         } else if(this.Utility != null && this.Utility.Reloading && this.Utility.Timer <= 0){
             this.Utility.Reloading = false;
             if(this.AmmoCount - (this.Utility.MagSize*this.Secondary.AmmoPerShot) < 0){

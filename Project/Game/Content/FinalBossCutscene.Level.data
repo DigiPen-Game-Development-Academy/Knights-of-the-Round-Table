@@ -91,6 +91,19 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		MusicOnLevelStart = 
+		{
+			bool Fade = true,
+			float FadeSped = 1,
+			string Music = "5ab401fd77a6d163:oceanwaves",
+		},
+		CreateUI = 
+		{
+			string UILevel = "",
+			string DialogLevel = "",
+			string MouseLevel = "",
+			string MusicLevel = "5adae3eaef33a047:MusicLevel",
+		},
 	},
 	Cog = 
 	{
@@ -104,7 +117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [9.88293076, -1.16485047, 50],
+			Vec3 Translation = [3.04811645, 0.378935158, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 5.43656874,
+			float Size = 16.332346,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [9.88293076, -1.16485047, 4.84646705e-07],
+			Vec3 LookTarget = [3.04811645, 0.378935158, 1.85887458e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -781,7 +794,7 @@ Level =
 		},
 		SoundEmitter = 
 		{
-			float Volume = 1,
+			float Volume = 0.316227764,
 			float Pitch = 0,
 			float PitchSemitones = 0,
 			bool UsePitchSemitones = true,
