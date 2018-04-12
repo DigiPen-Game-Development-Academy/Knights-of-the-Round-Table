@@ -6,7 +6,7 @@ class Potato : Item {
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
         this.Stackable = false;
         this.MagSize = -1;
-        this.Name = "Potato";
+        this.Name = " pointy Potato";
         this.ID = "Potato";
         this.DamagePer = 10;
         this.FireRate = 2.5;
@@ -117,13 +117,13 @@ class Plasma_Pistol : Item {
         this.MagSize = 15;
         this.Name = "Plasma pistol";
         this.ID = "Pistol";
-        this.DamagePer = 25;
+        this.DamagePer = 20;
         this.FireRate = 15;
         this.AmmoPerShot = 1;
         this.RelodTime = 1;
         this.Sound = SoundCue.Shot;
         this.SoundDistance = 7;
-        this.MaxRange = 10;
+        this.MaxRange = 7;
         this.Auto = false;
     }
     
@@ -181,10 +181,10 @@ class PlasmaSword : Item {
         this.MagSize = 10;
         this.Name = "Plasma Sword";
         this.ID = "Sword";
-        this.DamagePer = 100;
+        this.DamagePer = 152;
         this.FireRate = 8;
-        this.AmmoPerShot = 2;
-        this.RelodTime = 1;
+        this.AmmoPerShot = 3;
+        this.RelodTime = 2;
         this.SoundDistance = 0;
     }
     
@@ -229,11 +229,11 @@ class TerribleAssaultRifle : Item {
         this.MagSize = 20;
         this.Name = "Ramshackle Rifle";
         this.ID = "Rifle";
-        this.DamagePer = 35;
+        this.DamagePer = 29;
         this.FireRate = 8; 
         this.AmmoPerShot = 1;
         this.RelodTime = 3;
-        this.MaxRange = 16;
+        this.MaxRange = 12;
         this.SoundDistance = 8;
     }
     
@@ -453,14 +453,14 @@ class SawLaser  : Item {
         this.GroundSprite = SpriteSource.DragonRoarAlpha;
         this.Sound = SoundCue.Shot;
         this.Stackable = false;
-        this.MagSize = 100;
+        this.MagSize = 50;
         this.Name = "Saw laser";
         this.ID = "Saw_Laser";
-        this.DamagePer = 25;
+        this.DamagePer = 30;
         this.FireRate = 10; 
-        this.AmmoPerShot = 1;
+        this.AmmoPerShot = 2;
         this.RelodTime = 5;
-        this.MaxRange = 15;
+        this.MaxRange = 11;
         this.SoundDistance = 15;
     }
     
@@ -520,7 +520,7 @@ class Lasersniper  : Item {
         this.MagSize = 30;
         this.Name = "Laser Sniper";
         this.ID = "Sniper";
-        this.DamagePer = 100;
+        this.DamagePer = 222;
         this.FireRate = 2; 
         this.AmmoPerShot = 3;
         this.RelodTime = 4;
@@ -683,7 +683,7 @@ class Potatocannon  : Item {
         this.Name = "Potato Cannon";
         this.ID = "Potato_cannon";
         this.DamagePer = 100;
-        this.FireRate = 10;
+        this.FireRate = 19;
         this.AmmoPerShot = 1;
         this.RelodTime = 0.1;
         this.Auto = false;
@@ -746,8 +746,8 @@ class MMS_Sniper  : Item {
         this.Name = "MMS Sniper";
         this.ID = "MMS_Sniper";
         this.DamagePer = 250;
-        this.FireRate = 2; 
-        this.AmmoPerShot = 20;
+        this.FireRate = 3; 
+        this.AmmoPerShot = 5;
         this.RelodTime = 7;
         this.RandAngle = 0;
         this.Auto = false;

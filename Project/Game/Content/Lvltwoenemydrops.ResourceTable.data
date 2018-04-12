@@ -21,22 +21,22 @@ ResourceTable =
 		{
 			string Name = "Name4",
 			string Value = "Sniper",
-			float Weight = 20,
+			float Weight = 5,
 		},
 		{
 			string Name = "Name5",
 			string Value = "Saw_Laser",
-			float Weight = 15,
+			float Weight = 10,
 		},
 		{
 			string Name = "Name6",
 			string Value = "Ammo",
-			float Weight = 40,
+			float Weight = 25,
 		},
 		{
 			string Name = "Name7",
 			string Value = "Health Pack (T2)",
-			float Weight = 20,
+			float Weight = 10,
 		},
 		{
 			string Name = "Name8",

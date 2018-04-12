@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Enemy_GI_Pistol",
+		string Name = "Enemy_Stealth(worldone)",
 	},
 	Archetyped = 
 	{
-		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
+		string Name = "5a2e6ee2b26b2756:Enemy_StealthW1",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [28.3635941, -40.215374, 0],
+		Vec3 Translation = [68.7565384, 69.5758057, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -70,9 +70,6 @@ Cog =
 	BasicPathFollowAI = 
 	{
 	},
-	Visibility = 
-	{
-	},
 	SphereCollider = 
 	{
 		bool Ghost = false,
@@ -83,11 +80,14 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		float Radius = 0.5,
 	},
+	Visibility = 
+	{
+	},
 	EnemyAI = 
 	{
 		float InstantSpotRadius = 3,
 		float MaxDistFromGuard = 20,
-		float WaitTime = 4,
+		float WaitTime = 1,
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,
@@ -95,20 +95,20 @@ Cog =
 		float ChaseSpeedMultiplier = 2,
 		float GuardWaitTime = 5,
 		float SearchTimer = 20,
-		float MaxTimeOutOfSight = 1,
+		float MaxTimeOutOfSight = 5,
 		float SearchRange = 10,
 		float ViewDist = 10,
 	},
 	EnemySprite = 
 	{
-		string North = "5af4dcd2583e40fb:Ranger004",
-		string NorthEast = "5af4dcd25831d337:Ranger005",
-		string East = "5af4dcd358356d7f:Ranger006",
-		string SouthEast = "5af4dcd35808ecc3:Ranger007",
-		string South = "5af4dcd2582df625:Ranger000",
-		string SouthWest = "5af4dcd2582316b1:Ranger001",
-		string West = "5af4dcd258275797:Ranger002",
-		string NorthWest = "5af4dcd2583acbe8:Ranger003",
+		string North = "5ad396a3d11f6a15:PhantomAlpha001",
+		string NorthEast = "5ad396a3d11f6a15:PhantomAlpha001",
+		string East = "5ad396a3d1339c38:PhantomAlpha000",
+		string SouthEast = "5ad396a3d1339c38:PhantomAlpha000",
+		string South = "5ad396a3d1339c38:PhantomAlpha000",
+		string SouthWest = "5ad396a3d1339c38:PhantomAlpha000",
+		string West = "5ad396a3d1339c38:PhantomAlpha000",
+		string NorthWest = "5ad396a3d11f6a15:PhantomAlpha001",
 	},
 	EnemyMelee = 
 	{
@@ -127,28 +127,16 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
-		string LootTable = "5a816d6a44fae722:levelthree",
-	},
-	EnemyRayShooting = 
-	{
-		float MaxRange = 10,
-		float DamagePer = 20,
-		string WakeSprite = "5a9bdadb3cdcabb7:Wake",
-		float SoundDistance = 10,
-		string Sound = "5a84cbaca2f7cdf9:Shot",
-		float RandAngle = 10,
-		int MagSize = 3,
-		float ReloadTime = 2,
-		float FireRate = 4,
-		float MinDist = 4,
-		float MaxDist = 10,
-		string DeathMSG = "You Where Shot by an Enemy",
-	},
-	EnemyPing = 
-	{
+		string LootTable = "5a226ceae71b9d57:atrammohealthgoodwep",
 	},
 	MenuVisibilityController = 
 	{
+	},
+	Stealth = 
+	{
+		float InvisSpeedMultiplier = 2,
+		string OpacityCurve = "5abdc26d9fc78f57:StealthOpacity",
+		float CloseSpeedMultiplier = 2,
 	},
 	Hierarchy = 
 	{

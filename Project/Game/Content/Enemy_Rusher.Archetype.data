@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [27.2161102, 26.2990131, -0.000999450684],
+		Vec3 Translation = [-52.5, 56, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -85,9 +85,9 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float InstantSpotRadius = 3,
+		float InstantSpotRadius = 2,
 		float MaxDistFromGuard = 20,
-		float WaitTime = 1,
+		float WaitTime = 4,
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,
@@ -127,7 +127,7 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
-		string LootTable = "5a226ceae71b9d57:atrammohealthgoodwep",
+		string LootTable = "5a2725385ea2e7ae:nothing",
 	},
 	EnemyPing = 
 	{

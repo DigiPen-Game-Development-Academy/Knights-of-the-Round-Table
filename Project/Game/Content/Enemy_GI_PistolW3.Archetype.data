@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [28.3635941, -40.215374, 0],
+		Vec3 Translation = [15.5, -23.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
