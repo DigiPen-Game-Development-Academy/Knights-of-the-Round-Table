@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5a2263fcd30cf9c5:Enemy_Shield(worldtwo)",
+		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-99.5, -29.5, 0],
+		Vec3 Translation = [15.5, -25.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -127,7 +127,7 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
-		string LootTable = "5a2266fd60a18cf4:leveltwohealthammo",
+		string LootTable = "5a11b100e0d8983f:Loot",
 	},
 	EnemyPing = 
 	{
@@ -145,7 +145,7 @@ Cog =
 		float RandAngle = 15,
 		int MagSize = 10,
 		float ReloadTime = 5,
-		float FireRate = 2,
+		float FireRate = 0.5,
 		float MinDist = 2,
 		float MaxDist = 3,
 		string DeathMSG = "You Where Shot by an Enemy",
@@ -246,7 +246,7 @@ Cog =
 						bool SendsMessages = true,
 						bool Seamless = true,
 						string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-						string SerializedGroupName = "5a57db49dff94fe2:Shield",
+						string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
 						Vec3 Offset = [0, 0, 0],
 						Vec3 Size = [0.125, 0.5, 2],
 					},
@@ -259,7 +259,7 @@ Cog =
 						bool Mode2D = true,
 						bool AllowSleep = true,
 						bool Inherit2DMode = true,
-						Vec3 Velocity = [-6179.68701, -1843.74988, 62.4999962],
+						Vec3 Velocity = [-749.999939, 374.999969, 0],
 						Vec3 AngularVelocity = [0, 0, 0],
 					},
 					MenuVisibilitySprite = 

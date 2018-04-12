@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5a2263fcd30cf9c5:Enemy_Shield(worldtwo)",
+		string Name = "5a2e6e9ab48fac87:Enemy_ShieldW1",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-99.5, -29.5, 0],
+		Vec3 Translation = [25.5, 9.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -87,7 +87,7 @@ Cog =
 	{
 		float InstantSpotRadius = 3,
 		float MaxDistFromGuard = 20,
-		float WaitTime = 1,
+		float WaitTime = 3,
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,
@@ -127,7 +127,7 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
-		string LootTable = "5a2266fd60a18cf4:leveltwohealthammo",
+		string LootTable = "5a226ceae71b9d57:atrammohealthgoodwep",
 	},
 	EnemyPing = 
 	{
@@ -142,10 +142,10 @@ Cog =
 		string WakeSprite = "5a9bdadb3cdcabb7:Wake",
 		float SoundDistance = 10,
 		string Sound = "5a84cbaca2f7cdf9:Shot",
-		float RandAngle = 15,
-		int MagSize = 10,
-		float ReloadTime = 5,
-		float FireRate = 2,
+		float RandAngle = 7,
+		int MagSize = 20,
+		float ReloadTime = 3,
+		float FireRate = 17,
 		float MinDist = 2,
 		float MaxDist = 3,
 		string DeathMSG = "You Where Shot by an Enemy",
@@ -197,8 +197,8 @@ Cog =
 			},
 			Shield = 
 			{
-				float TurnSpeed = 0.75,
-				float FlashSpeed = 5,
+				float TurnSpeed = 1.45000005,
+				float FlashSpeed = 25,
 				bool Shoot = true,
 			},
 			MenuVisibilityController = 
@@ -259,7 +259,7 @@ Cog =
 						bool Mode2D = true,
 						bool AllowSleep = true,
 						bool Inherit2DMode = true,
-						Vec3 Velocity = [-6179.68701, -1843.74988, 62.4999962],
+						Vec3 Velocity = [1632.81238, 593.749939, 62.4999962],
 						Vec3 AngularVelocity = [0, 0, 0],
 					},
 					MenuVisibilitySprite = 
