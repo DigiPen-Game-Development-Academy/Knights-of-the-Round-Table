@@ -18,10 +18,10 @@ class Radar : Item {
         lore.Add("I SEE ALLL");
         lore.Add("lets you see through walls");
         lore.Add("PING!");
-        lore.Add("lets you see through walls");
-        lore.Add("lets you see through walls");
-        lore.Add("lets you see through walls");
-        lore.Add("lets you see through walls");
+        lore.Add("You can run");
+        lore.Add("Enemy detected!");
+        lore.Add("That's impossible, even for a computer!");
+        lore.Add("Target in sight");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
