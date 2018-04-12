@@ -109,15 +109,15 @@ class Silencer : Item {
     function ReturnLore() : String {
         var lore = Array[String]();
         lore.Add("Silencer for all weapons");
-        lore.Add("ADD MORE LORE");
-        lore.Add("ADD MORE LORE");
-        lore.Add("ADD MORE LORE");
-        lore.Add("ADD MORE LORE");
-        lore.Add("ADD MORE LORE");
-        lore.Add("ADD MORE LORE");
-        lore.Add("ADD MORE LORE");
-        lore.Add("ADD MORE LORE");
-        lore.Add("ADD MORE LORE");
+        lore.Add("Quiet down.");
+        lore.Add("Does it make a sound?");
+        lore.Add("You won't even know if you fired!");
+        lore.Add("No, the sound is not muted.");
+        lore.Add("In here, no one can hear them scream.");
+        lore.Add("SHHHHHHH!");
+        lore.Add("Silence is golden.");
+        lore.Add("Loud guns are overrated.");
+        lore.Add("Hush now.");
         var rand = Random();
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
@@ -142,11 +142,11 @@ class Flashlight : Item {
     function ReturnLore() : String {
         var lore = Array[String]();
         lore.Add("You should keep this, it may come in handy!");
-        lore.Add("You should keep this, it may come in handy!");
-        lore.Add("You should keep this, it may come in handy!");
-        lore.Add("You should keep this, it may come in handy!");
-        lore.Add("You should keep this, it may come in handy!");
-        lore.Add("You should keep this, it may come in handy!");
+        lore.Add("Works best in very dark places.");
+        lore.Add("Don't get any bright ideas.");
+        lore.Add("Let there be light!");
+        lore.Add("Batteries included.");
+        lore.Add("Nobody will read this.");
         lore.Add("For all your room lighting needs");
         lore.Add("With our new and patented design, this flashlight will never run out of battery!\nAnd it will shine through walls!");
         lore.Add("It's a flashlight!");
