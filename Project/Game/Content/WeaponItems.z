@@ -456,7 +456,7 @@ class SawLaser  : Item {
         this.MagSize = 50;
         this.Name = "Saw laser";
         this.ID = "Saw_Laser";
-        this.DamagePer = 30;
+        this.DamagePer = 35;
         this.FireRate = 10; 
         this.AmmoPerShot = 2;
         this.RelodTime = 5;
@@ -522,7 +522,7 @@ class Lasersniper  : Item {
         this.ID = "Sniper";
         this.DamagePer = 222;
         this.FireRate = 2; 
-        this.AmmoPerShot = 3;
+        this.AmmoPerShot = 6;
         this.RelodTime = 4;
         this.MaxRange = 100;
         this.RandAngle = 0;

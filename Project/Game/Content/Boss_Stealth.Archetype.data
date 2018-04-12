@@ -60,7 +60,7 @@ Cog =
 	},
 	Health = 
 	{
-		float InitialHealth = 1000,
+		float InitialHealth = 2000,
 		float Cooldown = 10,
 		float RegenRate = 0.5,
 	},
@@ -80,17 +80,17 @@ Cog =
 	},
 	EnemyAI = 
 	{
-		float InstantSpotRadius = 2,
-		float MaxDistFromGuard = 100,
+		float InstantSpotRadius = 2000,
+		float MaxDistFromGuard = 1000,
 		float WaitTime = 1,
 		float Range = 3,
 		float ViewAngle = 360,
-		float ViewRange = 6,
+		float ViewRange = 600,
 		float MoveSpeed = 2,
-		float ChaseSpeedMultiplier = 2,
+		float ChaseSpeedMultiplier = 1,
 		float GuardWaitTime = 5,
 		float SearchTimer = 20,
-		float MaxTimeOutOfSight = 1,
+		float MaxTimeOutOfSight = 1000,
 		float SearchRange = 10,
 		float ViewDist = 10,
 	},
@@ -102,12 +102,29 @@ Cog =
 	},
 	Stealth = 
 	{
-		float SneakRange = 50,
-		float SneakCooldown = 3,
+		float InvisSpeedMultiplier = 1,
+		string OpacityCurve = "5abdc26d9fc78f57:StealthOpacity",
+		float CloseSpeedMultiplier = 4,
 	},
 	StealthBoss = 
 	{
-		float SneakCooldown = 5,
+	},
+	EnemyMelee = 
+	{
+		float AttacksPerSecond = 50,
+		float DamagerPerAttack = 1,
+		string DeathMSG = "You were bitten by an enemy.",
+	},
+	EnemySprite = 
+	{
+		string North = "5ab43175f6217a4a:PhantomBoss004",
+		string NorthEast = "5ab4316af6c26fbc:PhantomBoss005",
+		string East = "5ab4316af6e343dd:PhantomBoss006",
+		string SouthEast = "5ab4316bf68c02aa:PhantomBoss007",
+		string South = "5ab43171f5ae79c0:PhantomBoss000",
+		string SouthWest = "5ab43176f647d8ea:PhantomBoss001",
+		string West = "5ab43177f667815e:PhantomBoss002",
+		string NorthWest = "5ab43174f600bbbe:PhantomBoss003",
 	},
 	Hierarchy = 
 	{

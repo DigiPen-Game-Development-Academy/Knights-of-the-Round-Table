@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-0.0803636909, -5.64233685, 0],
 		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -26,7 +26,7 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
 		Vec3 Offset = [0, 0, 0],
-		float Radius = 0.5,
+		float Radius = 0.300000012,
 	},
 	Sprite = 
 	{
@@ -38,7 +38,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5ad3a90f17327394:RangerBoss000",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -48,14 +48,14 @@ Cog =
 	},
 	Health = 
 	{
-		float InitialHealth = 1000,
+		float InitialHealth = 1750,
 		float Cooldown = 10,
 		float RegenRate = 0.5,
 	},
 	Boss_GI_AI = 
 	{
-		float FireRateFull = 10,
-		float FireRateEmpty = 15,
+		float FireRateFull = 7,
+		float FireRateEmpty = 10,
 		float PFireRateFull = 3,
 		float PFireRateEmpty = 5,
 		float FireCooldownMax = 6,
@@ -78,13 +78,13 @@ Cog =
 		float SpinFireRateEmpty = 40,
 		float BSpeedFull = 3,
 		float BSpeedEmpty = 10,
-		float DamageFull = 10,
-		float DamageEmpty = 25,
+		float DamageFull = 9,
+		float DamageEmpty = 15,
 		float SpreadHealth = 0.75,
 		float SpinHealth = 0.5,
 		float WindCooldownFull = 1,
 		float WindCooldownEmpty = 1,
-		string DamageMSG = "You were shot with impossible slow-mo bullets",
+		string DamageMSG = "You were shot with impossible slow-mo bullets.",
 	},
 	BossDrops = 
 	{

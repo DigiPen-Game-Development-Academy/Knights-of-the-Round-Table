@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-26.5, -52.5, 0],
+		Vec3 Translation = [-4.23173141, 50.7470016, -0.900001526],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -127,19 +127,19 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
-		string LootTable = "5a816d6a44fae722:levelthree",
+		string LootTable = "5a226ceae71b9d57:atrammohealthgoodwep",
 	},
 	EnemyRayShooting = 
 	{
 		float MaxRange = 10,
-		float DamagePer = 20,
+		float DamagePer = 25,
 		string WakeSprite = "5a9bdadb3cdcabb7:Wake",
 		float SoundDistance = 10,
 		string Sound = "5a84cbaca2f7cdf9:Shot",
 		float RandAngle = 10,
 		int MagSize = 3,
 		float ReloadTime = 2,
-		float FireRate = 4,
+		float FireRate = 6,
 		float MinDist = 4,
 		float MaxDist = 10,
 		string DeathMSG = "You Where Shot by an Enemy",
