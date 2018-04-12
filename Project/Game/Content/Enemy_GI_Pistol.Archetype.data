@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [28.3635941, -40.215374, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -87,7 +87,7 @@ Cog =
 	{
 		float InstantSpotRadius = 3,
 		float MaxDistFromGuard = 20,
-		float WaitTime = 1,
+		float WaitTime = 4,
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,
@@ -127,7 +127,7 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
-		string LootTable = "5a226ceae71b9d57:atrammohealthgoodwep",
+		string LootTable = "5a816d6a44fae722:levelthree",
 	},
 	EnemyRayShooting = 
 	{

@@ -6,7 +6,7 @@ ResourceTable =
 		{
 			string Name = "Name1",
 			string Value = "Health_Pack_(T3)",
-			float Weight = 20,
+			float Weight = 5,
 		},
 		{
 			string Name = "Name2",
@@ -26,22 +26,22 @@ ResourceTable =
 		{
 			string Name = "Name5",
 			string Value = "Health Pack (T2)",
-			float Weight = 15,
+			float Weight = 5,
 		},
 		{
 			string Name = "Name6",
 			string Value = "Health Pack (T1)",
-			float Weight = 10,
+			float Weight = 7,
 		},
 		{
 			string Name = "Name7",
 			string Value = "Ammo",
-			float Weight = 40,
+			float Weight = 30,
 		},
 		{
 			string Name = "Name8",
 			string Value = "Laser_beam",
-			float Weight = 10,
+			float Weight = 8,
 		},
 		{
 			string Name = "Name9",

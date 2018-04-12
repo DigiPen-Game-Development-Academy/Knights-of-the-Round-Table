@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Enemy_Shield",
 	},
+	Archetyped = 
+	{
+		string Name = "5a2263fcd30cf9c5:Enemy_Shield(worldtwo)",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-86.6845322, -20.9891739, 1.75024033],
+		Vec3 Translation = [-99.5, -29.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -141,7 +145,7 @@ Cog =
 		float RandAngle = 15,
 		int MagSize = 10,
 		float ReloadTime = 5,
-		float FireRate = 0.5,
+		float FireRate = 2,
 		float MinDist = 2,
 		float MaxDist = 3,
 		string DeathMSG = "You Where Shot by an Enemy",
@@ -194,6 +198,8 @@ Cog =
 			Shield = 
 			{
 				float TurnSpeed = 0.75,
+				float FlashSpeed = 5,
+				bool Shoot = true,
 			},
 			MenuVisibilityController = 
 			{
@@ -253,7 +259,7 @@ Cog =
 						bool Mode2D = true,
 						bool AllowSleep = true,
 						bool Inherit2DMode = true,
-						Vec3 Velocity = [-5378.72021, -1311.82324, 171.890015],
+						Vec3 Velocity = [-6179.68701, -1843.74988, 62.4999962],
 						Vec3 AngularVelocity = [0, 0, 0],
 					},
 					MenuVisibilitySprite = 

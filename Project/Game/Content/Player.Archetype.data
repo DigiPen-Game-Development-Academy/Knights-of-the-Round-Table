@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.5, 0.5, 0],
+		Vec3 Translation = [-113.777763, 51.8237991, -7.62939453e-06],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -88,7 +88,7 @@ Cog =
 	{
 		float InitialHealth = 100,
 		float Cooldown = 3,
-		float RegenRate = 0.333333343,
+		float RegenRate = 0.166665003,
 	},
 	PlayerHealth = 
 	{

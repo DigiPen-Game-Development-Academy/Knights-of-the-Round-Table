@@ -13,11 +13,12 @@ class HealthPackT1 : Item {
     
     function Use (radAngle : Real) {
         
-        Console.WriteLine("ADD HEATH");
+        Console.WriteLine("ADD HEATH T1");
         GlobalVariables.Player.Health.CurrentHealth += 10;
         if(GlobalVariables.Player.Health.CurrentHealth > GlobalVariables.Player.Health.InitialHealth) {
             GlobalVariables.Player.Health.CurrentHealth = GlobalVariables.Player.Health.InitialHealth;
         }
+        GlobalVariables.Player.Health.RegenEffect(60, 3);
         
     }
     
@@ -38,11 +39,12 @@ class HealthPackT2 : Item {
     
     function Use (radAngle : Real) {
         
-        Console.WriteLine("ADD HEATH");
-        GlobalVariables.Player.Health.CurrentHealth += 25;
+        Console.WriteLine("ADD HEATH T2");
+        GlobalVariables.Player.Health.CurrentHealth += 15;
         if(GlobalVariables.Player.Health.CurrentHealth > GlobalVariables.Player.Health.InitialHealth) {
             GlobalVariables.Player.Health.CurrentHealth = GlobalVariables.Player.Health.InitialHealth;
         }
+        GlobalVariables.Player.Health.RegenEffect(60, 3.5);
         
     }
     
@@ -64,11 +66,12 @@ class HealthPackT3 : Item {
     
     function Use (radAngle : Real) {
         
-        Console.WriteLine("ADD HEATH");
-        GlobalVariables.Player.Health.CurrentHealth += 40;
+        Console.WriteLine("ADD HEATH T3");
+        GlobalVariables.Player.Health.CurrentHealth += 20;
         if(GlobalVariables.Player.Health.CurrentHealth > GlobalVariables.Player.Health.InitialHealth) {
             GlobalVariables.Player.Health.CurrentHealth = GlobalVariables.Player.Health.InitialHealth;
         }
+        GlobalVariables.Player.Health.RegenEffect(90, 4.5);
         
     }
     
