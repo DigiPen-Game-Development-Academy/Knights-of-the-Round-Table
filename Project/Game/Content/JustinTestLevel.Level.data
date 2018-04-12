@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-116.564194, 52.704216, 63.9999962],
+			Vec3 Translation = [57.5692635, -31.9003925, 64],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 14.9568901,
+			float Size = 90.483757,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-116.564194, 52.704216, -3.88542867e-06],
+			Vec3 LookTarget = [57.5692635, -31.9003925, 3.72618751e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -5647,6 +5647,440 @@ Level =
 		},
 		Named = 
 		{
+			string Name = "Fortress3MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-90.2646103, -27.8205452, -5],
+			Vec3 Scale = [38.5514297, 28.1043682, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5ab43dca90e603eb:RootsOfDecay",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 123,
+		},
+		Named = 
+		{
+			string Name = "Fortress4MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-67.6425629, -65.1589737, -5],
+			Vec3 Scale = [47.6004257, 33.9385338, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5ab43dca90e603eb:RootsOfDecay",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 124,
+		},
+		Named = 
+		{
+			string Name = "Fortress5MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-23.8073483, -56.9800606, -5],
+			Vec3 Scale = [22.3919868, 21.6438923, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5a517d0ad3521963:Fortress1",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 125,
+		},
+		Named = 
+		{
+			string Name = "Fortress6MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [12.130806, -73.576088, -5],
+			Vec3 Scale = [24.3023224, 21.6438923, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5ab43dca90e603eb:RootsOfDecay",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 126,
+		},
+		Named = 
+		{
+			string Name = "Fortress7MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27.8803139, -34.5586548, -5],
+			Vec3 Scale = [15.5457029, 11.3836136, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5a517d0ad3521963:Fortress1",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 127,
+		},
+		Named = 
+		{
+			string Name = "Fortress8MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [62.2405167, -17.5007439, -5],
+			Vec3 Scale = [34.8030624, 22.6252174, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5ab43dca90e603eb:RootsOfDecay",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 128,
+		},
+		Named = 
+		{
+			string Name = "Fortress9MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [107.811378, -74.1936569, -5],
+			Vec3 Scale = [43.2676239, 49.3968735, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5ab43dca90e603eb:RootsOfDecay",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 129,
+		},
+		Named = 
+		{
 			string Name = "Fortress2MusicZone",
 		},
 		Archetyped = 
@@ -5705,7 +6139,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 123,
+			uint Id = 130,
 		},
 		Named = 
 		{
@@ -5765,7 +6199,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 124,
+					uint Id = 131,
 				},
 				Named = 
 				{
@@ -5827,7 +6261,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 125,
+					uint Id = 132,
 				},
 				Named = 
 				{
@@ -5889,7 +6323,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 126,
+					uint Id = 133,
 				},
 				Named = 
 				{
@@ -5951,7 +6385,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 127,
+					uint Id = 134,
 				},
 				Named = 
 				{
@@ -6013,7 +6447,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 128,
+					uint Id = 135,
 				},
 				Named = 
 				{
@@ -6075,7 +6509,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 129,
+					uint Id = 136,
 				},
 				Named = 
 				{
@@ -6137,7 +6571,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 130,
+					uint Id = 137,
 				},
 				Named = 
 				{
@@ -6195,6 +6629,626 @@ Level =
 				{
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 138,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.027482301, -0.811787546, 0],
+					Vec3 Scale = [1.77182043, 0.674876451, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 139,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.0535086393, -1.91896939, 0],
+					Vec3 Scale = [0.902934253, 0.82294935, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 140,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.93852234, -1.56729627, 0],
+					Vec3 Scale = [0.378399312, 1.41860652, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 141,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.84843016, -0.978369713, 0],
+					Vec3 Scale = [1.28732622, 0.227292329, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 142,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.2958765, -0.783486843, 0],
+					Vec3 Scale = [0.486633539, 0.227292329, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 143,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.43601048, -1.6934948, 0],
+					Vec3 Scale = [0.902934253, 1.28736007, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 144,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.859422326, -1.27451563, 0],
+					Vec3 Scale = [0.902934253, 0.429210067, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 145,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.69125092, -0.924525023, 0],
+					Vec3 Scale = [0.33435452, 0.71189481, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 146,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.04160821, -0.702415586, 0],
+					Vec3 Scale = [0.618644297, 0.301328868, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 147,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.419104189, -0.468020618, 0],
+					Vec3 Scale = [0.047020752, 0.094016239, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
 		},
 	},
 	ArchetypeInstance = 
@@ -6202,7 +7256,7 @@ Level =
 		string Name = "5a500473a8a4fae7:HatchGI",
 		LinkId = 
 		{
-			uint Id = 131,
+			uint Id = 148,
 		},
 		Transform = 
 		{
@@ -6220,7 +7274,7 @@ Level =
 		string Name = "5a501ec6b1d434c0:HatchRusher",
 		LinkId = 
 		{
-			uint Id = 132,
+			uint Id = 149,
 		},
 		Transform = 
 		{
@@ -6238,7 +7292,7 @@ Level =
 		string Name = "5a50048cb5abb492:HatchShield",
 		LinkId = 
 		{
-			uint Id = 133,
+			uint Id = 150,
 		},
 		Transform = 
 		{
@@ -6256,7 +7310,7 @@ Level =
 		string Name = "5a50049fb2d3a8b3:HatchStealth",
 		LinkId = 
 		{
-			uint Id = 134,
+			uint Id = 151,
 		},
 		Transform = 
 		{
@@ -6273,7 +7327,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 135,
+			uint Id = 152,
 		},
 		Named = 
 		{
@@ -6321,7 +7375,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 136,
+			uint Id = 153,
 		},
 		Named = 
 		{
@@ -6369,7 +7423,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 137,
+			uint Id = 154,
 		},
 		Named = 
 		{
@@ -6417,7 +7471,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 138,
+			uint Id = 155,
 		},
 		Named = 
 		{
@@ -6465,7 +7519,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 139,
+			uint Id = 156,
 		},
 		Named = 
 		{
@@ -6513,7 +7567,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 140,
+			uint Id = 157,
 		},
 		Named = 
 		{
@@ -6561,7 +7615,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 141,
+			uint Id = 158,
 		},
 		Named = 
 		{
@@ -6609,7 +7663,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 142,
+			uint Id = 159,
 		},
 		Named = 
 		{
@@ -6657,7 +7711,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 143,
+			uint Id = 160,
 		},
 		Named = 
 		{
@@ -6705,7 +7759,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 144,
+			uint Id = 161,
 		},
 		Named = 
 		{
@@ -6753,7 +7807,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 145,
+			uint Id = 162,
 		},
 		Named = 
 		{
@@ -6801,7 +7855,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 146,
+			uint Id = 163,
 		},
 		Named = 
 		{
@@ -6849,7 +7903,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 147,
+			uint Id = 164,
 		},
 		Named = 
 		{
@@ -6898,7 +7952,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 148,
+			uint Id = 165,
 		},
 		Transform = 
 		{
@@ -6916,7 +7970,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 149,
+			uint Id = 166,
 		},
 		Transform = 
 		{
@@ -6934,7 +7988,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 150,
+			uint Id = 167,
 		},
 		Transform = 
 		{
@@ -6952,7 +8006,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 151,
+			uint Id = 168,
 		},
 		Transform = 
 		{
@@ -6970,7 +8024,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 152,
+			uint Id = 169,
 		},
 		Transform = 
 		{
@@ -6988,7 +8042,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 153,
+			uint Id = 170,
 		},
 		Transform = 
 		{
@@ -7006,7 +8060,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 154,
+			uint Id = 171,
 		},
 		Transform = 
 		{
@@ -7024,7 +8078,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 155,
+			uint Id = 172,
 		},
 		Transform = 
 		{
@@ -7042,7 +8096,7 @@ Level =
 		string Name = "5a026fe412609373:Enemy_Rusher",
 		LinkId = 
 		{
-			uint Id = 156,
+			uint Id = 173,
 		},
 		Transform = 
 		{
@@ -7060,7 +8114,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 157,
+			uint Id = 174,
 		},
 		Transform = 
 		{
@@ -7077,7 +8131,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 158,
+			uint Id = 175,
 		},
 		Named = 
 		{
@@ -7127,7 +8181,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 159,
+			uint Id = 176,
 		},
 		Named = 
 		{
@@ -7167,7 +8221,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 160,
+			uint Id = 177,
 		},
 		Named = 
 		{
@@ -7219,7 +8273,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 158,
+				uint ResolvedCog = 175,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -7230,7 +8284,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 161,
+			uint Id = 178,
 		},
 		Named = 
 		{
@@ -7289,7 +8343,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 162,
+			uint Id = 179,
 		},
 		Named = 
 		{
@@ -7337,7 +8391,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 163,
+			uint Id = 180,
 		},
 		Named = 
 		{
@@ -7396,7 +8450,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 164,
+			uint Id = 181,
 		},
 		Named = 
 		{
@@ -7456,7 +8510,7 @@ Level =
 		string Name = "5a2268868c1f0c52:Enemy_Shield(worldone)",
 		LinkId = 
 		{
-			uint Id = 165,
+			uint Id = 182,
 		},
 		Transform = 
 		{
@@ -7474,7 +8528,7 @@ Level =
 		string Name = "5a2268bf77cbefe9:Enemy_Stealth(worldone)",
 		LinkId = 
 		{
-			uint Id = 166,
+			uint Id = 183,
 		},
 		Transform = 
 		{
@@ -7491,7 +8545,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 167,
+			uint Id = 184,
 		},
 		Named = 
 		{
@@ -7646,7 +8700,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 168,
+					uint Id = 185,
 				},
 				Transform = 
 				{
@@ -7668,7 +8722,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 169,
+					uint Id = 186,
 				},
 				Named = 
 				{
@@ -7699,7 +8753,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 170,
+							uint Id = 187,
 						},
 						Named = 
 						{
@@ -7768,7 +8822,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 171,
+			uint Id = 188,
 		},
 		Named = 
 		{
@@ -7923,7 +8977,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 172,
+					uint Id = 189,
 				},
 				Transform = 
 				{
@@ -7945,7 +8999,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 173,
+					uint Id = 190,
 				},
 				Named = 
 				{
@@ -7976,7 +9030,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 174,
+							uint Id = 191,
 						},
 						Named = 
 						{
@@ -8046,7 +9100,7 @@ Level =
 		string Name = "5ada2d9ceca1fb7f:Enemy_Rusher_Tutorial",
 		LinkId = 
 		{
-			uint Id = 175,
+			uint Id = 192,
 		},
 		Transform = 
 		{
@@ -8064,7 +9118,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 176,
+			uint Id = 193,
 		},
 		Transform = 
 		{
@@ -8082,7 +9136,7 @@ Level =
 		string Name = "5a07038da33d4a67:Enemy_GI_Pistol",
 		LinkId = 
 		{
-			uint Id = 177,
+			uint Id = 194,
 		},
 		Transform = 
 		{
@@ -8099,7 +9153,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 178,
+			uint Id = 195,
 		},
 		Named = 
 		{
@@ -8254,7 +9308,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 179,
+					uint Id = 196,
 				},
 				Transform = 
 				{
@@ -8276,7 +9330,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 180,
+					uint Id = 197,
 				},
 				Named = 
 				{
@@ -8307,7 +9361,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 181,
+							uint Id = 198,
 						},
 						Named = 
 						{
@@ -8376,7 +9430,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 182,
+			uint Id = 199,
 		},
 		Named = 
 		{
@@ -8424,7 +9478,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 183,
+			uint Id = 200,
 		},
 		Named = 
 		{
@@ -8483,7 +9537,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 184,
+			uint Id = 201,
 		},
 		Named = 
 		{
@@ -8542,7 +9596,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 185,
+			uint Id = 202,
 		},
 		Named = 
 		{
@@ -8590,7 +9644,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 186,
+			uint Id = 203,
 		},
 		Named = 
 		{
@@ -8745,7 +9799,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 187,
+					uint Id = 204,
 				},
 				Transform = 
 				{
@@ -8767,7 +9821,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 188,
+					uint Id = 205,
 				},
 				Named = 
 				{
@@ -8798,7 +9852,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 189,
+							uint Id = 206,
 						},
 						Named = 
 						{
@@ -8867,7 +9921,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 190,
+			uint Id = 207,
 		},
 		Named = 
 		{
@@ -9022,7 +10076,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 191,
+					uint Id = 208,
 				},
 				Transform = 
 				{
@@ -9044,7 +10098,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 192,
+					uint Id = 209,
 				},
 				Named = 
 				{
@@ -9075,7 +10129,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 193,
+							uint Id = 210,
 						},
 						Named = 
 						{
@@ -9144,7 +10198,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 194,
+			uint Id = 211,
 		},
 		Named = 
 		{
@@ -9287,7 +10341,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 195,
+					uint Id = 212,
 				},
 				Transform = 
 				{
@@ -9311,7 +10365,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 196,
+			uint Id = 213,
 		},
 		Named = 
 		{
@@ -9466,7 +10520,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 197,
+					uint Id = 214,
 				},
 				Transform = 
 				{
@@ -9490,7 +10544,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 198,
+			uint Id = 215,
 		},
 		Named = 
 		{
@@ -9630,7 +10684,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 199,
+					uint Id = 216,
 				},
 				Transform = 
 				{
@@ -9654,7 +10708,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 200,
+			uint Id = 217,
 		},
 		Named = 
 		{
@@ -9809,7 +10863,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 201,
+					uint Id = 218,
 				},
 				Transform = 
 				{
@@ -9833,7 +10887,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 202,
+			uint Id = 219,
 		},
 		Named = 
 		{
@@ -9973,7 +11027,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 203,
+					uint Id = 220,
 				},
 				Transform = 
 				{
@@ -9997,7 +11051,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 204,
+			uint Id = 221,
 		},
 		Named = 
 		{
@@ -10137,7 +11191,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 205,
+					uint Id = 222,
 				},
 				Transform = 
 				{
@@ -10161,7 +11215,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 206,
+			uint Id = 223,
 		},
 		Named = 
 		{
@@ -10316,7 +11370,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 207,
+					uint Id = 224,
 				},
 				Transform = 
 				{
@@ -10340,7 +11394,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 208,
+			uint Id = 225,
 		},
 		Named = 
 		{
@@ -10483,7 +11537,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 209,
+					uint Id = 226,
 				},
 				Transform = 
 				{
@@ -10507,7 +11561,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 210,
+			uint Id = 227,
 		},
 		Named = 
 		{
@@ -10662,7 +11716,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 211,
+					uint Id = 228,
 				},
 				Transform = 
 				{
@@ -10684,7 +11738,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 212,
+					uint Id = 229,
 				},
 				Named = 
 				{
@@ -10715,7 +11769,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 213,
+							uint Id = 230,
 						},
 						Named = 
 						{
@@ -10784,7 +11838,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 214,
+			uint Id = 231,
 		},
 		Named = 
 		{
@@ -10924,7 +11978,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 215,
+					uint Id = 232,
 				},
 				Transform = 
 				{
@@ -10948,7 +12002,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 216,
+			uint Id = 233,
 		},
 		Named = 
 		{
@@ -11103,7 +12157,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 217,
+					uint Id = 234,
 				},
 				Transform = 
 				{
@@ -11127,7 +12181,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 218,
+			uint Id = 235,
 		},
 		Named = 
 		{
@@ -11267,7 +12321,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 219,
+					uint Id = 236,
 				},
 				Transform = 
 				{
@@ -11291,7 +12345,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 220,
+			uint Id = 237,
 		},
 		Named = 
 		{
@@ -11431,7 +12485,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 221,
+					uint Id = 238,
 				},
 				Transform = 
 				{
@@ -11455,7 +12509,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 222,
+			uint Id = 239,
 		},
 		Named = 
 		{
@@ -11503,7 +12557,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 223,
+			uint Id = 240,
 		},
 		Named = 
 		{
@@ -11551,7 +12605,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 224,
+			uint Id = 241,
 		},
 		Named = 
 		{
@@ -11706,7 +12760,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 225,
+					uint Id = 242,
 				},
 				Transform = 
 				{
@@ -11730,7 +12784,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 226,
+			uint Id = 243,
 		},
 		Named = 
 		{
@@ -11870,7 +12924,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 227,
+					uint Id = 244,
 				},
 				Transform = 
 				{
@@ -11894,7 +12948,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 228,
+			uint Id = 245,
 		},
 		Named = 
 		{
@@ -12037,7 +13091,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 229,
+					uint Id = 246,
 				},
 				Transform = 
 				{
@@ -12061,7 +13115,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 230,
+			uint Id = 247,
 		},
 		Named = 
 		{
@@ -12204,7 +13258,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 231,
+					uint Id = 248,
 				},
 				Transform = 
 				{
@@ -12228,7 +13282,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 232,
+			uint Id = 249,
 		},
 		Named = 
 		{
@@ -12371,7 +13425,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 233,
+					uint Id = 250,
 				},
 				Transform = 
 				{
@@ -12395,7 +13449,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 234,
+			uint Id = 251,
 		},
 		Named = 
 		{
@@ -12538,7 +13592,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 235,
+					uint Id = 252,
 				},
 				Transform = 
 				{
@@ -12562,7 +13616,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 236,
+			uint Id = 253,
 		},
 		Named = 
 		{
@@ -12610,7 +13664,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 237,
+			uint Id = 254,
 		},
 		Named = 
 		{
@@ -12679,7 +13733,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 238,
+			uint Id = 255,
 		},
 		Named = 
 		{
@@ -12737,7 +13791,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 239,
+			uint Id = 256,
 		},
 		Named = 
 		{
@@ -12795,7 +13849,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 240,
+			uint Id = 257,
 		},
 		Named = 
 		{
@@ -12853,7 +13907,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 241,
+			uint Id = 258,
 		},
 		Named = 
 		{
@@ -12911,7 +13965,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 242,
+			uint Id = 259,
 		},
 		Named = 
 		{
@@ -12980,7 +14034,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 243,
+			uint Id = 260,
 		},
 		Named = 
 		{
@@ -13049,7 +14103,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 244,
+			uint Id = 261,
 		},
 		Named = 
 		{
@@ -13107,7 +14161,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 245,
+			uint Id = 262,
 		},
 		Named = 
 		{
@@ -13165,7 +14219,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 246,
+			uint Id = 263,
 		},
 		Named = 
 		{
@@ -13308,7 +14362,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 247,
+					uint Id = 264,
 				},
 				Transform = 
 				{
@@ -13332,7 +14386,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 248,
+			uint Id = 265,
 		},
 		Named = 
 		{
@@ -13386,7 +14440,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 249,
+			uint Id = 266,
 		},
 		Named = 
 		{
@@ -13529,7 +14583,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 250,
+					uint Id = 267,
 				},
 				Transform = 
 				{
@@ -13553,7 +14607,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 251,
+			uint Id = 268,
 		},
 		Named = 
 		{
@@ -13696,7 +14750,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 252,
+					uint Id = 269,
 				},
 				Transform = 
 				{
@@ -13720,7 +14774,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 253,
+			uint Id = 270,
 		},
 		Named = 
 		{
@@ -13863,7 +14917,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 254,
+					uint Id = 271,
 				},
 				Transform = 
 				{
@@ -13887,7 +14941,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 255,
+			uint Id = 272,
 		},
 		Named = 
 		{
@@ -14030,7 +15084,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 256,
+					uint Id = 273,
 				},
 				Transform = 
 				{
@@ -14054,7 +15108,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 257,
+			uint Id = 274,
 		},
 		Named = 
 		{
@@ -14197,7 +15251,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 258,
+					uint Id = 275,
 				},
 				Transform = 
 				{
@@ -14221,7 +15275,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 259,
+			uint Id = 276,
 		},
 		Named = 
 		{
@@ -14376,7 +15430,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 260,
+					uint Id = 277,
 				},
 				Transform = 
 				{
@@ -14400,7 +15454,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 261,
+			uint Id = 278,
 		},
 		Named = 
 		{
@@ -14555,7 +15609,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 262,
+					uint Id = 279,
 				},
 				Transform = 
 				{
@@ -14579,7 +15633,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 263,
+			uint Id = 280,
 		},
 		Named = 
 		{
@@ -14719,7 +15773,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 264,
+					uint Id = 281,
 				},
 				Transform = 
 				{
@@ -14743,7 +15797,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 265,
+			uint Id = 282,
 		},
 		Named = 
 		{
@@ -14898,7 +15952,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 266,
+					uint Id = 283,
 				},
 				Transform = 
 				{
@@ -14922,7 +15976,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 267,
+			uint Id = 284,
 		},
 		Named = 
 		{
@@ -15077,7 +16131,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 268,
+					uint Id = 285,
 				},
 				Transform = 
 				{
@@ -15099,7 +16153,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 269,
+					uint Id = 286,
 				},
 				Named = 
 				{
@@ -15130,7 +16184,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 270,
+							uint Id = 287,
 						},
 						Named = 
 						{
@@ -15199,7 +16253,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 271,
+			uint Id = 288,
 		},
 		Named = 
 		{
@@ -15342,7 +16396,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 272,
+					uint Id = 289,
 				},
 				Transform = 
 				{
@@ -15366,7 +16420,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 273,
+			uint Id = 290,
 		},
 		Named = 
 		{
@@ -15521,7 +16575,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 274,
+					uint Id = 291,
 				},
 				Transform = 
 				{
@@ -15543,7 +16597,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 275,
+					uint Id = 292,
 				},
 				Named = 
 				{
@@ -15574,7 +16628,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 276,
+							uint Id = 293,
 						},
 						Named = 
 						{
@@ -15643,7 +16697,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 277,
+			uint Id = 294,
 		},
 		Named = 
 		{
@@ -15798,7 +16852,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 278,
+					uint Id = 295,
 				},
 				Transform = 
 				{
@@ -15820,7 +16874,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 279,
+					uint Id = 296,
 				},
 				Named = 
 				{
@@ -15851,7 +16905,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 280,
+							uint Id = 297,
 						},
 						Named = 
 						{
@@ -15920,7 +16974,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 281,
+			uint Id = 298,
 		},
 		Named = 
 		{
@@ -16063,7 +17117,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 282,
+					uint Id = 299,
 				},
 				Transform = 
 				{
@@ -16087,7 +17141,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 283,
+			uint Id = 300,
 		},
 		Named = 
 		{
@@ -16242,7 +17296,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 284,
+					uint Id = 301,
 				},
 				Transform = 
 				{
@@ -16264,7 +17318,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 285,
+					uint Id = 302,
 				},
 				Named = 
 				{
@@ -16295,7 +17349,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 286,
+							uint Id = 303,
 						},
 						Named = 
 						{
@@ -16364,7 +17418,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 287,
+			uint Id = 304,
 		},
 		Named = 
 		{
@@ -16507,7 +17561,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 288,
+					uint Id = 305,
 				},
 				Transform = 
 				{
@@ -16531,7 +17585,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 289,
+			uint Id = 306,
 		},
 		Named = 
 		{
@@ -16674,7 +17728,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 290,
+					uint Id = 307,
 				},
 				Transform = 
 				{
@@ -16698,7 +17752,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 291,
+			uint Id = 308,
 		},
 		Named = 
 		{
@@ -16841,7 +17895,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 292,
+					uint Id = 309,
 				},
 				Transform = 
 				{
@@ -16865,7 +17919,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 293,
+			uint Id = 310,
 		},
 		Named = 
 		{
@@ -17020,7 +18074,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 294,
+					uint Id = 311,
 				},
 				Transform = 
 				{
@@ -17044,7 +18098,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 295,
+			uint Id = 312,
 		},
 		Named = 
 		{
@@ -17199,7 +18253,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 296,
+					uint Id = 313,
 				},
 				Transform = 
 				{
@@ -17223,7 +18277,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 297,
+			uint Id = 314,
 		},
 		Named = 
 		{
@@ -17366,7 +18420,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 298,
+					uint Id = 315,
 				},
 				Transform = 
 				{
@@ -17390,7 +18444,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 299,
+			uint Id = 316,
 		},
 		Named = 
 		{
@@ -17533,7 +18587,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 300,
+					uint Id = 317,
 				},
 				Transform = 
 				{
@@ -17557,7 +18611,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 301,
+			uint Id = 318,
 		},
 		Named = 
 		{
@@ -17712,7 +18766,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 302,
+					uint Id = 319,
 				},
 				Transform = 
 				{
@@ -17736,7 +18790,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 303,
+			uint Id = 320,
 		},
 		Named = 
 		{
@@ -17891,7 +18945,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 304,
+					uint Id = 321,
 				},
 				Transform = 
 				{
@@ -17915,7 +18969,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 305,
+			uint Id = 322,
 		},
 		Named = 
 		{
@@ -18070,7 +19124,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 306,
+					uint Id = 323,
 				},
 				Transform = 
 				{
@@ -18092,7 +19146,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 307,
+					uint Id = 324,
 				},
 				Named = 
 				{
@@ -18123,7 +19177,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 308,
+							uint Id = 325,
 						},
 						Named = 
 						{
@@ -18192,7 +19246,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 309,
+			uint Id = 326,
 		},
 		Named = 
 		{
@@ -18335,7 +19389,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 310,
+					uint Id = 327,
 				},
 				Transform = 
 				{
@@ -18359,7 +19413,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 311,
+			uint Id = 328,
 		},
 		Named = 
 		{
@@ -18514,7 +19568,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 312,
+					uint Id = 329,
 				},
 				Transform = 
 				{
@@ -18538,7 +19592,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 313,
+			uint Id = 330,
 		},
 		Named = 
 		{
@@ -18678,7 +19732,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 314,
+					uint Id = 331,
 				},
 				Transform = 
 				{
@@ -18702,7 +19756,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 315,
+			uint Id = 332,
 		},
 		Named = 
 		{
@@ -18845,7 +19899,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 316,
+					uint Id = 333,
 				},
 				Transform = 
 				{
@@ -18869,7 +19923,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 317,
+			uint Id = 334,
 		},
 		Named = 
 		{
@@ -19012,7 +20066,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 318,
+					uint Id = 335,
 				},
 				Transform = 
 				{
@@ -19036,7 +20090,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 319,
+			uint Id = 336,
 		},
 		Named = 
 		{
@@ -19191,7 +20245,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 320,
+					uint Id = 337,
 				},
 				Transform = 
 				{
@@ -19215,7 +20269,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 321,
+			uint Id = 338,
 		},
 		Named = 
 		{
@@ -19370,7 +20424,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 322,
+					uint Id = 339,
 				},
 				Transform = 
 				{
@@ -19392,7 +20446,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 323,
+					uint Id = 340,
 				},
 				Named = 
 				{
@@ -19423,7 +20477,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 324,
+							uint Id = 341,
 						},
 						Named = 
 						{
@@ -19492,7 +20546,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 325,
+			uint Id = 342,
 		},
 		Named = 
 		{
@@ -19647,7 +20701,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 326,
+					uint Id = 343,
 				},
 				Transform = 
 				{
@@ -19671,7 +20725,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 327,
+			uint Id = 344,
 		},
 		Named = 
 		{
@@ -19826,7 +20880,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 328,
+					uint Id = 345,
 				},
 				Transform = 
 				{
@@ -19848,7 +20902,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 329,
+					uint Id = 346,
 				},
 				Named = 
 				{
@@ -19879,7 +20933,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 330,
+							uint Id = 347,
 						},
 						Named = 
 						{
@@ -19948,7 +21002,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 331,
+			uint Id = 348,
 		},
 		Named = 
 		{
@@ -20088,7 +21142,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 332,
+					uint Id = 349,
 				},
 				Transform = 
 				{
@@ -20112,7 +21166,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 333,
+			uint Id = 350,
 		},
 		Named = 
 		{
@@ -20255,7 +21309,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 334,
+					uint Id = 351,
 				},
 				Transform = 
 				{
@@ -20279,7 +21333,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 335,
+			uint Id = 352,
 		},
 		Named = 
 		{
@@ -20434,7 +21488,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 336,
+					uint Id = 353,
 				},
 				Transform = 
 				{
@@ -20458,7 +21512,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 337,
+			uint Id = 354,
 		},
 		Named = 
 		{
@@ -20601,7 +21655,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 338,
+					uint Id = 355,
 				},
 				Transform = 
 				{
@@ -20625,7 +21679,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 339,
+			uint Id = 356,
 		},
 		Named = 
 		{
@@ -20780,7 +21834,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 340,
+					uint Id = 357,
 				},
 				Transform = 
 				{
@@ -20802,7 +21856,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 341,
+					uint Id = 358,
 				},
 				Named = 
 				{
@@ -20833,7 +21887,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 342,
+							uint Id = 359,
 						},
 						Named = 
 						{
@@ -20902,7 +21956,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 343,
+			uint Id = 360,
 		},
 		Named = 
 		{
@@ -21057,7 +22111,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 344,
+					uint Id = 361,
 				},
 				Transform = 
 				{
@@ -21079,7 +22133,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 345,
+					uint Id = 362,
 				},
 				Named = 
 				{
@@ -21110,7 +22164,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 346,
+							uint Id = 363,
 						},
 						Named = 
 						{
@@ -21179,7 +22233,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 347,
+			uint Id = 364,
 		},
 		Named = 
 		{
@@ -21322,7 +22376,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 348,
+					uint Id = 365,
 				},
 				Transform = 
 				{
@@ -21346,7 +22400,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 349,
+			uint Id = 366,
 		},
 		Named = 
 		{
@@ -21489,7 +22543,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 350,
+					uint Id = 367,
 				},
 				Transform = 
 				{
@@ -21513,7 +22567,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 351,
+			uint Id = 368,
 		},
 		Named = 
 		{
@@ -21656,7 +22710,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 352,
+					uint Id = 369,
 				},
 				Transform = 
 				{
@@ -21680,7 +22734,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 353,
+			uint Id = 370,
 		},
 		Named = 
 		{
@@ -21835,7 +22889,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 354,
+					uint Id = 371,
 				},
 				Transform = 
 				{
@@ -21859,7 +22913,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 355,
+			uint Id = 372,
 		},
 		Named = 
 		{
@@ -22014,7 +23068,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 356,
+					uint Id = 373,
 				},
 				Transform = 
 				{
@@ -22036,7 +23090,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 357,
+					uint Id = 374,
 				},
 				Named = 
 				{
@@ -22067,7 +23121,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 358,
+							uint Id = 375,
 						},
 						Named = 
 						{
@@ -22136,7 +23190,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 359,
+			uint Id = 376,
 		},
 		Named = 
 		{
@@ -22291,7 +23345,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 360,
+					uint Id = 377,
 				},
 				Transform = 
 				{
@@ -22315,7 +23369,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 361,
+			uint Id = 378,
 		},
 		Named = 
 		{
@@ -22458,7 +23512,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 362,
+					uint Id = 379,
 				},
 				Transform = 
 				{
@@ -22482,7 +23536,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 363,
+			uint Id = 380,
 		},
 		Named = 
 		{
@@ -22625,7 +23679,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 364,
+					uint Id = 381,
 				},
 				Transform = 
 				{
@@ -22649,7 +23703,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 365,
+			uint Id = 382,
 		},
 		Named = 
 		{
@@ -22792,7 +23846,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 366,
+					uint Id = 383,
 				},
 				Transform = 
 				{
