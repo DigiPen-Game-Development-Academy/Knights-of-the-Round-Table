@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [75.412262, -64.1930695, 64.0000076],
+			Vec3 Translation = [-115.246933, 54.3796616, 63.9999962],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 20.1896782,
+			float Size = 8.2085104,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [75.412262, -64.1930695, 4.9105679e-06],
+			Vec3 LookTarget = [-115.246933, 54.3796616, -3.42340991e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -13340,9 +13340,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-117.012146, 54.7763443, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0.0630333424, 0.998011529],
+			Vec3 Translation = [-117.157578, 54.7763443, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
 		{
@@ -13354,13 +13354,13 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ab767329879f05e:YachtDestroyed",
+			string SpriteSource = "5ab43b0b9d352cb6:DamagedBoatAnim",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
-			bool AnimationActive = false,
+			bool AnimationActive = true,
 			float AnimationSpeed = 1,
-			uint StartFrame = 5,
+			uint StartFrame = 1,
 		},
 		Reactive = 
 		{
