@@ -117,7 +117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.61515355, -1.90129781, 50],
+			Vec3 Translation = [-1.29555416, -1.40020764, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -129,7 +129,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.451087,
+			float Size = 7.33860254,
 		},
 		EditorCameraController = 
 		{
@@ -137,7 +137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.61515355, -1.90129781, -1.05373381e-07],
+			Vec3 LookTarget = [-1.29555416, -1.40020764, -3.98045286e-09],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -366,7 +366,7 @@ Level =
 		},
 		ChangeSpriteAnim = 
 		{
-			bool Active = false,
+			bool Active = true,
 			string Sprite = "5ab43a938feb7eb6:ObliteratedBoatAnim",
 		},
 	},
@@ -440,7 +440,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.9307673, -1.51051152, -0.125],
+			Vec3 Translation = [-0.0848914981, -1.79943275, -0.125],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

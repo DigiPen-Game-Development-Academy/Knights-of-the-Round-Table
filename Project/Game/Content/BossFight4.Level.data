@@ -160,7 +160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.17770469, -2.42143822, 50],
+			Vec3 Translation = [2.16606665, -5.163764, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -180,7 +180,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.17770469, -2.42143822, 2.30059825e-07],
+			Vec3 LookTarget = [2.16606665, -5.163764, 3.76221067e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -609,6 +609,17 @@ Level =
 			float AttacksPerSecond = 50,
 			float DamagerPerAttack = 1,
 			string DeathMSG = "You were bitten by an enemy.",
+		},
+		EnemySprite = 
+		{
+			string North = "5ab43175f6217a4a:PhantomBoss004",
+			string NorthEast = "5ab4316af6c26fbc:PhantomBoss005",
+			string East = "5ab4316af6e343dd:PhantomBoss006",
+			string SouthEast = "5ab4316bf68c02aa:PhantomBoss007",
+			string South = "5ab43171f5ae79c0:PhantomBoss000",
+			string SouthWest = "5ab43176f647d8ea:PhantomBoss001",
+			string West = "5ab43177f667815e:PhantomBoss002",
+			string NorthWest = "5ab43174f600bbbe:PhantomBoss003",
 		},
 		Hierarchy = 
 		{
