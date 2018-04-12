@@ -4,11 +4,19 @@ class Health : ZilchComponent {
     [Property] var Cooldown : Real = 3;
     [Property] var RegenRate : Real = 0.3333333333333;
     
+    var OriginalRegenRate : Real;
+    
     var DeathMSG : String = "";
     var Timer : Real = 0;
     var CooldownTimer : Real = 0;
     var CurrentHealth : Real = 0;
     var Locked : Boolean = false;
+    var EffectTimer : Real = 0;
+    
+    //info for effects
+    var RegenEffectActive : Boolean = false;
+    var RegenMultiplier : Real = 1;
+    
     
     var Percent : Real {
         get {
@@ -21,6 +29,16 @@ class Health : ZilchComponent {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.Damage, this.OnDamage);
         this.CurrentHealth = this.InitialHealth;
+        this.OriginalRegenRate = this.RegenRate;
+        
+    }
+    
+    function RegenEffect(time : Real, regenRateMultiplier : Real) {
+        
+        this.EffectTimer = time;
+        this.RegenRate = this.OriginalRegenRate * regenRateMultiplier;
+        this.RegenMultiplier = regenRateMultiplier;
+        this.RegenEffectActive = true;
         
     }
 
@@ -49,6 +67,14 @@ class Health : ZilchComponent {
 
     function OnLogicUpdate(event : UpdateEvent) {
         
+        if(this.EffectTimer <= 0) {
+            this.RegenRate = this.OriginalRegenRate;
+            this.RegenEffectActive = false;
+        } else {
+            this.EffectTimer -= event.Dt;
+            this.CooldownTimer = 0;
+        }
+        
         if(this.CurrentHealth >= this.InitialHealth)
             return;
         
@@ -64,7 +90,7 @@ class Health : ZilchComponent {
             
             this.Timer = (1/this.RegenRate)/2;
             
-            if (this.CurrentHealth + 1 <= this.InitialHealth/2) {
+            if (this.CurrentHealth + 0.5 <= this.InitialHealth * 0.75 || (this.RegenEffectActive && this.CurrentHealth + 0.5 <= this.InitialHealth)) {
                 this.CurrentHealth += 0.5;
             }
         }

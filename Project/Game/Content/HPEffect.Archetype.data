@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Wake",
+		string Name = "HPEffect",
 	},
 	Archetyped = 
 	{
-		string Name = "5a9bdadb3cdcabb7:Wake",
+		string Name = "5ab459c761598f7d:HPEffect",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [0, 0, 1.4999994],
+		Vec3 Scale = [9.99999975e-05, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 0.7900002, 1, 0.675000012],
-		BlendMode BlendMode = Alpha,
+		Vec4 Color = [0.987399936, 1, 0.370000005, 0.585000038],
+		BlendMode BlendMode = Additive,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a074cc6ca5cf6ea:WakeSpriteSource",
+		string SpriteSource = "5ab45e7e4d78216d:HealthRegenEffect",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -36,12 +36,8 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	Wake = 
+	HealthBarEffect = 
 	{
-	},
-	Area = 
-	{
-		Vec2 Size = [1, 0],
-		Location Origin = BottomCenter,
+		float Speed = 2,
 	},
 },

@@ -1,4 +1,7 @@
 class PlayerHealthBar : ZilchComponent {
+    
+    var Effect : Cog;
+    
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
@@ -32,5 +35,29 @@ class PlayerHealthBar : ZilchComponent {
         this.Owner.FindChildByName("TXT").Transform.WorldScale = Real3(1);
         this.Owner.FindChildByName("TXT").Transform.WorldTranslation = this.Owner.Transform.WorldTranslation + Real3(0.0625, 0.1875, 0.1);
         
+        //effect
+        if(GlobalVariables.Player.Health.RegenEffectActive) {
+            
+            if(this.Effect == null || this.Effect.HealthBarEffect.Rev) {
+                
+                if(this.Effect != null) {
+                    this.Effect.HealthBarEffect.Speed = GlobalVariables.Player.Health.RegenMultiplier * 3;
+                }
+                this.CreateEffect(GlobalVariables.Player.Health.RegenMultiplier * 3);
+                
+            }
+            
+        }
+        
     }
+    
+    function CreateEffect(speed : Real) {
+        
+        this.Effect = this.Space.Create(Archetype.HPEffect);
+        this.Effect.HealthBarEffect.Speed = speed;
+        this.Effect.AttachTo(this.Owner);
+        this.Effect.Transform.Translation = Real3(0);
+        
+    }
+    
 }

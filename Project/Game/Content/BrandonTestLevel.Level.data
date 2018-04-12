@@ -164,7 +164,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [34.5937042, 0.0970426202, 112.565193],
+			Vec3 Translation = [1.06547725, -0.442148894, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -176,7 +176,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 90.4838028,
+			float Size = 6.72056341,
 		},
 		EditorCameraController = 
 		{
@@ -184,7 +184,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [34.5937042, 0.0970426202, 1.00000167],
+			Vec3 LookTarget = [1.06547725, -0.442148894, 1.00000036],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -196,12 +196,19 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a019e04c7cf6461:Player",
 		LinkId = 
 		{
 			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+		Archetyped = 
+		{
+			string Name = "5a019e04c7cf6461:Player",
 		},
 		Transform = 
 		{
@@ -209,16 +216,219 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Player",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5afd92272f3d7f10:Pat Walk South",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5a917b88a0971f8b:Player",
+			string SerializedGroupName = "5a11bc4854a4df8c:NotEnemies",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.125, 0.449999988, 0.5],
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = true,
+			bool Force = true,
+			bool Gravity = true,
+			bool Thrust = true,
+			bool Vortex = true,
+			bool Wind = true,
+			bool Invalid = false,
+			bool Torque = true,
+			bool PointGravity = true,
+			bool PointForce = true,
+			bool Buoyancy = true,
+			bool Custom = true,
+		},
+		PlayerMovment = 
+		{
+			float MoveSpeed = 2,
+			float SprintMultiplier = 2,
+			float SprintSoundDist = 5,
+		},
+		UseWeapon = 
+		{
+			float AnimLockTime = 0.5,
+		},
+		Health = 
+		{
+			float InitialHealth = 100,
+			float Cooldown = 3,
+			float RegenRate = 0.333332986,
+		},
+		PlayerHealth = 
+		{
+			bool OnMainLevel = true,
+			string MainLevel = "5a1a864f77326081:JustinTestLevel",
+		},
+		PlayerSprites = 
+		{
+			string North = "5a5341ec590a3054:Pat Walk NAnim",
+			string NorthEast = "5a5340356d6e6b67:Pat Walk NEAnim",
+			string East = "5a5341d75d67251c:Pat Walk EAnim",
+			string SouthEast = "5a53406972aa13ca:Pat Walk SEAnim",
+			string South = "5a534002641c43be:Pat Walk SAnim",
+			string SouthWest = "5a53407e70ea7606:Pat walk SWAnim",
+			string West = "5a53401860e6d328:Pat Walk WAnim",
+			string NorthWest = "5a53404069aea011:Pat Walk NWAnim",
+			float AnimSpeed = 0.5,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 2,
+				},
+				Named = 
+				{
+					string Name = "Camera",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 40],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Camera = 
+				{
+					ProjectionMode ProjectionMode = Orthographic,
+					Facing Facing = NegativeZ,
+					CameraTransparentSort TransparentSort = ViewDepth,
+					float FieldOfView = 45,
+					float NearPlane = 0.5,
+					float FarPlane = 100,
+					float Size = 12,
+				},
+				SoundListener = 
+				{
+					bool Active = true,
+					float Volume = 1,
+				},
+				CamFollow = 
+				{
+					float MoveSpd = 15,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 5,
+				},
+				Named = 
+				{
+					string Name = "TrollWarp",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Camera = 
+				{
+					ProjectionMode ProjectionMode = Orthographic,
+					Facing Facing = NegativeZ,
+					CameraTransparentSort TransparentSort = InheritFromSpace,
+					float FieldOfView = 45,
+					float NearPlane = 0.5,
+					float FarPlane = 200,
+					float Size = 1,
+				},
+				ScreenWarpRing = 
+				{
+					float Size = 10.5,
+					float Thickness = 10,
+					float Intensity = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 6,
+				},
+				Named = 
+				{
+					string Name = "Hold",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5af4923cd5b44732:ShotgunHolding",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Holding = 
+				{
+				},
+				Area = 
+				{
+					Vec2 Size = [1, 1],
+					Location Origin = Center,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -253,7 +463,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -288,7 +498,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -323,7 +533,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -359,7 +569,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 11,
 		},
 		Transform = 
 		{
@@ -377,7 +587,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 12,
 		},
 		Transform = 
 		{
@@ -395,7 +605,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 13,
 		},
 		Transform = 
 		{
@@ -413,7 +623,7 @@ Level =
 		string Name = "5a0198d5f1c252dc:Manual_Chest",
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 14,
 		},
 		Transform = 
 		{
@@ -431,7 +641,7 @@ Level =
 		string Name = "5a019a715d23f111:Twig",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 15,
 		},
 		Transform = 
 		{
@@ -449,7 +659,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 16,
 		},
 		Transform = 
 		{
@@ -467,7 +677,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 17,
 		},
 		Transform = 
 		{
@@ -485,7 +695,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 18,
 		},
 		Transform = 
 		{
@@ -503,7 +713,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 19,
 		},
 		Transform = 
 		{
@@ -521,7 +731,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 20,
 		},
 		Transform = 
 		{
@@ -539,7 +749,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 21,
 		},
 		Transform = 
 		{
@@ -557,7 +767,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -575,7 +785,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 23,
 		},
 		Transform = 
 		{
@@ -593,7 +803,7 @@ Level =
 		string Name = "5a0198dcf2832eb0:AutoGen_Chest",
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 24,
 		},
 		Transform = 
 		{
@@ -611,7 +821,7 @@ Level =
 		string Name = "5af4806bfaf533ea:SavePoint",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 25,
 		},
 		Transform = 
 		{
@@ -628,7 +838,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 26,
 		},
 		Named = 
 		{
@@ -685,7 +895,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 27,
 		},
 		Named = 
 		{
@@ -734,7 +944,7 @@ Level =
 		string Name = "5a50196fd480ebb5:QuestItem2",
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 28,
 		},
 		Transform = 
 		{
@@ -752,7 +962,7 @@ Level =
 		string Name = "5a501997de7c61af:QuestItem3",
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 29,
 		},
 		Transform = 
 		{
@@ -770,7 +980,7 @@ Level =
 		string Name = "5a5019f6eda94e41:QuestItem4",
 		LinkId = 
 		{
-			uint Id = 28,
+			uint Id = 30,
 		},
 		Transform = 
 		{
@@ -788,7 +998,7 @@ Level =
 		string Name = "5a501ec6b1d434c0:HatchRusher",
 		LinkId = 
 		{
-			uint Id = 29,
+			uint Id = 31,
 		},
 		Transform = 
 		{
@@ -806,7 +1016,7 @@ Level =
 		string Name = "5a500473a8a4fae7:HatchGI",
 		LinkId = 
 		{
-			uint Id = 30,
+			uint Id = 32,
 		},
 		Transform = 
 		{
@@ -824,7 +1034,7 @@ Level =
 		string Name = "5a50048cb5abb492:HatchShield",
 		LinkId = 
 		{
-			uint Id = 31,
+			uint Id = 33,
 		},
 		Transform = 
 		{
@@ -842,7 +1052,7 @@ Level =
 		string Name = "5a50049fb2d3a8b3:HatchStealth",
 		LinkId = 
 		{
-			uint Id = 32,
+			uint Id = 34,
 		},
 		Transform = 
 		{
@@ -860,7 +1070,7 @@ Level =
 		string Name = "5a0198d5f1c252dc:Manual_Chest",
 		LinkId = 
 		{
-			uint Id = 33,
+			uint Id = 35,
 		},
 		Transform = 
 		{
