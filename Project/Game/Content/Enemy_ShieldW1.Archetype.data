@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [25.5, 9.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -118,7 +118,7 @@ Cog =
 	},
 	Health = 
 	{
-		float InitialHealth = 100,
+		float InitialHealth = 175,
 		float Cooldown = 3,
 		float RegenRate = 0.333333343,
 	},
@@ -138,7 +138,7 @@ Cog =
 	EnemyRayShooting = 
 	{
 		float MaxRange = 10,
-		float DamagePer = 30,
+		float DamagePer = 33,
 		string WakeSprite = "5a9bdadb3cdcabb7:Wake",
 		float SoundDistance = 10,
 		string Sound = "5a84cbaca2f7cdf9:Shot",
@@ -256,10 +256,10 @@ Cog =
 						bool Asleep = false,
 						bool Kinematic = true,
 						bool RotationLocked = false,
-						bool Mode2D = true,
+						bool Mode2D = false,
 						bool AllowSleep = true,
 						bool Inherit2DMode = true,
-						Vec3 Velocity = [1632.81238, 593.749939, 62.4999962],
+						Vec3 Velocity = [0, 0, 0],
 						Vec3 AngularVelocity = [0, 0, 0],
 					},
 					MenuVisibilitySprite = 

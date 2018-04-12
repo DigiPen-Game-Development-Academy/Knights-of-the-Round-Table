@@ -53,6 +53,7 @@ class Commands {
             Commands.Commands.Add(CMD("/loggon",            Commands.Login));
             Commands.Commands.Add(CMD("/test",              Commands.Test));
             Commands.Commands.Add(CMD("/level",             Commands.Level));
+            Commands.Commands.Add(CMD("/regen",             Commands.Regen));
             
         }
     }
@@ -138,6 +139,8 @@ class Commands {
             Utilities.ConsoleSend("---Commands---", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("-Loads a level (has no auto-complete cause zero engine -_-)-", Real4(0, 1, 0, 1));
             Utilities.ConsoleSend("/level <level name>", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("-Gives the player a regen effect-", Real4(0, 1, 0, 1));
+            Utilities.ConsoleSend("/regen <time> <ammount>", Real4(0, 1, 0, 1));
         }
     }
     
@@ -392,6 +395,20 @@ class Commands {
             GlobalVariables.GameSpace.TimeSpace.Paused = false;
         }
         Zero.Mouse.Trapped = false;
+        
+    }
+    
+    [Static]
+    function Regen (vals : Array[String]) {
+        
+        if(vals == null || vals.Count < 2) {
+            Utilities.ConsoleSend("INVALID PARAMETERS, use /regen <time> <ammount>", Real4(1, 1, 0, 1));
+            return;
+        }
+        
+        GlobalVariables.Player.Health.RegenEffect(Integer.Parse(vals[0]), Integer.Parse(vals[1]));
+        
+        Utilities.ConsoleSend("Regen `vals[1]` given for `vals[0]` seconds!", Real4(1, 0, 0, 1));
         
     }
     

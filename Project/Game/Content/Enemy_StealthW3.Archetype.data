@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [13.5, -23.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -113,7 +113,7 @@ Cog =
 	EnemyMelee = 
 	{
 		float AttacksPerSecond = 3,
-		float DamagerPerAttack = 5,
+		float DamagerPerAttack = 50,
 		string DeathMSG = "You Where Bitten by an Enemy",
 	},
 	Health = 
@@ -127,7 +127,7 @@ Cog =
 		int NumberOfDrops = 3,
 		int NumberOfDropsVariation = 1,
 		float DropRange = 0.5,
-		string LootTable = "5a11b100e0d8983f:Loot",
+		string LootTable = "5a816d6a44fae722:levelthree",
 	},
 	MenuVisibilityController = 
 	{

@@ -235,6 +235,7 @@ class TerribleAssaultRifle : Item {
         this.RelodTime = 3;
         this.MaxRange = 12;
         this.SoundDistance = 8;
+        this.Sound = SoundCue.Terribleas;
     }
     
     function ReturnLore () : String {
@@ -294,6 +295,7 @@ class SlugShotgun : Item {
         this.MaxRange = 3;
         this.RandAngle = 20;
         this.SoundDistance = 10;
+        this.Sound = SoundCue.Shotgun;
     }
     
     function ReturnLore () : String {
@@ -456,7 +458,7 @@ class SawLaser  : Item {
         this.MagSize = 50;
         this.Name = "Saw laser";
         this.ID = "Saw_Laser";
-        this.DamagePer = 30;
+        this.DamagePer = 35;
         this.FireRate = 10; 
         this.AmmoPerShot = 2;
         this.RelodTime = 5;
@@ -514,7 +516,7 @@ class Lasersniper  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.InfernoSniperAlpha;
         this.GroundSprite = SpriteSource.InfernoSniperAlpha;
-        this.Sound = SoundCue.LSniper;
+        this.Sound = SoundCue.Sniper;
         this.Stackable = false;
         this.Auto = false;
         this.MagSize = 30;
@@ -522,7 +524,7 @@ class Lasersniper  : Item {
         this.ID = "Sniper";
         this.DamagePer = 222;
         this.FireRate = 2; 
-        this.AmmoPerShot = 3;
+        this.AmmoPerShot = 6;
         this.RelodTime = 4;
         this.MaxRange = 100;
         this.RandAngle = 0;
@@ -741,6 +743,7 @@ class MMS_Sniper  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.InfernoSniperAlpha;
         this.GroundSprite = SpriteSource.InfernoSniperAlpha;
+        this.Sound = SoundCue.Sniper2;
         this.Stackable = false;
         this.MagSize = 10;
         this.Name = "MMS Sniper";

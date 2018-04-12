@@ -21,6 +21,8 @@ class PlayerMovment : ZilchComponent
     
     var StartSpd : Real;
     
+    var Timer : Real = 0;
+    
     function Initialize(init : CogInitializer) {
         this.StartSpd = this.MoveSpeed;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -50,17 +52,34 @@ class PlayerMovment : ZilchComponent
         
         vel *= this.MoveSpeed;
         
-        if(vel != Real3(0))
+        if(vel != Real3(0)) {
             this.Sprite.Dir = vel;
-        
-        if(vel != Real3(0))
             this.Dir = Math.Normalize(vel);
+        }
         
         if(Zero.Keyboard.KeyIsDown(Keys.Shift)){
             vel *= this.SprintMultiplier;
-            if(GlobalVariables.UseWeapon.Utility == null || GlobalVariables.UseWeapon.Utility.ID != "Shoes")
-                if(vel != Real3(0))
+            if(GlobalVariables.UseWeapon.Utility == null || GlobalVariables.UseWeapon.Utility.ID != "Shoes") {
+                if(vel != Real3(0)) {
                     Utilities.SendSound(this.SprintSoundDist);
+                }
+            }
+        }
+        
+        if(vel != Real3(0)) {
+            
+            this.Timer -= event.Dt;
+            
+            if(this.Timer <= 0) {
+                if(Zero.Keyboard.KeyIsDown(Keys.Shift)) {
+                    this.Timer = 0.167921;
+                } else {
+                    this.Timer = 0.407921;
+                }
+                Utilities.PlaySFX(SoundCue.Walk);
+                Console.WriteLine(this.Timer);
+            }
+            
         }
         
         this.Owner.RigidBody.Velocity = vel;

@@ -125,7 +125,7 @@ Level =
 		},
 		DeferredRenderer = 
 		{
-			Vec4 ClearColor = [0, 0, 0, 1],
+			Vec4 ClearColor = [0.203921586, 0.254901975, 0.376470625, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = false,
 			bool DrawEditorIcons = false,
@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-9.94833183, -47.6492157, 63.0999985],
+			Vec3 Translation = [69.0542679, 22.64147, 62.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-9.94833183, -47.6492157, -0.900003016],
+			Vec3 LookTarget = [69.0542679, 22.64147, -1.5],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4067,47 +4067,12 @@ Level =
 			string Name = "SavePoint",
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 83,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -1.51933289, -40],
-			Vec3 Scale = [1000000, 1000000, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5af8a891e2b329ad:TileMapPrime2045",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "5a019e04c7cf6461:Player",
 		LinkId = 
 		{
-			uint Id = 84,
+			uint Id = 83,
 		},
 		Transform = 
 		{
@@ -4124,7 +4089,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 85,
+			uint Id = 84,
 		},
 		Named = 
 		{
@@ -4183,7 +4148,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 86,
+			uint Id = 85,
 		},
 		Named = 
 		{
@@ -4242,7 +4207,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 87,
+			uint Id = 86,
 		},
 		Named = 
 		{
@@ -4301,7 +4266,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 88,
+			uint Id = 87,
 		},
 		Named = 
 		{
@@ -4360,7 +4325,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 89,
+			uint Id = 88,
 		},
 		Named = 
 		{
@@ -4419,7 +4384,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 90,
+			uint Id = 89,
 		},
 		Named = 
 		{
@@ -4478,7 +4443,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 91,
+			uint Id = 90,
 		},
 		Named = 
 		{
@@ -4537,7 +4502,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 92,
+			uint Id = 91,
 		},
 		Named = 
 		{
@@ -4596,7 +4561,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 93,
+			uint Id = 92,
 		},
 		Named = 
 		{
@@ -4655,7 +4620,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 94,
+			uint Id = 93,
 		},
 		Named = 
 		{
@@ -4714,7 +4679,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 95,
+			uint Id = 94,
 		},
 		Named = 
 		{
@@ -4783,7 +4748,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 96,
+			uint Id = 95,
 		},
 		Named = 
 		{
@@ -4843,7 +4808,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 97,
+					uint Id = 96,
 				},
 				Named = 
 				{
@@ -4905,7 +4870,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 98,
+					uint Id = 97,
 				},
 				Named = 
 				{
@@ -4967,7 +4932,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 99,
+					uint Id = 98,
 				},
 				Named = 
 				{
@@ -5029,7 +4994,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 100,
+					uint Id = 99,
 				},
 				Named = 
 				{
@@ -5093,7 +5058,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 101,
+			uint Id = 100,
 		},
 		Named = 
 		{
@@ -5155,7 +5120,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 102,
+			uint Id = 101,
 		},
 		Named = 
 		{
@@ -5217,7 +5182,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 103,
+			uint Id = 102,
 		},
 		Named = 
 		{
@@ -5277,7 +5242,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 104,
+					uint Id = 103,
 				},
 				Named = 
 				{
@@ -5339,7 +5304,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 105,
+					uint Id = 104,
 				},
 				Named = 
 				{
@@ -5401,7 +5366,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 106,
+					uint Id = 105,
 				},
 				Named = 
 				{
@@ -5463,7 +5428,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 107,
+					uint Id = 106,
 				},
 				Named = 
 				{
@@ -5525,7 +5490,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 108,
+					uint Id = 107,
 				},
 				Named = 
 				{
@@ -5587,7 +5552,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 109,
+					uint Id = 108,
 				},
 				Named = 
 				{
@@ -5649,7 +5614,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 110,
+					uint Id = 109,
 				},
 				Named = 
 				{
@@ -5714,7 +5679,7 @@ Level =
 		string Name = "5a500473a8a4fae7:HatchGI",
 		LinkId = 
 		{
-			uint Id = 111,
+			uint Id = 110,
 		},
 		Transform = 
 		{
@@ -5732,7 +5697,7 @@ Level =
 		string Name = "5a501ec6b1d434c0:HatchRusher",
 		LinkId = 
 		{
-			uint Id = 112,
+			uint Id = 111,
 		},
 		Transform = 
 		{
@@ -5750,7 +5715,7 @@ Level =
 		string Name = "5a50048cb5abb492:HatchShield",
 		LinkId = 
 		{
-			uint Id = 113,
+			uint Id = 112,
 		},
 		Transform = 
 		{
@@ -5768,7 +5733,7 @@ Level =
 		string Name = "5a50049fb2d3a8b3:HatchStealth",
 		LinkId = 
 		{
-			uint Id = 114,
+			uint Id = 113,
 		},
 		Transform = 
 		{
@@ -5785,7 +5750,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 115,
+			uint Id = 114,
 		},
 		Named = 
 		{
@@ -5833,7 +5798,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 116,
+			uint Id = 115,
 		},
 		Named = 
 		{
@@ -5881,7 +5846,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 117,
+			uint Id = 116,
 		},
 		Named = 
 		{
@@ -5929,7 +5894,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 118,
+			uint Id = 117,
 		},
 		Named = 
 		{
@@ -5977,7 +5942,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 119,
+			uint Id = 118,
 		},
 		Named = 
 		{
@@ -6025,7 +5990,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 120,
+			uint Id = 119,
 		},
 		Named = 
 		{
@@ -6073,7 +6038,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 121,
+			uint Id = 120,
 		},
 		Named = 
 		{
@@ -6121,7 +6086,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 122,
+			uint Id = 121,
 		},
 		Named = 
 		{
@@ -6169,7 +6134,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 123,
+			uint Id = 122,
 		},
 		Named = 
 		{
@@ -6217,7 +6182,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 124,
+			uint Id = 123,
 		},
 		Named = 
 		{
@@ -6265,7 +6230,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 125,
+			uint Id = 124,
 		},
 		Named = 
 		{
@@ -6313,7 +6278,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 126,
+			uint Id = 125,
 		},
 		Named = 
 		{
@@ -6361,7 +6326,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 127,
+			uint Id = 126,
 		},
 		Named = 
 		{
@@ -6409,7 +6374,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 128,
+			uint Id = 127,
 		},
 		Named = 
 		{
@@ -6459,7 +6424,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 129,
+			uint Id = 128,
 		},
 		Named = 
 		{
@@ -6499,7 +6464,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 130,
+			uint Id = 129,
 		},
 		Named = 
 		{
@@ -6551,7 +6516,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 128,
+				uint ResolvedCog = 127,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -6562,7 +6527,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 131,
+			uint Id = 130,
 		},
 		Named = 
 		{
@@ -6621,7 +6586,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 132,
+			uint Id = 131,
 		},
 		Named = 
 		{
@@ -6669,7 +6634,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 133,
+			uint Id = 132,
 		},
 		Named = 
 		{
@@ -6728,7 +6693,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 134,
+			uint Id = 133,
 		},
 		Named = 
 		{
@@ -6787,7 +6752,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 135,
+			uint Id = 134,
 		},
 		Named = 
 		{
@@ -6835,7 +6800,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 136,
+			uint Id = 135,
 		},
 		Named = 
 		{
@@ -6894,7 +6859,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 137,
+			uint Id = 136,
 		},
 		Named = 
 		{
@@ -6953,7 +6918,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 138,
+			uint Id = 137,
 		},
 		Named = 
 		{
@@ -7001,7 +6966,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 139,
+			uint Id = 138,
 		},
 		Named = 
 		{
@@ -7049,7 +7014,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 140,
+			uint Id = 139,
 		},
 		Named = 
 		{
@@ -7097,7 +7062,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 141,
+			uint Id = 140,
 		},
 		Named = 
 		{
@@ -7145,7 +7110,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 142,
+			uint Id = 141,
 		},
 		Named = 
 		{
@@ -7214,7 +7179,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 143,
+			uint Id = 142,
 		},
 		Named = 
 		{
@@ -7272,7 +7237,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 144,
+			uint Id = 143,
 		},
 		Named = 
 		{
@@ -7330,7 +7295,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 145,
+			uint Id = 144,
 		},
 		Named = 
 		{
@@ -7388,7 +7353,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 146,
+			uint Id = 145,
 		},
 		Named = 
 		{
@@ -7446,7 +7411,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 147,
+			uint Id = 146,
 		},
 		Named = 
 		{
@@ -7515,7 +7480,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 148,
+			uint Id = 147,
 		},
 		Named = 
 		{
@@ -7584,7 +7549,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 149,
+			uint Id = 148,
 		},
 		Named = 
 		{
@@ -7642,7 +7607,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 150,
+			uint Id = 149,
 		},
 		Named = 
 		{
@@ -7700,7 +7665,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 151,
+			uint Id = 150,
 		},
 		Named = 
 		{
@@ -7748,6 +7713,1392 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, -0.25, 0],
 			Vec3 Size = [1, 0.25, 0.5],
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 151,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [60.4776726, 60.8981819, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6ee2b26b2756:Enemy_StealthW1",
+		LinkId = 
+		{
+			uint Id = 152,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [65.774559, 65.8069382, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
+		LinkId = 
+		{
+			uint Id = 153,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [73.46875, 71.8800964, -0.899997711],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 154,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [84.3136673, 76.811676, -0.899997711],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 155,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [80.2971039, 56.7864075, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
+		LinkId = 
+		{
+			uint Id = 156,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [51.0512085, 61.3625793, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 157,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [51.0545044, 34.7508812, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
+		LinkId = 
+		{
+			uint Id = 158,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [51.6401138, 42.5869484, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 159,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [56.4471931, 48.0647469, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 160,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [22.2903671, 35.652153, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 161,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.20514536, 46.7751923, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
+		LinkId = 
+		{
+			uint Id = 162,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [29.5390911, 59.5229492, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
+		LinkId = 
+		{
+			uint Id = 163,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.08034563, 69.0212708, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
+		LinkId = 
+		{
+			uint Id = 164,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [49.0356522, 25.6539116, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
+		LinkId = 
+		{
+			uint Id = 165,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-57.8205261, 17.9052753, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 166,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-31.5751495, 12.6562042, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 167,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-24.5763855, 50.6495132, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 168,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-33.6135941, -3.9006958, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6e9ab48fac87:Enemy_ShieldW1",
+		LinkId = 
+		{
+			uint Id = 169,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24.4820118, 9.21975613, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 170,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10.4592628, 5.45981026, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 171,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [29.5363636, 12.4249544, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
+		LinkId = 
+		{
+			uint Id = 172,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [38.2582016, 9.40467072, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 173,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.64821577, 2.10051584, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
+		LinkId = 
+		{
+			uint Id = 174,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8.97786236, 25.574604, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
+		LinkId = 
+		{
+			uint Id = 175,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [25.828516, 25.389431, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
+		LinkId = 
+		{
+			uint Id = 176,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.56355143, -22.2722988, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
+		LinkId = 
+		{
+			uint Id = 177,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-27.836771, -25.2981949, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e697adc41f7d4:Enemy_RusherW2",
+		LinkId = 
+		{
+			uint Id = 178,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-24.2161617, -16.9827175, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e697adc41f7d4:Enemy_RusherW2",
+		LinkId = 
+		{
+			uint Id = 179,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-50.06493, -22.4405212, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e697adc41f7d4:Enemy_RusherW2",
+		LinkId = 
+		{
+			uint Id = 180,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.0761318, -40.1783829, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
+		LinkId = 
+		{
+			uint Id = 181,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-51.6567917, -36.0092316, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
+		LinkId = 
+		{
+			uint Id = 182,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-26.9113026, -55.0498962, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
+		LinkId = 
+		{
+			uint Id = 183,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-25.9910526, -59.3722725, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6935cad35891:Enemy_ShieldW2",
+		LinkId = 
+		{
+			uint Id = 184,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.378088, -53.1815109, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
+		LinkId = 
+		{
+			uint Id = 185,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-15.6452293, -58.7866592, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
+		LinkId = 
+		{
+			uint Id = 186,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-22.9514427, -44.3973236, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
+		LinkId = 
+		{
+			uint Id = 187,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-61.8624458, -54.9240074, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e697adc41f7d4:Enemy_RusherW2",
+		LinkId = 
+		{
+			uint Id = 188,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-57.121769, -50.0438995, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
+		LinkId = 
+		{
+			uint Id = 189,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-54.0542755, -54.1989594, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6935cad35891:Enemy_ShieldW2",
+		LinkId = 
+		{
+			uint Id = 190,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-59.8546295, -51.8286247, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
+		LinkId = 
+		{
+			uint Id = 191,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-62.2807388, -61.1984291, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6935cad35891:Enemy_ShieldW2",
+		LinkId = 
+		{
+			uint Id = 192,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-95.3902588, -28.2360821, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6935cad35891:Enemy_ShieldW2",
+		LinkId = 
+		{
+			uint Id = 193,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-89.4196396, -26.5616035, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6935cad35891:Enemy_ShieldW2",
+		LinkId = 
+		{
+			uint Id = 194,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-83.144577, -27.9654598, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
+		LinkId = 
+		{
+			uint Id = 195,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-87.0347824, -22.9589386, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
+		LinkId = 
+		{
+			uint Id = 196,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-92.674118, -33.3233337, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 197,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [57.5300522, -14.2364302, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
+		LinkId = 
+		{
+			uint Id = 198,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [65.315567, -22.9351978, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
+		LinkId = 
+		{
+			uint Id = 199,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [76.9139252, -12.0902777, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 200,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [67.4920197, -16.1256485, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 201,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [62.4993134, -13.4751997, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 202,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [50.6647491, -24.2927303, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e681cfe57b4fa:Enemy_RusherW3",
+		LinkId = 
+		{
+			uint Id = 203,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [51.127037, -13.8450298, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 204,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [61.1432686, -5.89368248, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 205,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [58.6817551, -36.4453087, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 206,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [81.2723999, -31.2941456, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 207,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [48.0691185, -37.8106766, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 208,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27.0920925, -34.5834427, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
+		LinkId = 
+		{
+			uint Id = 209,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27.6506519, -30.9838333, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 210,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24.4854794, -34.7075653, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e681cfe57b4fa:Enemy_RusherW3",
+		LinkId = 
+		{
+			uint Id = 211,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [26.8438435, -24.8396759, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 212,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [45.3383865, -51.029911, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 213,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [34.3533745, -46.0649338, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 214,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27.9609661, -57.9188194, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 215,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [43.5385818, -63.1941071, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 216,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [19.1481342, -72.0690002, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 217,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.06604, -78.8958511, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
+		LinkId = 
+		{
+			uint Id = 218,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.25882149, -72.6863251, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 219,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5.92417479, -67.5641022, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e681cfe57b4fa:Enemy_RusherW3",
+		LinkId = 
+		{
+			uint Id = 220,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-24.8320293, -96.4962616, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Rusher",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 221,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [38.4780769, -84.8181534, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
+		LinkId = 
+		{
+			uint Id = 222,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [53.9722748, -96.1744385, -0.900005341],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 223,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [42.0561638, -72.04953, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 224,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [63.735817, -83.4199753, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
+		LinkId = 
+		{
+			uint Id = 225,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [71.088707, -93.425972, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Shield",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
+		LinkId = 
+		{
+			uint Id = 226,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [77.9109802, -76.7493134, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_Pistol",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2e6828e346da91:Enemy_StealthW3",
+		LinkId = 
+		{
+			uint Id = 227,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [57.9670296, -78.9229126, -0.900001526],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Enemy_Stealth(worldone)",
 		},
 	},
 },
