@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-99.5, -29.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -138,14 +138,14 @@ Cog =
 	EnemyRayShooting = 
 	{
 		float MaxRange = 10,
-		float DamagePer = 30,
+		float DamagePer = 40,
 		string WakeSprite = "5a9bdadb3cdcabb7:Wake",
 		float SoundDistance = 10,
 		string Sound = "5a84cbaca2f7cdf9:Shot",
 		float RandAngle = 15,
 		int MagSize = 10,
-		float ReloadTime = 5,
-		float FireRate = 2,
+		float ReloadTime = 2,
+		float FireRate = 5,
 		float MinDist = 2,
 		float MaxDist = 3,
 		string DeathMSG = "You Where Shot by an Enemy",
@@ -259,7 +259,7 @@ Cog =
 						bool Mode2D = true,
 						bool AllowSleep = true,
 						bool Inherit2DMode = true,
-						Vec3 Velocity = [-6179.68701, -1843.74988, 62.4999962],
+						Vec3 Velocity = [39.0624962, 0, 62.4999962],
 						Vec3 AngularVelocity = [0, 0, 0],
 					},
 					MenuVisibilitySprite = 
