@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-3.89506292, 46.9954605, -0.900001526],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -256,10 +256,10 @@ Cog =
 						bool Asleep = false,
 						bool Kinematic = true,
 						bool RotationLocked = false,
-						bool Mode2D = true,
+						bool Mode2D = false,
 						bool AllowSleep = true,
 						bool Inherit2DMode = true,
-						Vec3 Velocity = [-204.378922, 2937.21606, 6.24990416],
+						Vec3 Velocity = [0, 0, 0],
 						Vec3 AngularVelocity = [0, 0, 0],
 					},
 					MenuVisibilitySprite = 

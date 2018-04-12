@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [15.5, -23.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -132,7 +132,7 @@ Cog =
 	EnemyRayShooting = 
 	{
 		float MaxRange = 10,
-		float DamagePer = 20,
+		float DamagePer = 40,
 		string WakeSprite = "5a9bdadb3cdcabb7:Wake",
 		float SoundDistance = 10,
 		string Sound = "5a84cbaca2f7cdf9:Shot",

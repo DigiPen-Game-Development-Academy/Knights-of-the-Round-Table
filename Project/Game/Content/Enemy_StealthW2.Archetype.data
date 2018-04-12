@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Enemy_Stealth(worldone)",
 	},
+	Archetyped = 
+	{
+		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-69.5, -55.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -109,7 +113,7 @@ Cog =
 	EnemyMelee = 
 	{
 		float AttacksPerSecond = 3,
-		float DamagerPerAttack = 5,
+		float DamagerPerAttack = 33,
 		string DeathMSG = "You Where Bitten by an Enemy",
 	},
 	Health = 
