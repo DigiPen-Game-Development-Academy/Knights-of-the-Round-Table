@@ -333,8 +333,8 @@ RichAnimation =
 					},
 					{
 						TrackType Type = Component,
-						string Name = "AnimTriggeredLevelLoad",
-						string Path = "AnimTriggeredLevelLoad",
+						string Name = "CutsceneControllerBoss",
+						string Path = "CutsceneControllerBoss",
 						bool Disabled = false,
 						uint PropertyTypeId = 0,
 						string PropertyTypeName = "",
@@ -346,7 +346,7 @@ RichAnimation =
 							{
 								TrackType Type = Property,
 								string Name = "Load",
-								string Path = "AnimTriggeredLevelLoad.Load",
+								string Path = "CutsceneControllerBoss.Load",
 								bool Disabled = false,
 								uint PropertyTypeId = 5,
 								string PropertyTypeName = "bool",

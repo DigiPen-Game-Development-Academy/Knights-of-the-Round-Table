@@ -91,6 +91,12 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		MusicOnLevelStart = 
+		{
+			bool Fade = true,
+			float FadeSped = 1,
+			string Music = "",
+		},
 	},
 	Cog = 
 	{
@@ -104,7 +110,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.15591383, 0.401184946, 50],
+			Vec3 Translation = [-0.124065802, -0.311901212, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +122,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.96339512,
+			float Size = 8.9633913,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +130,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.15591383, 0.401184946, 9.42375564e-08],
+			Vec3 LookTarget = [-0.124065802, -0.311901212, -5.42350964e-09],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -368,7 +374,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 0.999899983],
+			Vec4 Color = [0, 0, 0, 0.000129255714],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -393,10 +399,10 @@ Level =
 			string AnimationName = "5a237bc4257c9d84:BlockerFinal",
 			AnimPlayMode PlayMode = PlayOnce,
 		},
-		AnimTriggeredLevelLoad = 
+		CutsceneControllerBoss = 
 		{
-			bool Load = true,
 			string Level = "5a7e54ababd94aa3:MainMenu",
+			bool Load = false,
 		},
 	},
 	Cog = 
@@ -709,6 +715,49 @@ Credits
 		{
 			string AnimationName = "5a2367e9de9e5cf7:DigipenLogoAnim",
 			AnimPlayMode PlayMode = PlayOnce,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "OceanSound",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SoundEmitter = 
+		{
+			float Volume = 5.00000048,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = true,
+			bool Positional = true,
+			int Version = 1,
+		},
+		AnimationGraph = 
+		{
+			bool Active = true,
+			AnimPlayMode PlayMode = PlayOnce,
+			float TimeScale = 1,
+			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+			uint64 DebugPreviewId = 3f8000003f800000,
+		},
+		SimpleAnimation = 
+		{
+			string AnimationName = "5a2297aa8066cb54:FinalOceanSound",
+			AnimPlayMode PlayMode = PlayOnce,
+		},
+		PlaySoundOnEmmiterStart = 
+		{
+			string Sound = "5ab401fd77a6d163:oceanwaves",
 		},
 	},
 },
