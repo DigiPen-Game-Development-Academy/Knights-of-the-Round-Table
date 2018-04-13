@@ -63,13 +63,13 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			ViewportScaling Scaling = Letterbox,
+			ViewportScaling Scaling = Fill,
 			Vec2 Resolution = [2, 1],
-			Vec4 MarginColor = [0.125490203, 0.125490203, 0.125490203, 1],
+			Vec4 MarginColor = [0.207843155, 0.258823544, 0.196078449, 1],
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0.125, 0.125, 0.125, 1],
+			Vec4 ClearColor = [0.207843155, 0.258823544, 0.196078449, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -133,7 +133,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.832720518, -0.577400148, 117.557846],
+			Vec3 Translation = [-1.60588968, 0.798301041, 117.557846],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -145,7 +145,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10.9478951,
+			float Size = 8.1104126,
 		},
 		EditorCameraController = 
 		{
@@ -153,7 +153,7 @@ Level =
 			float LookDistance = 91.105896,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.832720518, -0.577400148, 26.4519501],
+			Vec3 LookTarget = [-1.60588968, 0.798301041, 26.4519501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -209,9 +209,20 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [-6.875, 3.625, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [0, 0],
+			Location Origin = Center,
+		},
+		ScreenAlign = 
+		{
+			Enum Pos = Topleft,
+			Vec3 Offset = [0, 0, 0],
+			Vec2 RelOffset = [0, 0],
 		},
 		Hierarchy = 
 		{
@@ -227,8 +238,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.5, 0.1875, 0],
-					Vec3 Scale = [1, 1, 1],
+					Vec3 Translation = [0.375, -1.9375, 0],
+					Vec3 Scale = [2, 0.5, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Reactive = 
@@ -248,7 +259,7 @@ Level =
 				Area = 
 				{
 					Vec2 Size = [1, 1],
-					Location Origin = Center,
+					Location Origin = CenterLeft,
 				},
 				SettingsButton = 
 				{
@@ -276,7 +287,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5af4d4e66b19f232:SettingsAnim",
+					string SpriteSource = "5a2370c99b35e064:SettingsButton",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -297,8 +308,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-2.3125, 0.4375, 0],
-					Vec3 Scale = [1, 1, 1],
+					Vec3 Translation = [0.375, -1.4375, 0],
+					Vec3 Scale = [1, 0.5, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Reactive = 
@@ -318,7 +329,7 @@ Level =
 				Area = 
 				{
 					Vec2 Size = [1, 1],
-					Location Origin = Center,
+					Location Origin = CenterLeft,
 				},
 				AnimationGraph = 
 				{
@@ -339,15 +350,15 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.904999971, 0.701375008, 0.701375008, 0.999899983],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5abd17791580bc91:PlayButton",
+					string SpriteSource = "5a2370698be0bae4:PlayButton",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
-					bool AnimationActive = true,
+					bool AnimationActive = false,
 					float AnimationSpeed = 1,
 					uint StartFrame = 0,
 				},
@@ -372,8 +383,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.5625, -1.3125, 0],
-					Vec3 Scale = [1, 1, 1],
+					Vec3 Translation = [0.375, -2.9375, 0],
+					Vec3 Scale = [1, 0.5, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Reactive = 
@@ -393,7 +404,7 @@ Level =
 				Area = 
 				{
 					Vec2 Size = [1, 1],
-					Location Origin = Center,
+					Location Origin = CenterLeft,
 				},
 				QuitButton = 
 				{
@@ -421,7 +432,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5af4d4b163f3e76f:ExitAnim",
+					string SpriteSource = "5a237351b38a299e:ExitButton",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -430,61 +441,221 @@ Level =
 					uint StartFrame = 0,
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 8,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.625, -1.0625, 0],
+					Vec3 Scale = [1.5, 1.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5ad395027504d516:Title",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				AnimationGraph = 
+				{
+					bool Active = true,
+					AnimPlayMode PlayMode = PlayOnce,
+					float TimeScale = 1,
+					string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+					uint64 DebugPreviewId = 0000001200000033,
+				},
+				SimpleAnimation = 
+				{
+					string AnimationName = "5a7e4b0078293a5c:FadeInSprite",
+					AnimPlayMode PlayMode = PlayOnce,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 9,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.375, -2.4375, 26.5],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a237322ac7099a1:ClearButton",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = false,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Reactive = 
+				{
+					bool Active = true,
+					bool CaptureMouse = false,
+				},
+				Button = 
+				{
+					float ScaleM = 1,
+					Vec4 HoverColor = [1, 1, 1, 0.999899983],
+					Vec4 ClickColor = [1, 1, 1, 0.999899983],
+					float ScaleSpeed = 5,
+					bool Alpha = false,
+					bool Scaling = true,
+				},
+				AnimationGraph = 
+				{
+					bool Active = true,
+					AnimPlayMode PlayMode = PlayOnce,
+					float TimeScale = 1,
+					string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+					uint64 DebugPreviewId = 432e656d61472074,
+				},
+				SimpleAnimation = 
+				{
+					string AnimationName = "5a7e4b0078293a5c:FadeInSprite",
+					AnimPlayMode PlayMode = PlayOnce,
+				},
+				ClearSaveFileButton = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 10,
+				},
+				Named = 
+				{
+					string Name = "SpriteText",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.625, -1.0625, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0.231269687],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
+					uint FontSize = 150,
+					string Text = "Now in Beta!",
+					TextAlign Align = Left,
+					float PixelsPerUnit = 310.496155,
+					bool Smoothing = false,
+				},
+				AnimationGraph = 
+				{
+					bool Active = true,
+					AnimPlayMode PlayMode = PlayOnce,
+					float TimeScale = 1,
+					string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+					uint64 DebugPreviewId = 2020656d61472064,
+				},
+				SimpleAnimation = 
+				{
+					string AnimationName = "5a7e502445d852b1:fadeIn",
+					AnimPlayMode PlayMode = PlayOnce,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5, -2.8125, -1],
+					Vec3 Scale = [5, 5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5ab848f7deb9c8de:Beta Title",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				AnimationGraph = 
+				{
+					bool Active = true,
+					AnimPlayMode PlayMode = PlayOnce,
+					float TimeScale = 1,
+					string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
+					uint64 DebugPreviewId = 6572702079646165,
+				},
+				SimpleAnimation = 
+				{
+					string AnimationName = "5a7e4b0078293a5c:FadeInSprite",
+					AnimPlayMode PlayMode = PlayOnce,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, -1],
-			Vec3 Scale = [10, 10, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ab848f7deb9c8de:Beta Title",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		AnimationGraph = 
-		{
-			bool Active = true,
-			AnimPlayMode PlayMode = PlayOnce,
-			float TimeScale = 1,
-			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-			uint64 DebugPreviewId = 6572702079646165,
-		},
-		SimpleAnimation = 
-		{
-			string AnimationName = "5a7e4b0078293a5c:FadeInSprite",
-			AnimPlayMode PlayMode = PlayOnce,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 9,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -527,166 +698,6 @@ Level =
 			Enum Pos = Bottomright,
 			Vec3 Offset = [-0.100000001, 0, 0],
 			Vec2 RelOffset = [-2, 0],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Named = 
-		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-2.5625, 2.625, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ad395027504d516:Title",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		AnimationGraph = 
-		{
-			bool Active = true,
-			AnimPlayMode PlayMode = PlayOnce,
-			float TimeScale = 1,
-			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-			uint64 DebugPreviewId = 0000001200000033,
-		},
-		SimpleAnimation = 
-		{
-			string AnimationName = "5a7e4b0078293a5c:FadeInSprite",
-			AnimPlayMode PlayMode = PlayOnce,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 11,
-		},
-		Named = 
-		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.6875, 2.625, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 0.231269687],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
-			uint FontSize = 150,
-			string Text = "Now in Beta!",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 310.496155,
-			bool Smoothing = false,
-		},
-		AnimationGraph = 
-		{
-			bool Active = true,
-			AnimPlayMode PlayMode = PlayOnce,
-			float TimeScale = 1,
-			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-			uint64 DebugPreviewId = 2020656d61472064,
-		},
-		SimpleAnimation = 
-		{
-			string AnimationName = "5a7e502445d852b1:fadeIn",
-			AnimPlayMode PlayMode = PlayOnce,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 12,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-3.6875, -1.5625, 26.5],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		Button = 
-		{
-			float ScaleM = 1,
-			Vec4 HoverColor = [1, 1, 1, 0.999899983],
-			Vec4 ClickColor = [1, 1, 1, 0.999899983],
-			float ScaleSpeed = 5,
-			bool Alpha = false,
-			bool Scaling = true,
-		},
-		AnimationGraph = 
-		{
-			bool Active = true,
-			AnimPlayMode PlayMode = PlayOnce,
-			float TimeScale = 1,
-			string AnimationName = "4f8ebbde619389d0:DefaultAnimation",
-			uint64 DebugPreviewId = 432e656d61472074,
-		},
-		SimpleAnimation = 
-		{
-			string AnimationName = "5a7e4b0078293a5c:FadeInSprite",
-			AnimPlayMode PlayMode = PlayOnce,
-		},
-		ClearSaveFileButton = 
-		{
 		},
 	},
 },

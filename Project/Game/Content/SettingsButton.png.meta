@@ -2,14 +2,14 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "PlayButton",
-		uint64 ResourceId = 5a2370698be0bae4,
+		string Name = "SettingsButton",
+		uint64 ResourceId = 5a2370c99b35e064,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 48,
+		uint FrameSizeX = 92,
 		uint FrameSizeY = 28,
 		uint FrameCount = 2,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 24,
+		float OriginX = 46,
 		float OriginY = 14,
 		float PixelsPerUnit = 32,
 		bool Smoothing = false,
