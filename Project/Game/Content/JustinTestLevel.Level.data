@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [69.0542679, 22.64147, 62.5],
+			Vec3 Translation = [62.3969574, 69.6427689, 62.5000038],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 100,
+			float Size = 33.2871284,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [69.0542679, 22.64147, -1.5],
+			Vec3 LookTarget = [62.3969574, 69.6427689, -1.49999726],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -3637,6 +3637,7 @@ Level =
 			float InitialHealth = 100,
 			float Cooldown = 3,
 			float RegenRate = 0.333333343,
+			float FlashLength = 0.100000001,
 		},
 		EnemyDeath = 
 		{
@@ -4765,9 +4766,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-87.9158859, 71.9062119, -5],
-			Vec3 Scale = [66.1620865, 52.9277916, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-79.2843781, 72.6867218, -5],
+			Vec3 Scale = [42.6680984, 21.1884804, 1],
+			Quat Rotation = [0, 0, 0.222356364, 0.974965513],
 		},
 		BoxCollider = 
 		{
@@ -4825,9 +4826,9 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0.61070776, -0.100407958, 0],
-					Vec3 Scale = [0.289353341, 0.414643764, 1],
-					Quat Rotation = [0, 0, 0.466570586, 0.884483993],
+					Vec3 Translation = [0.434232473, -0.590850353, 4.76837158e-07],
+					Vec3 Scale = [0.430704415, 1.16376173, 1],
+					Quat Rotation = [0, 0, 0.302063584, 0.95328778],
 				},
 				BoxCollider = 
 				{
@@ -4887,9 +4888,9 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0.449216306, 0.147271872, 0],
-					Vec3 Scale = [0.750787795, 0.6638484, 1],
-					Quat Rotation = [0, 0, 0.34411332, 0.938928187],
+					Vec3 Translation = [0.443757951, -0.238870144, 9.53674316e-07],
+					Vec3 Scale = [0.845067382, 1.49842775, 1],
+					Quat Rotation = [0, 0, 0.122618735, 0.992453873],
 				},
 				BoxCollider = 
 				{
@@ -4949,9 +4950,9 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0.491981089, -0.22739625, 0],
-					Vec3 Scale = [0.281988889, 0.451585799, 1],
-					Quat Rotation = [0, 0, 0.34411332, 0.938928187],
+					Vec3 Translation = [0.241030276, -0.836004257, 9.53674316e-07],
+					Vec3 Scale = [0.429016352, 1.16230476, 1],
+					Quat Rotation = [0, 0, 0.122618772, 0.992453873],
 				},
 				BoxCollider = 
 				{
@@ -5011,9 +5012,9 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0.347437859, -0.439401031, 0],
-					Vec3 Scale = [0.236863226, 0.415370733, 1],
-					Quat Rotation = [0, 0, 0.790254593, 0.612778664],
+					Vec3 Translation = [0.317368448, -1.15379667, 4.76837158e-07],
+					Vec3 Scale = [0.667669237, 0.665225148, 1],
+					Quat Rotation = [0, 0, 0.677972078, 0.735087693],
 				},
 				BoxCollider = 
 				{
@@ -5075,8 +5076,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [77.5, 71.5, -5],
-			Vec3 Scale = [53.1006508, 36.4876442, 1],
+			Vec3 Translation = [66.0717239, 65.5477753, -5],
+			Vec3 Scale = [30.2440987, 24.5831928, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		BoxCollider = 
@@ -5114,13 +5115,137 @@ Level =
 		},
 		Hierarchy = 
 		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 101,
+				},
+				Named = 
+				{
+					string Name = "Fortress1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.567925215, 0.386017799, 2.86102295e-06],
+					Vec3 Scale = [0.768330753, 0.521282494, 0.99999994],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d0ad3521963:Fortress1",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 102,
+				},
+				Named = 
+				{
+					string Name = "Fortress1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.49334383, -0.147519588, 4.29153442e-06],
+					Vec3 Scale = [0.206672907, 0.319648415, 0.99999994],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d0ad3521963:Fortress1",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 101,
+			uint Id = 103,
 		},
 		Named = 
 		{
@@ -5182,7 +5307,3975 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 102,
+			uint Id = 104,
+		},
+		Named = 
+		{
+			string Name = "Fortress4MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [27.9498558, -34.9625092, -5],
+			Vec3 Scale = [15.1961832, 9.02445698, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5a517d0ad3521963:Fortress1",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 105,
+		},
+		Named = 
+		{
+			string Name = "Fortress5MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11.981122, -74.5713882, -5],
+			Vec3 Scale = [23.9144344, 14.1143084, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5ab43dca90e603eb:RootsOfDecay",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 106,
+		},
+		Named = 
+		{
+			string Name = "Fortress6MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-21.1574116, -55.6557503, -5],
+			Vec3 Scale = [16.567688, 10.5614223, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5ab43dca90e603eb:RootsOfDecay",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 107,
+		},
+		Named = 
+		{
+			string Name = "Fortress7MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-61.288166, -57.4421082, -5],
+			Vec3 Scale = [21.2205276, 18.122282, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5a517d0ad3521963:Fortress1",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 108,
+		},
+		Named = 
+		{
+			string Name = "Fortress8MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-90.4930573, -27.8217945, -5],
+			Vec3 Scale = [15.8199091, 11.3922834, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5ab43dca90e603eb:RootsOfDecay",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 109,
+		},
+		Named = 
+		{
+			string Name = "OceanSoundZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-110.301598, 59.996254, -5],
+			Vec3 Scale = [15.8199091, 32.5005264, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5ab401fd77a6d163:oceanwaves",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 110,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.09196711, -0.285010099, -1.90734863e-06],
+					Vec3 Scale = [1.37574232, 0.399549425, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 111,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.277284622, 0.623629808, -2.86102295e-06],
+					Vec3 Scale = [1.37574232, 0.474488616, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 112,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.8443017, -0.34888792, -3.33786011e-06],
+					Vec3 Scale = [1.37574232, 0.474488616, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 113,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.12581444, -0.557962179, -4.29153442e-06],
+					Vec3 Scale = [0.90558815, 0.474488616, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 114,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.84720564, -1.20496249, -5.24520874e-06],
+					Vec3 Scale = [0.90558815, 1.24862885, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 115,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.14322996, -1.91977024, -6.67572021e-06],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 116,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.38701439, -2.04408479, -7.15255737e-06],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 117,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.35550261, -2.28694868, -7.62939453e-06],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 118,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.56244802, -2.17957687, -8.10623169e-06],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 119,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.779897213, -2.21536708, -8.58306885e-06],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 120,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.160159588, -2.41221476, -9.05990601e-06],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 121,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.0866317749, -2.75733733, -9.53674316e-06],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 122,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.312468529, -3.13569379, -1.00135803e-05],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 123,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.06350756, -3.19960499, -1.04904175e-05],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 124,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.98786306, -3.1561451, -1.09672546e-05],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 125,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.44478846, -2.95674062, -1.14440918e-05],
+					Vec3 Scale = [0.90558815, 0.491440475, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 126,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.7638669, -3.39397264, -1.28746033e-05],
+					Vec3 Scale = [1.11198807, 0.261204392, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 127,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.51446772, -3.74141955, -1.38282776e-05],
+					Vec3 Scale = [1.11198807, 0.671443284, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 128,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.88401461, -4.09409857, -1.52587891e-05],
+					Vec3 Scale = [2.0622859, 0.380508482, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 129,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.39761066, -3.86386204, -1.62124634e-05],
+					Vec3 Scale = [1.37428772, 0.380508482, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 130,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.45970821, -3.943398, -1.66893005e-05],
+					Vec3 Scale = [1.37428772, 0.380508482, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 131,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.66443491, -4.45836926, -1.8119812e-05],
+					Vec3 Scale = [2.14892793, 0.599697948, 1],
+					Quat Rotation = [0, 0, 0.207366675, 0.978263319],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 132,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.73408794, -5.15339947, -1.90734863e-05],
+					Vec3 Scale = [2.14892793, 0.599697948, 1],
+					Quat Rotation = [0, 0, -0.140841171, 0.990032196],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 133,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [6.58568382, -5.15904951, -2.00271606e-05],
+					Vec3 Scale = [2.14892793, 0.599697948, 1],
+					Quat Rotation = [0, 0, 0.000421151519, 0.99999994],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 134,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [8.56497669, -5.11666965, -2.05039978e-05],
+					Vec3 Scale = [2.14892793, 0.599697948, 1],
+					Quat Rotation = [0, 0, 0.000421151519, 0.99999994],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 135,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [10.2772675, -5.35964775, -2.0980835e-05],
+					Vec3 Scale = [2.14892793, 0.599697948, 1],
+					Quat Rotation = [0, 0, 0.000421151519, 0.99999994],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 136,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [12.0892124, -5.00685596, -2.14576721e-05],
+					Vec3 Scale = [2.14892793, 0.599697948, 1],
+					Quat Rotation = [0, 0, 0.168134019, 0.985764205],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 137,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [14.5891724, -4.70263672, 0.000306606293],
+					Vec3 Scale = [2.14892793, 0.599697948, 1],
+					Quat Rotation = [0, 0, 0.168134019, 0.985764205],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 138,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [12.6571827, -3.5839777, 0.000306606293],
+					Vec3 Scale = [2.14892793, 0.599697948, 1],
+					Quat Rotation = [0, 0, 0.168134019, 0.985764205],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 139,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [14.4452877, -3.71885443, 0.000306129456],
+					Vec3 Scale = [2.69077349, 0.667949438, 1],
+					Quat Rotation = [0, 0, -0.302477419, 0.95315659],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 140,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [13.2753248, -4.79991913, 0.000304698944],
+					Vec3 Scale = [1.19920111, 0.363730252, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 141,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [11.436409, -3.90579391, 0.00030374527],
+					Vec3 Scale = [1.19920111, 0.363730252, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 142,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [10.8343468, -3.74763536, 0.000303268433],
+					Vec3 Scale = [1.19920111, 0.363730252, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 143,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [11.3185434, -3.42201471, 0.000302314758],
+					Vec3 Scale = [1.19920111, 0.363730252, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 144,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [11.997057, -3.24214792, 0.000301837921],
+					Vec3 Scale = [1.19920111, 0.363730252, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 145,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [13.1024284, -2.97544909, 0.000301361084],
+					Vec3 Scale = [1.19920111, 0.363730252, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 146,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [12.3251638, -2.51725388, 0.000299930573],
+					Vec3 Scale = [1.19920111, 0.182313055, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 147,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [12.6054897, -2.18620586, 0.000298976898],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 148,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [11.5787792, -1.74126828, 0.000298023224],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 149,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [11.935195, -1.30176318, 0.000297546387],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0.302337438, 0.953200936],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 150,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [12.5292225, -0.795175731, 0.000480651855],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0.302337438, 0.953200936],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 151,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [12.7050552, -0.549978137, 0.000480651855],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, -0.375245184, 0.926925659],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 152,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [13.0139494, 0.171735287, 0.000480651855],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, -0.980021834, 0.198890328],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 153,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [13.6697559, 0.518713295, 0.000480651855],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 154,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [12.667037, 0.942025781, 0.000480651855],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 155,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [11.5217514, 0.923520207, 0.000228881836],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 156,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [10.4370604, 0.833797634, 0.000228881836],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 157,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [9.50124931, 0.630196571, 0.000228881836],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 158,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [8.70013809, 0.847601175, 0.000228881836],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 159,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [7.6792531, 0.640549362, 0.000228881836],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 160,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [6.59456253, 0.713017344, 0.00023651123],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 161,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.63748264, 0.492162168, 0.00023651123],
+					Vec3 Scale = [1.19920111, 0.497079581, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 162,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [12.9527092, -2.60020971, 0.000300884247],
+					Vec3 Scale = [1.19920111, 0.363730252, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 163,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [10.8885002, -3.56466746, 0.000302791595],
+					Vec3 Scale = [1.19920111, 0.363730252, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 164,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.54457712, -3.26223779, -1.23977661e-05],
+					Vec3 Scale = [0.317362398, 0.202560052, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 165,
+				},
+				Named = 
+				{
+					string Name = "OceanSoundZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.49679995, -3.19704771, -1.33514404e-05],
+					Vec3 Scale = [0.207070261, 0.460763097, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab401fd77a6d163:oceanwaves",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 166,
+		},
+		Named = 
+		{
+			string Name = "Fortress3MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [59.6189613, -16.6854706, -5],
+			Vec3 Scale = [28.0949154, 24.5999317, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5ab43dca90e603eb:RootsOfDecay",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 167,
+				},
+				Named = 
+				{
+					string Name = "Fortress3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.458296537, 0.192564756, 0],
+					Vec3 Scale = [0.553363085, 0.442790806, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5ab43dca90e603eb:RootsOfDecay",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 168,
 		},
 		Named = 
 		{
@@ -5242,7 +9335,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 103,
+					uint Id = 169,
 				},
 				Named = 
 				{
@@ -5259,8 +9352,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.77215767, -0.121379465, 0],
-					Vec3 Scale = [0.33709994, 0.410216093, 1],
+					Vec3 Translation = [1.63272953, 0.00858902931, 0],
+					Vec3 Scale = [0.431004822, 0.523522735, 1],
 					Quat Rotation = [0, 0, -0.437425077, 0.899254918],
 				},
 				BoxCollider = 
@@ -5304,7 +9397,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 104,
+					uint Id = 170,
 				},
 				Named = 
 				{
@@ -5321,8 +9414,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.50048351, -0.21446909, 0],
-					Vec3 Scale = [0.378169179, 0.36106512, 1],
+					Vec3 Translation = [1.48647523, -0.172869191, 0],
+					Vec3 Scale = [0.350152552, 0.27786532, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				BoxCollider = 
@@ -5366,7 +9459,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 105,
+					uint Id = 171,
 				},
 				Named = 
 				{
@@ -5383,8 +9476,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [1.44196892, 0.265615582, 0],
-					Vec3 Scale = [1.88282681, 0.59056896, 1],
+					Vec3 Translation = [0.955089808, 0.265615582, 0],
+					Vec3 Scale = [0.909068704, 0.59056896, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				BoxCollider = 
@@ -5428,7 +9521,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 106,
+					uint Id = 172,
 				},
 				Named = 
 				{
@@ -5445,8 +9538,318 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.200894415, 0.55390054, 0],
-					Vec3 Scale = [0.648622632, 0.271957457, 1],
+					Vec3 Translation = [1.47630525, 0.118148595, 0],
+					Vec3 Scale = [0.795536578, 0.31298402, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 173,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.90812182, 0.311853051, 0],
+					Vec3 Scale = [0.364407301, 0.312019914, 1],
+					Quat Rotation = [0, 0, -0.281275749, 0.959626973],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 174,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.988609076, 0.859852016, 0],
+					Vec3 Scale = [0.201418102, 0.220677227, 1],
+					Quat Rotation = [0, 0, -0.404188424, 0.914675772],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 175,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.350522816, 0.780228257, 0],
+					Vec3 Scale = [0.201418102, 0.220677227, 1],
+					Quat Rotation = [0, 0, -0.404188424, 0.914675772],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 176,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.886640251, -0.0581634045, 0],
+					Vec3 Scale = [0.201418102, 0.220677227, 1],
+					Quat Rotation = [0, 0, -0.404188424, 0.914675772],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 177,
+				},
+				Named = 
+				{
+					string Name = "Neutral1MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.221538663, 0.436942875, 0],
+					Vec3 Scale = [0.608852923, 0.277450711, 1],
 					Quat Rotation = [0, 0, 0.380134016, 0.924931467],
 				},
 				BoxCollider = 
@@ -5490,7 +9893,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 107,
+					uint Id = 178,
 				},
 				Named = 
 				{
@@ -5507,8 +9910,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.729753673, 0.263273716, 0],
-					Vec3 Scale = [0.69167006, 0.253742337, 1],
+					Vec3 Translation = [-0.635430634, 0.263273716, 0],
+					Vec3 Scale = [0.521905959, 0.253742337, 1],
 					Quat Rotation = [0, 0, 0.195251375, 0.980753243],
 				},
 				BoxCollider = 
@@ -5552,7 +9955,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 108,
+					uint Id = 179,
 				},
 				Named = 
 				{
@@ -5569,8 +9972,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.739924014, -0.103296056, 0],
-					Vec3 Scale = [1, 0.811407387, 1],
+					Vec3 Translation = [-0.555947363, -0.103296056, 0],
+					Vec3 Scale = [0.632046759, 0.811407387, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				BoxCollider = 
@@ -5614,7 +10017,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 109,
+					uint Id = 180,
 				},
 				Named = 
 				{
@@ -5631,9 +10034,1311 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0.71527499, 0.830476224, 0],
-					Vec3 Scale = [1.55960417, 0.674876451, 1],
+					Vec3 Translation = [0.715275049, 0.629152656, 0],
+					Vec3 Scale = [1.55960417, 0.272229463, 1],
 					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 181,
+		},
+		Named = 
+		{
+			string Name = "Neutral2MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.7228384, -14.5480309, -5],
+			Vec3 Scale = [20.4571342, 10.4078245, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5a517d34dd1868cb:Neurtral2",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 182,
+				},
+				Named = 
+				{
+					string Name = "Neutral2MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.82224655, -1.46951056, 0],
+					Vec3 Scale = [2.78899407, 3.5730052, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 183,
+				},
+				Named = 
+				{
+					string Name = "Neutral2MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.604391456, -1.42075872, 0],
+					Vec3 Scale = [1.58772933, 0.657230735, 1],
+					Quat Rotation = [0, 0, 0.507582128, 0.861603379],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 184,
+		},
+		Named = 
+		{
+			string Name = "Neutral3MusicZone",
+		},
+		Archetyped = 
+		{
+			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [65.6914825, -82.5136871, -5],
+			Vec3 Scale = [32.5342827, 20.3378944, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 5],
+		},
+		Sprite = 
+		{
+			bool Visible = false,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 0.230000019],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		MusicZone = 
+		{
+			string Music = "5a517d34dd1868cb:Neurtral2",
+			float FadeSpeed = 1,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 185,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.714304209, 0.0498981476, -9.53674316e-07],
+					Vec3 Scale = [0.99999994, 0.99999994, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 186,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.06190372, 3.20007467, -2.86102295e-06],
+					Vec3 Scale = [0.849324882, 1.24920321, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 187,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.49349809, 2.70166731, -3.81469727e-06],
+					Vec3 Scale = [0.793141007, 0.334095538, 1],
+					Quat Rotation = [0, 0, 0.464877933, 0.885374784],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 188,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.502624393, -0.266148657, -9.53674316e-07],
+					Vec3 Scale = [0.99999994, 0.99999994, 1],
+					Quat Rotation = [0, 0, -0.412402928, 0.911001563],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 189,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.6142025, -0.271942616, -4.29153442e-06],
+					Vec3 Scale = [1.23394227, 0.585845947, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 190,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.874944448, 0.915629387, -6.67572021e-06],
+					Vec3 Scale = [0.815965235, 1.71354079, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 191,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.29292154, 1.40213466, -8.58306885e-06],
+					Vec3 Scale = [1.50219619, 1.29938745, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 192,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.102934599, 2.49490047, -9.53674316e-06],
+					Vec3 Scale = [1.58017683, 0.311407149, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 193,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.650721312, 1.90217328, -1.23977661e-05],
+					Vec3 Scale = [1.15414906, 0.61972183, 1],
+					Quat Rotation = [0, 0, 0.436898291, 0.899511039],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 194,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.61350822, 2.45573139, -1.57356262e-05],
+					Vec3 Scale = [0.945218801, 0.373937756, 1],
+					Quat Rotation = [0, 0, 0.693291306, 0.720657468],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 195,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.77148259, 2.48750877, -1.66893005e-05],
+					Vec3 Scale = [0.837123275, 0.326134622, 1],
+					Quat Rotation = [0, 0, 0.494541764, 0.869153917],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 196,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.202527404, 2.13912058, -1.33514404e-05],
+					Vec3 Scale = [0.734635055, 0.303567082, 1],
+					Quat Rotation = [0, 0, 0.436898291, 0.899511039],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 197,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.34722209, -0.0723514557, -2.38418579e-06],
+					Vec3 Scale = [0.578903615, 0.695622325, 1],
+					Quat Rotation = [0, 0, 0.455846995, 0.89005816],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 198,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.78859305, -0.449080467, -5.24520874e-06],
+					Vec3 Scale = [0.778907597, 0.361965477, 1],
+					Quat Rotation = [0, 0, 0.455846995, 0.89005816],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 199,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.12326717, 0.87441802, -5.7220459e-06],
+					Vec3 Scale = [0.778907597, 0.361965477, 1],
+					Quat Rotation = [0, 0, 0.455846995, 0.89005816],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 200,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.10258341, 0.0968621373, -5.7220459e-06],
+					Vec3 Scale = [0.778907597, 0.361965477, 1],
+					Quat Rotation = [0, 0, 0.851789713, 0.52388382],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 5],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 0, 0, 0.230000019],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				MusicZone = 
+				{
+					string Music = "5a517d34dd1868cb:Neurtral2",
+					float FadeSpeed = 1,
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 201,
+				},
+				Named = 
+				{
+					string Name = "Neutral3MusicZone",
+				},
+				Archetyped = 
+				{
+					string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.483156323, 2.64853597, -5.7220459e-06],
+					Vec3 Scale = [0.778907597, 0.361965477, 1],
+					Quat Rotation = [0, 0, 0.92207855, 0.387003005],
 				},
 				BoxCollider = 
 				{
@@ -5679,7 +11384,7 @@ Level =
 		string Name = "5a500473a8a4fae7:HatchGI",
 		LinkId = 
 		{
-			uint Id = 110,
+			uint Id = 202,
 		},
 		Transform = 
 		{
@@ -5697,7 +11402,7 @@ Level =
 		string Name = "5a501ec6b1d434c0:HatchRusher",
 		LinkId = 
 		{
-			uint Id = 111,
+			uint Id = 203,
 		},
 		Transform = 
 		{
@@ -5715,7 +11420,7 @@ Level =
 		string Name = "5a50048cb5abb492:HatchShield",
 		LinkId = 
 		{
-			uint Id = 112,
+			uint Id = 204,
 		},
 		Transform = 
 		{
@@ -5733,7 +11438,7 @@ Level =
 		string Name = "5a50049fb2d3a8b3:HatchStealth",
 		LinkId = 
 		{
-			uint Id = 113,
+			uint Id = 205,
 		},
 		Transform = 
 		{
@@ -5750,7 +11455,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 114,
+			uint Id = 206,
 		},
 		Named = 
 		{
@@ -5798,7 +11503,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 115,
+			uint Id = 207,
 		},
 		Named = 
 		{
@@ -5846,7 +11551,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 116,
+			uint Id = 208,
 		},
 		Named = 
 		{
@@ -5894,7 +11599,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 117,
+			uint Id = 209,
 		},
 		Named = 
 		{
@@ -5942,7 +11647,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 118,
+			uint Id = 210,
 		},
 		Named = 
 		{
@@ -5990,7 +11695,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 119,
+			uint Id = 211,
 		},
 		Named = 
 		{
@@ -6038,7 +11743,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 120,
+			uint Id = 212,
 		},
 		Named = 
 		{
@@ -6086,7 +11791,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 121,
+			uint Id = 213,
 		},
 		Named = 
 		{
@@ -6134,7 +11839,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 122,
+			uint Id = 214,
 		},
 		Named = 
 		{
@@ -6182,7 +11887,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 123,
+			uint Id = 215,
 		},
 		Named = 
 		{
@@ -6230,7 +11935,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 124,
+			uint Id = 216,
 		},
 		Named = 
 		{
@@ -6278,7 +11983,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 125,
+			uint Id = 217,
 		},
 		Named = 
 		{
@@ -6326,7 +12031,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 126,
+			uint Id = 218,
 		},
 		Named = 
 		{
@@ -6374,7 +12079,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 127,
+			uint Id = 219,
 		},
 		Named = 
 		{
@@ -6424,7 +12129,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 128,
+			uint Id = 220,
 		},
 		Named = 
 		{
@@ -6464,7 +12169,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 129,
+			uint Id = 221,
 		},
 		Named = 
 		{
@@ -6516,7 +12221,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 127,
+				uint ResolvedCog = 219,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -6527,7 +12232,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 130,
+			uint Id = 222,
 		},
 		Named = 
 		{
@@ -6586,7 +12291,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 131,
+			uint Id = 223,
 		},
 		Named = 
 		{
@@ -6634,7 +12339,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 132,
+			uint Id = 224,
 		},
 		Named = 
 		{
@@ -6693,7 +12398,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 133,
+			uint Id = 225,
 		},
 		Named = 
 		{
@@ -6752,7 +12457,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 134,
+			uint Id = 226,
 		},
 		Named = 
 		{
@@ -6800,7 +12505,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 135,
+			uint Id = 227,
 		},
 		Named = 
 		{
@@ -6859,7 +12564,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 136,
+			uint Id = 228,
 		},
 		Named = 
 		{
@@ -6918,7 +12623,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 137,
+			uint Id = 229,
 		},
 		Named = 
 		{
@@ -6966,7 +12671,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 138,
+			uint Id = 230,
 		},
 		Named = 
 		{
@@ -7014,7 +12719,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 139,
+			uint Id = 231,
 		},
 		Named = 
 		{
@@ -7062,7 +12767,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 140,
+			uint Id = 232,
 		},
 		Named = 
 		{
@@ -7110,7 +12815,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 141,
+			uint Id = 233,
 		},
 		Named = 
 		{
@@ -7179,7 +12884,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 142,
+			uint Id = 234,
 		},
 		Named = 
 		{
@@ -7237,7 +12942,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 143,
+			uint Id = 235,
 		},
 		Named = 
 		{
@@ -7295,7 +13000,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 144,
+			uint Id = 236,
 		},
 		Named = 
 		{
@@ -7353,7 +13058,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 145,
+			uint Id = 237,
 		},
 		Named = 
 		{
@@ -7411,7 +13116,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 146,
+			uint Id = 238,
 		},
 		Named = 
 		{
@@ -7480,7 +13185,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 147,
+			uint Id = 239,
 		},
 		Named = 
 		{
@@ -7549,7 +13254,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 148,
+			uint Id = 240,
 		},
 		Named = 
 		{
@@ -7607,7 +13312,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 149,
+			uint Id = 241,
 		},
 		Named = 
 		{
@@ -7665,7 +13370,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 150,
+			uint Id = 242,
 		},
 		Named = 
 		{
@@ -7720,7 +13425,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 151,
+			uint Id = 243,
 		},
 		Transform = 
 		{
@@ -7735,10 +13440,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a2e6ee2b26b2756:Enemy_StealthW1",
+		string Name = "5a5086c44183c1a9:Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 152,
+			uint Id = 244,
 		},
 		Transform = 
 		{
@@ -7748,7 +13453,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Stealth(worldone)",
+			string Name = "Enemy_Stealth",
 		},
 	},
 	ArchetypeInstance = 
@@ -7756,7 +13461,7 @@ Level =
 		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
 		LinkId = 
 		{
-			uint Id = 153,
+			uint Id = 245,
 		},
 		Transform = 
 		{
@@ -7774,7 +13479,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 154,
+			uint Id = 246,
 		},
 		Transform = 
 		{
@@ -7792,7 +13497,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 155,
+			uint Id = 247,
 		},
 		Transform = 
 		{
@@ -7810,7 +13515,7 @@ Level =
 		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
 		LinkId = 
 		{
-			uint Id = 156,
+			uint Id = 248,
 		},
 		Transform = 
 		{
@@ -7828,7 +13533,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 157,
+			uint Id = 249,
 		},
 		Transform = 
 		{
@@ -7846,7 +13551,7 @@ Level =
 		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
 		LinkId = 
 		{
-			uint Id = 158,
+			uint Id = 250,
 		},
 		Transform = 
 		{
@@ -7864,7 +13569,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 159,
+			uint Id = 251,
 		},
 		Transform = 
 		{
@@ -7882,7 +13587,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 160,
+			uint Id = 252,
 		},
 		Transform = 
 		{
@@ -7900,7 +13605,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 161,
+			uint Id = 253,
 		},
 		Transform = 
 		{
@@ -7918,7 +13623,7 @@ Level =
 		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
 		LinkId = 
 		{
-			uint Id = 162,
+			uint Id = 254,
 		},
 		Transform = 
 		{
@@ -7936,7 +13641,7 @@ Level =
 		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
 		LinkId = 
 		{
-			uint Id = 163,
+			uint Id = 255,
 		},
 		Transform = 
 		{
@@ -7954,7 +13659,7 @@ Level =
 		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
 		LinkId = 
 		{
-			uint Id = 164,
+			uint Id = 256,
 		},
 		Transform = 
 		{
@@ -7972,7 +13677,7 @@ Level =
 		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
 		LinkId = 
 		{
-			uint Id = 165,
+			uint Id = 257,
 		},
 		Transform = 
 		{
@@ -7990,7 +13695,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 166,
+			uint Id = 258,
 		},
 		Transform = 
 		{
@@ -8008,7 +13713,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 167,
+			uint Id = 259,
 		},
 		Transform = 
 		{
@@ -8026,7 +13731,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 168,
+			uint Id = 260,
 		},
 		Transform = 
 		{
@@ -8044,7 +13749,7 @@ Level =
 		string Name = "5a2e6e9ab48fac87:Enemy_ShieldW1",
 		LinkId = 
 		{
-			uint Id = 169,
+			uint Id = 261,
 		},
 		Transform = 
 		{
@@ -8062,7 +13767,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 170,
+			uint Id = 262,
 		},
 		Transform = 
 		{
@@ -8080,7 +13785,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 171,
+			uint Id = 263,
 		},
 		Transform = 
 		{
@@ -8098,7 +13803,7 @@ Level =
 		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
 		LinkId = 
 		{
-			uint Id = 172,
+			uint Id = 264,
 		},
 		Transform = 
 		{
@@ -8116,7 +13821,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 173,
+			uint Id = 265,
 		},
 		Transform = 
 		{
@@ -8134,7 +13839,7 @@ Level =
 		string Name = "5a2e6fd296a7b2b9:Enemy_GI_PistolW1",
 		LinkId = 
 		{
-			uint Id = 174,
+			uint Id = 266,
 		},
 		Transform = 
 		{
@@ -8152,7 +13857,7 @@ Level =
 		string Name = "5a2e6e16a898108b:Enemy_RusherW1",
 		LinkId = 
 		{
-			uint Id = 175,
+			uint Id = 267,
 		},
 		Transform = 
 		{
@@ -8170,7 +13875,7 @@ Level =
 		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
 		LinkId = 
 		{
-			uint Id = 176,
+			uint Id = 268,
 		},
 		Transform = 
 		{
@@ -8188,7 +13893,7 @@ Level =
 		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
 		LinkId = 
 		{
-			uint Id = 177,
+			uint Id = 269,
 		},
 		Transform = 
 		{
@@ -8206,7 +13911,7 @@ Level =
 		string Name = "5a2e697adc41f7d4:Enemy_RusherW2",
 		LinkId = 
 		{
-			uint Id = 178,
+			uint Id = 270,
 		},
 		Transform = 
 		{
@@ -8224,7 +13929,7 @@ Level =
 		string Name = "5a2e697adc41f7d4:Enemy_RusherW2",
 		LinkId = 
 		{
-			uint Id = 179,
+			uint Id = 271,
 		},
 		Transform = 
 		{
@@ -8242,7 +13947,7 @@ Level =
 		string Name = "5a2e697adc41f7d4:Enemy_RusherW2",
 		LinkId = 
 		{
-			uint Id = 180,
+			uint Id = 272,
 		},
 		Transform = 
 		{
@@ -8260,7 +13965,7 @@ Level =
 		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
 		LinkId = 
 		{
-			uint Id = 181,
+			uint Id = 273,
 		},
 		Transform = 
 		{
@@ -8275,10 +13980,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
+		string Name = "5a5086c44183c1a9:Enemy_Stealth",
 		LinkId = 
 		{
-			uint Id = 182,
+			uint Id = 274,
 		},
 		Transform = 
 		{
@@ -8288,7 +13993,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Stealth(worldone)",
+			string Name = "Enemy_Stealth",
 		},
 	},
 	ArchetypeInstance = 
@@ -8296,7 +14001,7 @@ Level =
 		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
 		LinkId = 
 		{
-			uint Id = 183,
+			uint Id = 275,
 		},
 		Transform = 
 		{
@@ -8306,7 +14011,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Stealth(worldone)",
+			string Name = "Enemy_StealthW2",
 		},
 	},
 	ArchetypeInstance = 
@@ -8314,7 +14019,7 @@ Level =
 		string Name = "5a2e6935cad35891:Enemy_ShieldW2",
 		LinkId = 
 		{
-			uint Id = 184,
+			uint Id = 276,
 		},
 		Transform = 
 		{
@@ -8332,7 +14037,7 @@ Level =
 		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
 		LinkId = 
 		{
-			uint Id = 185,
+			uint Id = 277,
 		},
 		Transform = 
 		{
@@ -8342,7 +14047,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Stealth(worldone)",
+			string Name = "Enemy_StealthW2",
 		},
 	},
 	ArchetypeInstance = 
@@ -8350,7 +14055,7 @@ Level =
 		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
 		LinkId = 
 		{
-			uint Id = 186,
+			uint Id = 278,
 		},
 		Transform = 
 		{
@@ -8368,7 +14073,7 @@ Level =
 		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
 		LinkId = 
 		{
-			uint Id = 187,
+			uint Id = 279,
 		},
 		Transform = 
 		{
@@ -8386,7 +14091,7 @@ Level =
 		string Name = "5a2e697adc41f7d4:Enemy_RusherW2",
 		LinkId = 
 		{
-			uint Id = 188,
+			uint Id = 280,
 		},
 		Transform = 
 		{
@@ -8404,7 +14109,7 @@ Level =
 		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
 		LinkId = 
 		{
-			uint Id = 189,
+			uint Id = 281,
 		},
 		Transform = 
 		{
@@ -8414,7 +14119,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Stealth(worldone)",
+			string Name = "Enemy_StealthW2",
 		},
 	},
 	ArchetypeInstance = 
@@ -8422,7 +14127,7 @@ Level =
 		string Name = "5a2e6935cad35891:Enemy_ShieldW2",
 		LinkId = 
 		{
-			uint Id = 190,
+			uint Id = 282,
 		},
 		Transform = 
 		{
@@ -8440,7 +14145,7 @@ Level =
 		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
 		LinkId = 
 		{
-			uint Id = 191,
+			uint Id = 283,
 		},
 		Transform = 
 		{
@@ -8458,7 +14163,7 @@ Level =
 		string Name = "5a2e6935cad35891:Enemy_ShieldW2",
 		LinkId = 
 		{
-			uint Id = 192,
+			uint Id = 284,
 		},
 		Transform = 
 		{
@@ -8468,7 +14173,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Shield",
+			string Name = "Enemy_ShieldW2",
 		},
 	},
 	ArchetypeInstance = 
@@ -8476,7 +14181,7 @@ Level =
 		string Name = "5a2e6935cad35891:Enemy_ShieldW2",
 		LinkId = 
 		{
-			uint Id = 193,
+			uint Id = 285,
 		},
 		Transform = 
 		{
@@ -8486,7 +14191,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Shield",
+			string Name = "Enemy_ShieldW2",
 		},
 	},
 	ArchetypeInstance = 
@@ -8494,7 +14199,7 @@ Level =
 		string Name = "5a2e6935cad35891:Enemy_ShieldW2",
 		LinkId = 
 		{
-			uint Id = 194,
+			uint Id = 286,
 		},
 		Transform = 
 		{
@@ -8504,7 +14209,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Shield",
+			string Name = "Enemy_ShieldW2",
 		},
 	},
 	ArchetypeInstance = 
@@ -8512,7 +14217,7 @@ Level =
 		string Name = "5a2e6929c5dfd68f:Enemy_StealthW2",
 		LinkId = 
 		{
-			uint Id = 195,
+			uint Id = 287,
 		},
 		Transform = 
 		{
@@ -8522,7 +14227,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Stealth(worldone)",
+			string Name = "Enemy_StealthW2",
 		},
 	},
 	ArchetypeInstance = 
@@ -8530,7 +14235,7 @@ Level =
 		string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
 		LinkId = 
 		{
-			uint Id = 196,
+			uint Id = 288,
 		},
 		Transform = 
 		{
@@ -8548,7 +14253,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 197,
+			uint Id = 289,
 		},
 		Transform = 
 		{
@@ -8558,7 +14263,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Stealth(worldone)",
+			string Name = "Enemy_StealthW3",
 		},
 	},
 	ArchetypeInstance = 
@@ -8566,7 +14271,7 @@ Level =
 		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
 		LinkId = 
 		{
-			uint Id = 198,
+			uint Id = 290,
 		},
 		Transform = 
 		{
@@ -8576,7 +14281,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Shield",
+			string Name = "Enemy_ShieldW3",
 		},
 	},
 	ArchetypeInstance = 
@@ -8584,7 +14289,7 @@ Level =
 		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
 		LinkId = 
 		{
-			uint Id = 199,
+			uint Id = 291,
 		},
 		Transform = 
 		{
@@ -8594,7 +14299,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Shield",
+			string Name = "Enemy_ShieldW3",
 		},
 	},
 	ArchetypeInstance = 
@@ -8602,7 +14307,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 200,
+			uint Id = 292,
 		},
 		Transform = 
 		{
@@ -8620,7 +14325,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 201,
+			uint Id = 293,
 		},
 		Transform = 
 		{
@@ -8630,7 +14335,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_Stealth(worldone)",
+			string Name = "Enemy_StealthW3",
 		},
 	},
 	ArchetypeInstance = 
@@ -8638,7 +14343,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 202,
+			uint Id = 294,
 		},
 		Transform = 
 		{
@@ -8656,7 +14361,7 @@ Level =
 		string Name = "5a2e681cfe57b4fa:Enemy_RusherW3",
 		LinkId = 
 		{
-			uint Id = 203,
+			uint Id = 295,
 		},
 		Transform = 
 		{
@@ -8674,7 +14379,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 204,
+			uint Id = 296,
 		},
 		Transform = 
 		{
@@ -8692,7 +14397,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 205,
+			uint Id = 297,
 		},
 		Transform = 
 		{
@@ -8710,7 +14415,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 206,
+			uint Id = 298,
 		},
 		Transform = 
 		{
@@ -8728,7 +14433,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 207,
+			uint Id = 299,
 		},
 		Transform = 
 		{
@@ -8746,7 +14451,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 208,
+			uint Id = 300,
 		},
 		Transform = 
 		{
@@ -8764,7 +14469,7 @@ Level =
 		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
 		LinkId = 
 		{
-			uint Id = 209,
+			uint Id = 301,
 		},
 		Transform = 
 		{
@@ -8782,7 +14487,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 210,
+			uint Id = 302,
 		},
 		Transform = 
 		{
@@ -8800,7 +14505,7 @@ Level =
 		string Name = "5a2e681cfe57b4fa:Enemy_RusherW3",
 		LinkId = 
 		{
-			uint Id = 211,
+			uint Id = 303,
 		},
 		Transform = 
 		{
@@ -8818,7 +14523,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 212,
+			uint Id = 304,
 		},
 		Transform = 
 		{
@@ -8836,7 +14541,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 213,
+			uint Id = 305,
 		},
 		Transform = 
 		{
@@ -8854,7 +14559,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 214,
+			uint Id = 306,
 		},
 		Transform = 
 		{
@@ -8872,7 +14577,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 215,
+			uint Id = 307,
 		},
 		Transform = 
 		{
@@ -8890,7 +14595,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 216,
+			uint Id = 308,
 		},
 		Transform = 
 		{
@@ -8908,7 +14613,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 217,
+			uint Id = 309,
 		},
 		Transform = 
 		{
@@ -8926,7 +14631,7 @@ Level =
 		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
 		LinkId = 
 		{
-			uint Id = 218,
+			uint Id = 310,
 		},
 		Transform = 
 		{
@@ -8944,7 +14649,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 219,
+			uint Id = 311,
 		},
 		Transform = 
 		{
@@ -8962,7 +14667,7 @@ Level =
 		string Name = "5a2e681cfe57b4fa:Enemy_RusherW3",
 		LinkId = 
 		{
-			uint Id = 220,
+			uint Id = 312,
 		},
 		Transform = 
 		{
@@ -8980,7 +14685,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 221,
+			uint Id = 313,
 		},
 		Transform = 
 		{
@@ -8998,7 +14703,7 @@ Level =
 		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
 		LinkId = 
 		{
-			uint Id = 222,
+			uint Id = 314,
 		},
 		Transform = 
 		{
@@ -9016,7 +14721,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 223,
+			uint Id = 315,
 		},
 		Transform = 
 		{
@@ -9034,7 +14739,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 224,
+			uint Id = 316,
 		},
 		Transform = 
 		{
@@ -9052,7 +14757,7 @@ Level =
 		string Name = "5a2e6806f8cb7f51:Enemy_ShieldW3",
 		LinkId = 
 		{
-			uint Id = 225,
+			uint Id = 317,
 		},
 		Transform = 
 		{
@@ -9070,7 +14775,7 @@ Level =
 		string Name = "5a2e6822e251ebca:Enemy_GI_PistolW3",
 		LinkId = 
 		{
-			uint Id = 226,
+			uint Id = 318,
 		},
 		Transform = 
 		{
@@ -9088,7 +14793,7 @@ Level =
 		string Name = "5a2e6828e346da91:Enemy_StealthW3",
 		LinkId = 
 		{
-			uint Id = 227,
+			uint Id = 319,
 		},
 		Transform = 
 		{

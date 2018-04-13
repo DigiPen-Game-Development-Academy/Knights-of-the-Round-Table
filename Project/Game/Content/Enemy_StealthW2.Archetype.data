@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Enemy_Stealth(worldone)",
+		string Name = "Enemy_StealthW2",
 	},
 	Archetyped = 
 	{
@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-54.0542755, -54.1989594, -0.900005341],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -121,6 +121,7 @@ Cog =
 		float InitialHealth = 100,
 		float Cooldown = 3,
 		float RegenRate = 0.333333343,
+		float FlashLength = 0.100000001,
 	},
 	EnemyDeath = 
 	{
