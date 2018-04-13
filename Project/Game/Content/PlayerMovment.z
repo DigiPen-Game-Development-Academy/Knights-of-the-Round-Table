@@ -77,7 +77,6 @@ class PlayerMovment : ZilchComponent
                     this.Timer = 0.407921;
                 }
                 Utilities.PlaySFX(SoundCue.Walk);
-                Console.WriteLine(this.Timer);
             }
             
         }

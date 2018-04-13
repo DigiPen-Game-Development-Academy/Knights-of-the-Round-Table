@@ -1,21 +1,13 @@
 ImageContent = 
 {
-	ContentTags = 
-	{
-		Array Tags = 
-		[
-			"Icon",
-			"Weapon",
-		],
-	},
 	SpriteSourceBuilder = 
 	{
-		string Name = "Icon_Weapon_TRifle",
-		uint64 ResourceId = 5a07220856ec90d8,
+		string Name = "TRifleHolding",
+		uint64 ResourceId = 5a228c115f26d20b,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 32,
 		uint FrameSizeY = 32,
-		uint FrameCount = 1,
+		uint FrameCount = 8,
 		float FrameDelay = 0.0833333358,
 		float OriginX = 16,
 		float OriginY = 16,

@@ -6,8 +6,8 @@ class Radar : Item {
         this.Name = "Radar";
         this.ID = "Radar";
         this.Type = ItemType.Utility;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Radar;
+        this.GroundSprite = SpriteSource.Radar;
         this.MagSize = -1;
         this.FireRate = 0.125;
         this.Stackable = false;
@@ -42,8 +42,8 @@ class Watch : Item {
         this.Name = "Strange Watch";
         this.ID = "Watch";
         this.Type = ItemType.Utility;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Strange_Watch;
+        this.GroundSprite = SpriteSource.Strange_Watch;
         this.MagSize = -1;
         this.FireRate = 0.01666666666667;
         this.Stackable = false;
@@ -72,8 +72,8 @@ class SoftShoes : Item {
         this.Name = "Padded Shoes";
         this.ID = "Shoes";
         this.Type = ItemType.Utility;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Stealth_Boots;
+        this.GroundSprite = SpriteSource.Stealth_Boots;
         this.MagSize = -1;
         this.FireRate = -1;
         this.Stackable = false;
@@ -99,8 +99,8 @@ class Silencer : Item {
         this.Name = "Silencer";
         this.ID = "Silencer";
         this.Type = ItemType.Utility;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Silencer;
+        this.GroundSprite = SpriteSource.Silencer;
         this.MagSize = -1;
         this.FireRate = -1;
         this.Stackable = false;
@@ -129,11 +129,11 @@ class Silencer : Item {
 class Flashlight : Item {
     
     function Init() {
-        this.Name = "Light";
+        this.Name = "Flashlight";
         this.ID = "Light";
         this.Type = ItemType.Utility;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Flashlight;
+        this.GroundSprite = SpriteSource.Flashlight;
         this.MagSize = -1;
         this.FireRate = -1;
         this.Stackable = false;

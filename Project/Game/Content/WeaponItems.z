@@ -44,14 +44,16 @@ class Potato : Item {
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             if(res.ObjectHit.Health != null) {
-                GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance);
                 if(res.ObjectHit.EnemyAI != null && (
                         (res.ObjectHit.EnemyAI.State == State.Spotted && res.ObjectHit.EnemyAI.Timer > 0) || 
                         (res.ObjectHit.EnemyAI.State != State.Suspitious && res.ObjectHit.EnemyAI.State != State.Spotted) || 
                         (res.ObjectHit.EnemyAI.State == State.Suspitious && res.ObjectHit.EnemyAI.Timer > 0))) {
+                            
+                    GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance);
                     Utilities.SendSoundWeapon(5, res.ObjectHit.Transform.WorldTranslation);
                     res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
                     GlobalVariables.Player.PlayerMovment.Freeze(1);
+                    
                 }
             }
         }
@@ -136,7 +138,7 @@ class Plasma_Pistol : Item {
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Plasma Pistol");
+        //Console.WriteLine("Plasma Pistol");
         
         radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
         
@@ -206,11 +208,16 @@ class PlasmaSword : Item {
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             if(res.ObjectHit.Health != null) {
-                GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance);
-                if(res.ObjectHit.EnemyAI != null && res.ObjectHit.EnemyAI.State != State.Suspitious && res.ObjectHit.EnemyAI.State != State.Spotted) {
+                if(res.ObjectHit.EnemyAI != null && (
+                        (res.ObjectHit.EnemyAI.State == State.Spotted && res.ObjectHit.EnemyAI.Timer > 0) || 
+                        (res.ObjectHit.EnemyAI.State != State.Suspitious && res.ObjectHit.EnemyAI.State != State.Spotted) || 
+                        (res.ObjectHit.EnemyAI.State == State.Suspitious && res.ObjectHit.EnemyAI.Timer > 0))) {
+                            
+                    GlobalVariables.Player.Transform.WorldTranslation += dir * (res.Distance);
                     Utilities.SendSoundWeapon(5, res.ObjectHit.Transform.WorldTranslation);
                     res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
                     GlobalVariables.Player.PlayerMovment.Freeze(1);
+                    
                 }
             }
         }
@@ -225,6 +232,7 @@ class TerribleAssaultRifle : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_TRifle;
         this.GroundSprite = SpriteSource.Icon_Weapon_TRifle;
+        this.HoldingSprite = SpriteSource.TRifleHolding;
         this.Stackable = false;
         this.MagSize = 20;
         this.Name = "Ramshackle Rifle";
@@ -246,7 +254,7 @@ class TerribleAssaultRifle : Item {
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("weathered laser rifle");
+        //Console.WriteLine("weathered laser rifle");
         
         radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
         
@@ -283,7 +291,7 @@ class SlugShotgun : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Potato;
         this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
-        this.HoldingSprite = SpriteSource.ShotgunHolding;
+        this.HoldingSprite = SpriteSource.ShotgunHold;
         this.Stackable = false;
         this.MagSize = 2;
         this.Name = "Shotgun";
@@ -308,7 +316,7 @@ class SlugShotgun : Item {
     }
     
     function Use (radAngle : Real) {
-        Console.WriteLine("Shotgun");
+        //Console.WriteLine("Shotgun");
         for(var i = 0; i<4; ++i){
             radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
             
@@ -396,8 +404,8 @@ class StunMissile : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.Weapon_Stun_Launcher;
+        this.GroundSprite = SpriteSource.Weapon_Stun_Launcher;
         this.Stackable = false;
         this.MagSize = 6;
         this.Name = "Stun Missile";
@@ -516,6 +524,7 @@ class Lasersniper  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.InfernoSniperAlpha;
         this.GroundSprite = SpriteSource.InfernoSniperAlpha;
+        this.HoldingSprite = SpriteSource.SniperHolding;
         this.Sound = SoundCue.Sniper;
         this.Stackable = false;
         this.Auto = false;
@@ -597,11 +606,11 @@ class Missile  : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.RocketLauncher;
+        this.GroundSprite = SpriteSource.RocketLauncher;
         this.Stackable = false;
         this.MagSize = 1;
-        this.Name = "Missile";
+        this.Name = "Rocket Launcher";
         this.ID = "Missile";
         this.DamagePer = 500;
         this.FireRate = 0.1; 
@@ -677,8 +686,8 @@ class Potatocannon  : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.PotatoLauncher;
+        this.GroundSprite = SpriteSource.PotatoLauncher;
         this.Stackable = false;
         this.SoundDistance = 4;
         this.MagSize = 5;
@@ -743,6 +752,7 @@ class MMS_Sniper  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.InfernoSniperAlpha;
         this.GroundSprite = SpriteSource.InfernoSniperAlpha;
+        this.HoldingSprite = SpriteSource.SniperHolding;
         this.Sound = SoundCue.Sniper2;
         this.Stackable = false;
         this.MagSize = 10;
@@ -776,7 +786,7 @@ class MMS_Sniper  : Item {
         
         var radAngle = Math.ATan2(dir.Y, dir.X);
         
-        Console.WriteLine("Laser Sniper");
+        //Console.WriteLine("Laser Sniper");
         
         radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
         

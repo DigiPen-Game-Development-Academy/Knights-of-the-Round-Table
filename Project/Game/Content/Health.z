@@ -3,6 +3,9 @@ class Health : ZilchComponent {
     [Property] var InitialHealth : Real = 100;
     [Property] var Cooldown : Real = 3;
     [Property] var RegenRate : Real = 0.3333333333333;
+    [Property] var FlashLength : Real = 0.1;
+    
+    var FlashTimer : Real = 0;
     
     var OriginalRegenRate : Real;
     
@@ -61,6 +64,9 @@ class Health : ZilchComponent {
             
             this.CooldownTimer = this.Cooldown;
             
+            this.FlashTimer = this.FlashLength;
+            this.Owner.Sprite.Color = Real4(1, 0, 0, 1);
+            
         }
         
     }
@@ -73,6 +79,14 @@ class Health : ZilchComponent {
         } else {
             this.EffectTimer -= event.Dt;
             this.CooldownTimer = 0;
+        }
+        
+        if(this.Owner.Sprite.Color != Real4(1) && this.FlashTimer <= 0) {
+            
+            this.Owner.Sprite.Color = Real4(1);
+            
+        } else if(this.Owner.Sprite.Color != Real4(1)) {
+            this.FlashTimer -= event.Dt;
         }
         
         if(this.CurrentHealth >= this.InitialHealth)
