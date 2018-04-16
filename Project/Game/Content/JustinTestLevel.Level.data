@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [62.3969574, 69.6427689, 62.5000038],
+			Vec3 Translation = [-115.014778, 54.0017548, 62.4999962],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 33.2871284,
+			float Size = 4.50493097,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [62.3969574, 69.6427689, -1.49999726],
+			Vec3 LookTarget = [-115.014778, 54.0017548, -1.50000489],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -13378,9 +13378,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-117.012146, 54.7763443, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0.0630333424, 0.998011529],
+			Vec3 Translation = [-117.180634, 54.9891777, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
 		{
@@ -13392,13 +13392,13 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ab767329879f05e:YachtDestroyed",
+			string SpriteSource = "5ab43b0b9d352cb6:DamagedBoatAnim",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
-			bool AnimationActive = false,
+			bool AnimationActive = true,
 			float AnimationSpeed = 1,
-			uint StartFrame = 5,
+			uint StartFrame = 1,
 		},
 		Reactive = 
 		{
@@ -13407,7 +13407,7 @@ Level =
 		},
 		BoatRepair = 
 		{
-			string Level = "5a7e54ababd94aa3:MainMenu",
+			string Level = "5ab6820324f8e9d5:FinalBossCutscene",
 		},
 		BoxCollider = 
 		{
@@ -13415,9 +13415,9 @@ Level =
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, -0.25, 0],
-			Vec3 Size = [1, 0.25, 0.5],
+			string SerializedGroupName = "5ac6a8acc44b6351:Water",
+			Vec3 Offset = [0, -0.899999976, 0],
+			Vec3 Size = [2, 0.5, 0.5],
 		},
 	},
 	ArchetypeInstance = 
