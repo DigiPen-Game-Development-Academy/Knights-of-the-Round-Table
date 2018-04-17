@@ -72,7 +72,7 @@ class LazerNoArea : ZilchComponent {
         
         this.Owner.Sprite.Color = Real4(color.X, color.Y, color.Z, alpha);
         
-        this.Owner.Transform.WorldTranslation = GlobalVariables.Player.Transform.WorldTranslation + Real3(0,0,-0.1);
+        this.Owner.Transform.WorldTranslation = GlobalVariables.Player.Transform.WorldTranslation + Real3(0,0,0.1);
         var dir = Math.Normalize(this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - this.Owner.Transform.WorldTranslation);
         
         var res = Utilities.Raycast(this.Owner.Transform.WorldTranslation, dir, this.Space.PhysicsSpace, this.Range);
