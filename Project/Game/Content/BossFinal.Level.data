@@ -236,7 +236,7 @@ Level =
 			float ViewAngle = 45,
 			float ViewRange = 6,
 			float MoveSpeed = 1,
-			float ChaseSpeedMultiplier = 1.25,
+			float ChaseSpeedMultiplier = 1,
 			float GuardWaitTime = 5,
 			float SearchTimer = 20,
 			float MaxTimeOutOfSight = 1,
@@ -264,7 +264,7 @@ Level =
 		},
 		Stealth = 
 		{
-			float InvisSpeedMultiplier = 2,
+			float InvisSpeedMultiplier = 1,
 			string OpacityCurve = "5abdc26d9fc78f57:StealthOpacity",
 			float CloseSpeedMultiplier = 2,
 		},
@@ -325,21 +325,21 @@ Level =
 			float StartRange = 100,
 			string DashDamageMSG = "You where run over by a giant enemy!",
 			string PassiveDamageMSG = "Wait...  did that guy just sit on you?!?",
-			string North = "",
-			string NorthEast = "",
-			string East = "",
-			string SouthEast = "",
-			string South = "",
-			string SouthWest = "",
-			string West = "",
-			string NorthWest = "",
+			string North = "4e07948c35993095:DefaultSprite",
+			string NorthEast = "4e07948c35993095:DefaultSprite",
+			string East = "4e07948c35993095:DefaultSprite",
+			string SouthEast = "4e07948c35993095:DefaultSprite",
+			string South = "4e07948c35993095:DefaultSprite",
+			string SouthWest = "4e07948c35993095:DefaultSprite",
+			string West = "4e07948c35993095:DefaultSprite",
+			string NorthWest = "4e07948c35993095:DefaultSprite",
 		},
 		FinalBoss = 
 		{
-			float WindTimeFull = 10,
-			float WindTimeEmpty = 2,
-			float StateTimeFull = 12,
-			float StateTimeEmpty = 7,
+			float WindTimeFull = 5,
+			float WindTimeEmpty = 3,
+			float StateTimeFull = 9,
+			float StateTimeEmpty = 4,
 			float AllOutHeath = 0.25,
 		},
 		FinalBossEnd = 
@@ -484,7 +484,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.500590384, 0.188709646, 50],
+			Vec3 Translation = [0.077861324, 0.0215944313, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -496,7 +496,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.9329872,
+			float Size = 7.42738199,
 		},
 		EditorCameraController = 
 		{
@@ -504,7 +504,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.500590384, 0.188709646, -4.6263871e-08],
+			Vec3 LookTarget = [0.077861324, 0.0215944313, -6.47419611e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -717,7 +717,7 @@ Level =
 		PlayerHealth = 
 		{
 			bool OnMainLevel = true,
-			string MainLevel = "5a1a864f77326081:JustinTestLevel",
+			string MainLevel = "5a1a864f77326081:Mainworld",
 		},
 		PlayerSprites = 
 		{
