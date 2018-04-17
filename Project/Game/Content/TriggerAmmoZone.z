@@ -26,7 +26,7 @@ class TriggerAmmoZone : ZilchComponent {
 
     function OnMouseEnter(event : ViewportMouseEvent) {
         
-        GlobalVariables.LorePanel.LorePanel.Text = "Resource Station\nStand here for `this.Cooldown` seconds\nand you will get some `this.TypeForLore.ToUpper()`!";
+        GlobalVariables.LorePanel.LorePanel.Text = "Resource Station\nStand near it for `this.Cooldown` seconds\nand you will get some `this.TypeForLore.ToUpper()`!";
         
         GlobalVariables.LorePanel.Sprite.Visible = true;
     }
@@ -56,9 +56,12 @@ class TriggerAmmoZone : ZilchComponent {
                 
                 item.Init();
                 
-                var gItem = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GroundItem, this.Owner.Transform.WorldTranslation + rand.Real3(0, this.Owner.Transform.Scale.X/2));
+                var randPos = rand.Real3(1, this.Owner.Transform.Scale.X/2);
+                
+                var gItem = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GroundItem, this.Owner.Transform.WorldTranslation + randPos);
+                
                 if(gItem != null) {
-                    gItem.Transform.WorldTranslation = Real3(gItem.Transform.WorldTranslation.X, gItem.Transform.WorldTranslation.Y, 0);
+                    gItem.Transform.WorldTranslation = Real3((this.Owner.Transform.WorldTranslation + randPos).XY, 1);
                     gItem.ItemPickup.SetItem(item);
                     gItem.ItemPickup.Item.Ammount = item.Ammount;
                 }

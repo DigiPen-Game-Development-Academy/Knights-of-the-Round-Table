@@ -3,7 +3,11 @@ class TimeTimer : ZilchComponent {
     var Once : Boolean = false;
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
+        Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStarted);
+    }
+
+    function OnLevelStarted(event : GameEvent) {
+        this.Space.TimeSpace.TimeScale = 1;
     }
 
     function OnLogicUpdate(event : UpdateEvent) {

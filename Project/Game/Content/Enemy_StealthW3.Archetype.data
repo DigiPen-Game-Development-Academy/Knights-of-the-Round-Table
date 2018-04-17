@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [62.4993134, -13.4751997, -0.900001526],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -112,13 +112,13 @@ Cog =
 	},
 	EnemyMelee = 
 	{
-		float AttacksPerSecond = 3,
+		float AttacksPerSecond = 4,
 		float DamagerPerAttack = 50,
 		string DeathMSG = "You Where Bitten by an Enemy",
 	},
 	Health = 
 	{
-		float InitialHealth = 100,
+		float InitialHealth = 105,
 		float Cooldown = 3,
 		float RegenRate = 0.333333343,
 		float FlashLength = 0.100000001,
