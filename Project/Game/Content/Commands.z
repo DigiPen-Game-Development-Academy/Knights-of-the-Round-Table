@@ -346,6 +346,8 @@ class Commands {
         var saw = SawLaser();
         saw.Init();
         saw.MagSize = -1;
+        saw.FireRate = 10000;
+        saw.RandAngle = 45;
         GlobalVariables.AddInventoryItem(saw);
     }
     

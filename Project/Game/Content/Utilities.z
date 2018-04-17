@@ -37,7 +37,13 @@ class Utilities
         EnemyID(Archetype.Enemy_Shield),
         EnemyID(Archetype.Enemy_ShieldW1),
         EnemyID(Archetype.Enemy_ShieldW2),
-        EnemyID(Archetype.Enemy_ShieldW3)
+        EnemyID(Archetype.Enemy_ShieldW3),
+        EnemyID(Archetype.Enemy_RusherW1),
+        EnemyID(Archetype.Enemy_RusherW2),
+        EnemyID(Archetype.Enemy_RusherW3),
+        EnemyID(Archetype.Enemy_GI_PistolW1),
+        EnemyID(Archetype.Enemy_GI_PistolW2),
+        EnemyID(Archetype.Enemy_GI_PistolW3)
     };
     
     /*Item Auto-Compete Array*/

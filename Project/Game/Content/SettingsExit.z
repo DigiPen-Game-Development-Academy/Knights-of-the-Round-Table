@@ -9,7 +9,7 @@ class SettingsExit : ZilchComponent {
         this.Owner.Parent.FindChildByName("MusicVol").SlideBox.Value = Settings.MUSICvol;
         this.Owner.Parent.FindChildByName("SFXVol").SlideBox.Value = Settings.SFXvol;
         this.Owner.Parent.FindChildByName("CameraSmothness").SlideBox.Value = Settings.CamSmoothness;
-        this.Owner.Parent.FindChildByName("ScreenShake").SlideBox.Value = Settings.ScreenShake / 3;
+        this.Owner.Parent.FindChildByName("ScreenShake").SlideBox.Value = Settings.ScreenShake / 15;
         
     }
 
@@ -26,7 +26,7 @@ class SettingsExit : ZilchComponent {
         Settings.MUSICvol = this.Owner.Parent.FindChildByName("MusicVol").SlideBox.Value;
         Settings.SFXvol = this.Owner.Parent.FindChildByName("SFXVol").SlideBox.Value;
         Settings.CamSmoothness = this.Owner.Parent.FindChildByName("CameraSmothness").SlideBox.Value;
-        Settings.ScreenShake = this.Owner.Parent.FindChildByName("ScreenShake").SlideBox.Value * 3;
+        Settings.ScreenShake = this.Owner.Parent.FindChildByName("ScreenShake").SlideBox.Value * 15;
         GlobalVariables.Settings.SettingsSave.Save();
     }
 
