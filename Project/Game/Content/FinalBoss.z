@@ -32,6 +32,12 @@ class FinalBoss : ZilchComponent {
     [Property] var StateTimeEmpty : Real = 5;
     //ammount of health to switch to "all out" state
     [Property] var AllOutHeath : Real = 0.25;
+    //ammount of health to switch to "stealth" state
+    [Property] var StealthHeath : Real = 0.40;
+    //ammount of health to switch to "shield" state
+    [Property] var ShealdHeath : Real = 0.60;
+    //ammount of health to switch to "gi" state
+    [Property] var GIHeath : Real = 0.80;
     
     //*****Variables*****
     //timer before going back to wind
@@ -72,7 +78,6 @@ class FinalBoss : ZilchComponent {
         this.GI.Active = false;
         this.Shield.Active = false;
         this.Stealth.Active = false;
-        this.PathFollow.Active = false;
         this.GPathFollow.Active = false;
         
         //go back to wind when state timer has ended
@@ -108,14 +113,14 @@ class FinalBoss : ZilchComponent {
         
         if(this.Health.Percent <= this.AllOutHeath) {
             this.State = FState.AllOut;
-        } else if(this.Rand.Probability(0.25)) {
-            this.State = FState.Rusher;
-        } else if(this.Rand.Probability(0.25)) {
-            this.State = FState.GI;
-        } else if(this.Rand.Probability(0.25)) {
-            this.State = FState.Shield;
-        } else {
+        } else if(this.Health.Percent <= this.StealthHeath) {
             this.State = FState.Stealth;
+        } else if(this.Health.Percent <= this.ShealdHeath) {
+            this.State = FState.Shield;
+        } else if(this.Health.Percent <= this.GIHeath) {
+            this.State = FState.GI;
+        } else {
+            this.State = FState.Rusher;
         }
         
     }
@@ -155,12 +160,21 @@ class FinalBoss : ZilchComponent {
     function ShieldState (dt : Real) {
         
         this.PathFollow.Active = true;
+        this.GI.Active = true;
+        
+        this.PathFollow.Active = true;
         this.Shield.Active = true;
         
     }
     
     //use stealth boss AI and cut the lights
     function StealthState (dt : Real) {
+        
+        this.PathFollow.Active = true;
+        this.GI.Active = true;
+        
+        this.PathFollow.Active = true;
+        this.Shield.Active = true;
         
         this.PathFollow.Active = true;
         this.Stealth.Active = true;
@@ -172,7 +186,6 @@ class FinalBoss : ZilchComponent {
     function AllOutState (dt : Real) {
         
         this.PathFollow.Active = true;
-        this.Rusher.Active = true;
         this.GI.Active = true;
         this.Shield.Active = true;
         this.Stealth.Active = true;

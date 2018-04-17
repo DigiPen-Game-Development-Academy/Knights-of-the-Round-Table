@@ -307,7 +307,7 @@ Level =
 		},
 		Boss_Rusher_AI = 
 		{
-			float MovSpeed = 2,
+			float MovSpeed = 1,
 			float DashSpeed = 4,
 			float AngryDashSpeed = 4,
 			float WindUpTimeMax = 1.5,
@@ -338,9 +338,12 @@ Level =
 		{
 			float WindTimeFull = 10,
 			float WindTimeEmpty = 2,
-			float StateTimeFull = 12,
-			float StateTimeEmpty = 7,
+			float StateTimeFull = 25,
+			float StateTimeEmpty = 24,
 			float AllOutHeath = 0.25,
+			float StealthHeath = 0.400000006,
+			float ShealdHeath = 0.600000024,
+			float GIHeath = 0.800000012,
 		},
 		FinalBossEnd = 
 		{
@@ -484,7 +487,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.500590384, 0.188709646, 50],
+			Vec3 Translation = [0.097785756, -0.166564748, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -496,7 +499,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.9329872,
+			float Size = 5.50234079,
 		},
 		EditorCameraController = 
 		{
@@ -504,7 +507,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.500590384, 0.188709646, -4.6263871e-08],
+			Vec3 LookTarget = [0.097785756, -0.166564748, -6.38709992e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
