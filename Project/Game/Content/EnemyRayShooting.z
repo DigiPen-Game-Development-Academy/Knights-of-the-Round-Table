@@ -109,6 +109,9 @@ class EnemyRayShooting : ZilchComponent {
         GlobalVariables.Player.RigidBody.DynamicState = RigidBodyDynamicState.Dynamic;
         GlobalVariables.Player.RigidBody.Velocity = vel;
         GlobalVariables.Player.BoxCollider.Ghost = ghost;
+        
+        Utilities.ScreenShake(2, 10);
+        
     }
     
 }
