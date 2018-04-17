@@ -160,7 +160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.63204479, -7.23080158, 50],
+			Vec3 Translation = [-0.396452129, -5.50569963, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -172,7 +172,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3323536,
+			float Size = 4.91921568,
 		},
 		EditorCameraController = 
 		{
@@ -180,7 +180,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [7.63204479, -7.23080158, -3.1150276e-07],
+			Vec3 LookTarget = [-0.396452129, -5.50569963, -6.62438879e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -204,7 +204,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, -0.5],
+			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -318,6 +318,7 @@ Level =
 			float InitialHealth = 100,
 			float Cooldown = 3,
 			float RegenRate = 0.333333343,
+			float FlashLength = 0.100000001,
 		},
 		PlayerHealth = 
 		{
@@ -455,12 +456,19 @@ Level =
 			},
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a525a3807624072:Boss_GI",
 		LinkId = 
 		{
 			uint Id = 8,
+		},
+		Named = 
+		{
+			string Name = "Boss_GI",
+		},
+		Archetyped = 
+		{
+			string Name = "5a525a3807624072:Boss_GI",
 		},
 		Transform = 
 		{
@@ -468,9 +476,156 @@ Level =
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		SphereCollider = 
 		{
-			string Name = "Boss_GI",
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.300000012,
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5ad3a90f17327394:RangerBoss000",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Health = 
+		{
+			float InitialHealth = 1750,
+			float Cooldown = 10,
+			float RegenRate = 0.5,
+			float FlashLength = 0.100000001,
+		},
+		Boss_GI_AI = 
+		{
+			float FireRateFull = 7,
+			float FireRateEmpty = 10,
+			float PFireRateFull = 3,
+			float PFireRateEmpty = 5,
+			float FireCooldownMax = 6,
+			float FireCooldownMin = 4,
+			float FireCooldownRand = 0.100000001,
+			float SprayLength = 3.25,
+			float SpraySpeedMax = 2,
+			float SpraySpeedMin = 5,
+			float SprayAngleMax = 90,
+			float SprayAngleMin = 25,
+			float SpreadMax = 10,
+			float SpreadMin = 5,
+			float SpreadNumMax = 5,
+			float SpreadNumMin = 20,
+			float SpinFull = 1,
+			float SpinEmpty = 3,
+			float SpinSpeedFull = 360,
+			float SpinSpeedEmpty = 720,
+			float SpinFireRateFull = 25,
+			float SpinFireRateEmpty = 40,
+			float BSpeedFull = 3,
+			float BSpeedEmpty = 10,
+			float DamageFull = 9,
+			float DamageEmpty = 15,
+			float SpreadHealth = 0.75,
+			float SpinHealth = 0.5,
+			float WindCooldownFull = 1,
+			float WindCooldownEmpty = 1,
+			string DamageMSG = "You were shot with impossible slow-mo bullets.",
+		},
+		BossDrops = 
+		{
+			string Part = "5a50196fd480ebb5:QuestItem2",
+			string Note = "THIS IS A NOTE",
+			string Drops = "",
+			float DropRange = 1,
+			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
+		},
+		BasicPathFollowAI = 
+		{
+		},
+		EnemyAI = 
+		{
+			float InstantSpotRadius = 2,
+			float MaxDistFromGuard = 20,
+			float WaitTime = 1,
+			float Range = 3,
+			float ViewAngle = 45,
+			float ViewRange = 6,
+			float MoveSpeed = 0.100000001,
+			float ChaseSpeedMultiplier = 10,
+			float GuardWaitTime = 5,
+			float SearchTimer = 20,
+			float MaxTimeOutOfSight = 10000,
+			float SearchRange = 10,
+			float ViewDist = 10,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		EnemyPathFind = 
+		{
+		},
+		Visibility = 
+		{
+		},
+		EnemySprite = 
+		{
+			string North = "",
+			string NorthEast = "",
+			string East = "",
+			string SouthEast = "",
+			string South = "",
+			string SouthWest = "",
+			string West = "",
+			string NorthWest = "",
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "5a7c1968c9af3d26:Healthbar",
+				LinkId = 
+				{
+					uint Id = 9,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.625, 1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Area = 
+				{
+					Vec2 Size = [1, 0.100000001],
+					Location Origin = Center,
+				},
+				Named = 
+				{
+					string Name = "Healthbar",
+				},
+			},
 		},
 	},
 },

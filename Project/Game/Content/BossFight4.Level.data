@@ -160,7 +160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.21692801, 0.972733617, 50],
+			Vec3 Translation = [2.82682228, -13.4972725, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -172,7 +172,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.2683964,
+			float Size = 44.9329758,
 		},
 		EditorCameraController = 
 		{
@@ -180,7 +180,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.21692801, 0.972733617, 3.7844427e-07],
+			Vec3 LookTarget = [2.82682228, -13.4972725, 3.7844427e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -222,7 +222,7 @@ Level =
 		TileMap = 
 		{
 			string SourceName = "5a5162887fc3658e:BossFight4_TileMap00",
-			string PaletteName = "5a9ba11017491fb7:Walls",
+			string PaletteName = "5a11b7b61863cdae:Floor",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
 		},
@@ -318,6 +318,7 @@ Level =
 			float InitialHealth = 100,
 			float Cooldown = 3,
 			float RegenRate = 0.333333343,
+			float FlashLength = 0.100000001,
 		},
 		PlayerHealth = 
 		{
