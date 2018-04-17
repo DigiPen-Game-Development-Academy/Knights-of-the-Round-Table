@@ -345,7 +345,7 @@ Level =
 		FinalBossEnd = 
 		{
 			string Note = "THIS IS A NOTE",
-			string FinalLevel = "5a7e54ababd94aa3:MainMenu",
+			string FinalLevel = "5a237c653f36331b:FinalCutscene",
 		},
 		Hierarchy = 
 		{
@@ -484,7 +484,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.215826139, -0.629038393, 50],
+			Vec3 Translation = [1.34087384, -0.432601541, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -504,7 +504,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.215826139, -0.629038393, -3.12551718e-09],
+			Vec3 LookTarget = [1.34087384, -0.432601541, 4.6051877e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
