@@ -506,7 +506,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 1750,
+			float InitialHealth = 2000,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 			float FlashLength = 0.100000001,
