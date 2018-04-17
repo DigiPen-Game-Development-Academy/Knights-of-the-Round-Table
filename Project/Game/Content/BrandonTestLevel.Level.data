@@ -164,7 +164,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.06547725, -0.442148894, 112.565193],
+			Vec3 Translation = [7.4037919, 5.64983368, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -176,7 +176,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 6.72056341,
+			float Size = 5.50233412,
 		},
 		EditorCameraController = 
 		{
@@ -184,7 +184,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.06547725, -0.442148894, 1.00000036],
+			Vec3 LookTarget = [7.4037919, 5.64983368, 1.00000036],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -287,6 +287,7 @@ Level =
 			float InitialHealth = 100,
 			float Cooldown = 3,
 			float RegenRate = 0.333332986,
+			float FlashLength = 0.100000001,
 		},
 		PlayerHealth = 
 		{
@@ -1081,6 +1082,42 @@ Level =
 		Named = 
 		{
 			string Name = "Chest",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb04a79e382aa:HealthZone",
+		LinkId = 
+		{
+			uint Id = 36,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [8, 6, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "HealthZone",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb05278a6a072:AmmoZone",
+		LinkId = 
+		{
+			uint Id = 37,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5, 6, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoZone",
 		},
 	},
 },
