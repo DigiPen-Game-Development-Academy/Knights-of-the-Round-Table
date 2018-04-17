@@ -341,7 +341,7 @@ Level =
 		PlayerHealth = 
 		{
 			bool OnMainLevel = false,
-			string MainLevel = "5a1a864f77326081:JustinTestLevel",
+			string MainLevel = "5a1a864f77326081:Mainworld",
 		},
 		PlayerSprites = 
 		{
@@ -538,24 +538,6 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [13.6746721, -12.7284746, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "AmmoZone",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5aadb05278a6a072:AmmoZone",
-		LinkId = 
-		{
-			uint Id = 13,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-13.4582024, -12.8464432, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
