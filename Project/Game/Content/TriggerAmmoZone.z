@@ -1,0 +1,72 @@
+class TriggerAmmoZone : ZilchComponent {
+    
+    [Dependency] var Reactive : Reactive;
+    
+    [Property] var LootTable : ResourceTable;
+    
+    [Property] var TypeForLore : String = "";
+    
+    [Property] var Cooldown : Real = 10;
+    var Timer : Real;
+    
+    var Col : Boolean = false;
+    
+    function Initialize(init : CogInitializer) {
+        this.Timer = this.Cooldown;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+        Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+        Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+    }
+
+    function OnMouseExit(event : ViewportMouseEvent) {
+        GlobalVariables.LorePanel.Sprite.Visible = false;
+    }
+
+    function OnMouseEnter(event : ViewportMouseEvent) {
+        
+        GlobalVariables.LorePanel.LorePanel.Text = "Resource Station\nStand here for `this.Cooldown` seconds\nand you will get some `this.TypeForLore.ToUpper()`!";
+        
+        GlobalVariables.LorePanel.Sprite.Visible = true;
+    }
+
+    function OnCollisionEnded(event : CollisionEvent) {
+        if(event.OtherObject == GlobalVariables.Player) {
+            this.Col = false;
+        }
+    }
+
+    function OnCollisionStarted(event : CollisionEvent) {
+        if(event.OtherObject == GlobalVariables.Player) {
+            this.Col = true;
+        }
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.Col) {
+            this.Timer -= event.Dt;
+            if(this.Timer <= 0) {
+                this.Timer = this.Cooldown;
+                
+                var rand = Random();
+                
+                var item = Utilities.ItemFromID(this.LootTable.SampleValue(rand.Range(0, 1), rand.Range(0, 1)));
+                
+                item.Init();
+                
+                var gItem = GlobalVariables.GameSpace.CreateAtPosition(Archetype.GroundItem, this.Owner.Transform.WorldTranslation + rand.Real3(0, this.Owner.Transform.Scale.X/2));
+                if(gItem != null) {
+                    gItem.Transform.WorldTranslation = Real3(gItem.Transform.WorldTranslation.X, gItem.Transform.WorldTranslation.Y, 0);
+                    gItem.ItemPickup.SetItem(item);
+                    gItem.ItemPickup.Item.Ammount = item.Ammount;
+                }
+                
+            }
+        } else {
+            this.Timer = this.Cooldown;
+        }
+        
+    }
+}
