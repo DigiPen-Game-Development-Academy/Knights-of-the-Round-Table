@@ -213,7 +213,7 @@ Level =
 		},
 		Health = 
 		{
-			float InitialHealth = 1000,
+			float InitialHealth = 5000,
 			float Cooldown = 10,
 			float RegenRate = 0.5,
 			float FlashLength = 0.100000001,
@@ -307,8 +307,8 @@ Level =
 		},
 		Boss_Rusher_AI = 
 		{
-			float MovSpeed = 1.5,
-			float DashSpeed = 3.5,
+			float MovSpeed = 2,
+			float DashSpeed = 4,
 			float AngryDashSpeed = 4,
 			float WindUpTimeMax = 1.5,
 			float WindUpTimeMin = 0.5,
@@ -324,7 +324,7 @@ Level =
 			float DashCooldownRand = 0.100000001,
 			float StartRange = 100,
 			string DashDamageMSG = "You where run over by a giant enemy!",
-			string PassiveDamageMSG = "wait tho",
+			string PassiveDamageMSG = "Wait...  did that guy just sit on you?!?",
 			string North = "",
 			string NorthEast = "",
 			string East = "",
@@ -336,16 +336,16 @@ Level =
 		},
 		FinalBoss = 
 		{
-			float WindTimeFull = 3,
-			float WindTimeEmpty = 1,
-			float StateTimeFull = 10,
-			float StateTimeEmpty = 5,
+			float WindTimeFull = 10,
+			float WindTimeEmpty = 2,
+			float StateTimeFull = 12,
+			float StateTimeEmpty = 7,
 			float AllOutHeath = 0.25,
 		},
 		FinalBossEnd = 
 		{
 			string Note = "THIS IS A NOTE",
-			string FinalLevel = "5a7e54ababd94aa3:MainMenu",
+			string FinalLevel = "5a237c653f36331b:FinalCutscene",
 		},
 		Hierarchy = 
 		{
@@ -484,7 +484,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.25, -0.174999952, 51],
+			Vec3 Translation = [0.500590384, 0.188709646, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -496,7 +496,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.07622719,
+			float Size = 44.9329872,
 		},
 		EditorCameraController = 
 		{
@@ -504,7 +504,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.25, -0.174999952, 1],
+			Vec3 LookTarget = [0.500590384, 0.188709646, -4.6263871e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -956,6 +956,24 @@ Level =
 			bool AnimationActive = false,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb05278a6a072:AmmoZone",
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.0560458973, 0.134130239, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoZone",
 		},
 	},
 },
