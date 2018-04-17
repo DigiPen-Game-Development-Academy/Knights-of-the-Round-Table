@@ -1,6 +1,15 @@
+Everything Else : Potatoes
+
+
+
+Game Designer : Justin
+Art Director : Bryan
+Producer : Darby
+Tech Director : Brandon
+
+
 
 Small Adjustments : Darby
-
 
 Animations : Bryan
 Tile Maps : Bryan
@@ -11,16 +20,11 @@ Balance : Justin
 Memes : Justin
 Design : Justin
 Map : Justin
+Making the Game Good : Justin
 
+Code : Brandon
 AI : Brandon
 UI : Brandon
 The Scripts : Brandon
 Cut-scenes : Brandon
 Debugging : Brandon
-
-Game : The Potato
-
-Game Designer : Justin
-Art Director : Bryan
-Producer : Darby
-Tech Director : Brandon
