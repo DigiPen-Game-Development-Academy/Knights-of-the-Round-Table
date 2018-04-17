@@ -564,7 +564,7 @@ Level =
 		},
 		Boss_Shield = 
 		{
-			float FireRateFull = 0.850000024,
+			float FireRateFull = 0.300000012,
 			float FireRateEmpty = 1.5,
 			float SpeedFull = 4,
 			float SpeedEmpty = 5,

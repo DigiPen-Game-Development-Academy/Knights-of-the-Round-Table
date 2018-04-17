@@ -118,9 +118,10 @@ Cog =
 	},
 	Health = 
 	{
-		float InitialHealth = 100,
+		float InitialHealth = 125,
 		float Cooldown = 3,
 		float RegenRate = 0.333333343,
+		float FlashLength = 0.100000001,
 	},
 	EnemyDeath = 
 	{
@@ -137,7 +138,7 @@ Cog =
 		float SoundDistance = 10,
 		string Sound = "5a84cbaca2f7cdf9:Shot",
 		float RandAngle = 10,
-		int MagSize = 3,
+		int MagSize = 5,
 		float ReloadTime = 2,
 		float FireRate = 4,
 		float MinDist = 4,

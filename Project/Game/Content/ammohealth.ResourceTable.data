@@ -11,22 +11,22 @@ ResourceTable =
 		{
 			string Name = "Name2",
 			string Value = "Health_Pack_(T1)",
-			float Weight = 30,
+			float Weight = 3,
 		},
 		{
 			string Name = "Name3",
 			string Value = "Health_Pack_(T2)",
-			float Weight = 20,
+			float Weight = 2,
 		},
 		{
 			string Name = "Name4",
 			string Value = "Health_Pack_(T3)",
-			float Weight = 15,
+			float Weight = 1,
 		},
 		{
 			string Name = "Name5",
 			string Value = "Ammo",
-			float Weight = 40,
+			float Weight = 25,
 		},
 		{
 			string Name = "Name6",
