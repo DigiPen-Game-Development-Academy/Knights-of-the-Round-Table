@@ -1,7 +1,7 @@
 RichAnimation = 
 {
 	float SampleTolerance = 0.0500000007,
-	float Duration = 47.3833351,
+	float Duration = 51,
 	Object Root = 
 	{
 		TrackType Type = Object,
@@ -82,6 +82,28 @@ RichAnimation =
 													uint EditorFlags = 0,
 												},
 											},
+											{
+												float key = 48.6666679,
+												Object value = 
+												{
+													float Time = 48.6666679,
+													float Value = 1,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 51,
+												Object value = 
+												{
+													float Time = 51,
+													float Value = 1,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
 										],
 										Array Children = 
 										[
@@ -112,6 +134,28 @@ RichAnimation =
 												Object value = 
 												{
 													float Time = 47,
+													float Value = 1,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 48.6666679,
+												Object value = 
+												{
+													float Time = 48.6666679,
+													float Value = 1,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 51,
+												Object value = 
+												{
+													float Time = 51,
 													float Value = 1,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
@@ -154,6 +198,28 @@ RichAnimation =
 													uint EditorFlags = 0,
 												},
 											},
+											{
+												float key = 48.6666679,
+												Object value = 
+												{
+													float Time = 48.6666679,
+													float Value = 1,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 51,
+												Object value = 
+												{
+													float Time = 51,
+													float Value = 1,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
 										],
 										Array Children = 
 										[
@@ -185,6 +251,28 @@ RichAnimation =
 												{
 													float Time = 47,
 													float Value = 0.999899983,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 48.6666679,
+												Object value = 
+												{
+													float Time = 48.6666679,
+													float Value = 0.999899983,
+													Vec2 TangentIn = [-0.0500000007, 0],
+													Vec2 TangentOut = [0.0500000007, 0],
+													uint EditorFlags = 0,
+												},
+											},
+											{
+												float key = 51,
+												Object value = 
+												{
+													float Time = 51,
+													float Value = 0,
 													Vec2 TangentIn = [-0.0500000007, 0],
 													Vec2 TangentOut = [0.0500000007, 0],
 													uint EditorFlags = 0,

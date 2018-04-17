@@ -11,7 +11,7 @@ class QuestItemPickup : ZilchComponent {
             GlobalVariables.QuestItems[this.Index] = true;
             
             this.LevelSettings.SaveLoad.PartialSave();
-            this.Space.LoadLevel(Level.JustinTestLevel);
+            this.Space.LoadLevel(Level.Mainworld);
             
         }
     }

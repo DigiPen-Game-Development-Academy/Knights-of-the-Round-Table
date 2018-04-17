@@ -110,7 +110,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.124065802, -0.311901212, 50],
+			Vec3 Translation = [0.592545271, 2.2195766, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -122,7 +122,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 8.9633913,
+			float Size = 16.3323574,
 		},
 		EditorCameraController = 
 		{
@@ -130,7 +130,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.124065802, -0.311901212, -5.42350964e-09],
+			Vec3 LookTarget = [0.592545271, 2.2195766, 2.59005404e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -433,40 +433,36 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 30,
-			string Text = "Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-",
+			string Text = "Everything Else : Potatoes
+
+
+
+Game Designer : Justin
+Art Director : Bryan
+Producer : Darby
+Tech Director : Brandon
+
+
+
+Small Adjustments : Darby
+
+Animations : Bryan
+Tile Maps : Bryan
+Lots of Art : Bryan
+Tonnes of Art : Bryan
+
+Balance : Justin
+Memes : Justin
+Design : Justin
+Map : Justin
+Making the Game Good : Justin
+
+Code : Brandon
+AI : Brandon
+UI : Brandon
+The Scripts : Brandon
+Cut-scenes : Brandon
+Debugging : Brandon",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -523,40 +519,36 @@ Credits
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 					string FontName = "4e7bac697bec55c5:Verdana",
 					uint FontSize = 30,
-					string Text = "Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-Credits
-",
+					string Text = "Everything Else : Potatoes
+
+
+
+Game Designer : Justin
+Art Director : Bryan
+Producer : Darby
+Tech Director : Brandon
+
+
+
+Small Adjustments : Darby
+
+Animations : Bryan
+Tile Maps : Bryan
+Lots of Art : Bryan
+Tonnes of Art : Bryan
+
+Balance : Justin
+Memes : Justin
+Design : Justin
+Map : Justin
+Making the Game Good : Justin
+
+Code : Brandon
+AI : Brandon
+UI : Brandon
+The Scripts : Brandon
+Cut-scenes : Brandon
+Debugging : Brandon",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
 					bool Smoothing = true,

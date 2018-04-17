@@ -3,7 +3,7 @@ class PlayerHealth : ZilchComponent {
     var Health : Health;
     
     [Property] var OnMainLevel : Boolean = true;
-    [Property] var MainLevel : Level = Level.JustinTestLevel;
+    [Property] var MainLevel : Level = Level.Mainworld;
     
     var Dialog : Cog = null;
     
