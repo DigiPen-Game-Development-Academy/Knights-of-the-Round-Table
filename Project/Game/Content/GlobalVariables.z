@@ -90,6 +90,9 @@ class GlobalVariables {
     var CamFollow : CamFollow;
     
     [Static]
+    var DamageEffect : DamageEffect;
+    
+    [Static]
     function AddInventoryItem (item : Item) : Boolean {
         
         for(var i = 0; i < GlobalVariables.Items.Count; ++i){
