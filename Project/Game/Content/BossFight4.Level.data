@@ -160,7 +160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.52254295, -3.49745131, 50],
+			Vec3 Translation = [-14.9084673, 7.39885712, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -172,7 +172,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.2683964,
+			float Size = 33.2871857,
 		},
 		EditorCameraController = 
 		{
@@ -180,7 +180,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.52254295, -3.49745131, 1.34818965e-08],
+			Vec3 LookTarget = [-14.9084673, 7.39885712, -3.96790057e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -648,6 +648,78 @@ Level =
 					string Name = "Healthbar",
 				},
 			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb05278a6a072:AmmoZone",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-17.2459583, -17.3785591, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoZone",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb05278a6a072:AmmoZone",
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.02107525, -12.0203056, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoZone",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb05278a6a072:AmmoZone",
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.5868111, 14.878829, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoZone",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb05278a6a072:AmmoZone",
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-16.886343, 12.6132612, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoZone",
 		},
 	},
 },

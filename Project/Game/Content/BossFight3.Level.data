@@ -711,4 +711,58 @@ Level =
 			},
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb05278a6a072:AmmoZone",
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13.2977505, -12.6239319, 1],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoZone",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb05278a6a072:AmmoZone",
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-14.9837027, -14.1061878, 1],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoZone",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb05278a6a072:AmmoZone",
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.101849549, 11.3886223, 1],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoZone",
+		},
+	},
 },
