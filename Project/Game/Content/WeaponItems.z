@@ -279,6 +279,8 @@ class TerribleAssaultRifle : Item {
         
         Utilities.SendSoundWeapon(this.SoundDistance);
         
+        Utilities.ScreenShake(2, 10);
+        
         Utilities.PlaySFX(this.Sound);
     }
     
@@ -343,7 +345,9 @@ class SlugShotgun : Item {
             }
         }
         Utilities.SendSoundWeapon(this.SoundDistance);
-    
+        
+        Utilities.ScreenShake(4, 10);
+        
         Utilities.PlaySFX(this.Sound);
     
     }
@@ -435,6 +439,7 @@ class StunMissile : Item {
         stn.StunProjectile.ArcIntencity = this.ArcIntencity;
         stn.StunProjectile.SoundRad = this.ExpSoundDist;
         stn.StunProjectile.Set = true;
+        Utilities.ScreenShake(1, 10);
         
     }
     
@@ -474,7 +479,7 @@ class SawLaser  : Item {
         this.SoundDistance = 15;
     }
     
-    function ReturnLore () : String {
+    function ReturnLore() : String {
         var lore = Array[String]();
         lore.Add("Your foes will be vanquished, as will your ammo");
         lore.Add("Use your ammo unwisely");
@@ -483,7 +488,7 @@ class SawLaser  : Item {
         return lore[Math.Round(rand.Range(0, lore.Count-1)) as Integer];
     }
     
-    function Use (radAngle : Real) {
+    function Use(radAngle : Real) {
         radAngle += Math.ToRadians(Random().Range(-this.RandAngle/2, this.RandAngle/2));
              
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
@@ -506,6 +511,8 @@ class SawLaser  : Item {
         }
         
         Utilities.SendSoundWeapon(this.SoundDistance);
+        
+        Utilities.ScreenShake(1.5, 10);
         
         Utilities.PlaySFX(this.Sound);
 
@@ -573,6 +580,8 @@ class Lasersniper  : Item {
         }
         
         Utilities.SendSoundWeapon(this.SoundDistance);
+        
+        Utilities.ScreenShake(4.25, 25);
         
         Utilities.PlaySFX(this.Sound);
         
@@ -650,6 +659,7 @@ class Missile  : Item {
         missile.PotatProjectile.OscilationSpeed = 15;
         missile.PotatProjectile.OscilationIntencity = 0.25;
         missile.PotatProjectile.Explosion = Archetype.Explode;
+        Utilities.ScreenShake(1.1, 5);
         
         //GlobalVariables.SFXSpace.SoundSpace.PlayCue(SoundCue.Rockettravelsound);
         
@@ -718,6 +728,7 @@ class Potatocannon  : Item {
         potat.PotatProjectile.SoundRad = this.ExpSoundDist;
         potat.PotatProjectile.DamageMSG = this.ReturnDeathMSG();
         potat.PotatProjectile.Set = true;
+        Utilities.ScreenShake(1, 10);
         
     }
     
@@ -748,7 +759,7 @@ class MMS_Sniper  : Item {
     
     var Lazer : Cog;
     
-    function Init () {
+    function Init() {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.InfernoSniperAlpha;
         this.GroundSprite = SpriteSource.InfernoSniperAlpha;
@@ -765,6 +776,7 @@ class MMS_Sniper  : Item {
         this.RandAngle = 0;
         this.Auto = false;
         this.SoundDistance = 5;
+        this.MaxRange = 100;
     }
     
     function UseReleased() {
@@ -808,6 +820,8 @@ class MMS_Sniper  : Item {
         }
         
         Utilities.SendSoundWeapon(this.SoundDistance);
+        
+        Utilities.ScreenShake(5, 30);
         
         Utilities.PlaySFX(this.Sound);
         
