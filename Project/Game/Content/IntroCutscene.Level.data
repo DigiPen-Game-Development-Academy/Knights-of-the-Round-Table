@@ -104,6 +104,9 @@ Level =
 			float FadeSped = 1,
 			string Music = "5ab401fd77a6d163:oceanwaves",
 		},
+		TimeTimer = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -117,7 +120,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.40904212, -0.358341277, 50],
+			Vec3 Translation = [2.74069905, -0.571839988, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -137,7 +140,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.40904212, -0.358341277, 1.49002219e-07],
+			Vec3 LookTarget = [2.74069905, -0.571839988, 1.19787998e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -327,7 +330,7 @@ Level =
 		IntroAnimEndTrigger = 
 		{
 			bool Play = true,
-			string Level = "5a1a864f77326081:JustinTestLevel",
+			string Level = "5a1a864f77326081:Mainworld",
 			string CrashSound = "5ac6d42eebda26d0:Explode",
 		},
 	},

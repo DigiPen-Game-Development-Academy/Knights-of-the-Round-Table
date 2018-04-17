@@ -104,6 +104,9 @@ Level =
 			string MouseLevel = "",
 			string MusicLevel = "5adae3eaef33a047:MusicLevel",
 		},
+		TimeTimer = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -117,7 +120,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.29555416, -1.40020764, 50],
+			Vec3 Translation = [-2.07604098, -1.19748366, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -137,7 +140,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.29555416, -1.40020764, -3.98045286e-09],
+			Vec3 LookTarget = [-2.07604098, -1.19748366, -3.80966121e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
