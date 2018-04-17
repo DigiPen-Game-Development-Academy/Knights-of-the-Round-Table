@@ -120,6 +120,9 @@ Level =
 			float FadeSped = 1,
 			string Music = "5a518f27c53e5953:MenuMusic",
 		},
+		TimeTimer = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -133,7 +136,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.60588968, 0.798301041, 117.557846],
+			Vec3 Translation = [-1.63949633, 0.607863188, 117.557846],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -153,7 +156,7 @@ Level =
 			float LookDistance = 91.105896,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.60588968, 0.798301041, 26.4519501],
+			Vec3 LookTarget = [-1.63949633, 0.607863188, 26.4519501],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -364,7 +367,7 @@ Level =
 				},
 				PlayButton = 
 				{
-					string Level = "5a1a864f77326081:JustinTestLevel",
+					string Level = "5a1a864f77326081:Mainworld",
 					string StartLevel = "5ab76e2e8e228263:IntroCutscene",
 					bool DialogBox = false,
 					string DialogText = "",
