@@ -368,7 +368,7 @@ class Laserbeam : Item {
         this.MagSize = 10;
         this.Name = "Laser Beam";
         this.ID = "Laser_Beam";
-        this.DamagePer = 150;
+        this.DamagePer = 75;
         this.FireRate = 3; 
         this.AmmoPerShot = 1;
         this.RelodTime = 5;

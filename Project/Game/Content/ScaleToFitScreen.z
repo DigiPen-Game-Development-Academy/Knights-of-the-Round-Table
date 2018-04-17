@@ -13,9 +13,10 @@ class ScaleToFitScreen : ZilchComponent {
             
             this.Last = screenSize;
             
-            var screenWorld = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(screenSize, 0).XY;
-            
-            
+            var screenWorld = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(this.LevelSettings.CameraViewport.ViewportToScreen(screenSize), 0).XY*2;
+            screenWorld = Real2(screenWorld.X, -screenWorld.Y);
+            Console.WriteLine(screenWorld);
+            this.Owner.Transform.Scale = Real3(screenWorld, 1);
             
         }
         

@@ -1117,7 +1117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.947287798, 0.808983684, 50.5],
+			Vec3 Translation = [1.07039118, 0.0879497454, 50.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1137,7 +1137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.947287798, 0.808983684, 0.499999523],
+			Vec3 LookTarget = [1.07039118, 0.0879497454, 0.499999553],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4950,7 +4950,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 0, 0, 0.999899983],
+			Vec4 Color = [1, 0, 0, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -4963,6 +4963,9 @@ Level =
 			uint StartFrame = 0,
 		},
 		ScaleToFitScreen = 
+		{
+		},
+		DamageEffect = 
 		{
 		},
 	},
