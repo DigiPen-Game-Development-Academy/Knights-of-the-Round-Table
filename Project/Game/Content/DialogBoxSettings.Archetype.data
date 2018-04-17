@@ -858,5 +858,146 @@ Cog =
 				},
 			},
 		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 19,
+			},
+			Named = 
+			{
+				string Name = "Back",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 1],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [0.459999979, 0.459999979, 0.459999979, 0],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5275aa4d802dd6dc:Square",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			Area = 
+			{
+				Vec2 Size = [2.5, 0.200000003],
+				Location Origin = Center,
+			},
+			Reactive = 
+			{
+				bool Active = true,
+				bool CaptureMouse = false,
+			},
+			Button = 
+			{
+				float ScaleM = 1,
+				Vec4 HoverColor = [0.458823562, 0.458823562, 0.458823562, 0.25999999],
+				Vec4 ClickColor = [0.458823562, 0.458823562, 0.458823562, 0.25999999],
+				float ScaleSpeed = 5,
+				bool Alpha = true,
+				bool Scaling = true,
+			},
+			Hierarchy = 
+			{
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 20,
+					},
+					Named = 
+					{
+						string Name = "ScreenShake",
+					},
+					Archetyped = 
+					{
+						string Name = "5ae3d3120f2c81d2:SlideBox",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [-1.25, 0, 1],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5a6a46a7f677464d:Slider",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+					Area = 
+					{
+						Vec2 Size = [2.5, 0.200000003],
+						Location Origin = CenterLeft,
+					},
+					SlideBox = 
+					{
+					},
+					Hierarchy = 
+					{
+						Cog = 
+						{
+							LinkId = 
+							{
+								uint Id = 21,
+							},
+							Named = 
+							{
+								string Name = "txt",
+							},
+							Transform = 
+							{
+								Vec3 Translation = [0, 0.09375, 1],
+								Vec3 Scale = [1, 1, 1],
+								Quat Rotation = [0, 0, 0, 1],
+							},
+							SpriteText = 
+							{
+								bool Visible = true,
+								bool VisibilityCulling = true,
+								bool VisibilityEvents = true,
+								bool CastShadows = false,
+								Vec4 Color = [0, 0, 0, 1],
+								BlendMode BlendMode = Alpha,
+								SpriteGeometryMode GeometryMode = ZPlane,
+								string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+								string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
+								uint FontSize = 30,
+								string Text = "Screen Shake",
+								TextAlign Align = Left,
+								float PixelsPerUnit = 183.941238,
+								bool Smoothing = true,
+							},
+						},
+					},
+				},
+			},
+		},
 	},
 },
