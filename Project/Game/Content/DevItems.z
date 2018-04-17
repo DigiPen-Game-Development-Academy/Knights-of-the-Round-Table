@@ -6,8 +6,8 @@ class SPotato : Item {
     function Init () {
         this.Type = ItemType.Consumable;
         this.Stackable = false;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
+        this.GroundSprite = SpriteSource.Sus;
+        this.Icon = SpriteSource.Sus;
         this.Name = "Suspicious Looking Potato";
     }
     

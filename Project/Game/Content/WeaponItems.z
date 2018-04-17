@@ -361,8 +361,8 @@ class Laserbeam : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.NovaBeam;
+        this.GroundSprite = SpriteSource.NovaBeam;
         this.Stackable = false;
         //use mag size for ammount of seconds active before reload
         this.MagSize = 10;
