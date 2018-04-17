@@ -113,7 +113,7 @@ Cog =
 	EnemyMelee = 
 	{
 		float AttacksPerSecond = 3,
-		float DamagerPerAttack = 10,
+		float DamagerPerAttack = 25,
 		string DeathMSG = "You Where Bitten by an Enemy",
 	},
 	Health = 
@@ -121,6 +121,7 @@ Cog =
 		float InitialHealth = 100,
 		float Cooldown = 3,
 		float RegenRate = 0.333333343,
+		float FlashLength = 0.100000001,
 	},
 	EnemyDeath = 
 	{

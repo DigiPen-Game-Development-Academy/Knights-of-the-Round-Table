@@ -6,7 +6,7 @@ ResourceTable =
 		{
 			string Name = "Name1",
 			string Value = "Health_Pack_(T3)",
-			float Weight = 7,
+			float Weight = 3,
 		},
 		{
 			string Name = "Name2",
