@@ -31,6 +31,8 @@ class PlayerMovment : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent) {
         
+        this.Owner.Transform.WorldTranslation = Real3(this.Owner.Transform.WorldTranslation.XY, 0);
+        
         if(this.FreezeTimer > 0) {
             this.FreezeTimer -= event.Dt;
             this.Owner.RigidBody.Velocity = Real3(0);
