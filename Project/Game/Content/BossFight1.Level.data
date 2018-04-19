@@ -148,12 +148,19 @@ Level =
 			float GlowThreshold = 1,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a53e87b7cda6d5e:Boss_Rusher",
 		LinkId = 
 		{
 			uint Id = 3,
+		},
+		Named = 
+		{
+			string Name = "Boss_Rusher",
+		},
+		Archetyped = 
+		{
+			string Name = "5a53e87b7cda6d5e:Boss_Rusher",
 		},
 		Transform = 
 		{
@@ -161,16 +168,128 @@ Level =
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		RigidBody = 
 		{
-			string Name = "Boss_Rusher",
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		SphereCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.239999995,
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a5085d1c141c287:RusherBoss000",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Health = 
+		{
+			float InitialHealth = 1500,
+			float Cooldown = 10,
+			float RegenRate = 0.5,
+			float FlashLength = 0.100000001,
+		},
+		EnemyPathFind = 
+		{
+		},
+		GenericPathFollowAI = 
+		{
+		},
+		Boss_Rusher_AI = 
+		{
+			float MovSpeed = 3,
+			float DashSpeed = 7,
+			float AngryDashSpeed = 5,
+			float WindUpTimeMax = 3,
+			float WindUpTimeMin = 1,
+			float DashDistance = 100,
+			float AngryDashTime = 10,
+			float DazeTime = 7,
+			float AngryDashHealth = 0.5,
+			float AngryTurnSpeed = 90,
+			float DashDamage = 100,
+			float PassiveDamage = 50,
+			float DashCooldownMax = 6,
+			float DashCooldownMin = 4,
+			float DashCooldownRand = 0.100000001,
+			float StartRange = 100,
+			string DashDamageMSG = "You were run over by a giant rusher!",
+			string PassiveDamageMSG = "You where bitten by a giant rusher",
+			string North = "5a3943348d414a90:RusherBossRunE",
+			string NorthEast = "5a3943348d414a90:RusherBossRunE",
+			string East = "5a3943348d414a90:RusherBossRunE",
+			string SouthEast = "5a3943348d414a90:RusherBossRunE",
+			string South = "5a3940d788cc73dc:RusherRunS",
+			string SouthWest = "5a3940cb8bd1cf0e:RusherBossRunW",
+			string West = "5a3940cb8bd1cf0e:RusherBossRunW",
+			string NorthWest = "5a3940cb8bd1cf0e:RusherBossRunW",
+		},
+		BossDrops = 
+		{
+			string Part = "5a501946cb973583:QuestItem1",
+			string Note = "THIS IS A NOTE",
+			string Drops = "",
+			float DropRange = 1,
+			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "5a7c1968c9af3d26:Healthbar",
+				LinkId = 
+				{
+					uint Id = 4,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.625, 1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Area = 
+				{
+					Vec2 Size = [1, 0.100000001],
+					Location Origin = Center,
+				},
+				Named = 
+				{
+					string Name = "Healthbar",
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -178,7 +297,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.580111742, -1.16750801, 50],
+			Vec3 Translation = [0.121915974, 0.503786623, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -190,7 +309,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 59.9282646,
+			float Size = 8.1104393,
 		},
 		EditorCameraController = 
 		{
@@ -198,7 +317,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.580111742, -1.16750801, -2.64482139e-07],
+			Vec3 LookTarget = [0.121915974, 0.503786623, -2.84510634e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -214,7 +333,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -249,7 +368,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -400,7 +519,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 7,
+					uint Id = 8,
 				},
 				Named = 
 				{
@@ -433,7 +552,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -479,29 +598,11 @@ Level =
 		string Name = "5aadb05278a6a072:AmmoZone",
 		LinkId = 
 		{
-			uint Id = 9,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.108237185, 0.0121816397, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "AmmoZone",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5aadb05278a6a072:AmmoZone",
-		LinkId = 
-		{
 			uint Id = 10,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [14.0285826, 14.2864342, 0],
+			Vec3 Translation = [-14, -14, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -519,7 +620,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-14.9917984, 12.7528372, 0],
+			Vec3 Translation = [14, 14, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -537,7 +638,25 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [13.6746721, -12.7284746, 0],
+			Vec3 Translation = [-14, 14, 0],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "AmmoZone",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5aadb05278a6a072:AmmoZone",
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [14, -14, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
