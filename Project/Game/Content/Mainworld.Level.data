@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-61.8624458, -55.0115051, 64.7502518],
+			Vec3 Translation = [4.77786589, 17.1835403, 64.7502518],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 27.2531948,
+			float Size = 90.483757,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-61.8624458, -55.0115051, 0.750249982],
+			Vec3 LookTarget = [4.77786589, 17.1835403, 0.750252306],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -13926,7 +13926,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -14442,7 +14442,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -14623,7 +14623,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -14970,7 +14970,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -15317,7 +15317,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -15498,7 +15498,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -16343,7 +16343,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -16524,7 +16524,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -16705,7 +16705,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -16892,7 +16892,7 @@ Level =
 			float FireRate = 17,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -17165,7 +17165,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -17346,7 +17346,7 @@ Level =
 			float FireRate = 6,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
@@ -18943,187 +18943,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_GI_PistolW2",
-		},
-		Archetyped = 
-		{
-			string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-51.6567917, -36.0092316, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		IgnoreSpaceEffects = 
-		{
-			bool Drag = true,
-			bool Flow = true,
-			bool Force = true,
-			bool Gravity = true,
-			bool Thrust = true,
-			bool Vortex = true,
-			bool Wind = true,
-			bool Invalid = false,
-			bool Torque = true,
-			bool PointGravity = true,
-			bool PointForce = true,
-			bool Buoyancy = true,
-			bool Custom = true,
-		},
-		EnemyPathFind = 
-		{
-		},
-		BasicPathFollowAI = 
-		{
-		},
-		Visibility = 
-		{
-		},
-		SphereCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5a08c96d04f0597c:Enemy",
-			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
-			Vec3 Offset = [0, 0, 0],
-			float Radius = 0.5,
-		},
-		EnemyAI = 
-		{
-			float InstantSpotRadius = 3,
-			float MaxDistFromGuard = 20,
-			float WaitTime = 4,
-			float SpotTime = 1,
-			float Range = 3,
-			float ViewAngle = 45,
-			float ViewRange = 10,
-			float MoveSpeed = 2,
-			float ChaseSpeedMultiplier = 2,
-			float GuardWaitTime = 5,
-			float SearchTimer = 20,
-			float MaxTimeOutOfSight = 1,
-			float SearchRange = 10,
-			float ViewDist = 10,
-		},
-		EnemySprite = 
-		{
-			string North = "5af4dcd2583e40fb:Ranger004",
-			string NorthEast = "5af4dcd25831d337:Ranger005",
-			string East = "5af4dcd358356d7f:Ranger006",
-			string SouthEast = "5af4dcd35808ecc3:Ranger007",
-			string South = "5af4dcd2582df625:Ranger000",
-			string SouthWest = "5af4dcd2582316b1:Ranger001",
-			string West = "5af4dcd258275797:Ranger002",
-			string NorthWest = "5af4dcd2583acbe8:Ranger003",
-		},
-		EnemyMelee = 
-		{
-			float AttacksPerSecond = 3,
-			float DamagerPerAttack = 5,
-			string DeathMSG = "You were bitten by an enemy",
-		},
-		Health = 
-		{
-			float InitialHealth = 100,
-			float Cooldown = 3,
-			float RegenRate = 0.333333343,
-			float FlashLength = 0.100000001,
-		},
-		EnemyDeath = 
-		{
-			int NumberOfDrops = 3,
-			int NumberOfDropsVariation = 1,
-			float DropRange = 0.5,
-			string LootTable = "5a2266fd60a18cf4:leveltwohealthammo",
-		},
-		EnemyRayShooting = 
-		{
-			float MaxRange = 10,
-			float DamagePer = 35,
-			string WakeSprite = "5a9bdadb3cdcabb7:Wake",
-			float SoundDistance = 10,
-			string Sound = "5a84cbaca2f7cdf9:Shot",
-			float RandAngle = 10,
-			int MagSize = 3,
-			float ReloadTime = 2,
-			float FireRate = 4,
-			float MinDist = 4,
-			float MaxDist = 10,
-			string DeathMSG = "You were shot by an enemy",
-		},
-		EnemyPing = 
-		{
-		},
-		MenuVisibilityController = 
-		{
-		},
-		Hierarchy = 
-		{
-			ArchetypeInstance = 
-			{
-				string Name = "5a7c1968c9af3d26:Healthbar",
-				LinkId = 
-				{
-					uint Id = 307,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, -0.625, 1],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Area = 
-				{
-					Vec2 Size = [1, 0.100000001],
-					Location Origin = Center,
-				},
-				Named = 
-				{
-					string Name = "Healthbar",
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 308,
-		},
-		Named = 
-		{
 			string Name = "Enemy_Stealth",
 		},
 		Archetyped = 
@@ -19265,7 +19084,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 309,
+					uint Id = 307,
 				},
 				Transform = 
 				{
@@ -19289,7 +19108,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 310,
+			uint Id = 308,
 		},
 		Named = 
 		{
@@ -19434,7 +19253,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 311,
+					uint Id = 309,
 				},
 				Transform = 
 				{
@@ -19458,7 +19277,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 312,
+			uint Id = 310,
 		},
 		Named = 
 		{
@@ -19606,7 +19425,7 @@ Level =
 			float FireRate = 15,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -19615,7 +19434,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 313,
+					uint Id = 311,
 				},
 				Transform = 
 				{
@@ -19637,7 +19456,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 314,
+					uint Id = 312,
 				},
 				Named = 
 				{
@@ -19668,7 +19487,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 315,
+							uint Id = 313,
 						},
 						Named = 
 						{
@@ -19737,7 +19556,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 316,
+			uint Id = 314,
 		},
 		Named = 
 		{
@@ -19882,6 +19701,187 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
+					uint Id = 315,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.625, 1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Area = 
+				{
+					Vec2 Size = [1, 0.100000001],
+					Location Origin = Center,
+				},
+				Named = 
+				{
+					string Name = "Healthbar",
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 316,
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_PistolW2",
+		},
+		Archetyped = 
+		{
+			string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-22.9514427, -44.3973236, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = true,
+			bool Force = true,
+			bool Gravity = true,
+			bool Thrust = true,
+			bool Vortex = true,
+			bool Wind = true,
+			bool Invalid = false,
+			bool Torque = true,
+			bool PointGravity = true,
+			bool PointForce = true,
+			bool Buoyancy = true,
+			bool Custom = true,
+		},
+		EnemyPathFind = 
+		{
+		},
+		BasicPathFollowAI = 
+		{
+		},
+		Visibility = 
+		{
+		},
+		SphereCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5a08c96d04f0597c:Enemy",
+			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.5,
+		},
+		EnemyAI = 
+		{
+			float InstantSpotRadius = 3,
+			float MaxDistFromGuard = 20,
+			float WaitTime = 4,
+			float SpotTime = 1,
+			float Range = 3,
+			float ViewAngle = 45,
+			float ViewRange = 10,
+			float MoveSpeed = 2,
+			float ChaseSpeedMultiplier = 2,
+			float GuardWaitTime = 5,
+			float SearchTimer = 20,
+			float MaxTimeOutOfSight = 1,
+			float SearchRange = 10,
+			float ViewDist = 10,
+		},
+		EnemySprite = 
+		{
+			string North = "5af4dcd2583e40fb:Ranger004",
+			string NorthEast = "5af4dcd25831d337:Ranger005",
+			string East = "5af4dcd358356d7f:Ranger006",
+			string SouthEast = "5af4dcd35808ecc3:Ranger007",
+			string South = "5af4dcd2582df625:Ranger000",
+			string SouthWest = "5af4dcd2582316b1:Ranger001",
+			string West = "5af4dcd258275797:Ranger002",
+			string NorthWest = "5af4dcd2583acbe8:Ranger003",
+		},
+		EnemyMelee = 
+		{
+			float AttacksPerSecond = 3,
+			float DamagerPerAttack = 5,
+			string DeathMSG = "You were bitten by an enemy",
+		},
+		Health = 
+		{
+			float InitialHealth = 100,
+			float Cooldown = 3,
+			float RegenRate = 0.333333343,
+			float FlashLength = 0.100000001,
+		},
+		EnemyDeath = 
+		{
+			int NumberOfDrops = 3,
+			int NumberOfDropsVariation = 1,
+			float DropRange = 0.5,
+			string LootTable = "5a2266fd60a18cf4:leveltwohealthammo",
+		},
+		EnemyRayShooting = 
+		{
+			float MaxRange = 10,
+			float DamagePer = 35,
+			string WakeSprite = "5a9bdadb3cdcabb7:Wake",
+			float SoundDistance = 10,
+			string Sound = "5a84cbaca2f7cdf9:Shot",
+			float RandAngle = 10,
+			int MagSize = 3,
+			float ReloadTime = 2,
+			float FireRate = 4,
+			float MinDist = 4,
+			float MaxDist = 10,
+			string DeathMSG = "You were shot by an enemy",
+		},
+		EnemyPing = 
+		{
+		},
+		MenuVisibilityController = 
+		{
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "5a7c1968c9af3d26:Healthbar",
+				LinkId = 
+				{
 					uint Id = 317,
 				},
 				Transform = 
@@ -19918,7 +19918,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-22.9514427, -44.3973236, 0],
+			Vec3 Translation = [-61.8624458, -54.9240074, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -20091,187 +20091,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Enemy_GI_PistolW2",
-		},
-		Archetyped = 
-		{
-			string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-61.8624458, -54.9240074, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = true,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		IgnoreSpaceEffects = 
-		{
-			bool Drag = true,
-			bool Flow = true,
-			bool Force = true,
-			bool Gravity = true,
-			bool Thrust = true,
-			bool Vortex = true,
-			bool Wind = true,
-			bool Invalid = false,
-			bool Torque = true,
-			bool PointGravity = true,
-			bool PointForce = true,
-			bool Buoyancy = true,
-			bool Custom = true,
-		},
-		EnemyPathFind = 
-		{
-		},
-		BasicPathFollowAI = 
-		{
-		},
-		Visibility = 
-		{
-		},
-		SphereCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "5a08c96d04f0597c:Enemy",
-			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
-			Vec3 Offset = [0, 0, 0],
-			float Radius = 0.5,
-		},
-		EnemyAI = 
-		{
-			float InstantSpotRadius = 3,
-			float MaxDistFromGuard = 20,
-			float WaitTime = 4,
-			float SpotTime = 1,
-			float Range = 3,
-			float ViewAngle = 45,
-			float ViewRange = 10,
-			float MoveSpeed = 2,
-			float ChaseSpeedMultiplier = 2,
-			float GuardWaitTime = 5,
-			float SearchTimer = 20,
-			float MaxTimeOutOfSight = 1,
-			float SearchRange = 10,
-			float ViewDist = 10,
-		},
-		EnemySprite = 
-		{
-			string North = "5af4dcd2583e40fb:Ranger004",
-			string NorthEast = "5af4dcd25831d337:Ranger005",
-			string East = "5af4dcd358356d7f:Ranger006",
-			string SouthEast = "5af4dcd35808ecc3:Ranger007",
-			string South = "5af4dcd2582df625:Ranger000",
-			string SouthWest = "5af4dcd2582316b1:Ranger001",
-			string West = "5af4dcd258275797:Ranger002",
-			string NorthWest = "5af4dcd2583acbe8:Ranger003",
-		},
-		EnemyMelee = 
-		{
-			float AttacksPerSecond = 3,
-			float DamagerPerAttack = 5,
-			string DeathMSG = "You were bitten by an enemy",
-		},
-		Health = 
-		{
-			float InitialHealth = 100,
-			float Cooldown = 3,
-			float RegenRate = 0.333333343,
-			float FlashLength = 0.100000001,
-		},
-		EnemyDeath = 
-		{
-			int NumberOfDrops = 3,
-			int NumberOfDropsVariation = 1,
-			float DropRange = 0.5,
-			string LootTable = "5a2266fd60a18cf4:leveltwohealthammo",
-		},
-		EnemyRayShooting = 
-		{
-			float MaxRange = 10,
-			float DamagePer = 35,
-			string WakeSprite = "5a9bdadb3cdcabb7:Wake",
-			float SoundDistance = 10,
-			string Sound = "5a84cbaca2f7cdf9:Shot",
-			float RandAngle = 10,
-			int MagSize = 3,
-			float ReloadTime = 2,
-			float FireRate = 4,
-			float MinDist = 4,
-			float MaxDist = 10,
-			string DeathMSG = "You were shot by an enemy",
-		},
-		EnemyPing = 
-		{
-		},
-		MenuVisibilityController = 
-		{
-		},
-		Hierarchy = 
-		{
-			ArchetypeInstance = 
-			{
-				string Name = "5a7c1968c9af3d26:Healthbar",
-				LinkId = 
-				{
-					uint Id = 321,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, -0.625, 1],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Area = 
-				{
-					Vec2 Size = [1, 0.100000001],
-					Location Origin = Center,
-				},
-				Named = 
-				{
-					string Name = "Healthbar",
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 322,
-		},
-		Named = 
-		{
 			string Name = "Enemy_RusherW2",
 		},
 		Archetyped = 
@@ -20410,7 +20229,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 323,
+					uint Id = 321,
 				},
 				Transform = 
 				{
@@ -20434,7 +20253,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 324,
+			uint Id = 322,
 		},
 		Named = 
 		{
@@ -20579,7 +20398,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 325,
+					uint Id = 323,
 				},
 				Transform = 
 				{
@@ -20603,7 +20422,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 326,
+			uint Id = 324,
 		},
 		Named = 
 		{
@@ -20751,7 +20570,7 @@ Level =
 			float FireRate = 15,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -20760,7 +20579,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 327,
+					uint Id = 325,
 				},
 				Transform = 
 				{
@@ -20782,7 +20601,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 328,
+					uint Id = 326,
 				},
 				Named = 
 				{
@@ -20813,7 +20632,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 329,
+							uint Id = 327,
 						},
 						Named = 
 						{
@@ -20882,7 +20701,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 330,
+			uint Id = 328,
 		},
 		Named = 
 		{
@@ -21039,7 +20858,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 331,
+					uint Id = 329,
 				},
 				Transform = 
 				{
@@ -21063,7 +20882,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 332,
+			uint Id = 330,
 		},
 		Named = 
 		{
@@ -21211,7 +21030,7 @@ Level =
 			float FireRate = 15,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -21220,7 +21039,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 333,
+					uint Id = 331,
 				},
 				Transform = 
 				{
@@ -21242,7 +21061,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 334,
+					uint Id = 332,
 				},
 				Named = 
 				{
@@ -21273,7 +21092,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 335,
+							uint Id = 333,
 						},
 						Named = 
 						{
@@ -21342,7 +21161,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 336,
+			uint Id = 334,
 		},
 		Named = 
 		{
@@ -21490,7 +21309,7 @@ Level =
 			float FireRate = 15,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -21499,7 +21318,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 337,
+					uint Id = 335,
 				},
 				Transform = 
 				{
@@ -21521,7 +21340,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 338,
+					uint Id = 336,
 				},
 				Named = 
 				{
@@ -21552,7 +21371,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 339,
+							uint Id = 337,
 						},
 						Named = 
 						{
@@ -21621,7 +21440,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 340,
+			uint Id = 338,
 		},
 		Named = 
 		{
@@ -21769,7 +21588,7 @@ Level =
 			float FireRate = 15,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -21778,7 +21597,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 341,
+					uint Id = 339,
 				},
 				Transform = 
 				{
@@ -21800,7 +21619,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 342,
+					uint Id = 340,
 				},
 				Named = 
 				{
@@ -21831,7 +21650,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 343,
+							uint Id = 341,
 						},
 						Named = 
 						{
@@ -21900,7 +21719,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 344,
+			uint Id = 342,
 		},
 		Named = 
 		{
@@ -22045,6 +21864,187 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
+					uint Id = 343,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.625, 1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Area = 
+				{
+					Vec2 Size = [1, 0.100000001],
+					Location Origin = Center,
+				},
+				Named = 
+				{
+					string Name = "Healthbar",
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 344,
+		},
+		Named = 
+		{
+			string Name = "Enemy_GI_PistolW2",
+		},
+		Archetyped = 
+		{
+			string Name = "5a2e690ac2a2f2bb:Enemy_GI_PistolW2",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-92.674118, -33.3233337, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = true,
+			bool Force = true,
+			bool Gravity = true,
+			bool Thrust = true,
+			bool Vortex = true,
+			bool Wind = true,
+			bool Invalid = false,
+			bool Torque = true,
+			bool PointGravity = true,
+			bool PointForce = true,
+			bool Buoyancy = true,
+			bool Custom = true,
+		},
+		EnemyPathFind = 
+		{
+		},
+		BasicPathFollowAI = 
+		{
+		},
+		Visibility = 
+		{
+		},
+		SphereCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5a08c96d04f0597c:Enemy",
+			string SerializedGroupName = "5a11bfba4f162cf2:Enemies",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.5,
+		},
+		EnemyAI = 
+		{
+			float InstantSpotRadius = 3,
+			float MaxDistFromGuard = 20,
+			float WaitTime = 4,
+			float SpotTime = 1,
+			float Range = 3,
+			float ViewAngle = 45,
+			float ViewRange = 10,
+			float MoveSpeed = 2,
+			float ChaseSpeedMultiplier = 2,
+			float GuardWaitTime = 5,
+			float SearchTimer = 20,
+			float MaxTimeOutOfSight = 1,
+			float SearchRange = 10,
+			float ViewDist = 10,
+		},
+		EnemySprite = 
+		{
+			string North = "5af4dcd2583e40fb:Ranger004",
+			string NorthEast = "5af4dcd25831d337:Ranger005",
+			string East = "5af4dcd358356d7f:Ranger006",
+			string SouthEast = "5af4dcd35808ecc3:Ranger007",
+			string South = "5af4dcd2582df625:Ranger000",
+			string SouthWest = "5af4dcd2582316b1:Ranger001",
+			string West = "5af4dcd258275797:Ranger002",
+			string NorthWest = "5af4dcd2583acbe8:Ranger003",
+		},
+		EnemyMelee = 
+		{
+			float AttacksPerSecond = 3,
+			float DamagerPerAttack = 5,
+			string DeathMSG = "You were bitten by an enemy",
+		},
+		Health = 
+		{
+			float InitialHealth = 100,
+			float Cooldown = 3,
+			float RegenRate = 0.333333343,
+			float FlashLength = 0.100000001,
+		},
+		EnemyDeath = 
+		{
+			int NumberOfDrops = 3,
+			int NumberOfDropsVariation = 1,
+			float DropRange = 0.5,
+			string LootTable = "5a2266fd60a18cf4:leveltwohealthammo",
+		},
+		EnemyRayShooting = 
+		{
+			float MaxRange = 10,
+			float DamagePer = 35,
+			string WakeSprite = "5a9bdadb3cdcabb7:Wake",
+			float SoundDistance = 10,
+			string Sound = "5a84cbaca2f7cdf9:Shot",
+			float RandAngle = 10,
+			int MagSize = 3,
+			float ReloadTime = 2,
+			float FireRate = 4,
+			float MinDist = 4,
+			float MaxDist = 10,
+			string DeathMSG = "You were shot by an enemy",
+		},
+		EnemyPing = 
+		{
+		},
+		MenuVisibilityController = 
+		{
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "5a7c1968c9af3d26:Healthbar",
+				LinkId = 
+				{
 					uint Id = 345,
 				},
 				Transform = 
@@ -22081,7 +22081,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-92.674118, -33.3233337, 0],
+			Vec3 Translation = [-51.6567917, -36.0092316, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -22567,7 +22567,7 @@ Level =
 			float FireRate = 18,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -22846,7 +22846,7 @@ Level =
 			float FireRate = 18,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -24679,7 +24679,7 @@ Level =
 			float FireRate = 18,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -26355,7 +26355,7 @@ Level =
 			float FireRate = 18,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -26984,7 +26984,7 @@ Level =
 			float FireRate = 18,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
@@ -27625,7 +27625,7 @@ Level =
 			float FireRate = 18,
 			float MinDist = 2,
 			float MaxDist = 3,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		Hierarchy = 
 		{
