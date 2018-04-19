@@ -41,8 +41,6 @@ class Potato : Item {
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3);
         
-        Utilities.MeleeFX(this.Icon, 15, -90, 45, 0.25);
-        
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             if(res.ObjectHit.Health != null) {
@@ -55,10 +53,13 @@ class Potato : Item {
                     Utilities.SendSoundWeapon(5, res.ObjectHit.Transform.WorldTranslation);
                     res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
                     GlobalVariables.Player.PlayerMovment.Freeze(1);
-                    
+                    Utilities.MeleeFX(this.Icon, 15, -90, 45, 0.35, true);
+                    return;
                 }
             }
         }
+        
+        Utilities.MeleeFX(this.Icon, 15, -90, 45, 0.25, false);
         
     }
     
@@ -207,8 +208,6 @@ class PlasmaSword : Item {
         filter.CollisionGroup = CollisionGroup.PlayerBullet;
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3.5, filter);
         
-        Utilities.MeleeFX(this.Icon, 15, -90, 45, 0.25);
-        
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             if(res.ObjectHit.Health != null) {
@@ -221,10 +220,14 @@ class PlasmaSword : Item {
                     Utilities.SendSoundWeapon(5, res.ObjectHit.Transform.WorldTranslation);
                     res.ObjectHit.DispatchEvent(Events.NoHealth, NoHealth());
                     GlobalVariables.Player.PlayerMovment.Freeze(1);
-                    
+                    Utilities.MeleeFX(this.Icon, 15, -135, 45, 0.35, true);
+                    return;
                 }
             }
         }
+        
+        Utilities.MeleeFX(this.Icon, 15, -90, 45, 0.25, false);
+        
         Utilities.SendSoundWeapon(this.SoundDistance);
     }
 }

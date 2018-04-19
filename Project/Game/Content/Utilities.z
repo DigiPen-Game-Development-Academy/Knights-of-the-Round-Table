@@ -394,7 +394,7 @@ class Utilities
     }
     
     [Static]
-    function MeleeFX(sprite : SpriteSource, speed : Real, offset : Real, angle : Real, dist : Real) {
+    function MeleeFX(sprite : SpriteSource, speed : Real, offset : Real, angle : Real, dist : Real, stab : Boolean) {
         
         var fx = GlobalVariables.GameSpace.Create(Archetype.Melee_FX);
         if(Math.ATan2(GlobalVariables.Player.PlayerMovment.Dir.Y, GlobalVariables.Player.PlayerMovment.Dir.X) > Math.ToRadians(75)) {
@@ -407,6 +407,7 @@ class Utilities
         fx.MeleeFX.Angle = offset;
         fx.MeleeFX.Dist = dist;
         fx.MeleeFX.Sprite = sprite;
+        fx.MeleeFX.Stab = stab;
         fx.AttachTo(GlobalVariables.Player);
         fx.Transform.Translation = Real3(0, 0, 0);
         fx.MeleeFX.Init();
