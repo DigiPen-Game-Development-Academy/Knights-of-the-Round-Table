@@ -13,7 +13,9 @@ class TimeTimer : ZilchComponent {
     function OnLogicUpdate(event : UpdateEvent) {
         this.Timer -= event.Dt;
         this.Space.SoundSpace.Pitch = this.Space.TimeSpace.TimeScale-1;
-        GlobalVariables.SFXSpace.SoundSpace.Pitch = this.Space.TimeSpace.TimeScale-1;
+        if(GlobalVariables.SFXSpace != null) {
+            GlobalVariables.SFXSpace.SoundSpace.Pitch = this.Space.TimeSpace.TimeScale-1;
+        }
         MusicUtils.MusicSoundSpace.Pitch = this.Space.TimeSpace.TimeScale-1;
         if(this.Once && this.Timer <= 0) {
             this.Once = false;
