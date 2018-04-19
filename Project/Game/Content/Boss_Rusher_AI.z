@@ -166,7 +166,11 @@ class Boss_Rusher_AI : ZilchComponent {
         
     }
     
-    function SetSprite (dir : Real3) {
+    function SetSprite(dir : Real3) {
+        this.SetSprite(dir, true);
+    }
+    
+    function SetSprite(dir : Real3, animspeed : Boolean) {
         
         var angle = Math.ToDegrees(Math.ATan2(dir.Y, dir.X));
         if(angle >= 22.5)
@@ -197,13 +201,16 @@ class Boss_Rusher_AI : ZilchComponent {
                 this.Owner.Sprite.SpriteSource = this.NorthEast;
         }
         
-        this.Owner.Sprite.AnimationSpeed = Math.Distance(Real3(0), this.Owner.RigidBody.Velocity);
+        if(animspeed) {
         
-        if(Math.Distance(Real3(0), this.Owner.RigidBody.Velocity) == 0) {
-            this.Owner.Sprite.AnimationActive = false;
-            this.Owner.Sprite.CurrentFrame = 0;
-        } else {
-            this.Owner.Sprite.AnimationActive = true;
+            this.Owner.Sprite.AnimationSpeed = Math.Distance(Real3(0), this.Owner.RigidBody.Velocity) * 0.5;
+            
+            if(Math.Distance(Real3(0), this.Owner.RigidBody.Velocity) == 0) {
+                this.Owner.Sprite.AnimationActive = false;
+                this.Owner.Sprite.CurrentFrame = 0;
+            } else {
+                this.Owner.Sprite.AnimationActive = true;
+            }
         }
         
     }
@@ -323,7 +330,7 @@ class Boss_Rusher_AI : ZilchComponent {
             this.Stars.AttachTo(this.Owner);
             this.Stars.Despawn.Timer = this.DazeTime;
         }
-        
+        this.Owner.Sprite.AnimationSpeed = 0;
         //allow damage when dazed
         this.Health.Locked = false;
         
@@ -358,6 +365,14 @@ class Boss_Rusher_AI : ZilchComponent {
         //dont move while winding
         this.RigidBody.Velocity = Real3(0);
         this.PathFind.Path = null;
+        
+        if(this.Timer < Math.Lerp(this.WindUpTimeMin, this.WindUpTimeMax, this.Health.Percent) * 0.25) {
+            this.Owner.Sprite.AnimationSpeed = 0;
+        } else {
+            this.DashDir = Math.Normalize(GlobalVariables.Player.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation);
+            this.SetSprite(this.DashDir, false);
+            this.Owner.Sprite.AnimationSpeed = Math.Lerp(this.WindUpTimeMin, this.WindUpTimeMax, this.Health.Percent) / this.Timer;
+        }
         
         if (this.Timer <= 0) {
             
