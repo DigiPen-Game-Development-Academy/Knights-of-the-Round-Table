@@ -388,9 +388,29 @@ class Utilities
     }
     
     [Static]
-    function ScreenShake (intencity : Real, falloff : Real) {
+    function ScreenShake(intencity : Real, falloff : Real) {
         GlobalVariables.CamFollow.ScreenShakeIntencity = intencity;
         GlobalVariables.CamFollow.Falloff = falloff;
+    }
+    
+    [Static]
+    function MeleeFX(sprite : SpriteSource, speed : Real, offset : Real, angle : Real, dist : Real) {
+        
+        var fx = GlobalVariables.GameSpace.Create(Archetype.Melee_FX);
+        if(Math.ATan2(GlobalVariables.Player.PlayerMovment.Dir.Y, GlobalVariables.Player.PlayerMovment.Dir.X) > Math.ToRadians(75)) {
+            fx.MeleeFX.Left = true;
+        } else {
+            fx.MeleeFX.Left = false;
+        }
+        fx.MeleeFX.Speed = speed;
+        fx.MeleeFX.AngleOffset = offset;
+        fx.MeleeFX.Angle = offset;
+        fx.MeleeFX.Dist = dist;
+        fx.MeleeFX.Sprite = sprite;
+        fx.AttachTo(GlobalVariables.Player);
+        fx.Transform.Translation = Real3(0, 0, 0);
+        fx.MeleeFX.Init();
+        
     }
     
 }

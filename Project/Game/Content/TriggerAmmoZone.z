@@ -7,12 +7,16 @@ class TriggerAmmoZone : ZilchComponent {
     [Property] var TypeForLore : String = "";
     
     [Property] var Cooldown : Real = 10;
+    
+    var Sprite : Sprite;
+    
     var Timer : Real;
     
     var Col : Boolean = false;
     
     function Initialize(init : CogInitializer) {
         this.Timer = this.Cooldown;
+        this.Sprite = this.Owner.FindChildByName("Sprite").Sprite;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
@@ -47,6 +51,10 @@ class TriggerAmmoZone : ZilchComponent {
         
         if(this.Col) {
             this.Timer -= event.Dt;
+            
+            //control sprite
+            this.Sprite.CurrentFrame = (((this.Cooldown - this.Timer) / this.Cooldown) * this.Sprite.SpriteSource.FrameCount) as Integer;
+            
             if(this.Timer <= 0) {
                 this.Timer = this.Cooldown;
                 
@@ -69,6 +77,7 @@ class TriggerAmmoZone : ZilchComponent {
             }
         } else {
             this.Timer = this.Cooldown;
+            this.Sprite.CurrentFrame = 0;
         }
         
     }

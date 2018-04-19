@@ -17,6 +17,8 @@ class EnemyAI : ZilchComponent {
     [Property]
     var WaitTime : Real = 1;
     [Property]
+    var SpotTime : Real = 1;
+    [Property]
     var Range : Real = 3;
     [Property]
     var ViewAngle : Real = 45;
@@ -194,7 +196,7 @@ class EnemyAI : ZilchComponent {
         if(this.State != State.Spotted && !GlobalVariables.Invis && angle <= Math.ToRadians(this.ViewAngle) && this.Owner.Visibility.InSight && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.Owner.Transform.WorldTranslation) <= this.ViewRange && Math.Distance(GlobalVariables.Player.Transform.WorldTranslation, this.GuardPos) <= this.MaxDistFromGuard) {
             
             this.State = State.Spotted;
-            this.Timer = this.WaitTime;
+            this.Timer = this.SpotTime;
             
         }
     }

@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [15, -14.5, 0],
-		Vec3 Scale = [3, 3, 1],
+		Vec3 Translation = [5, 6, 0],
+		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -89,7 +89,7 @@ Cog =
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
-				bool AnimationActive = true,
+				bool AnimationActive = false,
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
 			},

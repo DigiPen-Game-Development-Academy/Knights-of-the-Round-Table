@@ -41,6 +41,8 @@ class Potato : Item {
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3);
         
+        Utilities.MeleeFX(this.Icon, 15, -90, 45, 0.25);
+        
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             if(res.ObjectHit.Health != null) {
@@ -204,6 +206,8 @@ class PlasmaSword : Item {
         var filter = CastFilter();
         filter.CollisionGroup = CollisionGroup.PlayerBullet;
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3.5, filter);
+        
+        Utilities.MeleeFX(this.Icon, 15, -90, 45, 0.25);
         
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());

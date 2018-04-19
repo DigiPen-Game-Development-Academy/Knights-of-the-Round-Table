@@ -164,7 +164,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.4037919, 5.64983368, 112.565193],
+			Vec3 Translation = [0.424689144, 0.694965065, 112.565193],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -176,7 +176,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 5.50233412,
+			float Size = 2,
 		},
 		EditorCameraController = 
 		{
@@ -184,7 +184,7 @@ Level =
 			float LookDistance = 111.565193,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [7.4037919, 5.64983368, 1.00000036],
+			Vec3 LookTarget = [0.424689144, 0.694965065, 1.00000036],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -292,7 +292,7 @@ Level =
 		PlayerHealth = 
 		{
 			bool OnMainLevel = true,
-			string MainLevel = "5a1a864f77326081:JustinTestLevel",
+			string MainLevel = "5a1a864f77326081:Mainworld",
 		},
 		PlayerSprites = 
 		{
@@ -848,6 +848,11 @@ Level =
 		Archetyped = 
 		{
 			string Name = "5a517d98ea9b4eb6:TriggerMusicZone",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
