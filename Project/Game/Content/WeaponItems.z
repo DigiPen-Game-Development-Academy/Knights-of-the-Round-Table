@@ -123,7 +123,7 @@ class Plasma_Pistol : Item {
         this.Name = "Plasma pistol";
         this.ID = "Pistol";
         this.DamagePer = 15;
-        this.FireRate = 15;
+        this.FireRate = 8;
         this.AmmoPerShot = 1;
         this.RelodTime = 1;
         this.Sound = SoundCue.Shot;
@@ -305,7 +305,7 @@ class SlugShotgun : Item {
         this.MagSize = 2;
         this.Name = "Shotgun";
         this.ID = "Shotgun";
-        this.DamagePer = 25;
+        this.DamagePer = 50;
         this.FireRate = 4; 
         this.AmmoPerShot = 4;
         this.RelodTime = 5;
@@ -375,7 +375,7 @@ class Laserbeam : Item {
         this.MagSize = 10;
         this.Name = "Laser Beam";
         this.ID = "Laser_Beam";
-        this.DamagePer = 32;
+        this.DamagePer = 75;
         this.FireRate = 3; 
         this.AmmoPerShot = 3;
         this.RelodTime = 5;
@@ -480,7 +480,7 @@ class SawLaser  : Item {
         this.ID = "Saw_Laser";
         this.DamagePer = 45;
         this.FireRate = 10; 
-        this.AmmoPerShot = 2;
+        this.AmmoPerShot = 1;
         this.RelodTime = 5;
         this.MaxRange = 11;
         this.SoundDistance = 19;
@@ -630,7 +630,7 @@ class Missile  : Item {
         this.ID = "Missile";
         this.DamagePer = 500;
         this.FireRate = 0.1; 
-        this.AmmoPerShot = 25;
+        this.AmmoPerShot = 15;
         this.RelodTime = 10;
         this.SoundDistance = 22;
         this.Auto = false;
