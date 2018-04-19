@@ -21,12 +21,12 @@ class TriggerObjective : ZilchComponent {
 class Objective {
     
     [Static] var Quests : Array[String] = Array[String] () {
-        "Explore the wrackage of yur ship",
-        "This is a save point, save your progress or die",
-        "This is a chest, collect valuable loots here",
-        "This is a enemy, sneak up and R.K.O. him from BEHIND\nRemember to be stealthy!",
+        "Explore the wreckage of your ship.",
+        "This is a save point, save as much as possible.",
+        "This is a chest, collect resources here.",
+        "This is a enemy, sneak up and R.K.O. him from BEHIND\nRemember to be stealthy, dont run and make noise.",
         "Unlike the other enemy this enemy is real, good luck!",
-        "Now explore ye island while i learn how to spel!",
+        "explore the island to find boat parts nessesary for escape",
         "Rebuild the bridge",
         "Find parts to fix your yaght"
     };
