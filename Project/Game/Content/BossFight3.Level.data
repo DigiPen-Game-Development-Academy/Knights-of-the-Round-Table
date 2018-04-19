@@ -160,7 +160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.08542728, -2.88818145, 51],
+			Vec3 Translation = [0.0392709784, -0.01740334, 51],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -172,7 +172,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5336132,
+			float Size = 2,
 		},
 		EditorCameraController = 
 		{
@@ -180,7 +180,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.08542728, -2.88818145, 0.999999225],
+			Vec3 LookTarget = [0.0392709784, -0.01740334, 0.999999404],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -529,7 +529,7 @@ Level =
 		BossDrops = 
 		{
 			string Part = "5a501997de7c61af:QuestItem3",
-			string Note = "THIS IS A NOTE",
+			string Note = "press x to pay respects",
 			string Drops = "",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
@@ -545,6 +545,7 @@ Level =
 			float InstantSpotRadius = 2,
 			float MaxDistFromGuard = 20,
 			float WaitTime = 1,
+			float SpotTime = 1,
 			float Range = 3,
 			float ViewAngle = 45,
 			float ViewRange = 6,

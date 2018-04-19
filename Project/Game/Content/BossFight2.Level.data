@@ -323,7 +323,7 @@ Level =
 		PlayerHealth = 
 		{
 			bool OnMainLevel = false,
-			string MainLevel = "5a1a864f77326081:JustinTestLevel",
+			string MainLevel = "5a1a864f77326081:Mainworld",
 		},
 		PlayerSprites = 
 		{
@@ -548,7 +548,7 @@ Level =
 		BossDrops = 
 		{
 			string Part = "5a50196fd480ebb5:QuestItem2",
-			string Note = "THIS IS A NOTE",
+			string Note = "look a boat part",
 			string Drops = "",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
@@ -561,6 +561,7 @@ Level =
 			float InstantSpotRadius = 2,
 			float MaxDistFromGuard = 20,
 			float WaitTime = 1,
+			float SpotTime = 1,
 			float Range = 3,
 			float ViewAngle = 45,
 			float ViewRange = 6,

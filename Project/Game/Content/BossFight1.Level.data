@@ -253,7 +253,7 @@ Level =
 		BossDrops = 
 		{
 			string Part = "5a501946cb973583:QuestItem1",
-			string Note = "THIS IS A NOTE",
+			string Note = "ooof a boat part",
 			string Drops = "",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
