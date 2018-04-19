@@ -88,6 +88,7 @@ Cog =
 		float InstantSpotRadius = 3,
 		float MaxDistFromGuard = 20,
 		float WaitTime = 4,
+		float SpotTime = 0.200000003,
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,

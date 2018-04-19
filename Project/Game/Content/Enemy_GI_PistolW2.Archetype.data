@@ -88,6 +88,7 @@ Cog =
 		float InstantSpotRadius = 3,
 		float MaxDistFromGuard = 20,
 		float WaitTime = 4,
+		float SpotTime = 0.200000003,
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,
@@ -121,6 +122,7 @@ Cog =
 		float InitialHealth = 100,
 		float Cooldown = 3,
 		float RegenRate = 0.333333343,
+		float FlashLength = 0.100000001,
 	},
 	EnemyDeath = 
 	{
