@@ -31,7 +31,7 @@ ResourceTable =
 		{
 			string Name = "Name6",
 			string Value = "Ammo",
-			float Weight = 25,
+			float Weight = 35,
 		},
 		{
 			string Name = "Name7",
@@ -41,7 +41,7 @@ ResourceTable =
 		{
 			string Name = "Name8",
 			string Value = "null",
-			float Weight = 75,
+			float Weight = 70,
 		},
 	],
 	float MaxWeight = 100,
