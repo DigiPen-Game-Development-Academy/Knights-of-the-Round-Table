@@ -97,6 +97,13 @@ Level =
 			float FadeSped = 1,
 			string Music = "",
 		},
+		CreateUI = 
+		{
+			string UILevel = "",
+			string DialogLevel = "",
+			string MouseLevel = "",
+			string MusicLevel = "5adae3eaef33a047:MusicLevel",
+		},
 		TimeTimer = 
 		{
 		},
@@ -113,7 +120,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.778556406, -0.166432291, 50],
+			Vec3 Translation = [-0.790550172, 1.12573552, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -125,7 +132,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.90608025,
+			float Size = 18.0500488,
 		},
 		EditorCameraController = 
 		{
@@ -133,7 +140,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.778556406, -0.166432291, 3.40313377e-08],
+			Vec3 LookTarget = [-0.790550172, 1.12573552, -3.45564963e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -465,7 +472,9 @@ AI : Brandon
 UI : Brandon
 The Scripts : Brandon
 Cut-scenes : Brandon
-Debugging : Brandon",
+Debugging : Brandon
+
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -551,7 +560,9 @@ AI : Brandon
 UI : Brandon
 The Scripts : Brandon
 Cut-scenes : Brandon
-Debugging : Brandon",
+Debugging : Brandon
+
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
 					bool Smoothing = true,

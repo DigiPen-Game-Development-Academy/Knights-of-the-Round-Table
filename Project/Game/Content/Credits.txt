@@ -28,3 +28,5 @@ UI : Brandon
 The Scripts : Brandon
 Cut-scenes : Brandon
 Debugging : Brandon
+
+All content © 2018 DigiPen (USA) Corporation, all rights reserved.

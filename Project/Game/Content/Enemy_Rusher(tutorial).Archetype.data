@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-52.457428, 56.4818802, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -88,6 +88,7 @@ Cog =
 		float InstantSpotRadius = 3,
 		float MaxDistFromGuard = 20,
 		float WaitTime = 1,
+		float SpotTime = 1,
 		float Range = 3,
 		float ViewAngle = 45,
 		float ViewRange = 10,
@@ -103,11 +104,11 @@ Cog =
 	{
 		string North = "5ad380509249d3c4:DreadHound000",
 		string NorthEast = "5ad380519224c282:DreadHound001",
-		string East = "5ad380519217b04c:DreadHound002",
+		string East = "5a3973d4353f21ba:DreadHoundRunE",
 		string SouthEast = "5ad3805292006231:DreadHound003",
-		string South = "5ad3805292f0df03:DreadHound004",
+		string South = "5a39738e3f72b551:DreadHoundRunS",
 		string SouthWest = "5ad3805392e20005:DreadHound005",
-		string West = "5ad3805392d2a121:DreadHound006",
+		string West = "5a3973e532c990b2:DreadHoundRunW",
 		string NorthWest = "5ad3805392c39257:DreadHound007",
 	},
 	EnemyMelee = 
@@ -121,6 +122,7 @@ Cog =
 		float InitialHealth = 100,
 		float Cooldown = 3,
 		float RegenRate = 0.333333343,
+		float FlashLength = 0.100000001,
 	},
 	EnemyDeath = 
 	{
