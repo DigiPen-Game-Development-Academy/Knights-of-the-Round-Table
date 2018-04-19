@@ -126,7 +126,7 @@ class Plasma_Pistol : Item {
         this.AmmoPerShot = 1;
         this.RelodTime = 1;
         this.Sound = SoundCue.Shot;
-        this.SoundDistance = 7;
+        this.SoundDistance = 10;
         this.MaxRange = 7;
         this.Auto = false;
     }
@@ -246,7 +246,7 @@ class TerribleAssaultRifle : Item {
         this.AmmoPerShot = 1;
         this.RelodTime = 3;
         this.MaxRange = 12;
-        this.SoundDistance = 8;
+        this.SoundDistance = 15;
         this.Sound = SoundCue.Terribleas;
     }
     
@@ -308,7 +308,7 @@ class SlugShotgun : Item {
         this.RelodTime = 5;
         this.MaxRange = 3;
         this.RandAngle = 20;
-        this.SoundDistance = 10;
+        this.SoundDistance = 16;
         this.Sound = SoundCue.Shotgun;
     }
     
@@ -377,7 +377,7 @@ class Laserbeam : Item {
         this.AmmoPerShot = 3;
         this.RelodTime = 5;
         this.Auto = false;
-        this.SoundDistance = 10;
+        this.SoundDistance = 12;
     }
     
     function ReturnLore () : String {
@@ -423,7 +423,7 @@ class StunMissile : Item {
         this.AmmoPerShot = 8;
         this.RelodTime = 5;
         this.Auto = false;
-        this.SoundDistance = 4;
+        this.SoundDistance = 8;
     }
     
     function UseReleased () {
@@ -480,7 +480,7 @@ class SawLaser  : Item {
         this.AmmoPerShot = 2;
         this.RelodTime = 5;
         this.MaxRange = 11;
-        this.SoundDistance = 15;
+        this.SoundDistance = 19;
     }
     
     function ReturnLore() : String {
@@ -548,7 +548,7 @@ class Lasersniper  : Item {
         this.RelodTime = 4;
         this.MaxRange = 100;
         this.RandAngle = 0;
-        this.SoundDistance = 10;
+        this.SoundDistance = 9;
     }
 
     function UseReleased() {
@@ -629,7 +629,7 @@ class Missile  : Item {
         this.FireRate = 0.1; 
         this.AmmoPerShot = 25;
         this.RelodTime = 10;
-        this.SoundDistance = 20;
+        this.SoundDistance = 22;
         this.Auto = false;
     }
     
