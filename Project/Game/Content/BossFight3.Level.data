@@ -565,13 +565,13 @@ Level =
 		Boss_Shield = 
 		{
 			float FireRateFull = 0.300000012,
-			float FireRateEmpty = 1.5,
+			float FireRateEmpty = 0.699999988,
 			float SpeedFull = 4,
 			float SpeedEmpty = 5,
-			float DamageFull = 10,
-			float DamageEmpty = 10,
-			float SplashFull = 2,
-			float SplashEmpty = 2,
+			float DamageFull = 5,
+			float DamageEmpty = 7,
+			float SplashFull = 1.60000002,
+			float SplashEmpty = 1.60000002,
 			float ArcIntencity = 1,
 			string DeathMSG = "You were hit in the face with a missile.",
 		},
