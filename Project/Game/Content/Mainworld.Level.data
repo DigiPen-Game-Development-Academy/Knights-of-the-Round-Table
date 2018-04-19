@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 90.483757,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -25299,7 +25299,7 @@ Level =
 			float FireRate = 4,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{
