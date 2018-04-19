@@ -117,6 +117,7 @@ class Plasma_Pistol : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Icon_Weapon_Pistol;
         this.GroundSprite = SpriteSource.Icon_Weapon_Pistol;
+        this.HoldingSprite = SpriteSource.Pistol_Overlay;
         this.WakeSprite = Archetype.Wake;
         this.Stackable = false;
         this.MagSize = 15;
@@ -298,8 +299,8 @@ class SlugShotgun : Item {
     
     function Init () {
         this.Type = ItemType.Weapon;
-        this.Icon = SpriteSource.Icon_Weapon_Potato;
-        this.GroundSprite = SpriteSource.Icon_Weapon_Potato;
+        this.Icon = SpriteSource.DrakshotAlpha;
+        this.GroundSprite = SpriteSource.DrakshotAlpha;
         this.HoldingSprite = SpriteSource.ShotgunHold;
         this.Stackable = false;
         this.MagSize = 2;
@@ -370,6 +371,7 @@ class Laserbeam : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.NovaBeam;
         this.GroundSprite = SpriteSource.NovaBeam;
+        this.HoldingSprite = SpriteSource.Beam_Overlay;
         this.Stackable = false;
         //use mag size for ammount of seconds active before reload
         this.MagSize = 10;
@@ -417,6 +419,7 @@ class StunMissile : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.Weapon_Stun_Launcher;
         this.GroundSprite = SpriteSource.Weapon_Stun_Launcher;
+        this.HoldingSprite = SpriteSource.Grenade_Overlay;
         this.Stackable = false;
         this.MagSize = 6;
         this.Name = "Stun Missile";
@@ -705,6 +708,7 @@ class Potatocannon  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.PotatoLauncher;
         this.GroundSprite = SpriteSource.PotatoLauncher;
+        this.HoldingSprite = SpriteSource.Potater_Overlay;
         this.Stackable = false;
         this.SoundDistance = 4;
         this.MagSize = 5;
