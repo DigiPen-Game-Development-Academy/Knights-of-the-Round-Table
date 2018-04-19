@@ -121,7 +121,7 @@ class Plasma_Pistol : Item {
         this.MagSize = 15;
         this.Name = "Plasma pistol";
         this.ID = "Pistol";
-        this.DamagePer = 20;
+        this.DamagePer = 15;
         this.FireRate = 15;
         this.AmmoPerShot = 1;
         this.RelodTime = 1;
@@ -789,14 +789,15 @@ class MMS_Sniper  : Item {
         toSend.Timer = 0;
         GlobalVariables.GameSpace.DispatchEvent(Events.UseRadar, toSend);
         
-        Utilities.TimeTimerSet(0.05, 0, 1);
+        GlobalVariables.CamSense = 6;
+        GlobalVariables.CamFollow.Owner.Transform.Translation = Real3(0, 0, GlobalVariables.CamFollow.Owner.Transform.Translation.Z);
+        Utilities.TimeTimerSet(1, 0, 1);
         
         this.Aim = false;
         
         if(this.Lazer != null)
             this.Lazer.Destroy();
         
-        GlobalVariables.CamSense = 6;
         
         var dir = Math.Normalize(GlobalVariables.GameSpace.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0) - GlobalVariables.Player.Transform.WorldTranslation);
         
@@ -810,7 +811,7 @@ class MMS_Sniper  : Item {
         filter.CollisionGroup = CollisionGroup.PlayerBullet;
         var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, this.MaxRange, filter);
         
-        if(res != null && !GlobalVariables.SloMo){
+        if(res != null){
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
             var wake = GlobalVariables.GameSpace.CreateAtPosition(this.WakeSprite, GlobalVariables.Player.Transform.WorldTranslation);
             wake.Transform.EulerAngles = Real3(0,0,radAngle+ Math.ToRadians(-90));
