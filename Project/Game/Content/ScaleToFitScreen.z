@@ -4,6 +4,11 @@ class ScaleToFitScreen : ZilchComponent {
     
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        var screenSize = this.LevelSettings.CameraViewport.ViewportResolution;
+        this.Last = screenSize;
+        var screenWorld = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(this.LevelSettings.CameraViewport.ViewportToScreen(screenSize), 0).XY*2;
+        screenWorld = Real2(screenWorld.X, -screenWorld.Y);
+        this.Owner.Transform.Scale = Real3(screenWorld, 1);
     }
 
     function OnLogicUpdate(event : UpdateEvent) {
@@ -15,7 +20,6 @@ class ScaleToFitScreen : ZilchComponent {
             
             var screenWorld = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(this.LevelSettings.CameraViewport.ViewportToScreen(screenSize), 0).XY*2;
             screenWorld = Real2(screenWorld.X, -screenWorld.Y);
-            Console.WriteLine(screenWorld);
             this.Owner.Transform.Scale = Real3(screenWorld, 1);
             
         }

@@ -45,7 +45,7 @@ class Boss_Shield : ZilchComponent {
             missile.PotatProjectile.ArcIntencity = this.ArcIntencity;
             missile.PotatProjectile.DamageMSG = this.DeathMSG;
             missile.PotatProjectile.Set = true;
-            missile.Sprite.SpriteSource = SpriteSource.Missile;
+            missile.Sprite.SpriteSource = SpriteSource.MissileAttack;
             missile.AddComponentByName("MissileSound");
             missile.MissileSound.Sound = SoundCue.RocketFlying;
             missile.MissileSound.Initialize(null);

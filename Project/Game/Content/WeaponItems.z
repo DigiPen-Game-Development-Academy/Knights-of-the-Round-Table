@@ -371,7 +371,7 @@ class Laserbeam : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.NovaBeam;
         this.GroundSprite = SpriteSource.NovaBeam;
-        this.HoldingSprite = SpriteSource.Beam_Overlay;
+        this.HoldingSprite = SpriteSource.BeamOverlayFixed;
         this.Stackable = false;
         //use mag size for ammount of seconds active before reload
         this.MagSize = 10;

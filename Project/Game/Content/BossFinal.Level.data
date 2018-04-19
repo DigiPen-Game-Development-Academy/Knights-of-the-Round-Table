@@ -200,7 +200,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5abd11fc2be5f142:QueenDragon",
+			string SpriteSource = "5a38a31e699ed632:MechaDragon",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -232,6 +232,7 @@ Level =
 			float InstantSpotRadius = 2,
 			float MaxDistFromGuard = 20,
 			float WaitTime = 1,
+			float SpotTime = 1,
 			float Range = 3,
 			float ViewAngle = 45,
 			float ViewRange = 6,
@@ -325,14 +326,14 @@ Level =
 			float StartRange = 100,
 			string DashDamageMSG = "You where run over by a giant enemy!",
 			string PassiveDamageMSG = "Wait...  did that guy just sit on you?!?",
-			string North = "4e07948c35993095:DefaultSprite",
-			string NorthEast = "4e07948c35993095:DefaultSprite",
-			string East = "4e07948c35993095:DefaultSprite",
-			string SouthEast = "4e07948c35993095:DefaultSprite",
-			string South = "4e07948c35993095:DefaultSprite",
-			string SouthWest = "4e07948c35993095:DefaultSprite",
-			string West = "4e07948c35993095:DefaultSprite",
-			string NorthWest = "4e07948c35993095:DefaultSprite",
+			string North = "5a38a31e699ed632:MechaDragon",
+			string NorthEast = "5a38a31e699ed632:MechaDragon",
+			string East = "5a38a31e699ed632:MechaDragon",
+			string SouthEast = "5a38a31e699ed632:MechaDragon",
+			string South = "5a38a31e699ed632:MechaDragon",
+			string SouthWest = "5a38a31e699ed632:MechaDragon",
+			string West = "5a38a31e699ed632:MechaDragon",
+			string NorthWest = "5a38a31e699ed632:MechaDragon",
 		},
 		FinalBoss = 
 		{
@@ -487,7 +488,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.39578557, -4.75895214, 50],
+			Vec3 Translation = [0.0769731551, 0.00653162412, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -499,7 +500,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 49.6587334,
+			float Size = 4.97873068,
 		},
 		EditorCameraController = 
 		{
@@ -507,7 +508,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.39578557, -4.75895214, -2.89367907e-08],
+			Vec3 LookTarget = [0.0769731551, 0.00653162412, -1.74006658e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 

@@ -163,7 +163,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.77786589, 17.1835403, 64.7502518],
+			Vec3 Translation = [-109, 49.5366211, 64],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -175,7 +175,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 700,
-			float Size = 90.483757,
+			float Size = 20.1896782,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 			float LookDistance = 64,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.77786589, 17.1835403, 0.750252306],
+			Vec3 LookTarget = [-109, 49.5366211, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -25299,7 +25299,7 @@ Level =
 			float FireRate = 4,
 			float MinDist = 4,
 			float MaxDist = 10,
-			string DeathMSG = "You Where Shot by an Enemy",
+			string DeathMSG = "You were shot by an enemy",
 		},
 		EnemyPing = 
 		{

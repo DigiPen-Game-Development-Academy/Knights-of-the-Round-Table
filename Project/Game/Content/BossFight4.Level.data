@@ -160,7 +160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-14.9084673, 7.39885712, 50],
+			Vec3 Translation = [1.08372808, -0.2672548, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -172,7 +172,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2871857,
+			float Size = 4.50493526,
 		},
 		EditorCameraController = 
 		{
@@ -180,7 +180,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-14.9084673, 7.39885712, -3.96790057e-07],
+			Vec3 LookTarget = [1.08372808, -0.2672548, 3.02250982e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -323,7 +323,7 @@ Level =
 		PlayerHealth = 
 		{
 			bool OnMainLevel = false,
-			string MainLevel = "5a1a864f77326081:JustinTestLevel",
+			string MainLevel = "5a1a864f77326081:Mainworld",
 		},
 		PlayerSprites = 
 		{
@@ -564,7 +564,7 @@ Level =
 		BossDrops = 
 		{
 			string Part = "5a5019f6eda94e41:QuestItem4",
-			string Note = "THIS IS A NOTE",
+			string Note = "peek a boo i dont see you",
 			string Drops = "",
 			float DropRange = 1,
 			string NeurtralMusic = "5a518f65cac35b18:Nuetral",
@@ -580,6 +580,7 @@ Level =
 			float InstantSpotRadius = 2000,
 			float MaxDistFromGuard = 1000,
 			float WaitTime = 1,
+			float SpotTime = 1,
 			float Range = 3,
 			float ViewAngle = 360,
 			float ViewRange = 600,
