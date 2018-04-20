@@ -8,6 +8,15 @@ class BoatRepair : ZilchComponent {
         Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
         Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
         Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent) {
+        
+        if(this.HasAllQuest()) {
+            Utilities.SetQuest(8, true);
+        }
+        
     }
 
     function OnMouseDown(event : ViewportMouseEvent) {

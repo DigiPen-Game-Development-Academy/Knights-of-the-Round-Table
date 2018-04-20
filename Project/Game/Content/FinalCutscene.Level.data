@@ -120,7 +120,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.50130582, -0.0520845503, 50],
+			Vec3 Translation = [2.62865305, -0.234008953, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -132,7 +132,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.0463753,
+			float Size = 6.64024115,
 		},
 		EditorCameraController = 
 		{
@@ -140,7 +140,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.50130582, -0.0520845503, 1.09335097e-07],
+			Vec3 LookTarget = [2.62865305, -0.234008953, 1.14901617e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -245,7 +245,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a534002641c43be:Pat Walk SAnim",
+			string SpriteSource = "5a2ae7192bf5d642:Pat Walk S a",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -255,14 +255,14 @@ Level =
 		},
 		AnimSpritesDir = 
 		{
-			string North = "5a5341ec590a3054:Pat Walk NAnim",
-			string NorthEast = "5a5340356d6e6b67:Pat Walk NEAnim",
-			string East = "5a5341d75d67251c:Pat Walk EAnim",
-			string SouthEast = "5a53406972aa13ca:Pat Walk SEAnim",
-			string South = "5a534002641c43be:Pat Walk SAnim",
-			string SouthWest = "5a53407e70ea7606:Pat walk SWAnim",
-			string West = "5a53401860e6d328:Pat Walk WAnim",
-			string NorthWest = "5a53404069aea011:Pat Walk NWAnim",
+			string North = "5a2ae7b041a227b8:Pat Walk N a",
+			string NorthEast = "5a2ae74234ffced0: Pat Walk NE a",
+			string East = "5a2ae4f52356109f:Pat Walk E a",
+			string SouthEast = "5a2ae7693d82ff0d:Pat Walk SE a",
+			string South = "5a2ae7192bf5d642:Pat Walk S a",
+			string SouthWest = "5a2ae783390e5123:Pat walk SW a",
+			string West = "5a2ae7342818a74f:Pat Walk W a",
+			string NorthWest = "5a2ae75830b9aaa6:Pat Walk NW a",
 			string AltAnim = "",
 			float AnimSpeed = 0.5,
 			bool ActivateAlt = false,

@@ -39,7 +39,7 @@ class Potato : Item {
     
     function Use (radAngle : Real) {
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3);
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 1);
         
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
@@ -187,7 +187,7 @@ class PlasmaSword : Item {
         this.MagSize = 10;
         this.Name = "Plasma Sword";
         this.ID = "Sword";
-        this.DamagePer = 152;
+        this.DamagePer = 25;
         this.FireRate = 8;
         this.AmmoPerShot = 3;
         this.RelodTime = 2;
@@ -207,7 +207,7 @@ class PlasmaSword : Item {
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
         var filter = CastFilter();
         filter.CollisionGroup = CollisionGroup.PlayerBullet;
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 3.5, filter);
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 2, filter);
         
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());
@@ -371,7 +371,7 @@ class Laserbeam : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.NovaBeam;
         this.GroundSprite = SpriteSource.NovaBeam;
-        this.HoldingSprite = SpriteSource.BeamOverlayFixed;
+        this.HoldingSprite = SpriteSource.BeamOverlayActuallyFixed;
         this.Stackable = false;
         //use mag size for ammount of seconds active before reload
         this.MagSize = 10;
@@ -476,6 +476,7 @@ class SawLaser  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.DragonRoarAlpha;
         this.GroundSprite = SpriteSource.DragonRoarAlpha;
+        this.HoldingSprite = SpriteSource.Pistol_Overlay;
         this.Sound = SoundCue.Shot;
         this.Stackable = false;
         this.MagSize = 50;
@@ -627,6 +628,7 @@ class Missile  : Item {
         this.Type = ItemType.Weapon;
         this.Icon = SpriteSource.RocketLauncher;
         this.GroundSprite = SpriteSource.RocketLauncher;
+        this.HoldingSprite = SpriteSource.MissileOverlay;
         this.Stackable = false;
         this.MagSize = 1;
         this.Name = "Rocket Launcher";

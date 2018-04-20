@@ -15,8 +15,21 @@ class PlayerSprites : ZilchComponent {
     [Property] var West       : SpriteSource;
     [Property] var NorthWest  : SpriteSource;
     [Property] var AnimSpeed  : Real;
+    
+    var Lock : Boolean = false;
 
     function Update(dt : Real) {
+        
+        if(this.Lock) {
+            
+            this.Timer -= dt;
+            if(this.Timer <= 0) {
+                this.Lock = false;
+            }
+            this.Owner.Sprite.AnimationSpeed = 1;
+            this.Owner.Sprite.AnimationActive = true;
+            return;
+        }
         
         var hSprite = this.Owner.FindChildByName("Hold").Sprite;
         

@@ -28,7 +28,8 @@ class Objective {
         "Unlike the other enemy this enemy is real, good luck!",
         "explore the island to find boat parts nessesary for escape",
         "Rebuild the bridge",
-        "Find more parts to fix your yacht"
+        "Find more parts to fix your yacht",
+        "Return to your yacht to repair it!"
     };
     
 }

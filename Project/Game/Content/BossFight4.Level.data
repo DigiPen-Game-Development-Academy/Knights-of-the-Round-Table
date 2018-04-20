@@ -160,7 +160,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.08372808, -0.2672548, 50],
+			Vec3 Translation = [-1.03371298, -0.294873625, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -172,7 +172,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.50493526,
+			float Size = 6.72057438,
 		},
 		EditorCameraController = 
 		{
@@ -180,7 +180,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.08372808, -0.2672548, 3.02250982e-07],
+			Vec3 LookTarget = [-1.03371298, -0.294873625, 2.09694718e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -257,7 +257,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5afd92272f3d7f10:Pat Walk South",
+			string SpriteSource = "4e07948c35993095:DefaultSprite",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -283,7 +283,7 @@ Level =
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "5a917b88a0971f8b:Player",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			string SerializedGroupName = "5a11bc4854a4df8c:NotEnemies",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.125, 0.449999988, 0.5],
 		},
@@ -317,24 +317,24 @@ Level =
 		{
 			float InitialHealth = 100,
 			float Cooldown = 3,
-			float RegenRate = 0.333333343,
+			float RegenRate = 0.166665003,
 			float FlashLength = 0.100000001,
 		},
 		PlayerHealth = 
 		{
-			bool OnMainLevel = false,
+			bool OnMainLevel = true,
 			string MainLevel = "5a1a864f77326081:Mainworld",
 		},
 		PlayerSprites = 
 		{
-			string North = "5a5341ec590a3054:Pat Walk NAnim",
-			string NorthEast = "5a5340356d6e6b67:Pat Walk NEAnim",
-			string East = "5a5341d75d67251c:Pat Walk EAnim",
-			string SouthEast = "5a53406972aa13ca:Pat Walk SEAnim",
-			string South = "5a534002641c43be:Pat Walk SAnim",
-			string SouthWest = "5a53407e70ea7606:Pat walk SWAnim",
-			string West = "5a53401860e6d328:Pat Walk WAnim",
-			string NorthWest = "5a53404069aea011:Pat Walk NWAnim",
+			string North = "5a2ae7b041a227b8:Pat Walk N a",
+			string NorthEast = "5a2ae74234ffced0: Pat Walk NE a",
+			string East = "5a2ae4f52356109f:Pat Walk E a",
+			string SouthEast = "5a2ae7693d82ff0d:Pat Walk SE a",
+			string South = "5a2ae7192bf5d642:Pat Walk S a",
+			string SouthWest = "5a2ae783390e5123:Pat walk SW a",
+			string West = "5a2ae7342818a74f:Pat Walk W a",
+			string NorthWest = "5a2ae75830b9aaa6:Pat Walk NW a",
 			float AnimSpeed = 0.5,
 		},
 		Hierarchy = 
@@ -343,7 +343,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 2,
+					uint Id = 6,
 				},
 				Named = 
 				{
@@ -363,7 +363,7 @@ Level =
 					float FieldOfView = 45,
 					float NearPlane = 0.5,
 					float FarPlane = 100,
-					float Size = 10,
+					float Size = 12,
 				},
 				SoundListener = 
 				{
@@ -382,7 +382,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 6,
+					uint Id = 7,
 				},
 				Named = 
 				{
@@ -415,7 +415,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 7,
+					uint Id = 8,
 				},
 				Named = 
 				{
@@ -458,7 +458,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -498,7 +498,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -631,7 +631,7 @@ Level =
 				string Name = "5a7c1968c9af3d26:Healthbar",
 				LinkId = 
 				{
-					uint Id = 10,
+					uint Id = 11,
 				},
 				Transform = 
 				{
@@ -656,7 +656,7 @@ Level =
 		string Name = "5aadb05278a6a072:AmmoZone",
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 12,
 		},
 		Transform = 
 		{
@@ -674,7 +674,7 @@ Level =
 		string Name = "5aadb05278a6a072:AmmoZone",
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 13,
 		},
 		Transform = 
 		{
@@ -692,7 +692,7 @@ Level =
 		string Name = "5aadb05278a6a072:AmmoZone",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 14,
 		},
 		Transform = 
 		{
@@ -710,7 +710,7 @@ Level =
 		string Name = "5aadb05278a6a072:AmmoZone",
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 15,
 		},
 		Transform = 
 		{

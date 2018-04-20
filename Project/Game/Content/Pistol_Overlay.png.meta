@@ -3,7 +3,7 @@ ImageContent =
 	SpriteSourceBuilder = 
 	{
 		string Name = "Pistol_Overlay",
-		uint64 ResourceId = 5a3954f242c7f1d8,
+		uint64 ResourceId = 5a2aee1fb3e1948a,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 32,
 		uint FrameSizeY = 32,

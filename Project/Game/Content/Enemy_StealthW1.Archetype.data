@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -102,14 +102,14 @@ Cog =
 	},
 	EnemySprite = 
 	{
-		string North = "5ad396a3d11f6a15:PhantomAlpha001",
-		string NorthEast = "5ad396a3d11f6a15:PhantomAlpha001",
-		string East = "5ad396a3d1339c38:PhantomAlpha000",
-		string SouthEast = "5ad396a3d1339c38:PhantomAlpha000",
-		string South = "5ad396a3d1339c38:PhantomAlpha000",
-		string SouthWest = "5ad396a3d1339c38:PhantomAlpha000",
-		string West = "5ad396a3d1339c38:PhantomAlpha000",
-		string NorthWest = "5ad396a3d11f6a15:PhantomAlpha001",
+		string North = "5a2ae1989ea66308:PhantomBetaWalk E",
+		string NorthEast = "5a2ae1989ea66308:PhantomBetaWalk E",
+		string East = "5a2ae1989ea66308:PhantomBetaWalk E",
+		string SouthEast = "5a2ae1989ea66308:PhantomBetaWalk E",
+		string South = "5a2ae18c925a104d:PhantomBetaWalk S",
+		string SouthWest = "5a2ae197904fd3bf:PhantomBetaWalk W",
+		string West = "5a2ae197904fd3bf:PhantomBetaWalk W",
+		string NorthWest = "5a2ae197904fd3bf:PhantomBetaWalk W",
 	},
 	EnemyMelee = 
 	{

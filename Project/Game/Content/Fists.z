@@ -1,5 +1,4 @@
-class Fists : Item
-{
+class Fists : Item {
     
     function Init () {
         this.Name = "Fists";
@@ -12,8 +11,14 @@ class Fists : Item
     
     function Use (radAngle : Real) {
         var dir = Real3(Math.Cos(radAngle), Math.Sin(radAngle), 0);
-        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 2.5);
+        var res = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, dir, GlobalVariables.GameSpace.PhysicsSpace, 1);
         var res2 = Utilities.Raycast(GlobalVariables.Player.Transform.WorldTranslation, -dir, GlobalVariables.GameSpace.PhysicsSpace, 0.75);
+        
+        GlobalVariables.Player.PlayerSprites.Lock = true;
+        GlobalVariables.Player.PlayerSprites.Timer = 0.75;
+        
+        GlobalVariables.Player.Sprite.SpriteSource = SpriteSource.PatPunch;
+        GlobalVariables.Player.Sprite.AnimationSpeed = 1;
         
         if(res != null) {
             Utilities.Damage(res.ObjectHit, this.DamagePer, this.ReturnDeathMSG());

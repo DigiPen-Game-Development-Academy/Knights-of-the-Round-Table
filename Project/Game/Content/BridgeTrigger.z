@@ -27,6 +27,10 @@ class BridgeTrigger : ZilchComponent {
 
     function OnCollisionStarted(event : CollisionEvent) {
         
+        if(this.Bridge.Sprite.Visible) {
+            return;
+        }
+        
         if(GlobalVariables.QuestItems[0] && GlobalVariables.QuestItems[1]) {
             this.Disconnect();
             

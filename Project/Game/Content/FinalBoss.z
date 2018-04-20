@@ -70,6 +70,8 @@ class FinalBoss : ZilchComponent {
         if(!this.Active)
             return;
         
+        this.Owner.Sprite.Visible = true;
+        
         //turn lights on
         this.LevelSettings.DeferredRenderer.RenderMasks = false;
         
