@@ -1,5 +1,5 @@
 class DialogBoxTwoButtons : ZilchComponent {
-    var Margin : Real = 1;
+    var Margin : Real = 0.25;
     var ButtonSpace : Real = 1;
     function Initialize(init : CogInitializer) {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -17,8 +17,8 @@ class DialogBoxTwoButtons : ZilchComponent {
         
         var ok = this.Owner.FindChildByName("OK");
         
-        ok.Area.Size = Real2(this.Owner.Area.Size.X / 2, this.ButtonSpace)*this.Owner.Transform.WorldScale.XY;
-        ok.Transform.Translation = Real3(this.Owner.Area.Size.X / 4, -((this.Owner.Area.Size.Y / 2) - (this.ButtonSpace / 1.25)), 2);
+        ok.Area.Size = Real2(this.ButtonSpace * 1.5, this.ButtonSpace)*this.Owner.Transform.WorldScale.XY;
+        ok.Transform.Translation = Real3((this.Owner.Area.Size.X / 2) - ((ok.Area.Size.X / 2) + this.Margin/2), -((this.Owner.Area.Size.Y / 2) - (this.ButtonSpace / 1.5)), 2);
         ok.Button.Scaling = false;
         ok.Transform.Scale = Real3(1);
         var smallest = this.ButtonSpace * this.Owner.Transform.WorldScale.Y;
@@ -29,8 +29,8 @@ class DialogBoxTwoButtons : ZilchComponent {
         
         var cancel = this.Owner.FindChildByName("CANCEL");
         
-        cancel.Area.Size = Real2(this.Owner.Area.Size.X / 2, this.ButtonSpace)*this.Owner.Transform.WorldScale.XY;
-        cancel.Transform.Translation = Real3(-this.Owner.Area.Size.X / 4, -((this.Owner.Area.Size.Y / 2) - (this.ButtonSpace / 1.25)), 2);
+        cancel.Area.Size = Real2(this.ButtonSpace * 1.5, this.ButtonSpace)*this.Owner.Transform.WorldScale.XY;
+        cancel.Transform.Translation = Real3(ok.Transform.Translation.X - ((cancel.Area.Size.X/3) + (ok.Area.Size.X/3)) - this.Margin, -((this.Owner.Area.Size.Y / 2) - (this.ButtonSpace / 1.5)), 2);
         cancel.Button.Scaling = false;
         cancel.Transform.Scale = Real3(1);
         smallest = this.ButtonSpace * this.Owner.Transform.WorldScale.Y;

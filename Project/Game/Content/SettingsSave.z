@@ -1,9 +1,9 @@
 class SettingsSave : ZilchComponent {
     [Serialized] var MASTERvol : Real = 1;
-    [Serialized] var SFXvol : Real = 1;
-    [Serialized] var MUSICvol : Real = 1;
-    [Serialized] var CamSmoothness : Real = 1;
-    [Serialized] var ScreenShakeIntecity : Real = 1;
+    [Serialized] var SFXvol : Real = 0.5;
+    [Serialized] var MUSICvol : Real = 0.35;
+    [Serialized] var CamSmoothness : Real = 0.25;
+    [Serialized] var ScreenShakeIntecity : Real = 2;
     function Initialize(init : CogInitializer) {
         GlobalVariables.Settings = this.Owner;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);

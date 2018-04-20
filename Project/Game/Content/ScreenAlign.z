@@ -6,7 +6,7 @@ enum Pos {
     Bottom,
     Bottomright,
     Right,
-    Topright
+    Topright,
 }
 class ScreenAlign : ZilchComponent {
     [Dependency] var Area : Area;

@@ -1117,7 +1117,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.35304546, 2.73792648, 50.5],
+			Vec3 Translation = [-6.15367317, 2.71078634, 50.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -1137,7 +1137,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.35304546, 2.73792648, 0.499999076],
+			Vec3 LookTarget = [-6.15367317, 2.71078634, 0.499999076],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -4192,55 +4192,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Version",
-		},
-		Archetyped = 
-		{
-			string Name = "5af4af2480366ec0:Version",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.625, 3.75, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "5ac11e46b173061e:CavemanlyMk2-Regular",
-			uint FontSize = 150,
-			string Text = "Beta 1.4",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 429.0383,
-			bool Smoothing = true,
-		},
-		Area = 
-		{
-			Vec2 Size = [2, 0.5],
-			Location Origin = Center,
-		},
-		ScreenAlign = 
-		{
-			Enum Pos = Topleft,
-			Vec3 Offset = [0, 0, 0],
-			Vec2 RelOffset = [0, 1],
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 99,
-		},
-		Named = 
-		{
 			string Name = "QuestPointer",
 		},
 		Archetyped = 
@@ -4291,7 +4242,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 100,
+					uint Id = 99,
 				},
 				Named = 
 				{
@@ -4332,7 +4283,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 101,
+			uint Id = 100,
 		},
 		Named = 
 		{
@@ -4379,7 +4330,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 102,
+					uint Id = 101,
 				},
 				Named = 
 				{
@@ -4418,7 +4369,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 103,
+							uint Id = 102,
 						},
 						Named = 
 						{
@@ -4458,7 +4409,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 104,
+					uint Id = 103,
 				},
 				Named = 
 				{
@@ -4497,7 +4448,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 105,
+							uint Id = 104,
 						},
 						Named = 
 						{
@@ -4537,7 +4488,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 106,
+					uint Id = 105,
 				},
 				Named = 
 				{
@@ -4576,7 +4527,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 107,
+							uint Id = 106,
 						},
 						Named = 
 						{
@@ -4616,7 +4567,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 108,
+							uint Id = 107,
 						},
 						Named = 
 						{
@@ -4656,7 +4607,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 109,
+					uint Id = 108,
 				},
 				Named = 
 				{
@@ -4695,7 +4646,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 110,
+							uint Id = 109,
 						},
 						Named = 
 						{
@@ -4735,7 +4686,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 111,
+							uint Id = 110,
 						},
 						Named = 
 						{
@@ -4773,7 +4724,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 112,
+							uint Id = 111,
 						},
 						Named = 
 						{
@@ -4812,7 +4763,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 113,
+							uint Id = 112,
 						},
 						Named = 
 						{
@@ -4853,7 +4804,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 114,
+					uint Id = 113,
 				},
 				Named = 
 				{
@@ -4892,7 +4843,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 115,
+					uint Id = 114,
 				},
 				Named = 
 				{
@@ -4932,7 +4883,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 116,
+			uint Id = 115,
 		},
 		Named = 
 		{
